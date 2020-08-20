@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<TraitorMissions>
+	
+<TraitorMission identifier="thal_timedcollar">
+    <Icon texture="Content/UI/MissionIcons.png" sourcerect="0,0,256,256" color="200,0,0,255"/>
+    <StartInfoText id="thal_timedcollar_traitormissionstartinfotext"/>
+		
+    <Objective>
+      <EndMessageFailure id="thal_timedcollar_objectivefailmessage1"/>
+      <EndMessageSuccess id="thal_timedcollar_objectivesuccessmessage1"/>
+      <StartMessage id="thal_timedcollar_traitorobjectivestartmessage1"/>
+      <Goal type="finditem" identifier="thal_bombcollartimed" preferNew="true" allowNew="true" allowExisting="false" allowedContainers="steelcabinet,suppliescabinet,mediumsteelcabinet">
+        <InfoText id="thal_timedcollar_goalinfotext_1"/>
+      </Goal>
+    </Objective>
+
+    <Objective>
+      <EndMessageFailure id="thal_timedcollar_objectivefailmessage2"/>
+      <EndMessageSuccess id="thal_timedcollar_objectivesuccessmessage2"/>
+      <StartMessage id="thal_timedcollar_traitorobjectivestartmessage2"/>
+      <Goal type="sabotage" tag="engine" threshold="1">
+        <InfoText id="thal_timedcollar_goalinfotext_2"/>
+      </Goal>
+    </Objective>
+
+    <Objective>
+      <EndMessageFailure id="thal_timedcollar_objectivefailmessage3"/>
+      <EndMessageSuccess id="thal_timedcollar_objectivesuccessmessage3"/>
+      <StartMessage id="thal_timedcollar_traitorobjectivestartmessage3"/>
+      <Goal type="killtarget" causeofdeath="thal_bombcollar">
+        <InfoText id="thal_timedcollar_goalinfotext_3"/>
+      </Goal>
+    </Objective>
+    
+    <Objective>
+      <EndMessageFailure id="thal_timedcollar_objectivefailmessage4"/>
+      <EndMessageSuccess id="thal_timedcollar_objectivesuccessmessage4"/>
+      <StartMessage id="thal_timedcollar_traitorobjectivestartmessage4"/>
+      <Goal type="reachdistancefromsub" distance="200">
+        <InfoText id="thal_timedcollar_goalinfotext_4"/>
+      </Goal>
+    </Objective>
+    
+  </TraitorMission>
+  
+
+
+</TraitorMissions>

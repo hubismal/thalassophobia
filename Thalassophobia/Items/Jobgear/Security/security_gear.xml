@@ -1,0 +1,47 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Items>
+  <Item name="" identifier="thal_breachcharge" category="Equipment" cargocontaineridentifier="explosivecrate" tags="smallitem,weapon,explosive" scale="0.4" impactsoundtag="impact_metal_heavy">
+    <PreferredContainer primary="secarmcab" minamount="1" maxamount="3" spawnprobability="1" />
+    <PreferredContainer primary="wreckarmcab" minamount="0" maxamount="1" spawnprobability="0.25" />
+    <Upgrade gameversion="0.9.3.0" scale="0.5" />
+    <Price locationtype="Military" buyprice="250" />
+    <Deconstruct time="10">
+      <Item identifier="iron" />
+      <Item identifier="uex" mincondition="0.9" />
+    </Deconstruct>
+    <Fabricate suitablefabricators="fabricator" requiredtime="20">
+      <RequiredSkill identifier="weapons" level="60" />
+      <RequiredItem identifier="iron" />
+      <RequiredItem identifier="uex" />
+    </Fabricate>
+    <Sprite name="breach charge" texture="Mods/Thalassophobia/Items/Electricity/poweritems.png" sourcerect="571,17,113,151" origin="0.5712885,0.446652" depth="0.8" />
+    <Body width="40" height="60" density="30" />
+    <Holdable pickkey="Use" slots="Any,RightHand,LeftHand" msg="ItemMsgDetachWrench" PickingTime="10.0" aimpos="35,-10" handle1="0,0" attachable="true" attachedbydefault="true" aimable="true">
+      <requireditem identifier="wrench" type="Equipped" />
+    </Holdable>
+    <LightComponent lightcolor="0,255,255,255" castshadows="false" allowingameediting="false" IsOn="false" blinkfrequency="4" range="80" >
+      <LightTexture texture="Content/Lights/pointlight_bounce.png" origin="0.5,0.5" />
+      <sprite texture="Content/Items/Electricity/signalcomp.png" sourcerect="68,35,23,24" origin="0.5,0.5" />
+      <CustomInterface selectkey="Select" canbeselected="true" drawhudwhenequipped="false" msg="ItemMsgInteractSelect">
+        <StatusEffect type="OnUse" target="This" Condition="-100.0" disabledeltatime="true" delay="4.0" />
+        <GuiFrame relativesize="0.15,0.1" anchor="Center" absoluteoffset="0,0" style="ItemUI" />
+        <Button text="Activate">
+          <StatusEffect type="OnUse" target="This" Condition="-100.0" disabledeltatime="true" delay="4.0" />
+          <StatusEffect type="OnUse" target="This" setvalue="true" IsOn="true">
+            <sound file="Mods/Thalassophobia/Items/Weapons/Explosives/Countdown240.ogg" range="800.0" loop="false" volume="1.0" />
+          </StatusEffect>
+        </Button>
+        <StatusEffect type="OnBroken" target="NearbyItems" range="100" setvalue="true" condition="0" targetidentifiers="door,hatch,windoweddoor,doorwbuttons,hatchwbuttons,windoweddoorwbuttons,alienhatch,aliendoor,doorwrecked,hatchwrecked,windoweddoorwrecked,doorwbuttonswrecked,hatchwbuttonswrecked,windoweddoorwbuttonswrecked" />
+        <StatusEffect type="OnBroken" target="This">
+          <sound file="Content/Items/Weapons/ExplosionMedium1.ogg" type="OnUse" range="10000" selectionmode="All" />
+          <sound file="Content/Items/Weapons/ExplosionDebris1.ogg" type="OnUse" range="10000" />
+          <Explosion range="100.0" structuredamage="0" itemdamage="0" stun="5" force="20.0" severlimbsprobability="0.5">
+            <Affliction identifier="bleeding" strength="20" />
+            <Affliction identifier="lacerations" strength="100" />
+          </Explosion>
+          <Remove />
+        </StatusEffect>
+      </CustomInterface>
+    </LightComponent>
+  </Item>
+</Items>

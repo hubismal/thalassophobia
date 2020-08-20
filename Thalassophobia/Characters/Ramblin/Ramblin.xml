@@ -1,0 +1,20 @@
+﻿<Character speciesname="Ramblin" humanoid="False" speciestranslationoverride="" displayname="Ramblin' Evil Mushroom" group="" hasinfo="False" husk="False" usehuskappendage="False" needsair="True" needswater="False" canspeak="False" noise="100" visibility="100" blooddecal="blood" bleedparticleair="blooddrop" bleedparticlewater="waterblood" eatingspeed="10" pathfinderpriority="1" hideinsonar="False" sonardisruption="0">
+  <ragdolls folder="Mods/Thalassophobia/Characters/Ramblin/Ragdolls/" />
+  <animations folder="Mods/Thalassophobia/Characters/Ramblin/Animations/" />
+  <health vitality="40" doesbleed="False" crushdepth="-Infinity" usehealthwindow="False" bleedingreduction="0" burnreduction="0" constanthealthregeneration="0" healthregenerationwheneating="0" />
+  <ai combatstrength="1" sight="1" hearing="1" aggressionhurt="100" aggressiongreed="10" fleehealththreshold="0" attackwhenprovoked="False" avoidgunfire="True" aggressiveboarding="False" enforceaggressivebehaviorformissions="False" targetouterwalls="False" randomattack="False">
+    <target tag="human" state="Attack" priority="1" reactdistance="1" attackdistance="0" />
+  </ai>
+  <StatusEffect type="OnDeath" target="This" targetlimb="Torso">
+    <ParticleEmitter particle="cellgib" particleamount="15" scalemin="1" scalemax="2" velocitymin="100" velocitymax="150" anglemin="0" anglemax="360" />
+    <ParticleEmitter particle="termgib" particleamount="1" scalemin="2.5" scalemax="3.5" velocitymin="10" velocitymax="10" />
+    <ParticleEmitter particle="leucogib" particleamount="1" scalemin="2.5" scalemax="3.5" velocitymin="10" velocitymax="10" />
+    <sound file="Content/Characters/Leucocyte/CARRIER_cellDeath1.ogg" range="1000" volume="1" selectionmode="Random" />
+    <sound file="Content/Characters/Leucocyte/CARRIER_cellDeath2.ogg" range="1000" volume="1" selectionmode="Random" />
+    <sound file="Content/Characters/Leucocyte/CARRIER_cellDeath3.ogg" range="1000" volume="1" selectionmode="Random" />
+    <Explosion range="200" force="5" flash="false" shockwave="false" sparks="false" flames="false" smoke="false" underwaterbubble="true" structuredamage="0" itemdamage="0" flashrange="0" flashduration="0">
+      <Affliction identifier="thal_mushroomized" strength="3" />
+    </Explosion>
+    <RemoveCharacter />
+  </StatusEffect>
+</Character>

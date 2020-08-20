@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Items>
+  <Item name="directional lamp" identifier="directionalLamp" category="Electrical" Tags="smallitem,light">
+    <Sprite texture="lamp.png" sourcerect="0,0,16,32" depth="0.8" />
+    <LightComponent lightcolor="1.0,1.0,1.0,0.5" range="800.0" powerconsumption="5">
+      <LightTexture texture="Mods/Thalassophobia/Items/Electricity/Lights/lightTextures/directional.png" origin="0.5,0.0" />
+      <!-- additive "top light" -->
+      <sprite texture="Content/Items/Electricity/lamp.png" sourcerect="33,0,31,37" alpha="1.0" />
+    </LightComponent>
+    <ConnectionPanel selectkey="Action" canbeselected="true" msg="ItemMsgRewireScrewdriver" hudpriority="10">
+      <GuiFrame relativesize="0.2,0.32" minsize="400,350" maxsize="480,420" anchor="Center" style="ConnectionPanel" />
+      <RequiredItem items="screwdriver" type="Equipped" />
+      <input name="power" displayname="connection.power" />
+      <input name="toggle" displayname="connection.togglestate" />
+      <input name="set_state" displayname="connection.setstate" />
+    </ConnectionPanel>
+  </Item>
+  <Item
+  name="Light Strip"
+  identifier="lightstrip"
+  tags=""
+  resizevertical="true">
+	<sprite texture="Content/Items/Electricity/lamp.png" sourcerect="0,48,48,16" depth="0.68" premultiplyalpha="false" origin="0.5,0.5" />
+	<LightComponent lightcolor="1.0,1.0,1.0,1.0" range="0" IsOn="true" castlights="false" resizevertical="true">
+      <LightTexture texture="Content/Lights/pointlight_bounce.png" origin="0.5,0.5" resizevertical="true"/>
+      <sprite texture="Content/Items/Electricity/lamp.png" sourcerect="0,48,48,16" alpha="1.0" wrap="true"/>
+    </LightComponent>
+
+</Item>
+</Items>

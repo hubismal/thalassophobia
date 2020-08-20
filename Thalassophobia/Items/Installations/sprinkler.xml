@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Items>
+	<Item name="" identifier="thal_sprinkler" category="Equipment" Tags="mediumitem,fireextinguisher,provocative" cargocontaineridentifier="metalcrate" description="" impactsoundtag="impact_metal_light" requireaimtouse="false" showinmenus="false"><!-- show in menus disabled until 0.10.5(?).0 -->
+    <InventoryIcon texture="Content/Items/InventoryIconAtlas.png" sourcerect="0,0,64,64" origin="0.5,0.5" />
+    <Sprite texture="Content/Items/InventoryIconAtlas.png" depth="0.55" sourcerect="0,0,64,64" origin="0.5,0.5" />
+    <Body width="17" height="48" density="5" bodytype="Dynamic" targetrotation="90">
+			<StatusEffect type="Always" targettype="This" setvalue="true" targetrotation="70" rotation="70"/>
+		</Body>
+    <RepairTool extinguishamount="60.0" range="500" barrelpos="21,25" repairthroughholes="true" hititems="false" requireaimtouse="false" usablein="air" barrelrotation="270">
+      <ParticleEmitter particle="extinguisher" velocitymin="500.0" velocitymax="650.0" particlespersecond="50" />
+      <StatusEffect type="OnUse" targettype="This" setvalue="true" rotation="30" />
+      <sound file="Content/Items/Tools/Extinguisher.ogg" type="OnUse" range="500.0" loop="true" />
+      <StatusEffect type="Always" target="This">
+				<UseItem />
+      </StatusEffect>
+    </RepairTool>
+  </Item>
+	
+</Items>

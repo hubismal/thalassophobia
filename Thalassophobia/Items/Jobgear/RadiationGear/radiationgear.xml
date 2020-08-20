@@ -1,0 +1,42 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Items>
+  <Item name="Radiation Suit" identifier="thal_radsuit" category="Equipment" tags="diving,divingsuit" scale="0.5" fireproof="true" description="An impressive suit used primarily by scientists when handling highly radioactive materials. Will not protect from pressure or suffocation, but renders the user almost immune to burns, radiation, and glowing." impactsoundtag="impact_metal_heavy">
+    <PreferredContainer primary="divingsuitcontainer" spawnprobability="0.1" />
+    <Price locationtype="Research" buyprice="4000" />
+    <Price locationtype="City" buyprice="6000" />
+    <Price locationtype="Military" buyprice="4000" />
+    <Deconstruct time="120">
+      <Item identifier="orangejumpsuit1" />
+      <Item identifier="lead" />
+      <Item identifier="rubber" />
+    </Deconstruct>
+    <InventoryIcon texture="Mods/Thalassophobia/Items/Jobgear/RadiationGear/suiticon.png" sourcerect="0,0,189,188" origin="0.5,0.5" />
+    <!--
+    <Sprite name="Diving Suit" texture="DivingSuit_Item.png" sourcerect="157,0,90,307" depth="0.55" origin="0.4888889,0.5439739" />
+    -->
+    <Sprite name="Diving Suit Item" texture="Mods/Thalassophobia/Items/Jobgear/RadiationGear/DivingSuitLocker.png" sourcerect="331,196,126,112" depth="0.55" origin="0.5,0.5" />
+    <ContainedSprite name="Diving Suit In Vertical Locker" allowedcontainertags="divingsuitcontainervertical" texture="Mods/Thalassophobia/Items/Jobgear/RadiationGear/DivingSuitLocker.png" sourcerect="330,0,71,195" depth="0.55" origin="0.5,0.5" />
+    <ContainedSprite name="Diving Suit Behind Window" allowedcontainertags="divingsuitcontainerwindow" texture="Mods/Thalassophobia/Items/Jobgear/RadiationGear/Lockers.png" sourcerect="129,688,99,254" depth="0.55" origin="0.0011611271,0" />
+    <ContainedSprite name="Diving Suit In Horizontal Locker" allowedcontainertags="divingsuitcontainerhorizontal" texture="Mods/Thalassophobia/Items/Jobgear/RadiationGear/DivingSuitLocker.png" sourcerect="236,340,228,66" depth="0.55" origin="0.6,0.5" />
+    <Body radius="45" width="34" density="15" />
+    <Wearable slots="OuterClothes" msg="ItemMsgEquipSelect">
+      <StatusEffect type="OnWearing" target="Character" HideFace="true" duration="0.1" stackable="false" />
+      <sprite name="Rad Suit Helmet Wearable" texture="DivingSuit_Torso.png" limb="Head" inheritlimbdepth="true" inherittexturescale="true" hidelimb="true" hideotherwearables="true" sourcerect="248,7,141,158" origin="0.45,0.36942676"></sprite>
+      <sprite name="radsuit torso Wearable" texture="DivingSuit_Torso.png" limb="Torso" inheritlimbdepth="true" hidelimb="true" hideotherwearables="true" inherittexturescale="true" inheritorigin="false" inheritsourcerect="false" sourcerect="0,34,125,246" origin="0.496,0.37398374" />
+      <sprite texture="DivingSuit_Legs.png" limb="Waist" inheritlimbdepth="true" hidelimb="true" hideotherwearables="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" sourcerect="0,0,270,256" origin="0.5,0.5" />
+      <sprite texture="DivingSuit_Torso.png" limb="RightHand" inheritlimbdepth="true" hidelimb="true" hideotherwearables="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" sourcerect="0,0,256,280" origin="0.5,0.5" />
+      <sprite texture="DivingSuit_Torso.png" limb="LeftHand" inheritlimbdepth="true" hidelimb="true" hideotherwearables="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" sourcerect="0,0,256,280" origin="0.5,0.5" />
+      <sprite texture="DivingSuit_Torso.png" limb="RightArm" inheritlimbdepth="true" hidelimb="true" hideotherwearables="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" sourcerect="0,0,256,280" origin="0.5,0.5" />
+      <sprite texture="DivingSuit_Torso.png" limb="LeftArm" inheritlimbdepth="true" hidelimb="true" hideotherwearables="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" sourcerect="0,0,256,280" origin="0.5,0.5" />
+      <sprite name="radsuit rightthigh" texture="DivingSuit_Legs.png" limb="RightThigh" inheritlimbdepth="true" hidelimb="true" hideotherwearables="true" inherittexturescale="true" inheritorigin="true" sourcerect="96,0,83,156" origin="0.5,0.5" />
+      <sprite name="radsuit leftthigh" texture="DivingSuit_Legs.png" limb="LeftThigh" inheritlimbdepth="true" hidelimb="true" hideotherwearables="true" inherittexturescale="true" inheritorigin="true" sourcerect="179,0,86,156" origin="0.5,0.5" />
+      <sprite name="radsuit rightleg" texture="DivingSuit_Legs.png" limb="RightLeg" inheritlimbdepth="true" hidelimb="true" hideotherwearables="true" inherittexturescale="true" inheritorigin="true" sourcerect="109,156,67,114" origin="0.5,0.5" />
+      <sprite name="radsuit leftleg" texture="DivingSuit_Legs.png" limb="LeftLeg" inheritlimbdepth="true" hidelimb="true" hideotherwearables="true" inherittexturescale="true" inheritorigin="true" sourcerect="186,155,73,114" origin="0.5,0.5" />
+      <sprite name="radsuit rightfoot" texture="DivingSuit_Legs.png" limb="RightFoot" sound="footstep_armor_heavy" inheritlimbdepth="false" depth="0.10" hidelimb="true" hideotherwearables="true" inherittexturescale="true" inheritorigin="false" sourcerect="2,127,40,85" origin="0.59250414,0.54483974" />
+      <sprite name="radsuit leftfoot" texture="DivingSuit_Legs.png" limb="LeftFoot" sound="footstep_armor_heavy" inheritlimbdepth="false" depth="0.102" hidelimb="true" hideotherwearables="true" inherittexturescale="true" inheritorigin="false" sourcerect="1,126,40,85" origin="0.5516063,0.61087334" />
+      <damagemodifier armorsector="0.0,360.0" afflictionidentifiers="radiationsickness" damagemultiplier="0.05" damagesound="LimbArmor" deflectprojectiles="true" />
+      <damagemodifier armorsector="0.0,360.0" afflictiontypes="burn" damagemultiplier="0.1" damagesound="LimbArmor" deflectprojectiles="true" />
+      <damagemodifier armorsector="0.0,360.0" afflictiontypes="thal_glowing" damagemultiplier="0.05" damagesound="LimbArmor" deflectprojectiles="true" />
+    </Wearable>
+  </Item>
+</Items>

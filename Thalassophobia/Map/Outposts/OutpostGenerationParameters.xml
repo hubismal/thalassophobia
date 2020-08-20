@@ -1,0 +1,47 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<OutpostGenerationParameters>
+  <OutpostConfig
+    identifier="slumcity"
+    totalmodulecount="7" minhallwaylength="0"
+    allowedlocationtypes="thal_mineRadioactive">
+    <modulecount flag="Airlock" count="1"/>
+    <modulecount flag="EngineeringModule" count="1"/>
+    <modulecount flag="AdminModule" count="1"/>
+    <modulecount flag="SlumStorageModule" count="1"/>
+
+    <npcs>
+      <npc from="outpostnpcs1" identifier="hrmanager"/>
+      <npc from="outpostnpcs1" identifier="repairnpc"/>
+      <npc from="outpostnpcs1" identifier="subupgradenpc"/>
+      <npc from="outpostnpcs1" identifier="subsalesnpc"/>
+      <npc from="outpostnpcs1" identifier="merchant"/>
+      <npc from="outpostnpcs1" identifier="securitynpc"/>
+      <npc from="outpostnpcs1" identifier="outpostmanager"/>
+    </npcs>
+    
+  </OutpostConfig>
+  
+  <OutpostConfig
+    identifier="blackSite"
+    totalmodulecount="6" minhallwaylength="0"
+    allowedlocationtypes="thal_blackSite">
+    <modulecount flag="EngineeringModule" count="1"/>
+    <modulecount flag="AdminModule" count="1"/>
+    <modulecount flag="SlumStorageModule" count="1"/>
+
+    <npcs>
+      <npc from="outpostnpcs1" identifier="researcher"/>
+      <npc from="outpostnpcs1" identifier="researcher"/>
+      <npc from="outpostnpcs1" identifier="securitynpc"/>
+      <npc from="outpostnpcs1" identifier="securitynpc"/>
+      <npc from="outpostnpcs1" identifier="securitynpc"/>
+      <npc from="outpostnpcs1" identifier="repairnpc"/>
+      <npc from="outpostnpcs1" identifier="subupgradenpc"/>
+      <npc from="outpostnpcs1" identifier="subsalesnpc"/>
+      <npc from="outpostnpcs1" identifier="merchant"/>
+      <npc from="outpostnpcs1" identifier="outpostmanager"/>
+    </npcs>
+    
+  </OutpostConfig>
+
+</OutpostGenerationParameters>

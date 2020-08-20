@@ -1,0 +1,175 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Items>
+  <Item name="" identifier="thal_blastdoor" tags="door" scale="0.5" health="400" damagedbyrepairtools="true" damagedbymonsters="false" damagedbyexplosions="true" explosiondamagemultiplier="0.1">
+    <Sprite name="Blast door frame" texture="Mods/Thalassophobia/Items/Doors/blastdoor.png" sourcerect="0,0,152,420" depth="0.60" origin="0.5,0.5" />
+    <DecorativeSprite name="Blast door back" texture="Mods/Thalassophobia/Items/Doors/blastdoor.png" sourcerect="291,-1,90,420" depth="0.89" origin="0.5,0.5" />
+    <Door canbeselected="true" msg="" canbepicked="false" shadowscale="0.9,1" openingspeed="0.8" closingspeed="0.8" togglecooldown="3.0">
+      <!-- unobtainable item in order to make it unpickable -->
+      <RequiredItem items="thal_bombcollarclock" type="equipped" msg="(Not pryable)" />
+      <Sprite name="Blast Door Sprite" texture="Mods/Thalassophobia/Items/Doors/blastdoor.png" sourcerect="392,-2,82,421" depth="0.05" origin="0.5,0" />
+      <WeldedSprite name="Blast Door Welded" texture="Mods/Thalassophobia/Items/Doors/blastdoor.png" sourcerect="203,0,65,377" depth="0.04" origin="0.5,0.5" />
+      <BrokenSprite name="Blast Door Broken" texture="Mods/Thalassophobia/Items/Doors/blastdoor.png" sourcerect="727,0,140,419" depth="0.06" origin="0.5,0" scale="true" />
+      <sound file="Mods/Thalassophobia/Items/Doors/BlastDoor1.ogg" type="OnUse" range="600.0" volume="1.0" />
+      <sound file="Mods/Thalassophobia/Items/Doors/BlastDoor2.ogg" type="OnUse" range="600.0" volume="1.0" />
+      <sound file="Mods/Thalassophobia/Items/Doors/BlastDoor3.ogg" type="OnUse" range="600.0" volume="1.0" />
+      <sound file="Mods/Thalassophobia/Items/Doors/BlastDoor0.ogg" type="OnUse" range="600.0" volume="1.0" />
+      <sound file="Content/Items/Door/Duct1.ogg" type="OnFailure" selectionmode="Random" range="300" />
+      <sound file="Content/Items/Door/Duct2.ogg" type="OnFailure" range="300" />
+      <sound file="Content/Items/Door/DoorBreak1.ogg" type="OnBroken" selectionmode="Random" range="3000" />
+      <sound file="Content/Items/Door/DoorBreak2.ogg" type="OnBroken" range="3000" />
+    </Door>
+    <AiTarget sightrange="3000.0" static="True" />
+    <Repairable selectkey="Action" header="mechanicalrepairsheader" fixDurationHighSkill="30" fixDurationLowSkill="50" msg="ItemMsgRepairWrench" hudpriority="10">
+      <GuiFrame relativesize="0.2,0.16" minsize="400,180" maxsize="480,216" anchor="Center" relativeoffset="0.0,0.27" style="ItemUI" />
+      <RequiredSkill identifier="mechanical" level="50" />
+      <RequiredItem items="wrench" type="equipped" />
+    </Repairable>
+    <ConnectionPanel selectkey="Action" canbeselected="true" msg="ItemMsgRewireScrewdriver" hudpriority="10">
+      <GuiFrame relativesize="0.2,0.32" minsize="400,350" maxsize="480,420" anchor="Center" style="ConnectionPanel" />
+      <RequiredItem items="screwdriver" type="Equipped" />
+      <input name="toggle" displayname="connection.togglestate" />
+      <input name="set_state" displayname="connection.setstate" />
+      <output name="state_out" displayname="connection.stateout" fallbackdisplayname="connection.signalout" />
+    </ConnectionPanel>
+  </Item>
+  <Item name="" identifier="thal_glassdoor" tags="door,plexiglassdoor" scale="0.5" health="75" damagedbyrepairtools="true" damagedbymonsters="true" damagedbyexplosions="true" explosiondamagemultiplier="0.3" allowrotatingineditor="false" allowedlinks="structure,item" linkable="true">
+    <Sprite texture="Content/Items/Door/door.png" sourcerect="0,0,49,416" depth="0.51" origin="0.5,0.5" />
+    <DecorativeSprite texture="Content/Items/Door/door.png" sourcerect="49,0,49,416" depth="0.89" origin="0.5,0.5" />
+    <Door window="0,0,50,416" canbepicked="true" canbeselected="true" pickkey="Action" msg="ItemMsgForceOpenCrowbar" PickingTime="10.0" shadowscale="0.7,1">
+      <RequiredItem items="crowbar" type="Equipped" />
+      <Sprite texture="Mods/Thalassophobia/Items/Doors/blastdoor.png" name="Glass door sprite" sourcerect="906,0,56,416" depth="0.05" origin="0.5,0" />
+      <WeldedSprite texture="Content/Items/Door/door.png" sourcerect="203,0,65,377" depth="0.0" origin="0.5,0.5" />
+      <BrokenSprite texture="Content/Items/Door/door.png" sourcerect="392,0,120,416" depth="0.051" origin="0.5,0.0" scale="true" />
+      <sound file="Content/Items/Door/Door1.ogg" type="OnUse" range="500.0" />
+      <sound file="Content/Items/Door/Door2.ogg" type="OnUse" range="500.0" />
+      <sound file="Content/Items/Door/Door3.ogg" type="OnUse" range="500.0" />
+      <sound file="Content/Items/Door/Door4.ogg" type="OnUse" range="500.0" />
+      <sound file="Content/Items/Tools/Crowbar.ogg" type="OnPicked" range="4000.0" />
+      <sound file="Content/Items/Door/Duct1.ogg" type="OnFailure" selectionmode="Random" range="300" />
+      <sound file="Content/Items/Door/Duct2.ogg" type="OnFailure" range="300" />
+      <sound file="Content/Sounds/Damage/GlassImpact1.ogg" type="OnBroken" selectionmode="Random" range="3000" />
+      <sound file="Content/Sounds/Damage/GlassImpact2.ogg" type="OnBroken" range="3000" />
+      <sound file="Content/Sounds/Damage/GlassImpact3.ogg" type="OnBroken" range="3000" />
+      <sound file="Content/Sounds/Damage/GlassImpact4.ogg" type="OnBroken" range="3000" />
+    </Door>
+    <AiTarget sightrange="3000.0" static="True" />
+    <Repairable selectkey="Action" header="mechanicalrepairsheader" fixDurationHighSkill="10" fixDurationLowSkill="25" msg="ItemMsgRepairWrench" hudpriority="10">
+      <GuiFrame relativesize="0.2,0.16" minsize="400,180" maxsize="480,216" anchor="Center" relativeoffset="0.0,0.27" style="ItemUI" />
+      <RequiredSkill identifier="mechanical" level="40" />
+      <RequiredItem items="wrench" type="equipped" />
+    </Repairable>
+    <ConnectionPanel selectkey="Action" canbeselected="true" msg="ItemMsgRewireScrewdriver" hudpriority="10">
+      <GuiFrame relativesize="0.2,0.32" minsize="400,350" maxsize="480,420" anchor="Center" style="ConnectionPanel" />
+      <RequiredItem items="screwdriver" type="Equipped" />
+      <input name="toggle" displayname="connection.togglestate" />
+      <input name="set_state" displayname="connection.setstate" />
+      <output name="state_out" displayname="connection.stateout" fallbackdisplayname="connection.signalout" />
+    </ConnectionPanel>
+  </Item>
+  <Item name="" identifier="thal_glassdoorwbuttons" tags="door,plexiglassdoor" scale="0.5" health="75" requirebodyinsidetrigger="false" damagedbyrepairtools="true" damagedbymonsters="true" damagedbyexplosions="true" explosiondamagemultiplier="0.3" allowrotatingineditor="false" allowedlinks="structure,item" linkable="true">
+    <Sprite texture="Content/Items/Door/door.png" sourcerect="0,0,49,416" depth="0.51" origin="0.5,0.5" />
+    <DecorativeSprite texture="Content/Items/Door/door2.png" sourcerect="0,0,170,416" depth="0.89" origin="0.5,0.5" />
+    <Door window="0,0,50,416" canbepicked="true" canbeselected="true" pickkey="Action" msg="ItemMsgForceOpenCrowbar" PickingTime="10.0" shadowscale="0.7,1" hasintegratedbuttons="true">
+      <RequiredItem items="crowbar" type="Equipped" optional="true" />
+      <Requireditem items="idcard" type="Picked" optional="true" />
+      <Sprite texture="Mods/Thalassophobia/Items/Doors/blastdoor.png" name="Glass door sprite (with buttons)" sourcerect="906,0,56,416" depth="0.05" origin="0.5,0" />
+      <WeldedSprite texture="Content/Items/Door/door.png" sourcerect="203,0,65,377" depth="0.0" origin="0.5,0.5" />
+      <BrokenSprite texture="Content/Items/Door/door.png" sourcerect="392,0,120,416" depth="0.051" origin="0.5,0.0" scale="true" />
+      <sound file="Content/Items/Door/Door1.ogg" type="OnUse" range="500.0" />
+      <sound file="Content/Items/Door/Door2.ogg" type="OnUse" range="500.0" />
+      <sound file="Content/Items/Door/Door3.ogg" type="OnUse" range="500.0" />
+      <sound file="Content/Items/Door/Door4.ogg" type="OnUse" range="500.0" />
+      <sound file="Content/Items/Tools/Crowbar.ogg" type="OnPicked" range="4000.0" />
+      <sound file="Content/Items/Door/Duct1.ogg" type="OnFailure" selectionmode="Random" range="300" />
+      <sound file="Content/Items/Door/Duct2.ogg" type="OnFailure" range="300" />
+      <sound file="Content/Sounds/Damage/GlassImpact1.ogg" type="OnBroken" selectionmode="Random" range="3000" />
+      <sound file="Content/Sounds/Damage/GlassImpact2.ogg" type="OnBroken" range="3000" />
+      <sound file="Content/Sounds/Damage/GlassImpact3.ogg" type="OnBroken" range="3000" />
+      <sound file="Content/Sounds/Damage/GlassImpact4.ogg" type="OnBroken" range="3000" />
+    </Door>
+    <trigger x="-60" y="-140" width="170" height="85" />
+    <AiTarget sightrange="3000.0" static="True" />
+    <Repairable selectkey="Action" header="mechanicalrepairsheader" fixDurationHighSkill="10" fixDurationLowSkill="25" msg="ItemMsgRepairWrench" hudpriority="10">
+      <GuiFrame relativesize="0.2,0.16" minsize="400,180" maxsize="480,216" anchor="Center" relativeoffset="0.0,0.27" style="ItemUI" />
+      <RequiredSkill identifier="mechanical" level="40" />
+      <RequiredItem items="wrench" type="equipped" />
+    </Repairable>
+    <ConnectionPanel selectkey="Action" canbeselected="true" msg="ItemMsgRewireScrewdriver" hudpriority="10">
+      <GuiFrame relativesize="0.2,0.32" minsize="400,350" maxsize="480,420" anchor="Center" style="ConnectionPanel" />
+      <RequiredItem items="screwdriver" type="Equipped" />
+      <input name="toggle" displayname="connection.togglestate" />
+      <input name="set_state" displayname="connection.setstate" />
+      <output name="state_out" displayname="connection.stateout" fallbackdisplayname="connection.signalout" />
+    </ConnectionPanel>
+  </Item>
+  <Item name="" identifier="thal_glasshatch" allowedlinks="gap,hull,structure,item" linkable="true" tags="door, plexiglassdoor" scale="0.5" health="75" damagedbyrepairtools="true" damagedbymonsters="true" damagedbyexplosions="true" explosiondamagemultiplier="0.3" allowrotatingineditor="false">
+    <Sprite texture="Content/Items/Door/hatch.png" sourcerect="0,0,256,98" depth="0.7" origin="0.5,0.5" />
+    <Door window="0,0,257,47" canbeselected="true" canbepicked="true" horizontal="true" pickkey="Action" msg="ItemMsgForceOpenCrowbar" PickingTime="10.0" shadowscale="1,0.8">
+      <RequiredItem items="crowbar" type="Equipped" />
+      <Sprite texture="Mods/Thalassophobia/Items/Doors/blastdoor.png" name="Glass Hatch sprite" sourcerect="2,430,256,46" depth="0.05" origin="0,0.49876043" />
+      <WeldedSprite texture="Content/Items/Door/hatch.png" sourcerect="0,100,227,75" depth="0.0" origin="0.5,0.5" />
+      <BrokenSprite texture="Content/Items/Door/hatch.png" sourcerect="256,45,256,114" depth="0.051" origin="0.0,0.5" scale="true" />
+      <sound file="Content/Items/Door/Door1.ogg" type="OnUse" range="500.0" />
+      <sound file="Content/Items/Door/Door2.ogg" type="OnUse" range="500.0" />
+      <sound file="Content/Items/Door/Door3.ogg" type="OnUse" range="500.0" />
+      <sound file="Content/Items/Door/Door4.ogg" type="OnUse" range="500.0" />
+      <sound file="Content/Items/Tools/Crowbar.ogg" type="OnPicked" range="4000.0" />
+      <sound file="Content/Items/Door/Duct1.ogg" type="OnFailure" selectionmode="Random" range="300" />
+      <sound file="Content/Items/Door/Duct2.ogg" type="OnFailure" range="300" />
+      <sound file="Content/Sounds/Damage/GlassImpact1.ogg" type="OnBroken" selectionmode="Random" range="3000" />
+      <sound file="Content/Sounds/Damage/GlassImpact2.ogg" type="OnBroken" range="3000" />
+      <sound file="Content/Sounds/Damage/GlassImpact3.ogg" type="OnBroken" range="3000" />
+      <sound file="Content/Sounds/Damage/GlassImpact4.ogg" type="OnBroken" range="3000" />
+    </Door>
+    <AiTarget sightrange="1500.0" static="True" />
+    <Repairable selectkey="Action" header="mechanicalrepairsheader" fixDurationHighSkill="10" fixDurationLowSkill="25" msg="ItemMsgRepairWrench" hudpriority="10">
+      <GuiFrame relativesize="0.2,0.16" minsize="400,180" maxsize="480,216" anchor="Center" relativeoffset="0.0,0.27" style="ItemUI" />
+      <RequiredSkill identifier="mechanical" level="40" />
+      <RequiredItem items="wrench" type="equipped" />
+    </Repairable>
+    <ConnectionPanel selectkey="Action" canbeselected="true" msg="ItemMsgRewireScrewdriver" hudpriority="10">
+      <GuiFrame relativesize="0.2,0.32" minsize="400,350" maxsize="480,420" anchor="Center" style="ConnectionPanel" />
+      <RequiredItem items="screwdriver" type="Equipped" />
+      <input name="toggle" displayname="connection.togglestate" />
+      <input name="set_state" displayname="connection.setstate" />
+      <output name="state_out" displayname="connection.stateout" fallbackdisplayname="connection.signalout" />
+    </ConnectionPanel>
+  </Item>
+  
+  <Item name="" identifier="thal_glasshatchwbuttons" allowedlinks="gap,hull,structure,item" linkable="true" tags="door, glassdoor" scale="0.5" health="75" requirebodyinsidetrigger="false" damagedbyrepairtools="true" damagedbymonsters="true" damagedbyexplosions="true" explosiondamagemultiplier="0.3" allowrotatingineditor="false">
+    <Sprite texture="Content/Items/Door/hatch.png" sourcerect="0,0,256,98" depth="0.7" origin="0.5,0.5" />
+    <DecorativeSprite texture="Content/Items/Door/hatch.png" sourcerect="0,234,256,193" depth="0.89" origin="0.5,0.5"/>
+    <Door window="0,0,257,47" canbeselected="true" canbepicked="true" horizontal="true" pickkey="Action" msg="ItemMsgOpen" PickingTime="10.0" shadowscale="1,0.8" hasintegratedbuttons="true">
+      <RequiredItem items="crowbar" type="Equipped" optional="true"/>
+      <Requireditem items="idcard" type="Picked" optional="true"/>
+      <Sprite texture="Mods/Thalassophobia/Items/Doors/blastdoor.png" name="Glass Hatch sprite" sourcerect="2,430,256,46" depth="0.05" origin="0,0.49876043" />
+      <WeldedSprite texture="Content/Items/Door/hatch.png" sourcerect="0,100,227,75" depth="0.0" origin="0.5,0.5" />
+      <BrokenSprite texture="Content/Items/Door/hatch.png" sourcerect="256,45,256,114" depth="0.051" origin="0.0,0.5" scale="true" />
+      <sound file="Content/Items/Door/Door1.ogg" type="OnUse" range="500.0" />
+      <sound file="Content/Items/Door/Door2.ogg" type="OnUse" range="500.0" />
+      <sound file="Content/Items/Door/Door3.ogg" type="OnUse" range="500.0" />
+      <sound file="Content/Items/Door/Door4.ogg" type="OnUse" range="500.0" />
+      <sound file="Content/Items/Tools/Crowbar.ogg" type="OnPicked" range="4000.0" />
+      <sound file="Content/Items/Door/Duct1.ogg" type="OnFailure" selectionmode="Random" range="300" />
+      <sound file="Content/Items/Door/Duct2.ogg" type="OnFailure" range="300" />
+      <sound file="Content/Sounds/Damage/GlassImpact1.ogg" type="OnBroken" selectionmode="Random" range="3000" />
+      <sound file="Content/Sounds/Damage/GlassImpact2.ogg" type="OnBroken" range="3000" />
+      <sound file="Content/Sounds/Damage/GlassImpact3.ogg" type="OnBroken" range="3000" />
+      <sound file="Content/Sounds/Damage/GlassImpact4.ogg" type="OnBroken" range="3000" />
+    </Door>
+    <trigger x="170" y="51" width="70" height="200" />
+    <AiTarget sightrange="1500.0" static="True"/>
+    <Repairable selectkey="Action" header="mechanicalrepairsheader" fixDurationHighSkill="10" fixDurationLowSkill="25" msg="ItemMsgRepairWrench" hudpriority="10">
+      <GuiFrame relativesize="0.2,0.16" minsize="400,180" maxsize="480,216" anchor="Center" relativeoffset="0.0,0.27" style="ItemUI" />
+      <RequiredSkill identifier="mechanical" level="40" />
+      <RequiredItem items="wrench" type="equipped" />
+    </Repairable>
+    <ConnectionPanel selectkey="Action" canbeselected="true" msg="ItemMsgRewireScrewdriver" hudpriority="10">
+      <GuiFrame relativesize="0.2,0.32" minsize="400,350" maxsize="480,420" anchor="Center" style="ConnectionPanel" />
+      <RequiredItem items="screwdriver" type="Equipped" />
+      <input name="toggle" displayname="connection.togglestate" />
+      <input name="set_state" displayname="connection.setstate" />
+      <output name="state_out" displayname="connection.stateout" fallbackdisplayname="connection.signalout"/>
+    </ConnectionPanel>
+  </Item>
+</Items>

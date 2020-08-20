@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<infotexts language="English" nowhitespace="false" translatedname="English">
+	
+	<faction.thal_ues>United Europa Society</faction.thal_ues>
+	<faction.thal_ues.description>The United Europa Society is an organization comprised primarily of researchers, doctors, and other unusally well-educated dwellers of Europa. Their primary goal is to fight for the wellbeing of the lower and (what remains of) the middle class by combating famine and poverty. Resultingly, the UES also aims to stop the ongoing war between the Europan Coalition and the Europan Confederacy due to their belief that it has ravaged outposts everywhere. Donating to the UES generally makes outposts more bearable.</faction.thal_ues.description>
+	<faction.thal_ues.shortdescription>A charitable pacifist organization that aims to combat poverty and stop most conflict on Europa for the sake of humanity's wellbeing. Donations to the UES help everyone on Europa.</faction.thal_ues.shortdescription>
+	
+	<!-- removed: too similar to the seperatists, location-based outposts are planned in vanilla anyway-->
+	<faction.thal_confederacy>The Europan Confederacy</faction.thal_confederacy>
+	<faction.thal_confederacy.description>The Europan Confederacy is a more moral offshoot of the notorious Jovian Seperatists. After the great recession, various outposts confederated together to advocate for increased freedoms, which caused the Coalition to declare war. The Jovian Seperatists and Confederacy disagree on their methods: While the Jovian Seperatists will resort to terrorism to combat the Coalition, the Confederacy generally tries to harm fewer innocents.</faction.thal_confederacy.description>
+	<faction.thal_confederacy.shortdescription> League of seperatist outposts that formally declared secession from the Coalition, who branded them traitors. Firm believers in individual rights, they fight in a direct war unlike the insurgent Jovian Seperatists.</faction.thal_confederacy.shortdescription>
+	
+	<faction.thal_cartel>Cthonian Cartel</faction.thal_cartel>
+	<faction.thal_cartel.description>On Europa, where death is imminent, the immensely powerful cartel will meet the demand for narcotics from Europans who can't be quelled by alcohol. It is unknown if Cthonian refers to the rocky surface of Jupiter, bears reference to the lovecraftian monsters under the ice, or the 'underworld' from which the cartel originates. In some areas devoid of proper law and order, the cartel acts as a government due to its immense power.</faction.thal_cartel.description>
+	<faction.thal_cartel.shortdescription>Vicious cartel empowered by the need of the average stressed Europan for relief, preferrably the narcotic kind. In areas where government presence is limited, serve as the de-facto law.</faction.thal_cartel.shortdescription>
+	
+	<skillname.thal_botanyskill>Xenobotany</skillname.thal_botanyskill>
+	<skillname.thal_techskill>Technofinesse</skillname.thal_techskill>
+	<skillname.thal_xenoskill>Xenobiology</skillname.thal_xenoskill>
+	<skillname.thal_clownskill>Tomfoolery</skillname.thal_clownskill>
+	<!-- Jobs -->
+	<jobname.thal_clown>Clown</jobname.thal_clown>
+	<jobdescription.thal_clown>Clowns are the comical oddballs employed to entertain the crew. Their job is not to necessarily aid the ship, but rather aid the crews boredom through harmless antics and pranks. Have a tomfoolery stat that determines their effectiveness with... things. If your games are getting a little boring on the social side, consider one of the clown variants.</jobdescription.thal_clown>
+	
+	<jobname.thal_clown1>Jester</jobname.thal_clown1>
+	<jobname.thal_clown2>Honkchild</jobname.thal_clown2>
+	<jobname.thal_clown3>Mime</jobname.thal_clown3>
+	
+	<jobdescription.thal_clown1>The jester is the classic performer, always scheming. They spawn with basic clowning gear as well as a fabricator that allows them to make a variety of hysterical pranking gear from odds and ends they find around the ship. Simple clowning fun: A good choice if your crew is full of boring squares.</jobdescription.thal_clown1>
+	<jobdescription.thal_clown2>Honkchildren, part cultist and part shaman, are the cunning followers of the Children of the Honkmother. Sworn in under the Honkly Juggaloath, they are loyal devotees to the honkmother, and are just as much capable of helping the crew as they are of hurting it. If spirit rituals, alternative medicine, blood pacts, and demon summoning sound fun, choose this.</jobdescription.thal_clown2>
+	<jobdescription.thal_clown3>...</jobdescription.thal_clown3>
+	
+</infotexts>

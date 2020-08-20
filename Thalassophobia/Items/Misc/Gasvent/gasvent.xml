@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Items>
+
+  <Item name="Gas Vent" identifier="gasvent" tags="depthchargelauncher, gasvent" category="Machine" focusonselected="true" offsetonselected="700" linkable="true" allowedlinks="gasventloader" scale="0.5">
+    <Sprite texture="Content/Items/Weapons/TurretsAndDepthCharges.png" depth="0.01" sourcerect="259,1,85,149" origin="0.5,0.5" />
+    <Turret canbeselected="false" linkable="true" characterusable="false" barrelpos="42, 149" rotationlimits="90,90" powerconsumption="0.0" reloadtime="0.1" reload="0.25" />
+    <ConnectionPanel selectkey="Action" canbeselected="true" msg="ItemMsgRewireScrewdriver" hudpriority="10">
+      <GuiFrame relativesize="0.2,0.32" minsize="400,350" maxsize="480,420" anchor="Center" style="ConnectionPanel" />
+      <RequiredItem items="screwdriver" type="Equipped" />
+      <input name="trigger_in" displayname="connection.turrettriggerin" />
+    </ConnectionPanel>
+    <LightComponent lightcolor="1.0,1.0,1.0,1.0" range="800.0" powerconsumption="0" IsOn="false">
+      <LightTexture texture="Content/Lights/pointlight_bounce.png" origin="0.5,0.5" />
+      <!-- additive "top light" -->
+      <sprite texture="Content/Items/Electricity/LampsAdditive.png" sourcerect="11,1,100,118" alpha="1.0" origin="0.5,0.5" />
+      <StatusEffect type="Always" target="NearbyItems, This" range="600" tags="gasvent" IsOn="true">
+		<Conditional HasTag="gasantirad" />
+        <ParticleEmitter particle="extinguisher" particlespersecond="7" />
+      </StatusEffect>
+    </LightComponent>
+  </Item>
+  
+<Item name="Gas Vent Loader" identifier="gasventloader" tags="gasventammosource" category="Machine" linkable="true" allowedlinks="gasvent" scale="0.5">
+    <Sprite texture="Content/Items/Weapons/TurretsAndDepthCharges.png" depth="0.8" sourcerect="354,2,125,188" origin="0.5,0.5" />
+    <ItemContainer hideitems="false" drawinventory="true" capacity="1" itempos="62,-117" itemrotation="-90" canbeselected="true" msg="ItemMsgInteractSelect">
+      <GuiFrame relativesize="0.2,0.25" anchor="Center" minsize="140,170" maxsize="280,280" style="ItemUI" />
+      <Containable items="depthchargeammo" />
+      
+      <StatusEffect type="OnUse" target="Contained">
+        <!--<RequiredItem items="coilgunammo" type="Contained" />-->
+        <Use />
+      </StatusEffect>
+      
+    </ItemContainer>
+  </Item>
+  
+</Items>

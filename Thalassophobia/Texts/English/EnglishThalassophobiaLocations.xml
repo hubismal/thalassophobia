@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<infotexts language="English" nowhitespace="false" translatedname="English">
+
+
+  <!-- Locations -->
+  <!-- template
+  
+  <locationname.none>Natural Formation</locationname.none>
+  <locationnameformat.none>[name]</locationnameformat.none>
+  <locationchange.none.changeto.outpost>A new outpost has been established at [previousname].</locationchange.none.changeto.outpost>
+  <locationchange.none.changeto.military>A new military outpost has been established at [previousname].</locationchange.none.changeto.military>
+  <locationchange.none.changeto.research>A new research outpost has been established at [previousname].</locationchange.none.changeto.research>
+  
+  -->
+  
+  <!--
+  
+  MINES
+  
+  -->
+  <locationname.thal_mineRadioactive>Nuclear Extraction Mine</locationname.thal_mineRadioactive>
+  <locationnameformat.thal_mineRadioactive>[name]</locationnameformat.thal_mineRadioactive>
+  <locationchange.thal_mineRadioactive.changeto.outpost>A new outpost has been established at [previousname], formerly a nuclear mine.</locationchange.thal_mineRadioactive.changeto.outpost>
+  <locationchange.thal_mineRadioactive.changeto.military>A new military outpost has been established at [previousname], formerly a nuclear mine.</locationchange.thal_mineRadioactive.changeto.military>
+  <locationchange.thal_mineRadioactive.changeto.research>A new research outpost has been established at [previousname], formerly a nuclear mine.</locationchange.thal_mineRadioactive.changeto.research>
+  
+  <locationname.thal_blackSite>Classified Site</locationname.thal_blackSite>
+  <locationnameformat.thal_blackSite>[name]</locationnameformat.thal_blackSite>
+  <locationchange.thal_blackSite.changeto.outpost>A new outpost has been established at [previousname], formerly a nuclear mine.</locationchange.thal_blackSite.changeto.outpost>
+  <locationchange.thal_blackSite.changeto.military>A new military outpost has been established at [previousname], formerly a nuclear mine.</locationchange.thal_blackSite.changeto.military>
+  <locationchange.thal_blackSite.changeto.research>A new research outpost has been established at [previousname], formerly a nuclear mine.</locationchange.thal_blackSite.changeto.research>
+  
+</infotexts>

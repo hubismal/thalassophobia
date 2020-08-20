@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Factions>
+  <Faction identifier="thal_ues" initialreputation="0" minreputation="-100" maxreputation="100">
+    <!--<Icon name="UesIcon" texture="Content/UI/CampaignUIAtlas2.png" sourcerect="143,523,94,113" color="62,177,182,255"/>
+    <Portrait name="UesPortrait" texture="Content/UI/Server/PlayStyleBanners1.png" sourcerect="0,0,1024,410"/>-->
+	</Faction>
+	<!-- removed. more details in text files for jobs
+  <Faction identifier="thal_confederacy" initialreputation="0" minreputation="-100" maxreputation="100"/>
+  -->
+  <!--
+  <Faction identifier="thal_cartel" initialreputation="0" minreputation="-100" maxreputation="100"/>
+  -->
+</Factions>

@@ -1,0 +1,147 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Items>
+  <!-- CULTIST STUFF BEGIN -->
+  <Item name="Cultist Mask" identifier="thal_cultistmask" category="Equipment" cargocontaineridentifier="metalcrate" tags="smallitem" description="" scale="0.5">
+    <Sprite name="Cultist Mask" texture="Mods/Thalassophobia/Items/Jobgear/headgears.png" depth="0.6" sourcerect="432,321,117,84" origin="0.5123859,0.53692484" scale="0.5" />
+    <Body width="40" radius="30" density="15" />
+    <Deconstruct time="10">
+      <Item identifier="bikehorn" />
+    </Deconstruct>
+    <Wearable limbtype="Head" slots="Any,Head" msg="ItemMsgPickUpSelect">
+      <sprite name="Cultist Mask Wearable" texture="Mods/Thalassophobia/Items/Jobgear/headgears.png" limb="Head" inheritlimbdepth="true" inherittexturescale="true" depth="0.6" sourcerect="437,323,110,80" origin="0.21839365,0.45777225" />
+      <StatusEffect tags="clown" type="OnWearing" target="Character" HideFace="true" stackable="false" />
+    </Wearable>
+  </Item>
+  <Item name="Cultist Costume" description="A costume frequently donned by the order. Said to be imbued with the screams of 1000 birthday rituals." identifier="thal_cultistcostume" category="Equipment" cargocontaineridentifier="metalcrate" tags="smallitem" impactsoundtag="impact_soft" scale="0.5">
+    <InventoryIcon name="Cultist Costume Icon" texture="Mods/Thalassophobia/Items/Jobgear/OutfitIcons.png" sourcerect="129,413,128,101" origin="0.5,0.5" />
+    <Sprite name="Cultist Costume (floor)" texture="Mods/Thalassophobia/Items/Jobgear/MiscJobGear.png" sourcerect="6,163,195,68" depth="0.6" origin="0.5,0.5" />
+    <Body width="100" height="50" density="30" friction="0.8" restitution="0.01" />
+    <Deconstruct time="40">
+      <Item identifier="bikehorn" />
+      <Item identifier="bikehorn" />
+      <Item identifier="bikehorn" />
+    </Deconstruct>
+    <Wearable slots="Any,InnerClothes" msg="ItemMsgPickUpSelect">
+      <sprite name="Cultist Hood" texture="Mods/Thalassophobia/Items/Jobgear/headgears.png" limb="Head" hidelimb="true" inherittexturescale="true" sourcerect="404,190,114,131" origin="0.5150161,0.4612497" depth="0.0" />
+      <sprite name="Cultist Torso" texture="clown_torso_[GENDER].png" limb="Torso" hidelimb="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" depth="0.1" />
+      <sprite name="Cultist Right Lower Arm" texture="clown_torso_[GENDER].png" limb="RightHand" hidelimb="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="Cultist Left Lower Arm" texture="clown_torso_[GENDER].png" limb="LeftHand" hidelimb="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="Cultist Right Upper Arm" texture="clown_torso_[GENDER].png" limb="RightArm" hidelimb="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="Cultist Left Upper Arm" texture="clown_torso_[GENDER].png" limb="LeftArm" hidelimb="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="Cultist Waist" texture="clown_legs_[GENDER].png" limb="Waist" hidelimb="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="Cultist Right Thigh" texture="clown_legs_[GENDER].png" limb="RightThigh" hidelimb="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="Cultist Left Thigh" texture="clown_legs_[GENDER].png" limb="LeftThigh" hidelimb="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="Cultist Right Leg" texture="clown_legs_[GENDER].png" limb="RightLeg" hidelimb="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="Cultist Left Leg" texture="clown_legs_female.png" limb="LeftLeg" hidelimb="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" sourcerect="0,0,256,256" origin="0.5,0.5" />
+      <sprite name="Cultist Right Shoe" texture="clown_legs_female.png" limb="RightFoot" sound="footstep_armor" hidelimb="true" inherittexturescale="true" inheritorigin="false" inheritsourcerect="false" sourcerect="1,86,81,161" origin="0.4074074,0.41614908" />
+      <sprite name="Cultist Left Shoe" texture="clown_legs_female.png" limb="LeftFoot" sound="footstep_armor" hidelimb="true" inherittexturescale="true" inheritorigin="false" inheritsourcerect="false" sourcerect="1,86,81,161" origin="0.41975307,0.4099379" />
+      <!-- HENK -->
+      <damagemodifier afflictiontypes="damage" armorsector="0.0,360.0" damagesound="LimbClown" />
+      <damagemodifier afflictiontypes="damage" armorsector="0.0,360.0" damagesound="LimbClown" />
+    </Wearable>
+  </Item>
+  <Item name="Gutter Dagger" description="A disturbing dagger with a rather large gutter to collect blood for sacrifices. Used by cultists for sacrifices." identifier="thal_cultistknife" category="Equipment" Tags="smallitem,weapon" cargocontaineridentifier="metalcrate" scale="0.25" impactsoundtag="impact_metal_light">
+    <Deconstruct time="10">
+      <Item identifier="bikehorn" />
+    </Deconstruct>
+    <InventoryIcon texture="Mods/Thalassophobia/Items/Jobgear/Clown/clown.png" sourcerect="510,-4,112,114" origin="0.47357765,0.48258916" name="cultistknifeinventory" />
+    <Sprite texture="Mods/Thalassophobia/Items/Jobgear/Clown/clown.png" sourcerect="381,281,196,93" depth="0.55" origin="0.5,0.5" name="cultistknife sprite" />
+    <Body width="110" height="25" density="50" />
+    <!--
+    <LightComponent range="0" lightcolor="0,0,0,0" IsOn="true">
+      <StatusEffect type="OnContained" target="This" IsOn="false" Condition="0" setvalue="true">
+        <Conditional IsOn="true" targetitemcomponent="LightComponent" />
+      </StatusEffect>
+    </LightComponent>
+    -->
+    <MeleeWeapon slots="Any,RightHand,LeftHand" aimpos="50,0" handle1="10,-6" reload="0.75" range="50" combatPriority="25" holdangle="90" msg="ItemMsgPickUpSelect" condition="0">
+      <Attack targetimpulse="10" severlimbsprobability="0.1" itemdamage="2">
+        <Affliction identifier="lacerations" strength="6" />
+        <Affliction identifier="bleeding" strength="20" />
+        <Affliction identifier="stun" strength="1" />
+        <Sound file="Content/Sounds/Damage/LimbSlash1.ogg" selectionmode="random" range="500" />
+        <Sound file="Content/Sounds/Damage/LimbSlash2.ogg" range="500" />
+        <Sound file="Content/Sounds/Damage/LimbSlash3.ogg" range="500" />
+        <Sound file="Content/Sounds/Damage/LimbSlash4.ogg" range="500" />
+        <Sound file="Content/Sounds/Damage/LimbSlash5.ogg" range="500" />
+        <Sound file="Content/Sounds/Damage/LimbSlash6.ogg" range="500" />
+      </Attack>
+      <!-- increase knife condition whenever it stabs something, stop before it gets to 100 (since that's how the game first detects it's spawned and sets it to 0). -->
+      <StatusEffect type="OnUse" target="This, Character" condition="10.0">
+        <Conditional IsDead="false" />
+      </StatusEffect>
+      <StatusEffect type="OnUse" target="This, Character" condition="-5.0">
+        <Conditional IsDead="false" />
+        <Conditional SpeciesName="human" />
+      </StatusEffect>
+      <StatusEffect type="Always" target="This" setvalue="true" condition="1.0">
+        <Conditional Condition="0" />
+      </StatusEffect>
+      <StatusEffect type="Always" target="This" condition="1" lifetime="1" setvalue="true" />
+    </MeleeWeapon>
+    <aitarget sightrange="500" soundrange="250" fadeouttime="1" />
+  </Item>
+  <Item name="Glass Blood Bank" description="A fragile miniature altar used for worship of the honkmother. Redeem blood from a gutter dagger for magical items. Use the knife to pry it off the wall. don't drop." identifier="thal_cultistkit" category="Equipment" cargocontaineridentifier="metalcrate" tags="smallitem" impactsoundtag="impact_soft" scale="0.4" impacttolerance="0.01">
+    <InventoryIcon name="blodbank Inv" texture="Mods/Thalassophobia/Items/Jobgear/Clown/clown.png" sourcerect="412,3,102,87" depth="0.6" origin="0.5,0.5" />
+    <Sprite name="bloodbank Sprite" texture="Mods/Thalassophobia/Items/Jobgear/Clown/clown.png" sourcerect="0,258,368,148" depth="0.6" origin="0.5,0.5" />
+    <Body width="30" height="15" density="400" />
+    <Holdable selectkey="Select" pickkey="Use" slots="Any,RightHand,LeftHand" msg="ItemMsgDetach" PickingTime="1.0" aimpos="35,-10" handle1="0,0" attachable="true" attachedbydefault="true" aimable="true">
+      <StatusEffect type="OnContained" target="This" setvalue="true" />
+      <StatusEffect type="OnNotContained" target="This" setvalue="true" />
+      <StatusEffect type="OnImpact" target="This" Condition="0.0" setvalue="true" />
+      <StatusEffect type="OnBroken" target="This" Condition="-100.0">
+        <sound file="Content/Items/Weapons/ExplosionMedium2.ogg" selectionmode="All" range="8000" />
+        <sound file="Content/Items/Weapons/ExplosionDebris3.ogg" selectionmode="All" range="8000" />
+        <Explosion range="10.0" structuredamage="0" itemdamage="0" force="20.0" severlimbsprobability="0.4" decal="explosion" decalsize="0.5" camerashake="5.0">
+          <Affliction identifier="burn" amount="10" />
+          <Affliction identifier="internaldamage" amount="10" />
+        </Explosion>
+        <Remove />
+      </StatusEffect>
+      <requireditem identifier="thal_cultistknife" type="Equipped" />
+    </Holdable>
+    <Fabricator canbeselected="true" powerconsumption="0" msg="ItemMsgInteractSelect">
+      <GuiFrame relativesize="0.4,0.45" style="ItemUI" anchor="Center" />
+      <sound file="Content/Items/Fabricators/Fabricator.ogg" type="OnActive" range="1000.0" loop="true" />
+    </Fabricator>
+    <ItemContainer capacity="5" canbeselected="true" hideitems="true" slotsperrow="5" uilabel="" allowuioverlap="true" drawinventory="true" />
+    <ItemContainer capacity="1" canbeselected="true" hideitems="false" slotsperrow="1" uilabel="" allowuioverlap="true" drawinventory="true" itempos="190,70" />
+  </Item>
+  <Item name="Summoning Pentagram" description="A summoning pentagram for the usage of bringing living entities into the world. Cannot be removed once it is placed." identifier="thal_pentagram" category="Equipment" cargocontaineridentifier="metalcrate" tags="smallitem" impactsoundtag="impact_soft" scale="0.55" interactdistance="150" impacttolerance="0.01">
+    <InventoryIcon name="penta Inv" texture="Mods/Thalassophobia/Items/Jobgear/Clown/clown.png" sourcerect="732,-2,132,126" depth="0.6" origin="0.5,0.5" />
+    <Sprite name="penta Sprite" texture="Mods/Thalassophobia/Items/Jobgear/Clown/clown.png" sourcerect="4,404,374,368" depth="0.6" origin="0.5,0.5" />
+    <DecorativeSprite name="penta decoSprite" texture="Mods/Thalassophobia/Items/Jobgear/Clown/clown.png" sourcerect="4,404,374,368" depth="0.6" origin="0.5,0.5" offset="80,80" offsetanim="Noise" offsetanimspeed="20">
+      <AnimationConditional IsActive="true" targetitemcomponent="Fabricator" />
+    </DecorativeSprite>
+    <Body width="50" height="50" density="400" />
+    <Holdable selectkey="Select" pickkey="Use" slots="Any,RightHand,LeftHand" msg="ItemMsgDetach" aimpos="35,-10" handle1="0,0" attachable="true" attachedbydefault="true" aimable="true">
+      <sprite name="Cultist Hood" texture="Mods/Thalassophobia/Items/Jobgear/headgears.png" limb="Head" hidelimb="true" inherittexturescale="true" sourcerect="404,190,114,131" origin="0.5150161,0.4612497" depth="0.0" />
+      <StatusEffect type="OnImpact" target="This" Condition="0.0" setvalue="true" />
+      <StatusEffect type="OnBroken" target="This" Condition="-100.0">
+        <sound file="Content/Items/Weapons/ExplosionMedium2.ogg" selectionmode="All" range="8000" />
+        <sound file="Content/Items/Weapons/ExplosionDebris3.ogg" selectionmode="All" range="8000" />
+        <Explosion range="10.0" structuredamage="0" itemdamage="0" force="20.0" severlimbsprobability="0.4" decal="explosion" decalsize="0.5" camerashake="5.0">
+          <Affliction identifier="burn" amount="10" />
+          <Affliction identifier="internaldamage" amount="10" />
+        </Explosion>
+        <Remove />
+      </StatusEffect>
+      <!-- impossible to use item to make the pentagram unpickable-->
+      <requireditem identifier="thal_summoncrawler" type="Equipped" />
+    </Holdable>
+    <Fabricate suitablefabricators="thal_cultistkit" requiredtime="30">
+      <RequiredItem identifier="thal_cultistknife" mincondition="0.80" usecondition="true" />
+    </Fabricate>
+    <Fabricator canbeselected="true" powerconsumption="0" msg="ItemMsgInteractSelect">
+      <GuiFrame relativesize="0.4,0.45" style="ItemUI" anchor="Center" />
+      <sound file="Mods/Thalassophobia/Items/Jobgear/Clown/uboa.ogg" type="OnActive" range="10000.0" loop="true" volume="2" />
+    </Fabricator>
+    <LightComponent range="900.0" lightcolor="255,0,0,100" IsOn="true" powerconsumption="10" blinkFrequency="10" allowingameediting="false">
+      <StatusEffect type="OnNotContained" target="This" Voltage="1.0" setvalue="true">
+        <Conditional IsActive="true" targetitemcomponent="Fabricator" />
+      </StatusEffect>
+    </LightComponent>
+    <ItemContainer capacity="5" canbeselected="true" hideitems="true" slotsperrow="5" uilabel="" allowuioverlap="true" drawinventory="true" />
+    <ItemContainer capacity="1" canbeselected="true" hideitems="false" slotsperrow="1" uilabel="" allowuioverlap="true" drawinventory="true" itempos="190,70"></ItemContainer>
+  </Item>
+</Items>

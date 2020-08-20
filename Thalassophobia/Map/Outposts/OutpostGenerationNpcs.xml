@@ -1,0 +1,103 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<npcsets>
+  <npcset identifier="thal_generalnpcs">
+    <npc identifier="uesbeggar" job="medicaldoctor" commonness="1" spawnpointtags="admin" behavior="Passive" preferredoutpostmoduletypes="admin,adminmodule">
+      <ItemSet commonness="1">
+        <Item identifier="idcard" equip="true"/>
+        <Item identifier="doctorsuniform1" equip="true"/>
+        <Item identifier="stunbaton" equip="false">
+          <Item identifier="batterycell"/>
+        </Item>
+        <Item identifier="stungun" equip="false">
+          <Item identifier="stungundart"/>
+        </Item>
+        <Item identifier="antibloodloss1" equip="false"/>
+        <Item identifier="antibleeding2" equip="false"/>
+        <Item identifier="antibleeding2" equip="false"/>
+        <Item identifier="antidama1" equip="false"/>
+      </ItemSet>
+    </npc>
+    <npc identifier="enforcer" job="securityofficer" spawnpointtags="security" healthmultiplier="2" behavior="Active">
+      <ItemSet>
+        <Item identifier="securitypatrolclothes" equip="true" />
+        <Item identifier="idcard" equip="true" />
+        <Item identifier="stunbaton">
+          <Item identifier="batterycell" />
+        </Item>
+        <Item identifier="handcuffs"/>
+        <Item identifier="smg">
+          <Item identifier="smgmagazine" />
+        </Item>
+        <Item identifier="smgmagazine" />
+        <Item identifier="smgmagazine" />
+        <Item identifier="divingknife" />
+        <Item identifier="bodyarmor" equip="true"/>
+        <Item identifier="thal_enforcerhelmet" equip="true"/>
+        <Item identifier="divingmask">
+          <Item identifier="oxygentank" />
+        </Item> 
+      </ItemSet>
+      <ItemSet>
+        <Item identifier="securitypatrolclothes" equip="true"/>
+        <Item identifier="idcard" equip="true"/>
+        <Item identifier="stungun">
+          <Item identifier="stungundart"/>
+        </Item>
+        <Item identifier="stunbaton">
+          <Item identifier="batterycell" />
+        </Item>
+        <Item identifier="stungundart"/>
+        <Item identifier="stungundart"/>
+        <Item identifier="divingknife" />
+        <Item identifier="handcuffs"/>
+        <Item identifier="antibleeding1"/>
+        <Item identifier="bodyarmor" equip="true"/>
+        <Item identifier="thal_enforcerhelmet" equip="true"/>
+        <Item identifier="divingmask">
+          <Item identifier="oxygentank" />
+        </Item> 
+      </ItemSet>
+      <ItemSet>
+        <Item identifier="securitypatrolclothes" equip="true"/>
+        <Item identifier="idcard" equip="true"/>
+        <Item identifier="stunbaton">
+          <Item identifier="batterycell" />
+        </Item>
+        <Item identifier="handcuffs"/>
+        <Item identifier="revolver" equip="false">
+          <Item identifier="revolverround"/>
+          <Item identifier="revolverround"/>
+          <Item identifier="revolverround"/>
+          <Item identifier="revolverround"/>
+          <Item identifier="revolverround"/>
+          <Item identifier="revolverround"/>
+        </Item>
+        <Item identifier="divingknife" />
+        <Item identifier="antibleeding1"/>
+        <Item identifier="bodyarmor" equip="true"/>
+        <Item identifier="thal_enforcerhelmet" equip="true"/>
+        <Item identifier="divingmask">
+          <Item identifier="oxygentank" />
+        </Item> 
+      </ItemSet>
+    </npc>
+    
+    
+    <npc identifier="streetcultist" job="thal_clown" behavior="Passive">
+    <ItemSet>
+      <Item identifier="idcard" equip="true"/>
+      <Item identifier="thal_cultistmask" equip="true"/>
+      <Item identifier="thal_cultistcostume" equip="true"/>
+      <Item identifier="stungun" equip="false">
+          <Item identifier="stungundart"/>
+        </Item>
+      <Item identifier="headset" equip="true">
+        <Item identifier="batterycell"/>
+      </Item>
+      <Item identifier="thal_cultistknife"/>
+      <Item identifier="toolbox" equip="false">
+      </Item>
+    </ItemSet>
+    </npc>
+  </npcset>
+</npcsets>

@@ -1,0 +1,124 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Items>
+  <!--
+	<Item
+    name=""
+    identifier="thal_shuttervent"
+    tags="locker,container,securecontainer,vent"
+    category="Machine"
+    pickdistance="150"
+    linkable="true"
+    allowedlinks="oxygenerator"
+    scale="0.5">
+    <Sprite texture="Content/Items/OxygenGenerator/oxygengenerator.png" depth="0.91" sourcerect="848,16,143,143"/>
+    <DecorativeSprite texture="Content/Items/OxygenGenerator/oxygengenerator.png" depth="0.92" sourcerect="852,180,121,121" rotationspeed="360" >
+      <AnimationConditional OxygenFlow="gt 10" targetitemcomponent="Vent"/>
+    </DecorativeSprite>
+    <ItemContainer capacity="20" canbeselected="true" hideitems="true" msg="ItemMsgInteractSelect">
+      <GuiFrame relativesize="0.25,0.45" anchor="Center" style="ItemUI" />
+      <RequiredItem items="wrench" type="Picked" msg="ItemMsgUnauthorizedAccess" ignoreineditor="true" />
+      <Containable items="smallitem,mediumitem" />
+    </ItemContainer>
+
+    <Vent>
+      <sound file="Content/Items/OxygenGenerator/Ventilation.ogg" type="OnActive" range="400.0" volumeproperty="OxygenFlow" volume="0.0005f" loop="true"/>
+    </Vent>
+  </Item>
+  -->
+  <Item name="" identifier="thal_shuttervent" tags="locker,container,securecontainer" linkable="true" allowedlinks="oxygenerator" spritecolor="255,255,255,255" pickdistance="40" interactdistance="40" scale="0.5">
+    <Sprite texture="Mods/Thalassophobia/Items/Containers/Lockers.png" depth="0.84" sourcerect="272,720,144,128" origin="0.5,0.5" />
+    <DecorativeSprite texture="Content/Items/OxygenGenerator/oxygengenerator.png" depth="0.85" sourcerect="852,180,121,121" rotationspeed="360">
+      <AnimationConditional OxygenFlow="gt 10" targetitemcomponent="Vent" />
+    </DecorativeSprite>
+    <ItemContainer capacity="1" canbeselected="true" hideitems="true" msg="ItemMsgOpenCrowbarSelect">
+      <GuiFrame relativesize="0.2,0.25" anchor="Center" minsize="140,170" maxsize="280,280" style="ItemUI" />
+      <RequiredItem item="crowbar" type="Equipped" msg="itemMsgCrowbarRequired" ignoreineditor="true" />
+      <Containable items="smallitem,mediumitem" />
+    </ItemContainer>
+    <Controller name="Controller" canbeselected="true" hidehud="false">
+      <limbposition limb="LeftHand" position="100,-100" />
+      <limbposition limb="RightHand" position="100,-100" />
+      <RequiredItem item="crowbar" type="Equipped" msg="itemMsgCrowbarRequired" ignoreineditor="true" />
+    </Controller>
+    <!-- lcomponent is used here for the shutter sprite as well as internal tracking of whether the shutter is open/closed. kind of hacky but it works. two birds one stone -->
+    <LightComponent lightcolor="255,255,255,255" castshadows="false" allowingameediting="false" range="0">
+      <sprite name="shutter" texture="Mods/Thalassophobia/Items/Containers/Lockers.png" depth="0.83" sourcerect="273,597,144,126" origin="0.5,0.5" />
+    </LightComponent>
+    <ConnectionPanel selectkey="Action" canbeselected="true" msg="ItemMsgRewireScrewdriver" hudpriority="10">
+      <GuiFrame relativesize="0.2,0.32" minsize="400,350" maxsize="480,420" anchor="Center" style="ConnectionPanel" />
+      <RequiredItem items="screwdriver" type="Equipped" />
+      <input name="toggle" displayname="connection.togglestate" />
+      <input name="set_state" displayname="connection.setstate" />
+    </ConnectionPanel>
+    <Vent>
+      <StatusEffect type="OnActive" target="This">
+        <Conditional IsOn="false" target="LightComponent" />
+        <sound file="Content/Items/OxygenGenerator/Ventilation.ogg" range="400.0" loop="true" />
+      </StatusEffect>
+      <StatusEffect type="OnActive" target="This" setvalue="true" oxygenflow="0">
+        <Conditional IsOn="true" target="LightComponent" />
+      </StatusEffect>
+      <StatusEffect type="OnActive" target="This">
+        <Conditional IsOn="false" target="LightComponent" />
+        <RequiredItem items="smallitem,mediumitem" type="Contained" />
+        <sound file="Mods/Thalassophobia/Items/OxygenGenerator/FanContain.ogg" range="200.0" loop="true" volume="0.45" />
+      </StatusEffect>
+    </Vent>
+    <CustomInterface canbeselected="true" IsOn="true">
+      <RequiredItem item="crowbar" type="Equipped" msg="itemMsgCrowbarRequired" ignoreineditor="true" />
+      <GuiFrame relativesize="0.2,0.13" anchor="Center" absoluteoffset="0,90" style="ItemUI" />
+      <Button text="buttoncloseshutter">
+        <StatusEffect type="OnUse" targettype="This" IsOn="true" />
+      </Button>
+      <Button text="buttonopenshutter">
+        <StatusEffect type="OnUse" targettype="This" IsOn="false" />
+      </Button>
+    </CustomInterface>
+  </Item>
+  <Item name="" identifier="thal_oxygendock" tags="container,oxygentankcontainer,vent" interactdistance="90" scale="0.5" linkable="true" allowedlinks="oxygenerator">
+    <Sprite name="Oxygen Dock" texture="Mods/Thalassophobia/Items/Containers/Lockers.png" sourcerect="0,856,128,170" depth="0.84" origin="0.5,0.5" />
+    <ItemContainer hideitems="false" drawinventory="true" capacity="3" slotsperrow="3" itempos="27,-109" iteminterval="22.5,0" itemrotation="0" canbeselected="true" containedspritedepth="0.83" msg="ItemMsgInteractSelect">
+      <GuiFrame relativesize="0.2,0.2" anchor="Center" style="ItemUI" />
+      <Containable items="oxygensource,weldingfuel" />
+    </ItemContainer>
+    <LightComponent canbeselected="true" name="LightComponent" lightcolor="255,255,255,140" castshadows="false" range="2" powerconsumption="1" IsOn="true" flicker="0.2" allowingameediting="false">
+      <sprite name="O2dock light" texture="Mods/Thalassophobia/Items/Containers/Lockers.png" sourcerect="130,854,123,175" origin="0.5,0.5" />
+    </LightComponent>
+    <!-- 
+    Originally wanted there to be a way to succ the dock ;) for oxygen without a mask but can't figure out a way to make conditional for voltage work 
+    <Controller selectkey="Action" name="Controller" canbeselected="true" hidehud="false" msg="ItemMsgBreatheUse">
+      <limbposition limb="Head" position="100,-100" />
+      <StatusEffect type="OnActive" target="Character" OxygenAvailable="1000.0" >
+				<sound file="Mods/Thalassophobia/Items/OxygenGenerator/DockBreath.ogg" range="300.0" loop="true" />
+				<Conditional IsOn="true" targetitemcomponent="LightComponent" />
+			</StatusEffect>
+    </Controller>
+    -->
+    <Vent name="Vent">
+      <StatusEffect type="OnActive" targettype="Contained" targets="oxygentank" Condition="2.0" />
+      <StatusEffect type="OnActive" target="This" setvalue="true" voltage="1.0" IsOn="true" OxygenFlow="0">
+        <sound file="Mods/Thalassophobia/Items/OxygenGenerator/OxyDock.ogg" range="200.0" volumeproperty="Voltage" loop="true" />
+      </StatusEffect>
+    </Vent>
+  </Item>
+  
+  <Item name="" identifier="thal_vacuum" category="Electrical" Tags="smallitem,vacuum" scale="0.5" pickdistance="40" interactdistance="40" >
+    <Sprite texture="Mods/Thalassophobia/Items/Containers/Lockers.png" sourcerect="0,640,144,48" depth="0.8" origin="0.5,0.5" />
+    <LightComponent lightcolor="1.0,1.0,0.0,1.0" range="0.0" powerconsumption="5" allowingameediting="false">
+      <LightTexture name="vacuum lighttex" texture="Content/Lights/pointlight_bounce.png" origin="0.5,0.5" />
+      <!-- additive "top light" -->
+      <sprite name="vacuum lightsprite" texture="Mods/Thalassophobia/Items/Containers/Lockers.png" sourcerect="0,592,144,48" alpha="1.0" origin="0.49227417,0.6387563" />
+      <StatusEffect type="OnActive" target="Hull" Oxygen="-20000.0" />
+      <StatusEffect type="OnActive" target="This" Oxygen="-20000.0">
+        <sound file="Mods/Thalassophobia/Items/OxygenGenerator/Vacuum.ogg" range="900.0" loop="true" />
+      </StatusEffect>
+    </LightComponent>
+    <ConnectionPanel selectkey="Action" canbeselected="true" msg="ItemMsgRewireScrewdriver" hudpriority="10">
+      <GuiFrame relativesize="0.2,0.32" minsize="400,350" maxsize="480,420" anchor="Center" style="ConnectionPanel" />
+      <RequiredItem items="screwdriver" type="Equipped" />
+      <input name="power" displayname="connection.power" />
+      <input name="toggle" displayname="connection.togglestate" />
+      <input name="set_state" displayname="connection.setstate" />
+    </ConnectionPanel>
+  </Item>
+</Items>

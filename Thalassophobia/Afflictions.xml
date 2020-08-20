@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Afflictions>
+<Affliction
+	  name="Glowing"
+	  identifier="thal_glowing"
+	  description="A scalding hot and putrid smelling fluid covers and soaks into the patient's skin. The patient does not seem to be affected by any kind of heat, but may be a hazard to those around them."
+	  type="glowing"
+	  causeofdeathdescription="Decayed from the Glow"
+	  selfcauseofdeathdescription="You have decayed due to the Glow"
+	  limbspecific="true"
+	  maxstrength="100"
+	  damageoverlayalpha="1">
+	      <Effect minstrength="30" maxstrength="69"
+      minscreendistort="0.0"
+      maxscreendistort="0.5"
+      minradialdistort="0.0"
+      maxradialdistort="0.5">
+      
+      <StatusEffect target="NearbyCharacters" range="300" SpeedMultiplier="0.9" setvalue="true">
+		  
+      
+      <Affliction identifier="burn" strength="0.03" />
+      </StatusEffect>
+      <StatusEffect target="Character" setvalue="true">
+      <ReduceAffliction identifier="burn" strength="10" />
+      <sound file="Mods/Thalassophobia/Items/Jobgear/RadiationGear/geigerLight.ogg" range="500.0" loop="true" />
+      </StatusEffect>
+      
+		</Effect>
+		
+		<Effect minstrength="70" maxstrength="100" 
+      resistancefor="burn"
+      minresistance="1"
+      maxresistance="1"
+      minscreendistort="0.5"
+      maxscreendistort="0.9"
+      minradialdistort="0.5"
+      maxradialdistort="0.9">
+      <StatusEffect target="NearbyCharacters" range="400" SpeedMultiplier="0.9" setvalue="true">
+      <Affliction identifier="burn" strength="0.1" />
+      </StatusEffect>
+      
+      <StatusEffect target="Character" setvalue="true">
+      <ReduceAffliction identifier="burn" strength="10" />
+      <sound file="Mods/Thalassophobia/Items/Jobgear/RadiationGear/geigerHeavy.ogg" type="Always" range="500.0" volume = "1" loop="true" />
+      </StatusEffect>
+		</Effect>
+      <icon texture="Mods/Thalassophobia/UI/MainIconsAtlas.png" sourcerect="896,896,128,128" color="0,255,178,255" origin="0,0"/>
+
+	</Affliction>
+	<Affliction
+    name="Silenced"
+    identifier="thal_silenced"
+    description="The patient's tongue is tied, but it is slowly untying. They should be able to talk without treatment in some time."
+    type="resistance"
+    causeofdeathdescription="this guy/gal shut the fuck up somehow you shouldn't see this"
+    selfcauseofdeathdescription="You have shut the fuck up."
+    limbspecific="false"
+    maxstrength="100"
+    karmachangeonapplied="-0.5"
+    achievementonremoved="salvagewreckmission"
+    damageoverlayalpha="1">
+    <Effect minstrength="0" maxstrength="100"
+      minvitalitydecrease="0"
+      maxvitalitydecrease="0"
+      strengthchange="-0.7">
+      <StatusEffect tags="silenced" target="Character" speechImpediment="100.0" />
+      </Effect>
+    <icon texture="Mods/Thalassophobia/UI/MainIconsAtlas.png" sourcerect="896,640,128,128" color="139,60,42,255" origin="0,0"/>
+   </Affliction>
+   <!-- used when first equipping bomb collar, not intended to be seen in normal gameplay -->
+   <Affliction
+    name="Explosive Collar"
+    identifier="thal_bombcollar"
+    description="The patient's neck has been reduced to a few crisp tendons and bone, likely resulting from a bomb collar."
+    type="resistance"
+    causeofdeathdescription="Attempted to remove explosive collar."
+    selfcauseofdeathdescription="You have died as a result of your attempt to remove the explosive collar."
+    limbspecific="false"
+    showiconthreshold="101"
+    maxstrength="100">
+    <Effect minstrength="99" maxstrength="100"
+			minvitalitydecrease="3001"
+      maxvitalitydecrease="3001"
+      strengthchange="-0.7">
+    </Effect>
+    <Effect minstrength="50" maxstrength="99"
+			minvitalitydecrease="0"
+      maxvitalitydecrease="0"
+      strengthchange="0">
+    </Effect>
+    <Effect minstrength="0" maxstrength="50"
+			minvitalitydecrease="0"
+      maxvitalitydecrease="0"
+      strengthchange="-100">
+    </Effect>
+        <icon texture="Mods/Thalassophobia/UI/MainIconsAtlas.png" sourcerect="896,640,128,128" color="139,60,42,255" origin="0,0"/>
+  </Affliction>
+  
+  <Affliction
+    name="Explosive Collar (Timed)"
+    identifier="thal_bombcollartimed"
+    description="The patient's neck has been reduced to a few crisp tendons and bone, likely resulting from a timed bomb collar."
+    type="resistance"
+    causeofdeathdescription="Failed to disarm explosive collar in time."
+    selfcauseofdeathdescription="You have died as a result of your inability to disarm the collar in time."
+    limbspecific="false"
+    showiconthreshold="101"
+    maxstrength="100">
+    <Effect minstrength="0" maxstrength="100"
+			minvitalitydecrease="9001"
+      maxvitalitydecrease="9001"
+      strengthchange="0.0">
+    </Effect>
+        <icon texture="Mods/Thalassophobia/UI/MainIconsAtlas.png" sourcerect="896,640,128,128" color="139,60,42,255" origin="0,0"/>
+  </Affliction>
+  
+    <Affliction
+    name="Gutted"
+    identifier="thal_gutted"
+    description="The patient's limbs are in a state of having been gutted post mortem. Various organs are missing and many muscles and tendons have been severed at their ends."
+    type="resistance"
+    causeofdeathdescription="Carved Organs"
+    selfcauseofdeathdescription="You have died from having your muscles carved out of you."
+    limbspecific="false"
+    indicatorlimb="Torso"
+    showiconthreshold="90"
+    maxstrength="100">
+    <Effect minstrength="0" maxstrength="100"
+			minvitalitydecrease="0"
+      maxvitalitydecrease="0"
+      strengthchange="0.0">
+    </Effect>
+        <icon texture="Mods/Thalassophobia/UI/MainIconsAtlas.png" sourcerect="896,640,128,128" color="139,60,42,255" origin="0,0"/>
+  </Affliction>
+ <!-- used for things like bowling sound effects -->
+  <Affliction
+    name="Fallen"
+    identifier="thal_fallen"
+    description="The patient has fallen and cannot get up. Give them a second."
+    type="resistance"
+    causeofdeathdescription="fucking fell and died"
+    selfcauseofdeathdescription="you have fallen down and died somehow"
+    limbspecific="false"
+    showiconthreshold="30"
+    maxstrength="30">
+    <Effect minstrength="0" maxstrength="30"
+      strengthchange="-30.0">
+    </Effect>
+        <icon texture="Mods/Thalassophobia/UI/MainIconsAtlas.png" sourcerect="896,640,128,128" color="139,60,42,255" origin="0,0"/>
+  </Affliction>
+  
+  <Affliction
+    name="Mushroomized"
+    identifier="thal_mushroomized"
+    description="A large fuschia mushroom sprouts from the patient's head, inversing their motor functions. When the affliction reaches its peak, it will turn into a Ramblin' Evil Mushroom to further spread the mushroomization."
+    type="poison"
+    causeofdeathdescription="Died of mushroomization."
+    selfcauseofdeathdescription="You have died of mushroomization."
+    limbspecific="false"
+    indicatorlimb="Head"
+    showiconthreshold="0"
+    karmachangeonapplied="-6"
+    maxstrength="100">
+    <Effect minstrength="0" maxstrength="99" strengthchange="1">
+			<StatusEffect target="Character" delay="1.0">
+				<Affliction identifier="invertcontrols" amount="0.025" />
+      </StatusEffect>
+    </Effect>
+
+    <Effect minstrength="99" maxstrength="101" strengthchange="-90000">
+      <StatusEffect target="Character" delay="1.0">
+				<SpawnCharacter speciesname="ramblin" />
+				<ReduceAffliction identifier="invertcontrols" amount="300" />
+      </StatusEffect>
+    </Effect>
+
+    <icon texture="Mods/Thalassophobia/UI/MainIconsAtlas.png" sourcerect="384,640,128,128" color="170,194,147,255" origin="0,0"/>
+  </Affliction>
+</Afflictions>

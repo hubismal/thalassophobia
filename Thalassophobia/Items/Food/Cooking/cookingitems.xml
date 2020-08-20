@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Items>
+	<Item name="" identifier="thal_carver" category="Equipment" Tags="smallitem,weapon" cargocontaineridentifier="metalcrate" scale="0.5" impactsoundtag="impact_metal_light">
+    <InventoryIcon texture="Content/Items/InventoryIconAtlas.png" sourcerect="835,385,64,64" origin="0.5,0.5" />
+    <Sprite texture="Content/Items/Weapons/weapons_new.png" sourcerect="183,203,66,16" depth="0.55" origin="0.5,0.5" />
+    <Body width="65" height="15" density="50" />
+    <MeleeWeapon slots="Any,RightHand,LeftHand" aimpos="50,0" handle1="-5,-5" holdangle="30" reload="0.75" range="50" combatPriority="25" msg="ItemMsgPickUpSelect">
+      <Attack targetimpulse="2" severlimbsprobability="0.9" itemdamage="20">
+        <Affliction identifier="lacerations" strength="5" />
+        <Affliction identifier="bleeding" strength="2" />
+        <Affliction identifier="stun" strength="0.2" />
+        <Sound file="Content/Sounds/Damage/LimbSlash1.ogg" selectionmode="random" range="500" />
+        <Sound file="Content/Sounds/Damage/LimbSlash2.ogg" range="500" />
+        <Sound file="Content/Sounds/Damage/LimbSlash3.ogg" range="500" />
+        <Sound file="Content/Sounds/Damage/LimbSlash4.ogg" range="500" />
+        <Sound file="Content/Sounds/Damage/LimbSlash5.ogg" range="500" />
+        <Sound file="Content/Sounds/Damage/LimbSlash6.ogg" range="500" />
+      </Attack>
+      <StatusEffect type="OnUse" target="Character" Comparison="And" >
+        <Conditional IsDead="true" />
+        <Affliction identifier="thal_gutted" strength="10" />
+      </StatusEffect>
+      <!-- Creature Output Start -->
+      <StatusEffect type="OnUse" target="Character" Comparison="And" stackable="false" checkconditionalalways="true" comparison="and" >
+        <Conditional thal_gutted="gt 89" />
+        <Conditional thal_gutted="lt 100" />
+        <Conditional SpeciesName
+        ="crawler" />
+        <SpawnItem identifier="crawlermask" spawnposition="This" />
+        <SpawnItem identifier="thal_mediumbrain" spawnposition="This" />
+        <SpawnItem identifier="thal_smallbreast" spawnposition="This" />
+        <SpawnItem identifier="thal_smallthigh" spawnposition="This" />
+      </StatusEffect>
+      <StatusEffect type="OnUse" target="Character" Comparison="And" stackable="false" checkconditionalalways="true" comparison="and" >
+        <Conditional thal_gutted="gt 84" />
+        <Conditional thal_gutted="lt 95" />
+        <Conditional SpeciesName
+        ="human" />
+        <SpawnItem identifier="thal_mediumbrain" spawnposition="This" />
+        <SpawnItem identifier="thal_mediumbreast" spawnposition="This" />
+        <SpawnItem identifier="thal_mediumthigh" spawnposition="This" />
+      </StatusEffect>
+      <StatusEffect type="OnUse" target="Character" Comparison="And" stackable="false" checkconditionalalways="true" comparison="and" >
+        <Conditional thal_gutted="gt 89" />
+        <Conditional thal_gutted="lt 100" />
+        <Conditional SpeciesName
+        ="mudraptor" />
+        <SpawnItem identifier="thal_mediumbrain" spawnposition="This" />
+        <SpawnItem identifier="thal_smallbreast" spawnposition="This" />
+        <SpawnItem identifier="thal_largethigh" spawnposition="This" />
+      </StatusEffect>
+    </MeleeWeapon>
+    <aitarget sightrange="500" soundrange="250" fadeouttime="1" />
+  </Item>
+  </Items>

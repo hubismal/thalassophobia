@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Items>
+	<Item name="" identifier="thal_foldingchair" tags="chair" allowattachitems="false" texturescale="1.0,1.0" scale="0.45" category="Decorative" canflipy="false">
+    <sprite texture="Content/Map/Outposts/Art/ManagerOfficeAssets.png" sourcerect="570,341,180,267" depth="0.1" premultiplyalpha="false" origin="0.5,0.5" canspriteflipx="false" />
+    <Body height="180" width="267" density="60" bodytype="Kinematic" />
+    <Controller UserPos="10,30" direction="Right" hidehud="false" canbeselected="true" msg="ItemMsgSitDownSelect" >
+			<StatusEffect type="Always" target="This" setvalue="true" direction="Left" canspriteflipx="false" >
+			</StatusEffect>
+      <limbposition limb="Head" position="90,15" />
+      <limbposition limb="Torso" position="90,-60" />
+      <limbposition limb="Waist" position="90,-130" />
+      <limbposition limb="RightFoot" position="150,-240" />
+      <limbposition limb="LeftFoot" position="150,-240" />
+      <limbposition limb="RightHand" position="170,-100" allowusinglimb="true" />
+      <limbposition limb="LeftHand" position="170,-100" allowusinglimb="true" />
+    </Controller>
+    <MeleeWeapon pickkey="Action" slots="RightHand+LeftHand" aimpos="40,5" handle1="-12,-5" handle2="-12,-5" holdangle="60" reload="1.5" range="50" combatpriority="5" msg="ItemMsgPickUpAction">
+      <Attack structuredamage="2" itemdamage="2" stun="0.2" targetimpulse="5">
+        <Affliction identifier="blunttrauma" strength="6" />
+        <Sound file="Content/Items/Weapons/Smack1.ogg" range="800" />
+      </Attack>
+    </MeleeWeapon>
+  </Item>
+  <!--
+	<Item name="" requireaimtouse="false" identifier="thal_structnanogrenade" category="Equipment" cargocontaineridentifier="explosivecrate" tags="smallitem,weapon,explosive" scale="0.5" impactsoundtag="impact_metal_heavy">
+    <InventoryIcon texture="Content/Items/InventoryIconAtlas.png" sourcerect="580,770,54,63" origin="0.5,0.5" />
+    <Sprite texture="Content/Items/Weapons/weapons_new.png" sourcerect="217,305,40,61" depth="0.55" origin="0.5,0.5" />
+    <Body radius="20" height="10" density="30" />
+    <RepairTool requireaimtouse="false" structurefixamount="50.0" range="350" repairmultiple="true" repairthroughwalls="true" combatpriority="10"  >
+      <StatusEffect type="OnUse" target="This" Condition="-1.0" disabledeltatime="true" />
+      <StatusEffect type="Always" target="This">
+        <Use />
+      </StatusEffect>
+      
+      <Fixable identifier="structure" />
+    </RepairTool>
+    <ItemComponent characterusable="false">
+      
+    </ItemComponent>
+    <Throwable slots="Any,RightHand,LeftHand" holdpos="0,0" handle1="0,0" throwforce="4.0" msg="ItemMsgPickUpSelect">
+      <StatusEffect type="OnSecondaryUse" target="This" Condition="-100.0" delay="3.0" disabledeltatime="true" checkconditionalalways="true" />
+    </Throwable>
+  </Item>
+  -->
+</Items>

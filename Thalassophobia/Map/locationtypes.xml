@@ -1,0 +1,31 @@
+<locationtypes>
+<!-- mines-->
+  <thal_mineRadioactive
+    identifier="thal_mineRadioactive"
+    namefile="Mods/Thalassophobia/Map/locationNames/mineRadioactive.txt"
+    commonnessperzone="2: 0, 3: 0">
+
+    <Symbol texture="Mods/Thalassophobia/Map/MapAtlas.png" sourcerect="640,640,128,128" color="100,150,255,255"/>
+    <Portrait texture="Content/Map/LocationPortraits/WorkCampMining3.png" premultiplyalpha="false"/><!-- the one with the green glow-->
+    
+    <Hireable identifier="engineer" commonness="5"/>
+    <Hireable identifier="mechanic" commonness="5"/>
+    <Hireable identifier="assistant" commonness="3"/>
+    
+  </thal_mineRadioactive>
+  
+    <thal_blackSite
+    identifier="thal_blackSite"
+    namefile="Mods/Thalassophobia/Map/locationNames/blackSite.txt"
+    commonnessperzone="1: 0.5, 2: 1.0, 3: 2.5">
+
+    <Symbol texture="Mods/Thalassophobia/Map/MapAtlas.png" sourcerect="640,640,128,128" color="100,150,100,255"/>
+    <Portrait texture="Content/Map/LocationPortraits/WorkCampMining3.png" premultiplyalpha="false"/><!-- the one with the green glow-->
+    
+    <Hireable identifier="engineer" commonness="5"/>
+    <Hireable identifier="mechanic" commonness="5"/>
+    <Hireable identifier="assistant" commonness="3"/>
+    
+  </thal_blackSite>
+
+</locationtypes>

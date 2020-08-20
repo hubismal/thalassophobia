@@ -1,0 +1,51 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Items>
+  <Item name="" identifier="thal_pen" category="Equipment" Tags="smallitem,docs" cargocontaineridentifier="metalcrate" impactsoundtag="impact_metal_light" scale="0.3" SpriteColor="0,0,0,255">
+    <Sprite name="pen" texture="Mods/Thalassophobia/Items/Tools/maps.png" sourcerect="104,288,69,16" depth="0.55" origin="0.5,0.5"></Sprite>
+    <InventoryIcon name="pen invent" texture="Mods/Thalassophobia/Items/Tools/maps.png" sourcerect="111,229,48,59" depth="0.55" origin="0.5,0.5" />
+    <Holdable slots="Any,RightHand,LeftHand" holdangle="30" handle1="-10,0" msg="ItemMsgPickUpSelect">
+      <StatusEffect duration="0.1" tags="holdingpen" type="OnActive" target="Character" />
+    </Holdable>
+    <Body width="63" height="61" density="40" />
+    <MeleeWeapon slots="Any,RightHand,LeftHand" aimpos="40,5" handle1="-10,-5" holdangle="60" reload="1.0" range="50" combatpriority="5" msg="ItemMsgPickUpSelect">
+      <Attack structuredamage="2" itemdamage="2" stun="0.2" targetimpulse="2">
+        <Affliction identifier="lacerations" strength="5" />
+        <Affliction identifier="bleeding" strength="2" />
+        <Sound file="Content/Sounds/Damage/LimbSlash1.ogg" selectionmode="random" range="500" />
+        <Sound file="Content/Sounds/Damage/LimbSlash2.ogg" range="500" />
+        <Sound file="Content/Sounds/Damage/LimbSlash3.ogg" range="500" />
+        <Sound file="Content/Sounds/Damage/LimbSlash4.ogg" range="500" />
+        <Sound file="Content/Sounds/Damage/LimbSlash5.ogg" range="500" />
+        <Sound file="Content/Sounds/Damage/LimbSlash6.ogg" range="500" />
+      </Attack>
+    </MeleeWeapon>
+  </Item>
+  <Item name="" identifier="thal_memo" category="Equipment" Tags="smallitem,docs" cargocontaineridentifier="metalcrate" impactsoundtag="impact_metal_light" scale="0.3" SpriteColor="255,255,255,255" fireproof="false">
+    <Sprite name="postit" texture="Mods/Thalassophobia/Items/Tools/maps.png" sourcerect="43,232,63,61" depth="0.55" origin="0.5,0.5"></Sprite>
+    <CustomInterface canbeselected="true" drawhudwhenequipped="true">
+      <GuiFrame relativesize="0.70,0.20" anchor="Center" absoluteoffset="20,20" style="ItemUI" />
+      <TextBox text="Note Contents" propertyname="Description">
+        <StatusEffect type="Always" targettype="This" lifetime="1.0">
+          <UseItem />
+        </StatusEffect>
+      </TextBox>
+      <TextBox text="Note Color: #RRGGBB (hexcode color)" propertyname="SpriteColor" />
+      <StatusEffect type="OnContained" target="This" setvalue="true" canbeselected="false" drawhudwhenequipped="false"></StatusEffect>
+      <StatusEffect type="OnContained" target="This, Character" drawhudwhenequipped="true">
+        <Conditional HasStatusTag="holdingpen" />
+      </StatusEffect>
+    </CustomInterface>
+    <Holdable slots="Any,RightHand,LeftHand" holdangle="30" handle1="-10,0" msg="ItemMsgPickUpSelect">
+			<StatusEffect type="OnFire" target="This" setvalue="true" IsOn="true" description="(Whatever was on this note has been burned away)" spriteColor="0,0,0,255" />
+    </Holdable>
+    <Body width="63" height="61" density="40" />
+  </Item>
+  <!-- functionally a clone of BTE's bulletin board intended for those who don't have BTE installed-->
+  <Item name="" identifier="thal_memoboard" tags="container,notecontainer" pickdistance="50" scale="0.6" fireproof="false">
+    <Sprite name="memoboard" texture="Mods/Thalassophobia/Items/Tools/maps.png" depth="0.84" sourcerect="149,88,265,136" origin="0.5,0.5" />
+    <ItemContainer hideitems="false" drawinventory="true" capacity="10" slotsperrow="5" itempos="33,-35" iteminterval="50,-60" itemsperrow="5" itemrotation="0" canbeselected="true" containedspritedepth="0.83" msg="ItemMsgInteractSelect">
+      <GuiFrame relativesize="0.25,0.25" anchor="Center" style="ItemUI" />
+      <Containable items="docs" />
+    </ItemContainer>
+  </Item>
+</Items>
