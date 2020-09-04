@@ -1,0 +1,19 @@
+Priorities:
+As of late apparently thalassophobia has gained like a 4 person following. here are some priorities to functionally replace my pain-in-the-ass trello so you weird people who snoop around in the concept files have something to look forward to(?).
+
+I usually do two of these at a time or else my motivation will get fried if I spend my time doing only one monotonous thing.
+
+>FINISH THE JESTER CLOWN VARIANT, ASSOCIATED ITEMS AND MONSTERS
+I find this important as the jester easily has the most near-complete items, so I should at least make one part of the game presentable
+
+>FINISH THE CHEF CLASS, ASSOCIATED ITEMS
+Ever since BTE stopped formal development the food niche for barotrauma has been primarily unfilled (in a fully realized way). A chef class would be beneficial in order to make people take food more seriously. Do not use hunger to punish: it might just be best to adapt the nutrition-fullness system from SS13.
+
+>FINISH THE XENOBIOLOGIST CLASSES
+This will take a long ass time but these are hopefully the beginning of jobs that can either hugely help the ship or create sub-wide catastrophes.
+
+>*PLAN* and BUILD A DEMO SUB
+Build a sub that demos the static items you've made like the full-glass doors, the shuttered vents, sprinkler system, gas vents, blast doors. base it off of box station or something from SS13. Make sure it also has maintainence crawlspaces in between rooms. Use stairs to interconnect things from far away, and use ladders when possible to make small "departments" feel bigger/harder to navigate than they are.
+
+>WORK ON CAMPAIGN
+panman's delight. add those big overcrowded slum cities, black sites, nuclear mines, empty outposts, etc etc.

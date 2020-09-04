@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<contentpackage name="Thalassophobia" path="Mods/Thalassophobia/filelist.xml" corepackage="false" gameversion="0.10.4.0" steamworkshopurl="http://steamcommunity.com/sharedfiles/filedetails/?source=Facepunch.Steamworks&amp;id=2003946282" installtime="1597478432">
+<contentpackage name="Thalassophobia" path="Mods/Thalassophobia/filelist.xml" corepackage="false" gameversion="0.10.4.0" steamworkshopurl="http://steamcommunity.com/sharedfiles/filedetails/?source=Facepunch.Steamworks&amp;id=2003946282" installtime="1598158266">
   <Text file="Mods/Thalassophobia/Texts/English/EnglishThalassophobiaLocations.xml" />
   <Text file="Mods/Thalassophobia/Texts/English/EnglishThalassophobiaWeapons.xml" />
   <Text file="Mods/Thalassophobia/Texts/English/EnglishThalassophobiaTools.xml" />
@@ -34,7 +34,6 @@
   <Item file="Mods/Thalassophobia/Items/Tools/tools.xml" />
   <Particles file="Mods/Thalassophobia/Particles/ParticlePrefabs.xml" />
   <Jobs file="Mods/Thalassophobia/Jobs.xml" />
-  <Wreck file="Mods/Thalassophobia/Map/Wrecks/WreckPiece1.sub" />
   <TraitorMissions file="Mods/Thalassophobia/TraitorMissions.xml" />
   <RandomEvents file="Mods/Thalassophobia/OutpostEvents.xml" />
   <NPCSets file="Mods/Thalassophobia/Map/Outposts/OutpostGenerationNpcs.xml" />

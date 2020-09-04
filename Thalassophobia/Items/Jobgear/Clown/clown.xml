@@ -108,7 +108,7 @@
     <InventoryIcon name="PartyBlower Inv" texture="Mods/Thalassophobia/Items/Jobgear/Clown/clown.png" sourcerect="544,457,73,66" origin="0.5,0.5" />
     <Sprite name="PartyBlower Base" texture="Mods/Thalassophobia/Items/Jobgear/Clown/clown.png" sourcerect="536,378,90,32" depth="0.6" origin="0.5,0.5" />
     <Body width="80" height="27" />
-    <Holdable slots="Any,RightHand" aimable="false" aimpos="35,23" handle1="15,0" swingamount="0,0" swingspeed="0.5" swingwhenusing="false" msg="ItemMsgPickUpSelect"></Holdable>
+    <Holdable slots="Any,RightHand,LeftHand" aimable="false" aimpos="35,23" handle1="15,0" swingamount="0,0" swingspeed="0.5" swingwhenusing="false" msg="ItemMsgPickUpSelect"></Holdable>
     <!-- lightcomp used for the uhhh roller thingy, same as shutter does it -->
     <LightComponent lightcolor="255,255,255,255" castshadows="false" allowingameediting="false" range="0">
       <sprite name="partyblow roll" texture="Mods/Thalassophobia/Items/Jobgear/Clown/clown.png" depth="0.6" sourcerect="523,412,104,32" origin="0.20141882,0.50792897" />

@@ -1,0 +1,4 @@
+HAVE ITEM DESCRIPTIONS SAVED IN .SUB FILES!!!!
+Repairtools attempting to fix structures without a user crashes the game
+Airlocks forcefully generate every time for an outpost regardless of config
+npc file loading dillemna

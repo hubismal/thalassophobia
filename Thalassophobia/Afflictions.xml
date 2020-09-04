@@ -1,5 +1,85 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <Afflictions>
+	
+<Affliction
+    name="Repletion"
+    identifier="thal_full"
+    description="The patient's stomach is busy digesting food; At maximum affliction, they are full. When repletion reaches 100, they will be unable to consume any food. Notably seperate from nutrition, which is beneficial."
+    type="resistance"
+    causeofdeathdescription="Ate themselves to death."
+    selfcauseofdeathdescription="You have eaten yourself to death."
+    limbspecific="false"
+    indicatorlimb="Torso"
+    showiconthreshold="1"
+    maxstrength="100">
+    <Effect minstrength="0" maxstrength="97"
+      strengthchange="-0.1">
+    </Effect>
+    <Effect minstrength="97" maxstrength="100"
+      strengthchange="-0.04">
+    </Effect>
+        <icon texture="Mods/Thalassophobia/UI/MainIconsAtlas.png" sourcerect="0,640,128,128" color="139,60,42,255" origin="0,0"/>
+</Affliction>
+
+<Affliction
+    name="Nutrition"
+    identifier="thal_nutrition"
+    description="The patient's body is benefitting from the nutrition of a previous meal. Natural regenerative processes of cells are sped up, and buffs circulate in the bloodstream for longer.  These effects become more pronounced the more nutrition there is. Healthy food has a better nutrition to fillingness ratio."
+    type="resistance"
+    isbuff="true"
+    causeofdeathdescription="Ate themselves to death."
+    selfcauseofdeathdescription="You have eaten yourself to death."
+    limbspecific="false"
+    indicatorlimb="Torso"
+    showiconthreshold="1"
+    maxstrength="100">
+    <Effect minstrength="0" maxstrength="30"
+      strengthchange="-0.1"
+      minbuffmultiplier="1.2"
+      maxbuffmultiplier="1.3">
+      <StatusEffect target="Character" SpeedMultiplier="1.1" setvalue="true">
+        <ReduceAffliction identifier="bleeding" amount="0.05" />
+        <ReduceAffliction identifier="burn" amount="0.05" />
+        <ReduceAffliction identifier="bloodloss" amount="0.1" />
+        <ReduceAffliction identifier="damage" strength="0.05" />
+      </StatusEffect>
+    </Effect>
+    <Effect minstrength="30" maxstrength="60"
+      strengthchange="-0.1"
+      minbuffmultiplier="1.3"
+      maxbuffmultiplier="1.4">
+      <StatusEffect target="Character" SpeedMultiplier="1.15" setvalue="true">
+        <ReduceAffliction identifier="bleeding" amount="0.1" />
+        <ReduceAffliction identifier="burn" amount="0.1" />
+        <ReduceAffliction identifier="bloodloss" amount="0.2" />
+        <ReduceAffliction identifier="damage" strength="0.05" />
+      </StatusEffect>
+    </Effect>
+    <Effect minstrength="60" maxstrength="90"
+      strengthchange="-0.1"
+      minbuffmultiplier="1.4"
+      maxbuffmultiplier="1.4">
+      <StatusEffect target="Character" SpeedMultiplier="1.15" setvalue="true">
+        <ReduceAffliction identifier="bleeding" amount="0.15" />
+        <ReduceAffliction identifier="burn" amount="0.15" />
+        <ReduceAffliction identifier="bloodloss" amount="0.2" />
+        <ReduceAffliction identifier="damage" strength="0.1" />
+      </StatusEffect>
+    </Effect>
+    <Effect minstrength="90" maxstrength="100"
+      strengthchange="-0.1"
+      minbuffmultiplier="1.4"
+      maxbuffmultiplier="1.6">
+      <StatusEffect target="Character" SpeedMultiplier="1.2" setvalue="true">
+        <ReduceAffliction identifier="bleeding" amount="0.2" />
+        <ReduceAffliction identifier="burn" amount="0.2" />
+        <ReduceAffliction identifier="bloodloss" amount="0.2" />
+        <ReduceAffliction identifier="damage" strength="0.15" />
+      </StatusEffect>
+    </Effect>
+        <icon texture="Mods/Thalassophobia/UI/MainIconsAtlas.png" sourcerect="128,640,128,128" color="139,60,42,255" origin="0,0"/>
+</Affliction>
+	
 <Affliction
 	  name="Glowing"
 	  identifier="thal_glowing"

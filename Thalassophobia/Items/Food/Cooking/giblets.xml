@@ -1,9 +1,23 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Items>
-  <Item name="Raw Brains" identifier="thal_mediumbrain" category="Equipment" tags="weapon,smallitem" cargocontaineridentifier="metalcrate" description="Sounds of chaos." scale="0.25">
+  <Item name="Raw Brains" identifier="thal_mediumbrain" category="Equipment" tags="weapon,smallitem" cargocontaineridentifier="metalcrate" description="Human-Like Brains. Edible." scale="0.25">
     <Sprite name="medbrain" texture="Mods/Thalassophobia/Items/Food/Cooking/organs.png" sourcerect="3,98,128,94" depth="0.55" origin="0.5,0.5" />
     <Body width="128" height="94" density="15" />
-    <Holdable slots="Any,RightHand,LeftHand" aimpos="100,0" handle1="-5,0" msg="ItemMsgPickUpSelect" />
+    <Holdable slots="Any,RightHand,LeftHand" aimable="false" aimpos="35,23" handle1="15,0" swingamount="20,20" swingspeed="2" swingwhenusing="true" msg="ItemMsgPickUpSelect">
+			<StatusEffect type="OnUse" target="This,Character" condition="-10">
+				<Conditional thal_full="lt 98" />
+				<Affliction identifier="thal_nutrition" amount="0.6"/>
+				<Affliction identifier="thal_full" amount="2.5"/>
+				<sound file="Mods/Thalassophobia/Map/Thalamus/eye.ogg" type="OnUse" range="600" loop="true" />
+			</StatusEffect>
+			<StatusEffect type="OnUse" target="This">
+				<Conditional condition="eq 0" />
+				<sound file="Mods/Thalassophobia/Items/Food/gulp.ogg" rage="600" />
+			</StatusEffect>
+			<StatusEffect type="OnBroken" target="This">
+				<Remove />
+			</StatusEffect>
+    </Holdable>
   </Item>
   <Item name="Small Raw Brains" identifier="thal_smallbrain" category="Equipment" tags="weapon,smallitem" cargocontaineridentifier="metalcrate" description="Sounds of chaos." scale="0.1">
     <Sprite name="smolbrain" texture="Mods/Thalassophobia/Items/Food/Cooking/organs.png" sourcerect="151,112,156,89" depth="0.55" origin="0.5,0.5" />

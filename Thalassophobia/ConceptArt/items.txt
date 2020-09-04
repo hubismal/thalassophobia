@@ -1,0 +1,10 @@
+dracula stuff:
+
+Twilight Novel: inflicts 10 HIVamp. Throwable. Destroyed on Contact. Complex Clown Crafting
+Bat Fang: Inflicts 40 HIVamp. will lose condition on every use. Complex Occult Crafting.
+vampirixis: inflicts HIVamp. Complex Xenobio Crafting.	
+Vampire HIV: slowly turns you into a vampire. if the counter reaches 100 you gain... (Hematophagic Insomniac Virus)
+Vampire AIDS: You are a vampire. You will slowly but constantly lose blood/gain bloodloss. It can be satiated with bloodpacks. Uncurable.
+Antivamp: Reduces Vampire HIV significantly, usually curing it.
+Garlic blend: Made by cultist. Reduces Vampire HIV moderately. Will cause bloodloss in someone who has Vampire AIDS. (Acute Illogical Dracula Syndrome)
+draculosis:

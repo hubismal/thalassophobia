@@ -6,6 +6,40 @@
     <Sprite identifier="thal_intercom" name="intercom art" texture="Mods/Thalassophobia/Map/Outposts/Art/Art1.png" sourcerect="523,2,266,242" origin="0.5,0.5" />
   </EventSprites>
   <EventPrefabs>
+		<!-- CAMPAIGN INTRO
+		Choose your crews background as captain.
+		-->
+		<ScriptedEvent identifier="thal_campaignstart">
+			<!--<CheckDataAction identifier="thal_fatechosen" condition="eq 1" />-->
+      <TagAction criteria="player" tag="player" />
+      <CheckItemAction targettag="player" itemtags="job:Captain">
+				<Success>
+					<ConversationAction fadetoblack="true" eventsprite="thal_reactorleak" targettag="player" text="Welcome to Thalasssophobia's Campaign. You are the captain, and you will be deciding the backstory of your crew, which will affect your reputation with factions, and permenantly affect your dialogue options.">
+						<Option text="See the options." />
+					</ConversationAction>
+					<Label name="pastselect" />
+					<ConversationAction fadetoblack="true" eventsprite="thal_reactorleak" targettag="player" text="Decide with your crew on a background that seems fun or fitting for you.">
+						<Option text="We are NEW ARRIVALS ON EUROPA. Fate will forge a name for us with time." >
+							<ConversationAction fadetoblack="true" eventsprite="thal_reactorleak" targettag="player" text="thalcampaign_coalitiontext">
+								<Option text="Okay." />
+							</ConversationAction>
+						</Option>
+						<Option text="We are ELITE CORPORATE AGENTS. Our loyalty lies in Coalition interests." />
+						<Option text="We are A TRAVELLING CIRCUS. A carnival of chaos will swallow Europa whole." />
+						<Option text="We are CALYX MISSIONARIES. The teachings of the husk will save humankind." />
+						<Option text="We are A FOR-HIRE CREW. Underworld connections find us unusual work." />
+						<Option text="We are RESISTANCE INSURGENTS. Smash the fascist state and free the moon." />
+					</ConversationAction>
+				</Success>
+				<Failure>
+					<ConversationAction fadetoblack="true" eventsprite="thal_reactorleak" targettag="player" text="Welcome to Thalasssophobia's Campaign. Your captain has been presented with a prompt deciding the backstory of your crew, which will affect your reputation with factions, and permenantly affect your dialogue options. Decide with your captain on a background that seems fun or fitting for you. Press Okay when you have decided on a backstory.">
+						<Option text="Okay." />
+					</ConversationAction>
+				</Failure>
+			</CheckItemAction>
+          
+    </ScriptedEvent>
+		
     <!-- REACTOR LEAK
     Choose to risk the lives of everyone on the outpost
     Or choose to attempt to fix the reactor
@@ -93,7 +127,7 @@
               <ConversationAction targettag="triggerer_player" text="They continue: “We mostly fight poverty by managing soup kitchens, clothing drives, or doing community service like cleaning up the outposts more hard hit by the crash.“  The UES member presents the donation box. “Just a few marks can make a world of difference!“">
                 <Option text="“So you're going around with that thing asking for donations?“">
                   <Label name="donationprompt" />
-                  <CheckItemAction targettag="triggerer_player" itemidentifiers="revolver">
+                  <CheckItemAction targettag="triggerer_player" itemtags="weapon">
                     <Success>
                       <!-- Has-Weapon version of dialogue -->
                       <ConversationAction targettag="triggerer_player" text="They eagerly hold up the donation box. “Would you like to make a contribution?“">
@@ -198,11 +232,11 @@
         <Option text="“I know who you are. Are you looking for a donation?“">
           <Goto name="donationprompt" />
         </Option>
-        <Option text="Keep on walking and avert your gaze.">
+        <Option text="Keep on walking and avert your gaze." endconversation="true">
           <ReputationAction targettype="Faction" identifier="thal_ues" increase="-10" />
           <ReputationAction targettype="Faction" identifier="coalition" increase="2" />
         </Option>
-        <Option text="“I'm sorry, I'm really quite busy right now.“">
+        <Option text="“I'm sorry, I'm really quite busy right now.“" endconversation="true">
           <ReputationAction targettype="Faction" identifier="thal_ues" increase="-1" />
         </Option>
       </ConversationAction>
@@ -337,16 +371,14 @@
       </CheckReputationAction>
     </ScriptedEvent>
   </EventPrefabs>
-  <EventSet identifier="thal_mineRadioactiveEvents" leveltype="outpost" locationtype="thal_mineRadioactive,mine,city,outpost" allowatstart="true" chooserandom="false" ignorecooldown="true">
-    <Commonness commonness="100" />
-    <EventSet identifier="thal_coalitionMineRadioactive.easy" minleveldifficulty="0" maxleveldifficulty="50" allowatstart="true" chooserandom="true" eventcount="2">
-      <ScriptedEvent identifier="thal_uesdonation" commonness="30" />
-      <ScriptedEvent identifier="thal_reactorleak" commonness="30" />
+  <EventSet identifier="thal_universalevents" leveltype="outpost" locationtype="outpost,city" allowatstart="true" minleveldifficulty="0" maxleveldifficulty="5" chooserandom="false" ignorecooldown="true">
+    <Commonness commonness="0">
+      <Override leveltype="outpostlevel" commonness="1000" />
+    </Commonness>
+    <EventSet identifier="outpostevents.randomevents" allowatstart="true" chooserandom="true" ignorecooldown="true">
+      <!--Only regular events in outposts:-->
+      <ScriptedEvent identifier="thal_campaignstart" commonness="100" />
     </EventSet>
-    <EventSet identifier="thal_outpostevents.randomnpcmissions" allowatstart="true" chooserandom="true" eventcount="3">
-      <ScriptedEvent identifier="missionevent_killmonster" commonness="30" />
-      <ScriptedEvent identifier="missionevent_cargo" commonness="30" />
-      <ScriptedEvent identifier="missionevent_salvage" commonness="30" />
-    </EventSet>
+    
   </EventSet>
 </Randomevents>
