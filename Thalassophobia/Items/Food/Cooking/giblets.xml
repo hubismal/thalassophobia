@@ -8,7 +8,7 @@
 				<Conditional thal_full="lt 99" />
 				<Affliction identifier="thal_nutrition" amount="0.6"/>
 				<Affliction identifier="thal_full" amount="2.5"/>
-				<Affliction identifier="thal_foodpoisoning" amount="0.1" />
+				<Affliction identifier="thal_foodpoisoning" amount="0.5" />
 				<sound file="Mods/Thalassophobia/Map/Thalamus/eye.ogg" type="OnUse" range="600" loop="true" />
 			</StatusEffect>
 			<StatusEffect type="OnUse" target="This,Character" swingwhenusing="false" swingspeed="0" aimpos="40,10" >
@@ -35,7 +35,7 @@
 				<Conditional thal_full="lt 99" />
 				<Affliction identifier="thal_nutrition" amount="0.6"/>
 				<Affliction identifier="thal_full" amount="2.5"/>
-				<Affliction identifier="thal_foodpoisoning" amount="0.1" />
+				<Affliction identifier="thal_foodpoisoning" amount="0.5" />
 				<sound file="Mods/Thalassophobia/Map/Thalamus/eye.ogg" type="OnUse" range="600" loop="true" />
 			</StatusEffect>
 			<StatusEffect type="OnUse" target="This,Character" swingwhenusing="false" swingspeed="0" aimpos="40,10" >
@@ -57,7 +57,7 @@
 				<Conditional thal_full="lt 99" />
 				<Affliction identifier="thal_nutrition" amount="1"/>
 				<Affliction identifier="thal_full" amount="2.5"/>
-				<Affliction identifier="thal_foodpoisoning" amount="0.1" />
+				<Affliction identifier="thal_foodpoisoning" amount="0.5" />
 				<sound file="Mods/Thalassophobia/Map/Thalamus/eye.ogg" type="OnUse" range="600" loop="true" />
 			</StatusEffect>
 			<StatusEffect type="OnUse" target="This,Character" swingwhenusing="false" swingspeed="0" aimpos="40,10" >
@@ -79,7 +79,7 @@
 				<Conditional thal_full="lt 99" />
 				<Affliction identifier="thal_nutrition" amount="1"/>
 				<Affliction identifier="thal_full" amount="2.5"/>
-				<Affliction identifier="thal_foodpoisoning" amount="0.1" />
+				<Affliction identifier="thal_foodpoisoning" amount="0.5" />
 				<sound file="Mods/Thalassophobia/Map/Thalamus/eye.ogg" type="OnUse" range="600" loop="true" />
 			</StatusEffect>
 			<StatusEffect type="OnUse" target="This,Character" swingwhenusing="false" swingspeed="0" aimpos="40,10" >
@@ -101,7 +101,7 @@
 				<Conditional thal_full="lt 99" />
 				<Affliction identifier="thal_nutrition" amount="1"/>
 				<Affliction identifier="thal_full" amount="2.5"/>
-				<Affliction identifier="thal_foodpoisoning" amount="0.1" />
+				<Affliction identifier="thal_foodpoisoning" amount="0.5" />
 				<sound file="Mods/Thalassophobia/Map/Thalamus/eye.ogg" type="OnUse" range="600" loop="true" />
 			</StatusEffect>
 			<StatusEffect type="OnUse" target="This,Character" swingwhenusing="false" swingspeed="0" aimpos="40,10" >
@@ -123,7 +123,7 @@
 				<Conditional thal_full="lt 99" />
 				<Affliction identifier="thal_nutrition" amount="1"/>
 				<Affliction identifier="thal_full" amount="2.5"/>
-				<Affliction identifier="thal_foodpoisoning" amount="0.1" />
+				<Affliction identifier="thal_foodpoisoning" amount="0.5" />
 				<sound file="Mods/Thalassophobia/Map/Thalamus/eye.ogg" type="OnUse" range="600" loop="true" />
 			</StatusEffect>
 			<StatusEffect type="OnUse" target="This,Character" swingwhenusing="false" swingspeed="0" aimpos="40,10" >
@@ -145,7 +145,7 @@
 				<Conditional thal_full="lt 99" />
 				<Affliction identifier="thal_nutrition" amount="1"/>
 				<Affliction identifier="thal_full" amount="2.5"/>
-				<Affliction identifier="thal_foodpoisoning" amount="0.1" />
+				<Affliction identifier="thal_foodpoisoning" amount="0.5" />
 				<sound file="Mods/Thalassophobia/Map/Thalamus/eye.ogg" type="OnUse" range="600" loop="true" />
 			</StatusEffect>
 			<StatusEffect type="OnUse" target="This,Character" swingwhenusing="false" swingspeed="0" aimpos="40,10" >

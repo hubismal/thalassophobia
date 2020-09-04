@@ -22,33 +22,6 @@
 </Affliction>
 
 <Affliction
-    name="Food Poisoning"
-    identifier="thal_foodpoisoning"
-    description="The patient reports extreme discomfort in their abdomen, likely stemming from eating infected or unclean food. It is harder for them to walk, and nutrition from all food is wasted fighting the malignant bacteria in the stomach."
-    type="poison"
-    causeofdeathdescription="Died of food poisoning."
-    selfcauseofdeathdescription="You have died of food poisoning."
-    limbspecific="false"
-    indicatorlimb="Torso"
-    showiconthreshold="2"
-    maxstrength="100">
-    <Effect minstrength="0" maxstrength="40"
-      strengthchange="-0.1">
-      <StatusEffect target="Character" SpeedMultiplier="0.9" setvalue="true">
-        <ReduceAffliction identifier="thal_nutrition" amount="0.1" />
-      </StatusEffect>
-    </Effect>
-    <Effect minstrength="40" maxstrength="100"
-      strengthchange="-0.1">
-      <StatusEffect target="Character" SpeedMultiplier="0.9" setvalue="true">
-        <ReduceAffliction identifier="thal_nutrition" amount="0.1" />
-        <Affliction identifier="thal_diarrhea" amount="0.2" />
-      </StatusEffect>
-    </Effect>
-        <icon texture="Mods/Thalassophobia/UI/MainIconsAtlas.png" sourcerect="0,640,128,128" color="139,60,42,255" origin="0,0"/>
-</Affliction>
-
-<Affliction
     name="Explosive Diarrhea"
     identifier="thal_diarrhea"
     description="The patient is experiencing extreme discomfort near their bowel region. Gas trapped in their intestines, likely resulting from a bacterial infection, causes painful and unflattering happenings near the colon."
@@ -57,19 +30,18 @@
     selfcauseofdeathdescription="You have been killed by your diarrhea."
     limbspecific="false"
     indicatorlimb="Torso"
-    showiconthreshold="10"
+    showiconthreshold="1"
     maxstrength="100">
     <Effect minstrength="0" maxstrength="40"
       strengthchange="-0.1">
       <StatusEffect target="Character" SpeedMultiplier="0.9" setvalue="true">
-        <ReduceAffliction identifier="thal_nutrition" amount="0.1" />
+				<Affliction identifier="organdamage" amount="0.1" />
       </StatusEffect>
     </Effect>
     <Effect minstrength="40" maxstrength="100"
       strengthchange="-0.1">
       <StatusEffect target="Character" SpeedMultiplier="0.9" setvalue="true">
-        <ReduceAffliction identifier="thal_nutrition" amount="0.1" />
-        <Affliction identifier="organdamage" amount="0.1" />
+        <Affliction identifier="organdamage" amount="0.2" />
       </StatusEffect>
     </Effect>
         <icon texture="Mods/Thalassophobia/UI/MainIconsAtlas.png" sourcerect="0,640,128,128" color="139,60,42,255" origin="0,0"/>
@@ -134,6 +106,35 @@
         <icon texture="Mods/Thalassophobia/UI/MainIconsAtlas.png" sourcerect="128,640,128,128" color="139,60,42,255" origin="0,0"/>
 </Affliction>
 	
+<Affliction
+    name="Food Poisoning"
+    identifier="thal_foodpoisoning"
+    description="The patient reports extreme discomfort in their abdomen, likely stemming from eating infected or unclean food. It is harder for them to walk, and nutrition from all food is wasted fighting the malignant bacteria in the stomach."
+    type="poison"
+    causeofdeathdescription="Died of food poisoning."
+    selfcauseofdeathdescription="You have died of food poisoning."
+    limbspecific="false"
+    indicatorlimb="Torso"
+    showiconthreshold="10"
+    maxstrength="100">
+    <Effect minstrength="5" maxstrength="30" minscreendistort="0.0"
+      maxscreendistort="0.5"
+      strengthchange="-0.1">
+      <StatusEffect target="Character" SpeedMultiplier="0.8" setvalue="true">
+        <ReduceAffliction identifier="thal_nutrition" amount="0.1" />
+      </StatusEffect>
+    </Effect>
+    <Effect minstrength="30" maxstrength="100" minscreendistort="0.5"
+      maxscreendistort="0.9"
+      strengthchange="-0.1">
+      <StatusEffect target="Character" SpeedMultiplier="0.6" setvalue="true">
+        <ReduceAffliction identifier="thal_nutrition" amount="0.1" />
+        <Affliction identifier="thal_diarrhea" amount="0.2" />
+      </StatusEffect>
+    </Effect>
+        <icon texture="Mods/Thalassophobia/UI/MainIconsAtlas.png" sourcerect="0,640,128,128" color="139,60,42,255" origin="0,0"/>
+</Affliction>
+
 <Affliction
 	  name="Glowing"
 	  identifier="thal_glowing"
