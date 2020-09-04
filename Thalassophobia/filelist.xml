@@ -7,6 +7,7 @@
   <Text file="Mods/Thalassophobia/Texts/English/EnglishThalassophobiaLoadingTips.xml" />
   <Text file="Mods/Thalassophobia/Texts/English/EnglishThalassophobiaTraitor.xml" />
   <Text file="Mods/Thalassophobia/Texts/English/EnglishThalassophobiaInstallations.xml" />
+  <Text file="Mods/Thalassophobia/Texts/English/EnglishThalassophobiaFood.xml" />
   <Afflictions file="Mods/Thalassophobia/Afflictions.xml" />
   <LocationTypes file="Mods/Thalassophobia/Map/locationtypes.xml" />
   <LevelObjectPrefabs file="Mods/Thalassophobia/LevelObjects/LevelObjectPrefabs.xml" />

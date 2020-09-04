@@ -1,12 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <infotexts language="English" nowhitespace="false" translatedname="English">
 
-	<thalcampaign_corporatebrief>Corporate Agents are black operations specialists working for the Coalition Anti Terrorist Police (CATPOL). Your job consists of hunting down seperatist insurgents and putting an end to the insurgency by any means necessary. It's a dirty job, and almost all CATPOL agents are "bad cops" in one way or another.
-	
-	You have special access to Black Sites that house secret government projects, as well as some of the newest high-grade gear on Europa. You are in many ways above the law, but don't get the wrong idea: You are not "free". If you stray too far from Coalition interests, the chain of command from on high will activate your implanted killswitch.
-	
-	Choose this route for an experience as a potentially corrupt powertripping law enforcer.
-	</thalcampaign_corporatebrief>
+	<thal_toofull>You are too full to eat anymore.
+	</thal_toofull>
 
   <!-- Locations -->
 

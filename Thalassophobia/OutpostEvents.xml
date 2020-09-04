@@ -10,7 +10,10 @@
 		Choose your crews background as captain.
 		-->
 		<ScriptedEvent identifier="thal_campaignstart">
-			<!--<CheckDataAction identifier="thal_fatechosen" condition="eq 1" />-->
+			<CheckDataAction identifier="thal_pastchosen" condition="eq 1" >
+				<Failure>
+				
+				
       <TagAction criteria="player" tag="player" />
       <CheckItemAction targettag="player" itemtags="job:Captain">
 				<Success>
@@ -19,12 +22,30 @@
 					</ConversationAction>
 					<Label name="pastselect" />
 					<ConversationAction fadetoblack="true" eventsprite="thal_reactorleak" targettag="player" text="Decide with your crew on a background that seems fun or fitting for you.">
+						<!-- NEW ARRIVALS -->
 						<Option text="We are NEW ARRIVALS ON EUROPA. Fate will forge a name for us with time." >
-							<ConversationAction fadetoblack="true" eventsprite="thal_reactorleak" targettag="player" text="thalcampaign_coalitiontext">
-								<Option text="Okay." />
+							<ConversationAction fadetoblack="true" eventsprite="thal_reactorleak" targettag="player" text="thalcampaign_newbrief">
+								<Option endconversation="true" text="Confirm." >
+									<SetDataAction identifier="thal_crewbackground" value="none" />
+									<SetDataAction identifier="thal_pastchosen" value="1" />
+								</Option>
+								<Option text="Back to Selection.">
+									<GoTo name="pastselect" />
+								</Option>
 							</ConversationAction>
 						</Option>
-						<Option text="We are ELITE CORPORATE AGENTS. Our loyalty lies in Coalition interests." />
+						<!-- ELITE CORPO -->
+						<Option text="We are ELITE CORPORATE AGENTS. Our loyalty lies in Coalition interests." >
+							<ConversationAction fadetoblack="true" eventsprite="thal_reactorleak" targettag="player" text="thalcampaign_corporatebrief">
+								<Option endconversation="true" text="Confirm." >
+									<SetDataAction identifier="thal_crewbackground" value="corporate" />
+									<SetDataAction identifier="thal_pastchosen" value="1" />
+								</Option>
+								<Option text="Back to Selection.">
+									<GoTo name="pastselect" />
+								</Option>
+							</ConversationAction>
+						</Option>
 						<Option text="We are A TRAVELLING CIRCUS. A carnival of chaos will swallow Europa whole." />
 						<Option text="We are CALYX MISSIONARIES. The teachings of the husk will save humankind." />
 						<Option text="We are A FOR-HIRE CREW. Underworld connections find us unusual work." />
@@ -37,7 +58,8 @@
 					</ConversationAction>
 				</Failure>
 			</CheckItemAction>
-          
+    </Failure>
+    </CheckDataAction>
     </ScriptedEvent>
 		
     <!-- REACTOR LEAK
@@ -371,13 +393,46 @@
       </CheckReputationAction>
     </ScriptedEvent>
   </EventPrefabs>
-  <EventSet identifier="thal_universalevents" leveltype="outpost" locationtype="outpost,city" allowatstart="true" minleveldifficulty="0" maxleveldifficulty="5" chooserandom="false" ignorecooldown="true">
+  <!-- Unique event set that only appears at the beginning of campaign -->
+  <EventSet identifier="thal_universalevents" leveltype="outpost" locationtype="outpost,city" allowatstart="true" minleveldifficulty="0" maxleveldifficulty="1" chooserandom="false" ignorecooldown="true">
     <Commonness commonness="0">
       <Override leveltype="outpostlevel" commonness="1000" />
     </Commonness>
-    <EventSet identifier="outpostevents.randomevents" allowatstart="true" chooserandom="true" ignorecooldown="true">
+    <EventSet identifier="campaignstart" allowatstart="true" chooserandom="false" ignorecooldown="true">
       <!--Only regular events in outposts:-->
       <ScriptedEvent identifier="thal_campaignstart" commonness="100" />
+    </EventSet>
+    <EventSet identifier="outpostevents.randomevents" allowatstart="true" chooserandom="true">
+      <!--Only regular events in outposts and cities:-->
+      <ScriptedEvent identifier="givingdirections" commonness="100" />
+      <ScriptedEvent identifier="soundinthevent" commonness="100" />
+      <ScriptedEvent identifier="clownrelations1" commonness="100" />
+      <ScriptedEvent identifier="clownrelations2" commonness="100" />
+      <ScriptedEvent identifier="goodsamaritan" commonness="100" />
+      <ScriptedEvent identifier="propaganda" commonness="100" />
+      <ScriptedEvent identifier="goblincooking1" commonness="50" />
+      <ScriptedEvent identifier="outbreak" commonness="100" />
+      <ScriptedEvent identifier="miketheidiot1" commonness="25" />
+      <ScriptedEvent identifier="miketheidiot2" commonness="25" />
+      <ScriptedEvent identifier="firefighting" commonness="100" />
+      <ScriptedEvent identifier="sleightofhand" commonness="100" />
+      <ScriptedEvent identifier="foreshadowing" commonness="50" />
+      <ScriptedEvent identifier="clownbrutality" commonness="100" />
+      <ScriptedEvent identifier="separatistrelations" commonness="100" />
+      <ScriptedEvent identifier="huskcultrelations" commonness="100" />
+      <ScriptedEvent identifier="Engineers_are_special" commonness="100" />
+      <ScriptedEvent identifier="mediator" commonness="100" />
+      <ScriptedEvent identifier="blackmarket" commonness="100" />
+      <ScriptedEvent identifier="huskcultist" commonness="100" />
+      <ScriptedEvent identifier="fanclub" commonness="100" />
+      <ScriptedEvent identifier="huskcultambush" commonness="50" />
+    </EventSet>
+    <EventSet identifier="outpostevents.randomevents" allowatstart="true" chooserandom="true" ignorecooldown="true" eventcount="3">
+      <ScriptedEvent identifier="missionevent_cargo1" commonness="125" />
+      <ScriptedEvent identifier="missionevent_cargo2" commonness="50" />
+      <ScriptedEvent identifier="missionevent_cargo3" commonness="100" />
+      <ScriptedEvent identifier="missionevent_killswarm" commonness="100" />
+      <ScriptedEvent identifier="missionevent_killmonstercommon" commonness="85" />
     </EventSet>
     
   </EventSet>
