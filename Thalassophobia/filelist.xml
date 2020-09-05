@@ -34,6 +34,7 @@
   <Item file="Mods/Thalassophobia/Items/Tools/maps.xml" />
   <Item file="Mods/Thalassophobia/Items/Tools/tools.xml" />
   <Particles file="Mods/Thalassophobia/Particles/ParticlePrefabs.xml" />
+  <Decals file="Mods/Thalassophobia/Particles/DecalPrefabs.xml" />
   <Jobs file="Mods/Thalassophobia/Jobs.xml" />
   <TraitorMissions file="Mods/Thalassophobia/TraitorMissions.xml" />
   <RandomEvents file="Mods/Thalassophobia/OutpostEvents.xml" />

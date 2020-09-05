@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<prefabs>
+  <shit
+    color="1.0, 1.0, 1.0, 1.0"
+    lifetime="60"
+    fadeouttime="20">
+    <sprite name="shit decal 1" texture="Mods/Thalassophobia/Particles/shit.png" sourcerect="0,0,300,300"/>
+  </shit>
+</prefabs>

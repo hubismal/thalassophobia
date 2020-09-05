@@ -24,7 +24,7 @@
 <Affliction
     name="Explosive Diarrhea"
     identifier="thal_diarrhea"
-    description="The patient is experiencing extreme discomfort near their bowel region. Gas trapped in their intestines, likely resulting from a bacterial infection, causes painful and unflattering happenings near the colon."
+    description="The patient is experiencing extreme discomfort near their bowel region. Gas trapped in their intestines, likely resulting from a bacterial infection, causes painful, loud, and unflattering happenings near the colon."
     type="poison"
     causeofdeathdescription="Died of diarrhea."
     selfcauseofdeathdescription="You have been killed by your diarrhea."
@@ -34,17 +34,32 @@
     maxstrength="100">
     <Effect minstrength="0" maxstrength="40"
       strengthchange="-0.1">
-      <StatusEffect target="Character" SpeedMultiplier="0.9" setvalue="true">
+      <StatusEffect target="Character" SpeedMultiplier="0.9" setvalue="true" stackable="false" tags="shidding" duration="0.1">
 				<Affliction identifier="organdamage" amount="0.1" />
+      </StatusEffect>
+      <StatusEffect target="Character" delay="60" stackable="false" checkconditionalalways="true">
+				<Conditional HasStatusTag="shidding" />
+				<Explosion range="200.0" structuredamage="0" itemdamage="0" flash="false" stun="0.2" force="6" severlimbsprobability="0.5" screenshake="0" flames="false" smoke="false" sparks="false" decal="shit" decalsize="0.3" >
+				<Sound file="Mods/Thalassophobia/Items/Jobgear/Clown/fart.ogg" range="900" selectionmode="Random" />
+				</Explosion>
+				<SpawnItem identifier="thal_emshitter" />
       </StatusEffect>
     </Effect>
     <Effect minstrength="40" maxstrength="100"
       strengthchange="-0.1">
-      <StatusEffect target="Character" SpeedMultiplier="0.9" setvalue="true">
+      <StatusEffect target="Character" SpeedMultiplier="0.9" setvalue="true" stackable="false" tags="shidding2" duration="0.1">
         <Affliction identifier="organdamage" amount="0.2" />
       </StatusEffect>
+      <StatusEffect target="Character" delay="30" stackable="false" checkconditionalalways="true">
+				<Conditional HasStatusTag="shidding" />
+				<Explosion range="200.0" structuredamage="0" itemdamage="0" flash="false" stun="0.2" force="6" severlimbsprobability="0.5" screenshake="0" flames="false" smoke="false" sparks="false" decal="shit" decalsize="0.3" >
+				<Sound file="Mods/Thalassophobia/Items/Jobgear/Clown/fart.ogg" range="900" selectionmode="Random" />
+				</Explosion>
+				<SpawnItem identifier="thal_emshitter" />
+      </StatusEffect>
     </Effect>
-        <icon texture="Mods/Thalassophobia/UI/MainIconsAtlas.png" sourcerect="0,640,128,128" color="139,60,42,255" origin="0,0"/>
+    </Effect>
+        <icon texture="Mods/Thalassophobia/UI/MainIconsAtlas.png" sourcerect="256,640,128,128" color="139,60,42,255" origin="0,0"/>
 </Affliction>
 
 <Affliction
@@ -122,6 +137,7 @@
       strengthchange="-0.1">
       <StatusEffect target="Character" SpeedMultiplier="0.8" setvalue="true">
         <ReduceAffliction identifier="thal_nutrition" amount="0.1" />
+        <Affliction identifier="thal_diarrhea" amount="0.05" />
       </StatusEffect>
     </Effect>
     <Effect minstrength="30" maxstrength="100" minscreendistort="0.5"
@@ -129,10 +145,10 @@
       strengthchange="-0.1">
       <StatusEffect target="Character" SpeedMultiplier="0.6" setvalue="true">
         <ReduceAffliction identifier="thal_nutrition" amount="0.1" />
-        <Affliction identifier="thal_diarrhea" amount="0.2" />
+        <Affliction identifier="thal_diarrhea" amount="0.1" />
       </StatusEffect>
     </Effect>
-        <icon texture="Mods/Thalassophobia/UI/MainIconsAtlas.png" sourcerect="0,640,128,128" color="139,60,42,255" origin="0,0"/>
+        <icon texture="Mods/Thalassophobia/UI/MainIconsAtlas.png" sourcerect="0,512,128,128" color="139,60,42,255" origin="0,0"/>
 </Affliction>
 
 <Affliction

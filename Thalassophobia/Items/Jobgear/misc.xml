@@ -36,6 +36,18 @@
       <sprite name="Headset Wearable" texture="Content/Items/Jobgear/headgears.png" limb="Head" hidelimb="false" inheritlimbdepth="true" inherittexturescale="true" hideotherwearables="false" sourcerect="28,321,49,62" origin="0.5,0.6" />
     </Wearable>
     
-    
+  <!-- a whole item to make shitting noises......... -->
+  </Item>
+  <Item name="emshitter" identifier="thal_emshitter" scale="0.5" >
+    <Sprite name="shitter" texture="Content/Items/Jobgear/headgears.png" depth="0.6" sourcerect="1,1,1,1" origin="0.5,0.5" />
+    <Body radius="15" height="10" density="30" bodytype="Kinematic" />
+    <ItemContainer capacity="1" hideitems="true">
+      <ContainedStateIndicator texture="Content/UI/ContainerIndicators.png" sourcerect="1,70,107,31" />
+      <Containable items="mobilebattery" />
+      <StatusEffect type="Always" target="This" >
+				<Sound file="Mods/Thalassophobia/Items/Jobgear/Clown/fart.ogg" range="900" selectionmode="Random" />
+				<Remove />
+      </StatusEffect>
+    </ItemContainer>
   </Item>
 </Items>
