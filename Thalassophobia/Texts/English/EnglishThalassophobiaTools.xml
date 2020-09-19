@@ -6,6 +6,13 @@
   <entityname.thal_headsetchannel>Multichannel Headset</entityname.thal_headsetchannel>
   <entitydescription.thal_headsetchannel>Channeled Headset. Enter a number to change the channel.</entitydescription.thal_headsetchannel>
   
+  <entityname.thal_rainbowsprayer>TruColor Sprayer</entityname.thal_rainbowsprayer>
+  <entitydescription.thal_rainbowsprayer>An modified sprayer engineered for painting with a more vibrant color set. Enter colors in the format Red,Green,Blue,Transparency (ranging from 0 to 255). Requires TruPaint, fabricated from other paints.</entitydescription.thal_rainbowsprayer>
+  
+  <entityname.thal_sign>Sign</entityname.thal_sign>
+  <entitydescription.thal_sign>A standard white sign for displaying text. Can be attatched to a wall and written on with a pen. Water resistant, but flammable.</entitydescription.thal_sign>
+  <ItemMsgWriteSelectPen>[[select]] Write (Pen)</ItemMsgWriteSelectPen>
+  
   <!-- removed: overpowered. dislike items that make others obsolete regardless of price. -->
   <entityname.thal_multitool>Navy Grade Pocketknife</entityname.thal_multitool>
   <entitydescription.thal_multitool>A mass produced pocketknife issued to many ships by the coalition but used by everyone. Comes with retractable tools mimicking a screwdriver, wrench, and comes with a foldable blade designed with minor alien combat in mind.</entitydescription.thal_multitool>
@@ -22,17 +29,25 @@
   <entityname.thal_mapall>Omniscient Automap</entityname.thal_mapall>
   <entitydescription.thal_mapall>Advanced Automap engineered to scan for the hull, breaches, water, and oxygen levels. Its all-seeing nature consumes battery faster than usual.</entitydescription.thal_mapall>
   
+  <entityname.thal_foldingchair>Folding Chair</entityname.thal_foldingchair>
+  <entitydescription.thal_foldingchair>A steel folding chair that can be moved, sat on, or swung wrestling-style.</entitydescription.thal_foldingchair>
+  <ItemMsgSitDownSelect>[[select]] Sit Down</ItemMsgSitDownSelect>
+  <ItemMsgPickUpAction>[[use]] Pick Up</ItemMsgPickUpAction>
+  
+  <entityname.thal_foldingtable>Folding Table</entityname.thal_foldingtable>
+  <entitydescription.thal_foldingtable>A steel folding table that can be picked up and moved. Players can also drop items on it.</entitydescription.thal_foldingtable>
+  
   <entityname.thal_shockmodule>Discharge Module</entityname.thal_shockmodule>
   <entitydescription.thal_shockmodule>Wireable module that can be hooked up to the wall like a button. On activation, will discharge a stunning bolt of electricity.</entitydescription.thal_shockmodule>
   
   <entityname.thal_pen>Pen</entityname.thal_pen>
-  <entitydescription.thal_pen>A cheap waterproof plastic pen with an eraser on the back to rub off ink. Allows you to write on memos or stab people.</entitydescription.thal_pen>
+  <entitydescription.thal_pen>A cheap waterproof plastic pen with an eraser on the back to rub off ink. Allows you to write on memos and signs, or stab people. Typically restricted to captains to prevent vandalism.</entitydescription.thal_pen>
   
   <entityname.thal_memo>Memo</entityname.thal_memo>
   <entitydescription.thal_memo>A small writeable note. Requires a pen to edit. The contents don't persist between rounds.</entitydescription.thal_memo>
   
   <entityname.thal_memoboard>Memo Board</entityname.thal_memoboard>
-  <entitydescription.thal_memoboard>Board used for containing memos. Players can mouse over the notes to see what they say. As of Barotrauma 0.10.4.0+ notes unfortunately do not save their contents between rounds/sub editor.</entitydescription.thal_memoboard>
+  <entitydescription.thal_memoboard>Board used for containing memos. Players can mouse over the notes to see what they say. As of Barotrauma 0.10.5.0+ notes unfortunately do not save their contents between rounds/sub editor.</entitydescription.thal_memoboard>
   
   <entityname.thal_breachcharge>Breaching Charge</entityname.thal_breachcharge>
   <entitydescription.thal_breachcharge>Shaped charge that specializes in shredding doors. Attatch it next to a door, set it, and run for cover. Ideal for ruins, wrecks, and weld-ins.</entitydescription.thal_breachcharge>
@@ -59,9 +74,6 @@
   
   <entityname.thal_partyblower>Party Blower</entityname.thal_partyblower>
   <entitydescription.thal_partyblower>Unrolls when blown. BA-DOO!</entitydescription.thal_partyblower>
-  
-  <entityname.thal_carver>Meat Carver</entityname.thal_carver>
-  <entitydescription.thal_carver>A meat carver that will turn carcasses into meat when repeatedly hitting a dead body. Do this description later!</entitydescription.thal_carver>
   
   <entityname.thal_whoopeecushion>Whoopee Cushion</entityname.thal_whoopeecushion>
   <entitydescription.thal_whoopeecushion>A cushion that makes a loud, unflattering noise when squeezed. Can be used like a bike horn, or dropped on the floor where it can be stepped on.</entitydescription.thal_whoopeecushion>
@@ -96,12 +108,25 @@
   <entitydescription.thal_jokerevolver>A revolver that ejects a flag instead of firing bullets. Good for fakeouts and general intimidation.</entitydescription.thal_jokerevolver>
   
   <entityname.thal_bowlingball>Bowling Ball</entityname.thal_bowlingball>
-  <entitydescription.thal_bowlingball>Bowl like you would throw a grenade. “All the world's an alley [...] and all the men and women merely pins“ --Shakespeare</entitydescription.thal_bowlingball>
+  <entitydescription.thal_bowlingball>Bowl like you would throw a grenade. Great for knocking over pins and people.</entitydescription.thal_bowlingball>
   
-  <entityname.thal_foldingchair>Folding Chair</entityname.thal_foldingchair>
-  <entitydescription.thal_foldingchair>A steel folding chair that can be moved, sat on, or swung wrestling-style.</entitydescription.thal_foldingchair>
-  <ItemMsgSitDownSelect>[[select]] Sit Down</ItemMsgSitDownSelect>
-  <ItemMsgPickUpAction>[[use]] Pick Up</ItemMsgPickUpAction>
+  <entityname.thal_clownpack>Honkpack</entityname.thal_clownpack>
+  <entitydescription.thal_clownpack>Stylish backpack with a funny face on it. The material is "grounding" and can partially absorb electric shocks from behind. Can be used to hold items, but must be equipped to open.</entitydescription.thal_clownpack>
+  
+  <!-- Cooking tools -->
+  
+  <entityname.thal_carver>Meat Cleaver</entityname.thal_carver>
+  <entitydescription.thal_carver>A meat cleaver that will turn carcasses into cookable meat when repeatedly hitting a dead body. Can also be used in cooking stations to slice whole muscles into neater cuts for steaks, porkchops, and other more manageable meat.</entitydescription.thal_carver>
+  
+  <entityname.thal_foodcart>Food Cart</entityname.thal_foodcart>
+  <entitydescription.thal_foodcart>Portable Cooking Station. Can be used to prepare a variety of foods depending on what cookware its user has equipped.</entitydescription.thal_foodcart>
+  
+  <entityname.thal_meatgrinder>Meat Grinder</entityname.thal_meatgrinder>
+  <entitydescription.thal_meatgrinder>A handheld meat grinder that can be used to process more manageable meats into ground meat.</entitydescription.thal_meatgrinder>
+  
+  <entityname.thal_meatgrinder>Boiling Pot</entityname.thal_meatgrinder>
+  <entitydescription.thal_meatgrinder>A large pot capable of holding most food items. Capable of boiling whatever it contains, provided a cooking station.</entitydescription.thal_meatgrinder>
+  
   
   
 </infotexts>

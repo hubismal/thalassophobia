@@ -44,9 +44,11 @@
     <ItemContainer capacity="1" hideitems="true">
       <ContainedStateIndicator texture="Content/UI/ContainerIndicators.png" sourcerect="1,70,107,31" />
       <Containable items="mobilebattery" />
-      <StatusEffect type="Always" target="This" >
-				<Sound file="Mods/Thalassophobia/Items/Jobgear/Clown/fart.ogg" range="900" selectionmode="Random" />
-				<Remove />
+      <StatusEffect type="Always" target="This" lifetime="2.0">
+				<Sound file="Mods/Thalassophobia/Items/Jobgear/Clown/fart.ogg" range="900" />
+      </StatusEffect>
+      <StatusEffect type="Always" target="This" delay="6.0">
+				<RemoveItem />
       </StatusEffect>
     </ItemContainer>
   </Item>

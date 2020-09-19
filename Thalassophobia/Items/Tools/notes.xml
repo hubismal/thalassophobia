@@ -1,6 +1,21 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Items>
   <Item name="" identifier="thal_pen" category="Equipment" Tags="smallitem,docs" cargocontaineridentifier="metalcrate" impactsoundtag="impact_metal_light" scale="0.3" SpriteColor="0,0,0,255">
+		<Price baseprice="50" >
+      <Price locationtype="outpost" multiplier="1" minavailable="1" />
+      <Price locationtype="city" multiplier="0.9" minavailable="2" />
+      <Price locationtype="research" multiplier="1.25" minavailable="3" />
+      <Price locationtype="military" multiplier="1.25" minavailable="1" />
+      <Price locationtype="mine" multiplier="1.25" minavailable="2" />
+    </Price>
+		<Fabricate suitablefabricators="fabricator" requiredtime="90">
+      <RequiredSkill identifier="navigation" level="40" />
+      <RequiredItem identifier="plastic" usecondition="false" />
+      <RequiredItem identifier="rubber" usecondition="false" />
+    </Fabricate>
+    <Deconstruct time="60">
+      <Item identifier="plastic" />
+    </Deconstruct>
     <Sprite name="pen" texture="Mods/Thalassophobia/Items/Tools/maps.png" sourcerect="104,288,69,16" depth="0.55" origin="0.5,0.5"></Sprite>
     <InventoryIcon name="pen invent" texture="Mods/Thalassophobia/Items/Tools/maps.png" sourcerect="111,229,48,59" depth="0.55" origin="0.5,0.5" />
     <Holdable slots="Any,RightHand,LeftHand" holdangle="30" handle1="-10,0" msg="ItemMsgPickUpSelect">
@@ -21,6 +36,20 @@
     </MeleeWeapon>
   </Item>
   <Item name="" identifier="thal_memo" category="Equipment" Tags="smallitem,docs" cargocontaineridentifier="metalcrate" impactsoundtag="impact_metal_light" scale="0.3" SpriteColor="255,255,255,255" fireproof="false">
+		<Price baseprice="5" >
+      <Price locationtype="outpost" multiplier="1" minavailable="10" />
+      <Price locationtype="city" multiplier="0.9" minavailable="10" />
+      <Price locationtype="research" multiplier="1.25" minavailable="12" />
+      <Price locationtype="military" multiplier="1.25" minavailable="12" />
+      <Price locationtype="mine" multiplier="1.25" minavailable="9" />
+    </Price>
+		<Fabricate suitablefabricators="fabricator" requiredtime="10">
+      <RequiredSkill identifier="navigation" level="40" />
+      <RequiredItem identifier="organicfiber" usecondition="true" condition="25"/>
+    </Fabricate>
+    <Deconstruct time="60">
+      <Item identifier="organicfiber" />
+    </Deconstruct>
     <Sprite name="postit" texture="Mods/Thalassophobia/Items/Tools/maps.png" sourcerect="43,232,63,61" depth="0.55" origin="0.5,0.5"></Sprite>
     <CustomInterface canbeselected="true" drawhudwhenequipped="true">
       <GuiFrame relativesize="0.70,0.20" anchor="Center" absoluteoffset="20,20" style="ItemUI" />

@@ -1,18 +1,70 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Items>
-	<Item name="" identifier="thal_foldingchair" tags="chair" allowattachitems="false" texturescale="1.0,1.0" scale="0.45" category="Decorative" canflipy="false">
-    <sprite texture="Content/Map/Outposts/Art/ManagerOfficeAssets.png" sourcerect="570,341,180,267" depth="0.1" premultiplyalpha="false" origin="0.5,0.5" canspriteflipx="false" />
-    <Body height="180" width="267" density="60" bodytype="Kinematic" />
-    <Controller UserPos="10,30" direction="Right" hidehud="false" canbeselected="true" msg="ItemMsgSitDownSelect" >
-			<StatusEffect type="Always" target="This" setvalue="true" direction="Left" canspriteflipx="false" >
-			</StatusEffect>
-      <limbposition limb="Head" position="90,15" />
-      <limbposition limb="Torso" position="90,-60" />
-      <limbposition limb="Waist" position="90,-130" />
-      <limbposition limb="RightFoot" position="150,-240" />
-      <limbposition limb="LeftFoot" position="150,-240" />
-      <limbposition limb="RightHand" position="170,-100" allowusinglimb="true" />
-      <limbposition limb="LeftHand" position="170,-100" allowusinglimb="true" />
+	<Item name="" identifier="thal_sign" category="Electrical" tags="smallitem,button" cargocontaineridentifier="metalcrate" scale="0.5" impactsoundtag="impact_metal_light" spritecolor="0.95,0.95,0.95,1.0">
+    <Sprite name="sign" texture="Mods/Thalassophobia/Map/Walls.png" sourcerect="43,232,200,80" depth="0.55" origin="0.5,0.5"></Sprite>
+    <Body width="200" height="80" density="40" />
+    <Price baseprice="30" >
+      <Price locationtype="outpost" multiplier="1" minavailable="4" />
+      <Price locationtype="city" multiplier="0.9" minavailable="6" />
+      <Price locationtype="research" multiplier="1.25" minavailable="1" />
+      <Price locationtype="military" multiplier="1.25" minavailable="1" />
+      <Price locationtype="mine" multiplier="1.25" minavailable="8" />
+    </Price>
+    <Fabricate suitablefabricators="fabricator" requiredtime="30">
+      <RequiredSkill identifier="navigation" level="20" />
+      <RequiredItem identifier="thal_memo" usecondition="false" />
+      <RequiredItem identifier="thal_memo" usecondition="false" />
+      <RequiredItem identifier="thal_memo" usecondition="false" />
+    </Fabricate>
+    <Deconstruct time="20">
+      <Item identifier="thal_memo" />
+      <Item identifier="thal_memo" />
+    </Deconstruct>
+    <ItemLabel textscale="0.6" fontscale="0.6" textcolor="0,0,0,0">
+			<CustomInterface canbeselected="true" drawhudwhenequipped="false" msg="ItemMsgWriteSelectPen">
+      <GuiFrame relativesize="0.70,0.20" anchor="Center" absoluteoffset="20,20" style="ItemUI" />
+      <TextBox text="Sign Contents" propertyname="text">
+      </TextBox>
+      <StatusEffect type="OnNotContained" target="This" setvalue="true" textcolor="0,0,0,1" />
+      <StatusEffect type="OnContained" target="This" setvalue="true" textcolor="0,0,0,0" />
+      <StatusEffect type="OnFire" target="This" setvalue="true" spritecolor="0,0,0,1" />
+      <RequiredItem identifier="thal_pen" type="Equipped" />
+    </CustomInterface>
+		</ItemLabel>
+    <Holdable selectkey="Select" pickkey="Use" slots="Any,RightHand,LeftHand" msg="ItemMsgDetachWrench" PickingTime="10.0" aimpos="35,-10" handle1="0,0" attachable="true" attachedbydefault="true" aimable="true">
+      <requireditem identifier="wrench" type="Equipped" />
+    </Holdable>
+  </Item>
+  
+  <Item name="" identifier="thal_foldingchair" tags="chair,mediumitem" allowattachitems="false" texturescale="1.0,1.0" scale="0.5" category="Decorative" canflipy="false">
+    <sprite texture="foldingchair.png" sourcerect="7,7,125,198" depth="0.51" premultiplyalpha="false" origin="0.5,0.5" canspriteflipx="false" />
+    <Body width="118" height="192" density="60" />
+    <Price baseprice="75" >
+      <Price locationtype="outpost" multiplier="1" minavailable="3" />
+      <Price locationtype="city" multiplier="0.9" minavailable="3" />
+      <Price locationtype="research" multiplier="1.25" minavailable="3" />
+      <Price locationtype="military" multiplier="1.25" minavailable="4" />
+      <Price locationtype="mine" multiplier="1.25" minavailable="3" />
+    </Price>
+    <Fabricate suitablefabricators="fabricator" requiredtime="35">
+      <RequiredSkill identifier="mechanical" level="15" />
+      <RequiredItem identifier="steel" />
+      <RequiredItem identifier="plastic" />
+      <RequiredItem identifier="rubber" />
+    </Fabricate>
+    <Deconstruct time="25">
+      <Item identifier="steel" />
+      <Item identifier="rubber" />
+    </Deconstruct>
+    <Controller UserPos="10,30" direction="Right" hidehud="false" canbeselected="true" msg="ItemMsgSitDownSelect">
+      <StatusEffect type="Always" target="This" setvalue="true" direction="Left" canspriteflipx="false"></StatusEffect>
+      <limbposition limb="Head" position="60,75" />
+      <limbposition limb="Torso" position="60,0" />
+      <limbposition limb="Waist" position="60,-70" />
+      <limbposition limb="RightFoot" position="130,-150" />
+      <limbposition limb="LeftFoot" position="130,-150" />
+      <limbposition limb="RightHand" position="70,-100" allowusinglimb="true" />
+      <limbposition limb="LeftHand" position="70,-100" allowusinglimb="true" />
     </Controller>
     <MeleeWeapon pickkey="Action" slots="RightHand+LeftHand" aimpos="40,5" handle1="-12,-5" handle2="-12,-5" holdangle="60" reload="1.5" range="50" combatpriority="5" msg="ItemMsgPickUpAction">
       <Attack structuredamage="2" itemdamage="2" stun="0.2" targetimpulse="5">
@@ -21,25 +73,4 @@
       </Attack>
     </MeleeWeapon>
   </Item>
-  <!--
-	<Item name="" requireaimtouse="false" identifier="thal_structnanogrenade" category="Equipment" cargocontaineridentifier="explosivecrate" tags="smallitem,weapon,explosive" scale="0.5" impactsoundtag="impact_metal_heavy">
-    <InventoryIcon texture="Content/Items/InventoryIconAtlas.png" sourcerect="580,770,54,63" origin="0.5,0.5" />
-    <Sprite texture="Content/Items/Weapons/weapons_new.png" sourcerect="217,305,40,61" depth="0.55" origin="0.5,0.5" />
-    <Body radius="20" height="10" density="30" />
-    <RepairTool requireaimtouse="false" structurefixamount="50.0" range="350" repairmultiple="true" repairthroughwalls="true" combatpriority="10"  >
-      <StatusEffect type="OnUse" target="This" Condition="-1.0" disabledeltatime="true" />
-      <StatusEffect type="Always" target="This">
-        <Use />
-      </StatusEffect>
-      
-      <Fixable identifier="structure" />
-    </RepairTool>
-    <ItemComponent characterusable="false">
-      
-    </ItemComponent>
-    <Throwable slots="Any,RightHand,LeftHand" holdpos="0,0" handle1="0,0" throwforce="4.0" msg="ItemMsgPickUpSelect">
-      <StatusEffect type="OnSecondaryUse" target="This" Condition="-100.0" delay="3.0" disabledeltatime="true" checkconditionalalways="true" />
-    </Throwable>
-  </Item>
-  -->
 </Items>

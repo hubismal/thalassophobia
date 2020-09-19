@@ -40,9 +40,8 @@
       <StatusEffect target="Character" delay="60" stackable="false" checkconditionalalways="true">
 				<Conditional HasStatusTag="shidding" />
 				<Explosion range="200.0" structuredamage="0" itemdamage="0" flash="false" stun="0.2" force="6" severlimbsprobability="0.5" screenshake="0" flames="false" smoke="false" sparks="false" decal="shit" decalsize="0.3" >
-				<Sound file="Mods/Thalassophobia/Items/Jobgear/Clown/fart.ogg" range="900" selectionmode="Random" />
 				</Explosion>
-				<SpawnItem identifier="thal_emshitter" />
+				<SpawnItem identifier="thal_emshitter" spawnposition="This" />
       </StatusEffect>
     </Effect>
     <Effect minstrength="40" maxstrength="100"
@@ -51,13 +50,11 @@
         <Affliction identifier="organdamage" amount="0.2" />
       </StatusEffect>
       <StatusEffect target="Character" delay="30" stackable="false" checkconditionalalways="true">
-				<Conditional HasStatusTag="shidding" />
+				<Conditional HasStatusTag="shidding2" />
 				<Explosion range="200.0" structuredamage="0" itemdamage="0" flash="false" stun="0.2" force="6" severlimbsprobability="0.5" screenshake="0" flames="false" smoke="false" sparks="false" decal="shit" decalsize="0.3" >
-				<Sound file="Mods/Thalassophobia/Items/Jobgear/Clown/fart.ogg" range="900" selectionmode="Random" />
 				</Explosion>
-				<SpawnItem identifier="thal_emshitter" />
+				<SpawnItem identifier="thal_emshitter" spawnposition="This" />
       </StatusEffect>
-    </Effect>
     </Effect>
         <icon texture="Mods/Thalassophobia/UI/MainIconsAtlas.png" sourcerect="256,640,128,128" color="139,60,42,255" origin="0,0"/>
 </Affliction>

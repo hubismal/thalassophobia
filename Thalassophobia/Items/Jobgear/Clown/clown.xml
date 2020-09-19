@@ -424,4 +424,21 @@
     </ItemContainer>
     <Holdable handle1="0,0" slots="Any,RightHand,LeftHand" msg="ItemMsgPickUpSelect"></Holdable>
   </Item>
+  
+  <Item name="" identifier="thal_clownpack" category="Equipment" tags="smallitem" scale="0.35" cargocontaineridentifier="metalcrate" description="" impactsoundtag="impact_soft">
+    <Deconstruct time="40">
+      <Item identifier="bikehorn" />
+      <Item identifier="bikehorn" />
+    </Deconstruct>
+    <Sprite texture="clownpack.png" sourcerect="14,45,103,158" depth="0.6" />
+    <Body radius="55" height="50" density="40" />
+    <Wearable slots="Any,OuterClothes" msg="ItemMsgPickUpSelect">
+      <damagemodifier afflictiontypes="stun" armorsector="180.0,360.0" damagemultiplier="20" />
+      <damagemodifier afflictionidentifiers="blunttrauma,lacerations,gunshotwound" armorsector="180.0,360.0" damagemultiplier="0.05" bleedingmultiplier="0.2" damagesound="LimbArmor" deflectprojectiles="true" />
+      <sprite name="clown wearable backpack" texture="clownpack.png" limb="Torso" hidelimb="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
+    </Wearable>
+    <ItemContainer capacity="8" canbeselected="false" hideitems="true" slotsperrow="2" drawinventory="true">
+      <Containable items="toyhammer,bikehorn,clownmask,clowncostume,clownitem" />
+    </ItemContainer>
+  </Item>
 </Items>

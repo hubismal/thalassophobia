@@ -17,7 +17,7 @@
 			</StatusEffect>
 			<StatusEffect type="OnUse" target="This">
 				<Conditional condition="eq 0" />
-				<sound file="Mods/Thalassophobia/Items/Food/gulp.ogg" range="600" />
+				<sound type="OnUse" file="Mods/Thalassophobia/Items/Food/gulp.ogg" range="600" />
 				<Remove />
 			</StatusEffect>
     </Holdable>

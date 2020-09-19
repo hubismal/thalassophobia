@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<contentpackage name="Thalassophobia" path="Mods/Thalassophobia/filelist.xml" corepackage="false" gameversion="0.10.4.0" steamworkshopurl="http://steamcommunity.com/sharedfiles/filedetails/?source=Facepunch.Steamworks&amp;id=2003946282" installtime="1598158266">
+<contentpackage name="Thalassophobia" path="Mods/Thalassophobia/filelist.xml" corepackage="false" gameversion="0.10.5.0" steamworkshopid="2003946282" installtime="1600360853">
   <Text file="Mods/Thalassophobia/Texts/English/EnglishThalassophobiaLocations.xml" />
   <Text file="Mods/Thalassophobia/Texts/English/EnglishThalassophobiaWeapons.xml" />
   <Text file="Mods/Thalassophobia/Texts/English/EnglishThalassophobiaTools.xml" />
@@ -8,7 +8,6 @@
   <Text file="Mods/Thalassophobia/Texts/English/EnglishThalassophobiaTraitor.xml" />
   <Text file="Mods/Thalassophobia/Texts/English/EnglishThalassophobiaInstallations.xml" />
   <Text file="Mods/Thalassophobia/Texts/English/EnglishThalassophobiaFood.xml" />
-  <Afflictions file="Mods/Thalassophobia/Afflictions.xml" />
   <LocationTypes file="Mods/Thalassophobia/Map/locationtypes.xml" />
   <LevelObjectPrefabs file="Mods/Thalassophobia/LevelObjects/LevelObjectPrefabs.xml" />
   <Item file="Mods/Thalassophobia/Map/Thalamus/thalamusitems.xml" />
@@ -53,4 +52,5 @@
   <Character file="Mods/Thalassophobia/Characters/Ramblin/Ramblin.xml" />
   <Character file="Mods/Thalassophobia/Characters/Glowraptor/Glowraptor.xml" />
   <Sounds file="Mods/Thalassophobia/Sounds/sounds.xml" />
+  <Afflictions file="Mods/Thalassophobia/Afflictions.xml" />
 </contentpackage>
