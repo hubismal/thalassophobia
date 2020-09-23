@@ -1,67 +1,134 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Randomevents>
   <EventSprites>
-    <Sprite identifier="thal_reactorleak" name="reactor leak art" texture="Mods/Thalassophobia/Map/Outposts/Art/Art1.png" sourcerect="0,0,252,220" origin="0.5,0.5" />
-    <Sprite identifier="thal_mime" name="mime art" texture="Mods/Thalassophobia/Map/Outposts/Art/Art1.png" sourcerect="249,0,277,272" origin="0.5,0.5" />
+    <Sprite identifier="thal_reactorleak" name="reactor leak art" texture="Mods/Thalassophobia/Map/Outposts/Art/Art1.png" sourcerect="0,0,252,220" origin="0.40538645,0.6437604" />
+    <Sprite identifier="thal_mime" name="mime art" texture="Mods/Thalassophobia/Map/Outposts/Art/Art1.png" sourcerect="249,0,278,263" origin="0.357064,0.69741046" />
     <Sprite identifier="thal_intercom" name="intercom art" texture="Mods/Thalassophobia/Map/Outposts/Art/Art1.png" sourcerect="523,2,266,242" origin="0.5,0.5" />
+    <Sprite identifier="thal_nametag" name="nametag art" texture="Mods/Thalassophobia/Map/Outposts/Art/Art1.png" sourcerect="798,2,228,236" origin="0.37978083,0.6113169" />
+    <Sprite identifier="thal_catpolbrief" name="catpol art" texture="Mods/Thalassophobia/Map/Outposts/Art/Art1.png" sourcerect="11,248,357,270" origin="0.29426706,0.7080823" />
   </EventSprites>
   <EventPrefabs>
-		<!-- CAMPAIGN INTRO
+    <!-- CAMPAIGN INTRO
 		Choose your crews background as captain.
 		-->
-		<ScriptedEvent identifier="thal_campaignstart">
-			<CheckDataAction identifier="thal_pastchosen" condition="eq 1" >
-				<Failure>
-				
-				
-      <TagAction criteria="player" tag="player" />
-      <CheckItemAction targettag="player" itemtags="job:Captain">
-				<Success>
-					<ConversationAction fadetoblack="true" eventsprite="thal_reactorleak" targettag="player" text="Welcome to Thalasssophobia's Campaign. You are the captain, and you will be deciding the backstory of your crew, which will affect your reputation with factions, and permenantly affect your dialogue options.">
-						<Option text="See the options." />
-					</ConversationAction>
-					<Label name="pastselect" />
-					<ConversationAction fadetoblack="true" eventsprite="thal_reactorleak" targettag="player" text="Decide with your crew on a background that seems fun or fitting for you.">
-						<!-- NEW ARRIVALS -->
-						<Option text="We are NEW ARRIVALS ON EUROPA. Fate will forge a name for us with time." >
-							<ConversationAction fadetoblack="true" eventsprite="thal_reactorleak" targettag="player" text="thalcampaign_newbrief">
-								<Option endconversation="true" text="Confirm." >
-									<SetDataAction identifier="thal_crewbackground" value="none" />
-									<SetDataAction identifier="thal_pastchosen" value="1" />
-								</Option>
-								<Option text="Back to Selection.">
-									<GoTo name="pastselect" />
-								</Option>
-							</ConversationAction>
-						</Option>
-						<!-- ELITE CORPO -->
-						<Option text="We are ELITE CORPORATE AGENTS. Our loyalty lies in Coalition interests." >
-							<ConversationAction fadetoblack="true" eventsprite="thal_reactorleak" targettag="player" text="thalcampaign_corporatebrief">
-								<Option endconversation="true" text="Confirm." >
-									<SetDataAction identifier="thal_crewbackground" value="corporate" />
-									<SetDataAction identifier="thal_pastchosen" value="1" />
-								</Option>
-								<Option text="Back to Selection.">
-									<GoTo name="pastselect" />
-								</Option>
-							</ConversationAction>
-						</Option>
-						<Option text="We are A TRAVELLING CIRCUS. A carnival of chaos will swallow Europa whole." />
-						<Option text="We are CALYX MISSIONARIES. The teachings of the husk will save humankind." />
-						<Option text="We are A FOR-HIRE CREW. Underworld connections find us unusual work." />
-						<Option text="We are RESISTANCE INSURGENTS. Smash the fascist state and free the moon." />
-					</ConversationAction>
-				</Success>
-				<Failure>
-					<ConversationAction fadetoblack="true" eventsprite="thal_reactorleak" targettag="player" text="Welcome to Thalasssophobia's Campaign. Your captain has been presented with a prompt deciding the backstory of your crew, which will affect your reputation with factions, and permenantly affect your dialogue options. Decide with your captain on a background that seems fun or fitting for you. Press Okay when you have decided on a backstory.">
-						<Option text="Okay." />
-					</ConversationAction>
-				</Failure>
-			</CheckItemAction>
-    </Failure>
-    </CheckDataAction>
+    <ScriptedEvent identifier="thal_campaignstart">
+      <CheckDataAction identifier="thal_pastchosen" condition="eq 1">
+        <Failure>
+          <TagAction criteria="player" tag="player" />
+          <CheckItemAction targettag="player" itemtags="job:Captain">
+            <Success>
+              <ConversationAction fadetoblack="true" eventsprite="thal_nametag" targettag="player" text="Welcome to Thalasssophobia's Campaign. You are the captain, and you will be deciding the backstory of your crew, which will affect your reputation with factions, and permenantly affect your dialogue options.">
+                <Option text="See the options." />
+              </ConversationAction>
+              <Label name="pastselect" />
+              <ConversationAction fadetoblack="true" eventsprite="thal_nametag" targettag="player" text="Decide with your crew on a background that seems fun or fitting for you.">
+                <!-- NEW ARRIVALS -->
+                <Option text="We are NEW ARRIVALS ON EUROPA. Fate will forge a name for us with time.">
+                  <ConversationAction fadetoblack="true" eventsprite="thal_reactorleak" targettag="player" text="thalcampaign_newbrief">
+                    <Option endconversation="true" text="Confirm.">
+                      <SetDataAction identifier="thal_crewbackground" value="none" />
+                      <SetDataAction identifier="thal_pastchosen" value="1" />
+                    </Option>
+                    <Option text="Back to Selection.">
+                      <GoTo name="pastselect" />
+                    </Option>
+                  </ConversationAction>
+                </Option>
+                <!-- ELITE CORPO -->
+                <Option text="We are ELITE CORPORATE AGENTS. Our loyalty lies in Coalition interests.">
+                  <ConversationAction fadetoblack="true" eventsprite="thal_catpolbrief" targettag="player" text="thalcampaign_corporatebrief">
+                    <Option endconversation="true" text="Confirm.">
+                      <SetDataAction identifier="thal_crewbackground" value="corporate" />
+                      <SetDataAction identifier="thal_pastchosen" value="1" />
+                      <ReputationAction targettype="Faction" identifier="clowns" increase="-30" />
+                      <ReputationAction targettype="Faction" identifier="coalition" increase="40" />
+                      <ReputationAction targettype="Faction" identifier="separatists" increase="-40" />
+                      <ReputationAction targettype="Faction" identifier="huskcult" increase="-30" />
+                    </Option>
+                    <Option text="Back to Selection.">
+                      <GoTo name="pastselect" />
+                    </Option>
+                  </ConversationAction>
+                </Option>
+                <Option text="We are A TRAVELLING CIRCUS. A carnival of chaos will swallow Europa whole.">
+                  <ConversationAction fadetoblack="true" eventsprite="thal_reactorleak" targettag="player" text="thalcampaign_circusbrief">
+                    <Option endconversation="true" text="Confirm.">
+                      <SetDataAction identifier="thal_crewbackground" value="circus" />
+                      <SetDataAction identifier="thal_pastchosen" value="1" />
+                      <ReputationAction targettype="Faction" identifier="clowns" increase="40" />
+                      <ReputationAction targettype="Faction" identifier="coalition" increase="-40" />
+                      <ReputationAction targettype="Faction" identifier="separatists" increase="-30" />
+                      <ReputationAction targettype="Faction" identifier="huskcult" increase="-30" />
+                    </Option>
+                    <Option text="Back to Selection.">
+                      <GoTo name="pastselect" />
+                    </Option>
+                  </ConversationAction>
+                </Option>
+                <Option text="We are CALYX MISSIONARIES. The teachings of the husk will save humankind.">
+                  <ConversationAction fadetoblack="true" eventsprite="thal_reactorleak" targettag="player" text="thalcampaign_huskbrief">
+                    <Option endconversation="true" text="Confirm.">
+                      <SetDataAction identifier="thal_crewbackground" value="husk" />
+                      <SetDataAction identifier="thal_pastchosen" value="1" />
+                      <ReputationAction targettype="Faction" identifier="clowns" increase="-30" />
+                      <ReputationAction targettype="Faction" identifier="coalition" increase="-40" />
+                      <ReputationAction targettype="Faction" identifier="separatists" increase="-30" />
+                      <ReputationAction targettype="Faction" identifier="huskcult" increase="40" />
+                    </Option>
+                    <Option text="Back to Selection.">
+                      <GoTo name="pastselect" />
+                    </Option>
+                  </ConversationAction>
+                </Option>
+                <Option text="We are A FOR-HIRE LOWLIVES. Underworld connections find us unusual work.">
+                  <ConversationAction fadetoblack="true" eventsprite="thal_reactorleak" targettag="player" text="thalcampaign_bluecollarbrief">
+                    <Option endconversation="true" text="Confirm.">
+                      <SetDataAction identifier="thal_crewbackground" value="bluecollar" />
+                      <SetDataAction identifier="thal_pastchosen" value="1" />
+                      <ReputationAction targettype="Faction" identifier="clowns" increase="-10" />
+                      <ReputationAction targettype="Faction" identifier="coalition" increase="-40" />
+                      <ReputationAction targettype="Faction" identifier="separatists" increase="20" />
+                      <ReputationAction targettype="Faction" identifier="huskcult" increase="-20" />
+                      <!-- TODO: Add rep for cthonian cartel -->
+                    </Option>
+                    <Option text="Back to Selection.">
+                      <GoTo name="pastselect" />
+                    </Option>
+                  </ConversationAction>
+                </Option>
+                <Option text="We are RESISTANCE INSURGENTS. Smash the fascist state and free the moon.">
+                  <ConversationAction fadetoblack="true" eventsprite="thal_reactorleak" targettag="player" text="thalcampaign_terroristbrief">
+                    <Option endconversation="true" text="Confirm.">
+                      <SetDataAction identifier="thal_crewbackground" value="terrorist" />
+                      <SetDataAction identifier="thal_pastchosen" value="1" />
+                      <ReputationAction targettype="Faction" identifier="clowns" increase="-30" />
+                      <ReputationAction targettype="Faction" identifier="coalition" increase="-40" />
+                      <ReputationAction targettype="Faction" identifier="separatists" increase="40" />
+                      <ReputationAction targettype="Faction" identifier="huskcult" increase="-30" />
+                    </Option>
+                    <Option text="Back to Selection.">
+                      <GoTo name="pastselect" />
+                    </Option>
+                  </ConversationAction>
+                </Option>
+              </ConversationAction>
+            </Success>
+            <Failure>
+              <Label name="pastwait" />
+              <ConversationAction fadetoblack="true" eventsprite="thal_nametag" targettag="player" text="Welcome to Thalasssophobia's Campaign. Your captain has been presented with a prompt deciding the backstory of your crew, which will affect your reputation with factions, and permenantly affect your dialogue options. Decide with your captain on a background that seems fun or fitting for you. Press Okay when you have decided on a backstory. You will not be allowed to proceed until a backstory has been chosen.">
+                <Option text="Okay." endconversation="true">
+                  <CheckDataAction identifier="thal_pastchosen" condition="eq 1">
+                    <Failure>
+                      <GoTo name="pastwait" />
+                    </Failure>
+                  </CheckDataAction>
+                </Option>
+              </ConversationAction>
+            </Failure>
+          </CheckItemAction>
+        </Failure>
+      </CheckDataAction>
     </ScriptedEvent>
-		
     <!-- REACTOR LEAK
     Choose to risk the lives of everyone on the outpost
     Or choose to attempt to fix the reactor
@@ -241,7 +308,7 @@
                   <ReputationAction targettype="Faction" identifier="thal_ues" increase="-1" />
                 </Option>
                 <Option text="“Aren't you guys a bunch of hippies?“">
-                  <ConversationAction targettag="triggerer_player" text="The UES member seems to be irked by your remark: “Um, yes, we oppose the conflict between the coalition and the seperatist forces, if that's what you mean. We believe that wartime has ravaged the average persons financial stability, and that arms manufacturing has hansomely paid many `friends` of the coalition and seperatists alike. That's not what we spend our money on though, so I fail to see how that's relevant.“">
+                  <ConversationAction targettag="triggerer_player" text="The UES member seems to be irked by your remark: “Um, yes, we oppose the conflict between the coalition and the seperatist forces, if that's what you mean. We believe that wartime has ravaged the average persons financial stability, and that arms manufacturing has hansomely paid many `friends` of the coalition and separatists alike. That's not what we spend our money on though, so I fail to see how that's relevant.“">
                     <Option text="“I see.“">
                       <Goto name="donationprompt" />
                     </Option>
@@ -267,7 +334,7 @@
       <SpawnAction npcsetidentifier="thal_generalnpcs" npcidentifier="streetmime" targettag="mime" spawnlocation="Outpost" />
       <TagAction criteria="player" tag="player" />
       <TriggerAction target1tag="mime" target2tag="player" applytotarget2="triggerer_player" radius="100" />
-      <ConversationAction targettag="triggerer_player" text="There's a mime here. These more refined entertainers typically engage in what many believe to be more sophisticated acts of tomfoolery. While clowns engage in crass, low brow humour, mimes are naturally drawn to a better-bred audience, and are more accepted in many outposts regardless of creed."  eventsprite="thal_mime"/>
+      <ConversationAction targettag="triggerer_player" text="There's a mime here. These more refined entertainers typically engage in what many believe to be more sophisticated acts of tomfoolery. While clowns engage in crass, low brow humour, mimes are naturally drawn to a better-bred audience, and are more accepted in many outposts regardless of creed." eventsprite="thal_mime" />
       <CheckReputationAction targettype="faction" identifier="clowns" condition="gt 30">
         <Success>
           <!--reputation 30 to 100 -->
@@ -294,7 +361,7 @@
                       <RNGAction chance="0.5">
                         <Success>
                           <!-- explosive cargo -->
-                          <ConversationAction targettag="triggerer_player" text="Their body is propelled forward! You have no idea how they so convincingly move as though they're really being knocked around, but they manage to make it work all the same. They lay motionless, slumped over an invisible navigation terminal, their legs jutting out at an odd angle as though mangled by a blast. This seems all too familiar, and then it hits you. You've heard stories about this! This is what happens all too much when explosive delivery missions go wrong! The mime opens their eyes, giving you a knowing smile. They stand up, brush themselves off, and give you a cargo clearance pass to a box of valuable explosives in the cargo bay. If you so choose, you can accept this mission to deliver explosive cargo for a handsome reward and the favor of the seperatists.">
+                          <ConversationAction targettag="triggerer_player" text="Their body is propelled forward! You have no idea how they so convincingly move as though they're really being knocked around, but they manage to make it work all the same. They lay motionless, slumped over an invisible navigation terminal, their legs jutting out at an odd angle as though mangled by a blast. This seems all too familiar, and then it hits you. You've heard stories about this! This is what happens all too much when explosive delivery missions go wrong! The mime opens their eyes, giving you a knowing smile. They stand up, brush themselves off, and give you a cargo clearance pass to a box of valuable explosives in the cargo bay. If you so choose, you can accept this mission to deliver explosive cargo for a handsome reward and the favor of the separatists.">
                             <Option text="Add explosive cargo to your task manager.">
                               <MissionAction missiontag="cargoexplosive" />
                               <Goto name="donation" />
@@ -434,6 +501,5 @@
       <ScriptedEvent identifier="missionevent_killswarm" commonness="100" />
       <ScriptedEvent identifier="missionevent_killmonstercommon" commonness="85" />
     </EventSet>
-    
   </EventSet>
 </Randomevents>

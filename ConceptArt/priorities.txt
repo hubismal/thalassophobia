@@ -5,9 +5,13 @@ I usually do two of these at a time or else my motivation will get fried if I sp
 
 >FINISH THE JESTER CLOWN VARIANT, ASSOCIATED ITEMS AND MONSTERS
 I find this important as the jester easily has the most near-complete items, so I should at least make one part of the game presentable
+}}get around to fixing the mushroom hitboxes
+}}subproblems: draw art for the balloon items
+}}work on the costumes
 
 >FINISH THE CHEF CLASS, ASSOCIATED ITEMS
-Ever since BTE stopped formal development the food niche for barotrauma has been primarily unfilled (in a fully realized way). A chef class would be beneficial in order to make people take food more seriously. Do not use hunger to punish: it might just be best to adapt the nutrition-fullness system from SS13.
+Ever since BTE stopped formal development the food niche for barotrauma has been primarily unfilled (in a fully realized way). A chef class would be beneficial in order to make people take food more seriously. 
+}}fix food digestion problem resulting from inconsistent MP affliction calculation. try restricting eating using StatusTags on chars who are full...? first find out why food breaks in the first place for non-hosts
 
 >FINISH THE XENOBIOLOGIST CLASSES
 This will take a long ass time but these are hopefully the beginning of jobs that can either hugely help the ship or create sub-wide catastrophes.
@@ -17,3 +21,4 @@ Build a sub that demos the static items you've made like the full-glass doors, t
 
 >WORK ON CAMPAIGN
 panman's delight. add those big overcrowded slum cities, black sites, nuclear mines, empty outposts, etc etc.
+}}the little side job with the campaign initialization screen still needs art. if you are feeling particularly artsy do this.

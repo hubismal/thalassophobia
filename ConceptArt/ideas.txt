@@ -2,6 +2,8 @@ super secret ideas list for upcoming things that would be cool?
 
 ITEMS (higher prio than monsters imo)
 
+Lockers that can have their public access toggled on and off by someone with the correct security card.
+
 MONSTERS
 
 iceberg monster - disguises like an iceberg but is actually a large slow monster. ragdoll can be made in such a way that makes it looks functionally identical to an iceberg on sonar, or make it disrupt sonar. optionally, could make it obviously a monster on the sonar but still have it look like an iceberg through guns to discoordinate gunners/captain
