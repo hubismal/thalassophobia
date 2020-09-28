@@ -1,7 +1,23 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Items>
   <!-- MIME STUFF BEGIN -->
-  <Item name="Beret of Silence" identifier="thal_mimeberet" category="Equipment" cargocontaineridentifier="metalcrate" tags="smallitem" description="Restricts speaking, but grants supernatural powers. Removing it will destroy it." scale="0.5">
+  <!-- invisible item spawned with the mime job that gives mime affliction and destroys itself -->
+  <Item name="mimeinflictor" identifier="thal_mimeinflictor" category="Equipment" cargocontaineridentifier="metalcrate" tags="smallitem" description="gives the holder mime affliction" scale="0.5" showinmenus="false" >
+    <Sprite name="Mime Beret" texture="Mods/Thalassophobia/Items/Jobgear/headgears.png" depth="0.6" sourcerect="306,324,30,63" origin="0.5123859,0.53692484" scale="0.5" />
+    <Body width="40" radius="30" density="15" />
+    <Deconstruct time="10">
+      <Item identifier="bikehorn" />
+    </Deconstruct>
+    <Wearable limbtype="Head" slots="Any,Head" msg="ItemMsgPickUpSelect">
+      <sprite name="Mime Beret Wearable" texture="Mods/Thalassophobia/Items/Jobgear/headgears.png" limb="Head" inheritlimbdepth="true" inherittexturescale="true" depth="0.6" sourcerect="307,326,88,98" origin="0.5127118,0.49999988" />
+      <StatusEffect type="Always" target="This, Parent, Character">
+				<Affliction identifier="thal_mimeaffliction" strength="200" amount="200" />
+				<RemoveItem />
+			</StatusEffect>
+    </Wearable>
+    
+  </Item>
+  <Item name="Black Beret" identifier="thal_mimeberet" category="Equipment" cargocontaineridentifier="metalcrate" tags="smallitem" description="French head garment and standard mimewear. Silly but sophisticated." scale="0.5">
     <Sprite name="Mime Beret" texture="Mods/Thalassophobia/Items/Jobgear/headgears.png" depth="0.6" sourcerect="306,324,85,63" origin="0.5123859,0.53692484" scale="0.5" />
     <Body width="40" radius="30" density="15" />
     <Deconstruct time="10">
@@ -9,13 +25,6 @@
     </Deconstruct>
     <Wearable limbtype="Head" slots="Any,Head" msg="ItemMsgPickUpSelect">
       <sprite name="Mime Beret Wearable" texture="Mods/Thalassophobia/Items/Jobgear/headgears.png" limb="Head" inheritlimbdepth="true" inherittexturescale="true" depth="0.6" sourcerect="307,326,88,98" origin="0.5127118,0.49999988" />
-      <StatusEffect duration="0.1" tags="mimepowers" type="OnWearing" target="Character" HideFace="false" stackable="false" speechImpediment="100.0" />
-      <StatusEffect type="OnWearing" target="This" condition="100" />
-      <StatusEffect type="Always" target="This" condition="-90" />
-      <StatusEffect type="OnBroken" target="This">
-        <Sound file="Content/Sounds/Damage/GlassBreak1.ogg" type="OnBroken" volume="0.5" range="200" />
-        <Remove />
-      </StatusEffect>
     </Wearable>
   </Item>
   <Item name="Mime Costume" description="A more subtle costume for a more fine entertainment. When worn by a mime, increases agility." identifier="thal_mimecostume" category="Equipment" cargocontaineridentifier="metalcrate" tags="smallitem" impactsoundtag="impact_soft" scale="0.5">
@@ -28,7 +37,7 @@
       <Item identifier="bikehorn" />
     </Deconstruct>
     <Wearable slots="Any,InnerClothes" msg="ItemMsgPickUpSelect">
-      <StatusEffect type="OnWearing" target="Character" SpeedMultiplier="1.2" setvalue="true">
+      <StatusEffect type="OnWearing" target="Character" SpeedMultiplier="1.25" setvalue="true">
         <Conditional HasStatusTag="mimepowers" />
       </StatusEffect>
       <sprite name="Mime Facepaint" texture="Mods/Thalassophobia/Items/Jobgear/headgears.png" limb="Head" hidelimb="false" inherittexturescale="true" sourcerect="305,208,88,98" origin="0.44876727,0.51072276" depth="0.601" />
@@ -70,11 +79,6 @@
     <!--<InventoryIcon texture="Content/Items/InventoryIconAtlas.png" sourcerect="64,64,64,64" />-->
     <InventoryIcon texture="Mods/Thalassophobia/Items/Jobgear/Clown/clown.png" name="mimespray invent" sourcerect="255,-1,58,80" origin="0.5,0.5" />
     <Sprite texture="Mods/Thalassophobia/Items/Jobgear/Clown/clown.png" name="mimespray sprite" sourcerect="259,77,75,105" depth="0.55" origin="0.5,0.5" />
-    <!-- the item takes 10 seconds to break down in a deconstructor and turns into steel and plastic -->
-    <Deconstruct time="10">
-      <Item identifier="steel" />
-      <Item identifier="plastic" />
-    </Deconstruct>
     <!-- physics body -->
     <Body width="30" height="90" density="10" />
     <Holdable slots="Any,RightHand,LeftHand" controlpose="true" aimpos="50,0" handle1="0,0" msg="ItemMsgPickUpSelect">
@@ -100,7 +104,7 @@
       <StatusEffect type="OnUse" target="Character">
         <Affliction identifier="thal_silenced" amount="3" />
       </StatusEffect>
-      <StatusEffect type="OnUse" targettype="Contained" targets="bikehorn" Condition="-9.0" />
+      <StatusEffect type="OnUse" targettype="Contained" targets="bikehorn" Condition="-5.0" />
     </RepairTool>
     <ItemContainer hideitems="true" capacity="1" drawinventory="false" canbeselected="false" ShowConditionInContainedStateIndicator="false">
       <ContainedStateIndicator texture="Content/UI/ContainerIndicators.png" sourcerect="2,121,53,22" />
@@ -118,7 +122,7 @@
     <Sprite texture="Mods/Thalassophobia/Items/Jobgear/Clown/clown.png" name="mimecase sprite" depth="0.54" sourcerect="337,84,176,156" origin="0.5,0.5" />
     <Body width="150" height="85" density="50" />
     <Holdable slots="Any,RightHand,LeftHand" holdpos="0,-80" handle1="-15,47" aimable="false" msg="ItemMsgPickUpSelect" />
-    <ItemContainer capacity="4" hideitems="true" keepopenewhenequipped="true" movableframe="true" drawinventory="false">
+    <ItemContainer capacity="6" hideitems="true" keepopenewhenequipped="true" movableframe="true" drawinventory="false">
       <Containable items="smallitem,mediumitem,largeitem,bigitem,item,coilgunammo,railgunammo" />
       <StatusEffect type="OnContained" target="Character, This" setvalue="true" drawinventory="false" />
       <StatusEffect type="OnContained" target="Character, This" setvalue="true" drawinventory="true">

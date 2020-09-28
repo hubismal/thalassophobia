@@ -69,7 +69,10 @@
 				<Item identifier="thal_invisiblewall" showpreview="true"/>
 				<Item identifier="thal_mimespray"/>
 				<Item identifier="thal_muzzle"/>
+				<Item identifier="thal_pen"/>
+				<Item identifier="thal_sign"/>
 			</Item>
+			<Item identifier="thal_mimeinflictor" showpreview="false"/>
       <PreviewSprites dims="120,109">
         <sprite texture="Content/Items/Jobgear/Captain/captain_torso_[GENDER]_2.png" sourcerect="2,38,120,109" offset="0,0" />
         <sprite texture="Content/Items/Jobgear/Captain/captain_torso_[GENDER]_2.png" sourcerect="121,0,76,80" offset="-20,15" />

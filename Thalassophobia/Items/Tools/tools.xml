@@ -11,7 +11,7 @@
       <Price locationtype="mine" multiplier="1.25" minavailable="8" />
     </Price>
     <Fabricate suitablefabricators="fabricator" requiredtime="30">
-      <RequiredSkill identifier="navigation" level="20" />
+      <RequiredSkill identifier="helm" level="20" />
       <RequiredItem identifier="thal_memo" usecondition="false" />
       <RequiredItem identifier="thal_memo" usecondition="false" />
       <RequiredItem identifier="thal_memo" usecondition="false" />
@@ -22,7 +22,7 @@
     </Deconstruct>
     <ItemLabel textscale="0.6" fontscale="0.6" textcolor="0,0,0,0">
 			<CustomInterface canbeselected="true" drawhudwhenequipped="false" msg="ItemMsgWriteSelectPen">
-      <GuiFrame relativesize="0.70,0.20" anchor="Center" absoluteoffset="20,20" style="ItemUI" />
+      <GuiFrame relativesize="0.70,0.10" anchor="Center" absoluteoffset="20,20" style="ItemUI" />
       <TextBox text="Sign Contents" propertyname="text">
       </TextBox>
       <StatusEffect type="OnNotContained" target="This" setvalue="true" textcolor="0,0,0,1" />

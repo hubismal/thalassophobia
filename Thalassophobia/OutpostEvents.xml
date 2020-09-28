@@ -29,7 +29,7 @@
                       <SetDataAction identifier="thal_crewbackground" value="none" />
                       <SetDataAction identifier="thal_pastchosen" value="1" />
                     </Option>
-                    <Option text="Back to Selection.">
+                    <Option text="Back to Selection." endconversation="true">
                       <GoTo name="pastselect" />
                     </Option>
                   </ConversationAction>
@@ -45,7 +45,7 @@
                       <ReputationAction targettype="Faction" identifier="separatists" increase="-40" />
                       <ReputationAction targettype="Faction" identifier="huskcult" increase="-30" />
                     </Option>
-                    <Option text="Back to Selection.">
+                    <Option text="Back to Selection." endconversation="true">
                       <GoTo name="pastselect" />
                     </Option>
                   </ConversationAction>
@@ -60,7 +60,7 @@
                       <ReputationAction targettype="Faction" identifier="separatists" increase="-30" />
                       <ReputationAction targettype="Faction" identifier="huskcult" increase="-30" />
                     </Option>
-                    <Option text="Back to Selection.">
+                    <Option text="Back to Selection." endconversation="true">
                       <GoTo name="pastselect" />
                     </Option>
                   </ConversationAction>
@@ -75,7 +75,7 @@
                       <ReputationAction targettype="Faction" identifier="separatists" increase="-30" />
                       <ReputationAction targettype="Faction" identifier="huskcult" increase="40" />
                     </Option>
-                    <Option text="Back to Selection.">
+                    <Option text="Back to Selection." endconversation="true">
                       <GoTo name="pastselect" />
                     </Option>
                   </ConversationAction>
@@ -91,7 +91,7 @@
                       <ReputationAction targettype="Faction" identifier="huskcult" increase="-20" />
                       <!-- TODO: Add rep for cthonian cartel -->
                     </Option>
-                    <Option text="Back to Selection.">
+                    <Option text="Back to Selection." endconversation="true">
                       <GoTo name="pastselect" />
                     </Option>
                   </ConversationAction>
@@ -106,16 +106,25 @@
                       <ReputationAction targettype="Faction" identifier="separatists" increase="40" />
                       <ReputationAction targettype="Faction" identifier="huskcult" increase="-30" />
                     </Option>
-                    <Option text="Back to Selection.">
+                    <Option text="Back to Selection." endconversation="true">
                       <GoTo name="pastselect" />
                     </Option>
                   </ConversationAction>
                 </Option>
               </ConversationAction>
             </Success>
+          </CheckItemAction>
+        </Failure>
+      </CheckDataAction>
+    </ScriptedEvent>
+    <ScriptedEvent identifier="thal_campaignstartsideline">
+      <CheckDataAction identifier="thal_pastchosen" condition="eq 1">
+        <Failure>
+          <TagAction criteria="player" tag="player" />
+          <CheckItemAction targettag="player" itemtags="job:Captain">
             <Failure>
               <Label name="pastwait" />
-              <ConversationAction fadetoblack="true" eventsprite="thal_nametag" targettag="player" text="Welcome to Thalasssophobia's Campaign. Your captain has been presented with a prompt deciding the backstory of your crew, which will affect your reputation with factions, and permenantly affect your dialogue options. Decide with your captain on a background that seems fun or fitting for you. Press Okay when you have decided on a backstory. You will not be allowed to proceed until a backstory has been chosen.">
+              <ConversationAction fadetoblack="true" eventsprite="thal_nametag" targettag="player" text="Welcome to Thalasssophobia's Campaign. Your captain has been presented with a prompt deciding the backstory of your crew, which will affect your reputation with factions, and permenantly affect your dialogue options. Discuss with your captain on a background that seems fun or fitting for you. Press Okay when you have decided on a backstory. You will be kicked back here until your captain has made up his mind.">
                 <Option text="Okay." endconversation="true">
                   <CheckDataAction identifier="thal_pastchosen" condition="eq 1">
                     <Failure>
@@ -468,6 +477,7 @@
     <EventSet identifier="campaignstart" allowatstart="true" chooserandom="false" ignorecooldown="true">
       <!--Only regular events in outposts:-->
       <ScriptedEvent identifier="thal_campaignstart" commonness="100" />
+      <ScriptedEvent identifier="thal_campaignstartsideline" commonness="100" />
     </EventSet>
     <EventSet identifier="outpostevents.randomevents" allowatstart="true" chooserandom="true">
       <!--Only regular events in outposts and cities:-->

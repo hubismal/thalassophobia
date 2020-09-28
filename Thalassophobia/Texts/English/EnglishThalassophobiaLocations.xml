@@ -1,34 +1,76 @@
 <?xml version="1.0" encoding="utf-8"?>
 <infotexts language="English" nowhitespace="false" translatedname="English">
 
-	<thalcampaign_newbrief>You are new arrivals on Europa. You just got your Coalition Citizen ID a few minutes ago after waiting at a shuttle arrival checkpoint. The world of Barotrauma is new and mysterious, and you want to experience it through new eyes.
+	<thalcampaign_newbrieflong>You are new arrivals on Europa. You just got your Coalition Citizen ID a few minutes ago after waiting at a shuttle arrival checkpoint. The world of Barotrauma is new and mysterious, and you want to experience it through new eyes.
 	
 	You start with no perks, benefits, or reputation bonuses, but conversely you are on neutral standing with all of the factions. As the campaign progresses, you will be presented with the opportunity to join and leave factions as you please like any other background preset. 
 	
 	Choose this route to start with a clean slate, like in Vanilla Barotrauma.
-	</thalcampaign_newbrief>
+	</thalcampaign_newbrieflong>
 	
-	<thalcampaign_corporatebrief>Corporate Agents are black operations specialists working for the Coalition Anti Terrorist Police (CATPOL). Your job consists of hunting down seperatist insurgents and putting an end to the insurgency by any means necessary. It's a dirty job, and almost all CATPOL agents are "bad cops" in one way or another.
+	<thalcampaign_corporatebrieflong>Briefing Log 1A: Corporate Agents are black operations specialists working for the Coalition Anti Terrorist Police (CATPOL). Your job consists of hunting down seperatist insurgents and putting an end to the insurgency by any means necessary. It's a dirty job, and almost all CATPOL agents are "bad cops" in one way or another.
 	
 	You have special access to Black Sites that house secret government projects, as well as some of the newest high-grade gear on Europa. You are in many ways above the law, but don't get the wrong idea: You are not "free". If you stray too far from Coalition interests, the chain of command from on high will activate your implanted killswitch.
 	
 	Choose this route for an experience as a potentially corrupt powertripping law enforcer.
-	</thalcampaign_corporatebrief>
+	</thalcampaign_corporatebrieflong>
 	
-	<thalcampaign_circusbrief>As humanity extends their stay on Europa, more and more ships mysteriously become registered as "travelling circuses". These crews consist of Europans loyal to the ideas (or lack of ideas) of the Children of the Honkmother. Loyal to nobody except chaos itself, clown ships have been sighted going from outpost to outpost, harassing their denizens with annoying clown antics.
+	<thalcampaign_circusbrieflong>As humanity extends their stay on Europa, more and more ships mysteriously become registered as "travelling circuses". These crews consist of Europans loyal to the ideas (or lack of ideas) of the Children of the Honkmother. Loyal to nobody except chaos itself, clown ships have been sighted going from outpost to outpost, harassing their denizens with annoying clown antics.
 	
 	Clown crews will have access to ridiculous dialogue options that may result in almost spontaneous results, with a large emphasis placed on randomness. Clown insurgents at outposts will supply clown crews with lots of goods to keep the chaos going.
 	
 	Choose this route for a wild ride of screwing around and watching the world burn.
+	</thalcampaign_circusbrieflong>
+	
+	<thalcampaign_huskbrieflong>Velonaceps Calyx is a tiny fungal parasite known to house itself in the lowermost region of the pharynx, where it burrows into the vocal chords, grows to obstruct speech, and subsequently hijacks the brainstem. The parasite has existed on Europa for ages as the "perfect organism": In order for humankind to truly coalesce with its new home, we must seek salvation from the eggs, evolving us into something more than human.
+	
+	Your assignment from the high priest is to convert the young minds of Europa. You may access special "hallowed grounds" scattered around Europa, where you will be showered with rewards for your penance.
+	
+	Choose this route for an unsettling ride of occultism and transhumanism.
+	</thalcampaign_huskbrieflong>
+	
+	<thalcampaign_bluecollarbrieflong>Life ain't easy on Europa. You could be trigger happy cop, a knife weilding cultist, a paint slinging terrorist, or a friggin circus clown. One day you're a psycho running around with a folding chair, next day you're crawler food. If you're an average joe trying to stay alive, chances are, you've got connections underground.
+	
+	As a street crew, you'll do whatever gets you the marks, no matter how dirty the job. Crawler swarm? No problem. Assassinations? Easy street. Drug smuggling? Piece of cake. You don't have a "home base", but you might feel more comfortable in one of the many slums.
+	
+	Choose this route to experience the criminal underworld and the low life of Europa.
+	</thalcampaign_bluecollarbrieflong>
+	
+	<thalcampaign_terroristbrieflong>For years, the people of Europa have suffered under the tyrannical rule of the all-encompassing Coalition. You've seen it all: The surveillance, the police brutality, the rampant corruption. Everywhere you look, beggars in outposts; The weak, the diseased, the war torn veterans... Thrown away like trash by the fat cats living it up in luxury stations.
+	
+	Blow things up as a terrorist. finish this description later (this mod is wip)
+	
+	Choose this route to smash the state and blow shit up.
+	</thalcampaign_terroristbrieflong>
+	
+	<thalcampaign_newbrief>You are new arrivals on Europa. You start with no perks, benefits, or reputation bonuses, but conversely you are on neutral standing with all of the factions. As the campaign progresses, you will be presented with the opportunity to join and leave factions as you please like any other background preset. 
+	
+	Choose this route to start with a clean slate, like in Vanilla Barotrauma.
+	</thalcampaign_newbrief>
+	
+	<thalcampaign_corporatebrief>You work for CATPOL: Terrorist hunting law enforcement. You have special access to Black Sites that house secret government projects, as well as some of the newest high-grade gear on Europa. If you stray too far from Coalition interests, the chain of command from on high will activate your implanted killswitch.
+	
+	Choose this route for an experience as a potentially corrupt powertripping law enforcer.
+	</thalcampaign_corporatebrief>
+	
+	<thalcampaign_circusbrief>Clown ships go from outpost to outpost, harassing their denizens with annoying clown antics. Clown crews will have access to ridiculous dialogue options that may result in almost spontaneous results, with a large emphasis placed on randomness. 
+	
+	Choose this route for a wild ride of screwing around and watching the world burn.
 	</thalcampaign_circusbrief>
 	
-	<thalcampaign_huskbrief>blah blah blah husk sample text here
+	<thalcampaign_huskbrief>You must seek salvation from the eggs, evolving us into something more than human. Your assignment from the high priest is to convert the young minds of Europa. You may access special "hallowed grounds" scattered around Europa, where you will be showered with rewards for your penance.
+	
+	Choose this route for an unsettling ride of occultism and transhumanism.
 	</thalcampaign_huskbrief>
 	
-	<thalcampaign_bluecollarbrief>blah blah blah blue collar sample text here
+	<thalcampaign_bluecollarbrief>If you're an average joe trying to stay alive, chances are, you've got connections underground. As a street crew, you'll do whatever gets you the marks, no matter how dirty the job. Assassinations? Easy street. Drug smuggling? Piece of cake. You don't have a "home base", but you might feel more comfortable in one of the many slums.
+	
+	Choose this route to experience the criminal underworld and the low life of Europa.
 	</thalcampaign_bluecollarbrief>
 	
-	<thalcampaign_terroristbrief>blah blah blah terrorist sample text here
+	<thalcampaign_terroristbrief>For years, the people of Europa have suffered under the tyrannical rule of the all-encompassing Coalition. You've seen it all: The surveillance, the police brutality, the rampant corruption. Everywhere you look, beggars in outposts; The weak, the diseased, the war torn veterans... Thrown away like trash by the fat cats living it up in luxury stations.
+	
+	Choose this route to smash the state and blow shit up.
 	</thalcampaign_terroristbrief>
 
   <!-- Locations -->
@@ -41,8 +83,8 @@
   
   <locationname.thal_blackSite>Classified Site</locationname.thal_blackSite>
   <locationnameformat.thal_blackSite>[name]</locationnameformat.thal_blackSite>
-  <locationchange.thal_blackSite.changeto.outpost>A new outpost has been established at [previousname], formerly a nuclear mine.</locationchange.thal_blackSite.changeto.outpost>
-  <locationchange.thal_blackSite.changeto.military>A new military outpost has been established at [previousname], formerly a nuclear mine.</locationchange.thal_blackSite.changeto.military>
-  <locationchange.thal_blackSite.changeto.research>A new research outpost has been established at [previousname], formerly a nuclear mine.</locationchange.thal_blackSite.changeto.research>
+  <locationchange.thal_blackSite.changeto.outpost>[previousname] has been converted to an outpost after a security breach jeopardized operational security.</locationchange.thal_blackSite.changeto.outpost>
+  <locationchange.thal_blackSite.changeto.military>A new military outpost has been established at [previousname], formerly a classified site.</locationchange.thal_blackSite.changeto.military>
+  <locationchange.thal_blackSite.changeto.research>A new research outpost has been established at [previousname], formerly a classified site.</locationchange.thal_blackSite.changeto.research>
   
 </infotexts>

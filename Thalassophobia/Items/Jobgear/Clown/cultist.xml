@@ -40,24 +40,14 @@
       <damagemodifier afflictiontypes="damage" armorsector="0.0,360.0" damagesound="LimbClown" />
     </Wearable>
   </Item>
-  <Item name="Gutter Dagger" description="A disturbing dagger with a rather large gutter to collect blood for sacrifices. Used by cultists for sacrifices." identifier="thal_cultistknife" category="Equipment" Tags="smallitem,weapon" cargocontaineridentifier="metalcrate" scale="0.25" impactsoundtag="impact_metal_light">
-    <Deconstruct time="10">
-      <Item identifier="bikehorn" />
-    </Deconstruct>
+  <Item name="Gutter Dagger" description="A disturbing dagger with a rather large gutter to collect blood from the living for sacrifices with altars." identifier="thal_cultistknife" category="Equipment" Tags="smallitem,weapon" cargocontaineridentifier="metalcrate" scale="0.25" impactsoundtag="impact_metal_light">
     <InventoryIcon texture="Mods/Thalassophobia/Items/Jobgear/Clown/clown.png" sourcerect="510,-4,112,114" origin="0.47357765,0.48258916" name="cultistknifeinventory" />
     <Sprite texture="Mods/Thalassophobia/Items/Jobgear/Clown/clown.png" sourcerect="381,281,196,93" depth="0.55" origin="0.5,0.5" name="cultistknife sprite" />
     <Body width="110" height="25" density="50" />
-    <!--
-    <LightComponent range="0" lightcolor="0,0,0,0" IsOn="true">
-      <StatusEffect type="OnContained" target="This" IsOn="false" Condition="0" setvalue="true">
-        <Conditional IsOn="true" targetitemcomponent="LightComponent" />
-      </StatusEffect>
-    </LightComponent>
-    -->
     <MeleeWeapon slots="Any,RightHand,LeftHand" aimpos="50,0" handle1="10,-6" reload="0.75" range="50" combatPriority="25" holdangle="90" msg="ItemMsgPickUpSelect" condition="0">
       <Attack targetimpulse="10" severlimbsprobability="0.1" itemdamage="2">
-        <Affliction identifier="lacerations" strength="6" />
-        <Affliction identifier="bleeding" strength="20" />
+        <Affliction identifier="lacerations" strength="4" />
+        <Affliction identifier="bleeding" strength="15" />
         <Affliction identifier="stun" strength="1" />
         <Sound file="Content/Sounds/Damage/LimbSlash1.ogg" selectionmode="random" range="500" />
         <Sound file="Content/Sounds/Damage/LimbSlash2.ogg" range="500" />
@@ -66,22 +56,21 @@
         <Sound file="Content/Sounds/Damage/LimbSlash5.ogg" range="500" />
         <Sound file="Content/Sounds/Damage/LimbSlash6.ogg" range="500" />
       </Attack>
-      <!-- increase knife condition whenever it stabs something, stop before it gets to 100 (since that's how the game first detects it's spawned and sets it to 0). -->
       <StatusEffect type="OnUse" target="This, Character" condition="10.0">
         <Conditional IsDead="false" />
-      </StatusEffect>
-      <StatusEffect type="OnUse" target="This, Character" condition="-5.0">
-        <Conditional IsDead="false" />
-        <Conditional SpeciesName="human" />
       </StatusEffect>
       <StatusEffect type="Always" target="This" setvalue="true" condition="1.0">
         <Conditional Condition="0" />
       </StatusEffect>
-      <StatusEffect type="Always" target="This" condition="1" lifetime="1" setvalue="true" />
     </MeleeWeapon>
-    <aitarget sightrange="500" soundrange="250" fadeouttime="1" />
+    <!-- Knife spawns in with a one-time switch that sets gutter to empty and never activates again-->
+    <LightComponent range="0" lightcolor="0,0,0,0" IsOn="true" allowingameediting="false">
+			<StatusEffect type="Always" target="This" setvalue="true" condition="1" IsOn="false" >
+				<Conditional IsOn="true" />
+			</StatusEffect>
+		</LightComponent>
   </Item>
-  <Item name="Glass Blood Bank" description="A fragile miniature altar used for worship of the honkmother. Redeem blood from a gutter dagger for magical items. Use the knife to pry it off the wall. don't drop." identifier="thal_cultistkit" category="Equipment" cargocontaineridentifier="metalcrate" tags="smallitem" impactsoundtag="impact_soft" scale="0.4" impacttolerance="0.01">
+  <Item name="Glass Blood Altar" description="A fragile miniature altar used for worship of the honkmother. Redeem blood from a gutter dagger for magical items. Use the knife to pry it off the wall. don't drop." identifier="thal_cultistkit" category="Equipment" cargocontaineridentifier="metalcrate" tags="smallitem" impactsoundtag="impact_soft" scale="0.4" impacttolerance="0.01">
     <InventoryIcon name="blodbank Inv" texture="Mods/Thalassophobia/Items/Jobgear/Clown/clown.png" sourcerect="412,3,102,87" depth="0.6" origin="0.5,0.5" />
     <Sprite name="bloodbank Sprite" texture="Mods/Thalassophobia/Items/Jobgear/Clown/clown.png" sourcerect="0,258,368,148" depth="0.6" origin="0.5,0.5" />
     <Body width="30" height="15" density="400" />
@@ -102,7 +91,7 @@
     </Holdable>
     <Fabricator canbeselected="true" powerconsumption="0" msg="ItemMsgInteractSelect">
       <GuiFrame relativesize="0.4,0.45" style="ItemUI" anchor="Center" />
-      <sound file="Content/Items/Fabricators/Fabricator.ogg" type="OnActive" range="1000.0" loop="true" />
+      <sound file="Mods/Thalassophobia/Items/Jobgear/Clown/cultistaltar.ogg" type="OnActive" range="1000.0" loop="true" />
     </Fabricator>
     <ItemContainer capacity="5" canbeselected="true" hideitems="true" slotsperrow="5" uilabel="" allowuioverlap="true" drawinventory="true" />
     <ItemContainer capacity="1" canbeselected="true" hideitems="false" slotsperrow="1" uilabel="" allowuioverlap="true" drawinventory="true" itempos="190,70" />
