@@ -2,7 +2,7 @@
 <Items>
   <!-- MIME STUFF BEGIN -->
   <!-- invisible item spawned with the mime job that gives mime affliction and destroys itself -->
-  <Item name="mimeinflictor" identifier="thal_mimeinflictor" category="Equipment" cargocontaineridentifier="metalcrate" tags="smallitem" description="gives the holder mime affliction" scale="0.5" showinmenus="false" >
+  <Item name="mimeinflictor" identifier="thal_mimeinflictor" category="Equipment" cargocontaineridentifier="metalcrate" tags="smallitem" description="gives the holder mime affliction" scale="0.5" showinmenus="false">
     <Sprite name="Mime Beret" texture="Mods/Thalassophobia/Items/Jobgear/headgears.png" depth="0.6" sourcerect="306,324,30,63" origin="0.5123859,0.53692484" scale="0.5" />
     <Body width="40" radius="30" density="15" />
     <Deconstruct time="10">
@@ -11,11 +11,10 @@
     <Wearable limbtype="Head" slots="Any,Head" msg="ItemMsgPickUpSelect">
       <sprite name="Mime Beret Wearable" texture="Mods/Thalassophobia/Items/Jobgear/headgears.png" limb="Head" inheritlimbdepth="true" inherittexturescale="true" depth="0.6" sourcerect="307,326,88,98" origin="0.5127118,0.49999988" />
       <StatusEffect type="Always" target="This, Parent, Character">
-				<Affliction identifier="thal_mimeaffliction" strength="200" amount="200" />
-				<RemoveItem />
-			</StatusEffect>
+        <Affliction identifier="thal_mimeaffliction" strength="200" amount="200" />
+        <RemoveItem />
+      </StatusEffect>
     </Wearable>
-    
   </Item>
   <Item name="Black Beret" identifier="thal_mimeberet" category="Equipment" cargocontaineridentifier="metalcrate" tags="smallitem" description="French head garment and standard mimewear. Silly but sophisticated." scale="0.5">
     <Sprite name="Mime Beret" texture="Mods/Thalassophobia/Items/Jobgear/headgears.png" depth="0.6" sourcerect="306,324,85,63" origin="0.5123859,0.53692484" scale="0.5" />
@@ -54,7 +53,6 @@
       <sprite name="Mime Right Shoe" texture="mime_legs_[GENDER].png" limb="RightFoot" sound="footstep_clown" hidelimb="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
       <sprite name="Mime Left Shoe" texture="mime_legs_[GENDER].png" limb="LeftFoot" sound="footstep_clown" hidelimb="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
       <!-- HENK -->
-      <damagemodifier afflictiontypes="damage" armorsector="0.0,360.0" damagesound="LimbClown" />
       <damagemodifier afflictiontypes="damage" armorsector="0.0,360.0" damagesound="LimbClown" />
     </Wearable>
   </Item>

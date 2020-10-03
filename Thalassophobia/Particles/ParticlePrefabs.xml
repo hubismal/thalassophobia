@@ -203,41 +203,6 @@
       texture="Content/Particles/SmokeParticleSheet.png"
       sourcerect="819,410,204,204" />
   </glowSmoke>
-  <glowsaber
-    lifetime="0.1"
-    startdelaymin="0"
-    startdelaymax="0"
-    angularvelocitymin="0"
-    angularvelocitymax="0"
-    startrotationmin="0"
-    startrotationmax="0"
-    rotatetodirection="False"
-    drag="0"
-    waterdrag="0"
-    velocitychange="0,0"
-    velocitychangewater="0,0"
-    collisionradius="1"
-    usecollision="False"
-    deleteoncollision="False"
-    friction="0.5"
-    restitution="1"
-    startsizemin="1,1"
-    startsizemax="1,1"
-    growtime="0.02"
-    startcolor="255,100,100,255"
-    endcolor="255,0,0,0"
-    drawtarget="Both"
-    blendstate="Additive"
-    loopanim="False"
-    sizechangemin="0,0"
-    sizechangemax="0,0"
-    animduration="1"
-    drawontop="False">
-    <sprite
-      texture="Content/Particles/ParticleAtlas.png"
-      sourcerect="395,41,108,11"
-      origin="0.1,0.5" />
-  </glowsaber>
   <glowingaffliction
     startsizemin="2,2"
     startsizemax="5,5"
@@ -298,7 +263,7 @@
     startcolor="255,255,255,255"
     endcolor="255,255,255,0"
     drawtarget="Both"
-    blendstate="AlphaBlend"
+    blendstate="Additive"
     loopanim="False"
     sizechangemin="0,0"
     sizechangemax="0,0"
@@ -309,4 +274,129 @@
       sourcerect="0,0,300,300"
       origin="0.5,0.5" />
   </thal_confettifall>
+  <thal_rune
+    startsizemin="1,1"
+    startsizemax="1.5,1.5"
+    sizechangemin="-0.5,-0.5"
+    sizechangemax="0,0"
+    startrotationmin="360"
+    startrotationmax="360"
+    angularvelocitymin="0"
+    angularvelocitymax="0"
+    startcolor="255,255,255,255"
+    endcolor="0,0,0,0"
+    growtime="0.2"
+    lifetime="4"
+    drawtarget="Both"
+    velocitychange="0,0"
+    startdelaymin="0"
+    startdelaymax="0"
+    rotatetodirection="False"
+    drag="300"
+    waterdrag="0"
+    velocitychangewater="0,0"
+    collisionradius="1"
+    usecollision="False"
+    deleteoncollision="False"
+    friction="0.5"
+    restitution="0.5"
+    blendstate="AlphaBlend"
+    animduration="1"
+    loopanim="True"
+    drawontop="False">
+    <sprite
+      texture="Mods/Thalassophobia/Particles/cultparticles.png"
+      sourcerect="0,0,40,40" />
+    <sprite
+      texture="Mods/Thalassophobia/Particles/cultparticles.png"
+      sourcerect="40,0,40,40" />
+    <sprite
+      texture="Mods/Thalassophobia/Particles/cultparticles.png"
+      sourcerect="80,0,40,40" />
+    <sprite
+      texture="Mods/Thalassophobia/Particles/cultparticles.png"
+      sourcerect="120,0,40,40" />
+    <sprite
+      texture="Mods/Thalassophobia/Particles/cultparticles.png"
+      sourcerect="160,0,40,40" />
+    <sprite
+      texture="Mods/Thalassophobia/Particles/cultparticles.png"
+      sourcerect="200,0,40,40" />
+    <sprite
+      texture="Mods/Thalassophobia/Particles/cultparticles.png"
+      sourcerect="240,0,40,40" />
+    <sprite
+      texture="Mods/Thalassophobia/Particles/cultparticles.png"
+      sourcerect="280,0,40,40" />
+    <sprite
+      texture="Mods/Thalassophobia/Particles/cultparticles.png"
+      sourcerect="300,0,40,40" />
+    <sprite
+      texture="Mods/Thalassophobia/Particles/cultparticles.png"
+      sourcerect="320,0,40,40" />
+    <sprite
+      texture="Mods/Thalassophobia/Particles/cultparticles.png"
+      sourcerect="340,0,40,40" />
+    <sprite
+      texture="Mods/Thalassophobia/Particles/cultparticles.png"
+      sourcerect="360,0,40,40" />
+    <sprite
+      texture="Mods/Thalassophobia/Particles/cultparticles.png"
+      sourcerect="380,0,40,40" />
+    <sprite
+      texture="Mods/Thalassophobia/Particles/cultparticles.png"
+      sourcerect="400,0,40,40" />
+    <sprite
+      texture="Mods/Thalassophobia/Particles/cultparticles.png"
+      sourcerect="420,0,40,40" />
+    <sprite
+      texture="Mods/Thalassophobia/Particles/cultparticles.png"
+      sourcerect="440,0,40,40" />
+    <sprite
+      texture="Mods/Thalassophobia/Particles/cultparticles.png"
+      sourcerect="460,0,40,40" />
+    <sprite
+      texture="Mods/Thalassophobia/Particles/cultparticles.png"
+      sourcerect="480,0,40,40" />
+    <sprite
+      texture="Mods/Thalassophobia/Particles/cultparticles.png"
+      sourcerect="500,0,40,40" />
+    <sprite
+      texture="Mods/Thalassophobia/Particles/cultparticles.png"
+      sourcerect="520,0,40,40" />
+  </thal_rune>
+  <thal_pentacircle
+    startsizemin="1,1"
+    startsizemax="1,1"
+    sizechangemin="0,0"
+    sizechangemax="0,0"
+    startrotationmin="0"
+    startrotationmax="360"
+    angularvelocitymin="40"
+    angularvelocitymax="-40"
+    startcolor="255,20,20,130"
+    endcolor="255,20,20,30"
+    growtime="0"
+    lifetime="2.1"
+    drawtarget="Both"
+    velocitychange="0,0"
+    startdelaymin="0"
+    startdelaymax="0"
+    rotatetodirection="False"
+    drag="0"
+    waterdrag="0"
+    velocitychangewater="0,0"
+    collisionradius="1"
+    usecollision="False"
+    deleteoncollision="False"
+    friction="0"
+    restitution="0"
+    blendstate="Additive"
+    animduration="1"
+    loopanim="True"
+    drawontop="False">
+    <sprite
+      texture="Mods/Thalassophobia/Particles/cultparticles.png"
+      sourcerect="0,80,200,200" />
+  </thal_pentacircle>
 </prefabs>

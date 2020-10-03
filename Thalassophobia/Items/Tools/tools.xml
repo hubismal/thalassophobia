@@ -31,8 +31,8 @@
       <RequiredItem identifier="thal_pen" type="Equipped" />
     </CustomInterface>
 		</ItemLabel>
-    <Holdable selectkey="Select" pickkey="Use" slots="Any,RightHand,LeftHand" msg="ItemMsgDetachWrench" PickingTime="10.0" aimpos="35,-10" handle1="0,0" attachable="true" attachedbydefault="true" aimable="true">
-      <requireditem identifier="wrench" type="Equipped" />
+    <Holdable pickkey="Use" slots="Any,RightHand,LeftHand" msg="ItemMsgDetachWrench" PickingTime="2.0" aimpos="35,-10" handle1="0,0" attachable="true" attachedbydefault="true" aimable="true">
+      <requireditem identifier="thal_pen" type="Equipped" />
     </Holdable>
   </Item>
   

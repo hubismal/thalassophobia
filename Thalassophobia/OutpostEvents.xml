@@ -15,6 +15,7 @@
       <CheckDataAction identifier="thal_pastchosen" condition="eq 1">
         <Failure>
           <TagAction criteria="player" tag="player" />
+          <TagAction criteria="itemtag:job:Captain" tag="captainid" />
           <CheckItemAction targettag="player" itemtags="job:Captain">
             <Success>
               <ConversationAction fadetoblack="true" eventsprite="thal_nametag" targettag="player" text="Welcome to Thalasssophobia's Campaign. You are the captain, and you will be deciding the backstory of your crew, which will affect your reputation with factions, and permenantly affect your dialogue options.">
@@ -23,7 +24,7 @@
               <Label name="pastselect" />
               <ConversationAction fadetoblack="true" eventsprite="thal_nametag" targettag="player" text="Decide with your crew on a background that seems fun or fitting for you.">
                 <!-- NEW ARRIVALS -->
-                <Option text="We are NEW ARRIVALS ON EUROPA. Fate will forge a name for us with time.">
+                <Option text="We are NEW ARRIVALS ON EUROPA. Fate will forge a name for us with time." endconversation="true" >
                   <ConversationAction fadetoblack="true" eventsprite="thal_reactorleak" targettag="player" text="thalcampaign_newbrief">
                     <Option endconversation="true" text="Confirm.">
                       <SetDataAction identifier="thal_crewbackground" value="none" />
@@ -35,7 +36,7 @@
                   </ConversationAction>
                 </Option>
                 <!-- ELITE CORPO -->
-                <Option text="We are ELITE CORPORATE AGENTS. Our loyalty lies in Coalition interests.">
+                <Option text="We are ELITE CORPORATE AGENTS. Our loyalty lies in Coalition interests." endconversation="true" >
                   <ConversationAction fadetoblack="true" eventsprite="thal_catpolbrief" targettag="player" text="thalcampaign_corporatebrief">
                     <Option endconversation="true" text="Confirm.">
                       <SetDataAction identifier="thal_crewbackground" value="corporate" />
@@ -50,7 +51,7 @@
                     </Option>
                   </ConversationAction>
                 </Option>
-                <Option text="We are A TRAVELLING CIRCUS. A carnival of chaos will swallow Europa whole.">
+                <Option text="We are A TRAVELLING CIRCUS. A carnival of chaos will swallow Europa whole." endconversation="true" >
                   <ConversationAction fadetoblack="true" eventsprite="thal_reactorleak" targettag="player" text="thalcampaign_circusbrief">
                     <Option endconversation="true" text="Confirm.">
                       <SetDataAction identifier="thal_crewbackground" value="circus" />
@@ -65,7 +66,7 @@
                     </Option>
                   </ConversationAction>
                 </Option>
-                <Option text="We are CALYX MISSIONARIES. The teachings of the husk will save humankind.">
+                <Option text="We are CALYX MISSIONARIES. The teachings of the husk will save humankind." endconversation="true" >
                   <ConversationAction fadetoblack="true" eventsprite="thal_reactorleak" targettag="player" text="thalcampaign_huskbrief">
                     <Option endconversation="true" text="Confirm.">
                       <SetDataAction identifier="thal_crewbackground" value="husk" />
@@ -80,7 +81,7 @@
                     </Option>
                   </ConversationAction>
                 </Option>
-                <Option text="We are A FOR-HIRE LOWLIVES. Underworld connections find us unusual work.">
+                <Option text="We are A FOR-HIRE LOWLIVES. Underworld connections find us unusual work." endconversation="true" >
                   <ConversationAction fadetoblack="true" eventsprite="thal_reactorleak" targettag="player" text="thalcampaign_bluecollarbrief">
                     <Option endconversation="true" text="Confirm.">
                       <SetDataAction identifier="thal_crewbackground" value="bluecollar" />
@@ -96,7 +97,7 @@
                     </Option>
                   </ConversationAction>
                 </Option>
-                <Option text="We are RESISTANCE INSURGENTS. Smash the fascist state and free the moon.">
+                <Option text="We are RESISTANCE INSURGENTS. Smash the fascist state and free the moon." endconversation="true" >
                   <ConversationAction fadetoblack="true" eventsprite="thal_reactorleak" targettag="player" text="thalcampaign_terroristbrief">
                     <Option endconversation="true" text="Confirm.">
                       <SetDataAction identifier="thal_crewbackground" value="terrorist" />

@@ -78,10 +78,23 @@
     <InventoryIcon texture="Mods/Thalassophobia/Items/Jobgear/Enforcer/weapons_new.png" sourcerect="254,357,142,156" origin="0.5,0.5" />
     <Sprite name="glowsaber core" texture="weapons_new.png" sourcerect="170,335,311,22" depth="0.55" origin="0.49603432,0.5464647" />
     <Body width="140" height="30" density="30" />
-    <LightComponent range="100.0" lightcolor="255,255,255,0" powerconsumption="10" IsOn="false" castshadows="true" allowingameediting="false" depth="0.025">
+    <LightComponent range="100.0" lightcolor="255,255,255,0" powerconsumption="10" IsOn="false" castshadows="true" allowingameediting="true" drawhudwhenequipped="true" depth="0.025">
       <sprite name="glowsaber blade" texture="Mods/Thalassophobia/Items/Jobgear/Enforcer/weapons_new.png" depth="0.025" origin="0.5,0.5742529" alpha="1.0" sourcerect="169,253,310,29" />
-      <StatusEffect type="OnActive" target="Contained" Condition="-3.0">
-        <!--<Conditional IsOn="true" targetitemcomponent="LightComponent"/>-->
+      <StatusEffect type="OnActive" target="This" IsOn="false">
+        <Conditional PhysicsBodyActive="eq false" />
+      </StatusEffect>
+      <!--blade color depends on loaded crystal -->
+      <StatusEffect type="OnActive" target="This" lightcolor="0,255,50,0">
+        <RequiredItem items="thal_glowcrystal" type="Contained" />
+      </StatusEffect>
+      <StatusEffect type="OnActive" target="This" lightcolor="0,200,255,0">
+        <RequiredItem items="thal_frostcrystal" type="Contained" />
+      </StatusEffect>
+      <StatusEffect type="OnActive" target="This" lightcolor="255,0,0,0">
+        <RequiredItem items="thal_synthcrystal" type="Contained" />
+      </StatusEffect>
+      <StatusEffect type="OnActive" target="Contained" Condition="-2.0">
+        <!--<Conditional IsOn="eq true" targetitemcomponent="LightComponent"/>-->
       </StatusEffect>
       <StatusEffect type="OnUse" target="This" disabledeltatime="false">
         <sound file="Mods/Thalassophobia/Items/Jobgear/Enforcer/glowsaber/swing0.ogg" selectionmode="random" range="1800" />
@@ -91,26 +104,49 @@
       </StatusEffect>
     </LightComponent>
     <MeleeWeapon slots="Any,RightHand,LeftHand" aimpos="45,10" handle1="-50,-5" holdangle="80" reload="0.8" range="100" combatPriority="50" msg="ItemMsgPickUpSelect">
-      <Attack context="Ground" cooldown="3" afterattack="Pursue" range="150" damagerange="150" duration="0.25" structuredamage="0" itemdamage="40" structuresoundtype="StructureSlash" targetforce="0" severlimbsprobability="0.0" torque="-250" force="20" applyforceonlimbs="0, 1, 2, 13" targettype="Any" hitdetectiontype="Distance" stun="0" onlyhumans="False" applyforcesonlyonce="True" targetimpulse="50" targetimpulseworld="0,0" targetforceworld="0,0" stickchance="0" priority="0" secondarycooldown="0" cooldownrandomfactor="0.5" reverse="False" targetlimbtype="None">
-        <StatusEffect type="OnUse" target="This" setvalue="true" structuredamage="10" itemdamage="30"></StatusEffect>
+      <Attack context="Ground" cooldown="3" afterattack="Pursue" range="150" damagerange="150" duration="0.25" structuredamage="0" itemdamage="0" structuresoundtype="StructureSlash" targetforce="0" severlimbsprobability="0.0" torque="-250" force="20" applyforceonlimbs="0, 1, 2, 13" targettype="Any" hitdetectiontype="Distance" stun="0" onlyhumans="False" applyforcesonlyonce="True" targetimpulse="50" targetimpulseworld="0,0" targetforceworld="0,0" stickchance="0" priority="0" secondarycooldown="0" cooldownrandomfactor="0.5" reverse="False" targetlimbtype="None">
+        <StatusEffect type="Always" target="This" setvalue="true" structuredamage="10" itemdamage="30"></StatusEffect>
       </Attack>
-      <StatusEffect type="OnUse" target="Character,This" disabledeltatime="false">
-        <Affliction identifier="burn" strength="2" />
+      <!-- Normal glowcrystal attack -->
+      <StatusEffect type="OnUse" target="Character,This" disabledeltatime="false" setvalue="true" reload="1">
+        <Affliction identifier="burn" strength="1.5" />
         <sound file="Mods/Thalassophobia/Items/Jobgear/Enforcer/glowsaber/hit0.ogg" selectionmode="random" range="1800" />
         <sound file="Mods/Thalassophobia/Items/Jobgear/Enforcer/glowsaber/hit1.ogg" range="1800" />
         <sound file="Mods/Thalassophobia/Items/Jobgear/Enforcer/glowsaber/hit2.ogg" range="1800" />
-        <Explosion range="100.0" force="0.1" shockwave="false" flames="false" smoke="false" underwaterbubble="false" camerashake="6.0" />
+        <Explosion range="5.0" force="0.1" shockwave="false" flames="false" smoke="false" underwaterbubble="false" camerashake="6.0" stun="1" />
         <Conditional IsOn="true" targetitemcomponent="LightComponent" />
         <RequiredItem items="thal_glowcrystal" type="Contained" msg="Glow crystal required." />
       </StatusEffect>
-      <!-- normal batteries cause 15 seconds of stun to anything with a mass smaller than 60 -->
+      <!-- Synth glowcrystal attack -->
+      <StatusEffect type="OnUse" target="Character,This" disabledeltatime="false" setvalue="true" reload="0.8">
+        <Affliction identifier="burn" strength="2.5" />
+        <sound file="Mods/Thalassophobia/Items/Jobgear/Enforcer/glowsaber/hit0.ogg" selectionmode="random" range="1800" />
+        <sound file="Mods/Thalassophobia/Items/Jobgear/Enforcer/glowsaber/hit1.ogg" range="1800" />
+        <sound file="Mods/Thalassophobia/Items/Jobgear/Enforcer/glowsaber/hit2.ogg" range="1800" />
+        <Explosion range="5.0" force="0.1" shockwave="false" flames="false" smoke="false" underwaterbubble="false" camerashake="6.0" />
+        <Conditional IsOn="true" targetitemcomponent="LightComponent" />
+        <RequiredItem items="thal_synthcrystal" type="Contained" msg="Glow crystal required." />
+      </StatusEffect>
+      <!-- Frost glowcrystal attack -->
+      <StatusEffect type="OnUse" target="Character,This" disabledeltatime="false" setvalue="true" reload="1.1">
+        <Affliction identifier="burn" strength="1" />
+        <sound file="Mods/Thalassophobia/Items/Jobgear/Enforcer/glowsaber/hit0.ogg" selectionmode="random" range="1800" />
+        <sound file="Mods/Thalassophobia/Items/Jobgear/Enforcer/glowsaber/hit1.ogg" range="1800" />
+        <sound file="Mods/Thalassophobia/Items/Jobgear/Enforcer/glowsaber/hit2.ogg" range="1800" />
+        <Explosion range="5.0" force="0.1" shockwave="false" flames="false" smoke="false" underwaterbubble="false" camerashake="6.0" stun="2" />
+        <Conditional IsOn="true" targetitemcomponent="LightComponent" />
+        <RequiredItem items="thal_frostcrystal" type="Contained" msg="Glow crystal required." />
+      </StatusEffect>
     </MeleeWeapon>
     <ItemContainer capacity="1" hideitems="true">
       <ContainedStateIndicator texture="Content/UI/ContainerIndicators.png" sourcerect="1,70,107,31" />
       <StatusEffect type="Always" targettype="This" Voltage="0.0" hideitems="true" setvalue="true" />
-      <Containable items="thal_glowcrystal">
-        <StatusEffect type="OnContaining" targettype="This" Voltage="1.0" hideitems="false" setvalue="true">
-          <Conditional IsOn="true" targetitemcomponent="LightComponent" />
+      <Containable items="thal_sabercrystal">
+        <StatusEffect type="OnContaining" Comparison="And" targettype="This" Voltage="1.0" hideitems="false" setvalue="true">
+          <Conditional IsOn="True" targetitemcomponent="LightComponent" />
+        </StatusEffect>
+        <StatusEffect type="OnContaining" comparison="and" target="This" stackable="false">
+          <Conditional IsOn="True" targetitemcomponent="LightComponent" />
           <sound file="Mods/Thalassophobia/Items/Jobgear/Enforcer/glowsaber/hum.ogg" range="900" loop="true" />
         </StatusEffect>
       </Containable>
@@ -118,20 +154,34 @@
     <aitarget sightrange="500" soundrange="500" fadeouttime="1" />
     <CustomInterface canbeselected="false" drawhudwhenequipped="true">
       <GuiFrame relativesize="0.1,0.1" anchor="CenterRight" absoluteoffset="20,60" style="ItemUI" />
-      <TickBox text="Blade">
-        <StatusEffect type="OnUse" targettype="This" IsOn="true" />
-        <StatusEffect type="OnSecondaryUse" targettype="This" IsOn="false" />
-      </TickBox>
+      <Button text="Blade">
+        <StatusEffect type="OnUse" targettype="This" delay="0.1" IsOn="true" SonarLabel="on">
+          <Conditional IsOn="eq False" />
+        </StatusEffect>
+        <StatusEffect type="OnUse" targettype="This" stackable="false">
+          <Conditional IsOn="eq False" />
+          <sound file="Mods/Thalassophobia/Items/Jobgear/Enforcer/glowsaber/unsheath.ogg" range="900" />
+          <RequiredItem items="thal_sabercrystal" type="Contained" msg="Saber crystal required." />
+        </StatusEffect>
+        <StatusEffect type="OnUse" targettype="This" delay="0.1" IsOn="false" SonarLabel="off">
+          <Conditional IsOn="eq True" />
+        </StatusEffect>
+        <StatusEffect type="OnUse" targettype="This" stackable="false">
+          <Conditional IsOn="eq True" />
+          <sound file="Mods/Thalassophobia/Items/Jobgear/Enforcer/glowsaber/sheath.ogg" range="900" />
+          <RequiredItem items="thal_sabercrystal" type="Contained" />
+        </StatusEffect>
+      </Button>
     </CustomInterface>
   </Item>
-  <Item name="" identifier="thal_glowcrystal" Tags="smallitem,reactorfuel" cargocontaineridentifier="metalcrate" scale="0.5">
+  <Item name="" identifier="thal_glowcrystal" Tags="smallitem,thal_sabercrystal" cargocontaineridentifier="metalcrate" scale="0.5">
     <PreferredContainer primary="armcab" minamount="2" maxamount="1" spawnprobability="0.1" />
     <PreferredContainer primary="wreckreactorcab" minamount="1" maxamount="3" spawnprobability="0.75" />
-    <Price locationtype="Military" buyprice="1000" />
-    <Price locationtype="Research" buyprice="1000" />
-    <Price locationtype="City" buyprice="1800" />
-    <Price locationtype="Outpost" buyprice="2000" />
-    <Price locationtype="Mine" buyprice="800" />
+    <Price locationtype="Military" buyprice="500" />
+    <Price locationtype="Research" buyprice="500" />
+    <Price locationtype="City" buyprice="600" />
+    <Price locationtype="Outpost" buyprice="800" />
+    <Price locationtype="Mine" buyprice="300" />
     <Deconstruct time="10">
       <Item identifier="steel" />
       <Item identifier="lead" />
@@ -142,9 +192,9 @@
       <RequiredItem identifier="fulgurium" />
       <RequiredItem identifier="thorium" />
     </Fabricate>
-    <InventoryIcon texture="Mods/Thalassophobia/Items/Jobgear/Enforcer/weapons_new.png" sourcerect="427,420,81,89" origin="0.5,0.5" />
+    <InventoryIcon texture="Mods/Thalassophobia/Items/Jobgear/Enforcer/weapons_new.png" depth="0.45" sourcerect="427,420,81,89" origin="0.5,0.5" />
     <Sprite texture="Mods/Thalassophobia/Items/Jobgear/Enforcer/weapons_new.png" depth="0.45" sourcerect="427,420,81,89" origin="0.5,0.5" />
-    <ContainedSprite allowedcontainertags="weapon" name="penta decoSprite" texture="weapons_new.png" sourcerect="171,299,309,27" depth="0.55" origin="0.5,0.43012348" />
+    <ContainedSprite allowedcontainertags="weapon" name="saberblade" texture="weapons_new.png" sourcerect="171,299,309,27" depth="0.55" origin="0.5,0.43012348" />
     <Body width="81" height="89" density="5" />
     <Holdable handle1="0,0" slots="Any,RightHand,LeftHand" msg="ItemMsgPickUpSelect">
       <StatusEffect type="OnBroken" target="This">
@@ -154,6 +204,71 @@
     </Holdable>
     <LightComponent range="1" lightcolor="100,255,255,255" powerconsumption="0" IsOn="true" castshadows="false" allowingameediting="false" depth="0.025">
       <Sprite texture="Mods/Thalassophobia/Items/Jobgear/Enforcer/weapons_new.png" depth="0.45" sourcerect="427,420,81,89" origin="0.5,0.5" />
+    </LightComponent>
+  </Item>
+  <Item name="" identifier="thal_synthcrystal" Tags="smallitem,thal_sabercrystal" cargocontaineridentifier="metalcrate" scale="0.5">
+    <PreferredContainer primary="armcab" minamount="2" maxamount="1" spawnprobability="0.1" />
+    <PreferredContainer primary="wreckreactorcab" minamount="1" maxamount="3" spawnprobability="0.75" />
+    <Price locationtype="Military" buyprice="900" minavailable="1" maxavailable="2" />
+    <Price locationtype="Research" buyprice="900" minavailable="1" maxavailable="2" />
+    <Price locationtype="City" buyprice="900" minavailable="1" maxavailable="2" />
+    <Price locationtype="Outpost" buyprice="1100" minavailable="1" maxavailable="2" />
+    <Price locationtype="Mine" buyprice="900" minavailable="1" maxavailable="2" />
+    <Deconstruct time="10">
+      <Item identifier="steel" />
+      <Item identifier="lead" />
+      <Item identifier="uranium" copycondition="true" />
+    </Deconstruct>
+    <Fabricate suitablefabricators="fabricator" requiredtime="60">
+      <RequiredItem identifier="uranium" />
+      <RequiredItem identifier="fulgurium" />
+      <RequiredItem identifier="fulgurium" />
+      <RequiredItem identifier="thorium" />
+    </Fabricate>
+    <InventoryIcon name="synthcrystal" texture="Mods/Thalassophobia/Items/Jobgear/Enforcer/weapons_new.png" depth="0.45" sourcerect="512,426,81,86" origin="0.5,0.5" />
+    <Sprite name="synthcrystal" texture="Mods/Thalassophobia/Items/Jobgear/Enforcer/weapons_new.png" depth="0.45" sourcerect="512,426,81,86" origin="0.5,0.5" />
+    <ContainedSprite allowedcontainertags="weapon" name="saberblade" texture="weapons_new.png" sourcerect="171,299,309,27" depth="0.55" origin="0.5,0.43012348" />
+    <Body width="81" height="89" density="5" />
+    <Holdable handle1="0,0" slots="Any,RightHand,LeftHand" msg="ItemMsgPickUpSelect">
+      <StatusEffect type="OnBroken" target="This">
+        <Sound file="Content/Sounds/Damage/GlassBreak1.ogg" type="OnBroken" volume="0.5" range="200" />
+        <Remove />
+      </StatusEffect>
+    </Holdable>
+    <LightComponent range="1" lightcolor="255,0,0,255" powerconsumption="0" IsOn="true" castshadows="false" allowingameediting="false" depth="0.025">
+      <Sprite name="synthcrystlight" texture="Mods/Thalassophobia/Items/Jobgear/Enforcer/weapons_new.png" depth="0.45" sourcerect="512,426,81,86" origin="0.5,0.5" />
+    </LightComponent>
+  </Item>
+  <Item name="" identifier="thal_frostcrystal" Tags="smallitem,thal_sabercrystal" cargocontaineridentifier="metalcrate" scale="0.5">
+    <PreferredContainer primary="armcab" minamount="2" maxamount="1" spawnprobability="0.1" />
+    <PreferredContainer primary="wreckreactorcab" minamount="1" maxamount="3" spawnprobability="0.75" />
+    <Price locationtype="Military" buyprice="500" />
+    <Price locationtype="Research" buyprice="500" />
+    <Price locationtype="City" buyprice="600" />
+    <Price locationtype="Outpost" buyprice="800" />
+    <Price locationtype="Mine" buyprice="300" />
+    <Deconstruct time="10">
+      <Item identifier="steel" />
+      <Item identifier="lead" />
+      <Item identifier="uranium" copycondition="true" />
+    </Deconstruct>
+    <Fabricate suitablefabricators="fabricator" requiredtime="30">
+      <RequiredItem identifier="uranium" />
+      <RequiredItem identifier="fulgurium" />
+      <RequiredItem identifier="thorium" />
+    </Fabricate>
+    <InventoryIcon name="frostcrystal" texture="Mods/Thalassophobia/Items/Jobgear/Enforcer/weapons_new.png" depth="0.45" sourcerect="514,335,81,89" origin="0.5,0.5" />
+    <Sprite name="frostcrystal" texture="Mods/Thalassophobia/Items/Jobgear/Enforcer/weapons_new.png" depth="0.45" sourcerect="514,335,81,89" origin="0.5,0.5" />
+    <ContainedSprite allowedcontainertags="weapon" name="saberblade" texture="weapons_new.png" sourcerect="171,299,309,27" depth="0.55" origin="0.5,0.43012348" />
+    <Body width="81" height="89" density="5" />
+    <Holdable handle1="0,0" slots="Any,RightHand,LeftHand" msg="ItemMsgPickUpSelect">
+      <StatusEffect type="OnBroken" target="This">
+        <Sound file="Content/Sounds/Damage/GlassBreak1.ogg" type="OnBroken" volume="0.5" range="200" />
+        <Remove />
+      </StatusEffect>
+    </Holdable>
+    <LightComponent range="1" lightcolor="100,255,255,255" powerconsumption="0" IsOn="true" castshadows="false" allowingameediting="false" depth="0.025">
+      <Sprite name="frostcrystlight" texture="Mods/Thalassophobia/Items/Jobgear/Enforcer/weapons_new.png" depth="0.45" sourcerect="514,335,81,89" origin="0.5,0.5" />
     </LightComponent>
   </Item>
 </Items>

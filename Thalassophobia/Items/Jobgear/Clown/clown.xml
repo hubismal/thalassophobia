@@ -176,46 +176,41 @@
     </Deconstruct>
     <Sprite name="Bowling Ball" texture="Mods/Thalassophobia/Items/Jobgear/Clown/clown.png" sourcerect="700,569,123,122" depth="0.6" origin="0.5,0.5" />
     <Body radius="60" density="40" friction="0.1" />
-    
     <!--
     Internal bikehorn: Used as tracking for whether the ball is active/rolling (aka whether it should trip people)
     -->
-    
     <MotionSensor rangeY="25" rangeX="25" canbeselected="false" minimumvelocity="1" ignoredead="true">
-			<!-- disable motion detection when in inventory -->
+      <!-- disable motion detection when in inventory -->
       <StatusEffect type="OnContained" target="This" setvalue="true" minimumvelocity="90000" spritecolor="255,255,255,255" />
       <StatusEffect type="OnContained" target="Contained" delay="0.5">
-				<RequiredItem items="bikehorn" type="Contained" />
-				<Remove />
-			</StatusEffect>
-      <StatusEffect type="OnNotContained" target="This" setvalue="true" delay="0.5" minimumvelocity="1" spritecolor="255,255,255,255" />
-      
-      <StatusEffect type="OnNotContained" target="NearbyCharacters,This" range="100" Comparison="And" >
-				<Sound file="Mods/Thalassophobia/Items/Jobgear/Clown/pins.ogg" range="6000" selectionmode="Random" />
-				<Conditional thal_fallen="gt 2" />
+        <RequiredItem items="bikehorn" type="Contained" />
+        <Remove />
       </StatusEffect>
-      
+      <StatusEffect type="OnNotContained" target="This" setvalue="true" delay="0.5" minimumvelocity="1" spritecolor="255,255,255,255" />
+      <StatusEffect type="OnNotContained" target="NearbyCharacters,This" range="100" Comparison="And">
+        <Sound file="Mods/Thalassophobia/Items/Jobgear/Clown/pins.ogg" range="6000" selectionmode="Random" />
+        <Conditional thal_fallen="gt 2" />
+      </StatusEffect>
       <!-- SECOND PARSER -->
-      <StatusEffect type="OnNotContained" target="This" setvalue="true" Comparison="And" minimumvelocity="90000" >
-				<Conditional MotionDetected="false" />
-				<RequiredItem items="bikehorn" type="Contained" />
+      <StatusEffect type="OnNotContained" target="This" setvalue="true" Comparison="And" minimumvelocity="90000">
+        <Conditional MotionDetected="false" />
+        <RequiredItem items="bikehorn" type="Contained" />
       </StatusEffect>
       <!-- FIRST GATE -->
-      <StatusEffect type="OnNotContained" target="This" delay="0.6" setvalue="true" >
-				<Conditional MotionDetected="false" />
-				<SpawnItem spawnposition="ThisInventory" identifier="bikehorn" />
-			</StatusEffect>
+      <StatusEffect type="OnNotContained" target="This" delay="0.6" setvalue="true">
+        <Conditional MotionDetected="false" />
+        <SpawnItem spawnposition="ThisInventory" identifier="bikehorn" />
+      </StatusEffect>
       <StatusEffect type="OnNotContained" target="This" setvalue="true" delay="0.1" minimumvelocity="1" rangeX="30">
         <Conditional MotionDetected="true" />
         <Explosion range="40" stun="5" force="0" shockwave="false" flames="false" flash="false" smoke="false" underwaterbubble="false" sparks="false" camerashake="0">
           <Affliction identifier="thal_fallen" strength="40" />
         </Explosion>
-        
       </StatusEffect>
     </MotionSensor>
-    <ItemContainer capacity="1" canbeselected="false" hideitems="true" slotsperrow="5" drawinventory="false" >
-			<ContainedStateIndicator texture="Content/UI/ContainerIndicators.png" sourcerect="1,70,1,1" />
-		</ItemContainer>
+    <ItemContainer capacity="1" canbeselected="false" hideitems="true" slotsperrow="5" drawinventory="false">
+      <ContainedStateIndicator texture="Content/UI/ContainerIndicators.png" sourcerect="1,70,1,1" />
+    </ItemContainer>
     <Throwable slots="Any,RightHand,LeftHand" holdpos="0,0" handle1="0,0" aimpos="-30,-40" throwpos="30,40" throwforce="1.5" msg="ItemMsgPickUpSelect">
       <Sprite name="Banana Peel Throwable" texture="Mods/Thalassophobia/Items/Jobgear/Clown/clown.png" sourcerect="156,157,80,102" depth="0.6" origin="0.5,0.5" />
     </Throwable>
@@ -424,21 +419,30 @@
     </ItemContainer>
     <Holdable handle1="0,0" slots="Any,RightHand,LeftHand" msg="ItemMsgPickUpSelect"></Holdable>
   </Item>
-  
   <Item name="" identifier="thal_clownpack" category="Equipment" tags="smallitem" scale="0.35" cargocontaineridentifier="metalcrate" description="" impactsoundtag="impact_soft">
     <Deconstruct time="40">
       <Item identifier="bikehorn" />
       <Item identifier="bikehorn" />
     </Deconstruct>
-    <Sprite texture="clownpack.png" sourcerect="14,45,103,158" depth="0.6" />
-    <Body radius="55" height="50" density="40" />
+    <Sprite texture="clownpack.png" sourcerect="133,59,114,135" depth="0.6" origin="0.5,0.5" />
+    <Body width="114" height="135" density="40" />
     <Wearable slots="Any,OuterClothes" msg="ItemMsgPickUpSelect">
-      <damagemodifier afflictiontypes="stun" armorsector="180.0,360.0" damagemultiplier="20" />
-      <damagemodifier afflictionidentifiers="blunttrauma,lacerations,gunshotwound" armorsector="180.0,360.0" damagemultiplier="0.05" bleedingmultiplier="0.2" damagesound="LimbArmor" deflectprojectiles="true" />
-      <sprite name="clown wearable backpack" texture="clownpack.png" limb="Torso" hidelimb="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
+      <StatusEffect type="OnWearing" target="This,Character" IsOn="true">
+        <Conditional stun="lt 1" />
+      </StatusEffect>
+      <StatusEffect type="Always" target="This" IsOn="false" />
+      <damagemodifier afflictionidentifiers="stun" armorsector="180.0,360.0" damagemultiplier="0.15" deflectprojectiles="true" />
+      <damagemodifier afflictiontypes="damage" armorsector="180.0,360.0" damagemultiplier="0.15" bleedingmultiplier="0.2" damagesound="LimbArmor" deflectprojectiles="true" />
+      <sprite name="clown wearable backpack" texture="clownpack.png" limb="Torso" hidelimb="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" sourcerect="0,0,256,256" origin="0.5,0.5" />
     </Wearable>
     <ItemContainer capacity="8" canbeselected="false" hideitems="true" slotsperrow="2" drawinventory="true">
-      <Containable items="toyhammer,bikehorn,clownmask,clowncostume,clownitem" />
+      <Containable items="toyhammer,bikehorn,clownmask,clowncostume,clownitem,smallitem" />
+      <StatusEffect type="OnContained" target="This" drawinventory="true">
+        <Conditional IsOn="true" />
+      </StatusEffect>
+      <StatusEffect type="OnContained" target="This" drawinventory="false">
+        <Conditional IsOn="false" />
+      </StatusEffect>
     </ItemContainer>
   </Item>
 </Items>

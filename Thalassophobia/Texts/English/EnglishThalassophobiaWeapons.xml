@@ -7,6 +7,13 @@
 	
 	<entityname.thal_glowcrystal>Glow Crystal</entityname.thal_glowcrystal>
 	<entitydescription.thal_glowcrystal>A crystalline ammo source for various high-power energy weapons. Somewhat rare; Use wisely.</entitydescription.thal_glowcrystal>
+	
+	<entityname.thal_frostcrystal>Frost Glow Crystal</entityname.thal_frostcrystal>
+	<entitydescription.thal_frostcrystal>A subzero crystalline ammo source for various high-power energy weapons. Its cold core gives it a blue hue. Somewhat rare; Use wisely.</entitydescription.thal_frostcrystal>
+	
+	<entityname.thal_synthcrystal>Synthetic Glow Crystal</entityname.thal_synthcrystal>
+	<entitydescription.thal_synthcrystal>A synthesized crystalline ammo source for various high-power energy weapons. Its artificial nature gives it a red hue. Very rare; Use wisely.</entitydescription.thal_synthcrystal>
+	
 	<!-- Explosives -->
 	<entityname.thal_tripmine>Laser Tripmine</entityname.thal_tripmine>
 	<entitydescription.thal_tripmine>Tripmine that activates when in range of a creature. Triggers better the closer the mine is to the torso.</entitydescription.thal_tripmine>

@@ -2,7 +2,7 @@
   <collider radius="100" height="200" name="Main Collider" width="0" />
   <limb id="0" name="Head" type="Head" width="134" height="100" notes="111cr_Head" flip="True" healthindex="0" attackpriority="1" steerforce="20" stepoffset="0,0" radius="0" mass="0" density="10" pullpos="0,0" refjoint="-1" ignorecollisions="False" friction="0.3" restitution="0.05" spriteorientation="NaN" mirrorvertically="False" mirrorhorizontally="False" hide="False" angulardamping="7" mouthpos="2,-1">
     <sprite sourcerect="0,0,166,122" origin="0.4839342,0.4924676" depth="0.1" texture="" />
-    <lightsource range="0" color="0,255,178,255" castshadows="false">
+    <lightsource range="0" color="255,10,0,255" castshadows="false">
       <sprite texture="Mods/Thalassophobia/Characters/Glowraptor/Ragdolls/GlowraptorLight.png" sourcerect="0,0,166,122" origin="0.4839342,0.4924676" alpha="1.0" />
     </lightsource>
     <attack context="Ground" cooldown="2" afterattack="Pursue" range="150" damagerange="150" duration="0.25" structuredamage="5" itemdamage="12" structuresoundtype="StructureSlash" targetforce="0" severlimbsprobability="0.8" torque="-250" force="20" applyforceonlimbs="0, 1, 2, 13" targettype="Any" hitdetectiontype="Distance" stun="0" onlyhumans="False" applyforcesonlyonce="True" targetimpulse="50" targetimpulseworld="0,0" targetforceworld="0,0" stickchance="0" priority="0" secondarycooldown="0" cooldownrandomfactor="0.5" reverse="False" targetlimbtype="None">
@@ -18,7 +18,7 @@
   </limb>
   <limb id="2" name="HeadArmor" type="None" width="168" height="75" notes="1111tr_HeadArmor" flip="True" healthindex="0" attackpriority="1" steerforce="10" stepoffset="0,0" radius="0" mass="0" density="10" pullpos="0,0" refjoint="-1" ignorecollisions="False" friction="0.3" restitution="0.05" spriteorientation="NaN" mirrorvertically="False" mirrorhorizontally="False" hide="False" angulardamping="7" mouthpos="0,0">
     <sprite sourcerect="279,0,209,132" origin="0.5009799,0.5003958" depth="0.08" texture="" />
-    <lightsource range="0" color="0,255,178,255" castshadows="false">
+    <lightsource range="0" color="255,10,0,255" castshadows="false">
       <sprite texture="Mods/Thalassophobia/Characters/Glowraptor/Ragdolls/GlowraptorLight.png" sourcerect="279,0,209,132" origin="0.5009799,0.5003958" alpha="1.0" />
     </lightsource>
     <damagemodifier armorsector="-90,120" afflictiontypes="damage" damagemultiplier="0.5" damagesound="LimbArmor" deflectprojectiles="True" afflictionidentifiers="" />
@@ -31,55 +31,55 @@
   </limb>
   <limb id="3" name="TentacleMouthTop1" type="None" width="38" height="21" notes="1113tr_TentacleMouthTop1" flip="True" healthindex="0" attackpriority="1" steerforce="0" stepoffset="0,0" radius="0" mass="0" density="4" pullpos="0,0" refjoint="-1" ignorecollisions="True" friction="0.3" restitution="0.05" spriteorientation="NaN" mirrorvertically="False" mirrorhorizontally="False" hide="False" angulardamping="7" mouthpos="0,0">
     <sprite sourcerect="504,16,50,28" origin="0.5015433,0.4664803" depth="0.1" texture="" />
-    <lightsource range="0" color="0,255,178,255" castshadows="false">
+    <lightsource range="0" color="255,10,0,255" castshadows="false">
       <sprite texture="Mods/Thalassophobia/Characters/Glowraptor/Ragdolls/GlowraptorLight.png" sourcerect="504,16,50,28" origin="0.5015433,0.4664803" alpha="1.0" />
     </lightsource>
   </limb>
   <limb id="4" name="TentacleMouthCenter1" type="None" width="36" height="23" notes="1114cr_TentacleMouthCenter1" flip="True" healthindex="0" attackpriority="1" steerforce="0" stepoffset="0,0" radius="0" mass="0" density="4" pullpos="0,0" refjoint="-1" ignorecollisions="True" friction="0.3" restitution="0.05" spriteorientation="NaN" mirrorvertically="False" mirrorhorizontally="False" hide="False" angulardamping="7" mouthpos="0,0">
     <sprite sourcerect="506,14,48,30" origin="0.5,0.5" depth="0.1" texture="" />
-    <lightsource range="0" color="0,255,178,255" castshadows="false">
+    <lightsource range="0" color="255,10,0,255" castshadows="false">
       <sprite texture="Mods/Thalassophobia/Characters/Glowraptor/Ragdolls/GlowraptorLight.png" sourcerect="506,14,48,30" origin="0.5,0.5" alpha="1.0" />
     </lightsource>
   </limb>
   <limb id="5" name="TentacleJaw1" type="None" width="36" height="18" notes="11121cr_TentacleJaw1" flip="True" healthindex="0" attackpriority="1" steerforce="0" stepoffset="0,0" radius="0" mass="0" density="4" pullpos="0,0" refjoint="-1" ignorecollisions="True" friction="0.3" restitution="0.05" spriteorientation="NaN" mirrorvertically="False" mirrorhorizontally="False" hide="False" angulardamping="7" mouthpos="0,0">
     <sprite sourcerect="505,16,49,25" origin="0.4263428,0.5043318" depth="0.1" texture="" />
-    <lightsource range="0" color="0,255,178,255" castshadows="false">
+    <lightsource range="0" color="255,10,0,255" castshadows="false">
       <sprite texture="Mods/Thalassophobia/Characters/Glowraptor/Ragdolls/GlowraptorLight.png" sourcerect="505,16,49,25" origin="0.4263428,0.5043318" alpha="1.0" />
     </lightsource>
   </limb>
   <limb id="6" name="TentacleMouthTop2" type="None" width="38" height="18" notes="11131cr_TentacleMouthTop2" flip="True" healthindex="0" attackpriority="1" steerforce="0" stepoffset="0,0" radius="0" mass="0" density="3" pullpos="0,0" refjoint="-1" ignorecollisions="True" friction="0.3" restitution="0.05" spriteorientation="NaN" mirrorvertically="False" mirrorhorizontally="False" hide="False" angulardamping="7" mouthpos="0,0">
     <sprite sourcerect="506,52,51,25" origin="0.4668974,0.5069979" depth="0.1" texture="" />
-    <lightsource range="0" color="0,255,178,255" castshadows="false">
+    <lightsource range="0" color="255,10,0,255" castshadows="false">
       <sprite texture="Mods/Thalassophobia/Characters/Glowraptor/Ragdolls/GlowraptorLight.png" sourcerect="506,52,51,25" origin="0.4668974,0.5069979" alpha="1.0" />
     </lightsource>
   </limb>
   <limb id="7" name="TentacleMouthCenter2" type="None" width="36" height="20" notes="11141cr_TentacleMouthCenter2" flip="True" healthindex="0" attackpriority="1" steerforce="0" stepoffset="0,0" radius="0" mass="0" density="3" pullpos="0,0" refjoint="-1" ignorecollisions="True" friction="0.3" restitution="0.05" spriteorientation="NaN" mirrorvertically="False" mirrorhorizontally="False" hide="False" angulardamping="7" mouthpos="0,0">
     <sprite sourcerect="504,52,48,27" origin="0.5,0.5" depth="0.1" texture="" />
-    <lightsource range="0" color="0,255,178,255" castshadows="false">
+    <lightsource range="0" color="255,10,0,255" castshadows="false">
       <sprite texture="Mods/Thalassophobia/Characters/Glowraptor/Ragdolls/GlowraptorLight.png" sourcerect="504,52,48,27" origin="0.5,0.5" alpha="1.0" />
     </lightsource>
   </limb>
   <limb id="8" name="TentacleJaw2" type="None" width="35" height="19" notes="111211cr_TentacleJaw2" flip="True" healthindex="0" attackpriority="1" steerforce="0" stepoffset="0,0" radius="0" mass="0" density="3" pullpos="0,0" refjoint="-1" ignorecollisions="True" friction="0.3" restitution="0.05" spriteorientation="NaN" mirrorvertically="False" mirrorhorizontally="False" hide="False" angulardamping="7" mouthpos="0,0">
     <sprite sourcerect="504,16,50,29" origin="0.4445113,0.5389961" depth="0.1" texture="" />
-    <lightsource range="0" color="0,255,178,255" castshadows="false">
+    <lightsource range="0" color="255,10,0,255" castshadows="false">
       <sprite texture="Mods/Thalassophobia/Characters/Glowraptor/Ragdolls/GlowraptorLight.png" sourcerect="504,16,50,29" origin="0.4445113,0.5389961" alpha="1.0" />
     </lightsource>
   </limb>
   <limb id="9" name="TentacleMouthTop3" type="None" width="42" height="17" notes="111311cr_TentacleMouthTop3" flip="True" healthindex="0" attackpriority="1" steerforce="0" stepoffset="0,0" radius="0" mass="0" density="2" pullpos="0,0" refjoint="-1" ignorecollisions="True" friction="0.3" restitution="0.05" spriteorientation="NaN" mirrorvertically="False" mirrorhorizontally="False" hide="False" angulardamping="7" mouthpos="0,0">
     <sprite sourcerect="518,92,56,22" origin="0.5970114,0.4225785" depth="0.1" texture="" />
-    <lightsource range="0" color="0,255,178,255" castshadows="false">
+    <lightsource range="0" color="255,10,0,255" castshadows="false">
       <sprite texture="Mods/Thalassophobia/Characters/Glowraptor/Ragdolls/GlowraptorLight.png" sourcerect="518,92,56,22" origin="0.5970114,0.4225785" alpha="1.0" />
     </lightsource>
   </limb>
   <limb id="10" name="TentacleMouthCenter3" type="None" width="43" height="21" notes="111411cr_TentacleMouthCenter3" flip="True" healthindex="0" attackpriority="1" steerforce="0" stepoffset="0,0" radius="0" mass="0" density="2" pullpos="0,0" refjoint="-1" ignorecollisions="True" friction="0.3" restitution="0.05" spriteorientation="NaN" mirrorvertically="False" mirrorhorizontally="False" hide="False" angulardamping="7" mouthpos="0,0">
     <sprite sourcerect="519,89,58,28" origin="0.5,0.5" depth="0.1" texture="" />
-    <lightsource range="0" color="0,255,178,255" castshadows="false">
+    <lightsource range="0" color="255,10,0,255" castshadows="false">
       <sprite texture="Mods/Thalassophobia/Characters/Glowraptor/Ragdolls/GlowraptorLight.png" sourcerect="519,89,58,28" origin="0.5,0.5" alpha="1.0" />
     </lightsource>
   </limb>
   <limb id="11" name="TentacleJaw3" type="None" width="43" height="17" notes="1112111cr_TentacleJaw3" flip="True" healthindex="0" attackpriority="1" steerforce="0" stepoffset="0,0" radius="0" mass="0" density="2" pullpos="0,0" refjoint="-1" ignorecollisions="True" friction="0.3" restitution="0.05" spriteorientation="NaN" mirrorvertically="False" mirrorhorizontally="False" hide="False" angulardamping="7" mouthpos="0,0">
     <sprite sourcerect="515,93,56,22" origin="0.5732805,0.15095796" depth="0.1" texture="" />
-    <lightsource range="0" color="0,255,178,255" castshadows="false">
+    <lightsource range="0" color="255,10,0,255" castshadows="false">
       <sprite texture="Mods/Thalassophobia/Characters/Glowraptor/Ragdolls/GlowraptorLight.png" sourcerect="515,93,56,22" origin="0.5732805,0.15095796" alpha="1.0" />
     </lightsource>
   </limb>
@@ -93,7 +93,7 @@
   </limb>
   <limb id="14" name="Chest" type="None" width="0" height="0" notes="11cr_Chest" flip="True" healthindex="0" attackpriority="1" steerforce="5" stepoffset="0,0" radius="65" mass="0" density="12" pullpos="0,0" refjoint="-1" ignorecollisions="False" friction="0.3" restitution="0.05" spriteorientation="NaN" mirrorvertically="False" mirrorhorizontally="False" hide="False" angulardamping="7" mouthpos="0,0">
     <sprite sourcerect="167,121,154,148" origin="0.4924224,0.5230629" depth="0.1" texture="" />
-    <lightsource range="0" color="0,255,178,255" castshadows="false">
+    <lightsource range="0" color="255,10,0,255" castshadows="false">
       <sprite texture="Mods/Thalassophobia/Characters/Glowraptor/Ragdolls/GlowraptorLight.png" sourcerect="167,121,154,148" origin="0.4924224,0.5230629" alpha="1.0" />
     </lightsource>
     <damagemodifier armorsector="-90,90" afflictiontypes="damage" damagemultiplier="0.5" damagesound="LimbArmor" deflectprojectiles="True" afflictionidentifiers="" />
@@ -105,7 +105,7 @@
   </limb>
   <limb id="16" name="ArmPalm" type="None" width="60" height="200" notes="1121rm_ArmPalm" flip="True" healthindex="0" attackpriority="1" steerforce="0" stepoffset="0,0" radius="0" mass="0" density="10" pullpos="0,0" refjoint="-1" ignorecollisions="False" friction="0.3" restitution="0.05" spriteorientation="NaN" mirrorvertically="False" mirrorhorizontally="False" hide="False" angulardamping="7" mouthpos="0,0">
     <sprite sourcerect="334,162,70,143" origin="0.5053436,0.462937" depth="0.07" texture="" />
-    <lightsource range="0" color="0,255,178,255" castshadows="false">
+    <lightsource range="0" color="255,10,0,255" castshadows="false">
       <sprite texture="Mods/Thalassophobia/Characters/Glowraptor/Ragdolls/GlowraptorLight.png" sourcerect="334,162,70,143" origin="0.5053436,0.462937" alpha="1.0" />
     </lightsource>
   </limb>
@@ -115,7 +115,7 @@
   </limb>
   <limb id="18" name="ArmLower" type="None" width="90" height="40" notes="112bc_ArmLower" flip="True" healthindex="0" attackpriority="1" steerforce="0" stepoffset="0,0" radius="0" mass="0" density="10" pullpos="0,0" refjoint="-1" ignorecollisions="False" friction="0.3" restitution="0.05" spriteorientation="NaN" mirrorvertically="False" mirrorhorizontally="False" hide="False" angulardamping="7" mouthpos="0,0">
     <sprite sourcerect="435,521,87,43" origin="0.4531075,0.5604911" depth="0.08" texture="" />
-    <lightsource range="0" color="0,255,178,255" castshadows="false">
+    <lightsource range="0" color="255,10,0,255" castshadows="false">
       <sprite texture="Mods/Thalassophobia/Characters/Glowraptor/Ragdolls/GlowraptorLight.png" sourcerect="435,521,87,43" origin="0.4531075,0.5604911" alpha="1.0" />
     </lightsource>
   </limb>
@@ -144,7 +144,7 @@
   </limb>
   <limb id="25" name="Tail3" type="Tail" width="83" height="50" notes="511cl_Tail3" flip="True" healthindex="0" attackpriority="1" steerforce="0" stepoffset="0,0" radius="0" mass="0" density="10" pullpos="0,0" refjoint="-1" ignorecollisions="False" friction="0.3" restitution="0.05" spriteorientation="NaN" mirrorvertically="False" mirrorhorizontally="False" hide="False" angulardamping="7" mouthpos="0,0">
     <sprite sourcerect="315,492,107,82" origin="0.5262811,0.6016204" depth="0.1" texture="" />
-    <lightsource range="0" color="0,255,178,255" castshadows="false">
+    <lightsource range="0" color="255,10,0,255" castshadows="false">
       <sprite texture="Mods/Thalassophobia/Characters/Glowraptor/Ragdolls/GlowraptorLight.png" sourcerect="315,492,107,82" origin="0.5262811,0.6016204" alpha="1.0" />
     </lightsource>
     <damagemodifier armorsector="90,270" afflictiontypes="damage" damagemultiplier="0.5" damagesound="LimbArmor" deflectprojectiles="True" afflictionidentifiers="" />
@@ -152,7 +152,7 @@
   </limb>
   <limb id="26" name="Tail4" type="Tail" width="64" height="32" notes="5111cl_Tail4" flip="True" healthindex="0" attackpriority="1" steerforce="0" stepoffset="0,0" radius="0" mass="0" density="10" pullpos="0,0" refjoint="-1" ignorecollisions="False" friction="0.3" restitution="0.05" spriteorientation="NaN" mirrorvertically="False" mirrorhorizontally="False" hide="False" angulardamping="7" mouthpos="0,0">
     <sprite sourcerect="435,521,86,42" origin="0.5042107,0.3883522" depth="0.1" texture="" />
-    <lightsource range="0" color="0,255,178,255" castshadows="false">
+    <lightsource range="0" color="255,10,0,255" castshadows="false">
       <sprite texture="Mods/Thalassophobia/Characters/Glowraptor/Ragdolls/GlowraptorLight.png" sourcerect="435,521,86,42" origin="0.5042107,0.3883522" alpha="1.0" />
     </lightsource>
     <damagemodifier armorsector="90,270" afflictiontypes="damage" damagemultiplier="0.5" damagesound="LimbArmor" deflectprojectiles="True" afflictionidentifiers="" />
