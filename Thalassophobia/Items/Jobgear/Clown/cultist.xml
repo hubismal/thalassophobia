@@ -103,7 +103,7 @@
     <ItemContainer capacity="5" canbeselected="true" hideitems="true" slotsperrow="5" uilabel="" allowuioverlap="true" drawinventory="true" />
     <ItemContainer capacity="1" canbeselected="true" hideitems="false" slotsperrow="1" uilabel="" allowuioverlap="true" drawinventory="true" itempos="190,70" />
   </Item>
-  <Item name="" identifier="thal_candle" category="Equipment" cargocontaineridentifier="metalcrate" Scale="0.3" tags="smallitem,light,provocative" requireaimtouse="true" attachable="true" attachedbydefault="true" impactsoundtag="impact_soft" isshootable="true" damagedbyexplosions="true" damagedbyprojectiles="true" damagedbymeleeweapons="true" damagedbyrepairtools="true" >
+  <Item name="" identifier="thal_candle" category="Equipment" cargocontaineridentifier="metalcrate" Scale="0.3" tags="smallitem,light,provocative" requireaimtouse="true" attachable="true" attachedbydefault="true" impactsoundtag="impact_soft" isshootable="true" damagedbyexplosions="true" damagedbyprojectiles="true" damagedbymeleeweapons="true" damagedbyrepairtools="true">
     <Price baseprice="50">
       <Price locationtype="outpost" multiplier="1" minavailable="3" />
       <Price locationtype="city" multiplier="0.9" minavailable="3" />
@@ -122,16 +122,16 @@
     <Body width="76" height="145" density="12" />
     <Holdable slots="Any,RightHand,LeftHand" holdpos="0,0" handle1="0,0" throwforce="4.0" aimpos="35,-10" msg="ItemMsgPickUpSelect" />
     <LightComponent castshadows="false" LightColor="255,40,40,60" Flicker="0.5" range="300" IsOn="false">
-      <StatusEffect type="OnUse" targettype="This" IsOn="true" delay="0.2" >
+      <StatusEffect type="OnUse" targettype="This" IsOn="true" delay="0.2">
         <Conditional IsOn="eq False" targetitemcomponent="LightComponent" />
         <sound file="Content/Items/Tools/FlareIgnite.ogg" range="800.0" />
       </StatusEffect>
-      <StatusEffect type="OnUse" targettype="This" IsOn="false" delay="0.2" >
+      <StatusEffect type="OnUse" targettype="This" IsOn="false" delay="0.2">
         <Conditional IsOn="eq True" targetitemcomponent="LightComponent" />
         <sound file="Content/Items/Tools/FlareIgnite.ogg" range="800.0" />
       </StatusEffect>
       <StatusEffect type="InWater" targettype="This" IsOn="false" />
-      <StatusEffect type="OnActive" targettype="This" Condition="-0.25" />
+      <StatusEffect type="OnActive" targettype="This" Condition="-0.5" />
       <StatusEffect type="OnActive" targettype="This">
         <Conditional PhysicsBodyActive="eq true" />
         <ParticleEmitter particle="flare" particlespersecond="4" />
@@ -140,7 +140,44 @@
     </LightComponent>
     <AiTarget sightrange="4000" />
   </Item>
-  <Item name="" identifier="thal_pentagram" category="Equipment" cargocontaineridentifier="metalcrate" tags="smallitem" impactsoundtag="impact_soft" scale="0.55" interactdistance="150" impacttolerance="0.01">
+  <Item name="" identifier="thal_ouijaboard" category="Equipment" requireaimtosecondaryuse="false" cargocontaineridentifier="metalcrate" Scale="0.5" tags="smallitem,ritualitem,thal_ouijaboardo" attachable="true" attachedbydefault="true" impactsoundtag="impact_soft" isshootable="true" damagedbyexplosions="true" damagedbyprojectiles="true" damagedbymeleeweapons="true" damagedbyrepairtools="true" canflipx="false" canflipy="false">
+    <Price baseprice="70">
+      <Price locationtype="outpost" multiplier="1" minavailable="2" />
+      <Price locationtype="city" multiplier="0.9" minavailable="1" />
+    </Price>
+    <Deconstruct time="10">
+      <Item identifier="thal_memo" mincondition="0.9" />
+      <Item identifier="thal_memo" />
+    </Deconstruct>
+    <Fabricate suitablefabricators="thal_cultistkit" requiredtime="20">
+      <RequiredItem identifier="thal_cultistknife" mincondition="0.10" usecondition="true" />
+    </Fabricate>
+    <Sprite name="Ouija Board Base" texture="Mods/Thalassophobia/Items/Jobgear/Clown/clown.png" sourcerect="690,227,174,110" depth="0.8" origin="0.5,0.5" />
+    <BrokenSprite name="Ouija broken" texture="Mods/Thalassophobia/Items/Jobgear/Clown/clown.png" sourcerect="715,122,174,110" depth="0.8" maxcondition="1" origin="0.5,0.5" />
+    <DecorativeSprite name="Ouija Pointer" texture="Mods/Thalassophobia/Items/Jobgear/Clown/clown.png" sourcerect="865,229,34,46" depth="0.6" origin="0.5,0.5" offset="120,70" offsetanim="Noise" offsetanimspeed="0.1">
+      <AnimationConditional IsOn="true" targetitemcomponent="LightComponent" />
+    </DecorativeSprite>
+    <Body width="174" height="120" density="12" />
+    <Holdable slots="Any,RightHand,LeftHand" holdpos="0,0" handle1="0,0" holdangle="90" aimpos="35,-10" msg="ItemMsgPickUpSelect" aimable="false" characterusable="false" />
+    <LightComponent castshadows="false" LightColor="0,0,0,0" Flicker="0.5" range="10" IsOn="true">
+			<!--
+      <StatusEffect type="Always" targettype="This" IsOn="true" lifetime="0.1" >
+        <Conditional IsOn="eq False" targetitemcomponent="LightComponent" />
+        <sound file="Content/Items/Tools/FlareIgnite.ogg" range="800.0" />
+      </StatusEffect>
+      -->
+      <StatusEffect type="OnNotContained" targettype="This" IsOn="true">
+        <Conditional requireaimtosecondaryuse="eq true" />
+      </StatusEffect>
+      <StatusEffect type="OnFire" targettype="This" Condition="-2" />
+      <StatusEffect type="OnBroken" targettype="This" IsOn="false" />
+      <!-- Automatically turn off every once in a while -->
+      <StatusEffect type="OnActive" targettype="This" IsOn="false" requireaimtosecondaryuse="false" delay="2" stackable="false">
+      </StatusEffect>
+    </LightComponent>
+    <AiTarget sightrange="4000" />
+  </Item>
+  <Item name="Summoning Pentagram" description="A summoning pentagram for the usage of bringing living entities into the world. Cannot be removed once it is placed." identifier="thal_pentagram" category="Equipment" cargocontaineridentifier="metalcrate" tags="smallitem" impactsoundtag="impact_soft" scale="0.45" interactdistance="150" impacttolerance="0.01">
     <InventoryIcon name="penta Inv" texture="Mods/Thalassophobia/Items/Jobgear/Clown/clown.png" sourcerect="732,-2,132,126" depth="0.6" origin="0.5,0.5" />
     <Sprite name="penta Sprite" texture="Mods/Thalassophobia/Items/Jobgear/Clown/clown.png" sourcerect="4,404,374,368" depth="0.6" origin="0.5,0.5" />
     <!-- excessive and just gets in the way
@@ -174,6 +211,8 @@
         <ParticleEmitter particle="thal_rune" particlespersecond="4" particleburstinterval="2" particleburstamount="5" velocitymin="190" velocitymax="250" anglemin="0" anglemax="360" scalemin="0.7" scalemax="1.0" />
         <ParticleEmitter particle="thal_pentacircle" burstamount="3" particlespersecond="2" velocitymin="0" velocitymax="0" anglemin="0" anglemax="360" scalemin="1.0" scalemax="1.0" />
       </StatusEffect>
+      <StatusEffect type="OnActive" target="NearbyItems" targetidentifiers="thal_ouijaboard,thal_ouijaboardo" range="400" setvalue="true" requireaimtosecondaryuse="true" >
+      </StatusEffect>
     </Fabricator>
     <LightComponent range="900.0" lightcolor="255,0,0,100" IsOn="true" powerconsumption="10" blinkFrequency="10" allowingameediting="false">
       <StatusEffect type="OnNotContained" target="This" Voltage="1.0" setvalue="true">
@@ -183,44 +222,5 @@
     </LightComponent>
     <ItemContainer capacity="5" canbeselected="true" hideitems="true" slotsperrow="5" uilabel="" allowuioverlap="true" drawinventory="true" />
     <ItemContainer capacity="1" canbeselected="true" hideitems="false" slotsperrow="1" uilabel="" allowuioverlap="true" drawinventory="true" itempos="190,70"></ItemContainer>
-  </Item>
-  <!--
-  GUIDEBOOK
-  -->
-  <Item name="" identifier="thal_cultbookbasic" Tags="smallitem,instructional" cargocontaineridentifier="metalcrate" scale="0.5" SonarLabel="hi"
-  
-  showinmenus="false" 
-  
-  >
-    <PreferredContainer primary="crewcab" minamount="2" maxamount="1" spawnprobability="0.1" />
-    <PreferredContainer primary="wreckreactorcab" minamount="1" maxamount="3" spawnprobability="0.75" />
-    <Price locationtype="Military" buyprice="50" minavailable="1" maxavailable="2" />
-    <Price locationtype="Research" buyprice="50" minavailable="1" maxavailable="4" />
-    <Price locationtype="City" buyprice="50" minavailable="1" maxavailable="2" />
-    <Price locationtype="Outpost" buyprice="50" minavailable="1" maxavailable="2" />
-    <Price locationtype="Mine" buyprice="50" minavailable="1" maxavailable="2" />
-    <Deconstruct time="20">
-      <Item identifier="thal_memo" />
-      <Item identifier="lead" />
-    </Deconstruct>
-    <Fabricate suitablefabricators="thal_cultistkit" requiredtime="40">
-      <RequiredItem identifier="thal_cultistknife" mincondition="0.10" usecondition="true" />
-    </Fabricate>
-    <Sprite name="cultbookbasic" texture="Mods/Thalassophobia/Items/Jobgear/Enforcer/weapons_new.png" depth="0.45" sourcerect="512,426,81,86" origin="0.5,0.5" />
-    <ItemLabel textscale="0.6" fontscale="0.6" textcolor="0,0,0,0">
-		</ItemLabel>
-    <Holdable handle1="0,0" slots="Any,RightHand,LeftHand" msg="ItemMsgPickUpSelect">
-			
-			<CustomInterface canbeselected="false" drawhudwhenequipped="true">
-				<GuiFrame relativesize="0.70,0.10" anchor="Center" absoluteoffset="20,20" style="ItemUI" />
-				<TextBox text="Sign Contents" propertyname="text" />
-				<StatusEffect target="This" type="Always" setvalue="true" description="thal_cultbookinfo_husk" >
-					<Conditional text="eq husk" targetitemcomponent="ItemLabel" />
-				</StatusEffect>
-			</CustomInterface>
-    </Holdable>
-    <LightComponent range="1" lightcolor="255,0,0,255" powerconsumption="0" IsOn="true" castshadows="false" allowingameediting="false" depth="0.025">
-      <Sprite name="synthcrystlight" texture="Mods/Thalassophobia/Items/Jobgear/Enforcer/weapons_new.png" depth="0.45" sourcerect="512,426,81,86" origin="0.5,0.5" />
-    </LightComponent>
   </Item>
 </Items>

@@ -513,4 +513,45 @@
       <ScriptedEvent identifier="missionevent_killmonstercommon" commonness="85" />
     </EventSet>
   </EventSet>
+  
+  <EventSet identifier="thal_blacksiteevents" leveltype="outpost" locationtype="thal_blackSite" allowatstart="true" minleveldifficulty="0" maxleveldifficulty="100" chooserandom="false" ignorecooldown="true">
+    <Commonness commonness="0">
+      <Override leveltype="outpostlevel" commonness="1000" />
+    </Commonness>
+    <EventSet identifier="campaignstart" allowatstart="true" chooserandom="false" ignorecooldown="true">
+      <!--Only regular events in outposts:-->
+    </EventSet>
+    <EventSet identifier="outpostevents.randomevents" allowatstart="true" chooserandom="true">
+      <!--Only regular events in outposts and cities:-->
+      <ScriptedEvent identifier="givingdirections" commonness="100" />
+      <ScriptedEvent identifier="soundinthevent" commonness="100" />
+      <ScriptedEvent identifier="clownrelations1" commonness="100" />
+      <ScriptedEvent identifier="clownrelations2" commonness="100" />
+      <ScriptedEvent identifier="goodsamaritan" commonness="100" />
+      <ScriptedEvent identifier="propaganda" commonness="100" />
+      <ScriptedEvent identifier="goblincooking1" commonness="50" />
+      <ScriptedEvent identifier="outbreak" commonness="100" />
+      <ScriptedEvent identifier="miketheidiot1" commonness="25" />
+      <ScriptedEvent identifier="miketheidiot2" commonness="25" />
+      <ScriptedEvent identifier="firefighting" commonness="100" />
+      <ScriptedEvent identifier="sleightofhand" commonness="100" />
+      <ScriptedEvent identifier="foreshadowing" commonness="50" />
+      <ScriptedEvent identifier="clownbrutality" commonness="100" />
+      <ScriptedEvent identifier="separatistrelations" commonness="100" />
+      <ScriptedEvent identifier="huskcultrelations" commonness="100" />
+      <ScriptedEvent identifier="Engineers_are_special" commonness="100" />
+      <ScriptedEvent identifier="mediator" commonness="100" />
+      <ScriptedEvent identifier="blackmarket" commonness="100" />
+      <ScriptedEvent identifier="huskcultist" commonness="100" />
+      <ScriptedEvent identifier="fanclub" commonness="100" />
+      <ScriptedEvent identifier="huskcultambush" commonness="50" />
+    </EventSet>
+    <EventSet identifier="outpostevents.randomevents" allowatstart="true" chooserandom="true" ignorecooldown="true" eventcount="3">
+      <ScriptedEvent identifier="missionevent_cargo1" commonness="125" />
+      <ScriptedEvent identifier="missionevent_cargo2" commonness="50" />
+      <ScriptedEvent identifier="missionevent_cargo3" commonness="100" />
+      <ScriptedEvent identifier="missionevent_killswarm" commonness="100" />
+      <ScriptedEvent identifier="missionevent_killmonstercommon" commonness="85" />
+    </EventSet>
+  </EventSet>
 </Randomevents>

@@ -115,44 +115,10 @@
   <entitydescription.thal_clownpack>Stylish backpack with a funny face on it. Partially absorbs shocks and ballistics from behind, making running a good option.</entitydescription.thal_clownpack>
   
   <entityname.thal_candle>Candle</entityname.thal_candle>
-  <entitydescription.thal_candle>Decorative light source that uses up wax as it burns. Extinguished by water. Great for birthday cakes, holidays, and blood rituals.</entitydescription.thal_candle>
+  <entitydescription.thal_candle>Decorative light source that uses up wax as it burns. Light/Snuff it by aiming and pressing left click once. Extinguished by water.</entitydescription.thal_candle>
   
-  <entityname.thal_pentagram>Summoning Pentagram</entityname.thal_pentagram>
-  <entitydescription.thal_pentagram>A summoning pentagram for the usage of bringing living entities, but also loot into the world. Destroyed by water, fire, and explosions.</entitydescription.thal_pentagram>
-  
-  <entityname.thal_cultbookbasic>Abridged Necronomicon</entityname.thal_cultbookbasic>
-  <entitydescription.thal_cultbookbasic>Ancient manual detailing processes involved in various rituals able to be performed with standard household items. Press "help" when equipped and consult description for more info.
-  </entitydescription.thal_cultbookbasic>
-  <thal_cultbookinfo_husk>~~VELONACEPS OUTBREAK~~
-  Success: 3 Calyxanide, 1 Husk
-  Failure: 1 Husk Stinger, 2 Husk, 1 Husk Crawler
-  ---
-  -1 Husk Stinger, Placed in an Attatched Summoning Pentagram
-  -1 Velonaceps Calyx Syringe, placed nearby Pentagram
-  -1 Lit Candle, placed nearby Pentagram
-  -Place 80pct Gutter Dagger nearby Pentagram
-  -Maintain for 1m45s after initiation
-  </thal_cultbookinfo_husk>
-  <thal_cultbookinfo.coldcavern>~~COLD CAVERN SAMPLER~~
-  Success: 1 Crawler, 2 Hydrophosphixate, 1 Swim Bladder
-  Failure: 1 Mudraptor, 2 Crawlers, 1 Mudraptor Egg
-  ---
-  -1 Husk Stinger, Placed in an Attatched Summoning Pentagram
-  -1 Velonaceps Calyx Syringe, placed nearby Pentagram
-  -1 Lit Candle, placed nearby Pentagram
-  -Have 60pct Gutter Dagger nearby Pentagram
-  -Maintain for 1m30s after initiation
-  </thal_cultbookinfo.coldcavern>
-  <thal_cultbookinfo.coldcavern>~~HELLSPAWN~~
-  Success: 1 Glowraptor, 1 Uranium Ore, 1 Thorium Ore
-  Failure: 3 Glowraptors, 2 Potassium
-  -1 Husk Stinger, Placed in an Attatched Summoning Pentagram
-  -1 Velonaceps Calyx Syringe, placed nearby Pentagram
-  -1 Lit Candle, placed nearby Pentagram
-  -Have 80pct Gutter Dagger nearby Pentagram
-  -Maintain for 2m30s after initiation
-  
-  </thal_cultbookinfo.coldcavern>
+  <entityname.thal_ouijaboard>Ouija Board</entityname.thal_ouijaboard>
+  <entitydescription.thal_ouijaboard>Occultism board for establishing communications with spirits via poltergism. Used in rituals.</entitydescription.thal_ouijaboard>
   
   <!-- Cooking tools -->
   

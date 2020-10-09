@@ -40,7 +40,7 @@
     </Fabricate>
     <InventoryIcon texture="Content/Items/InventoryIconAtlas.png" sourcerect="448,64,64,64" origin="0.5,0.5" />
     <Sprite name="visible wirebind" texture="clown.png" depth="0.55" sourcerect="168,222,86,35" origin="0.5,0.5" />
-    <BrokenSprite name="invisible wirebind" texture="clown.png" depth="0.55" sourcerect="168,222,86,35" origin="0.5,0.5" maxcondition="90" />
+    <BrokenSprite name="invisible wirebind" texture="clown.png" depth="0.55" sourcerect="388,699,86,35" origin="0.5,0.5" maxcondition="90" />
     <Body width="30" height="15" density="40" />
     <Wearable slots="Any,RightHand+LeftHand" msg="ItemMsgPickUpSelect" autoequipwhenfull="false">
       <sprite name="Wirebind thing" texture="clown.png" limb="RightHand" sourcerect="1,1,1,1" origin="0.5,0.5" depth="0.01" scale="0.3" />

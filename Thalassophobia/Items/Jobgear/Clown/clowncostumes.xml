@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Item name="Husk Costume" description="Costume that makes the wearer look like a husk. A great way to get shot. Found on husks and can be assembled by tailor machines." identifier="thal_huskcostume" category="Equipment" cargocontaineridentifier="metalcrate" tags="smallitem" impactsoundtag="impact_soft" scale="0.5">
+<Item name="Husk Costume" description="Costume that makes the wearer look like a husk. A great way to get shot." identifier="thal_huskcostume" category="Equipment" cargocontaineridentifier="metalcrate" tags="smallitem" impactsoundtag="impact_soft" scale="0.5">
   <InventoryIcon name="Cultist Costume Icon" texture="Mods/Thalassophobia/Items/Jobgear/OutfitIcons.png" sourcerect="129,413,128,101" origin="0.5,0.5" />
   <Sprite name="Cultist Costume (floor)" texture="Mods/Thalassophobia/Items/Jobgear/MiscJobGear.png" sourcerect="6,163,195,68" depth="0.6" origin="0.5,0.5" />
   <Body width="100" height="50" density="30" friction="0.8" restitution="0.01" />

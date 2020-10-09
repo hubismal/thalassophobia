@@ -32,7 +32,7 @@
       <Item identifier="thal_miniwardrobe" equip="false">
 				<Item identifier="captainsuniform1" showpreview="false"/>
 				<Item identifier="orangejumpsuit1" showpreview="false"/>
-				<Item identifier="bluejumpsuit1" showpreview="false"/>
+				<Item identifier="thal_huskcostume" showpreview="false"/>
 				<Item identifier="securityuniform1" showpreview="false"/>
       </Item>
       <PreviewSprites dims="120,109">

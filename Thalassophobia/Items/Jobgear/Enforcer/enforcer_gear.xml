@@ -1,10 +1,82 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Items>
+	
+	<Item name="Caledscratch" identifier="thal_caledscratch" category="Equipment" Tags="smallitem,weapon" Scale="0.5" cargocontaineridentifier="metalcrate" impactsoundtag="impact_metal_light" requireaimtosecondaryuse="false" requireaimtouse="false" >
+    <PreferredContainer primary="armcab" minamount="0" maxamount="1" spawnprobability="0.1" />
+    <Price locationtype="City" buyprice="300" />
+    <Price locationtype="Outpost" buyprice="500" />
+    <Price locationtype="thal_blackSite" buyprice="300" />
+    <InventoryIcon texture="Mods/Thalassophobia/Items/Jobgear/Enforcer/weapons_new.png" sourcerect="254,357,142,156" origin="0.5,0.5" />
+    <Sprite name="glowsaber core" texture="weapons_new.png" sourcerect="170,335,311,22" depth="0.55" origin="0.49603432,0.5464647" />
+    <Body width="140" height="30" density="30" />
+    <Holdable handle1="0,0" slots="Any,RightHand,LeftHand" msg="ItemMsgPickUpSelect">
+			<StatusEffect type="OnActive" target="This" stackable="false" duration="9" checkconditionalalways="true"  >
+				<UseItem />
+				<ParticleEmitter particle="thal_rune" particlespersecond="4" particleburstinterval="2" particleburstamount="5" velocitymin="190" velocitymax="250" anglemin="0" anglemax="360" scalemin="0.7" scalemax="1.0" />
+      </StatusEffect>
+			<StatusEffect type="OnActive" target="This" stackable="false" delay="9.02" checkconditionalalways="true"  >
+				<UseItem />
+				<ParticleEmitter particle="thal_rune" particlespersecond="4" particleburstinterval="2" particleburstamount="5" velocitymin="190" velocitymax="250" anglemin="0" anglemax="360" scalemin="0.7" scalemax="1.0" />
+				<Conditional condition="eq 50" />
+				<Conditional requireaimtosecondaryuse="eq true" />
+				<Conditional requireaimtouse="eq true" />
+				<Conditional isshootable="eq true" />
+      </StatusEffect>
+    </Holdable>
+    <LightComponent range="1000.0" lightcolor="255,255,255,255" powerconsumption="0" IsOn="false" castshadows="false" allowingameediting="false" drawhudwhenequipped="true" depth="0.025">
+      
+      
+      <StatusEffect type="OnUse" target="This">
+        <sound file="Mods/Thalassophobia/Sounds/Music/stridertracks/beat1.ogg" range="800" />
+        <Conditional requireaimtosecondaryuse="eq true" />
+      </StatusEffect>
+      <StatusEffect type="OnUse" target="This">
+        <sound file="Mods/Thalassophobia/Sounds/Music/stridertracks/beat2.ogg" range="800" />
+        <Conditional condition="eq 50" />
+      </StatusEffect>
+      <StatusEffect type="OnUse" target="This">
+        <sound file="Mods/Thalassophobia/Sounds/Music/stridertracks/beat3.ogg" range="800" />
+        <Conditional isshootable="eq true" />
+      </StatusEffect>
+    
+    
+    </LightComponent>
+    <CustomInterface canbeselected="false" drawhudwhenequipped="true">
+      <GuiFrame relativesize="0.3,0.3" anchor="BottomRight" absoluteoffset="20,60" style="ItemUI" />
+      
+      <Button text="Toggle Beat 1 Next Loop">
+        <StatusEffect type="OnUse" targettype="This" setvalue="true" requireaimtosecondaryuse="true"  delay="0.05" >
+					<Conditional requireaimtosecondaryuse="false" />
+				</StatusEffect>
+				<StatusEffect type="OnUse" targettype="This" setvalue="true" requireaimtosecondaryuse="false"  delay="0.05" >
+					<Conditional requireaimtosecondaryuse="true" />
+				</StatusEffect>
+      </Button>
+      <Button text="Toggle Beat 2 Next Loop">
+        <StatusEffect type="OnUse" targettype="This" setvalue="true" condition="100" delay="0.05" >
+					<Conditional condition="50" />
+				</StatusEffect>
+				<StatusEffect type="OnUse" targettype="This" setvalue="true" condition="50" delay="0.05" >
+					<Conditional condition="100" />
+				</StatusEffect>
+      </Button>
+      <Button text="Toggle Beat 3 Next Loop">
+        <StatusEffect type="OnUse" targettype="This" setvalue="true" isshootable="true" delay="0.05" >
+					<Conditional isshootable="false" />
+				</StatusEffect>
+				<StatusEffect type="OnUse" targettype="This" setvalue="true" isshootable="false" delay="0.05" >
+					<Conditional isshootable="true" />
+				</StatusEffect>
+      </Button>
+    </CustomInterface>
+  </Item>
+	
   <Item name="Enforcer Helmet" identifier="thal_enforcerhelmet" category="Equipment" tags="smallitem" cargocontaineridentifier="metalcrate" description="A modified diving mask combined with a helmet. Offers improved head protection combined with the functionality of a diving mask." impactsoundtag="impact_metal_heavy" scale="0.4">
     <PreferredContainer primary="armcab" minamount="0" maxamount="1" spawnprobability="1" />
     <Price locationtype="Military" buyprice="125" />
     <Price locationtype="City" buyprice="150" />
     <Price locationtype="Outpost" buyprice="200" />
+    <Price locationtype="thal_blackSite" buyprice="100" minamount="3" />
     <Deconstruct time="10">
       <Item identifier="ballisticfiber" />
       <RequiredItem identifier="divingmask" />
@@ -109,17 +181,19 @@
       </Attack>
       <!-- Normal glowcrystal attack -->
       <StatusEffect type="OnUse" target="Character,This" disabledeltatime="false" setvalue="true" reload="1">
-        <Affliction identifier="burn" strength="1.5" />
+        <Affliction identifier="burn" strength="1" />
+        <Affliction identifier="lacerations" strength="1" />
         <sound file="Mods/Thalassophobia/Items/Jobgear/Enforcer/glowsaber/hit0.ogg" selectionmode="random" range="1800" />
         <sound file="Mods/Thalassophobia/Items/Jobgear/Enforcer/glowsaber/hit1.ogg" range="1800" />
         <sound file="Mods/Thalassophobia/Items/Jobgear/Enforcer/glowsaber/hit2.ogg" range="1800" />
-        <Explosion range="5.0" force="0.1" shockwave="false" flames="false" smoke="false" underwaterbubble="false" camerashake="6.0" stun="1" />
+        <Explosion range="5.0" force="0.1" shockwave="false" flames="false" smoke="false" underwaterbubble="false" camerashake="6.0" />
         <Conditional IsOn="true" targetitemcomponent="LightComponent" />
         <RequiredItem items="thal_glowcrystal" type="Contained" msg="Glow crystal required." />
       </StatusEffect>
       <!-- Synth glowcrystal attack -->
       <StatusEffect type="OnUse" target="Character,This" disabledeltatime="false" setvalue="true" reload="0.8">
-        <Affliction identifier="burn" strength="2.5" />
+        <Affliction identifier="burn" strength="2" />
+        <Affliction identifier="lacerations" strength="1" />
         <sound file="Mods/Thalassophobia/Items/Jobgear/Enforcer/glowsaber/hit0.ogg" selectionmode="random" range="1800" />
         <sound file="Mods/Thalassophobia/Items/Jobgear/Enforcer/glowsaber/hit1.ogg" range="1800" />
         <sound file="Mods/Thalassophobia/Items/Jobgear/Enforcer/glowsaber/hit2.ogg" range="1800" />
@@ -129,11 +203,12 @@
       </StatusEffect>
       <!-- Frost glowcrystal attack -->
       <StatusEffect type="OnUse" target="Character,This" disabledeltatime="false" setvalue="true" reload="1.1">
-        <Affliction identifier="burn" strength="1" />
+        <Affliction identifier="burn" strength="0.5" />
+        <Affliction identifier="lacerations" strength="1" />
         <sound file="Mods/Thalassophobia/Items/Jobgear/Enforcer/glowsaber/hit0.ogg" selectionmode="random" range="1800" />
         <sound file="Mods/Thalassophobia/Items/Jobgear/Enforcer/glowsaber/hit1.ogg" range="1800" />
         <sound file="Mods/Thalassophobia/Items/Jobgear/Enforcer/glowsaber/hit2.ogg" range="1800" />
-        <Explosion range="5.0" force="0.1" shockwave="false" flames="false" smoke="false" underwaterbubble="false" camerashake="6.0" stun="2" />
+        <Explosion range="5.0" force="0.1" shockwave="false" flames="false" smoke="false" underwaterbubble="false" camerashake="6.0" stun="1" />
         <Conditional IsOn="true" targetitemcomponent="LightComponent" />
         <RequiredItem items="thal_frostcrystal" type="Contained" msg="Glow crystal required." />
       </StatusEffect>
