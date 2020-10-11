@@ -38,6 +38,9 @@
   <entityname.thal_foldingtable>Folding Table</entityname.thal_foldingtable>
   <entitydescription.thal_foldingtable>A steel folding table that can be picked up and moved. Players can also drop items on it.</entitydescription.thal_foldingtable>
   
+  <entityname.thal_dpbm>Dave's Phat Beat Machine</entityname.thal_dpbm>
+  <entitydescription.thal_dpbm>A machine that plays and layers instrumental loops. Press a button and wait no more than 9 seconds. Each loop is 9 seconds long.</entitydescription.thal_dpbm>
+  
   <entityname.thal_shockmodule>Discharge Module</entityname.thal_shockmodule>
   <entitydescription.thal_shockmodule>Wireable module that can be hooked up to the wall like a button. On activation, will discharge a stunning bolt of electricity.</entitydescription.thal_shockmodule>
   

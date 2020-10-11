@@ -73,25 +73,19 @@
       </StatusEffect>
     </LightComponent>
   </Item>
-  <Item name="Glass Blood Altar" description="A fragile miniature altar used for worship of the honkmother. Redeem blood from a gutter dagger for magical items. Use the knife to pry it off the wall. don't drop." identifier="thal_cultistkit" category="Equipment" cargocontaineridentifier="metalcrate" tags="smallitem" impactsoundtag="impact_soft" scale="0.4" impacttolerance="0.01">
+  
+  
+  <Item name="Glass Blood Altar" description="A fragile miniature altar used for worship of the honkmother. Redeem blood from a gutter dagger for magical items. Use the knife to pry it off the wall. don't drop." identifier="thal_cultistkit" category="Equipment" cargocontaineridentifier="metalcrate" tags="smallitem" impactsoundtag="impact_soft" scale="0.4" hideconditionbar="true" >
     <InventoryIcon name="blodbank Inv" texture="Mods/Thalassophobia/Items/Jobgear/Clown/clown.png" sourcerect="412,3,102,87" depth="0.6" origin="0.5,0.5" />
     <Sprite name="bloodbank Sprite" texture="Mods/Thalassophobia/Items/Jobgear/Clown/clown.png" sourcerect="0,258,368,148" depth="0.6" origin="0.5,0.5" />
     <Body width="30" height="15" density="400" />
-    <Holdable selectkey="Select" pickkey="Use" slots="Any,RightHand,LeftHand" msg="ItemMsgDetach" PickingTime="1.0" aimpos="35,-10" handle1="0,0" attachable="true" attachedbydefault="true" aimable="true">
-      <StatusEffect type="OnContained" target="This" setvalue="true" />
-      <StatusEffect type="OnNotContained" target="This" setvalue="true" />
-      <StatusEffect type="OnImpact" target="This" Condition="0.0" setvalue="true" />
-      <StatusEffect type="OnBroken" target="This" Condition="-100.0">
-        <sound file="Content/Items/Weapons/ExplosionMedium2.ogg" selectionmode="All" range="8000" />
-        <sound file="Content/Items/Weapons/ExplosionDebris3.ogg" selectionmode="All" range="8000" />
-        <Explosion range="10.0" structuredamage="0" itemdamage="0" force="20.0" severlimbsprobability="0.4" decal="explosion" decalsize="0.5" camerashake="5.0">
-          <Affliction identifier="burn" amount="10" />
-          <Affliction identifier="internaldamage" amount="10" />
-        </Explosion>
-        <Remove />
-      </StatusEffect>
-      <requireditem identifier="thal_cultistknife" type="Equipped" />
+    <Holdable selectkey="Select" slots="Any,RightHand,LeftHand" msg="ItemMsgPickUpSelect" PickingTime="1.0" aimpos="35,-10" handle1="0,0" attachable="false" aimable="true">
+      
     </Holdable>
+    <LightComponent range="0" lightcolor="0,0,0,0" IsOn="true" allowingameediting="false">
+      <StatusEffect type="Always" target="This" setvalue="true" condition="0" />
+    </LightComponent>
+    <!-- FUCK FABRICATORS ALL MY HOMIES HATE FABRICATOR DESYNC
     <Fabricator canbeselected="true" powerconsumption="0" msg="ItemMsgInteractSelect">
       <GuiFrame relativesize="0.4,0.45" style="ItemUI" anchor="Center" />
       <sound file="Mods/Thalassophobia/Items/Jobgear/Clown/cultistaltar.ogg" type="OnActive" range="1000.0" loop="true" />
@@ -100,7 +94,28 @@
         <ParticleEmitter particle="thal_rune" particlespersecond="4" particleburstinterval="2" particleburstamount="2" velocitymin="90" velocitymax="150" anglemin="0" anglemax="360" scalemin="0.3" scalemax="0.5" />
       </StatusEffect>
     </Fabricator>
-    <ItemContainer capacity="5" canbeselected="true" hideitems="true" slotsperrow="5" uilabel="" allowuioverlap="true" drawinventory="true" />
+    -->
+    <CustomInterface canbeselected="false" drawhudwhenequipped="true">
+      <GuiFrame relativesize="0.4,0.6" anchor="Center" absoluteoffset="0,-30" style="ItemUI" />
+      <Button text="Summoning Pentagram [90pct dagger]">
+				<!--
+        <StatusEffect type="OnUse" targettype="This, Contained" delay="3" IsOn="false" drawhudwhenequipped="true">
+          <RequiredItem items="thal_cultistknife" type="Contained" />
+          <Conditional condition="gt 90" />
+        </StatusEffect>
+        <StatusEffect type="OnUse" target="This, Contained" IsOn="true" drawhudwhenequipped="false">
+					<RequiredItem items="thal_cultistknife" type="Contained" />
+          <Conditional condition="gt 90" />
+        </StatusEffect>
+        -->
+        <StatusEffect type="OnUse" target="Contained" setvalue="true" condition="90" >
+					<Remove />
+					<!--<RequiredItem items="thal_cultistknife" type="Contained" />-->
+          <!--<Conditional condition="gt 90" />-->
+        </StatusEffect>
+      </Button>
+      
+    </CustomInterface>
     <ItemContainer capacity="1" canbeselected="true" hideitems="false" slotsperrow="1" uilabel="" allowuioverlap="true" drawinventory="true" itempos="190,70" />
   </Item>
   <Item name="" identifier="thal_candle" category="Equipment" cargocontaineridentifier="metalcrate" Scale="0.3" tags="smallitem,light,provocative" requireaimtouse="true" attachable="true" attachedbydefault="true" impactsoundtag="impact_soft" isshootable="true" damagedbyexplosions="true" damagedbyprojectiles="true" damagedbymeleeweapons="true" damagedbyrepairtools="true">
@@ -122,11 +137,11 @@
     <Body width="76" height="145" density="12" />
     <Holdable slots="Any,RightHand,LeftHand" holdpos="0,0" handle1="0,0" throwforce="4.0" aimpos="35,-10" msg="ItemMsgPickUpSelect" />
     <LightComponent castshadows="false" LightColor="255,40,40,60" Flicker="0.5" range="300" IsOn="false">
-      <StatusEffect type="OnUse" targettype="This" IsOn="true" delay="0.2">
+      <StatusEffect type="OnUse" targettype="This" IsOn="true" delay="0.05">
         <Conditional IsOn="eq False" targetitemcomponent="LightComponent" />
         <sound file="Content/Items/Tools/FlareIgnite.ogg" range="800.0" />
       </StatusEffect>
-      <StatusEffect type="OnUse" targettype="This" IsOn="false" delay="0.2">
+      <StatusEffect type="OnUse" targettype="This" IsOn="false" delay="0.05">
         <Conditional IsOn="eq True" targetitemcomponent="LightComponent" />
         <sound file="Content/Items/Tools/FlareIgnite.ogg" range="800.0" />
       </StatusEffect>
