@@ -1,18 +1,14 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<contentpackage name="Thalassophobia" path="Mods/Thalassophobia/filelist.xml" corepackage="false" gameversion="0.10.5.1" steamworkshopid="2003946282" installtime="1602265483">
-  <Tutorials file="Mods/Thalassophobia/Tutorials/Tutorials.xml" />
+<contentpackage name="Thalassophobia" path="Mods/Thalassophobia/filelist.xml" corepackage="false" gameversion="0.11.0.9" steamworkshopid="2003946282" installtime="1607677597">
   <Text file="Mods/Thalassophobia/Texts/English/EnglishThalassophobiaLocations.xml" />
   <Text file="Mods/Thalassophobia/Texts/English/EnglishThalassophobiaWeapons.xml" />
   <Text file="Mods/Thalassophobia/Texts/English/EnglishThalassophobiaTools.xml" />
   <Text file="Mods/Thalassophobia/Texts/English/EnglishThalassophobiaJobs.xml" />
-  <Text file="Mods/Thalassophobia/Texts/English/EnglishThalassophobiaLoadingTips.xml" />
   <Text file="Mods/Thalassophobia/Texts/English/EnglishThalassophobiaTraitor.xml" />
   <Text file="Mods/Thalassophobia/Texts/English/EnglishThalassophobiaInstallations.xml" />
   <Text file="Mods/Thalassophobia/Texts/English/EnglishThalassophobiaFood.xml" />
   <LocationTypes file="Mods/Thalassophobia/Map/locationtypes.xml" />
-  <LevelObjectPrefabs file="Mods/Thalassophobia/LevelObjects/LevelObjectPrefabs.xml" />
   <Item file="Mods/Thalassophobia/Map/Thalamus/thalamusitems.xml" />
-  <Item file="Mods/Thalassophobia/Items/Weapons/carvinglaser.xml" />
   <Item file="Mods/Thalassophobia/Items/Weapons/Explosives/explosives.xml" />
   <Item file="Mods/Thalassophobia/Items/Electricity/poweritems.xml" />
   <Item file="Mods/Thalassophobia/Items/Electricity/Lights/lights.xml" />
@@ -20,23 +16,21 @@
   <Item file="Mods/Thalassophobia/Items/Command/command.xml" />
   <Item file="Mods/Thalassophobia/Items/Doors/doors.xml" />
   <Item file="Mods/Thalassophobia/Items/Misc/instruments.xml" />
-  <Item file="Mods/Thalassophobia/Items/Misc/Gasvent/gasvent.xml" />
-  <Item file="Mods/Thalassophobia/Items/Misc/Gasvent/gasemitters.xml" />
-  <Item file="Mods/Thalassophobia/Items/Misc/Gasvent/gascanisters.xml" />
   <Item file="Mods/Thalassophobia/Items/Jobgear/misc.xml" />
   <Item file="Mods/Thalassophobia/Items/Jobgear/Enforcer/enforcer_gear.xml" />
   <Item file="Mods/Thalassophobia/Items/Jobgear/Clown/clown.xml" />
   <Item file="Mods/Thalassophobia/Items/Jobgear/Clown/clowncostumes.xml" />
   <Item file="Mods/Thalassophobia/Items/Jobgear/Clown/cultist.xml" />
   <Item file="Mods/Thalassophobia/Items/Jobgear/Clown/mime.xml" />
-  <Item file="Mods/Thalassophobia/Items/Jobgear/Clown/summons.xml" />
   <Item file="Mods/Thalassophobia/Items/Jobgear/RadiationGear/radiationgear.xml" />
   <Item file="Mods/Thalassophobia/Items/Tools/maps.xml" />
   <Item file="Mods/Thalassophobia/Items/Tools/tools.xml" />
+  <Item file="Mods/Thalassophobia/Items/Gardening/growableplants.xml" />
+  <Item file="Mods/Thalassophobia/Items/Jobgear/Scientist/science.xml" />
+  <Item file="Mods/Thalassophobia/Items/Jobgear/Scientist/genetics.xml" />
   <Particles file="Mods/Thalassophobia/Particles/ParticlePrefabs.xml" />
   <Decals file="Mods/Thalassophobia/Particles/DecalPrefabs.xml" />
   <Jobs file="Mods/Thalassophobia/Jobs.xml" />
-  <TraitorMissions file="Mods/Thalassophobia/TraitorMissions.xml" />
   <RandomEvents file="Mods/Thalassophobia/OutpostEvents.xml" />
   <NPCSets file="Mods/Thalassophobia/Map/Outposts/OutpostGenerationNpcs.xml" />
   <Factions file="Mods/Thalassophobia/Map/factions.xml" />
@@ -54,9 +48,15 @@
   <Character file="Mods/Thalassophobia/Characters/Glowraptor/Glowraptor.xml" />
   <Sounds file="Mods/Thalassophobia/Sounds/sounds.xml" />
   <Afflictions file="Mods/Thalassophobia/Afflictions.xml" />
+  <Afflictions file="Mods/Thalassophobia/GeneAfflictions.xml" />
   <OutpostModule file="Mods/Thalassophobia/Map/Outposts/Modules/BlackSiteDockingModule_01.sub" />
   <OutpostModule file="Mods/Thalassophobia/Map/Outposts/Modules/BlackSiteDecontamination.sub" />
   <OutpostModule file="Mods/Thalassophobia/Map/Outposts/Modules/BlackSiteTechChamberL.sub" />
   <OutpostModule file="Mods/Thalassophobia/Map/Outposts/Modules/BlackSiteTechChamberL2.sub" />
   <OutpostModule file="Mods/Thalassophobia/Map/Outposts/Modules/BlackSiteTechChamberL3.sub" />
+  <Character file="Mods/Thalassophobia/Characters/Humanapostle/Humanapostle.xml" />
+  <Character file="Mods/Thalassophobia/Characters/Maggot/Maggot.xml" />
+  <Character file="Mods/Thalassophobia/Characters/Humanhive/Humanhive.xml" />
+  <Character file="Mods/Thalassophobia/Characters/Gummy/Gummy.xml" />
+  <Character file="Mods/Thalassophobia/Characters/Watcherpet/Watcherpet.xml" />
 </contentpackage>

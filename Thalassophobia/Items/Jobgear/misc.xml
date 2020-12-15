@@ -52,4 +52,42 @@
       </StatusEffect>
     </ItemContainer>
   </Item>
+  <!-- autofill spawns in outposts and triggers an event that triggers other events in thalass -->
+  <Item name="eventstarter" identifier="thal_eventstarter" scale="0.5" tags="fuelrod" >
+    <Sprite name="rngflag" texture="Content/Items/Jobgear/headgears.png" depth="0.6" sourcerect="1,1,1,1" origin="0.5,0.5" />
+    <PreferredContainer primary="outpostreactor" minamount="1" maxamount="1" spawnprobability="1.0" />
+    <ItemContainer capacity="1" hideitems="true">
+      <StatusEffect type="Always" target="This" >
+				<TriggerEvent identifier="thal_eventmaster" />
+				<RemoveItem />
+      </StatusEffect>
+    </ItemContainer>
+  </Item>
+  
+  <!--RNG THINGS
+  to use properly, spawnitem rngseed, then wait for 1 second, then use nearbyitems to check nearby rng output's condition. use and comparison to apply effect to you and rngthing (rngthing is junk and will delete itself in a few secs) -->
+  
+  <!-- triggers event, spawns rngthing, deletes self instantly (seems to be some problem with triggerevent and stacking) -->
+  <Item name="rngseed" identifier="thal_rngseed" scale="0.5" >
+    <Sprite name="shitter" texture="Content/Items/Jobgear/headgears.png" depth="0.6" sourcerect="1,1,1,1" origin="0.5,0.5" />
+    <Body radius="15" height="10" density="30" bodytype="Kinematic" />
+    <ItemContainer capacity="1" hideitems="true">
+      <StatusEffect type="Always" target="This" >
+				<TriggerEvent identifier="thal_rngcall" />
+				<SpawnItem identifier="thal_rngoutput" />
+				<RemoveItem />
+      </StatusEffect>
+    </ItemContainer>
+  </Item>
+  
+  <!-- output target for the event, what items utilizing rng should scan for -->
+  <Item name="rngthing" identifier="thal_rngoutput" scale="0.5" tags="rngthing" >
+    <Sprite name="shitter" texture="Content/Items/Jobgear/headgears.png" depth="0.6" sourcerect="1,1,1,1" origin="0.5,0.5" />
+    <Body radius="15" height="10" density="30" bodytype="Kinematic" />
+    <ItemContainer capacity="1" hideitems="true">
+      <StatusEffect type="Always" target="This" stackable="false" delay="3.0" >
+				<RemoveItem />
+      </StatusEffect>
+    </ItemContainer>
+  </Item>
 </Items>

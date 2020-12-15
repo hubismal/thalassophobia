@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Items>
-  <Item name="Radiation Suit" identifier="thal_radsuit" category="Equipment" tags="diving,divingsuit" scale="0.5" fireproof="true" description="An impressive suit used primarily by scientists when handling highly radioactive materials. Will not protect from pressure or suffocation, but renders the user almost immune to burns, radiation, and glowing." impactsoundtag="impact_metal_heavy">
-    <PreferredContainer primary="divingsuitcontainer" spawnprobability="0.1" />
+  <Item name="Radiation Suit" identifier="thal_radsuit" category="Equipment" tags="diving,divingsuit" scale="0.6" fireproof="true" description="An impressive suit used primarily by scientists when handling highly radioactive materials. Will not protect from pressure or suffocation, but renders the user almost immune to burns, radiation, and glowing." impactsoundtag="impact_metal_heavy">
+    <PreferredContainer primary="divingsuitcontainer" spawnprobability="0.03" />
     <Price locationtype="Research" buyprice="4000" />
     <Price locationtype="City" buyprice="6000" />
     <Price locationtype="Military" buyprice="4000" />
@@ -37,6 +37,8 @@
       <damagemodifier armorsector="0.0,360.0" afflictionidentifiers="radiationsickness" damagemultiplier="0.05" damagesound="LimbArmor" deflectprojectiles="true" />
       <damagemodifier armorsector="0.0,360.0" afflictiontypes="burn" damagemultiplier="0.1" damagesound="LimbArmor" deflectprojectiles="true" />
       <damagemodifier armorsector="0.0,360.0" afflictiontypes="thal_glowing" damagemultiplier="0.05" damagesound="LimbArmor" deflectprojectiles="true" />
+      <damagemodifier armorsector="0.0,360.0" afflictionidentifiers="thal_mushroomized" damagemultiplier="0.0" damagesound="LimbArmor" deflectprojectiles="true" />
+      <damagemodifier armorsector="0.0,360.0" afflictionidentifiers="thal_teargasaffliction" damagemultiplier="0.0" damagesound="LimbArmor" deflectprojectiles="true" />
     </Wearable>
   </Item>
 </Items>

@@ -14,9 +14,7 @@
 	<faction.thal_cartel.description>On Europa, where death is imminent, the immensely powerful cartel will meet the demand for narcotics from Europans who can't be quelled by alcohol. It is unknown if Cthonian refers to the rocky surface of Jupiter, bears reference to the lovecraftian monsters under the ice, or the 'underworld' from which the cartel originates. In some areas devoid of proper law and order, the cartel acts as a government due to its immense power.</faction.thal_cartel.description>
 	<faction.thal_cartel.shortdescription>Vicious cartel empowered by the need of the average stressed Europan for relief, preferrably the narcotic kind. In areas where government presence is limited, serve as the de-facto law.</faction.thal_cartel.shortdescription>
 	
-	<skillname.thal_botanyskill>Xenobotany</skillname.thal_botanyskill>
-	<skillname.thal_techskill>Technofinesse</skillname.thal_techskill>
-	<skillname.thal_xenoskill>Xenobiology</skillname.thal_xenoskill>
+	<skillname.thal_scienceskill>Knowledge</skillname.thal_scienceskill>
 	<skillname.thal_clownskill>Tomfoolery</skillname.thal_clownskill>
 	<!-- Jobs -->
 	<jobname.thal_clown>Clown</jobname.thal_clown>
@@ -26,8 +24,14 @@
 	<jobname.thal_clown2>Honkchild</jobname.thal_clown2>
 	<jobname.thal_clown3>Mime</jobname.thal_clown3>
 	
-	<jobdescription.thal_clown1>The jester is the classic performer, always scheming. They spawn with basic clowning gear as well as a fabricator that allows them to make a variety of hysterical pranking gear from odds and ends they find around the ship. Simple clowning fun: A good choice if your crew is full of boring squares.</jobdescription.thal_clown1>
-	<jobdescription.thal_clown2>Honkchildren, part cultist and part shaman, are the cunning followers of the Children of the Honkmother. Sworn in under the Honkly Juggaloath, they are loyal devotees to the honkmother, and are just as much capable of helping the crew as they are of hurting it. If spirit rituals, alternative medicine, blood pacts, and demon summoning sound fun, choose this.</jobdescription.thal_clown2>
-	<jobdescription.thal_clown3>...</jobdescription.thal_clown3>
+	<jobdescription.thal_clown1>The jester is the classic performer, always scheming. They spawn with basic clowning gear as well as a fabricator that allows them to make a variety of hysterical pranking gear from odds and ends they find around the ship. Notably, they are quite skilled with balloons and can make surprisingly functional balloon sculptures.</jobdescription.thal_clown1>
+	<jobdescription.thal_clown2>Honkchildren, part cultist and part shaman, are the cunning followers of the Children of the Honkmother. Sworn in under the Honkly Juggaloath, they are loyal devotees to the honkmother. If spirit rituals, blood pacts, and creature summoning sound fun, choose this.</jobdescription.thal_clown2>
+	<jobdescription.thal_clown3>Mimes are unable to speak but possess various superpowers that make them faster, sturdier, stronger, and capable of affecting other players.</jobdescription.thal_clown3>
 	
+	<jobname.thal_scientist>Scientist</jobname.thal_scientist>
+	<jobdescription.thal_scientist>Placeholder scientist desc.</jobdescription.thal_scientist>
+	
+	<jobname.thal_scientist1>Botanist</jobname.thal_scientist1>
+	<jobdescription.thal_scientist1>Botanist</jobdescription.thal_scientist1>
+	<jobname.thal_scientist2>Xenologist</jobname.thal_scientist2>
 </infotexts>

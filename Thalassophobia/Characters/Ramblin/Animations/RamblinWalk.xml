@@ -15,7 +15,7 @@
   footangles="3: -0.5061455,5: -0.4886922,6: 0.34906584,7: 0.33161256"
   tailangle="NaN"
   stepsize="0.19428779,0.04476171"
-  headposition="2.34"
+  headposition="2.6444516"
   torsoposition="1.34"
   stepliftheadmultiplier="1"
   stepliftamount="0"
@@ -23,6 +23,7 @@
   stepliftfrequency="2"
   backwardsmovementmultiplier="0.75"
   movementspeed="1.0443511"
-  cyclespeed="3"
-  headangle="2"
-  torsoangle="NaN" />
+  cyclespeed="0.3"
+  headangle="42"
+  torsoangle="10"
+  multiplybydir="True" />

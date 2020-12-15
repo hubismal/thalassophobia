@@ -25,7 +25,7 @@
     </Vent>
   </Item>
   -->
-  <Item name="" identifier="thal_shuttervent" tags="locker,container,securecontainer" linkable="true" allowedlinks="oxygenerator" spritecolor="255,255,255,255" pickdistance="40" interactdistance="40" scale="0.5">
+  <Item name="" category="Machine" identifier="thal_shuttervent" tags="locker,container,securecontainer" linkable="true" allowedlinks="oxygenerator" spritecolor="255,255,255,255" pickdistance="40" interactdistance="40" scale="0.5">
     <Sprite texture="Mods/Thalassophobia/Items/Containers/Lockers.png" depth="0.84" sourcerect="272,720,144,128" origin="0.5,0.5" />
     <DecorativeSprite texture="Content/Items/OxygenGenerator/oxygengenerator.png" depth="0.85" sourcerect="852,180,121,121" rotationspeed="360">
       <AnimationConditional OxygenFlow="gt 10" targetitemcomponent="Vent" />
@@ -102,7 +102,7 @@
     </Vent>
   </Item>
   
-  <Item name="" identifier="thal_vacuum" category="Electrical" Tags="smallitem,vacuum" scale="0.5" pickdistance="40" interactdistance="40" >
+  <Item name="" category="Machine" identifier="thal_vacuum" Tags="smallitem,vacuum" scale="0.5" pickdistance="40" interactdistance="40" >
     <Sprite texture="Mods/Thalassophobia/Items/Containers/Lockers.png" sourcerect="0,640,144,48" depth="0.8" origin="0.5,0.5" />
     <LightComponent lightcolor="1.0,1.0,0.0,1.0" range="0.0" powerconsumption="5" allowingameediting="false">
       <LightTexture name="vacuum lighttex" texture="Content/Lights/pointlight_bounce.png" origin="0.5,0.5" />
@@ -111,6 +111,9 @@
       <StatusEffect type="OnActive" target="Hull" Oxygen="-20000.0" />
       <StatusEffect type="OnActive" target="This" Oxygen="-20000.0">
         <sound file="Mods/Thalassophobia/Items/OxygenGenerator/Vacuum.ogg" range="900.0" loop="true" />
+      </StatusEffect>
+      <StatusEffect type="OnActive" target="This" stackable="false" disabledeltatime="true">
+        <ParticleEmitter particle="thal_dust" burstamount="3" particlespersecond="4" velocitymin="0" velocitymax="0" anglemin="0" anglemax="360" scalemin="1.0" scalemax="1.0" />
       </StatusEffect>
     </LightComponent>
     <ConnectionPanel selectkey="Action" canbeselected="true" msg="ItemMsgRewireScrewdriver" hudpriority="10">

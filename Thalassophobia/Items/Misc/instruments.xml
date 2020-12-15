@@ -18,7 +18,7 @@
       </StatusEffect>
     </ItemContainer>
   </Item>
-  <Item name="Sheet Music: Subaquatic Symphony" identifier="thal_sheetmussubaq" category="Misc" Tags="smallitem,sheetmus" cargocontaineridentifier="metalcrate" hideinmenus="false" description="" scale="0.5" impactsoundtag="impact_metal_light" spritecolor="220,220,255,255" inventoryiconcolor="220,220,255,255">
+  <Item name="Sheet Music: Subaquatic Symphony" identifier="thal_sheetmussubaq" category="Misc" Tags="smallitem,sheetmus" cargocontaineridentifier="metalcrate" hideinmenus="false" description="" scale="0.5" impactsoundtag="impact_metal_light" spritecolor="220,220,255,255" inventoryiconcolor="220,220,255,255" >
     <InventoryIcon name="shmsub" texture="instruments.png" sourcerect="369,41,100,104" depth="0.55" origin="0.5,0.5" />
     <Sprite name="shmsubsprite" texture="instruments.png" sourcerect="382,168,73,96" depth="0.55" origin="0.5,0.5" />
     <Body width="73" height="96" density="30"></Body>
@@ -29,7 +29,7 @@
       </StatusEffect>
     </Holdable>
   </Item>
-  <Item name="Sheet Music: Cats on Europa" identifier="thal_sheetmuscatsonmars" category="Misc" Tags="smallitem,sheetmus" cargocontaineridentifier="metalcrate" hideinmenus="false" description="" scale="0.5" impactsoundtag="impact_metal_light" spritecolor="255,220,220,255" inventoryiconcolor="255,220,220,255">
+  <Item name="Sheet Music: Cats on Europa" identifier="thal_sheetmuscatsonmars" category="Misc" Tags="smallitem,sheetmus" cargocontaineridentifier="metalcrate" hideinmenus="false" description="" scale="0.5" impactsoundtag="impact_metal_light" spritecolor="255,220,220,255" inventoryiconcolor="255,220,220,255" >
     <InventoryIcon name="shmcom" texture="instruments.png" sourcerect="369,41,100,104" depth="0.55" origin="0.5,0.5" />
     <Sprite name="shmcomsprite" texture="instruments.png" sourcerect="382,168,73,96" depth="0.55" origin="0.5,0.5" />
     <Body width="73" height="96" density="30"></Body>

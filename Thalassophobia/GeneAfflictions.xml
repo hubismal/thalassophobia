@@ -1,0 +1,75 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Afflictions>
+  <AfflictionHusk name="Genetic Meltdown (Head)" identifier="thal_meltdownhead" description="The patient's cellular DNA is compromised. With the cells unable to reproduce, the patient is slowly 'melting' into dead cells. Locate a DNA graft to resupply the head with target DNA. The longer meltdown persists, the more genetic disorders are introduced to the patient's genes." type="huskinfection" targets="human, humanapostle" huskedspeciesname="gummy" causeofdeathdescription="Melted into DNA-less goop." causespeechimpediment="false" sendmessages="false" selfcauseofdeathdescription="You have melted into goop." limbspecific="false" indicatorlimb="Head" activationthreshold="0" showiconthreshold="10" maxstrength="100" iconcolors="60,140,195,255;60,107,195,255;60,0,195,255">
+    <Effect minstrength="0" maxstrength="80" strengthchange="1" minvitalitydecrease="0" maxvitalitydecrease="30" >
+			<StatusEffect target="Character" targetlimbs="Head" duration="0.5" delay="0.5" stackable="false" >
+        <ParticleEmitter particle="gib" copyentityangle="true" anglemin="0" anglemax="360" particlespersecond="5" velocitymin="50" velocitymax="200" scalemin="1" scalemax="2" />
+			</StatusEffect>
+			<StatusEffect target="Character" targetlimbs="Head" stackable="false" >
+        <Sound file="Mods/Thalassophobia/Map/Thalamus/eye.ogg" range="400" loop="true" />
+			</StatusEffect>
+		</Effect>
+    <Effect minstrength="80" maxstrength="100" strengthchange="0.3" minvitalitydecrease="30" maxvitalitydecrease="50" >
+			<StatusEffect target="Character" targetlimbs="Head" duration="0.5" delay="0.5" stackable="false" >
+        <ParticleEmitter particle="gib" copyentityangle="true" anglemin="0" anglemax="360" particlespersecond="5" velocitymin="50" velocitymax="200" scalemin="1" scalemax="2" />
+			</StatusEffect>
+			<StatusEffect target="Character" targetlimbs="Head" stackable="false" >
+        <Sound file="Mods/Thalassophobia/Map/Thalamus/eye.ogg" range="400" loop="true" />
+			</StatusEffect>
+    </Effect>
+    <icon name="genmelt" texture="Mods/Thalassophobia/UI/MainIconsAtlas.png" sourcerect="386,769,128,128" color="60,107,195,255" origin="0,0" />
+  </AfflictionHusk>
+  <AfflictionHusk name="Genetic Meltdown (Torso)" identifier="thal_meltdowntorso" description="The patient's cellular DNA is compromised. With the cells unable to reproduce, the patient is slowly 'melting' into dead cells. Locate a DNA graft to resupply the body with target DNA. The longer meltdown persists, the more genetic disorders are introduced to the patient's genes." type="huskinfection" targets="human, humanapostle" huskedspeciesname="gummy" causeofdeathdescription="Melted into DNA-less goop." causespeechimpediment="false" sendmessages="false" selfcauseofdeathdescription="You have melted into goop." limbspecific="false" indicatorlimb="Torso" activationthreshold="0" showiconthreshold="10" maxstrength="80" iconcolors="60,140,195,255;60,107,195,255;60,0,195,255">
+    <Effect minstrength="0" maxstrength="80" strengthchange="1" minvitalitydecrease="0" maxvitalitydecrease="30" >
+			<StatusEffect target="Character" targetlimbs="Torso" duration="0.5" delay="0.5" stackable="false" >
+        <ParticleEmitter particle="gib" copyentityangle="true" anglemin="0" anglemax="360" particlespersecond="5" velocitymin="50" velocitymax="200" scalemin="1" scalemax="2" />
+			</StatusEffect>
+			<StatusEffect target="Character" targetlimbs="Torso" stackable="false" >
+        <Sound file="Mods/Thalassophobia/Map/Thalamus/eye.ogg" range="400" loop="true" />
+			</StatusEffect>
+		</Effect>
+    <Effect minstrength="80" maxstrength="100" strengthchange="0.3" minvitalitydecrease="30" maxvitalitydecrease="50" >
+			<StatusEffect target="Character" targetlimbs="Torso" duration="0.5" delay="0.5" stackable="false" >
+        <ParticleEmitter particle="gib" copyentityangle="true" anglemin="0" anglemax="360" particlespersecond="5" velocitymin="50" velocitymax="200" scalemin="1" scalemax="2" />
+			</StatusEffect>
+			<StatusEffect target="Character" targetlimbs="Torso" stackable="false" >
+        <Sound file="Mods/Thalassophobia/Map/Thalamus/eye.ogg" range="400" loop="true" />
+			</StatusEffect>
+    </Effect>
+    <icon name="genmelt" texture="Mods/Thalassophobia/UI/MainIconsAtlas.png" sourcerect="386,769,128,128" color="60,107,195,255" origin="0,0" />
+  </AfflictionHusk>
+  <AfflictionHusk name="Genetic Meltdown (Limbs)" identifier="thal_meltdownlimbs" description="The patient's cellular DNA is compromised. With the cells unable to reproduce, the patient is slowly 'melting' into dead cells. Locate a DNA graft to resupply the limbs with target DNA. The longer meltdown persists, the more genetic disorders are introduced to the patient's genes." type="huskinfection" targets="human, humanapostle" huskedspeciesname="gummy" causeofdeathdescription="Melted into DNA-less goop." causespeechimpediment="false" sendmessages="false" selfcauseofdeathdescription="You have melted into goop." limbspecific="false" indicatorlimb="Torso" activationthreshold="0" showiconthreshold="10" maxstrength="80" iconcolors="60,140,195,255;60,107,195,255;60,0,195,255">
+    <Effect minstrength="0" maxstrength="80" strengthchange="1" minvitalitydecrease="0" maxvitalitydecrease="30" >
+			<StatusEffect target="Character" targetlimbs="LeftLeg" duration="0.5" delay="0.5" stackable="false" >
+        <ParticleEmitter particle="gib" copyentityangle="true" anglemin="0" anglemax="360" particlespersecond="5" velocitymin="50" velocitymax="200" scalemin="1" scalemax="2" />
+			</StatusEffect>
+			<StatusEffect target="Character" targetlimbs="LeftLeg" stackable="false" >
+        <Sound file="Mods/Thalassophobia/Map/Thalamus/eye.ogg" range="400" loop="true" />
+			</StatusEffect>
+		</Effect>
+    <Effect minstrength="80" maxstrength="100" strengthchange="0.3" minvitalitydecrease="30" maxvitalitydecrease="50" >
+			<StatusEffect target="Character" targetlimbs="LeftLeg" duration="0.5" delay="0.5" stackable="false" >
+        <ParticleEmitter particle="gib" copyentityangle="true" anglemin="0" anglemax="360" particlespersecond="5" velocitymin="50" velocitymax="200" scalemin="1" scalemax="2" />
+			</StatusEffect>
+			<StatusEffect target="Character" targetlimbs="LeftLeg" stackable="false" >
+        <Sound file="Mods/Thalassophobia/Map/Thalamus/eye.ogg" range="400" loop="true" />
+			</StatusEffect>
+    </Effect>
+    <icon name="genmelt" texture="Mods/Thalassophobia/UI/MainIconsAtlas.png" sourcerect="386,769,128,128" color="60,107,195,255" origin="0,0" />
+  </AfflictionHusk>
+  <AfflictionHusk name="Mudraptor Genes (Head)" identifier="thal_mudraptorhead" description="The patient's DNA is spliced with that of a mudraptor." type="huskinfection" targets="human, humanapostle" huskedspeciesname="gummy" causeofdeathdescription="Melted into DNA-free goop" causespeechimpediment="false" sendmessages="false" selfcauseofdeathdescription="Your DNA has been tarnished and you have melted into goop." limbspecific="false" indicatorlimb="Torso" activationthreshold="0" showiconthreshold="130" maxstrength="100" iconcolors="60,140,195,255;60,107,195,255;60,0,195,255">
+    <Effect minstrength="0" maxstrength="80" strengthchange="10"  />
+    <Effect minstrength="80" maxstrength="100" />
+    <icon name="genmelt" texture="Mods/Thalassophobia/UI/MainIconsAtlas.png" sourcerect="386,769,128,128" color="60,107,195,255" origin="0,0" />
+  </AfflictionHusk>
+  <AfflictionHusk name="Mudraptor Genes (Torso)" identifier="thal_mudraptortorso" description="The patient's DNA is spliced with that of a mudraptor." type="huskinfection" targets="human, humanapostle" huskedspeciesname="gummy" causeofdeathdescription="Melted into DNA-free goop" causespeechimpediment="false" sendmessages="false" selfcauseofdeathdescription="Your DNA has been tarnished and you have melted into goop." limbspecific="false" indicatorlimb="Torso" activationthreshold="0" showiconthreshold="130" maxstrength="100" iconcolors="60,140,195,255;60,107,195,255;60,0,195,255">
+    <Effect minstrength="0" maxstrength="80" strengthchange="10"  />
+    <Effect minstrength="80" maxstrength="100" />
+    <icon name="genmelt" texture="Mods/Thalassophobia/UI/MainIconsAtlas.png" sourcerect="386,769,128,128" color="60,107,195,255" origin="0,0" />
+  </AfflictionHusk>
+  <AfflictionHusk name="Mudraptor Genes (Limbs)" identifier="thal_mudraptorlimbs" description="The patient's DNA is spliced with that of a mudraptor." type="huskinfection" targets="human, humanapostle" huskedspeciesname="gummy" causeofdeathdescription="Melted into DNA-free goop" CauseSpeechImpediment="false" sendmessages="false" selfcauseofdeathdescription="Your DNA has been tarnished and you have melted into goop." limbspecific="false" indicatorlimb="Torso" activationthreshold="0" showiconthreshold="130" maxstrength="100" iconcolors="60,140,195,255;60,107,195,255;60,0,195,255">
+    <Effect minstrength="0" maxstrength="80" strengthchange="10"  />
+    <Effect minstrength="80" maxstrength="100" />
+    <icon name="genmelt" texture="Mods/Thalassophobia/UI/MainIconsAtlas.png" sourcerect="386,769,128,128" color="60,107,195,255" origin="0,0" />
+  </AfflictionHusk>
+</Afflictions>

@@ -3,7 +3,7 @@
   <Item name="" identifier="thal_blastdoor" tags="door" scale="0.5" health="400" damagedbyrepairtools="true" damagedbymonsters="false" damagedbyexplosions="true" explosiondamagemultiplier="0.1">
     <Sprite name="Blast door frame" texture="Mods/Thalassophobia/Items/Doors/blastdoor.png" sourcerect="0,0,152,420" depth="0.60" origin="0.5,0.5" />
     <DecorativeSprite name="Blast door back" texture="Mods/Thalassophobia/Items/Doors/blastdoor.png" sourcerect="291,-1,90,420" depth="0.89" origin="0.5,0.5" />
-    <Door canbeselected="true" msg="" canbepicked="false" shadowscale="0.9,1" openingspeed="0.8" closingspeed="0.8" togglecooldown="3.0">
+    <Door canbeselected="true" msg="msgnocrowbar" canbepicked="false" shadowscale="0.9,1" openingspeed="0.8" closingspeed="0.8" togglecooldown="3.0">
       <!-- unobtainable item in order to make it unpickable -->
       <RequiredItem items="thal_bombcollarclock" type="equipped" msg="(Not pryable)" />
       <Sprite name="Blast Door Sprite" texture="Mods/Thalassophobia/Items/Doors/blastdoor.png" sourcerect="392,-2,82,421" depth="0.05" origin="0.5,0" />
@@ -15,8 +15,8 @@
       <sound file="Mods/Thalassophobia/Items/Doors/BlastDoor0.ogg" type="OnUse" range="600.0" volume="1.0" />
       <sound file="Content/Items/Door/Duct1.ogg" type="OnFailure" selectionmode="Random" range="300" />
       <sound file="Content/Items/Door/Duct2.ogg" type="OnFailure" range="300" />
-      <sound file="Content/Items/Door/DoorBreak1.ogg" type="OnBroken" selectionmode="Random" range="3000" />
-      <sound file="Content/Items/Door/DoorBreak2.ogg" type="OnBroken" range="3000" />
+      <sound file="Mods/Thalassophobia/Items/Doors/BlastDoorBreak.ogg" type="OnBroken" selectionmode="Random" range="3000" />
+      <sound file="Mods/Thalassophobia/Items/Doors/BlastDoorBreak2.ogg" type="OnBroken" range="3000" />
     </Door>
     <AiTarget sightrange="3000.0" static="True" />
     <Repairable selectkey="Action" header="mechanicalrepairsheader" fixDurationHighSkill="30" fixDurationLowSkill="50" msg="ItemMsgRepairWrench" hudpriority="10">

@@ -99,5 +99,24 @@
       </Item>
     </ItemSet>
     </npc>
+    
+    <npc identifier="streetmime" job="thal_clown" behavior="Passive">
+    <ItemSet>
+      <Item identifier="idcard" equip="true" showpreview="false"/>
+      <Item identifier="thal_mimeberet" equip="true"/>
+      <Item identifier="thal_mimecostume" equip="true" outfit="true"/>
+      <Item identifier="headset" equip="true" showpreview="false">
+        <Item identifier="batterycell" showpreview="false"/>
+      </Item>
+      <Item identifier="thal_mimecase" equip="true" >
+				<Item identifier="thal_invisiblewall" showpreview="true"/>
+				<Item identifier="thal_mimespray"/>
+				<Item identifier="thal_muzzle"/>
+				<Item identifier="thal_pen"/>
+				<Item identifier="thal_sign"/>
+			</Item>
+			<Item identifier="thal_mimeinflictor" showpreview="false"/>
+    </ItemSet>
+    </npc>
   </npcset>
 </npcsets>

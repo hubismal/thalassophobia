@@ -1,14 +1,14 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Items>
   <Item name="" identifier="thal_pen" category="Equipment" Tags="smallitem,docs" cargocontaineridentifier="metalcrate" impactsoundtag="impact_metal_light" scale="0.3" SpriteColor="0,0,0,255">
-		<Price baseprice="50" >
+    <Price baseprice="50">
       <Price locationtype="outpost" multiplier="1" minavailable="1" />
       <Price locationtype="city" multiplier="0.9" minavailable="2" />
       <Price locationtype="research" multiplier="1.25" minavailable="3" />
       <Price locationtype="military" multiplier="1.25" minavailable="1" />
       <Price locationtype="mine" multiplier="1.25" minavailable="2" />
     </Price>
-		<Fabricate suitablefabricators="fabricator" requiredtime="40">
+    <Fabricate suitablefabricators="fabricator" requiredtime="40">
       <RequiredSkill identifier="helm" level="40" />
       <RequiredItem identifier="plastic" usecondition="false" />
       <RequiredItem identifier="rubber" usecondition="false" />
@@ -36,16 +36,16 @@
     </MeleeWeapon>
   </Item>
   <Item name="" identifier="thal_memo" category="Equipment" Tags="smallitem,docs" cargocontaineridentifier="metalcrate" impactsoundtag="impact_metal_light" scale="0.3" SpriteColor="255,255,255,255" fireproof="false">
-		<Price baseprice="5" >
+    <Price baseprice="5">
       <Price locationtype="outpost" multiplier="1" minavailable="10" />
       <Price locationtype="city" multiplier="0.9" minavailable="10" />
       <Price locationtype="research" multiplier="1.25" minavailable="12" />
       <Price locationtype="military" multiplier="1.25" minavailable="12" />
       <Price locationtype="mine" multiplier="1.25" minavailable="9" />
     </Price>
-		<Fabricate suitablefabricators="fabricator" requiredtime="10">
+    <Fabricate suitablefabricators="fabricator" requiredtime="10">
       <RequiredSkill identifier="helm" level="40" />
-      <RequiredItem identifier="organicfiber" usecondition="true" condition="25"/>
+      <RequiredItem identifier="organicfiber" usecondition="true" condition="25" />
     </Fabricate>
     <Deconstruct time="60">
       <Item identifier="organicfiber" />
@@ -65,7 +65,7 @@
       </StatusEffect>
     </CustomInterface>
     <Holdable slots="Any,RightHand,LeftHand" holdangle="30" handle1="-10,0" msg="ItemMsgPickUpSelect">
-			<StatusEffect type="OnFire" target="This" setvalue="true" IsOn="true" description="(Whatever was on this note has been burned away)" spriteColor="0,0,0,255" />
+      <StatusEffect type="OnFire" target="This" setvalue="true" IsOn="true" description="(Whatever was on this note has been burned away)" spriteColor="0,0,0,255" />
     </Holdable>
     <Body width="63" height="61" density="40" />
   </Item>

@@ -3,7 +3,7 @@
 
 	<!--Energy Weapons -->
 	<entityname.thal_glowsaber>Glowsaber</entityname.thal_glowsaber>
-	<entitydescription.thal_glowsaber>Extremely powerful energy sword that deals large burn damage at the cost of very high power consumption, even while unequipped. Ineffective against burn-retardant clothing.</entitydescription.thal_glowsaber>
+	<entitydescription.thal_glowsaber>Extremely powerful energy sword that deals large burn damage and is capable of cutting through walls and doors. Its fuel source are the exotic 'glow crystals' produced with antimatter propagators.</entitydescription.thal_glowsaber>
 	
 	<entityname.thal_glowcrystal>Glow Crystal</entityname.thal_glowcrystal>
 	<entitydescription.thal_glowcrystal>A crystalline ammo source for various high-power energy weapons. Somewhat rare; Use wisely.</entitydescription.thal_glowcrystal>
@@ -25,8 +25,8 @@
 	<entityname.thal_bombcollartimed>Timed Explosive Collar</entityname.thal_bombcollartimed>
 	<entitydescription.thal_bombcollartimed>A particularly sadistic variant of the explosive collar where arming it not only prevents removal, but also starts a countdown to the collar's automatic detonation. Assemble a DISARM tool ASAP!</entitydescription.thal_bombcollartimed>
 	
-	<entityname.thal_bombcollarkey>D.I.S.A.R.M. Tool: Collar</entityname.thal_bombcollarkey>
-	<entitydescription.thal_bombcollarkey>The Detonative and Incendiary Satchel Armament Recall Module (or DISARM for short) Tool is a series of AI operated modules that can latch to bombs and formulate the most efficient way to disarm them, faster than any human. Drag this onto a collar to disarm it.</entitydescription.thal_bombcollarkey>
+	<entityname.thal_bombcollarkey>DISARM Tool</entityname.thal_bombcollarkey>
+	<entitydescription.thal_bombcollarkey>Drag onto collar to disarm.</entitydescription.thal_bombcollarkey>
 	
 	<entityname.thal_bombvest>Suicide Vest</entityname.thal_bombvest>
 	<entitydescription.thal_bombvest>Vest armed with multiple high grade explosives that will explode upon death of the user. May cause someone to think twice about killing you.</entitydescription.thal_bombvest>

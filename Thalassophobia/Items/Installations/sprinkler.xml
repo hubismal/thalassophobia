@@ -1,19 +1,109 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Items>
-	<Item name="" identifier="thal_sprinkler" category="Equipment" Tags="mediumitem,fireextinguisher,provocative" cargocontaineridentifier="metalcrate" description="" impactsoundtag="impact_metal_light" requireaimtouse="false" showinmenus="false"><!-- show in menus disabled until 0.10.5(?).0 -->
+  <Item name="" identifier="thal_sprinkler" category="Machine" Tags="mediumitem,fireextinguisher,provocative" cargocontaineridentifier="metalcrate" description="" impactsoundtag="impact_metal_light" requireaimtouse="false" hideinmenus="true">
+    <!-- show in menus disabled until 0.10.5(?).0 -->
     <InventoryIcon texture="Content/Items/InventoryIconAtlas.png" sourcerect="0,0,64,64" origin="0.5,0.5" />
     <Sprite texture="Content/Items/InventoryIconAtlas.png" depth="0.55" sourcerect="0,0,64,64" origin="0.5,0.5" />
-    <Body width="17" height="48" density="5" bodytype="Dynamic" targetrotation="90">
-			<StatusEffect type="Always" targettype="This" setvalue="true" targetrotation="70" rotation="70"/>
-		</Body>
-    <RepairTool extinguishamount="60.0" range="500" barrelpos="21,25" repairthroughholes="true" hititems="false" requireaimtouse="false" usablein="air" barrelrotation="270">
+    <Body width="17" height="48" density="5" >
+      <StatusEffect type="Always" targettype="This" setvalue="true" targetrotation="70" rotation="70" />
+    </Body>
+    <!-- TODO: add "wateramount=10" after the bug is fixed -->
+    <RepairTool extinguishamount="60.0" range="500" barrelpos="0,0" repairthroughholes="true" requireaimtouse="false" usablein="air" barrelrotation="270" >
       <ParticleEmitter particle="extinguisher" velocitymin="500.0" velocitymax="650.0" particlespersecond="50" />
       <StatusEffect type="OnUse" targettype="This" setvalue="true" rotation="30" />
       <sound file="Content/Items/Tools/Extinguisher.ogg" type="OnUse" range="500.0" loop="true" />
-      <StatusEffect type="Always" target="This">
-				<UseItem />
+      <StatusEffect type="OnNotContained" target="This">
+        <UseItem />
       </StatusEffect>
     </RepairTool>
+    <Holdable selectkey="Select" pickkey="Use" slots="Any,RightHand,LeftHand" msg="ItemMsgDetachWrench" PickingTime="10.0" aimpos="35,-10" handle1="0,0" attachable="true" attachedbydefault="true" aimable="true">
+      <requireditem identifier="wrench" type="Equipped" />
+    </Holdable>
+  </Item>
+  <!--
+  <Item name="dontuse" identifier="thal_trashcan" category="Machine" Tags="machine,crewcab" description="" impactsoundtag="impact_metal_light" hideinmenus="false">
+    <InventoryIcon texture="Content/Items/InventoryIconAtlas.png" sourcerect="0,0,64,64" origin="0.5,0.5" />
+    <Sprite texture="Content/Items/InventoryIconAtlas.png" depth="0.55" sourcerect="0,0,64,64" origin="0.5,0.5" />
+    <Body width="17" height="48" density="5" bodytype="Kinematic" targetrotation="90">
+		</Body>
+    <ItemContainer hideitems="true" drawinventory="true" capacity="1" canbeselected="true" msg="ItemMsgInteractSelect">
+      <GuiFrame relativesize="0.2,0.25" anchor="Center" minsize="140,170" maxsize="280,280" style="ItemUI" />
+      <Containable items="smallitem,mediumitem" />
+    </ItemContainer>
   </Item>
 	
+	<Item name="dontuse" identifier="thal_trashchute" tags="depthchargelauncher" category="Machine" focusonselected="true" offsetonselected="700" linkable="true" allowedlinks="depthchargeammosource" scale="0.5">
+    <Sprite texture="TurretsAndDepthCharges.png" depth="0.01" sourcerect="259,1,85,149" origin="0.5,0.5" />
+    <Turret canbeselected="false" linkable="true" characterusable="false" barrelpos="42, 149" rotationlimits="90,90" powerconsumption="0.0" />
+    <ConnectionPanel selectkey="Action" canbeselected="true" msg="ItemMsgRewireScrewdriver" hudpriority="10">
+      <GuiFrame relativesize="0.2,0.32" minsize="400,350" maxsize="480,420" anchor="Center" style="ConnectionPanel" />
+      <RequiredItem items="screwdriver" type="Equipped" />
+      <input name="trigger_in" displayname="connection.turrettriggerin" />
+    </ConnectionPanel>
+  </Item>
+  -->
+  <Item name="" identifier="thal_vendingmachine" width="238" height="396" texturescale="1.0,1.0" scale="0.5" category="Decorative">
+    <sprite name="vend base" texture="Mods/Thalassophobia/Items/Containers/VendingMachine.png" sourcerect="6,4,238,396" depth="0.84" origin="0.5,0.5" />
+    <DecorativeSprite name="vend glass" texture="Mods/Thalassophobia/Items/Containers/VendingMachine.png" sourcerect="254,4,238,396" depth="0.83" origin="0.5,0.5" />
+    <LightComponent range="0.0" lightcolor="255,255,255,60" IsOn="true" castshadows="false" allowingameediting="false">
+      <sprite texture="Content/Map/Outposts/Art/MedBayAssets.png" sourcerect="241,497,238,396" depth="0.1" origin="0.5,0.5" alpha="1.0" />
+      <StatusEffect type="OnActive" target="This" >
+        <sound file="Mods/Thalassophobia/Items/OxygenGenerator/OxyDock.ogg" range="350.0" loop="true" />
+      </StatusEffect>
+    </LightComponent>
+    <!-- enable after turret shooting nonproj implemented
+    <Turret canbeselected="false" linkable="false" characterusable="false" barrelpos="42, 149" rotationlimits="90,90" powerconsumption="0.0" >
+			<CustomInterface canbeselected="true" drawhudwhenequipped="false">
+				<GuiFrame relativesize="0.15,0.1" anchor="TopRight" absoluteoffset="20,20" style="ItemUI" color="0,0,0,0" />
+				<Button text="Visor Light">
+					<StatusEffect type="OnUse" targettype="This" setvalue="true" condition="90" >
+						<UseItem />
+					</StatusEffect>
+				</Button>
+			</CustomInterface>
+		</Turret>
+		-->
+    <ItemContainer maxstacksize="1" capacity="12" slotsperrow="3" canbeselected="true" msg="ItemMsgOpenCrowbarSelect" hideitems="false" drawinventory="true" itemrotation="-45" itempos="45,-80"  itemsperrow="3" iteminterval="50,-65" containedspritedepth="0.835">
+      <GuiFrame relativesize="0.2,0.25" anchor="Center" minsize="140,170" maxsize="280,280" style="ItemUI" />
+      <RequiredItem item="crowbar" type="Equipped" msg="itemMsgCrowbarRequired" ignoreineditor="true" />
+      <Containable items="smallitem" />
+      
+    </ItemContainer>
+    <ConnectionPanel selectkey="Action" canbeselected="true" msg="ItemMsgRewireScrewdriver" hudpriority="10">
+      <GuiFrame relativesize="0.2,0.32" minsize="400,350" maxsize="480,420" anchor="Center" style="ConnectionPanel" />
+      <RequiredItem items="screwdriver" type="Equipped" />
+      <input name="trigger_in" displayname="connection.turrettriggerin" />
+    </ConnectionPanel>
+  </Item>
+  
+  <Item name="Vending Machine Slot" identifier="thal_vendingslot" tags="vendingslot" category="Misc" sonarsize="5" scale="0.5" hideinmenus="true" >
+    <Price baseprice="75" >
+      <Price locationtype="outpost" multiplier="1.5" minavailable="1" />
+      <Price locationtype="city" multiplier="1.25" minavailable="2" />
+      <Price locationtype="research" multiplier="1.25" minavailable="1" />
+      <Price locationtype="military" multiplier="0.9" minavailable="4" />
+      <Price locationtype="mine" multiplier="1.25" minavailable="1" />
+    </Price>
+    <Deconstruct time="10">
+      <Item identifier="steel" />
+      <Item identifier="aluminium" />
+    </Deconstruct>
+    <Fabricate suitablefabricators="fabricator" requiredtime="20">
+      <RequiredSkill identifier="weapons" level="25" />
+      <RequiredItem identifier="steel" />
+      <RequiredItem identifier="aluminium" />
+    </Fabricate>
+    <InventoryIcon texture="Content/Items/InventoryIconAtlas.png" sourcerect="512,128,64,64" origin="0.5,0.5" />
+    <Sprite texture="Content/Items/Weapons/TurretsAndDepthCharges.png" sourcerect="0,0,1,1" depth="0.55" origin="0.5,0.5" />
+    <Body width="128" height="85" density="11" />
+    <Holdable slots="RightHand+LeftHand" holdpos="0,-50" handle1="-10,20" handle2="10,20" aimable="false" msg="ItemMsgPickUpSelect" />
+    <Projectile characterusable="false" launchimpulse="5.0">
+      <Attack structuredamage="1" damagetype="Blunt">
+      </Attack>
+    </Projectile>
+    <ItemContainer maxstacksize="1" capacity="1" slotsperrow="1" canbeselected="false" hideitems="false" drawinventory="true" itempos="0,0"  itemsperrow="1" >
+      <GuiFrame relativesize="0.2,0.25" anchor="Center" minsize="140,170" maxsize="280,280" style="ItemUI" />
+      <Containable items="smallitem" />
+    </ItemContainer>
+  </Item>
 </Items>

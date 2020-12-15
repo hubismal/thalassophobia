@@ -61,7 +61,7 @@
       <RequiredItem identifier="waterdetector" />
       <RequiredItem identifier="wrench" />
     </Fabricate>
-    <Sprite name="watermap sprite" texture="Mods/Thalassophobia/Items/Tools/maps.png" sourcerect="139,0,139,80" depth="0.55" origin="0.5,0.5">
+    <Sprite name="watermap sprite" texture="Mods/Thalassophobia/Items/Tools/maps.png" sourcerect="145,0,139,80" depth="0.55" origin="0.5,0.5">
       <StatusEffect type="Always" targettype="This" sourcerect="1,1,89,120" setvalue="true">
         <RequiredItem items="batterycell" type="Contained" />
       </StatusEffect>
@@ -105,7 +105,7 @@
       <RequiredItem identifier="oxygendetector" />
       <RequiredItem identifier="screwdriver" />
     </Fabricate>
-    <Sprite name="airmap sprite" texture="Mods/Thalassophobia/Items/Tools/maps.png" sourcerect="279,0,139,80" depth="0.55" origin="0.5,0.5">
+    <Sprite name="airmap sprite" texture="Mods/Thalassophobia/Items/Tools/maps.png" sourcerect="288,0,139,80" depth="0.55" origin="0.5,0.5">
       <StatusEffect type="Always" targettype="This" sourcerect="1,1,89,120" setvalue="true">
         <RequiredItem items="batterycell" type="Contained" />
       </StatusEffect>

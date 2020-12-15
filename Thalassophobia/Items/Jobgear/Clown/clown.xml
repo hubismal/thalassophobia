@@ -29,15 +29,6 @@
     <Deconstruct time="1">
       <Item identifier="rubber" outcondition="0.5" />
     </Deconstruct>
-    <Fabricate suitablefabricators="thal_clownkit" requiredtime="10">
-      <RequiredSkill identifier="weapons" level="40" />
-      <RequiredItem identifier="copper" mincondition="0.5" usecondition="true" />
-      <RequiredItem identifier="rubber" mincondition="0.5" usecondition="true" />
-    </Fabricate>
-    <Fabricate suitablefabricators="thal_cultistkit" requiredtime="10">
-      <RequiredSkill identifier="weapons" level="40" />
-      <RequiredItem identifier="thal_cultistknife" mincondition="0.09" usecondition="true" />
-    </Fabricate>
     <InventoryIcon texture="Content/Items/InventoryIconAtlas.png" sourcerect="448,64,64,64" origin="0.5,0.5" />
     <Sprite name="visible wirebind" texture="clown.png" depth="0.55" sourcerect="168,222,86,35" origin="0.5,0.5" />
     <BrokenSprite name="invisible wirebind" texture="clown.png" depth="0.55" sourcerect="388,699,86,35" origin="0.5,0.5" maxcondition="90" />
@@ -58,6 +49,7 @@
     </CustomInterface>
   </Item>
   <Item name="" identifier="thal_muzzle" category="Equipment" cargocontaineridentifier="metalcrate" tags="smallitem" scale="0.5">
+    <PreferredContainer primary="crewcab" spawnprobability="0.05" />
     <sprite name="Muzzle Wearable" texture="Mods/Thalassophobia/Items/Jobgear/headgears.png" limb="Head" inheritlimbdepth="true" inherittexturescale="true" hidelimb="false" hideotherwearables="false" sourcerect="226,326,69,68" origin="0.4,0.3" hidewearablesoftype="moustache,beard" />
     <InventoryIcon name="Gag Sprite" texture="Mods/Thalassophobia/Items/Weapons/Explosives/bombcollar.png" depth="0.6" sourcerect="232,1,214,172" origin="0.5123859,0.53692484" scale="0.5" />
     <Body width="40" radius="30" density="15" />
@@ -80,6 +72,7 @@
     </Wearable>
   </Item>
   <Item name="" identifier="thal_blindfold" category="Equipment" cargocontaineridentifier="metalcrate" tags="smallitem" scale="0.5">
+    <PreferredContainer primary="crewcab" spawnprobability="0.1" />
     <Sprite name="blindfold sprite" texture="Mods/Thalassophobia/Items/Jobgear/headgears.png" depth="0.6" sourcerect="325,153,69,32" origin="0.5123859,0.53692484" scale="0.5" />
     <Body width="40" radius="30" density="15" />
     <InventoryIcon name="Blindfold Inv" texture="Mods/Thalassophobia/Items/Weapons/Explosives/bombcollar.png" depth="0.6" sourcerect="461,13,150,133" origin="0.5,0.5" scale="0.5" />
@@ -140,6 +133,8 @@
     </Throwable>
   </Item>
   <Item name="Banana Peel" description="The peel of a banana. Can be tossed and will slip all those who walk over it. Once it's been triggered, must be rethrown to prime it again." identifier="thal_bananapeel" category="Equipment" cargocontaineridentifier="metalcrate" tags="smallitem" impactsoundtag="impact_soft" scale="0.4" interactdistance="150" impacttolerance="0.01">
+    <PreferredContainer primary="crewcab" spawnprobability="0.2" />
+    <PreferredContainer primary="outposttrashcan" spawnprobability="0.2" />
     <Deconstruct time="1">
       <Item identifier="bikehorn" />
     </Deconstruct>
@@ -256,20 +251,20 @@
           <RequiredItem items="iron" type="Contained" />
         </StatusEffect>
       </Button>
-      <Button text="Blindfold [1 Bandage + 1 Elastin]">
+      <Button text="Blindfold [1 Bandage + 1 Plastiseal]">
         <StatusEffect type="OnUse" targettype="This" delay="19" IsOn="false" drawhudwhenequipped="true">
           <SpawnItem spawnposition="ThisInventory" identifier="thal_blindfold" />
           <RequiredItem items="antibleeding1" type="Contained" />
-          <RequiredItem items="elastin" type="Contained" />
+          <RequiredItem items="antibleeding2" type="Contained" />
         </StatusEffect>
         <StatusEffect type="OnUse" target="This" IsOn="true" drawhudwhenequipped="false">
           <RequiredItem items="antibleeding1" type="Contained" />
-          <RequiredItem items="elastin" type="Contained" />
+          <RequiredItem items="antibleeding2" type="Contained" />
         </StatusEffect>
-        <StatusEffect type="OnUse" targettype="Contained" targets="antibleeding1,elastin" IsOn="true">
+        <StatusEffect type="OnUse" targettype="Contained" targets="antibleeding1,antibleeding2" IsOn="true">
           <Remove />
           <RequiredItem items="antibleeding1" type="Contained" />
-          <RequiredItem items="elastin" type="Contained" />
+          <RequiredItem items="antibleeding2" type="Contained" />
         </StatusEffect>
       </Button>
       <Button text="Banana Peel [1 Whoopee Cushion + 1 Joke Revolver]">
@@ -304,67 +299,67 @@
           <RequiredItem items="thal_bananapeel" type="Contained" />
         </StatusEffect>
       </Button>
-      <Button text="Party Blower [1 Bike Horn + 1 Captain's Pipe]">
+      <Button text="Party Blower [1 Bike Horn + 1 Diving Mask]">
         <StatusEffect type="OnUse" targettype="This" delay="20" IsOn="false" drawhudwhenequipped="true">
           <SpawnItem spawnposition="ThisInventory" identifier="thal_partyblower" />
-          <RequiredItem items="captainspipe" type="Contained" />
+          <RequiredItem items="divingmask" type="Contained" />
           <RequiredItem items="bikehorn" type="Contained" />
         </StatusEffect>
         <StatusEffect type="OnUse" target="This" IsOn="true" drawhudwhenequipped="false">
-          <RequiredItem items="captainspipe" type="Contained" />
+          <RequiredItem items="divingmask" type="Contained" />
           <RequiredItem items="bikehorn" type="Contained" />
         </StatusEffect>
-        <StatusEffect type="OnUse" targettype="Contained" targets="captainspipe,bikehorn" IsOn="true">
+        <StatusEffect type="OnUse" targettype="Contained" targets="divingmask,bikehorn" IsOn="true">
           <Remove />
-          <RequiredItem items="captainspipe" type="Contained" />
+          <RequiredItem items="divingmask" type="Contained" />
           <RequiredItem items="bikehorn" type="Contained" />
         </StatusEffect>
       </Button>
-      <Button text="Chaos Horn [1 Bike Horn + 1 IC-4 Block]">
+      <Button text="Chaos Horn [1 Bike Horn + 1 C-4 Block]">
         <StatusEffect type="OnUse" targettype="This" delay="20" IsOn="false" drawhudwhenequipped="true">
           <SpawnItem spawnposition="ThisInventory" identifier="thal_chaoshorn" />
-          <RequiredItem items="ic4block" type="Contained" />
+          <RequiredItem items="c4block" type="Contained" />
           <RequiredItem items="bikehorn" type="Contained" />
         </StatusEffect>
         <StatusEffect type="OnUse" target="This" IsOn="true" drawhudwhenequipped="false">
-          <RequiredItem items="ic4block" type="Contained" />
+          <RequiredItem items="c4block" type="Contained" />
           <RequiredItem items="bikehorn" type="Contained" />
         </StatusEffect>
-        <StatusEffect type="OnUse" targettype="Contained" targets="ic4block,bikehorn" IsOn="true">
+        <StatusEffect type="OnUse" targettype="Contained" targets="c4block,bikehorn" IsOn="true">
           <Remove />
-          <RequiredItem items="ic4block" type="Contained" />
+          <RequiredItem items="c4block" type="Contained" />
           <RequiredItem items="bikehorn" type="Contained" />
         </StatusEffect>
       </Button>
-      <Button text="Whoopee Cushion [1 Bike Horn + 1 Swim Bladder]">
+      <Button text="Whoopee Cushion [1 Bike Horn + 1 Oxygen Tank]">
         <StatusEffect type="OnUse" targettype="This" delay="20" IsOn="false" drawhudwhenequipped="true">
           <SpawnItem spawnposition="ThisInventory" identifier="thal_whoopeecushion" />
-          <RequiredItem items="swimbladder" type="Contained" />
+          <RequiredItem items="oxygentank" type="Contained" />
           <RequiredItem items="bikehorn" type="Contained" />
         </StatusEffect>
         <StatusEffect type="OnUse" target="This" IsOn="true" drawhudwhenequipped="false">
-          <RequiredItem items="swimbladder" type="Contained" />
+          <RequiredItem items="oxygentank" type="Contained" />
           <RequiredItem items="bikehorn" type="Contained" />
         </StatusEffect>
-        <StatusEffect type="OnUse" targettype="Contained" targets="swimbladder,bikehorn" IsOn="true">
+        <StatusEffect type="OnUse" targettype="Contained" targets="oxygentank,bikehorn" IsOn="true">
           <Remove />
-          <RequiredItem items="swimbladder" type="Contained" />
+          <RequiredItem items="oxygentank" type="Contained" />
           <RequiredItem items="bikehorn" type="Contained" />
         </StatusEffect>
       </Button>
-      <Button text="Joke Revolver [1 Bike Horn + 1 Revolver Round]">
+      <Button text="Joke Revolver [1 Bike Horn + 1 Harpoon]">
         <StatusEffect type="OnUse" targettype="This" delay="30" IsOn="false" drawhudwhenequipped="true">
           <SpawnItem spawnposition="ThisInventory" identifier="thal_jokerevolver" />
-          <RequiredItem items="revolverround" type="Contained" />
+          <RequiredItem items="harpoonammo" type="Contained" />
           <RequiredItem items="bikehorn" type="Contained" />
         </StatusEffect>
         <StatusEffect type="OnUse" target="This" IsOn="true" drawhudwhenequipped="false">
-          <RequiredItem items="revolverround" type="Contained" />
+          <RequiredItem items="harpoonammo" type="Contained" />
           <RequiredItem items="bikehorn" type="Contained" />
         </StatusEffect>
-        <StatusEffect type="OnUse" targettype="Contained" targets="revolverround,bikehorn" IsOn="true">
+        <StatusEffect type="OnUse" targettype="Contained" targets="harpoonammo,bikehorn" IsOn="true">
           <Remove />
-          <RequiredItem items="revolverround" type="Contained" />
+          <RequiredItem items="harpoonammo" type="Contained" />
           <RequiredItem items="bikehorn" type="Contained" />
         </StatusEffect>
       </Button>
@@ -427,21 +422,29 @@
     <Sprite texture="clownpack.png" sourcerect="133,59,114,135" depth="0.6" origin="0.5,0.5" />
     <Body width="114" height="135" density="40" />
     <Wearable slots="Any,OuterClothes" msg="ItemMsgPickUpSelect">
-      <StatusEffect type="OnWearing" target="This,Character" IsOn="true">
+      <StatusEffect type="Always" target="This" IsShootable="false" setvalue="true" stackable="false">
+        <Conditional IsActive="false" />
+      </StatusEffect>
+      <statuseffect type="OnWearing" target="This,Character" stackable="false" setvalue="true" IsShootable="true">
+        <Conditional IsShootable="eq false" />
+        <Sound file="Mods/Thalassophobia/Items/Jobgear/Clown/zip.ogg" range="300" loop="false" />
+      </statuseffect>
+      <!--
+      <StatusEffect type="OnWearing" target="This,Character" setvalue="true" IsShootable="true" >
         <Conditional stun="lt 1" />
       </StatusEffect>
-      <StatusEffect type="Always" target="This" IsOn="false" />
+      -->
       <damagemodifier afflictionidentifiers="stun" armorsector="180.0,360.0" damagemultiplier="0.15" deflectprojectiles="true" />
       <damagemodifier afflictiontypes="damage" armorsector="180.0,360.0" damagemultiplier="0.15" bleedingmultiplier="0.2" damagesound="LimbArmor" deflectprojectiles="true" />
-      <sprite name="clown wearable backpack" texture="clownpack.png" limb="Torso" hidelimb="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" sourcerect="0,0,256,256" origin="0.5,0.5" />
+      <sprite name="clown wearable backpack" texture="clownpack.png" limb="Torso" hidelimb="false" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" sourcerect="0,0,256,256" origin="0.5,0.5" />
     </Wearable>
     <ItemContainer capacity="8" canbeselected="false" hideitems="true" slotsperrow="2" drawinventory="true">
       <Containable items="toyhammer,bikehorn,clownmask,clowncostume,clownitem,smallitem" />
-      <StatusEffect type="OnContained" target="This" drawinventory="true">
-        <Conditional IsOn="true" />
+      <StatusEffect type="OnContained" target="This" drawinventory="true" setvalue="true">
+        <Conditional IsShootable="eq true" />
       </StatusEffect>
-      <StatusEffect type="OnContained" target="This" drawinventory="false">
-        <Conditional IsOn="false" />
+      <StatusEffect type="OnContained" target="This" drawinventory="false" setvalue="true">
+        <Conditional IsShootable="eq false" />
       </StatusEffect>
     </ItemContainer>
   </Item>

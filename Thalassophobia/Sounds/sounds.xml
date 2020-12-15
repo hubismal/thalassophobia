@@ -20,5 +20,13 @@
   <thal_footstep_ramblin file="Mods/Thalassophobia/Characters/Ramblin/mushfootstep1.ogg" range="400"/>
   <thal_footstep_ramblin file="Mods/Thalassophobia/Characters/Ramblin/mushfootstep2.ogg" range="400"/>
   
+  <thal_footstep_brute file="Mods/Thalassophobia/Sounds/Footsteps/metal_walk01.ogg" range="400"/>
+  <thal_footstep_brute file="Mods/Thalassophobia/Sounds/Footsteps/metal_walk02.ogg" range="400"/>
+  <thal_footstep_brute file="Mods/Thalassophobia/Sounds/Footsteps/metal_walk03.ogg" range="400"/>
+  <thal_footstep_brute file="Mods/Thalassophobia/Sounds/Footsteps/metal_walk04.ogg" range="400"/>
+  <thal_footstep_brute file="Mods/Thalassophobia/Sounds/Footsteps/metal_walk05.ogg" range="400"/>
+  <thal_footstep_brute file="Mods/Thalassophobia/Sounds/Footsteps/metal_walk06.ogg" range="400"/>
+  <thal_footstep_brute file="Mods/Thalassophobia/Sounds/Footsteps/metal_walk07.ogg" range="400"/>
+  
   <ambient file="Content/Sounds/Ambient/Ambient1.ogg"/>
 </sounds>

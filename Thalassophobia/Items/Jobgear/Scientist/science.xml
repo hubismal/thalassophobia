@@ -1,0 +1,739 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Items>
+  <Item name="Singularity" identifier="thal_singularity" category="Equipment" cargocontaineridentifier="metalcrate" tags="smallitem" scale="0.3" health="100" hideinmenus="false" noninteractable="true" isshootable="true">
+    <Sprite name="singularity" texture="Mods/Thalassophobia/Items/Jobgear/Scientist/singularity.png" sourcerect="0,0,400,400" origin="0.5,0.5" depth="0.02" />
+    <DecorativeSprite texture="Mods/Thalassophobia/Items/Jobgear/Scientist/singularity.png" sourcerect="0,0,400,400" depth="0.01" rotationspeed="360"></DecorativeSprite>
+    <Body width="40" radius="30" density="15" bodytype="Kinematic" />
+    <LightComponent lightcolor="255,255,255,255" range="1" powerconsumption="0" allowingameediting="false" castshadows="false" IsOn="true">
+      <Sprite name="singularity" texture="Mods/Thalassophobia/Items/Jobgear/Scientist/singularity.png" sourcerect="400,0,400,400" origin="0.5,0.5" depth="0.6" />
+      <!--shrink and noise-->
+      <sound file="Mods/Thalassophobia/Items/Jobgear/Scientist/GiygasBG.ogg" range="3500.0" loop="true" selectionmode="all" type="OnActive" />
+      <StatusEffect type="Always" target="This" scale="-0.06" condition="-1">
+        <sound file="Mods/Thalassophobia/Items/Jobgear/Scientist/Giygas.ogg" range="3000.0" loop="true" Selectionmode="all" />
+        <ParticleEmitter particle="thal_dust" burstamount="3" particlespersecond="5" velocitymin="0" velocitymax="0" anglemin="0" anglemax="360" scalemin="5.0" scalemax="5.0" colormultiplier="0,0,0,255" />
+      </StatusEffect>
+      <!-- remove on too small, too big -->
+      <StatusEffect delay="2.0" stackable="false" type="Always" target="This">
+        <Conditional scale="lt 0.1" />
+        <Conditional scale="gt 6.8" />
+        <Sound file="Mods/Thalassophobia/Items/Jobgear/Scientist/SingularityCollapse.ogg" range="3000" />
+        <Remove />
+      </StatusEffect>
+      <StatusEffect delay="1.0" stackable="false" type="Always" target="This" setvalue="true" condition="0">
+        <Conditional scale="gt 6.0" />
+      </StatusEffect>
+      <StatusEffect type="Always" target="This" scale="0.03">
+        <Conditional Condition="gt 95" />
+      </StatusEffect>
+      <StatusEffect type="Always" target="This" scale="0.03">
+        <Conditional Condition="gt 80" />
+      </StatusEffect>
+      <StatusEffect type="Always" target="This" scale="0.03">
+        <Conditional Condition="gt 55" />
+      </StatusEffect>
+      <StatusEffect type="Always" target="This" scale="0.05">
+        <Conditional Condition="gt 15" />
+      </StatusEffect>
+      <!--character eraser-->
+      <StatusEffect type="Always" target="NearbyCharacters" delay="2.5" range="300" stackable="false">
+        <Affliction identifier="thal_blackholedeath" strength="20" />
+        <RemoveCharacter />
+      </StatusEffect>
+      <StatusEffect type="Always" target="NearbyCharacters, This" range="400" delay="0.5" stackable="false" setvalue="false" condition="30">
+        <Conditional speciesname="human" />
+      </StatusEffect>
+      <!-- small destruction 0.4-->
+      <StatusEffect type="Always" target="This" delay="4.0" stackable="false" Comparison="And">
+        <Conditional scale="gt 0.4" />
+        <Conditional scale="lt 3.0" />
+        <Explosion range="800" force="-19" stun="5" flash="false" shockwave="false" sparks="false" flames="false" smoke="false" camerashake="0" underwaterbubble="false" structuredamage="70" itemdamage="0" flashrange="0" flashduration="0"></Explosion>
+      </StatusEffect>
+      <!-- large scale destruction 3.0 -->
+      <StatusEffect type="Always" target="This" delay="4.0" stackable="false">
+        <Conditional scale="gt 3.0" />
+        <Explosion range="1400" force="-19" stun="5" flash="false" shockwave="false" sparks="false" flames="false" smoke="false" camerashake="0" underwaterbubble="false" structuredamage="70" itemdamage="0" flashrange="0" flashduration="0"></Explosion>
+        <SpawnItem spawnposition="ThisInventory" identifier="batterycell" />
+      </StatusEffect>
+      <StatusEffect type="Always" target="This" delay="2.0" stackable="false">
+        <Conditional scale="gt 0.5" />
+        <Explosion range="1600" force="-29" stun="3" flash="false" shockwave="false" sparks="false" flames="false" smoke="false" camerashake="0" underwaterbubble="false" structuredamage="0" itemdamage="0" flashrange="0" flashduration="0"></Explosion>
+        <SpawnItem spawnposition="ThisInventory" identifier="batterycell" />
+      </StatusEffect>
+      <!-- TODO: make a seperate item to destroy doors using nearbyitems so that black hole isn't constantly lagging out the server -->
+      <!-- 12/01/20 FIXME: fix "phase 2" doorbreak not working for some reason -->
+      <StatusEffect type="Always" target="This" delay="0.0" stackable="false" isshootable="false">
+        <SpawnItem identifier="thal_smalldoorbreaker" />
+        <Conditional isshootable="eq true" />
+      </StatusEffect>
+      <!-- large scael -->
+      <StatusEffect type="Always" target="This" delay="0.0" stackable="false" allowingameediting="true">
+        <SpawnItem identifier="thal_largedoorbreaker" />
+        <Conditional IsOn="eq false" />
+        <RequiredItem items="batterycell" type="Contained" />
+      </StatusEffect>
+    </LightComponent>
+    <ItemContainer capacity="1" hideitems="true" maxstacksize="1">
+      <ContainedStateIndicator texture="Content/UI/ContainerIndicators.png" sourcerect="0,157,92,27" />
+      <Containable items="batterycell" />
+    </ItemContainer>
+  </Item>
+  <!-- used for breaking doors by singularity -->
+  <Item name="doorbreaker" identifier="thal_smalldoorbreaker" category="Equipment" cargocontaineridentifier="metalcrate" tags="smallitem" scale="0.5" hideinmenus="true" pickdistance="0" noninteractable="true">
+    <sprite name="sporeem" texture="Mods/Thalassophobia/Items/Jobgear/headgears.png" limb="Head" inheritlimbdepth="true" inherittexturescale="true" hidelimb="false" hideotherwearables="false" sourcerect="0,0,1,1" origin="0.4,0.3" />
+    <Body width="40" radius="30" density="15" bodytype="Kinematic" />
+    <LightComponent lightcolor="255,255,150,0" range="0" powerconsumption="0" allowingameediting="false" castshadows="false" IsOn="false">
+      <StatusEffect type="Always" condition="-3000.0" range="500" target="NearbyItems" delay="0" stackable="false" targetidentifiers="door,hatch,windoweddoor,doorwbuttons,hatchwbuttons,windoweddoorwbuttons,alienhatch,aliendoor,doorwrecked,hatchwrecked,windoweddoorwrecked,doorwbuttonswrecked,hatchwbuttonswrecked,windoweddoorwbuttonswrecked"></StatusEffect>
+      <StatusEffect type="Always" target="This" delay="0.1" stackable="false" isshootable="false">
+        <Remove />
+      </StatusEffect>
+    </LightComponent>
+  </Item>
+  <Item name="doorbreakerbig" identifier="thal_largedoorbreaker" category="Equipment" cargocontaineridentifier="metalcrate" tags="smallitem" scale="0.5" hideinmenus="true" pickdistance="0" noninteractable="true">
+    <sprite name="sporeem" texture="Mods/Thalassophobia/Items/Jobgear/headgears.png" limb="Head" inheritlimbdepth="true" inherittexturescale="true" hidelimb="false" hideotherwearables="false" sourcerect="0,0,1,1" origin="0.4,0.3" />
+    <Body width="40" radius="30" density="15" bodytype="Kinematic" />
+    <LightComponent lightcolor="255,255,150,0" range="0" powerconsumption="0" allowingameediting="false" castshadows="false" IsOn="false">
+      <StatusEffect type="Always" condition="-3000.0" range="1400" target="NearbyItems" delay="0" stackable="false" targetidentifiers="door,hatch,windoweddoor,doorwbuttons,hatchwbuttons,windoweddoorwbuttons,alienhatch,aliendoor,doorwrecked,hatchwrecked,windoweddoorwrecked,doorwbuttonswrecked,hatchwbuttonswrecked,windoweddoorwbuttonswrecked"></StatusEffect>
+      <StatusEffect type="Always" target="This" delay="0.1" stackable="false" isshootable="false">
+        <Remove />
+      </StatusEffect>
+    </LightComponent>
+  </Item>
+  <!--
+	BOTANY
+	-->
+  <Item name="" identifier="thal_botanistsuit" category="Equipment" cargocontaineridentifier="metalcrate" tags="smallitem" impactsoundtag="impact_soft" scale="0.5">
+    <InventoryIcon name="Botanist Costume Icon" texture="Mods/Thalassophobia/Items/Jobgear/OutfitIcons.png" sourcerect="253,285,128,101" origin="0.5,0.5" />
+    <Sprite name="Botanist Costume (floor)" texture="Mods/Thalassophobia/Items/Jobgear/MiscJobGear.png" sourcerect="199,88,195,68" depth="0.6" origin="0.5,0.5" />
+    <Body width="100" height="50" density="30" friction="0.8" restitution="0.01" />
+    <Deconstruct time="40">
+      <Item identifier="plastic" />
+      <Item identifier="rubber" />
+    </Deconstruct>
+    <Wearable slots="Any,InnerClothes" msg="ItemMsgPickUpSelect">
+      <sprite name="Botanist Torso" texture="botanist_torso.png" limb="Torso" hidelimb="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" depth="0.1" />
+      <sprite name="Botanist Right Lower Arm" texture="botanist_torso.png" limb="RightHand" hidelimb="false" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="Botanist Left Lower Arm" texture="botanist_torso.png" limb="LeftHand" hidelimb="false" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="Botanist Right Upper Arm" texture="botanist_torso.png" limb="RightArm" hidelimb="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="Botanist Left Upper Arm" texture="botanist_torso.png" limb="LeftArm" hidelimb="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="Botanist Waist" texture="botanist_legs.png" limb="Waist" hidelimb="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="Botanist Right Thigh" texture="botanist_legs.png" limb="RightThigh" hidelimb="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="Botanist Left Thigh" texture="botanist_legs.png" limb="LeftThigh" hidelimb="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="Botanist Right Leg" texture="botanist_legs.png" limb="RightLeg" hidelimb="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="Botanist Left Leg" texture="botanist_legs.png" limb="LeftLeg" hidelimb="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" sourcerect="0,0,256,256" origin="0.5,0.5" />
+      <sprite name="Botanist Right Shoe" texture="botanist_legs.png" limb="RightFoot" sound="footstep_armor" hidelimb="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="Botanist Left Shoe" texture="botanist_legs.png" limb="LeftFoot" sound="footstep_armor" hidelimb="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
+    </Wearable>
+  </Item>
+  <Item name="" identifier="thal_botanistmask" category="Equipment" tags="smallitem" cargocontaineridentifier="metalcrate" impactsoundtag="impact_metal_heavy" scale="0.4">
+    <Price locationtype="Military" buyprice="125" />
+    <Price locationtype="City" buyprice="150" />
+    <Price locationtype="Outpost" buyprice="200" />
+    <Price locationtype="thal_blackSite" buyprice="100" minamount="3" />
+    <Deconstruct time="10">
+      <Item identifier="ballisticfiber" />
+      <RequiredItem identifier="divingmask" />
+    </Deconstruct>
+    <Fabricate suitablefabricators="fabricator" requiredtime="20">
+      <RequiredSkill identifier="weapons" level="40" />
+      <RequiredItem identifier="ballisticfiber" />
+      <RequiredItem identifier="lightcomponent" />
+      <RequiredItem identifier="divingmask" />
+    </Fabricate>
+    <Sprite name="Botanist Mask" texture="Mods/Thalassophobia/Items/Jobgear/headgears.png" sourcerect="11,216,97,103" depth="0.6" origin="0.45675606,0.4603783" tags="smallitem" />
+    <Body radius="30" density="50" />
+    <Turret HudTint="0,40,0,50" drawhudwhenequipped="true" />
+    <Wearable slots="Any, Head" msg="ItemMsgEquipSelect">
+      <StatusEffect type="OnWearing" target="Character" HideFace="true" duration="0.1" stackable="false" />
+      <sprite name="Bot Helmet Wearable" texture="Mods/Thalassophobia/Items/Jobgear/headgears.png" limb="Head" inheritlimbdepth="true" inherittexturescale="true" hidewearablesoftype="hair" sourcerect="12,218,97,98" origin="0.469834,0.4845863" />
+      <sprite name="radsuit torso Wearable" texture="botanist_torso.png" limb="Torso" inheritlimbdepth="true" hidelimb="false" hideotherwearables="false" inherittexturescale="true" inheritorigin="false" sourcerect="0,0,1,1" origin="0.496,0.37398374" />
+      <sprite texture="botanist_legs.png" limb="Waist" inheritlimbdepth="true" hidelimb="false" hideotherwearables="false" inherittexturescale="true" inheritorigin="true" sourcerect="0,0,1,1" origin="0.5,0.5" />
+      <sprite texture="botanist_torso.png" limb="RightHand" inheritlimbdepth="true" hidelimb="false" hideotherwearables="false" inherittexturescale="true" inheritorigin="true" sourcerect="0,0,1,1" origin="0.5,0.5" />
+      <sprite texture="botanist_torso.png" limb="LeftHand" inheritlimbdepth="true" hidelimb="false" hideotherwearables="false" inherittexturescale="true" inheritorigin="true" sourcerect="0,0,1,1" origin="0.5,0.5" />
+      <sprite texture="botanist_torso.png" limb="RightArm" inheritlimbdepth="true" hidelimb="false" hideotherwearables="false" inherittexturescale="true" inheritorigin="true" sourcerect="0,0,1,1" origin="0.5,0.5" />
+      <sprite texture="botanist_torso.png" limb="LeftArm" inheritlimbdepth="true" hidelimb="false" hideotherwearables="false" inherittexturescale="true" inheritorigin="true" sourcerect="0,0,1,1" origin="0.5,0.5" />
+      <sprite name="radsuit rightthigh" texture="botanist_legs.png" limb="RightThigh" inheritlimbdepth="true" hidelimb="false" hideotherwearables="false" inherittexturescale="true" inheritorigin="true" sourcerect="0,0,1,1" origin="0.5,0.5" />
+      <sprite name="radsuit leftthigh" texture="botanist_legs.png" limb="LeftThigh" inheritlimbdepth="true" hidelimb="false" hideotherwearables="false" inherittexturescale="true" inheritorigin="true" sourcerect="0,0,1,1" origin="0.5,0.5" />
+      <sprite name="radsuit rightleg" texture="botanist_legs.png" limb="RightLeg" inheritlimbdepth="true" hidelimb="false" hideotherwearables="false" inherittexturescale="true" inheritorigin="true" sourcerect="0,0,1,1" origin="0.5,0.5" />
+      <sprite name="radsuit leftleg" texture="botanist_legs.png" limb="LeftLeg" inheritlimbdepth="true" hidelimb="false" hideotherwearables="false" inherittexturescale="true" inheritorigin="true" sourcerect="0,0,1,1" origin="0.5,0.5" />
+      <sprite name="radsuit rightfoot" texture="botanist_legs.png" limb="RightFoot" sound="footstep_armor_heavy" inheritlimbdepth="false" depth="0.10" hidelimb="false" hideotherwearables="false" inherittexturescale="true" inheritorigin="false" sourcerect="0,0,1,1" origin="0.59250414,0.54483974" />
+      <sprite name="radsuit leftfoot" texture="botanist_legs.png" limb="LeftFoot" sound="footstep_armor_heavy" inheritlimbdepth="false" depth="0.102" hidelimb="false" hideotherwearables="false" inherittexturescale="true" inheritorigin="false" sourcerect="0,0,1,1" origin="0.5516063,0.61087334" />
+      <damagemodifier armorsector="0.0,360.0" afflictionidentifiers="radiationsickness" damagemultiplier="0.05" damagesound="LimbArmor" deflectprojectiles="true" />
+      <damagemodifier armorsector="0.0,360.0" afflictiontypes="burn" damagemultiplier="0.1" damagesound="LimbArmor" deflectprojectiles="true" />
+      <damagemodifier armorsector="0.0,360.0" afflictiontypes="thal_glowing" damagemultiplier="0.05" damagesound="LimbArmor" deflectprojectiles="true" />
+      <damagemodifier armorsector="0.0,360.0" afflictionidentifiers="thal_mushroomized" damagemultiplier="0.0" damagesound="LimbArmor" deflectprojectiles="true" />
+      <damagemodifier armorsector="0.0,360.0" afflictionidentifiers="thal_teargasaffliction" damagemultiplier="0.0" damagesound="LimbArmor" deflectprojectiles="true" />
+    </Wearable>
+    <LightComponent range="0" lightcolor="0,0,0,0" powerconsumption="0" IsOn="false">
+      <StatusEffect type="OnWearing" target="This,Character" HideFace="true" Voltage="1.0" setvalue="true" comparison="Or">
+        <Conditional IsDead="false" />
+      </StatusEffect>
+      <StatusEffect type="OnWearing" target="Contained,Character" OxygenAvailable="1000.0" Condition="-0.5" comparison="Or">
+        <Conditional IsDead="false" />
+        <RequiredItem items="oxygentank" type="Contained" />
+        <Sound file="Mods/Thalassophobia/Items/Jobgear/Enforcer/MaskBreath.ogg" range="50" loop="true" />
+      </StatusEffect>
+      <StatusEffect type="OnWearing" target="Contained,Character" OxygenAvailable="-100.0" Oxygen="-5.0" Condition="-5.0">
+        <Conditional IsDead="false" />
+        <RequiredItem items="weldingfueltank" type="Contained" />
+      </StatusEffect>
+      <StatusEffect type="OnWearing" target="Contained,Character" OxygenAvailable="-100.0" Oxygen="-7.0" Condition="-5.0">
+        <RequiredItem items="incendiumfueltank" type="Contained" />
+        <Affliction identifier="burn" amount="0.1" />
+      </StatusEffect>
+      <StatusEffect type="OnWearing" target="Contained,Character" OxygenAvailable="1000.0" SpeedMultiplier="1.2" Condition="-0.3" comparison="Or">
+        <Conditional IsDead="false" />
+        <RequiredItem items="oxygeniteshard" type="Contained" />
+        <Sound file="Mods/Thalassophobia/Items/Jobgear/Enforcer/MaskBreath.ogg" range="50" loop="true" />
+      </StatusEffect>
+      <StatusEffect type="OnWearing" target="Contained,Character" OxygenAvailable="1500.0" SpeedMultiplier="1.3" Condition="-0.1" comparison="Or">
+        <Conditional IsDead="false" />
+        <RequiredItem items="oxygenitetank" type="Contained" />
+        <Sound file="Mods/Thalassophobia/Items/Jobgear/Enforcer/MaskBreath.ogg" range="50" loop="true" />
+      </StatusEffect>
+      <LightTexture texture="Content/Lights/divinghelmetlight.png" origin="0.05, 0.5" size="1.0,1.0" />
+    </LightComponent>
+    <ItemContainer capacity="1" hideitems="true" maxstacksize="1">
+      <ContainedStateIndicator texture="Content/UI/ContainerIndicators.png" sourcerect="0,157,92,27" />
+      <Containable items="oxygensource,weldingfuel" />
+    </ItemContainer>
+  </Item>
+  <Item name="" description="" identifier="thal_assembler" category="Equipment" cargocontaineridentifier="metalcrate" tags="smallitem" impactsoundtag="impact_soft" scale="0.4" hideconditionbar="true">
+    <Sprite name="assembler Sprite" texture="Mods/Thalassophobia/Items/Jobgear/Scientist/science.png" sourcerect="178,93,60,56" depth="0.6" origin="0.5,0.5" />
+    <Body width="30" height="15" density="400" />
+    <CustomInterface canbeselected="false" drawhudwhenequipped="true">
+      <GuiFrame relativesize="0.3,0.2" anchor="BottomCenter" absoluteoffset="0,-30" style="ItemUI" />
+      <Button text="Evaluate Schematic">
+        <!-- fumigator -->
+        <StatusEffect type="OnUse" targettype="This" delay="30" IsOn="false" drawhudwhenequipped="true">
+          <SpawnItem spawnposition="ThisInventory" identifier="thal_fumigator" />
+          <sound file="Mods/Thalassophobia/Items/Electricity/ConfirmBeepBoop.ogg" type="OnActive" range="400.0" />
+          <RequiredItem items="thal_recipefumigator" type="Contained" />
+          <RequiredItem items="weldingtool" type="Contained" />
+        </StatusEffect>
+        <StatusEffect type="OnUse" target="This" IsOn="true" drawhudwhenequipped="false">
+          <RequiredItem items="thal_recipefumigator" type="Contained" />
+          <RequiredItem items="weldingtool" type="Contained" />
+        </StatusEffect>
+        <StatusEffect type="OnUse" targettype="Contained" targets="weldingtool" IsOn="true">
+          <Remove />
+          <RequiredItem items="thal_recipefumigator" type="Contained" />
+          <RequiredItem items="weldingtool" type="Contained" />
+        </StatusEffect>
+        <!-- respirator -->
+        <StatusEffect type="OnUse" targettype="This" delay="20" IsOn="false" drawhudwhenequipped="true">
+          <SpawnItem spawnposition="ThisInventory" identifier="thal_botanistmask" />
+          <sound file="Mods/Thalassophobia/Items/Electricity/ConfirmBeepBoop.ogg" type="OnActive" range="400.0" />
+          <RequiredItem items="thal_recipebotanistmask" type="Contained" />
+          <RequiredItem items="divingmask" type="Contained" />
+        </StatusEffect>
+        <StatusEffect type="OnUse" target="This" IsOn="true" drawhudwhenequipped="false">
+          <RequiredItem items="thal_recipebotanistmask" type="Contained" />
+          <RequiredItem items="divingmask" type="Contained" />
+        </StatusEffect>
+        <StatusEffect type="OnUse" targettype="Contained" targets="divingmask" IsOn="true">
+          <Remove />
+          <RequiredItem items="thal_recipebotanistmask" type="Contained" />
+          <RequiredItem items="divingmask" type="Contained" />
+        </StatusEffect>
+        <!-- fungicide -->
+        <StatusEffect type="OnUse" targettype="This" delay="20" IsOn="false" drawhudwhenequipped="true">
+          <SpawnItem spawnposition="ThisInventory" identifier="thal_cylindershroomcure" />
+          <sound file="Mods/Thalassophobia/Items/Electricity/ConfirmBeepBoop.ogg" type="OnActive" range="400.0" />
+          <RequiredItem items="thal_recipefungicide" type="Contained" />
+          <RequiredItem items="thal_shroomseed" type="Contained" />
+        </StatusEffect>
+        <StatusEffect type="OnUse" target="This" IsOn="true" drawhudwhenequipped="false">
+          <RequiredItem items="thal_recipefungicide" type="Contained" />
+          <RequiredItem items="thal_shroomseed" type="Contained" />
+        </StatusEffect>
+        <StatusEffect type="OnUse" targettype="Contained" targets="thal_shroomseed" IsOn="true">
+          <Remove />
+          <RequiredItem items="thal_recipefungicide" type="Contained" />
+          <RequiredItem items="thal_shroomseed" type="Contained" />
+        </StatusEffect>
+        <!-- UC -->
+        <StatusEffect type="OnUse" targettype="This" delay="20" IsOn="false" drawhudwhenequipped="true">
+          <SpawnItem spawnposition="ThisInventory" identifier="thal_constructor" />
+          <sound file="Mods/Thalassophobia/Items/Electricity/ConfirmBeepBoop.ogg" type="OnActive" range="400.0" />
+          <RequiredItem items="thal_recipeconstructor" type="Contained" />
+          <RequiredItem items="titaniumaluminiumalloy" type="Contained" />
+        </StatusEffect>
+        <StatusEffect type="OnUse" target="This" IsOn="true" drawhudwhenequipped="false">
+          <RequiredItem items="thal_recipeconstructor" type="Contained" />
+          <RequiredItem items="titaniumaluminiumalloy" type="Contained" />
+        </StatusEffect>
+        <StatusEffect type="OnUse" targettype="Contained" targets="titaniumaluminiumalloy" IsOn="true">
+          <Remove />
+          <RequiredItem items="thal_recipeconstructor" type="Contained" />
+          <RequiredItem items="titaniumaluminiumalloy" type="Contained" />
+        </StatusEffect>
+      </Button>
+    </CustomInterface>
+    <ItemContainer capacity="2" maxstacksize="1" canbeselected="false" hideitems="true" slotsperrow="5" drawinventory="true">
+      <!-- Do this so that the altar itself doesn't fulfill the condition requirements (since the status effects target both the altar and the knife inside) -->
+      <StatusEffect type="Always" target="This" condition="1" setvalue="true" />
+    </ItemContainer>
+    <Holdable handle1="0,0" slots="Any,RightHand,LeftHand" msg="ItemMsgPickUpSelect"></Holdable>
+    <LightComponent range="250" lightcolor="180,255,255,200" IsOn="false" powerconsumption="0" flicker="0.9" allowingameediting="false">
+      <sound file="Mods/Thalassophobia/Items/Jobgear/Scientist/WeldSpark.ogg" type="OnActive" range="800.0" loop="true" />
+      <StatusEffect type="OnActive" target="This" stackable="false" disabledeltatime="true">
+        <ParticleEmitter particle="plasmaspark" particlespersecond="5" particleburstamount="3" velocitymin="0" velocitymax="300" anglemin="0" anglemax="360" scalemin="0.5" scalemax="1" />
+      </StatusEffect>
+    </LightComponent>
+  </Item>
+  <Item name="" identifier="thal_hydrophonicsign" category="Equipment" tags="smallitem" cargocontaineridentifier="metalcrate" maxstacksize="8" impactsoundtag="impact_metal_heavy" scale="0.6">
+    <Price locationtype="Military" buyprice="100" />
+    <Price locationtype="City" buyprice="100" />
+    <Price locationtype="Outpost" buyprice="100" />
+    <Deconstruct time="10">
+      <Item identifier="steel" />
+    </Deconstruct>
+    <Fabricate suitablefabricators="fabricator" requiredtime="20">
+      <RequiredItem identifier="steel" />
+      <RequiredItem identifier="lightcomponent" />
+    </Fabricate>
+    <InventoryIcon name="hydrosignicon" texture="Mods/Thalassophobia/Items/Jobgear/Scientist/science.png" sourcerect="3,4,99,125" depth="0.6" origin="0.45675606,0.4603783" />
+    <Sprite name="Hydro Sign" texture="Mods/Thalassophobia/Items/Jobgear/Scientist/science.png" sourcerect="3,4,99,235" depth="0.6" origin="0.45675606,0.4603783" tags="smallitem,divingmask,diving" />
+    <Body width="95" height="230" density="50" />
+    <LightComponent range="50" castshadows="false" lightcolor="255,0,0,100" IsOn="true" powerconsumption="0" blinkFrequency="0.5" allowingameediting="false">
+      <Sprite name="Hydro Light" texture="Mods/Thalassophobia/Items/Jobgear/Scientist/science.png" sourcerect="3,239,99,17" depth="0.6" origin="0.45675606,0.4603783" tags="smallitem,divingmask,diving" />
+      <Body radius="30" density="50" />
+    </LightComponent>
+    <Holdable selectkey="Select" pickkey="Use" slots="Any,RightHand,LeftHand" msg="ItemMsgDetachWrench" PickingTime="10.0" aimpos="35,-10" handle1="0,0" attachable="true" attachedbydefault="true" aimable="true">
+      <requireditem identifier="wrench" type="Equipped" />
+    </Holdable>
+  </Item>
+  <Item name="" identifier="thal_fumigator" category="Equipment" Tags="smallitem,weapon,gun" cargocontaineridentifier="metalcrate" Scale="0.5" impactsoundtag="impact_metal_light">
+    <Price baseprice="800" soldeverywhere="false">
+      <Price locationtype="outpost" sold="false" />
+      <Price locationtype="city" sold="false" />
+      <Price locationtype="research" sold="false" />
+      <Price locationtype="military" sold="false" />
+      <Price locationtype="mine" sold="false" />
+    </Price>
+    <Sprite texture="Mods/Thalassophobia/Items/Jobgear/Scientist/science.png" sourcerect="112,1,129,87" depth="0.55" origin="0.5,0.5" />
+    <Body width="150" height="77" density="40" />
+    <Holdable aimable="true" slots="Any,RightHand+LeftHand" controlpose="true" aimpos="50,0" handle1="-40,-20" handle2="-4,-20" msg="ItemMsgPickUpSelect" />
+    <RepairTool structurefixamount="0.0" range="500" barrelpos="35,10" fireprobability="0.0" repairmultiple="true" repairthroughwalls="false" repairthroughholes="true" combatpriority="90" spread="25" unskilledspread="25">
+      <RequiredItems items="gascylinder,weldingfuel,oxygentank" type="Contained" msg="MsgGasCylinderRequired" />
+      <ParticleEmitter particle="steamspray" particlespersecond="80" anglemin="0" anglemax="0" velocitymin="200" velocitymax="400" highqualitycollisiondetection="true" colormultiplier="255,255,255,160" />
+      <ParticleEmitter particle="bubbles" particlespersecond="20" anglemin="-10" anglemax="10" scalemin="0.3" scalemax="0.7" velocitymin="5" velocitymax="100" copyentityangle="true" />
+      <StatusEffect type="OnUse" target="This">
+        <RequiredItems items="weldingfuel,oxygentank" type="Contained" />
+      </StatusEffect>
+      <sound file="Mods/Thalassophobia/Items/Jobgear/Scientist/Fumigator.ogg" type="OnUse" range="500.0" loop="true" />
+      <!-- bubbles when usage fails (e.g. in water) -->
+      <StatusEffect type="OnFailure" target="UseTarget">
+        <ParticleEmitter particle="bubbles" particlespersecond="20" anglemin="-10" anglemax="10" scalemin="0.3" scalemax="0.7" velocitymin="5" velocitymax="100" copyentityangle="true" />
+        <ParticleEmitter particle="fleshsmoke" particlespersecond="10" anglemin="-10" anglemax="10" scalemin="1" scalemax="1.5" velocitymin="5" velocitymax="200" copyentityangle="true" />
+      </StatusEffect>
+      <!-- when using, the contained welding fuel tank will detoriate (= lose fuel) -->
+      <StatusEffect type="OnUse" targettype="Contained" targets="gascylinder,weldingfueltank,oxygentank" Condition="-6.0" />
+      <!-- do burn damage to characters -->
+      <StatusEffect type="OnUse" target="UseTarget" targetlimb="head">
+        <RequiredItems items="thal_cylinderteargas" type="Contained" />
+        <Affliction identifier="thal_teargasaffliction" amount="2" />
+      </StatusEffect>
+      <StatusEffect type="OnUse" target="UseTarget">
+        <RequiredItems items="thal_cylindershroomcure" type="Contained" targetlimb="head" />
+        <Affliction identifier="thal_shroomcureaffliction" amount="2" />
+      </StatusEffect>
+      <StatusEffect type="OnUse" target="UseTarget">
+        <RequiredItems items="thal_cylinderlaughing" type="Contained" targetlimb="head" />
+        <ReduceAffliction type="damage" amount="2" />
+        <Affliction identifier="oxygenlow" amount="0.5" />
+        <Affliction identifier="strengthen" amount="45" />
+      </StatusEffect>
+      <StatusEffect type="OnUse" target="UseTarget">
+        <RequiredItems items="oxygentank" type="Contained" />
+        <ReduceAffliction type="oxygenlow" amount="3" />
+      </StatusEffect>
+      <StatusEffect type="OnUse" target="Hull" Oxygen="3000.0">
+        <RequiredItems items="oxygentank" type="Contained" />
+      </StatusEffect>
+    </RepairTool>
+    <LightComponent powerconsumption="10" LightColor="255,255,255,100" Flicker="0" Range="6" IsOn="true">
+      <Sprite name="fumlit" texture="Mods/Thalassophobia/Items/Jobgear/Scientist/science.png" sourcerect="393,1,129,87" depth="0.55" origin="0.5,0.5" />
+      <StatusEffect type="OnActive" target="This" setvalue="true" lightcolor="100,255,255,200">
+        <RequiredItems items="thal_cylindershroomcure" type="Contained" />
+      </StatusEffect>
+      <StatusEffect type="OnActive" target="This" setvalue="true" lightcolor="110,130,255,200">
+        <RequiredItems items="thal_cylinderlaughing" type="Contained" />
+      </StatusEffect>
+      <StatusEffect type="OnActive" target="This" setvalue="true" lightcolor="255,120,50,200">
+        <RequiredItems items="thal_cylinderteargas" type="Contained" />
+      </StatusEffect>
+      <StatusEffect type="OnActive" target="This" setvalue="true" lightcolor="140,160,255,200">
+        <RequiredItems items="oxygentank" type="Contained" />
+      </StatusEffect>
+      <StatusEffect type="Always" target="This" setvalue="True" voltage="1.0">
+        <RequiredItems items="thal_cylinderteargas,thal_cylinderlaughing,thal_cylindershroomcure,oxygentank" type="Contained" />
+      </StatusEffect>
+    </LightComponent>
+    <ItemContainer capacity="1" hideitems="false" itempos="16,-15" containedspritedepth="0.56">
+      <ContainedStateIndicator texture="Content/UI/ContainerIndicators.png" sourcerect="0,157,92,27" />
+      <Containable items="weldingfuel,oxygensource,gascylinder" />
+    </ItemContainer>
+    <aitarget sightrange="5000" soundrange="500" fadeouttime="5" />
+  </Item>
+  <!-- cloud for welding fuel loaded into fumigator -->
+  <Item name="weldingcloud" identifier="thal_weldingcloud" category="Equipment" cargocontaineridentifier="metalcrate" tags="smallitem" scale="0.5" hideinmenus="true" pickdistance="0" noninteractable="true">
+    <sprite name="sporeem" texture="Mods/Thalassophobia/Items/Jobgear/headgears.png" sourcerect="0,0,1,1" origin="0.4,0.3" />
+    <Body width="40" radius="30" density="15" bodytype="Kinematic" />
+    <LightComponent lightcolor="255,255,150,0" range="1" powerconsumption="0" allowingameediting="false" castshadows="false" IsOn="true">
+      <StatusEffect type="Always" target="This">
+        <ParticleEmitter particle="thal_shroomsmoke" burstamount="2" particlespersecond="4" velocitymin="0" velocitymax="0" anglemin="0" anglemax="360" scalemin="1.4" scalemax="1.4" colormultiplier="255,255,230,255" />
+        <sound file="Mods/Thalassophobia/Items/Jobgear/Scientist/GasCloud.ogg" range="500.0" loop="false" />
+      </StatusEffect>
+      <StatusEffect type="Always" target="This" delay="1" stackable="false">
+        <Explosion range="90" force="0.1" flash="false" shockwave="false" sparks="false" flames="false" smoke="false" camerashake="0" underwaterbubble="true" structuredamage="0" itemdamage="0" flashrange="0" flashduration="0">
+          <Affliction identifier="oxygenlow" strength="8" />
+        </Explosion>
+      </StatusEffect>
+      <StatusEffect type="Always" target="This" delay="8" stackable="false">
+        <Remove />
+      </StatusEffect>
+      <StatusEffect type="InWater" target="This" stackable="false">
+        <Remove />
+      </StatusEffect>
+      <StatusEffect type="OnFire" target="This" stackable="false">
+        <sound file="Content/Items/Weapons/ExplosionSmall3.ogg" range="5000" selectionmode="All" />
+        <sound file="Content/Items/Weapons/ExplosionDebris3.ogg" range="5000" />
+        <Explosion range="250.0" structuredamage="8" force="3.0">
+          <Affliction identifier="burn" strength="15" />
+          <Affliction identifier="stun" strength="3" />
+        </Explosion>
+        <Remove />
+      </StatusEffect>
+    </LightComponent>
+  </Item>
+  <Item name="" identifier="thal_cylinderteargas" health="60" category="Material" cargocontaineridentifier="chemicalcrate" description="" Tags="smallitem,gascylinder" spritecolor="255,200,200,255" InventoryIconColor="255,200,200,255" scale="0.5" impactsoundtag="impact_metal_light" impacttolerance="5" maxstacksize="3">
+    <PreferredContainer primary="crewcab" spawnprobability="0.1" minamount="1" maxamount="3" />
+    <Sprite texture="Mods/Thalassophobia/Items/Jobgear/Scientist/science.png" sourcerect="113,92,41,61" depth="0.6" origin="0.5,0.5" />
+    <Body width="65" height="65" density="1" />
+    <Throwable characterusable="true" canBeCombined="true" slots="Any,RightHand,LeftHand" throwforce="3.0" aimpos="35,-10" msg="ItemMsgPickUpSelect">
+      <StatusEffect type="OnImpact" target="This" Condition="0.0" setvalue="true">
+        <Conditional condition="gt 0" />
+        <SpawnItem identifier="thal_teargascloud" />
+        <sound file="Mods/Thalassophobia/Items/Jobgear/Scientist/Ricochet1.ogg" range="800.0" loop="false" Selectionmode="random" />
+        <sound file="Mods/Thalassophobia/Items/Jobgear/Scientist/Ricochet2.ogg" range="800.0" loop="false" Selectionmode="random" />
+        <sound file="Mods/Thalassophobia/Items/Jobgear/Scientist/Ricochet3.ogg" range="800.0" loop="false" Selectionmode="random" />
+        <ParticleEmitter particle="thal_cylindergib" particleamount="10" scalemin="0.4" scalemax="0.6" velocitymin="400" velocitymax="500" anglemin="0" anglemax="360" colormultiplier="255,200,200,255" />
+        <Remove />
+      </StatusEffect>
+      <StatusEffect type="OnFire" target="This" setvalue="true" Condition="0.0">
+        <Conditional condition="gt 0" />
+        <SpawnItem identifier="thal_teargascloud" />
+        <sound file="Mods/Thalassophobia/Items/Jobgear/Scientist/Ricochet1.ogg" range="800.0" loop="false" Selectionmode="random" />
+        <sound file="Mods/Thalassophobia/Items/Jobgear/Scientist/Ricochet2.ogg" range="800.0" loop="false" Selectionmode="random" />
+        <sound file="Mods/Thalassophobia/Items/Jobgear/Scientist/Ricochet3.ogg" range="800.0" loop="false" Selectionmode="random" />
+        <ParticleEmitter particle="thal_cylindergib" particleamount="10" scalemin="0.4" scalemax="0.6" velocitymin="400" velocitymax="500" anglemin="0" anglemax="360" colormultiplier="255,200,200,255" />
+        <Remove />
+      </StatusEffect>
+      <StatusEffect type="OnBroken" target="This" setvalue="true" Condition="0.0">
+        <Remove />
+      </StatusEffect>
+    </Throwable>
+  </Item>
+  <!-- cloud of shroomcure for when cylinder explodes -->
+  <Item name="teargascloud" identifier="thal_teargascloud" category="Equipment" cargocontaineridentifier="metalcrate" tags="smallitem" scale="0.5" hideinmenus="true" pickdistance="0" noninteractable="true">
+    <sprite name="sporeem" texture="Mods/Thalassophobia/Items/Jobgear/headgears.png" sourcerect="0,0,1,1" origin="0.4,0.3" />
+    <Body width="40" radius="30" density="15" bodytype="Kinematic" />
+    <LightComponent lightcolor="255,255,150,0" range="1" powerconsumption="0" allowingameediting="false" castshadows="false" IsOn="true">
+      <StatusEffect type="Always" target="This">
+        <ParticleEmitter particle="thal_shroomsmoke" burstamount="2" particlespersecond="4" velocitymin="0" velocitymax="0" anglemin="0" anglemax="360" scalemin="1.4" scalemax="1.4" colormultiplier="255,230,200,255" />
+        <sound file="Mods/Thalassophobia/Items/Jobgear/Scientist/GasCloud.ogg" range="500.0" loop="false" />
+      </StatusEffect>
+      <StatusEffect type="Always" target="This" delay="0.5" stackable="false">
+        <Explosion range="110" force="0.1" flash="false" shockwave="false" sparks="false" flames="false" smoke="false" camerashake="0" underwaterbubble="true" structuredamage="0" itemdamage="0" flashrange="0" flashduration="0">
+          <Affliction identifier="thal_teargasaffliction" strength="5" />
+        </Explosion>
+      </StatusEffect>
+      <StatusEffect type="Always" target="This" delay="7" stackable="false">
+        <Remove />
+      </StatusEffect>
+      <StatusEffect type="InWater" target="This" stackable="false">
+        <Remove />
+      </StatusEffect>
+    </LightComponent>
+  </Item>
+  <Item name="" identifier="thal_cylindershroomcure" health="120" category="Material" cargocontaineridentifier="chemicalcrate" description="" Tags="smallitem,gascylinder" spritecolor="200,255,200,255" InventoryIconColor="200,255,200,255" scale="0.55" impactsoundtag="impact_metal_light" impacttolerance="5" maxstacksize="3">
+    <Sprite texture="Mods/Thalassophobia/Items/Jobgear/Scientist/science.png" sourcerect="113,92,41,61" depth="0.6" origin="0.5,0.5" />
+    <Body width="65" height="65" density="1" />
+    <Throwable characterusable="true" canBeCombined="true" slots="Any,RightHand,LeftHand" throwforce="4.0" aimpos="35,-10" msg="ItemMsgPickUpSelect">
+      <StatusEffect type="OnImpact" target="This" Condition="0.0" setvalue="true">
+        <Conditional condition="gt 0" />
+        <SpawnItem identifier="thal_shroomcurecloud" />
+        <sound file="Mods/Thalassophobia/Items/Jobgear/Scientist/Ricochet1.ogg" range="800.0" loop="false" Selectionmode="random" />
+        <sound file="Mods/Thalassophobia/Items/Jobgear/Scientist/Ricochet2.ogg" range="800.0" loop="false" Selectionmode="random" />
+        <sound file="Mods/Thalassophobia/Items/Jobgear/Scientist/Ricochet3.ogg" range="800.0" loop="false" Selectionmode="random" />
+        <ParticleEmitter particle="thal_cylindergib" particleamount="10" scalemin="0.4" scalemax="0.6" velocitymin="400" velocitymax="500" anglemin="0" anglemax="360" colormultiplier="200,255,200,255" />
+        <Remove />
+      </StatusEffect>
+      <StatusEffect type="OnFire" target="This" setvalue="true" Condition="0.0">
+        <Conditional condition="gt 0" />
+        <SpawnItem identifier="thal_shroomcurecloud" />
+        <sound file="Mods/Thalassophobia/Items/Jobgear/Scientist/Ricochet1.ogg" range="800.0" loop="false" Selectionmode="random" />
+        <sound file="Mods/Thalassophobia/Items/Jobgear/Scientist/Ricochet2.ogg" range="800.0" loop="false" Selectionmode="random" />
+        <sound file="Mods/Thalassophobia/Items/Jobgear/Scientist/Ricochet3.ogg" range="800.0" loop="false" Selectionmode="random" />
+        <ParticleEmitter particle="thal_cylindergib" particleamount="10" scalemin="0.4" scalemax="0.6" velocitymin="400" velocitymax="500" anglemin="0" anglemax="360" colormultiplier="200,255,200,255" />
+        <Remove />
+      </StatusEffect>
+      <StatusEffect type="OnBroken" target="This" setvalue="true" Condition="0.0">
+        <Remove />
+      </StatusEffect>
+    </Throwable>
+  </Item>
+  <!-- cloud of shroomcure for when cylinder explodes -->
+  <Item name="fungicidecloud" identifier="thal_shroomcurecloud" category="Equipment" cargocontaineridentifier="metalcrate" tags="smallitem" scale="0.5" hideinmenus="true" pickdistance="0" noninteractable="true">
+    <sprite name="sporeem" texture="Mods/Thalassophobia/Items/Jobgear/headgears.png" sourcerect="0,0,1,1" origin="0.4,0.3" />
+    <Body width="40" radius="30" density="15" bodytype="Kinematic" />
+    <LightComponent lightcolor="255,255,150,0" range="1" powerconsumption="0" allowingameediting="false" castshadows="false" IsOn="true">
+      <StatusEffect type="Always" target="This">
+        <ParticleEmitter particle="thal_shroomsmoke" burstamount="2" particlespersecond="4" velocitymin="0" velocitymax="0" anglemin="0" anglemax="360" scalemin="1.4" scalemax="1.4" colormultiplier="200,250,230,255" />
+        <sound file="Mods/Thalassophobia/Items/Jobgear/Scientist/GasCloud.ogg" range="500.0" loop="false" />
+      </StatusEffect>
+      <StatusEffect type="Always" target="This" delay="0.5" stackable="false">
+        <Explosion range="110" force="0.1" flash="false" shockwave="false" sparks="false" flames="false" smoke="false" camerashake="0" underwaterbubble="true" structuredamage="0" itemdamage="0" flashrange="0" flashduration="0">
+          <Affliction identifier="thal_shroomcureaffliction" strength="5" />
+        </Explosion>
+      </StatusEffect>
+      <StatusEffect type="Always" target="This" delay="7" stackable="false">
+        <Remove />
+      </StatusEffect>
+      <StatusEffect type="InWater" target="This" stackable="false">
+        <Remove />
+      </StatusEffect>
+    </LightComponent>
+  </Item>
+  <!-- cloud of nitrous oxide for when cylinder explodes -->
+  <Item name="laughingcloud" identifier="thal_laughingcloud" category="Equipment" cargocontaineridentifier="metalcrate" tags="smallitem" scale="0.5" hideinmenus="true" pickdistance="0" noninteractable="true">
+    <sprite name="sporeem" texture="Mods/Thalassophobia/Items/Jobgear/headgears.png" sourcerect="0,0,1,1" origin="0.4,0.3" />
+    <Body width="40" radius="30" density="15" bodytype="Kinematic" />
+    <LightComponent lightcolor="255,255,150,0" range="1" powerconsumption="0" allowingameediting="false" castshadows="false" IsOn="true">
+      <StatusEffect type="Always" target="This">
+        <ParticleEmitter particle="thal_shroomsmoke" burstamount="2" particlespersecond="4" velocitymin="0" velocitymax="0" anglemin="0" anglemax="360" scalemin="1.4" scalemax="1.4" colormultiplier="200,200,255,255" />
+        <sound file="Mods/Thalassophobia/Items/Jobgear/Scientist/GasCloud.ogg" range="500.0" loop="false" />
+      </StatusEffect>
+      <StatusEffect type="Always" target="This" delay="0.5" stackable="false">
+        <Explosion range="130" force="0.1" flash="false" shockwave="false" sparks="false" flames="false" smoke="false" camerashake="0" underwaterbubble="true" structuredamage="0" itemdamage="0" flashrange="0" flashduration="0">
+          <Affliction identifier="oxygenlow" strength="13" />
+          <Affliction identifier="strengthen" amount="30" />
+        </Explosion>
+      </StatusEffect>
+      <StatusEffect type="Always" target="This" delay="6" stackable="false">
+        <Remove />
+      </StatusEffect>
+      <StatusEffect type="InWater" target="This" stackable="false">
+        <Remove />
+      </StatusEffect>
+    </LightComponent>
+  </Item>
+  <Item name="" identifier="thal_cylinderlaughing" category="Material" health="120" cargocontaineridentifier="chemicalcrate" description="" Tags="smallitem,gascylinder" spritecolor="200,200,255,255" InventoryIconColor="200,200,255,255" scale="0.6" impactsoundtag="impact_metal_light" impacttolerance="5" maxstacksize="3">
+    <PreferredContainer primary="crewcab" spawnprobability="0.1" minamount="1" maxamount="3" />
+    <Sprite texture="Mods/Thalassophobia/Items/Jobgear/Scientist/science.png" sourcerect="113,92,41,61" depth="0.6" origin="0.5,0.5" />
+    <Body width="65" height="65" density="1" />
+    <Throwable characterusable="true" canBeCombined="true" slots="Any,RightHand,LeftHand" throwforce="3.0" aimpos="35,-10" msg="ItemMsgPickUpSelect">
+      <StatusEffect type="OnImpact" target="This" Condition="0.0" setvalue="true">
+        <Conditional condition="gt 0" />
+        <SpawnItem identifier="thal_laughingcloud" />
+        <sound file="Mods/Thalassophobia/Items/Jobgear/Scientist/Ricochet1.ogg" range="800.0" loop="false" Selectionmode="random" />
+        <sound file="Mods/Thalassophobia/Items/Jobgear/Scientist/Ricochet2.ogg" range="800.0" loop="false" Selectionmode="random" />
+        <sound file="Mods/Thalassophobia/Items/Jobgear/Scientist/Ricochet3.ogg" range="800.0" loop="false" Selectionmode="random" />
+        <ParticleEmitter particle="thal_cylindergib" particleamount="10" scalemin="0.4" scalemax="0.6" velocitymin="400" velocitymax="500" anglemin="0" anglemax="360" colormultiplier="200,200,255,255" />
+        <Remove />
+      </StatusEffect>
+      <StatusEffect type="OnFire" target="This" setvalue="true" Condition="0.0">
+        <Conditional condition="gt 0" />
+        <SpawnItem identifier="thal_laughingcloud" />
+        <sound file="Mods/Thalassophobia/Items/Jobgear/Scientist/Ricochet1.ogg" range="800.0" loop="false" Selectionmode="random" />
+        <sound file="Mods/Thalassophobia/Items/Jobgear/Scientist/Ricochet2.ogg" range="800.0" loop="false" Selectionmode="random" />
+        <sound file="Mods/Thalassophobia/Items/Jobgear/Scientist/Ricochet3.ogg" range="800.0" loop="false" Selectionmode="random" />
+        <ParticleEmitter particle="thal_cylindergib" particleamount="10" scalemin="0.4" scalemax="0.6" velocitymin="400" velocitymax="500" anglemin="0" anglemax="360" colormultiplier="200,200,255,255" />
+        <Remove />
+      </StatusEffect>
+      <StatusEffect type="OnBroken" target="This" setvalue="true" Condition="0.0">
+        <Remove />
+      </StatusEffect>
+    </Throwable>
+  </Item>
+  <Item name="" identifier="thal_recipefumigator" category="Material" cargocontaineridentifier="metalcrate" description="" Tags="smallitem,schematic" spritecolor="200,255,120,255" InventoryIconColor="200,255,120,200" scale="0.5" impactsoundtag="impact_metal_light">
+    <Sprite name="datacube" texture="Mods/Thalassophobia/Items/Jobgear/Scientist/science.png" sourcerect="261,99,45,43" depth="0.6" origin="0.5,0.5" />
+    <Body width="55" height="55" density="20" />
+    <Holdable slots="Any,RightHand,LeftHand" handle1="0,0" msg="ItemMsgPickUpSelect" />
+    <LightComponent range="1" castshadows="false" lightcolor="200,255,120,100" IsOn="true" powerconsumption="0" blinkFrequency="0" allowingameediting="false">
+      <Sprite name="datacubelight" texture="Mods/Thalassophobia/Items/Jobgear/Scientist/science.png" sourcerect="261,99,45,43" depth="0.6" origin="0.5,0.5" />
+    </LightComponent>
+  </Item>
+  <Item name="" identifier="thal_recipeplanter" category="Material" cargocontaineridentifier="metalcrate" description="" Tags="smallitem,schematic" spritecolor="200,255,120,255" InventoryIconColor="200,255,120,200" scale="0.5" impactsoundtag="impact_metal_light">
+    <Sprite name="datacube" texture="Mods/Thalassophobia/Items/Jobgear/Scientist/science.png" sourcerect="261,99,45,43" depth="0.6" origin="0.5,0.5" />
+    <Body width="55" height="55" density="20" />
+    <Holdable slots="Any,RightHand,LeftHand" handle1="0,0" msg="ItemMsgPickUpSelect" />
+    <LightComponent range="1" castshadows="false" lightcolor="200,255,120,100" IsOn="true" powerconsumption="0" blinkFrequency="0" allowingameediting="false">
+      <Sprite name="datacubelight" texture="Mods/Thalassophobia/Items/Jobgear/Scientist/science.png" sourcerect="261,99,45,43" depth="0.6" origin="0.5,0.5" />
+    </LightComponent>
+  </Item>
+  <Item name="" identifier="thal_recipebotanistmask" category="Material" cargocontaineridentifier="metalcrate" description="" Tags="smallitem,schematic" spritecolor="200,220,190,255" InventoryIconColor="200,220,190,255" scale="0.5" impactsoundtag="impact_metal_light">
+    <Sprite name="datacube" texture="Mods/Thalassophobia/Items/Jobgear/Scientist/science.png" sourcerect="261,99,45,43" depth="0.6" origin="0.5,0.5" />
+    <Body width="25" height="55" density="20" />
+    <Holdable slots="Any,RightHand,LeftHand" handle1="0,0" msg="ItemMsgPickUpSelect" />
+    <LightComponent range="1" castshadows="false" lightcolor="200,220,190,100" IsOn="true" powerconsumption="0" blinkFrequency="0" allowingameediting="false">
+      <Sprite name="datacubelight" texture="Mods/Thalassophobia/Items/Jobgear/Scientist/science.png" sourcerect="261,99,45,43" depth="0.6" origin="0.5,0.5" />
+    </LightComponent>
+  </Item>
+  <Item name="" identifier="thal_recipeconstructor" category="Material" cargocontaineridentifier="metalcrate" description="" Tags="smallitem,schematic" spritecolor="230,200,180,255" InventoryIconColor="230,200,180,255" scale="0.5" impactsoundtag="impact_metal_light">
+    <Sprite name="datacube" texture="Mods/Thalassophobia/Items/Jobgear/Scientist/science.png" sourcerect="261,99,45,43" depth="0.6" origin="0.5,0.5" />
+    <Body width="25" height="55" density="20" />
+    <Holdable slots="Any,RightHand,LeftHand" handle1="0,0" msg="ItemMsgPickUpSelect" />
+    <LightComponent range="1" castshadows="false" lightcolor="230,200,180,100" IsOn="true" powerconsumption="0" blinkFrequency="0" allowingameediting="false">
+      <Sprite name="datacubelight" texture="Mods/Thalassophobia/Items/Jobgear/Scientist/science.png" sourcerect="261,99,45,43" depth="0.6" origin="0.5,0.5" />
+    </LightComponent>
+  </Item>
+  <Item name="" identifier="thal_recipefungicide" category="Material" cargocontaineridentifier="metalcrate" description="" Tags="smallitem,schematic" spritecolor="200,190,100,255" InventoryIconColor="200,190,100,255" scale="0.5" impactsoundtag="impact_metal_light">
+    <Sprite name="datacube" texture="Mods/Thalassophobia/Items/Jobgear/Scientist/science.png" sourcerect="261,99,45,43" depth="0.6" origin="0.5,0.5" />
+    <Body width="25" height="55" density="20" />
+    <Holdable slots="Any,RightHand,LeftHand" handle1="0,0" msg="ItemMsgPickUpSelect" />
+    <LightComponent range="1" castshadows="false" lightcolor="200,190,100,100" IsOn="true" powerconsumption="0" blinkFrequency="0" allowingameediting="false">
+      <Sprite name="datacubelight" texture="Mods/Thalassophobia/Items/Jobgear/Scientist/science.png" sourcerect="261,99,45,43" depth="0.6" origin="0.5,0.5" />
+    </LightComponent>
+  </Item>
+  <Item name="" description="" identifier="thal_constructor" category="Equipment" cargocontaineridentifier="metalcrate" tags="smallitem" impactsoundtag="impact_soft" scale="0.6" hideconditionbar="true" canflipx="false">
+    <Sprite name="constructor Sprite" texture="Mods/Thalassophobia/Items/Jobgear/Scientist/science.png" sourcerect="104,154,144,84" depth="0.6" origin="0.5,0.5" />
+    <DecorativeSprite name="horizbar" texture="Mods/Thalassophobia/Items/Jobgear/Scientist/science.png" sourcerect="118,239,119,13" depth="0.58" origin="0.5,0.5" offset="0,-17" offsetanim="Sine" offsetanimspeed="2">
+      <AnimationConditional IsActive="eq true" targetitemcomponent="LightComponent" />
+    </DecorativeSprite>
+    <DecorativeSprite name="vertnog" texture="Mods/Thalassophobia/Items/Jobgear/Scientist/science.png" sourcerect="405,212,26,31" depth="0.59" origin="0.48,0.43" offset="40,-17" offsetanim="Sine" offsetanimspeed="2" rotationspeed="500">
+      <AnimationConditional IsActive="eq true" targetitemcomponent="LightComponent" />
+    </DecorativeSprite>
+    <DecorativeSprite name="vertnog2" texture="Mods/Thalassophobia/Items/Jobgear/Scientist/science.png" sourcerect="405,212,26,31" depth="0.59" origin="0.48,0.43" offset="-40,-17" offsetanim="Sine" offsetanimspeed="2" rotationspeed="-500">
+      <AnimationConditional IsActive="eq true" targetitemcomponent="LightComponent" />
+    </DecorativeSprite>
+    <DecorativeSprite name="constructor Shell" texture="Mods/Thalassophobia/Items/Jobgear/Scientist/science.png" sourcerect="385,94,144,84" depth="0.56" origin="0.5,0.5" />
+    <Body width="130" height="80" density="400" />
+    <CustomInterface canbeselected="true" drawhudwhenequipped="false">
+      <GuiFrame relativesize="0.4,0.5" anchor="BottomCenter" absoluteoffset="0,-30" style="ItemUI" />
+      <Button text="RADTN_ST (diving Suit+lead+Ti-Al Alloy)">
+        <!-- radsuit -->
+        <StatusEffect type="OnUse" targettype="This" delay="30" IsOn="false" canbeselected="true">
+          <SpawnItem spawnposition="ThisInventory" identifier="thal_radsuit" />
+          <sound file="Mods/Thalassophobia/Items/Jobgear/Scientist/Ding.ogg" range="600.0" loop="false" />
+          <RequiredItem items="divingsuit" type="Contained" />
+          <RequiredItem items="lead" type="Contained" />
+          <RequiredItem items="titaniumaluminiumalloy" type="Contained" />
+        </StatusEffect>
+        <StatusEffect type="OnUse" target="This" IsOn="true" canbeselected="false">
+          <RequiredItem items="divingsuit" type="Contained" />
+          <RequiredItem items="lead" type="Contained" />
+          <RequiredItem items="titaniumaluminiumalloy" type="Contained" />
+        </StatusEffect>
+        <StatusEffect type="OnUse" targettype="Contained" targets="divingsuit,lead,titaniumaluminiumalloy" delay="29.9" IsOn="true">
+          <Remove />
+          <RequiredItem items="divingsuit" type="Contained" />
+          <RequiredItem items="lead" type="Contained" />
+          <RequiredItem items="titaniumaluminiumalloy" type="Contained" />
+        </StatusEffect>
+      </Button>
+      <Button text="OB_1 (physicorium Bar+flamer+Ti-Al Alloy)">
+        <!-- glowsaber -->
+        <StatusEffect type="OnUse" targettype="This" delay="60" IsOn="false" canbeselected="true">
+          <SpawnItem spawnposition="ThisInventory" identifier="thal_glowsaber" />
+          <sound file="Mods/Thalassophobia/Items/Jobgear/Scientist/Ding.ogg" range="600.0" loop="false" />
+          <RequiredItem items="physicorium" type="Contained" />
+          <RequiredItem items="flamer" type="Contained" />
+          <RequiredItem items="titaniumaluminiumalloy" type="Contained" />
+        </StatusEffect>
+        <StatusEffect type="OnUse" target="This" IsOn="true" canbeselected="false">
+          <RequiredItem items="physicorium" type="Contained" />
+          <RequiredItem items="flamer" type="Contained" />
+          <RequiredItem items="titaniumaluminiumalloy" type="Contained" />
+        </StatusEffect>
+        <StatusEffect type="OnUse" targettype="Contained" targets="physicorium,flamer,titaniumaluminiumalloy" delay="59.9" IsOn="true">
+          <Remove />
+          <RequiredItem items="physicorium" type="Contained" />
+          <RequiredItem items="flamer" type="Contained" />
+          <RequiredItem items="titaniumaluminiumalloy" type="Contained" />
+        </StatusEffect>
+      </Button>
+      <Button text="2ND_CHANCE (Liquid Oxygenite+Nitrous Oxide+Health Scanner)">
+        <!-- phoenix injector -->
+        <StatusEffect type="OnUse" targettype="This" delay="40" IsOn="false" canbeselected="true">
+          <SpawnItem spawnposition="ThisInventory" identifier="thal_secondchance" />
+          <sound file="Mods/Thalassophobia/Items/Jobgear/Scientist/Ding.ogg" loop="false" range="600.0" />
+          <RequiredItem items="liquidoxygenite" type="Contained" />
+          <RequiredItem items="thal_cylinderlaughing" type="Contained" />
+          <RequiredItem items="healthscanner" type="Contained" />
+        </StatusEffect>
+        <StatusEffect type="OnUse" target="This" IsOn="true" canbeselected="false">
+          <RequiredItem items="liquidoxygenite" type="Contained" />
+          <RequiredItem items="thal_cylinderlaughing" type="Contained" />
+          <RequiredItem items="healthscanner" type="Contained" />
+        </StatusEffect>
+        <StatusEffect type="OnUse" targettype="Contained" targets="liquidoxygenite,thal_cylinderlaughing,healthscanner" delay="39.9" IsOn="true">
+          <Remove />
+          <RequiredItem items="liquidoxygenite" type="Contained" />
+          <RequiredItem items="thal_cylinderlaughing" type="Contained" />
+          <RequiredItem items="healthscanner" type="Contained" />
+        </StatusEffect>
+      </Button>
+      <!-- todo:implement
+      <Button text="JESSE_WTF (automap+fumigator+Ti-Al Alloy)">
+        <StatusEffect type="OnUse" targettype="This" delay="60" IsOn="false" canbeselected="true">
+          <SpawnItem spawnposition="ThisInventory" identifier="thal_chemtron" />
+          <sound file="Mods/Thalassophobia/Items/Jobgear/Scientist/Ding.ogg" type="OnActive" range="600.0" />
+          <RequiredItem items="physicorium" type="Contained" />
+          <RequiredItem items="flamer" type="Contained" />
+          <RequiredItem items="titaniumaluminiumalloy" type="Contained" />
+        </StatusEffect>
+        <StatusEffect type="OnUse" target="This" IsOn="true" canbeselected="false">
+          <RequiredItem items="physicorium" type="Contained" />
+          <RequiredItem items="flamer" type="Contained" />
+          <RequiredItem items="titaniumaluminiumalloy" type="Contained" />
+        </StatusEffect>
+        <StatusEffect type="OnUse" targettype="Contained" targets="physicorium,flamer,titaniumaluminiumalloy" delay="59.9" IsOn="true">
+          <Remove />
+          <RequiredItem items="physicorium" type="Contained" />
+          <RequiredItem items="flamer" type="Contained" />
+          <RequiredItem items="titaniumaluminiumalloy" type="Contained" />
+        </StatusEffect>
+      </Button>
+      -->
+    </CustomInterface>
+    <ItemContainer capacity="3" canbeselected="true" hideitems="true" slotsperrow="3" drawinventory="true" maxstacksize="3">
+      <GuiFrame relativesize="0.4,0.25" anchor="Center" minsize="140,170" maxsize="280,280" style="ItemUI" />
+      <!-- Do this so that the altar itself doesn't fulfill the condition requirements (since the status effects target both the altar and the knife inside) -->
+      <StatusEffect type="Always" target="This" condition="1" setvalue="true" />
+    </ItemContainer>
+    <Holdable handle1="0,0" slots="Any,RightHand,LeftHand" msg="ItemMsgDetachWrench" PickingTime="10.0" aimpos="35,-10" attachable="true" attachedbydefault="true" aimable="true"></Holdable>
+    <LightComponent range="250" lightcolor="180,255,255,200" IsOn="false" powerconsumption="0" flicker="0.9" allowingameediting="false">
+      <sound file="Mods/Thalassophobia/Items/Jobgear/Scientist/WeldSpark.ogg" type="OnActive" range="800.0" loop="true" />
+      <StatusEffect type="OnActive" target="This" stackable="false" disabledeltatime="true">
+        <ParticleEmitter particle="plasmaspark" particlespersecond="5" particleburstamount="3" velocitymin="0" velocitymax="300" anglemin="0" anglemax="360" scalemin="0.5" scalemax="1" />
+      </StatusEffect>
+    </LightComponent>
+  </Item>
+  <Item name="" identifier="thal_secondchance" category="Material" cargocontaineridentifier="metalcrate" description="" Tags="smallitem,schematic" scale="0.5" impactsoundtag="impact_metal_light" isshootable="true">
+    <Sprite name="epinephrine" texture="Mods/Thalassophobia/Items/Jobgear/Scientist/science.png" sourcerect="253,8,88,39" depth="0.6" origin="0.5,0.5" />
+    <InventoryIcon name="epinicon" texture="Mods/Thalassophobia/Items/Jobgear/Scientist/science.png" sourcerect="334,55,47,51" depth="0.6" origin="0.5,0.5" />
+    <Body width="25" height="55" density="20" />
+    <Holdable slots="Any,RightHand,LeftHand" handle1="0,0" msg="ItemMsgPickUpSelect" />
+    <LightComponent range="1" castshadows="false" lightcolor="200,255,120,100" IsOn="true" powerconsumption="0" blinkFrequency="0" allowingameediting="false">
+      <Sprite name="epin light" texture="Mods/Thalassophobia/Items/Jobgear/Scientist/science.png" sourcerect="253,50,79,39" depth="0.6" origin="0.5,0.5" />
+      <!-- immediate treatment, prevents things like bleeding out -->
+      <StatusEffect type="OnContained" target="This, Parent, Character" Comaprison="And" disabledeltatime="true" isshootable="false">
+        <Conditional health="lt -6" />
+        <ReduceAffliction identifier="bleeding" strength="100" />
+        <sound file="Mods/Thalassophobia/Items/Jobgear/Scientist/VitalSigns1.ogg" range="20.0" loop="false" />
+      </StatusEffect>
+      <StatusEffect type="OnContained" target="This, Parent, Character" Comaprison="Or" disabledeltatime="true" delay="5" checkconditionalalways="true" stackable="false">
+        <Conditional health="lt -2" />
+        <Affliction identifier="thal_chance" strength="400" />
+        <Affliction identifier="haste" strength="100" />
+        <ReduceAffliction identifier="bloodloss" strength="100" />
+        <ReduceAffliction identifier="bleeding" strength="500" />
+        <ReduceAffliction identifier="oxygenlow" strength="100" />
+        <sound file="Mods/Thalassophobia/Items/Jobgear/Scientist/VitalSigns2.ogg" range="20.0" loop="false" />
+        <RemoveItem />
+      </StatusEffect>
+    </LightComponent>
+  </Item>
+</Items>

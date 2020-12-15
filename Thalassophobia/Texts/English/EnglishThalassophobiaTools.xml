@@ -18,16 +18,16 @@
   <entityname.thal_multitool>Navy Grade Pocketknife</entityname.thal_multitool>
   <entitydescription.thal_multitool>A mass produced pocketknife issued to many ships by the coalition but used by everyone. Comes with retractable tools mimicking a screwdriver, wrench, and comes with a foldable blade designed with minor alien combat in mind.</entitydescription.thal_multitool>
   <!-- Handheld Maps -->
-  <entityname.thal_map>Standard Issue Automap</entityname.thal_map>
+  <entityname.thal_map>Automap</entityname.thal_map>
   <entitydescription.thal_map>Generic Automap that scans the hull to detect the ship layout as well as any abnormalities in the shell. Useful as a map and easy on the battery.</entitydescription.thal_map>
   
-  <entityname.thal_mapwater>Hydrosensitive Automap</entityname.thal_mapwater>
+  <entityname.thal_mapwater>Hydromap</entityname.thal_mapwater>
   <entitydescription.thal_mapwater>Specially designed Automap designed to not only scan the hull of the ship and the according breaches, but also the water within the ship. Created for use among Mechanics, but good for anyone looking to patch and drain a ship.</entitydescription.thal_mapwater>
   
-  <entityname.thal_mapair>Aerosensitive Automap</entityname.thal_mapair>
+  <entityname.thal_mapair>Aeromap</entityname.thal_mapair>
   <entitydescription.thal_mapair>Specially designed Automap designed not only to scan the hull of the ship and breaches, but also the oxygen levels within the ship. Created for use among Engineers, but good for anyone looking to detect electrical fires or general oxygen absence.</entitydescription.thal_mapair>
   
-  <entityname.thal_mapall>Omniscient Automap</entityname.thal_mapall>
+  <entityname.thal_mapall>Omnimap</entityname.thal_mapall>
   <entitydescription.thal_mapall>Advanced Automap engineered to scan for the hull, breaches, water, and oxygen levels. Its all-seeing nature consumes battery faster than usual.</entitydescription.thal_mapall>
   
   <entityname.thal_foldingchair>Folding Chair</entityname.thal_foldingchair>
@@ -114,7 +114,7 @@
   <entityname.thal_bowlingball>Bowling Ball</entityname.thal_bowlingball>
   <entitydescription.thal_bowlingball>Bowl like you would throw a grenade. Great for knocking over pins and people.</entitydescription.thal_bowlingball>
   
-  <entityname.thal_clownpack>Honkpack</entityname.thal_clownpack>
+  <entityname.thal_clownpack>Giggles von Honkington</entityname.thal_clownpack>
   <entitydescription.thal_clownpack>Stylish backpack with a funny face on it. Partially absorbs shocks and ballistics from behind, making running a good option.</entitydescription.thal_clownpack>
   
   <entityname.thal_candle>Candle</entityname.thal_candle>
@@ -137,6 +137,117 @@
   <entityname.thal_meatgrinder>Boiling Pot</entityname.thal_meatgrinder>
   <entitydescription.thal_meatgrinder>A large pot capable of holding most food items. Capable of boiling whatever it contains, provided a cooking station.</entitydescription.thal_meatgrinder>
   
+  <entityname.thal_shroomseed>Ramblin Evil Seed</entityname.thal_shroomseed>
+  <entitydescription.thal_shroomseed>Odd smelling seed covered in spores, capable of being planted like any other. Will produce enough yeast shroom to make you rich, but may release spores.</entitydescription.thal_shroomseed>
   
+  <entityname.thal_shroomcure>Anti-Mycelium</entityname.thal_shroomcure>
+  <entitydescription.thal_shroomcure>Cures Mushroomization. Has a distinct viscosity not unlike Calyxanide.</entitydescription.thal_shroomcure>
+  
+  <entityname.thal_zombieseed>Pupa Seed</entityname.thal_zombieseed>
+  <entitydescription.thal_zombieseed>A strange, cold seed. Will grow into a Pupa Stalk, which grows maggot hives that can be ruptured for saline. The maggots revive dead creatures so be careful!</entitydescription.thal_zombieseed>
+  
+  <entityname.thal_maggothive>Maggot Hive</entityname.thal_maggothive>
+  <entitydescription.thal_maggothive>Ruptures into maggots if </entitydescription.thal_maggothive>
+  
+  <entityname.thal_rustseed>Rustwilt Seed</entityname.thal_rustseed>
+  <entitydescription.thal_rustseed>Foul smelling seed that grows into a rustwilt plant. The plant produces opium, but also unleashes corrosive clouds that may burn through surrounding walls and drain oxygen. Somewhat high maintainence.</entitydescription.thal_rustseed>
+  
+  <entityname.thal_clownseed>Circusprig Seed</entityname.thal_clownseed>
+  <entitydescription.thal_clownseed>Funny smelling seed that grows into a Circusprig plant. The plant grows somewhat unpredictable produce, and has the tendency to leak seltzer water.</entitydescription.thal_clownseed>
+  
+  <entityname.thal_wheatseed>Wheat Seed</entityname.thal_wheatseed>
+  <entitydescription.thal_wheatseed>A wheat seed from Earth, genetically modified to grow more quickly in hydrophonic conditions. Essential for making flour.</entitydescription.thal_wheatseed>
+  
+  <entityname.thal_sugarcane>Sugarcane</entityname.thal_sugarcane>
+  <entitydescription.thal_sugarcane>A slightly sweet tasting plant from earth, genetically modified to grow more quickly in hydrophonic conditions. Unlike many plants, sugarcane grows from itself instead of seeds.</entitydescription.thal_sugarcane>
+  
+  <entityname.thal_botanistsuit>Hydrophonics Cleansuit</entityname.thal_botanistsuit>
+  <entitydescription.thal_botanistsuit>Lightweight suit designed for use handling volatile flora. Mildly resists burns and lacerations.</entitydescription.thal_botanistsuit>
+  
+  <entityname.thal_botanistmask>Aerosol Respirator</entityname.thal_botanistmask>
+  <entitydescription.thal_botanistmask>Industrial grade mask with an air filtration system built in, primarily to resist the effects of toxic fumes from plants. Can be loaded with oxygen to behave like a diving mask.</entitydescription.thal_botanistmask>
+  
+  <entityname.thal_fumigator>Fumigator</entityname.thal_fumigator>
+  <entitydescription.thal_fumigator>Modified flamer that discharges gasses from whatever gas cylinder is loaded into it.</entitydescription.thal_fumigator>
+  
+  <msggascylinderrequired>Gas Cylinder Required</msggascylinderrequired>
+  
+  <entityname.thal_assembler>Atomic Converter</entityname.thal_assembler>
+  <entitydescription.thal_assembler>Handheld subatomic fabricator capable of assembling complex devices. Requires insertion of a Schematic and a material specified by the Schematics' description.</entitydescription.thal_assembler>
+  
+  <entityname.thal_constructor>Universal Constructor</entityname.thal_constructor>
+  <entitydescription.thal_constructor>Attatchable fabricator with the potential to 3D print extremely complex machinery with quantum manipulation capabilities.</entitydescription.thal_constructor>
+  
+  <entityname.thal_recipeconstructor>Schematic: Universal Constructor</entityname.thal_recipeconstructor>
+  <entitydescription.thal_recipeconstructor>Datachip containing fabrication instructions for the assembly of a Universal Constructor, a device capable of creating items allowing access to the upper echelons of science.
+  Insert into: Atomic Assembler
+  Alongside a: Titanium-Aluminum Bar</entitydescription.thal_recipeconstructor>
+  
+  <entityname.thal_recipeplanter>Schematic: Small Planter Box</entityname.thal_recipeplanter>
+  <entitydescription.thal_recipeplanter>Datachip containing fabrication instructions for the assembly of a Universal Constructor, a device capable of creating items allowing access to the upper echelons of science.
+  Insert into: Atomic Assembler
+  Alongside a: Metal Crate</entitydescription.thal_recipeplanter>
+  
+  <entityname.thal_recipefumigator>Schematic: Fumigator</entityname.thal_recipefumigator>
+  <entitydescription.thal_recipefumigator>Datachip containing fabrication instructions for the assembly of a Fumigator, a device capable of ejecting pressurized gasses.
+  Insert into: Atomic Assembler
+  Alongside a: Welding Tool</entitydescription.thal_recipefumigator>
+  
+  <entityname.thal_recipebotanistmask>Schematic: Respirator</entityname.thal_recipebotanistmask>
+  <entitydescription.thal_recipebotanistmask>Datachip containing fabrication instructions for the assembly of an Aerosol Respirator, a device capable of filtering out toxic gasses.
+  Insert into: Atomic Assembler
+  Alongside a: Diving Mask</entitydescription.thal_recipebotanistmask>
+  
+  <entityname.thal_recipedischarger>Schematic: Discharger</entityname.thal_recipedischarger>
+  <entitydescription.thal_recipedischarger>Datachip containing fabrication instructions for the assembly of a Discharger, a weak rechargeable pistol.
+  Insert into: Atomic Assembler
+  Alongside a: Handheld Sonar</entitydescription.thal_recipedischarger>
+  
+  <entityname.thal_recipefungicide>Schematic: Fungicide</entityname.thal_recipefungicide>
+  <entitydescription.thal_recipefungicide>Datachip containing fabrication instructions for the assembly of an Aerosol Fungicide Cylinder, a pressurized fumigator cylinder for stopping mushroom outbreaks.
+  Insert into: Atomic Assembler
+  Alongside a: Ramblin Evil Seed</entitydescription.thal_recipefungicide>
+  
+  <entityname.thal_cylinderspore>Ramblin Spore Cylinder</entityname.thal_cylinderspore>
+  <entitydescription.thal_cylinderspore>Pressurized gas cylinder containing particle spores for Ramblin Evil Mushrooms. Avoid dropping.</entitydescription.thal_cylinderspore>
+  
+  <entityname.thal_cylinderlaughing>Nitrous Oxide Cylinder</entityname.thal_cylinderlaughing>
+  <entitydescription.thal_cylinderlaughing>Pressurized gas cylinder containing Nitrous Oxide, a commonplace gas with analgesic effects stemming from deprivation of oxygen to the brain. Avoid dropping.</entitydescription.thal_cylinderlaughing>
+  
+  <entityname.thal_cylindershroomcure>Aerosol Fungicide Cylinder</entityname.thal_cylindershroomcure>
+  <entitydescription.thal_cylindershroomcure>Pressurezed gas cylinder containing vaporized Anti-Mycelium. Kills Ramblin Mushrooms and disinfect victims of mushroomization.</entitydescription.thal_cylindershroomcure>
+  
+  <entityname.thal_cylinderteargas>CS Gas Cylinder</entityname.thal_cylinderteargas>
+  <entitydescription.thal_cylinderteargas>Pressurized gas cylinder containing 2-chlorobenzalmalononitrile modified to serve as an airborne irritant. If the gas makes contact with eyes it will result in temporary irritation and blindness. Useful for self defense.</entitydescription.thal_cylinderteargas>
+  
+  <entityname.thal_hydrophonicsign>Hydrophonic Hazard Sign</entityname.thal_hydrophonicsign>
+  <entitydescription.thal_hydrophonicsign>A sign that can be dropped on the floor or attatched to a wall in order to indicate an area of botanical hazard ranging from exploding pomegrenades to infectious spores.</entitydescription.thal_hydrophonicsign>
+  
+  <entityname.thal_botanistbook>Botanist's Almanac</entityname.thal_botanistbook>
+  <entitydescription.thal_botanistbook>Book detailing the care of various crops and plants capable of being grown by the botanist.</entitydescription.thal_botanistbook>
+  
+  <entityname.thal_discourager>Static Discourager</entityname.thal_discourager>
+  <entitydescription.thal_discourager>Self defense weapon that administers a controlled shock, which disrupts the nervous system. The lack of complete incapacitation makes it an ideal weapon for self defense.</entitydescription.thal_discourager>
+  
+    <entityname.thal_cultistbook>Abridged Necronomicon</entityname.thal_cultistbook>
+  <entitydescription.thal_cultistbook>Book detailing the basics of the cultist role. Hold to read, type in the topmost bar to navigate.</entitydescription.thal_cultistbook>
+  
+  <entityname.thal_singularity>Singularity</entityname.thal_singularity>
+  <entitydescription.thal_singularity>Horrific gravitational anamoly that grows the more characters are sucked into it.</entitydescription.thal_singularity>
+  
+  <entityname.thal_secondchance>Phoenix Injector</entityname.thal_secondchance>
+  <entitydescription.thal_secondchance>A steroidal epinephrine solution rigged to automatically inject when in the hotbar of a critically injured person. Going critical with this in your hotbar revives you temporarily, allowing you to seek medical aide.</entitydescription.thal_secondchance>
+  
+  <entityname.thal_geneticinit>CRISPR-Cas9 Solution</entityname.thal_geneticinit>
+  <entitydescription.thal_geneticinit>Syringe containing extracellular fluid that targets certain genes in DNA using CRISPR, and cleaves them using the Cas9 enzyme to induce genetic plasticity. After application, DNA grafts can be injected into patients for easy DNA splicing, but prolonged inaction could be disastrous. The longer the patient is in 'meltdown', the more unintended genetic oddities they may gain.</entitydescription.thal_geneticinit>
+  
+  <entityname.thal_geneticgraft>DNA Grafter</entityname.thal_geneticgraft>
+  <entitydescription.thal_geneticgraft>Syringe which DNA samples can be inserted into. When injected into someone undergoing a CRISPR-Cas9 induced meltdown, this attatches the DNA to the cut sections, resulting in en vivo gene splicing.</entitydescription.thal_geneticgraft>
+  
+  <entityname.thal_dnamudraptor>Mudraptor DNA</entityname.thal_dnamudraptor>
+  <entitydescription.thal_dnamudraptor> Complete genetic sequence of the standard Europan Mudraptor. Can be used to develop anti-Mudraptor technologies, or in DNA grafts for gene splicing. </entitydescription.thal_dnamudraptor>
+  
+  <entityname.thal_dnacrawler>Crawler DNA</entityname.thal_dnacrawler>
+  <entitydescription.thal_dnacrawler> Complete genetic sequence of the standard Europan Crawler. Can be used to develop anti-crawler technologies, or in DNA grafts for gene splicing. </entitydescription.thal_dnacrawler>
   
 </infotexts>

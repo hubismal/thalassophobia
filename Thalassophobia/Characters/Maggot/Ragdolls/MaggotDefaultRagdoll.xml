@@ -1,0 +1,39 @@
+﻿<Ragdoll type="Hammerheadspawn" canentersubmarine="True" spritesheetorientation="90" limbscale="0.3071" jointscale="0.3071" texturescale="1" colliderheightfromfloor="45" impacttolerance="20" canwalk="False" draggable="True" mainlimb="Torso" texture="Mods/Thalassophobia/Characters/Maggot/Maggot.png">
+  <collider radius="0" width="75" name="Main Collider" height="200" />
+  <limb id="1" name="Head" type="Head" height="70" width="90" notes="" spriteorientation="NaN" flip="True" mirrorvertically="False" mirrorhorizontally="False" hide="False" attackpriority="1" steerforce="5" radius="0" density="10" ignorecollisions="False" angulardamping="7" pullpos="0,0" stepoffset="0,0" refjoint="-1" mouthpos="0,0" healthindex="0" friction="0.3" restitution="0.05" constanttorque="0" constantangle="0" scale="1" attackforcemultiplier="1" minseverancedamage="1" severedfadeouttime="10" applytailangle="False" sinefrequencymultiplier="1" sineamplitudemultiplier="1" blinkfrequency="0" blinkdurationin="0.2" blinkdurationout="0.5" blinkholdtime="0" blinkrotationin="0" blinkrotationout="45" blinkforce="50" blinktransitionin="Linear" blinktransitionout="Linear">
+    <deformablesprite texture="" sourcerect="231,1,67,110" origin="0.6065492,0.47160232" depth="0" subdivisions="3,3" color="255,255,255,255" deadcolor="255,255,255,255" deadcolortime="0">
+      <spritedeformation type="bendjoint" resolution="3,3" multiplier="1.0" sync="-1" typename="bendjoint" blendmode="Add" usemovementsine="False" stopwhenhostisdead="False" sineoffset="0" maxrotation="30" strength="1" onlyinwater="False" />
+    </deformablesprite>
+    <attack context="Any" cooldown="5" range="200" damagerange="100" duration="0.5" structuredamage="0" itemdamage="0" structuresoundtype="StructureSlash" targetimpulse="0" targetimpulseworld="0,0" severlimbsprobability="0.0" force="5" rootforceworldstart="2,0" rootforceworldmiddle="2,0" rootforceworldend="2,0" roottransitioneasing="Smooth" applyforceonlimbs="0, 1, 15, 11" torque="20" hitdetectiontype="Distance" onlyhumans="False" targetforce="20" targetforceworld="0,-15" priority="1" targettype="Character" secondarycooldown="0.01" applyforcesonlyonce="True" stickchance="0" cooldownrandomfactor="0.25" afterattack="PursueIfCanAttack" reverse="False" targetlimbtype="Torso" retreat="False" afterattackdelay="0" stun="0" fullspeedafterattack="False" levelwalldamage="0" ranged="False" avoidfriendlyfire="False" requiredangle="20">
+      <Affliction identifier="stun" strength="1.5" probability="1" />
+      <Affliction identifier="bitewounds" strength="1" probability="1" />
+      <StatusEffect type="OnUse" target="Character" setvalue="true" Isdead="false">
+        <Conditional IsDead="true" />
+        <ReduceAffliction identifier="damage" strength="1000" />
+        <ReduceAffliction identifier="bloodloss" strength="1000" />
+        <Affliction identifier="thal_maggotinfection" strength="10000" />
+        <Affliction identifier="stun" strength="10" />
+      </StatusEffect>
+      <StatusEffect type="OnUse" target="Character" setvalue="true" Isdead="true" delay="0.5">
+        <Conditional IsDead="true" />
+        <Affliction identifier="thal_maggotinfection" strength="10000" />
+      </StatusEffect>
+      <StatusEffect type="OnUse" target="Character" setvalue="true" Isdead="false" delay="1.0">
+        <Conditional IsDead="true" />
+        <Affliction identifier="thal_maggotinfection" strength="10000" />
+      </StatusEffect>
+    </attack>
+  </limb>
+  <limb id="0" name="Torso" type="Torso" height="80" width="100" notes="" spriteorientation="NaN" flip="True" mirrorvertically="False" mirrorhorizontally="False" hide="False" attackpriority="1" steerforce="0" radius="0" density="10" ignorecollisions="False" angulardamping="7" pullpos="0,0" stepoffset="0,0" refjoint="-1" mouthpos="0,0" healthindex="0" friction="0.3" restitution="0.05" constanttorque="0" constantangle="0" scale="1" attackforcemultiplier="1" minseverancedamage="1" severedfadeouttime="10" applytailangle="False" sinefrequencymultiplier="1" sineamplitudemultiplier="1" blinkfrequency="0" blinkdurationin="0.2" blinkdurationout="0.5" blinkholdtime="0" blinkrotationin="0" blinkrotationout="45" blinkforce="50" blinktransitionin="Linear" blinktransitionout="Linear">
+    <deformablesprite texture="" sourcerect="107,0,126,110" origin="0.5261504,0.50615096" depth="0" subdivisions="3,3" color="255,255,255,255" deadcolor="255,255,255,255" deadcolortime="0">
+      <spritedeformation type="bendjoint" resolution="3,3" multiplier="1.0" sync="-1" typename="bendjoint" blendmode="Add" usemovementsine="False" stopwhenhostisdead="False" sineoffset="5" maxrotation="30" strength="1" onlyinwater="False" />
+    </deformablesprite>
+  </limb>
+  <limb id="2" name="Tail" type="Tail" width="160" height="50" spriteorientation="NaN" flip="True" mirrorvertically="False" mirrorhorizontally="False" hide="False" attackpriority="1" steerforce="0" radius="0" density="10" ignorecollisions="False" angulardamping="7" pullpos="0,0" stepoffset="0,0" refjoint="-1" mouthpos="0,0" notes="" healthindex="0" friction="0.3" restitution="0.05" constanttorque="0" constantangle="0" scale="1" attackforcemultiplier="1" minseverancedamage="1" severedfadeouttime="10" applytailangle="False" sinefrequencymultiplier="1" sineamplitudemultiplier="1" blinkfrequency="0" blinkdurationin="0.2" blinkdurationout="0.5" blinkholdtime="0" blinkrotationin="0" blinkrotationout="45" blinkforce="50" blinktransitionin="Linear" blinktransitionout="Linear">
+    <deformablesprite texture="" sourcerect="2,2,108,113" origin="0.35587764,0.48693284" depth="0" subdivisions="3,3" color="255,255,255,255" deadcolor="255,255,255,255" deadcolortime="0">
+      <spritedeformation type="bendjoint" resolution="3,3" multiplier="1.0" sync="-1" typename="bendjoint" blendmode="Add" usemovementsine="False" stopwhenhostisdead="False" sineoffset="0" maxrotation="30" strength="1" onlyinwater="False" />
+    </deformablesprite>
+  </limb>
+  <joint limb1="1" limb2="0" limb1anchor="-43.16693,-0.8315565" limb2anchor="51.36745,-0.6573032" name="Joint 1 - 0" canbesevered="False" limitenabled="True" upperlimit="30" lowerlimit="-30" stiffness="0.25" severanceprobabilitymodifier="1" scale="1" breaksound="gore" weldjoint="False" clockwiserotation="False" />
+  <joint limb1="0" limb2="2" limb1anchor="-61.19426,-2.871144" limb2anchor="65.26091,-1.740783" name="Joint 0 - 2" canbesevered="False" limitenabled="True" upperlimit="30" lowerlimit="-30" stiffness="0.25" severanceprobabilitymodifier="1" scale="1" breaksound="gore" weldjoint="False" clockwiserotation="False" />
+</Ragdoll>

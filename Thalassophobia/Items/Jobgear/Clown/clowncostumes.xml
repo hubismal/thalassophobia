@@ -9,10 +9,10 @@
     <Item identifier="bikehorn" />
   </Deconstruct>
   <Wearable slots="Any,InnerClothes" msg="ItemMsgPickUpSelect">
-		<StatusEffect type="OnWearing" target="Character" HideFace="true" ObstructVision="true" SpeedMultiplier="0.6" LowPassMultiplier="0.1" setvalue="true" disabledeltatime="true">
-        <Sound file="Content/Items/Diving/DivingSuitLoop1.ogg" range="500" />
-      </StatusEffect>
-    <sprite name="Husk Costume Head" texture="Content/Items/Jobgear/headgears.png" sourcerect="104,4,96,96" depth="0.1" origin="0.5,0.5" hidelimb="true" hideotherwearables="true" inherittexturescale="true"  />
+    <StatusEffect type="OnWearing" target="Character" HideFace="true" ObstructVision="true" SpeedMultiplier="0.6" LowPassMultiplier="0.1" setvalue="true" disabledeltatime="true">
+      <Sound file="Content/Items/Diving/DivingSuitLoop1.ogg" range="500" />
+    </StatusEffect>
+    <sprite name="Husk Costume Head" texture="Content/Items/Jobgear/headgears.png" sourcerect="104,4,96,96" depth="0.1" origin="0.5,0.5" hidelimb="true" hideotherwearables="true" inherittexturescale="true" />
     <sprite name="Husk Costume Torso" limb="Torso" hidelimb="true" texture="Content/Characters/Husk/DivingSuit_TorsoHusk.png" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
     <sprite name="Husk Costume Right Lower Arm" limb="RightHand" hidelimb="true" texture="Content/Characters/Husk/DivingSuit_TorsoHusk.png" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
     <sprite name="Husk Costume Left Lower Arm" limb="LeftHand" hidelimb="true" texture="Content/Characters/Husk/DivingSuit_TorsoHusk.png" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
@@ -24,7 +24,7 @@
     <sprite name="Husk Costume Right Leg" texture="Content/Characters/Husk/DivingSuit_LegsHusk.png" limb="RightLeg" hidelimb="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
     <sprite name="Husk Costume Left Leg" texture="Content/Characters/Husk/DivingSuit_LegsHusk.png" limb="LeftLeg" hidelimb="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" sourcerect="0,0,256,256" origin="0.5,0.5" />
     <sprite name="Husk Costume Right Shoe" texture="Content/Characters/Husk/DivingSuit_LegsHusk.png" limb="RightFoot" sound="footstep_armor" hidelimb="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
-    <sprite name="Husk Costume Left Shoe" texture="Content/Characters/Husk/DivingSuit_LegsHusk.png" limb="LeftFoot" sound="footstep_armor" hidelimb="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true"/>
+    <sprite name="Husk Costume Left Shoe" texture="Content/Characters/Husk/DivingSuit_LegsHusk.png" limb="LeftFoot" sound="footstep_armor" hidelimb="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
     <!-- HENK -->
     <damagemodifier afflictiontypes="damage" armorsector="0.0,360.0" damagesound="LimbClown" />
     <damagemodifier afflictiontypes="damage" armorsector="0.0,360.0" damagesound="LimbClown" />
