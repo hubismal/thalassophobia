@@ -2,6 +2,8 @@
   <ragdolls folder="default" />
   <animations folder="default" />
   <huskappendage affliction="thal_meltdownhead" path="Mods/Thalassophobia/Characters/Gummy/Gummyhead.xml" />
+  <huskappendage affliction="thal_meltdowntorso" path="Mods/Thalassophobia/Characters/Gummy/Gummyhead.xml" />
+  <huskappendage affliction="thal_meltdownlimbs" path="Mods/Thalassophobia/Characters/Gummy/Gummyhead.xml" />
   <huskappendage affliction="thal_mudraptorhead" path="Mods/Thalassophobia/Characters/Gummy/GeneLimbs/Mudraptorhead.xml" />
   <huskappendage affliction="thal_mudraptortorso" path="Mods/Thalassophobia/Characters/Gummy/GeneLimbs/Mudraptortorso.xml" />
   <bloodemitter particle="blackblood" particleamount="5" anglemin="0" anglemax="0" scalemin="1" scalemax="1" velocitymin="0" velocitymax="0" emitinterval="0" particlespersecond="0" highqualitycollisiondetection="False" copyentityangle="False" />

@@ -1,15 +1,16 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <huskappendage>
-  <limb id="13" width="100" height="140" name="ChestArmor" type="None" spriteorientation="NaN" flip="True" mirrorvertically="False" mirrorhorizontally="False" hide="False" attackpriority="0" steerforce="0" radius="0" density="0.1" ignorecollisions="False" angulardamping="7" pullpos="0,0" stepoffset="0,0" refjoint="-1" mouthpos="0,0" notes="" constanttorque="0" constantangle="0" scale="1" attackforcemultiplier="1" minseverancedamage="0.8" healthindex="1" friction="0.3" restitution="0.05" severedfadeouttime="0" applytailangle="False" applysinemovement="True">
-    <sprite texture="Content/Characters/Mudraptor/Mudraptor.png" sourcerect="761,176,251,171" origin="0.5179283,0.5497076" depth="0.9" color="255,255,255,255" deadcolor="255,255,255,255" deadcolortime="0" />
-    <damagemodifier armorsector="0,360" afflictiontypes="damage" damagemultiplier="0.1" damagesound="LimbArmor" damageparticle="brownchunks" deflectprojectiles="True" afflictionidentifiers="" probabilitymultiplier="1" />
+  <limb id="13" width="60" height="100" name="ChestArmor" type="None" spriteorientation="NaN" flip="True" mirrorvertically="False" mirrorhorizontally="False" hide="False" attackpriority="0" steerforce="0" radius="0" density="0.1" ignorecollisions="False" angulardamping="7" pullpos="0,0" stepoffset="0,0" refjoint="-1" mouthpos="0,0" notes="" constanttorque="0" constantangle="0" scale="0.7" attackforcemultiplier="1" minseverancedamage="0.8" healthindex="1" friction="0.3" restitution="0.05" severedfadeouttime="0" applytailangle="False" applysinemovement="True">
+    <sprite texture="Mods/Thalassophobia/Characters/Gummy/GeneLimbs/Mudraptor.png" sourcerect="190,10,155,249" origin="0.5,0.5" depth="0.9" color="255,255,255,255" deadcolor="255,255,255,255" deadcolortime="0" />
+    <damagemodifier armorsector="0,360" afflictiontypes="damage" damagemultiplier="0" damagesound="LimbArmor" damageparticle="brownchunks" deflectprojectiles="True" afflictionidentifiers="" probabilitymultiplier="1" />
     <damagemodifier armorsector="0,360" afflictiontypes="bleeding" damagemultiplier="0" damagesound="LimbArmor" deflectprojectiles="True" afflictionidentifiers="" probabilitymultiplier="1" damageparticle="" />
     <StatusEffect type="OnSevered" target="This">
       <particleemitter particle="brownchunks" drawontop="true" particleamount="40" velocitymin="100" velocitymax="500" anglemin="0" anglemax="360" scalemin="0.1" scalemax="0.4" />
     </StatusEffect>
   </limb>
+  <!-- remove appendages for now (collision issues)
   <limb id="14" width="100" height="0" name="AppendageBack" type="None" spriteorientation="90" flip="True" mirrorvertically="False" mirrorhorizontally="False" hide="False" attackpriority="0" steerforce="0" radius="30" density="0.1" ignorecollisions="False" angulardamping="140" pullpos="0,0" stepoffset="0,0" refjoint="-1" mouthpos="0,0" notes="" constanttorque="0" constantangle="0" scale="1" attackforcemultiplier="1" minseverancedamage="0.8" healthindex="1" friction="0.3" restitution="0.05" severedfadeouttime="0" applytailangle="False" applysinemovement="True">
-    <sprite texture="Content/Characters/Mudraptor/Mudraptor.png" sourcerect="777,13,174,69" origin="0.5,0.5" depth="0.9" color="255,255,255,255" deadcolor="255,255,255,255" deadcolortime="0" />
+    <sprite texture="Mods/Thalassophobia/Characters/Gummy/GeneLimbs/Mudraptor.png" sourcerect="777,13,174,69" origin="0.5,0.5" depth="0.9" color="255,255,255,255" deadcolor="255,255,255,255" deadcolortime="0" />
     <damagemodifier armorsector="0,360" afflictiontypes="damage" damagemultiplier="0.1" damagesound="LimbArmor" damageparticle="brownchunks" deflectprojectiles="True" afflictionidentifiers="" probabilitymultiplier="1" />
     <damagemodifier armorsector="0,360" afflictiontypes="bleeding" damagemultiplier="0" damagesound="LimbArmor" deflectprojectiles="True" afflictionidentifiers="" probabilitymultiplier="1" damageparticle="" />
     <StatusEffect type="OnSevered" target="This">
@@ -17,16 +18,14 @@
     </StatusEffect>
   </limb>
   <limb id="15" width="120" height="0" name="AppendageFront" type="None" spriteorientation="NaN" flip="True" mirrorvertically="False" mirrorhorizontally="False" hide="False" attackpriority="0" steerforce="0" radius="30" density="0.1" ignorecollisions="False" angulardamping="140" pullpos="0,0" stepoffset="0,0" refjoint="-1" mouthpos="0,0" notes="" constanttorque="0" constantangle="0" scale="1" attackforcemultiplier="1" minseverancedamage="0.8" healthindex="1" friction="0.3" restitution="0.05" severedfadeouttime="0" applytailangle="False" applysinemovement="True">
-    <sprite texture="Content/Characters/Mudraptor/Mudraptor.png" sourcerect="777,105,205,72" origin="0.5,0.5" depth="1.0" color="255,255,255,255" deadcolor="255,255,255,255" deadcolortime="0" />
+    <sprite texture="Mods/Thalassophobia/Characters/Gummy/GeneLimbs/Mudraptor.png" sourcerect="777,105,205,72" origin="0.5,0.5" depth="1.0" color="255,255,255,255" deadcolor="255,255,255,255" deadcolortime="0" />
     <damagemodifier armorsector="0,360" afflictiontypes="damage" damagemultiplier="0.1" damagesound="LimbArmor" damageparticle="brownchunks" deflectprojectiles="True" afflictionidentifiers="" probabilitymultiplier="1" />
     <damagemodifier armorsector="0,360" afflictiontypes="bleeding" damagemultiplier="0" damagesound="LimbArmor" deflectprojectiles="True" afflictionidentifiers="" probabilitymultiplier="1" damageparticle="" />
     <StatusEffect type="OnSevered" target="This">
       <particleemitter particle="brownchunks" drawontop="true" particleamount="20" velocitymin="100" velocitymax="500" anglemin="0" anglemax="360" scalemin="0.1" scalemax="0.3" />
     </StatusEffect>
-  </limb>
+  </limb>-->
   <!-- Head to husk appendage -->
-  <joint name="Torso to Mudraptor Armor Append" limb1="1" limb2="13" limb1anchor="3,-5" limb2anchor="-2,0" upperlimit="0" weldjoint="true" lowerlimit="-10" canbesevered="False" limitenabled="True" />
-  <joint limb1="1" limb2="14" limb1anchor="-48,-25" limb2anchor="-53, -32" name="Joint Jaw" canbesevered="True" severanceprobabilitymodifier="0.5" breaksound="gore" limitenabled="True" upperlimit="12" lowerlimit="-15" stiffness="0.25" scale="1" weldjoint="False" clockwiserotation="False" />
-  <joint limb1="1" limb2="15" limb1anchor="8,19" limb2anchor="-5,0" name="Joint Head - Armor" canbesevered="True" severanceprobabilitymodifier="2" breaksound="armorbreak" limitenabled="True" upperlimit="0" lowerlimit="0" stiffness="0.25" scale="1" weldjoint="True" clockwiserotation="False" />
+  <joint name="Torso to Mudraptor Armor Append" limb1="1" limb2="13" limb1anchor="-6,-4" limb2anchor="1,-1" upperlimit="90" weldjoint="true" lowerlimit="-90" canbesevered="False" limitenabled="True" />
 
 </huskappendage>
