@@ -205,6 +205,7 @@
     </MotionSensor>
     <ItemContainer capacity="1" canbeselected="false" hideitems="true" slotsperrow="5" drawinventory="false">
       <ContainedStateIndicator texture="Content/UI/ContainerIndicators.png" sourcerect="1,70,1,1" />
+      <Containable items="bikehorn" />
     </ItemContainer>
     <Throwable slots="Any,RightHand,LeftHand" holdpos="0,0" handle1="0,0" aimpos="-30,-40" throwpos="30,40" throwforce="1.5" msg="ItemMsgPickUpSelect">
       <Sprite name="Banana Peel Throwable" texture="Mods/Thalassophobia/Items/Jobgear/Clown/clown.png" sourcerect="156,157,80,102" depth="0.6" origin="0.5,0.5" />

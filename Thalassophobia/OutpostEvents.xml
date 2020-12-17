@@ -318,7 +318,7 @@
                         <Option text="Donate 1000 Marks">
                           <GoTo name="donatethousand" />
                         </Option>
-                        <Option text="“Actually, I change my mind, sorry.“">
+                        <Option text="“Actually, I change my mind, sorry.“" endconversation="true" >
                           <ReputationAction targettype="Faction" identifier="thal_ues" increase="-1" />
                         </Option>
                         <Option text="[Armed] “How about you make a contribution to me, instead?“">
@@ -328,12 +328,12 @@
                               <ReputationAction targettype="Faction" identifier="thal_ues" increase="-10" />
                               <MoneyAction amount="400" />
                               <ConversationAction targettag="triggerer_player" text="They back away, astonished. “You... You know this is a one way transfer device, right? It doesn't contain any... a-actual currency... Forget it! Y-You can have 400 Marks, it's all I have in my personal account, I swear!“ They give you the marks and back off.">
-                                <Option text="Recieve 400 Marks."></Option>
+                                <Option text="Recieve 400 Marks." endconversation="true"  ></Option>
                               </ConversationAction>
                             </Success>
                             <Failure>
                               <ConversationAction targettag="triggerer_player" text="They back off, astonished. “You goddamn idiot, you know this is a one way currency transfer device, right? I don't have any physical currency, I'm not a panhandler. You just messed with the wrong one!“ You see them reach behind into their clothing for something. Get ready!">
-                                <Option text="Fight.">
+                                <Option text="Fight." endconversation="true" >
                                   <CombatAction combatmode="defensive" npctag="uesmember" enemytag="triggerer_player" />
                                 </Option>
                               </ConversationAction>
@@ -386,18 +386,18 @@
                           </CheckDataAction>
                           <ConversationAction targettag="triggerer_player" text="You transfer 1000 Marks to the UES. They look flabbergast. “You're serious? I can't thank you enough... this is incredible! Thank you so, so much. We won't forget this.“" />
                         </Option>
-                        <Option text="“Actually, I change my mind, sorry.“">
+                        <Option text="“Actually, I change my mind, sorry.“" endconversation="true" >
                           <ReputationAction targettype="Faction" identifier="thal_ues" increase="-1" />
                         </Option>
                       </ConversationAction>
                     </Failure>
                   </CheckItemAction>
                 </Option>
-                <Option text="“Sorry, maybe some other time.“">
+                <Option text="“Sorry, maybe some other time.“" endconversation="true" >
                   <ReputationAction targettype="Faction" identifier="thal_ues" increase="-1" />
                 </Option>
                 <Option text="“Aren't you guys a bunch of hippies?“">
-                  <ConversationAction targettag="triggerer_player" text="The UES member seems to be irked by your remark: “Um, yes, we oppose the conflict between the coalition and the seperatist forces, if that's what you mean. We believe that wartime has ravaged the average persons financial stability, and that arms manufacturing has hansomely paid many `friends` of the coalition and separatists alike. That's not what we spend our money on though, so I fail to see how that's relevant.“">
+                  <ConversationAction targettag="triggerer_player" text="The UES member is clearly irked by your remark: “We oppose the conflict between the coalition and the seperatist forces, if that's what you mean. It's out belief the conflict has done nothing but make a lot of marks for arms manufacturers, all while impovrishing the average colonist. Our donations are purely charitable, though.“">
                     <Option text="“I see.“">
                       <Goto name="donationprompt" />
                     </Option>
@@ -437,7 +437,7 @@
             </Option>
             <Option text="Politely indicate you have places to be.">
               <ConversationAction targettag="triggerer_player" text="They seem to understand. The mime waves goodbye and continues looking for other people to entertain.">
-                <Option text="Godspeed." />
+                <Option text="Godspeed." endconversation="true" />
               </ConversationAction>
             </Option>
           </ConversationAction>
@@ -515,7 +515,7 @@
                                 <Option text="Leave 10 Marks.">
                                   <ReputationAction targettype="Faction" identifier="clowns" increase="3" />
                                   <ConversationAction targettag="triggerer_player" text="The Mime nods at you gratefully.">
-                                    <Option text="Au revior." />
+                                    <Option text="Au revior." endconversation="true"  />
                                   </ConversationAction>
                                 </Option>
                                 <Option text="Depart." />
@@ -538,8 +538,8 @@
             </Success>
             <Failure>
               <!--reputation -100 to -40-->
-              <ConversationAction targettag="triggerer_player" text="They're staring right at you and they look visibly annoyed even being near you. Your crew really pissed off the clowns of Europa somewhere along the line! The mime picks up their briefcase and walks away. They don't want to perform for someone with as stiff and upper-lip as you.">
-                <Option text="Oh well.">
+              <ConversationAction targettag="triggerer_player" text="They're staring right at you and it's apparent they don't want to hang around. Your crew really pissed off the clowns of Europa somewhere along the line! The mime picks up their briefcase and walks away. They don't want to perform for someone with as stiff and upper-lip as you.">
+                <Option text="Oh well." endconversation="true"  >
                   <ReputationAction targettype="Faction" identifier="clowns" increase="1" />
                 </Option>
                 <Option text="“That's right. Keep walking, you invisible wall humper.“">

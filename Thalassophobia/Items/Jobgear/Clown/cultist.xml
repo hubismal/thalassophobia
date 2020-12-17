@@ -114,6 +114,7 @@
       </StatusEffect>
     </LightComponent>
     <ItemContainer hideitems="true" capacity="0" drawinventory="false" canbeselected="false" ShowConditionInContainedStateIndicator="true">
+      <Containable items="youJustLostTheGame" />
       <!--looks like ass
       <ContainedStateIndicator texture="Mods/Thalassophobia/UI/ContainerIndicators.png" sourcerect="2,32,101,37" origin="0.5,0.5" />
       -->
