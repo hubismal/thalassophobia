@@ -14,7 +14,7 @@
 	<faction.thal_cartel.description>On Europa, where death is imminent, the immensely powerful cartel will meet the demand for narcotics from Europans who can't be quelled by alcohol. It is unknown if Cthonian refers to the rocky surface of Jupiter, bears reference to the lovecraftian monsters under the ice, or the 'underworld' from which the cartel originates. In some areas devoid of proper law and order, the cartel acts as a government due to its immense power.</faction.thal_cartel.description>
 	<faction.thal_cartel.shortdescription>Vicious cartel empowered by the need of the average stressed Europan for relief, preferrably the narcotic kind. In areas where government presence is limited, serve as the de-facto law.</faction.thal_cartel.shortdescription>
 	
-	<skillname.thal_scienceskill>Knowledge</skillname.thal_scienceskill>
+	<skillname.thal_scienceskill>Scientific Knowledge</skillname.thal_scienceskill>
 	<skillname.thal_clownskill>Tomfoolery</skillname.thal_clownskill>
 	<!-- Jobs -->
 	<jobname.thal_clown>Clown</jobname.thal_clown>

@@ -156,12 +156,18 @@
   <entitydescription.thal_clownseed>Funny smelling seed that grows into a Circusprig plant. The plant grows somewhat unpredictable produce, and has the tendency to leak seltzer water.</entitydescription.thal_clownseed>
   
   <entityname.thal_wheatseed>Wheat Seed</entityname.thal_wheatseed>
-  <entitydescription.thal_wheatseed>A wheat seed from Earth, genetically modified to grow more quickly in hydrophonic conditions. Essential for making flour.</entitydescription.thal_wheatseed>
+  <entitydescription.thal_wheatseed>A wheat seed from Earth, genetically modified to grow more quickly in hydroponic conditions. Essential for making flour.</entitydescription.thal_wheatseed>
+  
+  <entityname.thal_wheatseed>Wheat Seed</entityname.thal_wheatseed>
+  <entitydescription.thal_wheatseed>A wheat seed from Earth, genetically modified to grow more quickly in hydroponic conditions. Essential for making flour.</entitydescription.thal_wheatseed>
+  
+  <entityname.thal_wheat>Wheat</entityname.thal_wheat>
+  <entitydescription.thal_wheat>A bundle of wheat.</entitydescription.thal_wheat>
   
   <entityname.thal_sugarcane>Sugarcane</entityname.thal_sugarcane>
-  <entitydescription.thal_sugarcane>A slightly sweet tasting plant from earth, genetically modified to grow more quickly in hydrophonic conditions. Unlike many plants, sugarcane grows from itself instead of seeds.</entitydescription.thal_sugarcane>
+  <entitydescription.thal_sugarcane>A slightly sweet tasting plant from earth, genetically modified to grow more quickly in hydroponic conditions. Unlike many plants, sugarcane grows from itself instead of seeds.</entitydescription.thal_sugarcane>
   
-  <entityname.thal_botanistsuit>Hydrophonics Cleansuit</entityname.thal_botanistsuit>
+  <entityname.thal_botanistsuit>Hydroponics Cleansuit</entityname.thal_botanistsuit>
   <entitydescription.thal_botanistsuit>Lightweight suit designed for use handling volatile flora. Mildly resists burns and lacerations.</entitydescription.thal_botanistsuit>
   
   <entityname.thal_botanistmask>Aerosol Respirator</entityname.thal_botanistmask>
@@ -220,7 +226,7 @@
   <entityname.thal_cylinderteargas>CS Gas Cylinder</entityname.thal_cylinderteargas>
   <entitydescription.thal_cylinderteargas>Pressurized gas cylinder containing 2-chlorobenzalmalononitrile modified to serve as an airborne irritant. If the gas makes contact with eyes it will result in temporary irritation and blindness. Useful for self defense.</entitydescription.thal_cylinderteargas>
   
-  <entityname.thal_hydrophonicsign>Hydrophonic Hazard Sign</entityname.thal_hydrophonicsign>
+  <entityname.thal_hydrophonicsign>Hydroponic Hazard Sign</entityname.thal_hydrophonicsign>
   <entitydescription.thal_hydrophonicsign>A sign that can be dropped on the floor or attatched to a wall in order to indicate an area of botanical hazard ranging from exploding pomegrenades to infectious spores.</entitydescription.thal_hydrophonicsign>
   
   <entityname.thal_botanistbook>Botanist's Almanac</entityname.thal_botanistbook>
@@ -245,9 +251,12 @@
   <entitydescription.thal_geneticgraft>Syringe which DNA samples can be inserted into. When injected into someone undergoing a CRISPR-Cas9 induced meltdown, this attatches the DNA to the cut sections, resulting in en vivo gene splicing.</entitydescription.thal_geneticgraft>
   
   <entityname.thal_dnamudraptor>Mudraptor DNA</entityname.thal_dnamudraptor>
-  <entitydescription.thal_dnamudraptor> Complete genetic sequence of the standard Europan Mudraptor. Can be used to develop anti-Mudraptor technologies, or in DNA grafts for gene splicing. </entitydescription.thal_dnamudraptor>
+  <entitydescription.thal_dnamudraptor>Complete genetic sequence of the standard Europan Mudraptor. Can be used to develop anti-Mudraptor technologies, or in DNA grafts for gene splicing. </entitydescription.thal_dnamudraptor>
   
   <entityname.thal_dnacrawler>Crawler DNA</entityname.thal_dnacrawler>
-  <entitydescription.thal_dnacrawler> Complete genetic sequence of the standard Europan Crawler. Can be used to develop anti-crawler technologies, or in DNA grafts for gene splicing. </entitydescription.thal_dnacrawler>
+  <entitydescription.thal_dnacrawler>Complete genetic sequence of the standard Europan Crawler. Can be used to develop anti-crawler technologies, or in DNA grafts for gene splicing. </entitydescription.thal_dnacrawler>
+  
+  <entityname.thal_planter>Hydroponics Planter Box</entityname.thal_planter>
+  <entitydescription.thal_planter>An advanced planter box, designed for improved scientific measurement and botanical metrics analysis required by a botanist. Makes the difference between a hobbyist gardener and a true scientist. </entitydescription.thal_planter>
   
 </infotexts>
