@@ -1,11 +1,14 @@
 ﻿<Character speciesname="Gummy" group="human" humanoid="False" displayname="" hasinfo="False" husk="False" usehuskappendage="True" needsair="False" canspeak="False" noise="100" visibility="100" blooddecal="blood" eatingspeed="10" pathfinderpriority="1" needswater="False" bleedparticleair="blooddrop" bleedparticlewater="waterblood" hideinsonar="False" sonardisruption="0" speciestranslationoverride="">
   <ragdolls folder="default" />
   <animations folder="default" />
+  <!-- meltdown -->
   <huskappendage affliction="thal_meltdownhead" path="Mods/Thalassophobia/Characters/Gummy/Gummyhead.xml" />
   <huskappendage affliction="thal_meltdowntorso" path="Mods/Thalassophobia/Characters/Gummy/Gummyhead.xml" />
   <huskappendage affliction="thal_meltdownlimbs" path="Mods/Thalassophobia/Characters/Gummy/Gummyhead.xml" />
+  <!-- mudraptor -->
   <huskappendage affliction="thal_mudraptorhead" path="Mods/Thalassophobia/Characters/Gummy/GeneLimbs/Mudraptorhead.xml" />
   <huskappendage affliction="thal_mudraptortorso" path="Mods/Thalassophobia/Characters/Gummy/GeneLimbs/Mudraptortorso.xml" />
+  <huskappendage affliction="thal_mudraptorlimbs" path="Mods/Thalassophobia/Characters/Gummy/GeneLimbs/Mudraptorlimbs.xml" />
   <bloodemitter particle="blackblood" particleamount="5" anglemin="0" anglemax="0" scalemin="1" scalemax="1" velocitymin="0" velocitymax="0" emitinterval="0" particlespersecond="0" highqualitycollisiondetection="False" copyentityangle="False" />
   <bloodemitter particle="blackwaterblood" particleamount="1" anglemin="0" anglemax="0" scalemin="1" scalemax="1" velocitymin="0" velocitymax="0" emitinterval="0" particlespersecond="0" highqualitycollisiondetection="False" copyentityangle="False" />
   <gibemitter particle="heavygib" particleamount="10" velocitymin="50" velocitymax="500" anglemin="0" anglemax="360" scalemin="1" scalemax="1" emitinterval="0" particlespersecond="0" highqualitycollisiondetection="False" copyentityangle="False" />
@@ -22,15 +25,11 @@
     <target tag="jobid:thal_clown" state="Attack" priority="100" reactdistance="1000" attackdistance="0" timer="0" ignorecontained="False" ignoreinside="False" ignoreoutside="False" sweepdistance="0" sweepstrength="10" sweepspeed="1" />
   </ai>
   <inventory slots="Card, Head, Headset, InnerClothes, OuterClothes, LeftHand, RightHand,  Bag, Any, Any, Any, Any, Any, Any, Any, Any, Any, Any" accessiblewhenalive="False" commonness="1" />
-  <sound file="Mods/Thalassophobia/Characters/Humanapostle/Sounds/amb_idle01.ogg" state="Idle" range="800" volume="1" gender="None" />
-  <sound file="Mods/Thalassophobia/Characters/Humanapostle/Sounds/amb_idle02.ogg" state="Idle" range="800" volume="1" gender="None" />
-  <sound file="Mods/Thalassophobia/Characters/Humanapostle/Sounds/amb_idle03.ogg" state="Idle" range="800" volume="1" gender="None" />
-  <sound file="Mods/Thalassophobia/Characters/Humanapostle/Sounds/amb_idle04.ogg" state="Idle" range="800" volume="1" gender="None" />
-  <sound file="Mods/Thalassophobia/Characters/Humanapostle/Sounds/amb_idle05.ogg" state="Idle" range="800" volume="1" gender="None" />
-  <sound file="Mods/Thalassophobia/Characters/Humanapostle/Sounds/attack_claw01.ogg" state="Attack" range="800" volume="1" gender="None" />
-  <sound file="Mods/Thalassophobia/Characters/Humanapostle/Sounds/attack_claw02.ogg" state="Attack" range="800" volume="1" gender="None" />
-  <sound file="Mods/Thalassophobia/Characters/Humanapostle/Sounds/attack_claw03.ogg" state="Attack" range="800" volume="1" gender="None" />
-  <sound file="Mods/Thalassophobia/Characters/Humanapostle/Sounds/amb_hunt01.ogg" state="Damage" range="800" volume="1" gender="None" />
-  <sound file="Mods/Thalassophobia/Characters/Humanapostle/Sounds/amb_hunt02.ogg" state="Damage" range="800" volume="1" gender="None" />
-  <sound file="Mods/Thalassophobia/Characters/Humanapostle/Sounds/amb_hunt03.ogg" state="Damage" range="800" volume="1" gender="None" />
+  <sound file="Mods/Thalassophobia/Characters/Gummy/scream1.ogg" state="Die" range="800" volume="1" gender="None" />
+  <sound file="Mods/Thalassophobia/Characters/Gummy/scream2.ogg" state="Die" range="800" volume="1" gender="None" />
+  <sound file="Mods/Thalassophobia/Characters/Gummy/scream3.ogg" state="Idle" range="800" volume="1" gender="None" />
+  <sound file="Mods/Thalassophobia/Characters/Gummy/scream4.ogg" state="Idle" range="800" volume="1" gender="None" />
+  <StatusEffect target="Character,This" type="Always" delay="0.1" IsDead="true" >
+		<Affliction identifier="damage" amount="99999" />
+			</StatusEffect>
 </Character>

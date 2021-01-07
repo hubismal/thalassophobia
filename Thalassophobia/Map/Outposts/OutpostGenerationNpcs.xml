@@ -19,11 +19,8 @@
     </npc>
     <npc identifier="enforcer" job="securityofficer" spawnpointtags="security" healthmultiplier="2" behavior="Active">
       <ItemSet>
-        <Item identifier="securitypatrolclothes" equip="true" />
+        <Item identifier="securityuniform2" equip="true" />
         <Item identifier="idcard" equip="true" />
-        <Item identifier="stunbaton">
-          <Item identifier="batterycell" />
-        </Item>
         <Item identifier="handcuffs"/>
         <Item identifier="smg">
           <Item identifier="smgmagazine" />
@@ -31,49 +28,6 @@
         <Item identifier="smgmagazine" />
         <Item identifier="smgmagazine" />
         <Item identifier="divingknife" />
-        <Item identifier="bodyarmor" equip="true"/>
-        <Item identifier="thal_enforcerhelmet" equip="true"/>
-        <Item identifier="divingmask">
-          <Item identifier="oxygentank" />
-        </Item> 
-      </ItemSet>
-      <ItemSet>
-        <Item identifier="securitypatrolclothes" equip="true"/>
-        <Item identifier="idcard" equip="true"/>
-        <Item identifier="stungun">
-          <Item identifier="stungundart"/>
-        </Item>
-        <Item identifier="stunbaton">
-          <Item identifier="batterycell" />
-        </Item>
-        <Item identifier="stungundart"/>
-        <Item identifier="stungundart"/>
-        <Item identifier="divingknife" />
-        <Item identifier="handcuffs"/>
-        <Item identifier="antibleeding1"/>
-        <Item identifier="bodyarmor" equip="true"/>
-        <Item identifier="thal_enforcerhelmet" equip="true"/>
-        <Item identifier="divingmask">
-          <Item identifier="oxygentank" />
-        </Item> 
-      </ItemSet>
-      <ItemSet>
-        <Item identifier="securitypatrolclothes" equip="true"/>
-        <Item identifier="idcard" equip="true"/>
-        <Item identifier="stunbaton">
-          <Item identifier="batterycell" />
-        </Item>
-        <Item identifier="handcuffs"/>
-        <Item identifier="revolver" equip="false">
-          <Item identifier="revolverround"/>
-          <Item identifier="revolverround"/>
-          <Item identifier="revolverround"/>
-          <Item identifier="revolverround"/>
-          <Item identifier="revolverround"/>
-          <Item identifier="revolverround"/>
-        </Item>
-        <Item identifier="divingknife" />
-        <Item identifier="antibleeding1"/>
         <Item identifier="bodyarmor" equip="true"/>
         <Item identifier="thal_enforcerhelmet" equip="true"/>
         <Item identifier="divingmask">

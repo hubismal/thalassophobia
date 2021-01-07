@@ -114,14 +114,9 @@
             <RequiredItem items="incendiumfueltank" type="Contained" />
             <Affliction identifier="burn" amount="0.1" />
           </StatusEffect>
-          <StatusEffect type="OnWearing" target="Contained,Character" OxygenAvailable="1000.0" SpeedMultiplier="1.2" Condition="-0.3" comparison="Or">
+          <StatusEffect type="OnWearing" target="Contained,Character" OxygenAvailable="1000.0" Condition="-0.5" comparison="Or">
             <Conditional IsDead="false" />
-            <RequiredItem items="oxygeniteshard" type="Contained" />
-            <Sound file="Mods/Thalassophobia/Items/Jobgear/Enforcer/MaskBreath.ogg" range="50" loop="true" />
-          </StatusEffect>
-          <StatusEffect type="OnWearing" target="Contained,Character" OxygenAvailable="1500.0" SpeedMultiplier="1.3" Condition="-0.1" comparison="Or">
-            <Conditional IsDead="false" />
-            <RequiredItem items="oxygenitetank" type="Contained" />
+            <RequiredItem items="oxygenitetank,oxygeniteshard" type="Contained" />
             <Sound file="Mods/Thalassophobia/Items/Jobgear/Enforcer/MaskBreath.ogg" range="50" loop="true" />
           </StatusEffect>
           <LightTexture texture="Content/Lights/divinghelmetlight.png" origin="0.05, 0.5" size="1.0,1.0" />

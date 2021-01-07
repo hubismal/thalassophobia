@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<huskappendage>
+  <limb id="13" name="RightFoot" type="RightFoot" width="10" height="40" notes="" flip="True" healthindex="3" attackpriority="0.5" steerforce="0" stepoffset="10,-10" radius="10" mass="0" density="10" pullpos="-0.14543161,-6.254539" refjoint="4" ignorecollisions="True" friction="0.3" restitution="0.05" spriteorientation="270" mirrorvertically="False" mirrorhorizontally="False" hide="False" angulardamping="7" mouthpos="0,0" constanttorque="0" constantangle="0" scale="1" attackforcemultiplier="1" minseverancedamage="0.8" severedfadeouttime="10" applytailangle="False" applysinemovement="True">
+    <deformablesprite sourcerect="72,480,82,32" origin="0.4,0.3" depth="0.1" texture="Content/Characters/Mudraptor/Mudraptor.png" color="255,255,255,255" deadcolor="255,255,255,255" deadcolortime="0" />
+    <sound tag="footstep_mudraptor" />
+  </limb>
+  <limb id="14" name="RightFoot" type="RightFoot" width="10" height="40" notes="" flip="True" healthindex="3" attackpriority="0.5" steerforce="0" stepoffset="10,-10" radius="10" mass="0" density="10" pullpos="-0.14543161,-6.254539" refjoint="4" ignorecollisions="True" friction="0.3" restitution="0.05" spriteorientation="270" mirrorvertically="False" mirrorhorizontally="False" hide="False" angulardamping="7" mouthpos="0,0" constanttorque="0" constantangle="0" scale="1" attackforcemultiplier="1" minseverancedamage="0.8" severedfadeouttime="10" applytailangle="False" applysinemovement="True">
+    <deformablesprite sourcerect="72,480,82,32" origin="0.4,0.3" depth="0.1" texture="Content/Characters/Mudraptor/Mudraptor.png" color="255,255,255,255" deadcolor="255,255,255,255" deadcolortime="0" />
+    <sound tag="footstep_mudraptor" />
+  </limb>
+  
+  <!-- Feet appendage -->
+  <joint name="Torso to Mudraptor Armor Append" limb1="8" limb2="13" limb1anchor="-6,-4" limb2anchor="1,-1" upperlimit="90" weldjoint="false" lowerlimit="-90" canbesevered="False" limitenabled="True" />
+  <joint name="Torso to Mudraptor Armor Append" limb1="11" limb2="14" limb1anchor="-6,-4" limb2anchor="1,-1" upperlimit="90" weldjoint="false" lowerlimit="-90" canbesevered="False" limitenabled="True" />
+
+</huskappendage>

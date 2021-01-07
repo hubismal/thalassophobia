@@ -238,7 +238,7 @@
     <entityname.thal_cultistbook>Abridged Necronomicon</entityname.thal_cultistbook>
   <entitydescription.thal_cultistbook>Book detailing the basics of the cultist role. Hold to read, type in the topmost bar to navigate.</entitydescription.thal_cultistbook>
   
-  <entityname.thal_singularity>Singularity</entityname.thal_singularity>
+  <entityname.thal_singularity>Gravitational Singularity"</entityname.thal_singularity>
   <entitydescription.thal_singularity>Horrific gravitational anamoly that grows the more characters are sucked into it.</entitydescription.thal_singularity>
   
   <entityname.thal_secondchance>Phoenix Injector</entityname.thal_secondchance>
@@ -249,6 +249,12 @@
   
   <entityname.thal_geneticgraft>DNA Grafter</entityname.thal_geneticgraft>
   <entitydescription.thal_geneticgraft>Syringe which DNA samples can be inserted into. When injected into someone undergoing a CRISPR-Cas9 induced meltdown, this attatches the DNA to the cut sections, resulting in en vivo gene splicing.</entitydescription.thal_geneticgraft>
+  
+  <entityname.thal_dnascanner>DNA Scanner</entityname.thal_dnascanner>
+  <entitydescription.thal_dnascanner>A DNA scanner that collects DNA from the saliva molecules of living beings. Will not work on dead creatures. Requires power, and must be wired correctly in order to be properly used.</entitydescription.thal_dnascanner>
+  
+  <entityname.thal_dnahuman>Human DNA</entityname.thal_dnahuman>
+  <entitydescription.thal_dnahuman>Complete genetic sequence of the standard Homo Sapien. Can be used to develop anti-Humanoid technologies, or in DNA grafts for reverting humans back to normal. </entitydescription.thal_dnahuman>
   
   <entityname.thal_dnamudraptor>Mudraptor DNA</entityname.thal_dnamudraptor>
   <entitydescription.thal_dnamudraptor>Complete genetic sequence of the standard Europan Mudraptor. Can be used to develop anti-Mudraptor technologies, or in DNA grafts for gene splicing. </entitydescription.thal_dnamudraptor>

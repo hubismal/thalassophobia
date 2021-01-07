@@ -255,7 +255,7 @@
     </LightComponent>
   </Item>
   
-  <Item name="" identifier="thal_wheatseed" category="Material" Tags="smallitem,seed,plantitem" cargocontaineridentifier="metalcrate" scale="0.5" impactsoundtag="impact_soft" spritecolor="255,54,0,255">
+  <Item name="" identifier="thal_wheatseed" category="Material" Tags="smallitem,seed,plantitem" cargocontaineridentifier="metalcrate" scale="0.5" impactsoundtag="impact_soft" isshootable="true" requireaimtouse="false" >
     <Sprite texture="Content/Items/Gardening/GrowablePlants_Temp.png" depth="0.2" sourcerect="830,636,31,30" origin="0.5,0.5" />
     <!--<PreferredContainer primary="supplycab" minamount="0" maxamount="2" spawnprobability="0.25" />
     <PreferredContainer primary="wreckmedcab" minamount="0" maxamount="3" spawnprobability="0.5" />-->
@@ -268,11 +268,10 @@
     <Deconstruct time="30">
       <Item identifier="carbon" copycondition="true" mincondition="0.1" />
     </Deconstruct>
-    <Growable growthspeed="3" pickingtime="3" maximumvines="0" maxhealth="100" hardiness="0.175" floodtolerance="2.0" seedrate="0.1" productrate="0.5" flowertint="255,255,255,255" flowerquantity="0" baseflowerscale="0.5" vinescale="0.25" vinetint="244,220,140,255">
-      <ProducedItem identifier="yeastshroom" probability="0.1" />
-      <ProducedItem identifier="thal_sporeemitter" probability="0.8"></ProducedItem>
+    <Growable growthspeed="5" pickingtime="3" maximumvines="2" maxhealth="100" hardiness="0.175" floodtolerance="2.0" seedrate="0" productrate="0" flowertint="255,255,255,255" flowerquantity="1" baseflowerscale="0.5" vinescale="0.25" vinetint="244,220,140,255">
+      <ProducedItem identifier="yeastshroom" probability="0.0" />
       <VineSprites vineatlas="Content/Items/Gardening/branches.png" decayatlas="Content/Items/Gardening/branches_overlay.png">
-        <FlowerSprite name="shroomflower1" texture="Mods/Thalassophobia/Items/Gardening/GrowablePlants_Temp.png" sourcerect="142,33,100,100" origin="0.5,0.5" />
+        <FlowerSprite name="shroomflower1" texture="Mods/Thalassophobia/Items/Gardening/GrowablePlants_Temp.png" sourcerect="142,33,1,1" origin="0.5,0.5" />
         <VineSprite type="Stem" sourcerect="640,128,1,1" />
         <VineSprite type="CrossJunction" sourcerect="512,128,1,1" />
         <VineSprite type="VerticalLane" sourcerect="512,0,1,1" />
@@ -292,6 +291,22 @@
       </VineSprites>
     </Growable>
     <Body radius="15" density="12" />
-    <Holdable canBeCombined="false" slots="Any,RightHand,LeftHand" handle1="0,0" msg="ItemMsgPickUpSelect" />
+    <Holdable canBeCombined="false" slots="Any,RightHand,LeftHand" handle1="0,0" msg="ItemMsgPickUpSelect" >
+		</Holdable>
+  </Item>
+  
+  <Item name="wheatstalk" identifier="thal_wheatstalk" category="Material" Tags="smallitem,seed,plantitem,thal_produce" cargocontaineridentifier="metalcrate" scale="0.47" impactsoundtag="impact_soft" hideinmenus="true" noninteractable="true" isshootable="true" >
+		<Body radius="15" density="12" bodytype="Kinematic" />
+    <Sprite name="phase 1" texture="Mods/Thalassophobia/Items/Gardening/GrowableEarth.png" depth="0.8" sourcerect="0,0,120,160" origin="0.5,1.4" />
+    <BrokenSprite name="phase 1.5" texture="Mods/Thalassophobia/Items/Gardening/GrowableEarth.png" depth="0.8" sourcerect="0,0,120,160" origin="0.5,1.4" mincondition="75" maxcondition="99" />
+    <BrokenSprite name="phase 2" texture="Mods/Thalassophobia/Items/Gardening/GrowableEarth.png" sourcerect="120,0,120,160" origin="0.5,1.4" depth="0.8" mincondition="50" maxcondition="75" />
+    <BrokenSprite name="phase 3" texture="Mods/Thalassophobia/Items/Gardening/GrowableEarth.png" sourcerect="240,0,120,160" origin="0.5,1.4" depth="0.8" mincondition="25" maxcondition="50" />
+    <BrokenSprite name="phase 4" texture="Mods/Thalassophobia/Items/Gardening/GrowableEarth.png" sourcerect="360,0,120,160" origin="0.5,1.4" depth="0.8" mincondition="0" maxcondition="25" />
+    <BrokenSprite name="phase 5" texture="Mods/Thalassophobia/Items/Gardening/GrowableEarth.png" sourcerect="480,0,120,160" origin="0.5,1.4" depth="0.8" maxcondition="0" />
+    <ItemComponent>
+			<StatusEffect target="This" type="Always" condition="-10" >
+			
+			</StatusEffect>
+    </ItemComponent>
   </Item>
 </Items>

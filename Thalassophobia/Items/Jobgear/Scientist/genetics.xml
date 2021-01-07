@@ -1,5 +1,102 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Items>
+  <Item name="" identifier="thal_dnascanner" category="Machine" Tags="mediumitem,fireextinguisher,provocative" cargocontaineridentifier="metalcrate" description="" impactsoundtag="impact_metal_light" requireaimtouse="true" hideinmenus="false" scale="0.5" characterusable="false" damagedbyexplosions="true" explosiondamagemultiplier="0.8" canflipx="false">
+    <Sprite name="dna scanner" texture="Mods/Thalassophobia/Items/Jobgear/Scientist/science.png" sourcerect="5,265,261,113" depth="0.8" origin="0.5,0.5" />
+    <Body width="261" height="113" density="5"></Body>
+    <Holdable selectkey="Select" pickkey="Use" slots="Any,RightHand,LeftHand" msg="ItemMsgDetachWrench" PickingTime="10.0" aimpos="35,-10" handle1="0,0" attachable="true" attachedbydefault="true" aimable="true">
+      <requireditem identifier="wrench" type="Equipped" />
+    </Holdable>
+    <LightComponent lightcolor="0,100,100,100" range="1.0" castshadows="false" powerconsumption="5" allowingameediting="false">
+      <Sprite name="dna scanner text" texture="Mods/Thalassophobia/Items/Jobgear/Scientist/science.png" sourcerect="278,338,165,57" depth="0.8" origin="0.7332378,0.46395308" />
+      <LightSprite name="dna scan backlight" texture="Mods/Thalassophobia/Items/Jobgear/Scientist/science.png" sourcerect="273,266,171,69" depth="0.8" origin="0.74371487,0.49465847" />
+      <StatusEffect type="OnActive" target="This">
+        <UseItem />
+      </StatusEffect>
+      <StatusEffect type="OnActive" target="This" lightcolor="100,100,255,100">
+        <RequiredItem items="thal_dnamudraptor" type="Contained" />
+      </StatusEffect>
+      <StatusEffect type="OnActive" target="This" lightcolor="0,255,100,100">
+        <RequiredItem items="thal_dnahuman" type="Contained" />
+      </StatusEffect>
+      <StatusEffect type="OnActive" target="This" condition="-0.7" />
+    </LightComponent>
+    <ConnectionPanel selectkey="Action" canbeselected="true" msg="ItemMsgRewireScrewdriver" hudpriority="10">
+      <GuiFrame relativesize="0.2,0.32" minsize="400,350" maxsize="480,420" anchor="Center" style="ConnectionPanel" />
+      <RequiredItem items="screwdriver" type="Equipped" />
+      <input name="power" displayname="connection.power" />
+      <input name="toggle" displayname="connection.togglestate" />
+      <input name="set_state" displayname="connection.setstate" />
+    </ConnectionPanel>
+    <ItemContainer capacity="1" canbeselected="false" hideitems="true" slotsperrow="3" drawinventory="false" maxstacksize="1">
+      <GuiFrame relativesize="0.4,0.25" anchor="Center" minsize="140,170" maxsize="280,280" style="ItemUI" />
+    </ItemContainer>
+    <PowerContainer capacity="100.0" maxrechargespeed="0.0" maxoutput="0" canbeselected="false" indicatorposition="15,90" indicatorsize="150,15" indicatordepth="0.4" ishorizontal="true" msg="ItemMsgInteractSelect" charge="0">
+      <GuiFrame relativesize="0.25,0.23" minsize="350,200" anchor="Center" style="ItemUI" />
+      <!-- mudraptor scan logic -->
+      <!-- charge/buzz if muddna inside -->
+      <StatusEffect target="NearbyCharacters, This" type="OnUse" checkconditionalalways="true" stackable="false" range="400" charge="25" originalOutpost="mudraptor">
+        <Conditional HasStatusTag="thal_mudraptorscanned" />
+        <Sound file="Mods/Thalassophobia/Items/Electricity/Powersink.ogg" type="OnUse" range="500" />
+        <RequiredItem items="thal_dnamudraptor" type="Contained" />
+      </StatusEffect>
+      <!-- spawn muddna inside if detected -->
+      <StatusEffect target="NearbyCharacters, This" type="OnUse" checkconditionalalways="true" stackable="false" range="400" originalOutpost="mudraptor">
+        <Conditional HasStatusTag="thal_mudraptorscanned" />
+        <SpawnItem spawnposition="ThisInventory" identifier="thal_dnamudraptor" />
+      </StatusEffect>
+      <!-- human scan logic -->
+      <!-- charge/buzz if humdna inside -->
+      <StatusEffect target="NearbyCharacters, This" type="OnUse" checkconditionalalways="true" stackable="false" range="400" charge="25" originalOutpost="human">
+        <Conditional HasStatusTag="thal_humanscanned" />
+        <Sound file="Mods/Thalassophobia/Items/Electricity/Powersink.ogg" type="OnUse" range="500" />
+        <RequiredItem items="thal_dnahuman" type="Contained" />
+      </StatusEffect>
+      <!-- spawn humdna inside if detected -->
+      <StatusEffect target="NearbyCharacters, This" type="OnUse" checkconditionalalways="true" stackable="false" range="400" originalOutpost="human">
+        <Conditional HasStatusTag="thal_humanscanned" />
+        <SpawnItem spawnposition="ThisInventory" identifier="thal_dnahuman" />
+      </StatusEffect>
+      <StatusEffect target="This" type="OnUse" checkconditionalalways="true" stackable="false" charge="-20" originalOutpost="human"></StatusEffect>
+      <StatusEffect type="Always" targettype="Contained" targets="thal_dna" delay="1.0" stackable="false">
+        <Conditional ChargePercentage="lt 1" targetcontainer="true" targetitemcomponent="PowerContainer" />
+        <RemoveItem />
+      </StatusEffect>
+      <StatusEffect type="Always" target="This" charge="0" setvalue="true">
+        <RequiredItem items="thal_dnahuman" type="Contained" />
+        <Conditional ChargePercentage="gt 99" />
+        <SpawnItem identifier="thal_dnahuman" />
+        <sound file="Mods/Thalassophobia/Items/Jobgear/Scientist/Ding.ogg" range="600.0" loop="false" />
+      </StatusEffect>
+      <StatusEffect type="Always" target="This" charge="0" setvalue="true">
+        <RequiredItem items="thal_dnamudraptor" type="Contained" />
+        <Conditional ChargePercentage="gt 99" />
+        <SpawnItem identifier="thal_dnamudraptor" />
+        <sound file="Mods/Thalassophobia/Items/Jobgear/Scientist/Ding.ogg" range="600.0" loop="false" />
+      </StatusEffect>
+    </PowerContainer>
+    <RepairTool range="500" barrelpos="40,-50" repairthroughholes="true" characterusable="false" requireaimtouse="false" usablein="air" barrelrotation="270" powerconsumption="5">
+      <StatusEffect type="OnUse" target="UseTarget" stackable="false" delay="0.1">
+        <Conditional Stun="lt 1" />
+        <Affliction identifier="thal_scan" amount="5" />
+      </StatusEffect>
+      <ParticleEmitter particle="thal_grid" velocitymin="100.0" velocitymax="100.0" particlespersecond="10" colormultiplier="50,200,200,200" />
+      <sound file="Mods/Thalassophobia/Items/Jobgear/Scientist/scanner.ogg" type="OnUse" range="500.0" loop="true" />
+      <StatusEffect type="OnNotContained" target="This" setvalue="true" requireaimtouse="false"></StatusEffect>
+      <StatusEffect type="OnContained" target="This" setvalue="true" requireaimtouse="true"></StatusEffect>
+    </RepairTool>
+    <Repairable selectkey="Action" header="mechanicalrepairsheader" deteriorationspeed="0.1" mindeteriorationdelay="120" maxdeteriorationdelay="270" MinDeteriorationCondition="0" RepairThreshold="90" fixDurationHighSkill="5" fixDurationLowSkill="20" msg="ItemMsgRepairWrench" hudpriority="10">
+      <GuiFrame relativesize="0.2,0.16" minsize="400,180" maxsize="480,216" anchor="Center" relativeoffset="-0.1,0.27" style="ItemUI" />
+      <RequiredSkill identifier="thal_scienceskill" level="20" />
+      <RequiredItem items="wrench" type="Equipped" />
+      <ParticleEmitter particle="damagebubbles" particleburstamount="2" particleburstinterval="2.0" particlespersecond="2" scalemin="0.5" scalemax="1.5" anglemin="0" anglemax="359" velocitymin="-10" velocitymax="10" mincondition="0.0" maxcondition="20.0" />
+      <ParticleEmitter particle="spark" particleburstamount="2" particleburstinterval="2.0" particlespersecond="2" scalemin="0.5" scalemax="1.5" anglemin="0" anglemax="359" velocitymin="-10" velocitymax="10" mincondition="0.0" maxcondition="20.0" />
+      <StatusEffect type="OnFailure" target="Character" targetlimbs="LeftHand,RightHand">
+        <Sound file="Content/Items/MechanicalRepairFail.ogg" range="1000" />
+        <Affliction identifier="lacerations" strength="5" />
+        <Affliction identifier="stun" strength="5" />
+      </StatusEffect>
+    </Repairable>
+  </Item>
   <Item name="" identifier="thal_geneticinit" hideconditionbar="true" category="Equipment" Tags="smallitem,medical" useinhealthinterface="true" cargocontaineridentifier="chemicalcrate" description="" scale="0.5" impactsoundtag="impact_soft">
     <!--REMOVEME TO IMPLEMENT
     <PreferredContainer primary="medcab" minamount="3" maxamount="4" spawnprobability="1" />
@@ -24,7 +121,7 @@
     <InventoryIcon texture="Content/Items/InventoryIconAtlas.png" sourcerect="897,449,63,63" origin="0.5,0.5" />
     <Sprite texture="Content/Items/Medical/Medicines.png" sourcerect="223,69,38,70" depth="0.6" origin="0.5,0.5" />
     <Body width="25" height="40" density="20" />
-    <MeleeWeapon canBeCombined="true" removeOnCombined="true" slots="Any,RightHand+LeftHand" aimable="true" controlpose="false" aimpos="40,-10" handle1="-6,-2" handle2="-1,-2" msg="ItemMsgPickUpSelect" >
+    <MeleeWeapon canBeCombined="true" removeOnCombined="true" slots="Any,RightHand+LeftHand" aimable="true" controlpose="false" aimpos="40,-10" handle1="-6,-2" handle2="-1,-2" msg="ItemMsgPickUpSelect">
       <CustomInterface canbeselected="false" drawhudwhenequipped="true">
         <GuiFrame relativesize="0.3,0.3" anchor="BottomCenter" absoluteoffset="20,20" style="ItemUI" color="0,0,0,0" />
         <Button text="Set Target Gene: Head">
@@ -53,19 +150,19 @@
         <Conditional condition="10" />
         <Remove />
       </StatusEffect>
-      <StatusEffect tags="medical" Comparison="Or" type="OnUse" target="This, Character" duration="0.5">
+      <StatusEffect tags="medical" Comparison="Or" type="OnUse" target="This, Character" duration="0.5" delay="0.05" disabledeltatime="false">
         <Sound file="Content/Items/Medical/Syringe.ogg" type="OnUse" range="500" />
         <Affliction identifier="thal_meltdownhead" amount="1" />
         <ReduceAffliction identifier="thal_mudraptorhead" amount="400" />
         <Conditional condition="30" />
       </StatusEffect>
       <StatusEffect tags="medical" Comparison="Or" type="OnUse" target="Character, This" duration="0.5">
-        <Sound file="Content/Items/Medical/Syringe.ogg" type="OnUse" range="500" duration="0.5" />
+        <Sound file="Content/Items/Medical/Syringe.ogg" type="OnUse" range="500" delay="0.05" duration="0.5" />
         <Affliction identifier="thal_meltdowntorso" amount="1" />
         <ReduceAffliction identifier="thal_mudraptortorso" amount="400" />
         <Conditional condition="20" />
       </StatusEffect>
-      <StatusEffect tags="medical" Comparison="Or" type="OnUse" target="Character, This" duration="0.5">
+      <StatusEffect tags="medical" Comparison="Or" type="OnUse" target="Character, This" delay="0.05" duration="0.5">
         <Sound file="Content/Items/Medical/Syringe.ogg" type="OnUse" range="500" />
         <Affliction identifier="thal_meltdownlimbs" amount="1" />
         <ReduceAffliction identifier="thal_mudraptorlimbs" amount="400" />
@@ -90,7 +187,27 @@
     <InventoryIcon texture="Content/Items/InventoryIconAtlas.png" sourcerect="897,449,63,63" origin="0.5,0.5" />
     <Sprite texture="Content/Items/Medical/Medicines.png" sourcerect="223,69,38,70" depth="0.6" origin="0.5,0.5" />
     <Body width="25" height="40" density="20" />
-    <MeleeWeapon canBeCombined="true" removeOnCombined="true" slots="Any,RightHand+LeftHand" aimable="true" controlpose="false" aimpos="40,-10" handle1="-6,-2" handle2="-1,-2" msg="ItemMsgPickUpSelect" >
+    <MeleeWeapon canBeCombined="true" removeOnCombined="true" slots="Any,RightHand+LeftHand" aimable="true" controlpose="false" aimpos="40,-10" handle1="-6,-2" handle2="-1,-2" msg="ItemMsgPickUpSelect">
+      <!-- HUMAN GRAFTS (REVERSIONS) -->
+      <StatusEffect tags="medical" type="OnUse" target="Character" delay="0.05" duration="2">
+        <RequiredItem items="thal_dnahuman" type="Contained" />
+        <Sound file="Content/Items/Medical/Syringe.ogg" type="OnUse" range="500" />
+        <ReduceAffliction identifier="thal_meltdownhead" amount="400" />
+        <Conditional thal_meltdownhead="gt 0" />
+      </StatusEffect>
+      <StatusEffect tags="medical" type="OnUse" target="Character" delay="0.05" duration="2">
+        <RequiredItem items="thal_dnahuman" type="Contained" />
+        <Sound file="Content/Items/Medical/Syringe.ogg" type="OnUse" range="500" />
+        <ReduceAffliction identifier="thal_meltdowntorso" amount="400" />
+        <Conditional thal_meltdowntorso="gt 0" />
+      </StatusEffect>
+      <StatusEffect tags="medical" type="OnUse" target="Character" delay="0.05" duration="2">
+        <RequiredItem items="thal_dnahuman" type="Contained" />
+        <Sound file="Content/Items/Medical/Syringe.ogg" type="OnUse" range="500" />
+        <ReduceAffliction identifier="thal_meltdownlimbs" amount="400" />
+        <Conditional thal_meltdownlimbs="gt 0" />
+      </StatusEffect>
+      <!-- MUDRAPTOR GRAFTS -->
       <StatusEffect tags="medical" type="OnUse" target="Character" delay="0.05" duration="0.5">
         <RequiredItem items="thal_dnamudraptor" type="Contained" />
         <Sound file="Content/Items/Medical/Syringe.ogg" type="OnUse" range="500" />
@@ -98,13 +215,21 @@
         <Affliction identifier="thal_mudraptorhead" amount="160" />
         <Conditional thal_meltdownhead="gt 0" />
       </StatusEffect>
-      <StatusEffect tags="medical" type="OnUse" target="Character" delay="0.05" duration="3">
+      <StatusEffect tags="medical" type="OnUse" target="Character" delay="0.05" duration="0.5">
         <RequiredItem items="thal_dnamudraptor" type="Contained" />
         <Sound file="Content/Items/Medical/Syringe.ogg" type="OnUse" range="500" />
         <ReduceAffliction identifier="thal_meltdowntorso" amount="400" />
         <Affliction identifier="thal_mudraptortorso" amount="160" />
         <Conditional thal_meltdowntorso="gt 0" />
       </StatusEffect>
+      <StatusEffect tags="medical" type="OnUse" target="Character" delay="0.05" duration="0.5">
+        <RequiredItem items="thal_dnamudraptor" type="Contained" />
+        <Sound file="Content/Items/Medical/Syringe.ogg" type="OnUse" range="500" />
+        <ReduceAffliction identifier="thal_meltdownlimbs" amount="400" />
+        <Affliction identifier="thal_mudraptorlimbs" amount="160" />
+        <Conditional thal_meltdownlimbs="gt 0" />
+      </StatusEffect>
+      <!-- END SPECIFICS -->
       <StatusEffect type="OnUse" target="Contained,Character" delay="0.05" stackable="false" Comparison="Or" disabledeltatime="true">
         <RemoveItem />
         <Conditional thal_meltdowntorso="gt 0" />
@@ -113,22 +238,22 @@
       </StatusEffect>
       <!--denial-->
       <!-- check if the dna is still there after initial usage -->
-      <StatusEffect type="OnUse" target="This" delay="0.1" stackable="false" Comparison="And" checkconditionalalways="true" >
+      <StatusEffect type="OnUse" target="This" delay="0.1" stackable="false" Comparison="And" checkconditionalalways="true">
         <Sound file="Mods/Thalassophobia/Items/Jobgear/Scientist/Deny.ogg" type="OnUse" range="500" />
         <Conditional condition="50" />
       </StatusEffect>
       <!-- check if empty -->
       <StatusEffect type="OnUse" target="This" delay="0.05" stackable="false" disabledeltatime="true">
-				<Sound file="Mods/Thalassophobia/Items/Jobgear/Scientist/Deny.ogg" type="OnUse" range="500" />
+        <Sound file="Mods/Thalassophobia/Items/Jobgear/Scientist/Deny.ogg" type="OnUse" range="500" />
         <Conditional condition="100" />
       </StatusEffect>
     </MeleeWeapon>
     <ItemContainer capacity="1" hideitems="true" itempos="16,-15" containedspritedepth="0.56">
       <ContainedStateIndicator texture="Content/UI/ContainerIndicators.png" sourcerect="0,157,92,27" />
       <Containable items="thal_dna" />
-      <StatusEffect type="OnContained" target="This" setvalue="true" condition="50" >
-				<RequiredItem items="thal_dna" type="Contained" />
-			</StatusEffect>
+      <StatusEffect type="OnContained" target="This" setvalue="true" condition="50">
+        <RequiredItem items="thal_dna" type="Contained" />
+      </StatusEffect>
       <StatusEffect type="OnContained" target="This" setvalue="true" condition="100" delay="3.0" />
     </ItemContainer>
   </Item>
@@ -137,6 +262,22 @@
     <Body width="55" height="55" density="20" />
     <Holdable slots="Any,RightHand,LeftHand" handle1="0,0" msg="ItemMsgPickUpSelect" />
     <LightComponent range="1" castshadows="false" lightcolor="180,160,255,255" IsOn="true" powerconsumption="0" blinkFrequency="0" allowingameediting="false">
+      <Sprite name="dnalight" texture="Mods/Thalassophobia/Items/Jobgear/Scientist/science.png" sourcerect="459,198,45,43" depth="0.6" origin="0.5,0.5" />
+    </LightComponent>
+  </Item>
+  <Item name="" identifier="thal_dnahuman" category="Material" cargocontaineridentifier="metalcrate" description="" Tags="smallitem,thal_dna" spritecolor="150,255,180,200" InventoryIconColor="150,255,180,200" scale="0.5" impactsoundtag="impact_metal_light">
+    <Sprite name="dna" texture="Mods/Thalassophobia/Items/Jobgear/Scientist/science.png" sourcerect="459,198,45,43" depth="0.6" origin="0.5,0.5" />
+    <Body width="55" height="55" density="20" />
+    <Holdable slots="Any,RightHand,LeftHand" handle1="0,0" msg="ItemMsgPickUpSelect" />
+    <LightComponent range="1" castshadows="false" lightcolor="150,255,180,200" IsOn="true" powerconsumption="0" blinkFrequency="0" allowingameediting="false">
+      <Sprite name="dnalight" texture="Mods/Thalassophobia/Items/Jobgear/Scientist/science.png" sourcerect="459,198,45,43" depth="0.6" origin="0.5,0.5" />
+    </LightComponent>
+  </Item>
+  <Item name="" identifier="thal_dnacrawler" category="Material" cargocontaineridentifier="metalcrate" description="" Tags="smallitem,thal_dna" spritecolor="255,230,140,200" InventoryIconColor="255,230,140,200" scale="0.5" impactsoundtag="impact_metal_light">
+    <Sprite name="dna" texture="Mods/Thalassophobia/Items/Jobgear/Scientist/science.png" sourcerect="459,198,45,43" depth="0.6" origin="0.5,0.5" />
+    <Body width="55" height="55" density="20" />
+    <Holdable slots="Any,RightHand,LeftHand" handle1="0,0" msg="ItemMsgPickUpSelect" />
+    <LightComponent range="1" castshadows="false" lightcolor="255,230,140,200" IsOn="true" powerconsumption="0" blinkFrequency="0" allowingameediting="false">
       <Sprite name="dnalight" texture="Mods/Thalassophobia/Items/Jobgear/Scientist/science.png" sourcerect="459,198,45,43" depth="0.6" origin="0.5,0.5" />
     </LightComponent>
   </Item>

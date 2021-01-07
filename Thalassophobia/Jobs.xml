@@ -115,6 +115,7 @@
         <Item identifier="thal_cylinderlaughing" equip="false" />
         <Item identifier="thal_cylinderteargas" equip="false" />
         <Item identifier="thal_cylinderlaughing" equip="false" />
+        <Item identifier="thal_sprinkler" equip="false" />
         <Item identifier="thal_hydrophonicsign" equip="false" />
         <Item identifier="thal_hydrophonicsign" equip="false" showpreview="false" />
       </Item>

@@ -1,11 +1,8 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Items>
-  <Item name="" identifier="thal_sprinkler" category="Machine" Tags="mediumitem,fireextinguisher,provocative" cargocontaineridentifier="metalcrate" description="" impactsoundtag="impact_metal_light" requireaimtouse="true" hideinmenus="false" scale="0.5" characterusable="false" damagedbyexplosions="true" explosiondamagemultiplier="0.8" >
+  <Item name="" identifier="thal_sprinkler" category="Machine" Tags="mediumitem,fireextinguisher,provocative" cargocontaineridentifier="metalcrate" description="" impactsoundtag="impact_metal_light" requireaimtouse="true" hideinmenus="false" scale="0.5" characterusable="false" damagedbyexplosions="true" explosiondamagemultiplier="0.8" canflipx="false" >
     <Sprite texture="Content/Items/Electricity/signalcomp.png" depth="0.8" sourcerect="48,288,48,32" origin="0.5,0.5" />
     <Body width="17" height="48" density="5" >
-			<!--might be useful later
-      <StatusEffect type="Always" targettype="This" setvalue="true" targetrotation="70" rotation="70" />
-      -->
     </Body>
     <LightComponent lightcolor="0,255,100,255" range="10.0" castshadows="false" powerconsumption="5" allowingameediting="false" >
       <LightTexture texture="Content/Lights/pointlight_bounce.png" origin="0.5,0.5" />
@@ -45,37 +42,43 @@
       </StatusEffect>
     </Repairable>
   </Item>
-  <Item name="" identifier="thal_planter" category="Material" Tags="planter,mediumitem" scale="0.5" isshootable="false" hideinmenus="true" >
+  <Item name="" identifier="thal_planter" category="Material" Tags="planter,mediumitem" scale="0.5" isshootable="true" hideinmenus="true" requireaimtouse="false" canflipy="true" >
     <Sprite texture="Content/Items/Gardening/GrowablePlants_Temp.png" sourcerect="896,384,128,128" depth="0.75" premultiplyalpha="false" origin="0.5,0.5" />
     <Body width="95" height="106" density="40" />
     <ItemLabel scrollable="true" padding="7,12,7,6" textcolor="1,1,1,1" text="" >
 			<StatusEffect type="Always" duration="1" target="This" text="" >
 				<Conditional isshootable="eq false" />
       </StatusEffect>
-			<StatusEffect type="Always" duration="1" target="This" text="entityname.thal_shroomseed" isshootable="true" >
+			<StatusEffect type="Always" duration="1" target="This" text="entityname.thal_shroomseed" >
 				<RequiredItem items="thal_shroomseed" type="Contained" />
+				<Conditional IsOn="true" targetcomponent="LightComponent" />
       </StatusEffect>
-      <StatusEffect type="Always" duration="1" target="This" text="entityname.thal_zombieseed" isshootable="true" >
+      <StatusEffect type="Always" duration="1" target="This" text="entityname.thal_zombieseed" >
 				<RequiredItem items="thal_zombieseed" type="Contained" />
+				<Conditional IsOn="true" targetcomponent="LightComponent" />
+      </StatusEffect>
+      <StatusEffect type="Always" duration="1" target="This" text="entityname.thal_wheatseed" >
+				<RequiredItem items="thal_wheatseed" type="Contained" />
+				<Conditional IsOn="true" targetcomponent="LightComponent" />
       </StatusEffect>
     </ItemLabel>
     <Holdable selectkey="Select" pickkey="Use" slots="Any,RightHand,LeftHand" msg="ItemMsgDetach" PickingTime="7.0" aimpos="85,-10" handle1="0,0" attachable="true" aimable="true" />
-    <Deconstruct time="30">
-      <Item identifier="steel" copycondition="true" mincondition="0.1" />
-      <Item identifier="steel" copycondition="true" mincondition="0.1" />
-      <Item identifier="plastic" copycondition="true" mincondition="0.1" />
-    </Deconstruct>
-    <ItemContainer capacity="1" hideitems="true" drawinventory="false" uilabel="" allowuioverlap="true" allowdraganddrop="false" showcontainedstateindicator="false">
+    
+    <ItemContainer capacity="1" hideitems="true" drawinventory="false" uilabel="" allowuioverlap="true" allowdraganddrop="true" showcontainedstateindicator="false">
       <Containable items="seed" />
+    </ItemContainer>
+    <ItemContainer maxstacksize="1" capacity="1" slotsperrow="3" canbeselected="true" msg="ItemMsgOpenCrowbarSelect" hideitems="false" drawinventory="true" itemrotation="0" itempos="45,-80"  itemsperrow="3" iteminterval="50,-65" containedspritedepth="0.835">
+      <GuiFrame relativesize="0.2,0.25" anchor="Center" minsize="140,170" maxsize="280,280" style="ItemUI" />
+      <Containable items="thal_produce" />
+      <StatusEffect target="This" type="Always" spritecolor="255,0,0,255" >
+				<RequiredItem items="seed" type="Contained" />
+				<SpawnItem identifier="thal_wheatstalk" spawnposition="ThisInventory" />
+      </StatusEffect>
     </ItemContainer>
     <LightComponent range="10.0" lightcolor="160,255,150,0" IsOn="true" castshadows="false" allowingameediting="false">
       <sprite texture="Content/Items/Gardening/GrowablePlants_Temp.png" depth="0.025" sourcerect="896,512,128,128" origin="0.5,0.5" alpha="1.0" />
-      <StatusEffect type="OnActive" target="This" isshootable="true" >
-      </StatusEffect>
-      <StatusEffect type="Always" target="This" isshootable="false" >
-				<Conditional IsOn="false" />
-      </StatusEffect>
     </LightComponent>
+    
     <Planter selectkey="Select" canbepicked="true" pickingtime="3.0" msg="ItemMsgPlantSeed">
       <PlantSlot slot="0" offset="0,32" size="0.25" />
       <SuitableFertilizer items="fertilizer" />

@@ -180,14 +180,9 @@
         <RequiredItem items="incendiumfueltank" type="Contained" />
         <Affliction identifier="burn" amount="0.1" />
       </StatusEffect>
-      <StatusEffect type="OnWearing" target="Contained,Character" OxygenAvailable="1000.0" SpeedMultiplier="1.2" Condition="-0.3" comparison="Or">
+      <StatusEffect type="OnWearing" target="Contained,Character" OxygenAvailable="1000.0" Condition="-0.2" comparison="Or">
         <Conditional IsDead="false" />
-        <RequiredItem items="oxygeniteshard" type="Contained" />
-        <Sound file="Mods/Thalassophobia/Items/Jobgear/Enforcer/MaskBreath.ogg" range="50" loop="true" />
-      </StatusEffect>
-      <StatusEffect type="OnWearing" target="Contained,Character" OxygenAvailable="1500.0" SpeedMultiplier="1.3" Condition="-0.1" comparison="Or">
-        <Conditional IsDead="false" />
-        <RequiredItem items="oxygenitetank" type="Contained" />
+        <RequiredItem items="oxygenitetank,oxygeniteshard" type="Contained" />
         <Sound file="Mods/Thalassophobia/Items/Jobgear/Enforcer/MaskBreath.ogg" range="50" loop="true" />
       </StatusEffect>
       <LightTexture texture="Content/Lights/divinghelmetlight.png" origin="0.05, 0.5" size="1.0,1.0" />
@@ -703,7 +698,9 @@
       <!-- Do this so that the altar itself doesn't fulfill the condition requirements (since the status effects target both the altar and the knife inside) -->
       <StatusEffect type="Always" target="This" condition="1" setvalue="true" />
     </ItemContainer>
-    <Holdable handle1="0,0" slots="Any,RightHand,LeftHand" msg="ItemMsgDetachWrench" PickingTime="10.0" aimpos="35,-10" attachable="true" attachedbydefault="true" aimable="true"></Holdable>
+    <Holdable handle1="0,0" slots="Any,RightHand,LeftHand" msg="ItemMsgDetachWrench" PickingTime="10.0" aimpos="35,-10" attachable="true" attachedbydefault="true" aimable="true">
+      <requireditem identifier="wrench" type="Equipped" />
+    </Holdable>
     <LightComponent range="250" lightcolor="180,255,255,200" IsOn="false" powerconsumption="0" flicker="0.9" allowingameediting="false">
       <sound file="Mods/Thalassophobia/Items/Jobgear/Scientist/WeldSpark.ogg" type="OnActive" range="800.0" loop="true" />
       <StatusEffect type="OnActive" target="This" stackable="false" disabledeltatime="true">
