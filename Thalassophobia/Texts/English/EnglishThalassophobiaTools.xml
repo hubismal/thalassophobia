@@ -183,6 +183,7 @@
   
   <entityname.thal_constructor>Universal Constructor</entityname.thal_constructor>
   <entitydescription.thal_constructor>Attatchable fabricator with the potential to 3D print extremely complex machinery with quantum manipulation capabilities.</entitydescription.thal_constructor>
+  <itemmsgconstruct>[[select]] Construct</itemmsgconstruct>
   
   <entityname.thal_recipeconstructor>Schematic: Universal Constructor</entityname.thal_recipeconstructor>
   <entitydescription.thal_recipeconstructor>Datachip containing fabrication instructions for the assembly of a Universal Constructor, a device capable of creating items allowing access to the upper echelons of science.

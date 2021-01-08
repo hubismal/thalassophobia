@@ -605,18 +605,20 @@
     </DecorativeSprite>
     <DecorativeSprite name="constructor Shell" texture="Mods/Thalassophobia/Items/Jobgear/Scientist/science.png" sourcerect="385,94,144,84" depth="0.56" origin="0.5,0.5" />
     <Body width="130" height="80" density="400" />
+    <ItemLabel scrollable="true" padding="7,12,7,6" textcolor="1,1,1,1" text="" >
+    </ItemLabel>
     <CustomInterface canbeselected="true" drawhudwhenequipped="false">
       <GuiFrame relativesize="0.4,0.5" anchor="BottomCenter" absoluteoffset="0,-30" style="ItemUI" />
       <Button text="RADTN_ST (diving Suit+lead+Ti-Al Alloy)">
         <!-- radsuit -->
-        <StatusEffect type="OnUse" targettype="This" delay="30" IsOn="false" canbeselected="true">
+        <StatusEffect type="OnUse" targettype="This" delay="30" IsOn="false" canbeselected="true" text="">
           <SpawnItem spawnposition="ThisInventory" identifier="thal_radsuit" />
           <sound file="Mods/Thalassophobia/Items/Jobgear/Scientist/Ding.ogg" range="600.0" loop="false" />
           <RequiredItem items="divingsuit" type="Contained" />
           <RequiredItem items="lead" type="Contained" />
           <RequiredItem items="titaniumaluminiumalloy" type="Contained" />
         </StatusEffect>
-        <StatusEffect type="OnUse" target="This" IsOn="true" canbeselected="false">
+        <StatusEffect type="OnUse" target="This" IsOn="true" canbeselected="false" text="RADTN_ST (Radiation Suit)">
           <RequiredItem items="divingsuit" type="Contained" />
           <RequiredItem items="lead" type="Contained" />
           <RequiredItem items="titaniumaluminiumalloy" type="Contained" />
@@ -630,14 +632,14 @@
       </Button>
       <Button text="OB_1 (physicorium Bar+flamer+Ti-Al Alloy)">
         <!-- glowsaber -->
-        <StatusEffect type="OnUse" targettype="This" delay="60" IsOn="false" canbeselected="true">
+        <StatusEffect type="OnUse" targettype="This" delay="60" IsOn="false" canbeselected="true" text="">
           <SpawnItem spawnposition="ThisInventory" identifier="thal_glowsaber" />
           <sound file="Mods/Thalassophobia/Items/Jobgear/Scientist/Ding.ogg" range="600.0" loop="false" />
           <RequiredItem items="physicorium" type="Contained" />
           <RequiredItem items="flamer" type="Contained" />
           <RequiredItem items="titaniumaluminiumalloy" type="Contained" />
         </StatusEffect>
-        <StatusEffect type="OnUse" target="This" IsOn="true" canbeselected="false">
+        <StatusEffect type="OnUse" target="This" IsOn="true" canbeselected="false" text="OB_1 (Glowsaber)">
           <RequiredItem items="physicorium" type="Contained" />
           <RequiredItem items="flamer" type="Contained" />
           <RequiredItem items="titaniumaluminiumalloy" type="Contained" />
@@ -651,14 +653,14 @@
       </Button>
       <Button text="2ND_CHANCE (Liquid Oxygenite+Nitrous Oxide+Health Scanner)">
         <!-- phoenix injector -->
-        <StatusEffect type="OnUse" targettype="This" delay="40" IsOn="false" canbeselected="true">
+        <StatusEffect type="OnUse" targettype="This" delay="40" IsOn="false" canbeselected="true" text="">
           <SpawnItem spawnposition="ThisInventory" identifier="thal_secondchance" />
           <sound file="Mods/Thalassophobia/Items/Jobgear/Scientist/Ding.ogg" loop="false" range="600.0" />
           <RequiredItem items="liquidoxygenite" type="Contained" />
           <RequiredItem items="thal_cylinderlaughing" type="Contained" />
           <RequiredItem items="healthscanner" type="Contained" />
         </StatusEffect>
-        <StatusEffect type="OnUse" target="This" IsOn="true" canbeselected="false">
+        <StatusEffect type="OnUse" target="This" IsOn="true" canbeselected="false" text="2ND_CHANCE (Phoenix Injector)">
           <RequiredItem items="liquidoxygenite" type="Contained" />
           <RequiredItem items="thal_cylinderlaughing" type="Contained" />
           <RequiredItem items="healthscanner" type="Contained" />
@@ -693,12 +695,12 @@
       </Button>
       -->
     </CustomInterface>
-    <ItemContainer capacity="3" canbeselected="true" hideitems="true" slotsperrow="3" drawinventory="true" maxstacksize="3">
+    <ItemContainer msg="ItemMsgConstruct" capacity="3" canbeselected="true" hideitems="true" slotsperrow="3" drawinventory="true" maxstacksize="3">
       <GuiFrame relativesize="0.4,0.25" anchor="Center" minsize="140,170" maxsize="280,280" style="ItemUI" />
       <!-- Do this so that the altar itself doesn't fulfill the condition requirements (since the status effects target both the altar and the knife inside) -->
       <StatusEffect type="Always" target="This" condition="1" setvalue="true" />
     </ItemContainer>
-    <Holdable handle1="0,0" slots="Any,RightHand,LeftHand" msg="ItemMsgDetachWrench" PickingTime="10.0" aimpos="35,-10" attachable="true" attachedbydefault="true" aimable="true">
+    <Holdable handle1="0,0" pickkey="Use" slots="Any,RightHand,LeftHand" msg="ItemMsgDetachWrench" PickingTime="10.0" aimpos="35,-10" attachable="true" attachedbydefault="true" aimable="true">
       <requireditem identifier="wrench" type="Equipped" />
     </Holdable>
     <LightComponent range="250" lightcolor="180,255,255,200" IsOn="false" powerconsumption="0" flicker="0.9" allowingameediting="false">
