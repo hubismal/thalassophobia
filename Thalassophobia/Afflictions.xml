@@ -30,7 +30,7 @@
       <StatusEffect target="Character" SpeedMultiplier="0.9" setvalue="true" stackable="false" tags="shidding" duration="0.1">
         <Affliction identifier="organdamage" amount="0.1" />
       </StatusEffect>
-      <StatusEffect target="Character" delay="60" stackable="false" checkconditionalalways="true">
+      <StatusEffect target="Character" delay="40" stackable="false" checkconditionalalways="true">
         <Conditional HasStatusTag="shidding" />
         <Explosion range="200.0" structuredamage="0" itemdamage="0" flash="false" stun="0.2" force="6" severlimbsprobability="0.5" screenshake="0" flames="false" smoke="false" sparks="false" decal="shit" decalsize="0.3"></Explosion>
         <SpawnItem identifier="thal_emshitter" spawnposition="This" />
@@ -40,9 +40,9 @@
       <StatusEffect target="Character" SpeedMultiplier="0.9" setvalue="true" stackable="false" tags="shidding2" duration="0.1">
         <Affliction identifier="organdamage" amount="0.2" />
       </StatusEffect>
-      <StatusEffect target="Character" delay="30" stackable="false" checkconditionalalways="true">
+      <StatusEffect target="Character" delay="20" stackable="false" checkconditionalalways="true">
         <Conditional HasStatusTag="shidding2" />
-        <Explosion range="200.0" structuredamage="0" itemdamage="0" flash="false" stun="0.2" force="6" severlimbsprobability="0.5" screenshake="0" flames="false" smoke="false" sparks="false" decal="shit" decalsize="0.3"></Explosion>
+        <Explosion range="200.0" structuredamage="0" itemdamage="0" flash="false" stun="0.2" force="6" severlimbsprobability="0.5" screenshake="0" flames="false" smoke="false" sparks="false" decal="shit" decalsize="0.9"></Explosion>
         <SpawnItem identifier="thal_emshitter" spawnposition="This" />
       </StatusEffect>
     </Effect>

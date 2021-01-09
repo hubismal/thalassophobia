@@ -157,9 +157,9 @@
       <sprite name="radsuit leftleg" texture="botanist_legs.png" limb="LeftLeg" inheritlimbdepth="true" hidelimb="false" hideotherwearables="false" inherittexturescale="true" inheritorigin="true" sourcerect="0,0,1,1" origin="0.5,0.5" />
       <sprite name="radsuit rightfoot" texture="botanist_legs.png" limb="RightFoot" sound="footstep_armor_heavy" inheritlimbdepth="false" depth="0.10" hidelimb="false" hideotherwearables="false" inherittexturescale="true" inheritorigin="false" sourcerect="0,0,1,1" origin="0.59250414,0.54483974" />
       <sprite name="radsuit leftfoot" texture="botanist_legs.png" limb="LeftFoot" sound="footstep_armor_heavy" inheritlimbdepth="false" depth="0.102" hidelimb="false" hideotherwearables="false" inherittexturescale="true" inheritorigin="false" sourcerect="0,0,1,1" origin="0.5516063,0.61087334" />
-      <damagemodifier armorsector="0.0,360.0" afflictionidentifiers="radiationsickness" damagemultiplier="0.05" damagesound="LimbArmor" deflectprojectiles="true" />
+      <damagemodifier armorsector="0.0,360.0" afflictionidentifiers="radiationsickness" damagemultiplier="0.2" damagesound="LimbArmor" deflectprojectiles="true" />
       <damagemodifier armorsector="0.0,360.0" afflictiontypes="burn" damagemultiplier="0.1" damagesound="LimbArmor" deflectprojectiles="true" />
-      <damagemodifier armorsector="0.0,360.0" afflictiontypes="thal_glowing" damagemultiplier="0.05" damagesound="LimbArmor" deflectprojectiles="true" />
+      <damagemodifier armorsector="0.0,360.0" afflictiontypes="thal_glowing" damagemultiplier="0.5" damagesound="LimbArmor" deflectprojectiles="true" />
       <damagemodifier armorsector="0.0,360.0" afflictionidentifiers="thal_mushroomized" damagemultiplier="0.0" damagesound="LimbArmor" deflectprojectiles="true" />
       <damagemodifier armorsector="0.0,360.0" afflictionidentifiers="thal_teargasaffliction" damagemultiplier="0.0" damagesound="LimbArmor" deflectprojectiles="true" />
     </Wearable>

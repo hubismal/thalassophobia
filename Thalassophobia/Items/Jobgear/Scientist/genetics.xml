@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Items><Item name="" identifier="thal_geneticistsuit" category="Equipment" cargocontaineridentifier="metalcrate" tags="smallitem" impactsoundtag="impact_soft" scale="0.5">
-    <InventoryIcon name="Botanist Costume Icon" texture="Mods/Thalassophobia/Items/Jobgear/OutfitIcons.png" sourcerect="253,285,128,101" origin="0.5,0.5" />
-    <Sprite name="Botanist Costume (floor)" texture="Mods/Thalassophobia/Items/Jobgear/MiscJobGear.png" sourcerect="199,88,195,68" depth="0.6" origin="0.5,0.5" />
+    <InventoryIcon name="Genet Costume Icon" texture="Mods/Thalassophobia/Items/Jobgear/OutfitIcons.png" sourcerect="253,285,128,101" origin="0.5,0.5" />
+    <Sprite name="Genet Costume (floor)" texture="Mods/Thalassophobia/Items/Jobgear/MiscJobGear.png" sourcerect="199,88,195,68" depth="0.6" origin="0.5,0.5" />
     <Body width="100" height="50" density="30" friction="0.8" restitution="0.01" />
     <Deconstruct time="40">
       <Item identifier="plastic" />
@@ -20,6 +20,8 @@
       <sprite name="Botanist Left Leg" texture="geneticist_legs.png" limb="LeftLeg" hidelimb="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" sourcerect="0,0,256,256" origin="0.5,0.5" />
       <sprite name="Botanist Right Shoe" texture="geneticist_legs.png" limb="RightFoot" sound="footstep_armor" hidelimb="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
       <sprite name="Botanist Left Shoe" texture="geneticist_legs.png" limb="LeftFoot" sound="footstep_armor" hidelimb="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
+      <damagemodifier armorsector="0.0,360.0" afflictionidentifiers="radiationsickness" damagemultiplier="0.3" damagesound="LimbArmor" deflectprojectiles="true" />
+      <damagemodifier armorsector="0.0,360.0" afflictionidentifiers="burn" damagemultiplier="0.3" damagesound="LimbArmor" deflectprojectiles="true" />
     </Wearable>
   </Item>
   <Item name="" identifier="thal_geneticsign" category="Equipment" tags="smallitem" cargocontaineridentifier="metalcrate" maxstacksize="8" impactsoundtag="impact_metal_heavy" scale="0.6">
@@ -193,9 +195,12 @@
       </StatusEffect>
     </PowerContainer>
     <RepairTool canbeselected="false" range="500" barrelpos="40,-50" repairthroughholes="true" characterusable="false" requireaimtouse="false" usablein="air" barrelrotation="270" powerconsumption="5">
-      <StatusEffect type="OnUse" target="UseTarget" stackable="false" delay="0.1">
+      <StatusEffect type="OnUse" target="UseTarget" stackable="false" delay="0.1" disabledeltatime="true" >
         <Conditional Stun="lt 1" />
         <Affliction identifier="thal_scan" amount="5" />
+        <Affliction identifier="thal_disorderfart" amount="3" probability="0.01" />
+        <Affliction identifier="thal_disorderseizure" amount="3" probability="0.01" />
+        <Affliction identifier="thal_disorderexplode" amount="3" probability="0.01" />
       </StatusEffect>
       <RequiredItem items="youJustLostTheGame" type="Equipped" />
       <ParticleEmitter particle="thal_grid" velocitymin="100.0" velocitymax="100.0" particlespersecond="10" colormultiplier="50,200,200,200" />
@@ -312,18 +317,27 @@
         <RequiredItem items="thal_dnahuman" type="Contained" />
         <Sound file="Content/Items/Medical/Syringe.ogg" type="OnUse" range="500" />
         <ReduceAffliction identifier="thal_meltdownhead" amount="400" />
+        <ReduceAffliction identifier="thal_disorderfart" amount="400" />
+        <ReduceAffliction identifier="thal_disorderseizure" amount="400" />
+        <ReduceAffliction identifier="thal_disorderexplode" amount="400" />
         <Conditional thal_meltdownhead="gt 0" />
       </StatusEffect>
       <StatusEffect tags="medical" type="OnUse" target="Character" delay="0.05" duration="2">
         <RequiredItem items="thal_dnahuman" type="Contained" />
         <Sound file="Content/Items/Medical/Syringe.ogg" type="OnUse" range="500" />
         <ReduceAffliction identifier="thal_meltdowntorso" amount="400" />
+        <ReduceAffliction identifier="thal_disorderfart" amount="400" />
+        <ReduceAffliction identifier="thal_disorderseizure" amount="400" />
+        <ReduceAffliction identifier="thal_disorderexplode" amount="400" />
         <Conditional thal_meltdowntorso="gt 0" />
       </StatusEffect>
       <StatusEffect tags="medical" type="OnUse" target="Character" delay="0.05" duration="2">
         <RequiredItem items="thal_dnahuman" type="Contained" />
         <Sound file="Content/Items/Medical/Syringe.ogg" type="OnUse" range="500" />
         <ReduceAffliction identifier="thal_meltdownlimbs" amount="400" />
+        <ReduceAffliction identifier="thal_disorderfart" amount="400" />
+        <ReduceAffliction identifier="thal_disorderseizure" amount="400" />
+        <ReduceAffliction identifier="thal_disorderexplode" amount="400" />
         <Conditional thal_meltdownlimbs="gt 0" />
       </StatusEffect>
       <!-- MUDRAPTOR GRAFTS -->

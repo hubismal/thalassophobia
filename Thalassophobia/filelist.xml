@@ -49,6 +49,7 @@
   <Sounds file="Mods/Thalassophobia/Sounds/sounds.xml" />
   <Afflictions file="Mods/Thalassophobia/Afflictions.xml" />
   <Afflictions file="Mods/Thalassophobia/GeneAfflictions.xml" />
+  <Afflictions file="Mods/Thalassophobia/GeneticDisorders.xml" />
   <OutpostModule file="Mods/Thalassophobia/Map/Outposts/Modules/BlackSiteDockingModule_01.sub" />
   <OutpostModule file="Mods/Thalassophobia/Map/Outposts/Modules/BlackSiteDecontamination.sub" />
   <OutpostModule file="Mods/Thalassophobia/Map/Outposts/Modules/BlackSiteTechChamberL.sub" />

@@ -29,7 +29,12 @@
   <sound file="Mods/Thalassophobia/Characters/Gummy/scream2.ogg" state="Die" range="800" volume="1" gender="None" />
   <sound file="Mods/Thalassophobia/Characters/Gummy/scream3.ogg" state="Idle" range="800" volume="1" gender="None" />
   <sound file="Mods/Thalassophobia/Characters/Gummy/scream4.ogg" state="Idle" range="800" volume="1" gender="None" />
-  <StatusEffect target="Character,This" type="Always" delay="0.1" IsDead="true" >
-		<Affliction identifier="damage" amount="99999" />
+  <StatusEffect target="Character,This" type="Always" delay="2" duration="5" IsDead="true" >
+		<Affliction identifier="internaldamage" amount="99999" />
+		<sound file="Mods/Thalassophobia/Characters/Gummy/scream4.ogg" range="800" volume="1" selectionmode="random" />
+		<sound file="Mods/Thalassophobia/Characters/Gummy/scream3.ogg" range="800" volume="1" selectionmode="random" />
+		<sound file="Mods/Thalassophobia/Characters/Gummy/scream2.ogg" range="800" volume="1" selectionmode="random" />
+		<sound file="Mods/Thalassophobia/Characters/Gummy/scream1.ogg" range="800" volume="1" selectionmode="random" />
+		<Conditional IsDead="false" />
 			</StatusEffect>
 </Character>
