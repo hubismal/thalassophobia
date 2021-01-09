@@ -1,32 +1,76 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Items>
+<Items><Item name="" identifier="thal_geneticistsuit" category="Equipment" cargocontaineridentifier="metalcrate" tags="smallitem" impactsoundtag="impact_soft" scale="0.5">
+    <InventoryIcon name="Botanist Costume Icon" texture="Mods/Thalassophobia/Items/Jobgear/OutfitIcons.png" sourcerect="253,285,128,101" origin="0.5,0.5" />
+    <Sprite name="Botanist Costume (floor)" texture="Mods/Thalassophobia/Items/Jobgear/MiscJobGear.png" sourcerect="199,88,195,68" depth="0.6" origin="0.5,0.5" />
+    <Body width="100" height="50" density="30" friction="0.8" restitution="0.01" />
+    <Deconstruct time="40">
+      <Item identifier="plastic" />
+      <Item identifier="rubber" />
+    </Deconstruct>
+    <Wearable slots="Any,InnerClothes" msg="ItemMsgPickUpSelect">
+      <sprite name="Botanist Torso" texture="geneticist_torso.png" limb="Torso" hidelimb="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" depth="0.1" />
+      <sprite name="Botanist Right Lower Arm" texture="geneticist_torso.png" limb="RightHand" hidelimb="false" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="Botanist Left Lower Arm" texture="geneticist_torso.png" limb="LeftHand" hidelimb="false" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="Botanist Right Upper Arm" texture="geneticist_torso.png" limb="RightArm" hidelimb="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="Botanist Left Upper Arm" texture="geneticist_torso.png" limb="LeftArm" hidelimb="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="Botanist Waist" texture="geneticist_legs.png" limb="Waist" hidelimb="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="Botanist Right Thigh" texture="geneticist_legs.png" limb="RightThigh" hidelimb="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="Botanist Left Thigh" texture="geneticist_legs.png" limb="LeftThigh" hidelimb="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="Botanist Right Leg" texture="geneticist_legs.png" limb="RightLeg" hidelimb="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="Botanist Left Leg" texture="geneticist_legs.png" limb="LeftLeg" hidelimb="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" sourcerect="0,0,256,256" origin="0.5,0.5" />
+      <sprite name="Botanist Right Shoe" texture="geneticist_legs.png" limb="RightFoot" sound="footstep_armor" hidelimb="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="Botanist Left Shoe" texture="geneticist_legs.png" limb="LeftFoot" sound="footstep_armor" hidelimb="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
+    </Wearable>
+  </Item>
+  <Item name="" identifier="thal_geneticsign" category="Equipment" tags="smallitem" cargocontaineridentifier="metalcrate" maxstacksize="8" impactsoundtag="impact_metal_heavy" scale="0.6">
+    <Price locationtype="Military" buyprice="100" />
+    <Price locationtype="City" buyprice="100" />
+    <Price locationtype="Outpost" buyprice="100" />
+    <Deconstruct time="10">
+      <Item identifier="steel" />
+    </Deconstruct>
+    <Fabricate suitablefabricators="fabricator" requiredtime="20">
+      <RequiredItem identifier="steel" />
+      <RequiredItem identifier="lightcomponent" />
+    </Fabricate>
+    <InventoryIcon name="gensignicon" texture="Mods/Thalassophobia/Items/Jobgear/Scientist/science.png" sourcerect="533,5,99,125" depth="0.6" origin="0.45675606,0.4603783" />
+    <Sprite name="gen Sign" texture="Mods/Thalassophobia/Items/Jobgear/Scientist/science.png" sourcerect="535,3,99,235" depth="0.6" origin="0.45675606,0.4603783" tags="smallitem,divingmask,diving" />
+    <Body width="95" height="230" density="50" />
+    <LightComponent range="50" castshadows="false" lightcolor="255,0,0,100" IsOn="true" powerconsumption="0" blinkFrequency="0.5" allowingameediting="false"></LightComponent>
+    <Holdable selectkey="Select" pickkey="Use" slots="Any,RightHand,LeftHand" msg="ItemMsgDetachWrench" PickingTime="10.0" aimpos="35,-10" handle1="0,0" attachable="true" attachedbydefault="true" aimable="true">
+      <requireditem identifier="wrench" type="Equipped" />
+    </Holdable>
+  </Item>
   <Item name="" identifier="thal_dnascanner" category="Machine" Tags="mediumitem,fireextinguisher,provocative" cargocontaineridentifier="metalcrate" description="" impactsoundtag="impact_metal_light" requireaimtouse="true" hideinmenus="false" scale="0.5" characterusable="false" damagedbyexplosions="true" explosiondamagemultiplier="0.8" canflipx="false">
-    <Sprite name="dna scanner" texture="Mods/Thalassophobia/Items/Jobgear/Scientist/science.png" sourcerect="5,265,261,113" depth="0.8" origin="0.5,0.5" />
+    <Sprite name="dna scanner" texture="Mods/Thalassophobia/Items/Jobgear/Scientist/science.png" sourcerect="5,263,261,113" depth="0.8" origin="0.5,0.5" />
+    <BrokenSprite name="dna scanner" texture="Mods/Thalassophobia/Items/Jobgear/Scientist/science.png" sourcerect="5,382,261,113" depth="0.8" origin="0.5,0.5" maxcondition="40" fadein="true" />
     <Body width="261" height="113" density="5"></Body>
-    <ItemLabel scrollable="true" padding="4,30,40,40" textcolor="1,1,1,1" text="Human DNA Detected" >
-    </ItemLabel>
+    <ItemLabel scrollable="true" padding="4,30,40,40" textcolor="1,1,1,1" text="Human DNA Detected"></ItemLabel>
     <Holdable pickkey="Use" slots="Any,RightHand,LeftHand" msg="ItemMsgDetachWrench" PickingTime="10.0" aimpos="35,-10" handle1="0,0" attachable="true" attachedbydefault="true" aimable="true">
       <requireditem identifier="wrench" type="Equipped" />
     </Holdable>
-    <LightComponent lightcolor="0,100,100,100" range="1.0" castshadows="false" powerconsumption="5" allowingameediting="false">
+    <LightComponent lightcolor="0,100,100,100" range="1.0" castshadows="false" powerconsumption="50" allowingameediting="false">
       <Sprite name="dna scanner text" texture="Mods/Thalassophobia/Items/Jobgear/Scientist/science.png" sourcerect="278,338,165,57" depth="0.8" origin="0.7332378,0.46395308" />
       <LightSprite name="dna scan backlight" texture="Mods/Thalassophobia/Items/Jobgear/Scientist/science.png" sourcerect="273,266,171,69" depth="0.8" origin="0.74371487,0.49465847" />
       <StatusEffect type="OnActive" target="This">
         <UseItem />
       </StatusEffect>
       <StatusEffect type="Always" target="This" text="">
-				<Conditional Voltage="eq 0" />
+        <Conditional Voltage="eq 0" />
       </StatusEffect>
       <StatusEffect type="Always" target="This" lightcolor="100,100,100,100" text="">
         <Conditional IsOn="eq false" />
       </StatusEffect>
-      <StatusEffect type="OnActive" target="This" lightcolor="100,100,100,100" text="Scanner Ready - Insert Specimen Into Beam" delay="1.0" checkconditionalalways="true" >
+      <StatusEffect type="OnActive" target="This" lightcolor="120,120,120,110" text="Scanner Ready - Insert Conscious Specimen Into Beam" delay="1.0" checkconditionalalways="true">
         <Conditional charge="lt 1" targetitemcomponent="PowerContainer" />
       </StatusEffect>
-      <StatusEffect type="OnActive" target="This" lightcolor="100,100,255,100" text="Mudraptor DNA Detected" delay="1.0" checkconditionalalways="true" >
+      <StatusEffect type="OnActive" target="This" lightcolor="255,230,140,100" text="Crawler DNA Detected" delay="1.0" checkconditionalalways="true">
+        <RequiredItem items="thal_dnacrawler" type="Contained" />
+      </StatusEffect>
+      <StatusEffect type="OnActive" target="This" lightcolor="100,100,255,100" text="Mudraptor DNA Detected" delay="1.0" checkconditionalalways="true">
         <RequiredItem items="thal_dnamudraptor" type="Contained" />
       </StatusEffect>
-      <StatusEffect type="OnActive" target="This" lightcolor="0,255,100,100" text="Human DNA Detected" delay="1.0" checkconditionalalways="true" >
+      <StatusEffect type="OnActive" target="This" lightcolor="0,255,100,100" text="Human DNA Detected" delay="1.0" checkconditionalalways="true">
         <RequiredItem items="thal_dnahuman" type="Contained" />
       </StatusEffect>
       <StatusEffect type="OnActive" target="This" condition="-0.7" />
@@ -67,11 +111,25 @@
         <Conditional HasStatusTag="thal_humanscanned" />
         <SpawnItem spawnposition="ThisInventory" identifier="thal_dnahuman" />
       </StatusEffect>
-      <StatusEffect target="This" type="OnUse" checkconditionalalways="true" stackable="false" charge="-20" originalOutpost="human"></StatusEffect>
+      <!-- crawler scan logic -->
+      <!-- charge/buzz if crawdna inside -->
+      <StatusEffect target="NearbyCharacters, This" type="OnUse" checkconditionalalways="true" stackable="false" range="400" charge="25" originalOutpost="crawler">
+        <Conditional HasStatusTag="thal_crawlerscanned" />
+        <Sound file="Mods/Thalassophobia/Items/Electricity/Powersink.ogg" type="OnUse" range="500" loop="true" />
+        <RequiredItem items="thal_dnacrawler" type="Contained" />
+      </StatusEffect>
+      <!-- spawn crawdna inside if detected -->
+      <StatusEffect target="NearbyCharacters, This" type="OnUse" checkconditionalalways="true" stackable="false" range="400" originalOutpost="crawler">
+        <Conditional HasStatusTag="thal_crawlerscanned" />
+        <SpawnItem spawnposition="ThisInventory" identifier="thal_dnacrawler" />
+      </StatusEffect>
+      <!--end logic-->
+      <StatusEffect target="This" type="OnUse" checkconditionalalways="true" stackable="false" charge="-20"></StatusEffect>
       <StatusEffect type="Always" targettype="Contained" targets="thal_dna" delay="1.0" stackable="false">
         <Conditional ChargePercentage="lt 1" targetcontainer="true" targetitemcomponent="PowerContainer" />
         <RemoveItem />
       </StatusEffect>
+      <!-- completions -->
       <StatusEffect type="Always" target="This" charge="0" setvalue="true">
         <RequiredItem items="thal_dnahuman" type="Contained" />
         <Conditional ChargePercentage="gt 99" />
@@ -82,6 +140,12 @@
         <RequiredItem items="thal_dnamudraptor" type="Contained" />
         <Conditional ChargePercentage="gt 99" />
         <SpawnItem identifier="thal_dnamudraptor" />
+        <sound file="Mods/Thalassophobia/Items/Jobgear/Scientist/Ding.ogg" range="600.0" loop="false" />
+      </StatusEffect>
+      <StatusEffect type="Always" target="This" charge="0" setvalue="true">
+        <RequiredItem items="thal_dnacrawler" type="Contained" />
+        <Conditional ChargePercentage="gt 99" />
+        <SpawnItem identifier="thal_dnacrawler" />
         <sound file="Mods/Thalassophobia/Items/Jobgear/Scientist/Ding.ogg" range="600.0" loop="false" />
       </StatusEffect>
     </PowerContainer>
@@ -96,10 +160,10 @@
       <StatusEffect type="OnNotContained" target="This" setvalue="true" requireaimtouse="false"></StatusEffect>
       <StatusEffect type="OnContained" target="This" setvalue="true" requireaimtouse="true"></StatusEffect>
     </RepairTool>
-    <Repairable selectkey="Action" header="mechanicalrepairsheader" deteriorationspeed="0.1" mindeteriorationdelay="120" maxdeteriorationdelay="270" MinDeteriorationCondition="0" RepairThreshold="90" fixDurationHighSkill="5" fixDurationLowSkill="20" msg="ItemMsgRepairWrench" hudpriority="10">
+    <Repairable selectkey="Action" header="mechanicalrepairsheader" deteriorationspeed="0.1" mindeteriorationdelay="120" maxdeteriorationdelay="270" MinDeteriorationCondition="0" RepairThreshold="90" fixDurationHighSkill="5" fixDurationLowSkill="20" msg="ItemMsgRepairScrewdriver" hudpriority="10">
       <GuiFrame relativesize="0.2,0.16" minsize="400,180" maxsize="480,216" anchor="Center" relativeoffset="-0.1,0.27" style="ItemUI" />
       <RequiredSkill identifier="thal_scienceskill" level="20" />
-      <RequiredItem items="wrench" type="Equipped" />
+      <RequiredItem items="screwdriver" type="Equipped" />
       <ParticleEmitter particle="damagebubbles" particleburstamount="2" particleburstinterval="2.0" particlespersecond="2" scalemin="0.5" scalemax="1.5" anglemin="0" anglemax="359" velocitymin="-10" velocitymax="10" mincondition="0.0" maxcondition="20.0" />
       <ParticleEmitter particle="spark" particleburstamount="2" particleburstinterval="2.0" particlespersecond="2" scalemin="0.5" scalemax="1.5" anglemin="0" anglemax="359" velocitymin="-10" velocitymax="10" mincondition="0.0" maxcondition="20.0" />
       <StatusEffect type="OnFailure" target="Character" targetlimbs="LeftHand,RightHand">

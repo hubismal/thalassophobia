@@ -17,6 +17,23 @@
         <Conditional speciesname="nightraptor" />
         <Conditional speciesname="megaraptor" />
       </StatusEffect>
+      <StatusEffect tags="thal_crawlerscanned" target="Character" duration="0.1" stackable="false">
+        <Conditional speciesname="crawler" />
+        <Conditional speciesname="crawlerhusk" />
+        <Conditional speciesname="babycrawler" />
+      </StatusEffect>
+      <StatusEffect tags="thal_ramblinscanned" target="Character" duration="0.1" stackable="false">
+        <Conditional speciesname="ramblin" />
+        <Conditional speciesname="struttin" />
+      </StatusEffect>
+      <StatusEffect tags="thal_maggotscanned" target="Character" duration="0.1" stackable="false">
+        <Conditional speciesname="maggot" />
+        <Conditional speciesname="humanhive" />
+      </StatusEffect>
+      <StatusEffect tags="thal_xenoscanned" target="Character" duration="0.1" stackable="false">
+        <Conditional speciesname="xenomorph" />
+        <Conditional speciesname="xeno" />
+      </StatusEffect>
     </Effect>
     <icon texture="Mods/Thalassophobia/UI/MainIconsAtlas.png" sourcerect="128,771,128,128" color="139,60,42,255" origin="-1.8682324E-07,0" />
   </Affliction>

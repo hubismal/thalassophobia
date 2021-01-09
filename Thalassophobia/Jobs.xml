@@ -46,7 +46,6 @@
         <Item identifier="batterycell" showpreview="false" />
       </Item>
       <Item identifier="toolbox" equip="true">
-        <Item identifier="thal_cultistbook" />
         <Item identifier="thal_cultistknife" />
         <Item identifier="thal_cultistkit" />
         <Item identifier="ethanol" />

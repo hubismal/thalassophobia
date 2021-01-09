@@ -605,8 +605,7 @@
     </DecorativeSprite>
     <DecorativeSprite name="constructor Shell" texture="Mods/Thalassophobia/Items/Jobgear/Scientist/science.png" sourcerect="385,94,144,84" depth="0.56" origin="0.5,0.5" />
     <Body width="130" height="80" density="400" />
-    <ItemLabel scrollable="true" padding="7,12,7,6" textcolor="1,1,1,1" text="" >
-    </ItemLabel>
+    <ItemLabel scrollable="true" padding="7,12,7,6" textcolor="1,1,1,1" text=""></ItemLabel>
     <CustomInterface canbeselected="true" drawhudwhenequipped="false">
       <GuiFrame relativesize="0.4,0.5" anchor="BottomCenter" absoluteoffset="0,-30" style="ItemUI" />
       <Button text="RADTN_ST (diving Suit+lead+Ti-Al Alloy)">

@@ -266,4 +266,10 @@
   <entityname.thal_planter>Hydroponics Planter Box</entityname.thal_planter>
   <entitydescription.thal_planter>An advanced planter box, designed for improved scientific measurement and botanical metrics analysis required by a botanist. Makes the difference between a hobbyist gardener and a true scientist. </entitydescription.thal_planter>
   
+  <entityname.thal_geneticsign>Genetic Hazard Sign</entityname.thal_geneticsign>
+  <entitydescription.thal_geneticsign>A sign that can be dropped on the floor or attatched to a wall in order to indicate an area of genohazard ranging from DNA ionizing radiation to gene manipulation chemicals.</entitydescription.thal_geneticsign>
+  
+  <entityname.thal_geneticistsuit>Geneticist Cleansuit</entityname.thal_geneticistsuit>
+  <entitydescription.thal_geneticistsuit>Lightweight suit designed for use in mildly radioactive environments. Mildly resists radiations and chance of genetic damage.</entitydescription.thal_geneticistsuit>
+  
 </infotexts>
