@@ -64,6 +64,13 @@
       <StatusEffect type="OnActive" target="This" lightcolor="120,120,120,110" text="Scanner Ready - Insert Conscious Specimen Into Beam" delay="1.0" checkconditionalalways="true">
         <Conditional charge="lt 1" targetitemcomponent="PowerContainer" />
       </StatusEffect>
+      
+      <StatusEffect type="OnActive" target="This" lightcolor="245,50,180,100" text="Mushroom DNA Detected" delay="1.0" checkconditionalalways="true">
+        <RequiredItem items="thal_dnaramblin" type="Contained" />
+      </StatusEffect>
+      <StatusEffect type="OnActive" target="This" lightcolor="180,140,80,100" text="Maggot DNA Detected" delay="1.0" checkconditionalalways="true">
+        <RequiredItem items="thal_dnamaggot" type="Contained" />
+      </StatusEffect>
       <StatusEffect type="OnActive" target="This" lightcolor="255,230,140,100" text="Crawler DNA Detected" delay="1.0" checkconditionalalways="true">
         <RequiredItem items="thal_dnacrawler" type="Contained" />
       </StatusEffect>
@@ -123,6 +130,30 @@
         <Conditional HasStatusTag="thal_crawlerscanned" />
         <SpawnItem spawnposition="ThisInventory" identifier="thal_dnacrawler" />
       </StatusEffect>
+      <!-- maggot scan logic -->
+      <!-- charge/buzz if maggotdna inside -->
+      <StatusEffect target="NearbyCharacters, This" type="OnUse" checkconditionalalways="true" stackable="false" range="400" charge="25" originalOutpost="maggot">
+        <Conditional HasStatusTag="thal_maggotscanned" />
+        <Sound file="Mods/Thalassophobia/Items/Electricity/Powersink.ogg" type="OnUse" range="500" loop="true" />
+        <RequiredItem items="thal_dnamaggot" type="Contained" />
+      </StatusEffect>
+      <!-- spawn maggotdna inside if detected -->
+      <StatusEffect target="NearbyCharacters, This" type="OnUse" checkconditionalalways="true" stackable="false" range="400" originalOutpost="maggot">
+        <Conditional HasStatusTag="thal_maggotscanned" />
+        <SpawnItem spawnposition="ThisInventory" identifier="thal_dnamaggot" />
+      </StatusEffect>
+      <!-- ramblin scan logic -->
+      <!-- charge/buzz if ramblindna inside -->
+      <StatusEffect target="NearbyCharacters, This" type="OnUse" checkconditionalalways="true" stackable="false" range="400" charge="25" originalOutpost="ramblin">
+        <Conditional HasStatusTag="thal_ramblinscanned" />
+        <Sound file="Mods/Thalassophobia/Items/Electricity/Powersink.ogg" type="OnUse" range="500" loop="true" />
+        <RequiredItem items="thal_dnaramblin" type="Contained" />
+      </StatusEffect>
+      <!-- spawn ramblindna inside if detected -->
+      <StatusEffect target="NearbyCharacters, This" type="OnUse" checkconditionalalways="true" stackable="false" range="400" originalOutpost="ramblin">
+        <Conditional HasStatusTag="thal_ramblinscanned" />
+        <SpawnItem spawnposition="ThisInventory" identifier="thal_dnaramblin" />
+      </StatusEffect>
       <!--end logic-->
       <StatusEffect target="This" type="OnUse" checkconditionalalways="true" stackable="false" charge="-20"></StatusEffect>
       <StatusEffect type="Always" targettype="Contained" targets="thal_dna" delay="1.0" stackable="false">
@@ -146,6 +177,18 @@
         <RequiredItem items="thal_dnacrawler" type="Contained" />
         <Conditional ChargePercentage="gt 99" />
         <SpawnItem identifier="thal_dnacrawler" />
+        <sound file="Mods/Thalassophobia/Items/Jobgear/Scientist/Ding.ogg" range="600.0" loop="false" />
+      </StatusEffect>
+      <StatusEffect type="Always" target="This" charge="0" setvalue="true">
+        <RequiredItem items="thal_dnamaggot" type="Contained" />
+        <Conditional ChargePercentage="gt 99" />
+        <SpawnItem identifier="thal_dnamaggot" />
+        <sound file="Mods/Thalassophobia/Items/Jobgear/Scientist/Ding.ogg" range="600.0" loop="false" />
+      </StatusEffect>
+      <StatusEffect type="Always" target="This" charge="0" setvalue="true">
+        <RequiredItem items="thal_dnaramblin" type="Contained" />
+        <Conditional ChargePercentage="gt 99" />
+        <SpawnItem identifier="thal_dnaramblin" />
         <sound file="Mods/Thalassophobia/Items/Jobgear/Scientist/Ding.ogg" range="600.0" loop="false" />
       </StatusEffect>
     </PowerContainer>
@@ -354,6 +397,23 @@
     <Body width="55" height="55" density="20" />
     <Holdable slots="Any,RightHand,LeftHand" handle1="0,0" msg="ItemMsgPickUpSelect" />
     <LightComponent range="1" castshadows="false" lightcolor="255,230,140,200" IsOn="true" powerconsumption="0" blinkFrequency="0" allowingameediting="false">
+      <Sprite name="dnalight" texture="Mods/Thalassophobia/Items/Jobgear/Scientist/science.png" sourcerect="459,198,45,43" depth="0.6" origin="0.5,0.5" />
+    </LightComponent>
+  </Item>
+  <Item name="" identifier="thal_dnaramblin" category="Material" cargocontaineridentifier="metalcrate" description="" Tags="smallitem,thal_dna" spritecolor="245,50,180,200" InventoryIconColor="245,50,180,200" scale="0.5" impactsoundtag="impact_metal_light">
+    <Sprite name="dna" texture="Mods/Thalassophobia/Items/Jobgear/Scientist/science.png" sourcerect="459,198,45,43" depth="0.6" origin="0.5,0.5" />
+    <Body width="55" height="55" density="20" />
+    <Holdable slots="Any,RightHand,LeftHand" handle1="0,0" msg="ItemMsgPickUpSelect" />
+    <LightComponent range="1" castshadows="false" lightcolor="245,50,180,200" IsOn="true" powerconsumption="0" blinkFrequency="0" allowingameediting="false">
+      <Sprite name="dnalight" texture="Mods/Thalassophobia/Items/Jobgear/Scientist/science.png" sourcerect="459,198,45,43" depth="0.6" origin="0.5,0.5" />
+    </LightComponent>
+  </Item>
+  
+  <Item name="" identifier="thal_dnamaggot" category="Material" cargocontaineridentifier="metalcrate" description="" Tags="smallitem,thal_dna" spritecolor="180,140,80,200" InventoryIconColor="180,140,80,200" scale="0.5" impactsoundtag="impact_metal_light">
+    <Sprite name="dna" texture="Mods/Thalassophobia/Items/Jobgear/Scientist/science.png" sourcerect="459,198,45,43" depth="0.6" origin="0.5,0.5" />
+    <Body width="55" height="55" density="20" />
+    <Holdable slots="Any,RightHand,LeftHand" handle1="0,0" msg="ItemMsgPickUpSelect" />
+    <LightComponent range="1" castshadows="false" lightcolor="180,140,80,200" IsOn="true" powerconsumption="0" blinkFrequency="0" allowingameediting="false">
       <Sprite name="dnalight" texture="Mods/Thalassophobia/Items/Jobgear/Scientist/science.png" sourcerect="459,198,45,43" depth="0.6" origin="0.5,0.5" />
     </LightComponent>
   </Item>

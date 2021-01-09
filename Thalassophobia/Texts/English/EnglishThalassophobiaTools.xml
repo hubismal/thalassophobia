@@ -263,6 +263,12 @@
   <entityname.thal_dnacrawler>Crawler DNA</entityname.thal_dnacrawler>
   <entitydescription.thal_dnacrawler>Complete genetic sequence of the standard Europan Crawler. Can be used to develop anti-crawler technologies, or in DNA grafts for gene splicing. </entitydescription.thal_dnacrawler>
   
+  <entityname.thal_dnamaggot>Maggot DNA</entityname.thal_dnamaggot>
+  <entitydescription.thal_dnamaggot>Complete genetic sequence of the standard Hive Maggot. Can be used to develop anti-maggot technologies, or in DNA grafts for gene splicing. </entitydescription.thal_dnamaggot>
+  
+  <entityname.thal_dnaramblin>Mushroom DNA</entityname.thal_dnaramblin>
+  <entitydescription.thal_dnaramblin>Complete genetic sequence of the Ramblin' Evil Mushroom. Can be used to develop anti-mushroom technologies, or in DNA grafts for gene splicing. </entitydescription.thal_dnaramblin>
+  
   <entityname.thal_planter>Hydroponics Planter Box</entityname.thal_planter>
   <entitydescription.thal_planter>An advanced planter box, designed for improved scientific measurement and botanical metrics analysis required by a botanist. Makes the difference between a hobbyist gardener and a true scientist. </entitydescription.thal_planter>
   
