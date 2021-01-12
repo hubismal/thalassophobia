@@ -1,7 +1,8 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Items><Item name="" identifier="thal_geneticistsuit" category="Equipment" cargocontaineridentifier="metalcrate" tags="smallitem" impactsoundtag="impact_soft" scale="0.5">
-    <InventoryIcon name="Genet Costume Icon" texture="Mods/Thalassophobia/Items/Jobgear/OutfitIcons.png" sourcerect="253,285,128,101" origin="0.5,0.5" />
-    <Sprite name="Genet Costume (floor)" texture="Mods/Thalassophobia/Items/Jobgear/MiscJobGear.png" sourcerect="199,88,195,68" depth="0.6" origin="0.5,0.5" />
+<Items>
+  <Item name="" identifier="thal_geneticistsuit" category="Equipment" cargocontaineridentifier="metalcrate" tags="smallitem" impactsoundtag="impact_soft" scale="0.5">
+    <InventoryIcon name="Genet Costume Icon" texture="Mods/Thalassophobia/Items/Jobgear/OutfitIcons.png" sourcerect="129,286,128,101" origin="0.5,0.5" />
+    <Sprite name="Genet Costume (floor)" texture="Mods/Thalassophobia/Items/Jobgear/MiscJobGear.png" sourcerect="4,88,195,68" depth="0.6" origin="0.5,0.5" />
     <Body width="100" height="50" density="30" friction="0.8" restitution="0.01" />
     <Deconstruct time="40">
       <Item identifier="plastic" />
@@ -38,12 +39,12 @@
     <InventoryIcon name="gensignicon" texture="Mods/Thalassophobia/Items/Jobgear/Scientist/science.png" sourcerect="533,5,99,125" depth="0.6" origin="0.45675606,0.4603783" />
     <Sprite name="gen Sign" texture="Mods/Thalassophobia/Items/Jobgear/Scientist/science.png" sourcerect="535,3,99,235" depth="0.6" origin="0.45675606,0.4603783" tags="smallitem,divingmask,diving" />
     <Body width="95" height="230" density="50" />
-    <LightComponent range="50" castshadows="false" lightcolor="255,0,0,100" IsOn="true" powerconsumption="0" blinkFrequency="0.5" allowingameediting="false"></LightComponent>
+    <LightComponent range="50" castshadows="false" lightcolor="10,255,255,100" IsOn="true" powerconsumption="0" blinkFrequency="0.5" allowingameediting="false"></LightComponent>
     <Holdable selectkey="Select" pickkey="Use" slots="Any,RightHand,LeftHand" msg="ItemMsgDetachWrench" PickingTime="10.0" aimpos="35,-10" handle1="0,0" attachable="true" attachedbydefault="true" aimable="true">
       <requireditem identifier="wrench" type="Equipped" />
     </Holdable>
   </Item>
-  <Item name="" identifier="thal_dnascanner" category="Machine" Tags="mediumitem,fireextinguisher,provocative" cargocontaineridentifier="metalcrate" description="" impactsoundtag="impact_metal_light" requireaimtouse="true" hideinmenus="false" scale="0.5" characterusable="false" damagedbyexplosions="true" explosiondamagemultiplier="0.8" canflipx="false">
+  <Item name="" identifier="thal_dnascanner" category="Machine" Tags="mediumitem,provocative" cargocontaineridentifier="metalcrate" description="" impactsoundtag="impact_metal_light" requireaimtouse="true" hideinmenus="false" scale="0.5" characterusable="false" damagedbyexplosions="true" explosiondamagemultiplier="0.8" canflipx="false">
     <Sprite name="dna scanner" texture="Mods/Thalassophobia/Items/Jobgear/Scientist/science.png" sourcerect="5,263,261,113" depth="0.8" origin="0.5,0.5" />
     <BrokenSprite name="dna scanner" texture="Mods/Thalassophobia/Items/Jobgear/Scientist/science.png" sourcerect="5,382,261,113" depth="0.8" origin="0.5,0.5" maxcondition="40" fadein="true" />
     <Body width="261" height="113" density="5"></Body>
@@ -51,14 +52,11 @@
     <Holdable pickkey="Use" slots="Any,RightHand,LeftHand" msg="ItemMsgDetachWrench" PickingTime="10.0" aimpos="35,-10" handle1="0,0" attachable="true" attachedbydefault="true" aimable="true">
       <requireditem identifier="wrench" type="Equipped" />
     </Holdable>
-    <LightComponent lightcolor="0,100,100,100" range="1.0" castshadows="false" powerconsumption="50" allowingameediting="false">
+    <LightComponent lightcolor="0,100,100,100" range="1.0" castshadows="false" powerconsumption="0" allowingameediting="false">
       <Sprite name="dna scanner text" texture="Mods/Thalassophobia/Items/Jobgear/Scientist/science.png" sourcerect="278,338,165,57" depth="0.8" origin="0.7332378,0.46395308" />
       <LightSprite name="dna scan backlight" texture="Mods/Thalassophobia/Items/Jobgear/Scientist/science.png" sourcerect="273,266,171,69" depth="0.8" origin="0.74371487,0.49465847" />
       <StatusEffect type="OnActive" target="This">
         <UseItem />
-      </StatusEffect>
-      <StatusEffect type="Always" target="This" text="">
-        <Conditional Voltage="eq 0" />
       </StatusEffect>
       <StatusEffect type="Always" target="This" lightcolor="100,100,100,100" text="">
         <Conditional IsOn="eq false" />
@@ -66,7 +64,6 @@
       <StatusEffect type="OnActive" target="This" lightcolor="120,120,120,110" text="Scanner Ready - Insert Conscious Specimen Into Beam" delay="1.0" checkconditionalalways="true">
         <Conditional charge="lt 1" targetitemcomponent="PowerContainer" />
       </StatusEffect>
-      
       <StatusEffect type="OnActive" target="This" lightcolor="245,50,180,100" text="Mushroom DNA Detected" delay="1.0" checkconditionalalways="true">
         <RequiredItem items="thal_dnaramblin" type="Contained" />
       </StatusEffect>
@@ -95,64 +92,66 @@
       <GuiFrame relativesize="0.4,0.25" anchor="Center" minsize="140,170" maxsize="280,280" style="ItemUI" />
     </ItemContainer>
     <PowerContainer capacity="100.0" maxrechargespeed="0.0" maxoutput="0" canbeselected="false" indicatorposition="15,90" indicatorsize="150,15" indicatordepth="0.4" ishorizontal="true" msg="ItemMsgInteractSelect" charge="0">
+      <StatusEffect type="OnContained" target="This" indicatorsize="1,1" />
+      <StatusEffect type="OnNotContained" target="This" indicatorsize="150,15" />
       <GuiFrame relativesize="0.25,0.23" minsize="350,200" anchor="Center" style="ItemUI" />
       <!-- mudraptor scan logic -->
       <!-- charge/buzz if muddna inside -->
-      <StatusEffect target="NearbyCharacters, This" type="OnUse" checkconditionalalways="true" stackable="false" range="400" charge="25" originalOutpost="mudraptor">
+      <StatusEffect target="NearbyCharacters, This" type="OnUse" checkconditionalalways="true" stackable="false" range="200" charge="25" originalOutpost="mudraptor">
         <Conditional HasStatusTag="thal_mudraptorscanned" />
         <Sound file="Mods/Thalassophobia/Items/Electricity/Powersink.ogg" type="OnUse" range="500" loop="true" />
         <RequiredItem items="thal_dnamudraptor" type="Contained" />
       </StatusEffect>
       <!-- spawn muddna inside if detected -->
-      <StatusEffect target="NearbyCharacters, This" type="OnUse" checkconditionalalways="true" stackable="false" range="400" originalOutpost="mudraptor">
+      <StatusEffect target="NearbyCharacters, This" type="OnUse" checkconditionalalways="true" stackable="false" range="200" originalOutpost="mudraptor">
         <Conditional HasStatusTag="thal_mudraptorscanned" />
         <SpawnItem spawnposition="ThisInventory" identifier="thal_dnamudraptor" />
       </StatusEffect>
       <!-- human scan logic -->
       <!-- charge/buzz if humdna inside -->
-      <StatusEffect target="NearbyCharacters, This" type="OnUse" checkconditionalalways="true" stackable="false" range="400" charge="25" originalOutpost="human">
+      <StatusEffect target="NearbyCharacters, This" type="OnUse" checkconditionalalways="true" stackable="false" range="200" charge="25" originalOutpost="human">
         <Conditional HasStatusTag="thal_humanscanned" />
         <Sound file="Mods/Thalassophobia/Items/Electricity/Powersink.ogg" type="OnUse" range="500" loop="true" />
         <RequiredItem items="thal_dnahuman" type="Contained" />
       </StatusEffect>
       <!-- spawn humdna inside if detected -->
-      <StatusEffect target="NearbyCharacters, This" type="OnUse" checkconditionalalways="true" stackable="false" range="400" originalOutpost="human">
+      <StatusEffect target="NearbyCharacters, This" type="OnUse" checkconditionalalways="true" stackable="false" range="200" originalOutpost="human">
         <Conditional HasStatusTag="thal_humanscanned" />
         <SpawnItem spawnposition="ThisInventory" identifier="thal_dnahuman" />
       </StatusEffect>
       <!-- crawler scan logic -->
       <!-- charge/buzz if crawdna inside -->
-      <StatusEffect target="NearbyCharacters, This" type="OnUse" checkconditionalalways="true" stackable="false" range="400" charge="25" originalOutpost="crawler">
+      <StatusEffect target="NearbyCharacters, This" type="OnUse" checkconditionalalways="true" stackable="false" range="200" charge="25" originalOutpost="crawler">
         <Conditional HasStatusTag="thal_crawlerscanned" />
         <Sound file="Mods/Thalassophobia/Items/Electricity/Powersink.ogg" type="OnUse" range="500" loop="true" />
         <RequiredItem items="thal_dnacrawler" type="Contained" />
       </StatusEffect>
       <!-- spawn crawdna inside if detected -->
-      <StatusEffect target="NearbyCharacters, This" type="OnUse" checkconditionalalways="true" stackable="false" range="400" originalOutpost="crawler">
+      <StatusEffect target="NearbyCharacters, This" type="OnUse" checkconditionalalways="true" stackable="false" range="200" originalOutpost="crawler">
         <Conditional HasStatusTag="thal_crawlerscanned" />
         <SpawnItem spawnposition="ThisInventory" identifier="thal_dnacrawler" />
       </StatusEffect>
       <!-- maggot scan logic -->
       <!-- charge/buzz if maggotdna inside -->
-      <StatusEffect target="NearbyCharacters, This" type="OnUse" checkconditionalalways="true" stackable="false" range="400" charge="25" originalOutpost="maggot">
+      <StatusEffect target="NearbyCharacters, This" type="OnUse" checkconditionalalways="true" stackable="false" range="200" charge="25" originalOutpost="maggot">
         <Conditional HasStatusTag="thal_maggotscanned" />
         <Sound file="Mods/Thalassophobia/Items/Electricity/Powersink.ogg" type="OnUse" range="500" loop="true" />
         <RequiredItem items="thal_dnamaggot" type="Contained" />
       </StatusEffect>
       <!-- spawn maggotdna inside if detected -->
-      <StatusEffect target="NearbyCharacters, This" type="OnUse" checkconditionalalways="true" stackable="false" range="400" originalOutpost="maggot">
+      <StatusEffect target="NearbyCharacters, This" type="OnUse" checkconditionalalways="true" stackable="false" range="200" originalOutpost="maggot">
         <Conditional HasStatusTag="thal_maggotscanned" />
         <SpawnItem spawnposition="ThisInventory" identifier="thal_dnamaggot" />
       </StatusEffect>
       <!-- ramblin scan logic -->
       <!-- charge/buzz if ramblindna inside -->
-      <StatusEffect target="NearbyCharacters, This" type="OnUse" checkconditionalalways="true" stackable="false" range="400" charge="25" originalOutpost="ramblin">
+      <StatusEffect target="NearbyCharacters, This" type="OnUse" checkconditionalalways="true" stackable="false" range="200" charge="25" originalOutpost="ramblin">
         <Conditional HasStatusTag="thal_ramblinscanned" />
         <Sound file="Mods/Thalassophobia/Items/Electricity/Powersink.ogg" type="OnUse" range="500" loop="true" />
         <RequiredItem items="thal_dnaramblin" type="Contained" />
       </StatusEffect>
       <!-- spawn ramblindna inside if detected -->
-      <StatusEffect target="NearbyCharacters, This" type="OnUse" checkconditionalalways="true" stackable="false" range="400" originalOutpost="ramblin">
+      <StatusEffect target="NearbyCharacters, This" type="OnUse" checkconditionalalways="true" stackable="false" range="200" originalOutpost="ramblin">
         <Conditional HasStatusTag="thal_ramblinscanned" />
         <SpawnItem spawnposition="ThisInventory" identifier="thal_dnaramblin" />
       </StatusEffect>
@@ -194,13 +193,13 @@
         <sound file="Mods/Thalassophobia/Items/Jobgear/Scientist/Ding.ogg" range="600.0" loop="false" />
       </StatusEffect>
     </PowerContainer>
-    <RepairTool canbeselected="false" range="500" barrelpos="40,-50" repairthroughholes="true" characterusable="false" requireaimtouse="false" usablein="air" barrelrotation="270" powerconsumption="5">
-      <StatusEffect type="OnUse" target="UseTarget" stackable="false" delay="0.1" disabledeltatime="true" >
+    <RepairTool canbeselected="false" range="500" barrelpos="40,-50" repairthroughholes="true" characterusable="false" requireaimtouse="false" usablein="air" barrelrotation="270">
+      <StatusEffect type="OnUse" target="UseTarget" stackable="false" delay="0.1" disabledeltatime="true">
         <Conditional Stun="lt 1" />
         <Affliction identifier="thal_scan" amount="5" />
-        <Affliction identifier="thal_disorderfart" amount="3" probability="0.01" />
-        <Affliction identifier="thal_disorderseizure" amount="3" probability="0.01" />
-        <Affliction identifier="thal_disorderexplode" amount="3" probability="0.01" />
+        <Affliction identifier="thal_disorderfart" amount="3" probability="0.001" />
+        <Affliction identifier="thal_disorderseizure" amount="3" probability="0.001" />
+        <Affliction identifier="thal_disorderexplode" amount="3" probability="0.001" />
       </StatusEffect>
       <RequiredItem items="youJustLostTheGame" type="Equipped" />
       <ParticleEmitter particle="thal_grid" velocitymin="100.0" velocitymax="100.0" particlespersecond="10" colormultiplier="50,200,200,200" />
@@ -220,6 +219,149 @@
         <Affliction identifier="stun" strength="5" />
       </StatusEffect>
     </Repairable>
+  </Item>
+  <Item name="" identifier="thal_dnahatcher" category="Machine" Tags="smallitem,provocative" cargocontaineridentifier="metalcrate" description="" impactsoundtag="impact_metal_light" hideinmenus="false" scale="0.65" hideconditionbar="true" canflipx="false">
+    <Sprite name="dna hatcher" texture="Mods/Thalassophobia/Items/Jobgear/Scientist/science.png" sourcerect="667,7,193,232" depth="0.8" origin="0.5,0.5" />
+    <Body width="193" height="232" density="5"></Body>
+    <ItemLabel scrollable="true" padding="20,30,20,40" textcolor="1,1,1,1" text="Biomass: 0kg">
+      <StatusEffect type="OnContained" target="This" textcolor="0,0,0,0" />
+      <StatusEffect type="OnNotContained" target="This" textcolor="1,1,1,1" />
+    </ItemLabel>
+    <Holdable pickkey="Use" slots="Any,RightHand,LeftHand" msg="ItemMsgDetachWrench" PickingTime="10.0" aimpos="35,-10" handle1="0,0" attachable="true" attachedbydefault="true" aimable="true">
+      <requireditem identifier="wrench" type="Equipped" />
+    </Holdable>
+    <ItemContainer capacity="1" canbeselected="true" hideitems="true" slotsperrow="3" drawinventory="true" maxstacksize="1">
+      <GuiFrame relativesize="0.4,0.25" anchor="Center" minsize="140,170" maxsize="280,280" style="ItemUI" />
+      <!-- meat processing   -->
+      <StatusEffect type="OnNotContained" target="This" setvalue="true" condition="90" stackable="false" delay="0.1" text="Biomass: 20kg">
+        <RequiredItem items="thal_giblet" type="Contained" />
+        <sound file="Mods/Thalassophobia/Items/Jobgear/Scientist/blender.ogg" type="OnActive" range="600.0" />
+        <Conditional condition="eq 100" />
+      </StatusEffect>
+      <StatusEffect type="OnNotContained" target="This" setvalue="true" condition="80" stackable="false" delay="0.1" text="Biomass: 40kg">
+        <RequiredItem items="thal_giblet" type="Contained" />
+        <sound file="Mods/Thalassophobia/Items/Jobgear/Scientist/blender.ogg" type="OnActive" range="600.0" />
+        <Conditional condition="eq 90" />
+      </StatusEffect>
+      <StatusEffect type="OnNotContained" target="This" setvalue="true" condition="70" stackable="false" delay="0.1" text="Biomass: 60kg">
+        <RequiredItem items="thal_giblet" type="Contained" />
+        <sound file="Mods/Thalassophobia/Items/Jobgear/Scientist/blender.ogg" type="OnActive" range="600.0" />
+        <Conditional condition="eq 80" />
+      </StatusEffect>
+      <StatusEffect type="OnNotContained" target="This" setvalue="true" condition="60" stackable="false" delay="0.1" text="Biomass: 80kg">
+        <RequiredItem items="thal_giblet" type="Contained" />
+        <sound file="Mods/Thalassophobia/Items/Jobgear/Scientist/blender.ogg" type="OnActive" range="600.0" />
+        <Conditional condition="eq 70" />
+      </StatusEffect>
+      <StatusEffect type="OnNotContained" target="This" setvalue="true" condition="50" stackable="false" delay="0.1" text="Biomass:100kg">
+        <RequiredItem items="thal_giblet" type="Contained" />
+        <sound file="Mods/Thalassophobia/Items/Jobgear/Scientist/blender.ogg" type="OnActive" range="600.0" />
+        <Conditional condition="eq 60" />
+      </StatusEffect>
+      <StatusEffect type="OnNotContained" targettype="Contained" targets="thal_giblet">
+        <RemoveItem />
+        <RequiredItem items="thal_giblet" type="Contained" />
+      </StatusEffect>
+      <StatusEffect type="OnNotContained" target="This">
+        <Conditional condition="lt 55" />
+        <RequiredItem items="thal_giblet" type="Contained" />
+        <sound file="Mods/Thalassophobia/Items/Jobgear/Scientist/Deny.ogg" type="OnActive" range="600.0" />
+      </StatusEffect>
+    </ItemContainer>
+    <CustomInterface canbeselected="true" drawhudwhenequipped="false">
+      <GuiFrame relativesize="0.4,0.5" anchor="BottomCenter" absoluteoffset="0,-30" style="ItemUI" />
+      <Button text="Analyze DNA (Requires Adequate Biomass)">
+        <!-- human -->
+        <StatusEffect type="OnUse" targettype="This" delay="30" IsOn="false" canbeselected="true" text="Biomass: 0kg" condition="100" setvalue="true" stackable="false">
+          <SpawnCharacter speciesname="human" count="1" spread="8" />
+          <sound file="Mods/Thalassophobia/Items/Jobgear/Scientist/Ding.ogg" range="600.0" loop="false" />
+          <RequiredItem items="thal_dnahuman" type="Contained" />
+          <Conditional condition="lt 80" />
+          <ParticleEmitter particle="steamspray" particlespersecond="80" anglemin="0" anglemax="0" velocitymin="200" velocitymax="400" highqualitycollisiondetection="true" colormultiplier="255,255,255,160" />
+					<ParticleEmitter particle="bubbles" particlespersecond="20" anglemin="-10" anglemax="10" scalemin="0.3" scalemax="0.7" velocitymin="5" velocitymax="100" copyentityangle="true" />
+        </StatusEffect>
+        <StatusEffect type="OnUse" target="This" IsOn="true" canbeselected="false" text="Now hatching: Human">
+          <RequiredItem items="thal_dnahuman" type="Contained" />
+          <Conditional condition="lt 80" />
+        </StatusEffect>
+        <StatusEffect type="OnUse" target="This" >
+					<sound file="Mods/Thalassophobia/Items/Jobgear/Scientist/Deny.ogg" range="600.0" loop="false" />
+          <RequiredItem items="thal_dnahuman" type="Contained" />
+          <Conditional condition="gt 70" />
+        </StatusEffect>
+        <!-- mudraptor -->
+        <StatusEffect type="OnUse" targettype="This" delay="60" IsOn="false" canbeselected="true" text="Biomass: 0kg" condition="100" setvalue="true" stackable="false">
+          <SpawnCharacter speciesname="mudraptor" count="1" spread="8" />
+          <sound file="Mods/Thalassophobia/Items/Jobgear/Scientist/Ding.ogg" range="600.0" loop="false" />
+          <RequiredItem items="thal_dnamudraptor" type="Contained" />
+          <Conditional condition="lt 60" />
+        </StatusEffect>
+        <StatusEffect type="OnUse" target="This" IsOn="true" canbeselected="false" text="">
+          <RequiredItem items="thal_dnamudraptor" type="Contained" />
+          <Conditional condition="lt 60" />
+        </StatusEffect>
+        <StatusEffect type="OnUse" target="This" >
+					<sound file="Mods/Thalassophobia/Items/Jobgear/Scientist/Deny.ogg" range="600.0" loop="false" />
+          <RequiredItem items="thal_dnamudraptor" type="Contained" />
+          <Conditional condition="gt 55" />
+        </StatusEffect>
+        <!-- crawler -->
+        <StatusEffect type="OnUse" targettype="This" delay="40" IsOn="false" canbeselected="true" text="Biomass: 0kg" condition="100" setvalue="true" stackable="false">
+          <SpawnCharacter speciesname="crawler" count="1" spread="8" />
+          <sound file="Mods/Thalassophobia/Items/Jobgear/Scientist/Ding.ogg" range="600.0" loop="false" />
+          <RequiredItem items="thal_dnacrawler" type="Contained" />
+          <Conditional condition="lt 80" />
+        </StatusEffect>
+        <StatusEffect type="OnUse" target="This" IsOn="true" canbeselected="false" text="">
+          <RequiredItem items="thal_dnacrawler" type="Contained" />
+          <Conditional condition="lt 80" />
+        </StatusEffect>
+        <StatusEffect type="OnUse" target="This" >
+					<sound file="Mods/Thalassophobia/Items/Jobgear/Scientist/Deny.ogg" range="600.0" loop="false" />
+          <RequiredItem items="thal_dnacrawler" type="Contained" />
+          <Conditional condition="gt 75" />
+        </StatusEffect>
+        <!-- ramblin -->
+        <StatusEffect type="OnUse" targettype="This" delay="40" IsOn="false" canbeselected="true" text="Biomass: 0kg" condition="100" setvalue="true" stackable="false">
+          <SpawnCharacter speciesname="ramblin" count="1" spread="8" />
+          <sound file="Mods/Thalassophobia/Items/Jobgear/Scientist/Ding.ogg" range="600.0" loop="false" />
+          <RequiredItem items="thal_dnaramblin" type="Contained" />
+          <Conditional condition="lt 100" />
+        </StatusEffect>
+        <StatusEffect type="OnUse" target="This" IsOn="true" canbeselected="false" text="">
+          <RequiredItem items="thal_dnaramblin" type="Contained" />
+          <Conditional condition="lt 100" />
+        </StatusEffect>
+        <StatusEffect type="OnUse" target="This" >
+					<sound file="Mods/Thalassophobia/Items/Jobgear/Scientist/Deny.ogg" range="600.0" loop="false" />
+          <RequiredItem items="thal_dnaramblin" type="Contained" />
+          <Conditional condition="gt 95" />
+        </StatusEffect>
+        <!-- maggot -->
+        <StatusEffect type="OnUse" targettype="This" delay="40" IsOn="false" canbeselected="true" text="Biomass: 0kg" condition="100" setvalue="true" stackable="false">
+          <SpawnCharacter speciesname="maggot" count="1" spread="8" />
+          <sound file="Mods/Thalassophobia/Items/Jobgear/Scientist/Ding.ogg" range="600.0" loop="false" />
+          <RequiredItem items="thal_dnamaggot" type="Contained" />
+          <Conditional condition="lt 100" />
+        </StatusEffect>
+        <StatusEffect type="OnUse" target="This" IsOn="true" canbeselected="false" text="">
+          <RequiredItem items="thal_dnamaggot" type="Contained" />
+          <Conditional condition="lt 100" />
+        </StatusEffect>
+        <StatusEffect type="OnUse" target="This" >
+					<sound file="Mods/Thalassophobia/Items/Jobgear/Scientist/Deny.ogg" range="600.0" loop="false" />
+          <RequiredItem items="thal_dnamaggot" type="Contained" />
+          <Conditional condition="gt 95" />
+        </StatusEffect>
+      </Button>
+    </CustomInterface>
+    <LightComponent range="250" lightcolor="180,255,255,200" IsOn="false" powerconsumption="0" pulse="0.5" allowingameediting="false">
+      <sound file="Mods/Thalassophobia/Items/Jobgear/Clown/cultistaltar.ogg" type="OnActive" range="800.0" loop="true" />
+      <Sprite name="dna hatcher light" texture="Mods/Thalassophobia/Items/Jobgear/Scientist/science.png" sourcerect="667,245,193,232" depth="0.8" origin="0.5,0.5" />
+      <StatusEffect type="OnActive" target="This" stackable="false" disabledeltatime="true">
+        <ParticleEmitter particle="plasmaspark" particlespersecond="5" particleburstamount="3" velocitymin="0" velocitymax="300" anglemin="0" anglemax="360" scalemin="0.5" scalemax="1" />
+      </StatusEffect>
+    </LightComponent>
   </Item>
   <Item name="" identifier="thal_geneticinit" hideconditionbar="true" category="Equipment" Tags="smallitem,medical" useinhealthinterface="true" cargocontaineridentifier="chemicalcrate" description="" scale="0.5" impactsoundtag="impact_soft">
     <!--REMOVEME TO IMPLEMENT
@@ -422,7 +564,6 @@
       <Sprite name="dnalight" texture="Mods/Thalassophobia/Items/Jobgear/Scientist/science.png" sourcerect="459,198,45,43" depth="0.6" origin="0.5,0.5" />
     </LightComponent>
   </Item>
-  
   <Item name="" identifier="thal_dnamaggot" category="Material" cargocontaineridentifier="metalcrate" description="" Tags="smallitem,thal_dna" spritecolor="180,140,80,200" InventoryIconColor="180,140,80,200" scale="0.5" impactsoundtag="impact_metal_light">
     <Sprite name="dna" texture="Mods/Thalassophobia/Items/Jobgear/Scientist/science.png" sourcerect="459,198,45,43" depth="0.6" origin="0.5,0.5" />
     <Body width="55" height="55" density="20" />

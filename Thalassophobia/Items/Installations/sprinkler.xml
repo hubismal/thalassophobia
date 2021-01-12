@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Items>
-  <Item name="" identifier="thal_sprinkler" category="Machine" Tags="mediumitem,fireextinguisher,provocative" cargocontaineridentifier="metalcrate" description="" impactsoundtag="impact_metal_light" requireaimtouse="true" hideinmenus="false" scale="0.5" characterusable="false" damagedbyexplosions="true" explosiondamagemultiplier="0.8" canflipx="false" >
+  <Item name="" identifier="thal_sprinkler" category="Machine" Tags="smallitem,fireextinguisher,provocative" cargocontaineridentifier="metalcrate" description="" impactsoundtag="impact_metal_light" requireaimtouse="true" hideinmenus="false" scale="0.5" characterusable="false" damagedbyexplosions="true" explosiondamagemultiplier="0.8" canflipx="false" >
     <Sprite texture="Content/Items/Electricity/signalcomp.png" depth="0.8" sourcerect="48,288,48,32" origin="0.5,0.5" />
     <Body width="17" height="48" density="5" >
     </Body>

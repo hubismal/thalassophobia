@@ -255,7 +255,7 @@
     </LightComponent>
   </Item>
   
-  <Item name="" identifier="thal_wheatseed" category="Material" Tags="smallitem,seed,plantitem" cargocontaineridentifier="metalcrate" scale="0.5" impactsoundtag="impact_soft" isshootable="true" requireaimtouse="false" >
+  <Item name="" identifier="thal_wheatseed" category="Material" Tags="smallitem,seed,plantitem" cargocontaineridentifier="metalcrate" scale="0.5" impactsoundtag="impact_soft" hideinmenus="true" isshootable="true" requireaimtouse="false" >
     <Sprite texture="Content/Items/Gardening/GrowablePlants_Temp.png" depth="0.2" sourcerect="830,636,31,30" origin="0.5,0.5" />
     <!--<PreferredContainer primary="supplycab" minamount="0" maxamount="2" spawnprobability="0.25" />
     <PreferredContainer primary="wreckmedcab" minamount="0" maxamount="3" spawnprobability="0.5" />-->

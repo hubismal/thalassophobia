@@ -97,7 +97,6 @@
       <Skill identifier="electrical" level="0,5" />
       <Skill identifier="medical" level="20,30" />
       <!--<Skill identifier="resolution" level="20,100"/>-->
-      <Skill identifier="initiative" level="0,100" />
     </Skills>
     <!-- botanist -->
     <ItemSet>
@@ -126,6 +125,30 @@
         <Item identifier="thal_zombieseed" equip="false" />
         <Item identifier="thal_rustseed" equip="false" />
       </Item>
+      <Item identifier="thal_assembler" equip="false" />
+      <PreviewSprites dims="120,109">
+        <sprite texture="Content/Items/Jobgear/Captain/captain_torso_[GENDER]_1.png" sourcerect="2,38,120,109" offset="0,0" />
+        <sprite texture="Content/Items/Jobgear/Captain/captain_torso_[GENDER]_1.png" sourcerect="121,0,76,80" offset="-20,15" />
+      </PreviewSprites>
+    </ItemSet>
+    <!-- itemset 2:geneticist -->
+    <ItemSet>
+      <Item identifier="idcard" equip="true" showpreview="false" />
+      <Item identifier="thal_geneticistsuit" equip="true" outfit="true" />
+      <Item identifier="headset" equip="true" showpreview="false">
+				
+      <Item identifier="healthscanner" equip="true" />
+        <Item identifier="batterycell" showpreview="false" />
+      </Item>
+      <Item identifier="toolbelt">
+				<Item identifier="thal_dnahuman" equip="false" />
+        <Item identifier="thal_recipeconstructor" equip="false" />
+        <Item identifier="thal_geneticsign" equip="false" />
+        <Item identifier="thal_geneticsign" equip="false" showpreview="false" />
+      </Item>
+      <Item identifier="thal_carver" equip="false" />
+      <Item identifier="thal_dnascanner" equip="false" />
+      <Item identifier="thal_dnahatcher" equip="false" />
       <Item identifier="thal_assembler" equip="false" />
       <PreviewSprites dims="120,109">
         <sprite texture="Content/Items/Jobgear/Captain/captain_torso_[GENDER]_1.png" sourcerect="2,38,120,109" offset="0,0" />

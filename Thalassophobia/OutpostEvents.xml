@@ -196,6 +196,7 @@
         </Failure>
       </CheckDataAction>
     </ScriptedEvent>
+    <!--
     <ScriptedEvent identifier="thal_campaignstartsideline">
       <CheckDataAction identifier="thal_pastchosen" condition="eq 1">
         <Failure>
@@ -217,6 +218,7 @@
         </Failure>
       </CheckDataAction>
     </ScriptedEvent>
+    -->
     <!-- REACTOR LEAK
     Choose to risk the lives of everyone on the outpost
     Or choose to attempt to fix the reactor
@@ -561,7 +563,6 @@
     <EventSet identifier="campaignstart" allowatstart="true" chooserandom="false" ignorecooldown="true">
       <!--Only regular events in outposts:-->
       <ScriptedEvent identifier="thal_campaignstart" commonness="100" />
-      <ScriptedEvent identifier="thal_campaignstartsideline" commonness="100" />
     </EventSet>
     <EventSet identifier="outpostevents.randomevents" allowatstart="true" chooserandom="true">
       <!--Only regular events in outposts and cities:-->

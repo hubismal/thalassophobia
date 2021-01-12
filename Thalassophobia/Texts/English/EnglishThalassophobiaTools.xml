@@ -126,7 +126,7 @@
   <!-- Cooking tools -->
   
   <entityname.thal_carver>Meat Cleaver</entityname.thal_carver>
-  <entitydescription.thal_carver>A meat cleaver that will turn carcasses into cookable meat when repeatedly hitting a dead body. Can also be used in cooking stations to slice whole muscles into neater cuts for steaks, porkchops, and other more manageable meat.</entitydescription.thal_carver>
+  <entitydescription.thal_carver>A meat cleaver that will turn carcasses into processable/cookable meat when repeatedly hitting a dead body. Can also be used in cooking stations to slice whole muscles into neater cuts for steaks, porkchops, and other more manageable morsels.</entitydescription.thal_carver>
   
   <entityname.thal_foodcart>Food Cart</entityname.thal_foodcart>
   <entitydescription.thal_foodcart>Portable Cooking Station. Can be used to prepare a variety of foods depending on what cookware its user has equipped.</entitydescription.thal_foodcart>
@@ -252,7 +252,10 @@
   <entitydescription.thal_geneticgraft>Syringe which DNA samples can be inserted into. When injected into someone undergoing a CRISPR-Cas9 induced meltdown, this attatches the DNA to the cut sections, resulting in en vivo gene splicing.</entitydescription.thal_geneticgraft>
   
   <entityname.thal_dnascanner>DNA Scanner</entityname.thal_dnascanner>
-  <entitydescription.thal_dnascanner>A DNA scanner that collects DNA from the saliva molecules of living beings. Will not work on dead creatures. Requires power, and must be wired correctly in order to be properly used.</entitydescription.thal_dnascanner>
+  <entitydescription.thal_dnascanner>A DNA scanner that collects DNA from the saliva molecules of living beings. Will not work on dead creatures. Can be wired.</entitydescription.thal_dnascanner>
+  
+  <entityname.thal_dnahatcher>Biomorphic Incubation Pod</entityname.thal_dnahatcher>
+  <entitydescription.thal_dnahatcher>Pod used for creating creatures from DNA and biomass. Insert meat until the bar fills up, then press engage to start forming and nurturing the embryo. </entitydescription.thal_dnahatcher>
   
   <entityname.thal_dnahuman>Human DNA</entityname.thal_dnahuman>
   <entitydescription.thal_dnahuman>Complete genetic sequence of the standard Homo Sapien. Can be used to develop anti-Humanoid technologies, or in DNA grafts for reverting humans back to normal. </entitydescription.thal_dnahuman>

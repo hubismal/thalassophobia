@@ -8,8 +8,8 @@
   -->
 	
   <music file="Mods/Thalassophobia/Sounds/Music/robocop.ogg" type="menu" continuefromprevioustime="true"/>
-  <music file="Mods/Thalassophobia/Sounds/Music/tintinonthemoon.ogg" type="menu" continuefromprevioustime="true"/>
   <music file="Mods/Thalassophobia/Sounds/Music/flipflop.ogg" type="menu" continuefromprevioustime="true"/>
+  <music file="Mods/Thalassophobia/Sounds/Music/tintinonthemoonlighter.ogg" type="menu" continuefromprevioustime="true"/>
 
   <music file="Mods/Thalassophobia/Sounds/Music/controlledchaos.ogg" type="ruins"/>
   <music file="Mods/Thalassophobia/Sounds/Music/controlledchaos.ogg" type="ruins"/>

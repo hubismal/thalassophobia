@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Items>
-  <Item name="Singularity" identifier="thal_singularity" category="Equipment" cargocontaineridentifier="metalcrate" tags="smallitem" scale="0.3" health="100" hideinmenus="false" noninteractable="true" isshootable="true">
+  <Item name="“Singularity" identifier="thal_singularity" category="Equipment" cargocontaineridentifier="metalcrate" tags="smallitem" scale="0.3" health="100" hideinmenus="false" noninteractable="true" isshootable="true">
     <Sprite name="singularity" texture="Mods/Thalassophobia/Items/Jobgear/Scientist/singularity.png" sourcerect="0,0,400,400" origin="0.5,0.5" depth="0.02" />
     <DecorativeSprite texture="Mods/Thalassophobia/Items/Jobgear/Scientist/singularity.png" sourcerect="0,0,400,400" depth="0.01" rotationspeed="360"></DecorativeSprite>
     <Body width="40" radius="30" density="15" bodytype="Kinematic" />
