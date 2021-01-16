@@ -30,5 +30,9 @@
   <thal_footstep_brute file="Mods/Thalassophobia/Sounds/Footsteps/metal_walk06.ogg" range="400"/>
   <thal_footstep_brute file="Mods/Thalassophobia/Sounds/Footsteps/metal_walk07.ogg" range="400"/>
   
+  <impact_wetsplat file="Mods/Thalassophobia/Sounds/Impacts/wetsplat2.ogg" range="450"/>
+  <impact_wetsplat file="Mods/Thalassophobia/Sounds/Impacts/wetsplat3.ogg" range="450"/>
+  <impact_wetsplat file="Mods/Thalassophobia/Sounds/Impacts/wetsplat4.ogg" range="450"/>
+  
   <ambient file="Content/Sounds/Ambient/Ambient1.ogg"/>
 </sounds>

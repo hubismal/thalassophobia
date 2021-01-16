@@ -26,6 +26,12 @@
         <Conditional thal_gutted="lt 100" />
         <Conditional SpeciesName
         ="crawler" />
+					<Sound file="Mods/Thalassophobia/Items/Food/gib1.ogg" selectionmode="random" range="500" />
+					<Sound file="Mods/Thalassophobia/Items/Food/gib2.ogg" selectionmode="random" range="500" />
+					<Sound file="Mods/Thalassophobia/Items/Food/gib3.ogg" selectionmode="random" range="500" />
+					<Sound file="Mods/Thalassophobia/Items/Food/gib4.ogg" selectionmode="random" range="500" />
+        <Explosion range="0.0" structuredamage="0" itemdamage="0" force="0.0" severlimbsprobability="0.0" decal="blood" decalsize="3.25" >
+				</Explosion>
         <SpawnItem identifier="crawlermask" spawnposition="This" />
         <SpawnItem identifier="thal_mediumbrain" spawnposition="This" />
         <SpawnItem identifier="thal_smallbreast" spawnposition="This" />

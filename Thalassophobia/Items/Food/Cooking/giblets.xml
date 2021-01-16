@@ -1,8 +1,8 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Items>
-  <Item name="Raw Brains" identifier="thal_mediumbrain" category="Equipment" tags="thal_giblet,smallitem" cargocontaineridentifier="metalcrate" description="Human-Like Brains. Edible." scale="0.25">
+  <Item name="Raw Brains" identifier="thal_mediumbrain" category="Equipment" tags="thal_giblet,smallitem" cargocontaineridentifier="metalcrate" description="Human-Like Brains. Edible." scale="0.25" impactsoundtag="impact_wetsplat" >
     <Sprite name="medbrain" texture="Mods/Thalassophobia/Items/Food/Cooking/organs.png" sourcerect="3,98,128,94" depth="0.55" origin="0.5,0.5" />
-    <Body width="128" height="94" density="15" />
+    <Body width="128" height="60" density="15" />
     <Holdable slots="Any,RightHand,LeftHand" aimable="false" aimpos="35,23" handle1="15,0" swingamount="20,20" swingspeed="2" swingwhenusing="true" msg="ItemMsgPickUpSelect">
 			<StatusEffect type="OnUse" target="This,Character" condition="-10" swingwhenusing="true" swingspeed="2" aimpos="35,23" >
 				<Conditional thal_full="lt 99" />
@@ -22,9 +22,9 @@
 			</StatusEffect>
     </Holdable>
   </Item>
-  <Item name="Small Raw Brains" identifier="thal_smallbrain" category="Equipment" tags="thal_giblet,smallitem" cargocontaineridentifier="metalcrate" description="Sounds of chaos." scale="0.1">
+  <Item name="Small Raw Brains" identifier="thal_smallbrain" category="Equipment" tags="thal_giblet,smallitem" cargocontaineridentifier="metalcrate" description="Sounds of chaos." scale="0.1" impactsoundtag="impact_wetsplat" >
     <Sprite name="smolbrain" texture="Mods/Thalassophobia/Items/Food/Cooking/organs.png" sourcerect="151,112,156,89" depth="0.55" origin="0.5,0.5" />
-    <Body width="156" height="89" density="15" />
+    <Body width="156" height="60" density="15" />
     <Holdable slots="Any,RightHand,LeftHand" aimpos="100,0" handle1="-5,0" msg="ItemMsgPickUpSelect" />
   </Item>
   <Item name="Large Raw Brains" identifier="thal_largebrain" category="Equipment" tags="thal_giblet,smallitem" cargocontaineridentifier="metalcrate" description="Sounds of chaos." scale="0.5">
@@ -49,9 +49,9 @@
 			</StatusEffect>
     </Holdable>
   </Item>
-  <Item name="Raw Breast" identifier="thal_mediumbreast" category="Equipment" tags="thal_giblet,smallitem" cargocontaineridentifier="metalcrate" description="Sounds of chaos." scale="0.3">
+  <Item name="Raw Breast" identifier="thal_mediumbreast" category="Equipment" tags="thal_giblet,smallitem" cargocontaineridentifier="metalcrate" description="Sounds of chaos." scale="0.3" impactsoundtag="impact_wetsplat" >
     <Sprite name="medbreast" texture="Mods/Thalassophobia/Items/Food/Cooking/organs.png" sourcerect="591,5,137,84" depth="0.55" origin="0.5,0.5" />
-    <Body width="137" height="84" density="15" />
+    <Body width="137" height="60" density="15" />
     <Holdable slots="Any,RightHand,LeftHand" aimable="false" aimpos="35,23" handle1="15,0" swingamount="20,20" swingspeed="2" swingwhenusing="true" msg="ItemMsgPickUpSelect">
 			<StatusEffect type="OnUse" target="This,Character" condition="-8" swingwhenusing="true" swingspeed="2" aimpos="35,23" >
 				<Conditional thal_full="lt 99" />
@@ -71,9 +71,9 @@
 			</StatusEffect>
     </Holdable>
   </Item>
-  <Item name="Small Raw Breast" identifier="thal_smallbreast" category="Equipment" tags="thal_giblet,smallitem" cargocontaineridentifier="metalcrate" description="Sounds of chaos." scale="0.2">
+  <Item name="Small Raw Breast" identifier="thal_smallbreast" category="Equipment" tags="thal_giblet,smallitem" cargocontaineridentifier="metalcrate" description="Sounds of chaos." scale="0.2" impactsoundtag="impact_wetsplat" >
     <Sprite name="smallbreast" texture="Mods/Thalassophobia/Items/Food/Cooking/organs.png" sourcerect="445,16,140,75" depth="0.55" origin="0.5,0.5" />
-    <Body width="140" height="75" density="15" />
+    <Body width="140" height="60" density="15" />
     <Holdable slots="Any,RightHand,LeftHand" aimable="false" aimpos="35,23" handle1="15,0" swingamount="20,20" swingspeed="2" swingwhenusing="true" msg="ItemMsgPickUpSelect">
 			<StatusEffect type="OnUse" target="This,Character" condition="-15" swingwhenusing="true" swingspeed="2" aimpos="35,23" >
 				<Conditional thal_full="lt 99" />
@@ -93,9 +93,9 @@
 			</StatusEffect>
     </Holdable>
   </Item>
-  <Item name="Small Raw Thigh" identifier="thal_smallthigh" category="Equipment" tags="thal_giblet,smallitem" cargocontaineridentifier="metalcrate" description="Sounds of chaos." scale="0.28">
+  <Item name="Small Raw Thigh" identifier="thal_smallthigh" category="Equipment" tags="thal_giblet,smallitem" cargocontaineridentifier="metalcrate" description="Sounds of chaos." scale="0.28" impactsoundtag="impact_wetsplat" >
     <Sprite texture="Mods/Thalassophobia/Items/Food/Cooking/organs.png" sourcerect="315,19,107,70" depth="0.55" origin="0.5,0.5" />
-    <Body width="107" height="70" density="15" />
+    <Body width="107" height="55" density="15" />
     <Holdable slots="Any,RightHand,LeftHand" aimable="false" aimpos="35,23" handle1="15,0" swingamount="20,20" swingspeed="2" swingwhenusing="true" msg="ItemMsgPickUpSelect">
 			<StatusEffect type="OnUse" target="This,Character" condition="-13" swingwhenusing="true" swingspeed="2" aimpos="35,23" >
 				<Conditional thal_full="lt 99" />
@@ -115,9 +115,9 @@
 			</StatusEffect>
     </Holdable>
   </Item>
-  <Item name="Raw Thigh" identifier="thal_mediumthigh" category="Equipment" tags="thal_giblet,smallitem" cargocontaineridentifier="metalcrate" description="Sounds of chaos." scale="0.35">
+  <Item name="Raw Thigh" identifier="thal_mediumthigh" category="Equipment" tags="thal_giblet,smallitem" cargocontaineridentifier="metalcrate" description="Sounds of chaos." scale="0.35" impactsoundtag="impact_wetsplat" >
     <Sprite texture="Mods/Thalassophobia/Items/Food/Cooking/organs.png" sourcerect="152,7,149,94" depth="0.55" origin="0.5,0.5" />
-    <Body width="149" height="94" density="15" />
+    <Body width="149" height="55" density="15" />
     <Holdable slots="Any,RightHand,LeftHand" aimable="false" aimpos="35,23" handle1="15,0" swingamount="20,20" swingspeed="2" swingwhenusing="true" msg="ItemMsgPickUpSelect">
 			<StatusEffect type="OnUse" target="This,Character" condition="-11" swingwhenusing="true" swingspeed="2" aimpos="35,23" >
 				<Conditional thal_full="lt 99" />
@@ -137,9 +137,9 @@
 			</StatusEffect>
     </Holdable>
   </Item>
-  <Item name="Large Raw Thigh" identifier="thal_largethigh" category="Equipment" tags="thal_giblet,smallitem" cargocontaineridentifier="metalcrate" description="Sounds of chaos." scale="0.5">
+  <Item name="Large Raw Thigh" identifier="thal_largethigh" category="Equipment" tags="thal_giblet,smallitem" cargocontaineridentifier="metalcrate" description="Sounds of chaos." scale="0.5" impactsoundtag="impact_wetsplat" >
     <Sprite texture="Mods/Thalassophobia/Items/Food/Cooking/organs.png" sourcerect="0,2,136,94" depth="0.55" origin="0.5,0.5" />
-    <Body width="136" height="94" density="15" />
+    <Body width="136" height="60" density="15" />
     <Holdable slots="Any,RightHand,LeftHand" aimable="false" aimpos="35,23" handle1="15,0" swingamount="20,20" swingspeed="2" swingwhenusing="true" msg="ItemMsgPickUpSelect">
 			<StatusEffect type="OnUse" target="This,Character" condition="-6" swingwhenusing="true" swingspeed="2" aimpos="35,23" >
 				<Conditional thal_full="lt 99" />
