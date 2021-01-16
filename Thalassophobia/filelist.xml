@@ -28,6 +28,7 @@
   <Item file="Mods/Thalassophobia/Items/Gardening/growableplants.xml" />
   <Item file="Mods/Thalassophobia/Items/Jobgear/Scientist/science.xml" />
   <Item file="Mods/Thalassophobia/Items/Jobgear/Scientist/genetics.xml" />
+  <Item file="Mods/Thalassophobia/Items/Jobgear/Scientist/geneticsynth.xml" />
   <Particles file="Mods/Thalassophobia/Particles/ParticlePrefabs.xml" />
   <Decals file="Mods/Thalassophobia/Particles/DecalPrefabs.xml" />
   <Jobs file="Mods/Thalassophobia/Jobs.xml" />

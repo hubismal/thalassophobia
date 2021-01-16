@@ -35,7 +35,7 @@
         <Conditional speciesname="xeno" />
       </StatusEffect>
     </Effect>
-    <icon texture="Mods/Thalassophobia/UI/MainIconsAtlas.png" sourcerect="128,771,128,128" color="139,60,42,255" origin="-1.8682324E-07,0" />
+    <icon texture="Mods/Thalassophobia/UI/MainIconsAtlas.png" sourcerect="128,767,128,128" color="139,60,42,255" origin="0,0" />
   </Affliction>
   <AfflictionHusk name="Genetic Meltdown (Head)" identifier="thal_meltdownhead" description="The patient's cellular DNA is compromised. With the cells unable to reproduce, the patient is slowly 'melting' into dead cells. Locate a DNA graft to resupply the head with target DNA. The longer meltdown persists, the more genetic disorders are introduced to the patient's genes." type="huskinfection" targets="human, humanapostle" huskedspeciesname="gummy" causeofdeathdescription="Melted into DNA-less goop." causespeechimpediment="false" needsair="true" sendmessages="false" selfcauseofdeathdescription="You have melted into goop." limbspecific="false" indicatorlimb="Head" activationthreshold="0" showiconthreshold="1" maxstrength="100" iconcolors="60,107,195,255;60,107,195,255;255,100,100,255">
     <Effect minstrength="0" maxstrength="80" strengthchange="1" minvitalitydecrease="0" maxvitalitydecrease="30">

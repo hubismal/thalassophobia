@@ -119,29 +119,52 @@
     </Effect>
     <icon texture="Mods/Thalassophobia/UI/MainIconsAtlas.png" sourcerect="896,896,128,128" color="0,255,178,255" origin="0,0" />
   </Affliction>
-  <Affliction name="Silenced" identifier="thal_silenced" description="The patient's tongue is tied, but it is slowly untying. They should be able to talk without treatment in some time." type="resistance" causeofdeathdescription="this guy/gal shut the fuck up somehow you shouldn't see this" selfcauseofdeathdescription="You have shut the fuck up." limbspecific="false" maxstrength="100" karmachangeonapplied="-0.5" achievementonremoved="salvagewreckmission" damageoverlayalpha="1">
+  <Affliction name="Flash Frozen" identifier="thal_frozen" description="The patient's skin is extremely cold to the touch. There are patches of frostbitten skin over the affected area." type="resistance" causeofdeathdescription="Froze to death." selfcauseofdeathdescription="You have frozen to death." limbspecific="false" maxstrength="100" karmachangeonapplied="-0.3" damageoverlayalpha="1" iconcolors="0,220,240,255;0,100,130,200">
+    <Effect minstrength="0" maxstrength="15" minvitalitydecrease="0" maxvitalitydecrease="20" strengthchange="-0.7">
+      <StatusEffect setvalue="true" target="Character" SpeedMultiplier="0.8" />
+    </Effect>
+    <Effect minstrength="15" maxstrength="40" minvitalitydecrease="20" maxvitalitydecrease="60" strengthchange="-0.7">
+      <StatusEffect setvalue="true" target="Character" SpeedMultiplier="0.5" />
+    </Effect>
+    <Effect minstrength="40" maxstrength="50" minvitalitydecrease="60" maxvitalitydecrease="80" strengthchange="-0.7">
+      <StatusEffect setvalue="true" target="Character" SpeedMultiplier="0.2" />
+    </Effect>
+    <Effect minstrength="50" maxstrength="100" minvitalitydecrease="80" maxvitalitydecrease="200" strengthchange="-0.7">
+      <StatusEffect setvalue="true" target="Character" SpeedMultiplier="0.2" />
+    </Effect>
+    <icon texture="Mods/Thalassophobia/UI/MainIconsAtlas.png" name="frozen" sourcerect="256,767,128,128" color="139,60,42,255" origin="0,0" />
+  </Affliction>
+  <Affliction name="Silenced" identifier="thal_silenced" description="The patient's tongue is tied, but it is slowly untying. They should be able to talk without treatment in some time." type="resistance" causeofdeathdescription="this guy/gal shut the fuck up somehow you shouldn't see this" selfcauseofdeathdescription="You have shut the fuck up." limbspecific="false" maxstrength="100" karmachangeonapplied="-0.5" damageoverlayalpha="1">
     <Effect minstrength="0" maxstrength="100" minvitalitydecrease="0" maxvitalitydecrease="0" strengthchange="-0.7">
       <StatusEffect tags="silenced" target="Character" speechImpediment="100.0" />
     </Effect>
     <icon texture="Mods/Thalassophobia/UI/MainIconsAtlas.png" sourcerect="896,640,128,128" color="139,60,42,255" origin="0,0" />
   </Affliction>
   <!-- used when first equipping bomb collar, not intended to be seen in normal gameplay -->
-  <Affliction name="Explosive Collar" identifier="thal_bombcollar" description="The patient's neck has been reduced to a few crisp tendons and bone, likely resulting from a bomb collar." type="resistance" causeofdeathdescription="Attempted to remove explosive collar." selfcauseofdeathdescription="You have died as a result of your attempt to remove the explosive collar." limbspecific="false" showiconthreshold="101" maxstrength="100">
+  <Affliction name="Explosive Collar" identifier="thal_bombcollar" description="The patient's neck has been reduced to a few crisp tendons and bone, likely resulting from a bomb collar." type="resistance" causeofdeathdescription="Attempted to remove explosive collar." selfcauseofdeathdescription="You have died as a result of your attempt to remove the explosive collar." limbspecific="false" showiconthreshold="101" maxstrength="100" 
+    showicontoothersthreshold="1000"
+    showinhealthscannerthreshold="1000" >
     <Effect minstrength="99" maxstrength="100" minvitalitydecrease="3001" maxvitalitydecrease="3001" strengthchange="-0.7"></Effect>
     <Effect minstrength="50" maxstrength="99" minvitalitydecrease="0" maxvitalitydecrease="0" strengthchange="0"></Effect>
     <Effect minstrength="0" maxstrength="50" minvitalitydecrease="0" maxvitalitydecrease="0" strengthchange="-100"></Effect>
     <icon texture="Mods/Thalassophobia/UI/MainIconsAtlas.png" sourcerect="896,640,128,128" color="139,60,42,255" origin="0,0" />
   </Affliction>
-  <Affliction name="Explosive Collar (Timed)" identifier="thal_bombcollartimed" description="The patient's neck has been reduced to a few crisp tendons and bone, likely resulting from a timed bomb collar." type="resistance" causeofdeathdescription="Failed to disarm explosive collar in time." selfcauseofdeathdescription="You have died as a result of your inability to disarm the collar in time." limbspecific="false" showiconthreshold="101" maxstrength="100">
+  <Affliction name="Explosive Collar (Timed)" identifier="thal_bombcollartimed" description="The patient's neck has been reduced to a few crisp tendons and bone, likely resulting from a timed bomb collar." type="resistance" causeofdeathdescription="Failed to disarm explosive collar in time." selfcauseofdeathdescription="You have died as a result of your inability to disarm the collar in time." limbspecific="false" showiconthreshold="101" maxstrength="100" 
+    showicontoothersthreshold="1000"
+    showinhealthscannerthreshold="1000" >
     <Effect minstrength="0" maxstrength="100" minvitalitydecrease="9001" maxvitalitydecrease="9001" strengthchange="0.0"></Effect>
     <icon texture="Mods/Thalassophobia/UI/MainIconsAtlas.png" sourcerect="896,640,128,128" color="139,60,42,255" origin="0,0" />
   </Affliction>
-  <Affliction name="Gutted" identifier="thal_gutted" description="The patient's limbs are in a state of having been gutted post mortem. Various organs are missing and many muscles and tendons have been severed at their ends." type="resistance" causeofdeathdescription="Carved Organs" selfcauseofdeathdescription="You have died from having your muscles carved out of you." limbspecific="false" indicatorlimb="Torso" showiconthreshold="90" maxstrength="100">
+  <Affliction name="Gutted (Internal)" identifier="thal_gutted" description="INTERNAL USE ONLY" type="resistance" causeofdeathdescription="Carved Organs" selfcauseofdeathdescription="You have died from having your muscles carved out of you." limbspecific="false" indicatorlimb="Torso" showiconthreshold="1000" maxstrength="100" 
+    showicontoothersthreshold="1000"
+    showinhealthscannerthreshold="1000" >
     <Effect minstrength="0" maxstrength="100" minvitalitydecrease="0" maxvitalitydecrease="0" strengthchange="0.0"></Effect>
     <icon texture="Mods/Thalassophobia/UI/MainIconsAtlas.png" sourcerect="896,640,128,128" color="139,60,42,255" origin="0,0" />
   </Affliction>
   <!-- used for things like bowling sound effects -->
-  <Affliction name="Fallen" identifier="thal_fallen" description="The patient has fallen and cannot get up. Give them a second." type="resistance" causeofdeathdescription="fucking fell and died" selfcauseofdeathdescription="you have fallen down and died somehow" limbspecific="false" showiconthreshold="30" maxstrength="30">
+  <Affliction name="Fallen" identifier="thal_fallen" description="The patient has fallen and cannot get up. Give them a second." type="resistance" causeofdeathdescription="fucking fell and died" selfcauseofdeathdescription="you have fallen down and died somehow" limbspecific="false" showiconthreshold="1000" maxstrength="30" 
+    showicontoothersthreshold="1000"
+    showinhealthscannerthreshold="1000">
     <Effect minstrength="0" maxstrength="30" strengthchange="-30.0"></Effect>
     <icon texture="Mods/Thalassophobia/UI/MainIconsAtlas.png" sourcerect="896,640,128,128" color="139,60,42,255" origin="0,0" />
   </Affliction>
@@ -174,7 +197,7 @@
       <StatusEffect target="Character" ObstructVision="true" SpeedMultiplier="0.9" setvalue="true" disabledeltatime="true" />
     </Effect>
     <Effect minstrength="5" maxstrength="30" strengthchange="-1.0" minradialdistort="10.0" maxradialdistort="30.0" minscreendistort="1.0" maxscreendistort="3.0" minscreenblur="10.0" maxscreenblur="50.0">
-      <StatusEffect target="Character" ObstructVision="true" SpeedMultiplier="0.9" setvalue="true" disabledeltatime="true" />
+      <StatusEffect target="Character" ObstructVision="true" SpeedMultiplier="0.8" setvalue="true" disabledeltatime="true" />
     </Effect>
     <icon name="blinded" texture="Mods/Thalassophobia/UI/MainIconsAtlas.png" sourcerect="897,768,128,128" color="139,60,42,255" origin="0,0" />
   </Affliction>

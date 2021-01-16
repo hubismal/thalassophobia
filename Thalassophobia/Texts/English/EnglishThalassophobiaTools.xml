@@ -128,6 +128,30 @@
   <entityname.thal_carver>Meat Cleaver</entityname.thal_carver>
   <entitydescription.thal_carver>A meat cleaver that will turn carcasses into processable/cookable meat when repeatedly hitting a dead body. Can also be used in cooking stations to slice whole muscles into neater cuts for steaks, porkchops, and other more manageable morsels.</entitydescription.thal_carver>
   
+  <entityname.thal_mediumbrain>Bloody Brain</entityname.thal_mediumbrain>
+  <entitydescription.thal_mediumbrain>A fresh, sanguineous average sized brain. Can be eaten, processed, used for science, and much more.</entitydescription.thal_mediumbrain>
+  
+  <entityname.thal_smallbrain>Small Bloody Brain</entityname.thal_smallbrain>
+  <entitydescription.thal_smallbrain>A fresh, sanguineous tiny brain. Can be eaten, processed, used for science, and much more.</entitydescription.thal_smallbrain>
+  
+  <entityname.thal_largebrain>Small Bloody Brain</entityname.thal_largebrain>
+  <entitydescription.thal_largebrain>A fresh, sanguineous colossal brain. Can be eaten, processed, used for science, and much more.</entitydescription.thal_largebrain>
+  
+  <entityname.thal_smallbreast>Small Bloody Breast</entityname.thal_smallbreast>
+  <entitydescription.thal_smallbreast>A fresh, sanguineous tiny pectoral muscle. Can be eaten, processed, used for science, and much more.</entitydescription.thal_smallbreast>
+  
+  <entityname.thal_mediumbreast>Bloody Breast</entityname.thal_mediumbreast>
+  <entitydescription.thal_mediumbreast>A fresh, sanguineous sizeable pectoral muscle. Can be eaten, processed, used for science, and much more.</entitydescription.thal_mediumbreast>
+  
+  <entityname.thal_mediumthigh>Bloody Thigh</entityname.thal_mediumthigh>
+  <entitydescription.thal_mediumthigh>A fresh, sanguineous sizeable quadricep muscle. Can be eaten, processed, used for science, and much more.</entitydescription.thal_mediumthigh>
+  
+  <entityname.thal_smallthigh>Small Bloody Thigh</entityname.thal_smallthigh>
+  <entitydescription.thal_smallthigh>A fresh, sanguineous tiny quadricep muscle. Can be eaten, processed, used for science, and much more.</entitydescription.thal_smallthigh>
+  
+  <entityname.thal_largethigh>Large Bloody Thigh</entityname.thal_largethigh>
+  <entitydescription.thal_largethigh>A fresh, sanguineous colossal quadricep muscle. Can be eaten, processed, used for science, and much more.</entitydescription.thal_largethigh>
+  
   <entityname.thal_foodcart>Food Cart</entityname.thal_foodcart>
   <entitydescription.thal_foodcart>Portable Cooking Station. Can be used to prepare a variety of foods depending on what cookware its user has equipped.</entitydescription.thal_foodcart>
   
@@ -220,6 +244,9 @@
   
   <entityname.thal_cylinderlaughing>Nitrous Oxide Cylinder</entityname.thal_cylinderlaughing>
   <entitydescription.thal_cylinderlaughing>Pressurized gas cylinder containing Nitrous Oxide, a commonplace gas with analgesic effects stemming from deprivation of oxygen to the brain. Avoid dropping.</entitydescription.thal_cylinderlaughing>
+  
+  <entityname.thal_cylinderfreeze>Liquid Nitrogen Cylinder</entityname.thal_cylinderfreeze>
+  <entitydescription.thal_cylinderfreeze>Pressurized gas cylinder containing Liquid Nitrogen, a cryogenic liquid with and extremely low boiling point capable of rapidly freezing living tissue.</entitydescription.thal_cylinderfreeze>
   
   <entityname.thal_cylindershroomcure>Aerosol Fungicide Cylinder</entityname.thal_cylindershroomcure>
   <entitydescription.thal_cylindershroomcure>Pressurezed gas cylinder containing vaporized Anti-Mycelium. Kills Ramblin Mushrooms and disinfect victims of mushroomization.</entitydescription.thal_cylindershroomcure>

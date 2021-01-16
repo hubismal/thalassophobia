@@ -99,7 +99,7 @@
       <!-- charge/buzz if muddna inside -->
       <StatusEffect target="NearbyCharacters, This" type="OnUse" checkconditionalalways="true" stackable="false" range="200" charge="25" originalOutpost="mudraptor">
         <Conditional HasStatusTag="thal_mudraptorscanned" />
-        <Sound file="Mods/Thalassophobia/Items/Electricity/Powersink.ogg" type="OnUse" range="500" loop="true" />
+        <Sound file="Mods/Thalassophobia/Items/Jobgear/Scientist/scanactive.ogg" type="OnUse" range="500" loop="true" />
         <RequiredItem items="thal_dnamudraptor" type="Contained" />
       </StatusEffect>
       <!-- spawn muddna inside if detected -->
@@ -111,7 +111,7 @@
       <!-- charge/buzz if humdna inside -->
       <StatusEffect target="NearbyCharacters, This" type="OnUse" checkconditionalalways="true" stackable="false" range="200" charge="25" originalOutpost="human">
         <Conditional HasStatusTag="thal_humanscanned" />
-        <Sound file="Mods/Thalassophobia/Items/Electricity/Powersink.ogg" type="OnUse" range="500" loop="true" />
+        <Sound file="Mods/Thalassophobia/Items/Jobgear/Scientist/scanactive.ogg" type="OnUse" range="500" loop="true" />
         <RequiredItem items="thal_dnahuman" type="Contained" />
       </StatusEffect>
       <!-- spawn humdna inside if detected -->
@@ -123,7 +123,7 @@
       <!-- charge/buzz if crawdna inside -->
       <StatusEffect target="NearbyCharacters, This" type="OnUse" checkconditionalalways="true" stackable="false" range="200" charge="25" originalOutpost="crawler">
         <Conditional HasStatusTag="thal_crawlerscanned" />
-        <Sound file="Mods/Thalassophobia/Items/Electricity/Powersink.ogg" type="OnUse" range="500" loop="true" />
+        <Sound file="Mods/Thalassophobia/Items/Jobgear/Scientist/scanactive.ogg" type="OnUse" range="500" loop="true" />
         <RequiredItem items="thal_dnacrawler" type="Contained" />
       </StatusEffect>
       <!-- spawn crawdna inside if detected -->
@@ -135,7 +135,7 @@
       <!-- charge/buzz if maggotdna inside -->
       <StatusEffect target="NearbyCharacters, This" type="OnUse" checkconditionalalways="true" stackable="false" range="200" charge="25" originalOutpost="maggot">
         <Conditional HasStatusTag="thal_maggotscanned" />
-        <Sound file="Mods/Thalassophobia/Items/Electricity/Powersink.ogg" type="OnUse" range="500" loop="true" />
+        <Sound file="Mods/Thalassophobia/Items/Jobgear/Scientist/scanactive.ogg" type="OnUse" range="500" loop="true" />
         <RequiredItem items="thal_dnamaggot" type="Contained" />
       </StatusEffect>
       <!-- spawn maggotdna inside if detected -->
@@ -147,7 +147,7 @@
       <!-- charge/buzz if ramblindna inside -->
       <StatusEffect target="NearbyCharacters, This" type="OnUse" checkconditionalalways="true" stackable="false" range="200" charge="25" originalOutpost="ramblin">
         <Conditional HasStatusTag="thal_ramblinscanned" />
-        <Sound file="Mods/Thalassophobia/Items/Electricity/Powersink.ogg" type="OnUse" range="500" loop="true" />
+        <Sound file="Mods/Thalassophobia/Items/Jobgear/Scientist/scanactive.ogg" type="OnUse" range="500" loop="true" />
         <RequiredItem items="thal_dnaramblin" type="Contained" />
       </StatusEffect>
       <!-- spawn ramblindna inside if detected -->
@@ -167,30 +167,35 @@
         <Conditional ChargePercentage="gt 99" />
         <SpawnItem identifier="thal_dnahuman" />
         <sound file="Mods/Thalassophobia/Items/Jobgear/Scientist/Ding.ogg" range="600.0" loop="false" />
+        <ParticleEmitter particle="steamspray" particleamount="50" scalemin="0.5" scalemax="1" velocitymin="50" velocitymax="100" anglemin="0" anglemax="360" colormultiplier="240,255,255,255" />
       </StatusEffect>
       <StatusEffect type="Always" target="This" charge="0" setvalue="true">
         <RequiredItem items="thal_dnamudraptor" type="Contained" />
         <Conditional ChargePercentage="gt 99" />
         <SpawnItem identifier="thal_dnamudraptor" />
         <sound file="Mods/Thalassophobia/Items/Jobgear/Scientist/Ding.ogg" range="600.0" loop="false" />
+        <ParticleEmitter particle="steamspray" particleamount="50" scalemin="0.5" scalemax="1" velocitymin="50" velocitymax="100" anglemin="0" anglemax="360" colormultiplier="240,255,255,255" />
       </StatusEffect>
       <StatusEffect type="Always" target="This" charge="0" setvalue="true">
         <RequiredItem items="thal_dnacrawler" type="Contained" />
         <Conditional ChargePercentage="gt 99" />
         <SpawnItem identifier="thal_dnacrawler" />
         <sound file="Mods/Thalassophobia/Items/Jobgear/Scientist/Ding.ogg" range="600.0" loop="false" />
+        <ParticleEmitter particle="steamspray" particleamount="50" scalemin="0.5" scalemax="1" velocitymin="50" velocitymax="100" anglemin="0" anglemax="360" colormultiplier="240,255,255,255" />
       </StatusEffect>
       <StatusEffect type="Always" target="This" charge="0" setvalue="true">
         <RequiredItem items="thal_dnamaggot" type="Contained" />
         <Conditional ChargePercentage="gt 99" />
         <SpawnItem identifier="thal_dnamaggot" />
         <sound file="Mods/Thalassophobia/Items/Jobgear/Scientist/Ding.ogg" range="600.0" loop="false" />
+        <ParticleEmitter particle="steamspray" particleamount="50" scalemin="0.5" scalemax="1" velocitymin="50" velocitymax="100" anglemin="0" anglemax="360" colormultiplier="240,255,255,255" />
       </StatusEffect>
       <StatusEffect type="Always" target="This" charge="0" setvalue="true">
         <RequiredItem items="thal_dnaramblin" type="Contained" />
         <Conditional ChargePercentage="gt 99" />
         <SpawnItem identifier="thal_dnaramblin" />
         <sound file="Mods/Thalassophobia/Items/Jobgear/Scientist/Ding.ogg" range="600.0" loop="false" />
+        <ParticleEmitter particle="steamspray" particleamount="50" scalemin="0.5" scalemax="1" velocitymin="50" velocitymax="100" anglemin="0" anglemax="360" colormultiplier="240,255,255,255" />
       </StatusEffect>
     </PowerContainer>
     <RepairTool canbeselected="false" range="500" barrelpos="40,-50" repairthroughholes="true" characterusable="false" requireaimtouse="false" usablein="air" barrelrotation="270">
@@ -359,7 +364,6 @@
       <sound file="Mods/Thalassophobia/Items/Jobgear/Clown/cultistaltar.ogg" type="OnActive" range="800.0" loop="true" />
       <Sprite name="dna hatcher light" texture="Mods/Thalassophobia/Items/Jobgear/Scientist/science.png" sourcerect="667,245,193,232" depth="0.8" origin="0.5,0.5" />
       <StatusEffect type="OnActive" target="This" stackable="false" disabledeltatime="true">
-        <ParticleEmitter particle="plasmaspark" particlespersecond="5" particleburstamount="3" velocitymin="0" velocitymax="300" anglemin="0" anglemax="360" scalemin="0.5" scalemax="1" />
       </StatusEffect>
     </LightComponent>
   </Item>

@@ -136,12 +136,11 @@
       <Item identifier="idcard" equip="true" showpreview="false" />
       <Item identifier="thal_geneticistsuit" equip="true" outfit="true" />
       <Item identifier="headset" equip="true" showpreview="false">
-				
-      <Item identifier="healthscanner" equip="true" />
+        <Item identifier="healthscanner" equip="true" />
         <Item identifier="batterycell" showpreview="false" />
       </Item>
       <Item identifier="toolbelt">
-				<Item identifier="thal_dnahuman" equip="false" />
+        <Item identifier="thal_dnahuman" equip="false" />
         <Item identifier="thal_recipeconstructor" equip="false" />
         <Item identifier="thal_geneticsign" equip="false" />
         <Item identifier="thal_geneticsign" equip="false" showpreview="false" />

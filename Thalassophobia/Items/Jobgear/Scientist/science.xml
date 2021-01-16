@@ -324,27 +324,35 @@
       </StatusEffect>
       <!-- when using, the contained welding fuel tank will detoriate (= lose fuel) -->
       <StatusEffect type="OnUse" targettype="Contained" targets="gascylinder,weldingfueltank,oxygentank" Condition="-6.0" />
-      <!-- do burn damage to characters -->
+      <!-- tear gas -->
       <StatusEffect type="OnUse" target="UseTarget" targetlimb="head">
         <RequiredItems items="thal_cylinderteargas" type="Contained" />
         <Affliction identifier="thal_teargasaffliction" amount="2" />
       </StatusEffect>
+      <!-- shroom cure -->
       <StatusEffect type="OnUse" target="UseTarget">
         <RequiredItems items="thal_cylindershroomcure" type="Contained" targetlimb="head" />
         <Affliction identifier="thal_shroomcureaffliction" amount="2" />
       </StatusEffect>
+      <!-- laughing gas -->
       <StatusEffect type="OnUse" target="UseTarget">
         <RequiredItems items="thal_cylinderlaughing" type="Contained" targetlimb="head" />
         <ReduceAffliction type="damage" amount="2" />
         <Affliction identifier="oxygenlow" amount="0.5" />
         <Affliction identifier="strengthen" amount="45" />
       </StatusEffect>
+      <!-- o2 tank loaded -->
       <StatusEffect type="OnUse" target="UseTarget">
         <RequiredItems items="oxygentank" type="Contained" />
         <ReduceAffliction type="oxygenlow" amount="3" />
       </StatusEffect>
       <StatusEffect type="OnUse" target="Hull" Oxygen="3000.0">
         <RequiredItems items="oxygentank" type="Contained" />
+      </StatusEffect>
+      <!-- liquid nitrogen -->
+      <StatusEffect type="OnUse" target="UseTarget" targetlimb="head">
+        <RequiredItems items="thal_cylinderfreeze" type="Contained" />
+        <Affliction identifier="thal_frozen" amount="2" />
       </StatusEffect>
     </RepairTool>
     <LightComponent powerconsumption="10" LightColor="255,255,255,100" Flicker="0" Range="6" IsOn="true">
@@ -365,7 +373,7 @@
         <RequiredItems items="thal_cylinderteargas,thal_cylinderlaughing,thal_cylindershroomcure,oxygentank" type="Contained" />
       </StatusEffect>
     </LightComponent>
-    <ItemContainer capacity="1" hideitems="false" itempos="16,-15" containedspritedepth="0.56">
+    <ItemContainer capacity="1" hideitems="false" itempos="16,-15" containedspritedepth="0.56" maxstacksize="1" >
       <ContainedStateIndicator texture="Content/UI/ContainerIndicators.png" sourcerect="0,157,92,27" />
       <Containable items="weldingfuel,oxygensource,gascylinder" />
     </ItemContainer>
@@ -541,6 +549,57 @@
       <StatusEffect type="OnFire" target="This" setvalue="true" Condition="0.0">
         <Conditional condition="gt 0" />
         <SpawnItem identifier="thal_laughingcloud" />
+        <sound file="Mods/Thalassophobia/Items/Jobgear/Scientist/Ricochet1.ogg" range="800.0" loop="false" Selectionmode="random" />
+        <sound file="Mods/Thalassophobia/Items/Jobgear/Scientist/Ricochet2.ogg" range="800.0" loop="false" Selectionmode="random" />
+        <sound file="Mods/Thalassophobia/Items/Jobgear/Scientist/Ricochet3.ogg" range="800.0" loop="false" Selectionmode="random" />
+        <ParticleEmitter particle="thal_cylindergib" particleamount="10" scalemin="0.4" scalemax="0.6" velocitymin="400" velocitymax="500" anglemin="0" anglemax="360" colormultiplier="200,200,255,255" />
+        <Remove />
+      </StatusEffect>
+      <StatusEffect type="OnBroken" target="This" setvalue="true" Condition="0.0">
+        <Remove />
+      </StatusEffect>
+    </Throwable>
+  </Item>
+  <!-- stuff for liquid nitrogen -->
+  <!-- cloud of LN for when cylinder explodes -->
+  <Item name="freezecloud" identifier="thal_freezecloud" category="Equipment" cargocontaineridentifier="metalcrate" tags="smallitem" scale="0.5" hideinmenus="true" pickdistance="0" noninteractable="true">
+    <sprite name="sporeem" texture="Mods/Thalassophobia/Items/Jobgear/headgears.png" sourcerect="0,0,1,1" origin="0.4,0.3" />
+    <Body width="40" radius="30" density="15" bodytype="Kinematic" />
+    <LightComponent lightcolor="255,255,150,0" range="1" powerconsumption="0" allowingameediting="false" castshadows="false" IsOn="true">
+      <StatusEffect type="Always" target="This">
+        <ParticleEmitter particle="thal_shroomsmoke" burstamount="2" particlespersecond="4" velocitymin="0" velocitymax="0" anglemin="0" anglemax="360" scalemin="1.4" scalemax="1.4" colormultiplier="230,230,255,255" />
+        <sound file="Mods/Thalassophobia/Items/Jobgear/Scientist/GasCloud.ogg" range="500.0" loop="false" />
+      </StatusEffect>
+      <StatusEffect type="Always" target="This" delay="0.5" stackable="false">
+        <Explosion range="130" force="0.1" flash="false" shockwave="false" sparks="false" flames="false" smoke="false" camerashake="0" underwaterbubble="true" structuredamage="0" itemdamage="0" flashrange="0" flashduration="0">
+          <Affliction identifier="thal_frozen" strength="3" />
+        </Explosion>
+      </StatusEffect>
+      <StatusEffect type="Always" target="This" delay="6" stackable="false">
+        <Remove />
+      </StatusEffect>
+      <StatusEffect type="InWater" target="This" stackable="false">
+        <Remove />
+      </StatusEffect>
+    </LightComponent>
+  </Item>
+  <Item name="" identifier="thal_cylinderfreeze" category="Material" health="120" cargocontaineridentifier="chemicalcrate" description="" Tags="smallitem,gascylinder" spritecolor="200,200,255,255" InventoryIconColor="200,200,255,255" scale="0.6" impactsoundtag="impact_metal_light" impacttolerance="5" maxstacksize="3">
+    <PreferredContainer primary="crewcab" spawnprobability="0.1" minamount="1" maxamount="3" />
+    <Sprite texture="Mods/Thalassophobia/Items/Jobgear/Scientist/science.png" sourcerect="113,92,41,61" depth="0.6" origin="0.5,0.5" />
+    <Body width="65" height="65" density="1" />
+    <Throwable characterusable="true" canBeCombined="true" slots="Any,RightHand,LeftHand" throwforce="3.0" aimpos="35,-10" msg="ItemMsgPickUpSelect">
+      <StatusEffect type="OnImpact" target="This" Condition="0.0" setvalue="true">
+        <Conditional condition="gt 0" />
+        <SpawnItem identifier="thal_freezecloud" />
+        <sound file="Mods/Thalassophobia/Items/Jobgear/Scientist/Ricochet1.ogg" range="800.0" loop="false" Selectionmode="random" />
+        <sound file="Mods/Thalassophobia/Items/Jobgear/Scientist/Ricochet2.ogg" range="800.0" loop="false" Selectionmode="random" />
+        <sound file="Mods/Thalassophobia/Items/Jobgear/Scientist/Ricochet3.ogg" range="800.0" loop="false" Selectionmode="random" />
+        <ParticleEmitter particle="thal_cylindergib" particleamount="10" scalemin="0.4" scalemax="0.6" velocitymin="400" velocitymax="500" anglemin="0" anglemax="360" colormultiplier="200,200,255,255" />
+        <Remove />
+      </StatusEffect>
+      <StatusEffect type="OnFire" target="This" setvalue="true" Condition="0.0">
+        <Conditional condition="gt 0" />
+        <SpawnItem identifier="thal_freezecloud" />
         <sound file="Mods/Thalassophobia/Items/Jobgear/Scientist/Ricochet1.ogg" range="800.0" loop="false" Selectionmode="random" />
         <sound file="Mods/Thalassophobia/Items/Jobgear/Scientist/Ricochet2.ogg" range="800.0" loop="false" Selectionmode="random" />
         <sound file="Mods/Thalassophobia/Items/Jobgear/Scientist/Ricochet3.ogg" range="800.0" loop="false" Selectionmode="random" />
