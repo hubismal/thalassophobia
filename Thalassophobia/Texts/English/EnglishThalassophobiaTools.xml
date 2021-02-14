@@ -279,7 +279,7 @@
   <entitydescription.thal_geneticgraft>Syringe which DNA samples can be inserted into. When injected into someone undergoing a CRISPR-Cas9 induced meltdown, this attatches the DNA to the cut sections, resulting in en vivo gene splicing. Gene splicing can be used to cure genetic disorders, and even transform bodyparts. Requires a patient to be injected with a CRISPR-Cas9 solution first.</entitydescription.thal_geneticgraft>
   
   <entityname.thal_dnascanner>DNA Scanner</entityname.thal_dnascanner>
-  <entitydescription.thal_dnascanner>A DNA scanner that collects DNA from the saliva molecules of living beings. Will not work on dead creatures. Can be wired.</entitydescription.thal_dnascanner>
+  <entitydescription.thal_dnascanner>A DNA scanner that collects DNA from the saliva molecules of living beings. Will not work on dead creatures. Attach to a wall and interact with it. Scans whatever is underneath it but breaks over time.</entitydescription.thal_dnascanner>
   
   <entityname.thal_dnahatcher>Biomorphic Incubation Pod</entityname.thal_dnahatcher>
   <entitydescription.thal_dnahatcher>Pod used for creating creatures from DNA and biomass. Insert meat until there is enough biomass for your desired creature, then insert its DNA and press engage to start forming and nurturing the embryo. </entitydescription.thal_dnahatcher>
