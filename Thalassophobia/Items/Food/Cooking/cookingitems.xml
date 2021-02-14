@@ -5,7 +5,7 @@
     <Sprite texture="Mods/Thalassophobia/Items/Food/Cooking/cookware.png" sourcerect="290,5,148,44" depth="0.55" origin="0.5,0.5" />
     <Body width="65" height="15" density="50" />
     <MeleeWeapon slots="Any,RightHand,LeftHand" aimpos="50,0" handle1="-15,0" holdangle="80" reload="0.75" range="50" combatPriority="25" msg="ItemMsgPickUpSelect">
-      <Attack targetimpulse="2" severlimbsprobability="0.9" itemdamage="20">
+      <Attack targetimpulse="2" severlimbsprobability="0.9" itemdamage="10">
         <Affliction identifier="lacerations" strength="5" />
         <Affliction identifier="bleeding" strength="2" />
         <Affliction identifier="stun" strength="0.2" />
@@ -22,6 +22,8 @@
       </StatusEffect>
       <!-- Creature Output Start -->
       <StatusEffect type="OnUse" target="Character" Comparison="And" stackable="false" checkconditionalalways="true" comparison="and">
+				<Affliction identifier="thal_unguttable" strength="100" />
+				<Conditional thal_unguttable="lt 1" />
         <Conditional thal_gutted="gt 80" />
         <Conditional SpeciesName="crawler" />
         <ParticleEmitter particle="organeruption" particleamount="50" scalemin="0.5" scalemax="1" velocitymin="100" velocitymax="500" anglemin="0" anglemax="360" colormultiplier="255,0,0,255" />
@@ -37,6 +39,8 @@
         <SpawnItem identifier="thal_smallthigh" spawnposition="This" />
       </StatusEffect>
       <StatusEffect type="OnUse" target="Character" Comparison="And" stackable="false" checkconditionalalways="true" comparison="and">
+				<Affliction identifier="thal_unguttable" strength="100" />
+				<Conditional thal_unguttable="lt 1" />
         <Conditional thal_gutted="gt 80" />
         <Conditional SpeciesName="human" />
         <ParticleEmitter particle="organeruption" particleamount="50" scalemin="0.5" scalemax="1" velocitymin="100" velocitymax="500" anglemin="0" anglemax="360" colormultiplier="255,0,0,255" />
@@ -51,6 +55,8 @@
         <SpawnItem identifier="thal_mediumthigh" spawnposition="This" />
       </StatusEffect>
       <StatusEffect type="OnUse" target="Character" Comparison="And" stackable="false" checkconditionalalways="true" comparison="and">
+				<Affliction identifier="thal_unguttable" strength="100" />
+				<Conditional thal_unguttable="lt 1" />
         <Conditional thal_gutted="gt 80" />
         <Conditional SpeciesName="mudraptor" />
         <ParticleEmitter particle="organeruption" particleamount="50" scalemin="0.5" scalemax="1" velocitymin="100" velocitymax="500" anglemin="0" anglemax="360" colormultiplier="255,0,0,255" />

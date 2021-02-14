@@ -39,7 +39,7 @@
       <AlternativeLayout relativesize="0.2725,0.3" pivot="BottomRight" />
       <poweronsound file="Content/Items/PowerOnLight3.ogg" range="1000" loop="false" />
     </MiniMap>
-    <ItemContainer capacity="1" hideitems="true">
+    <ItemContainer capacity="1" hideitems="true" maxstacksize="1">
       <ContainedStateIndicator texture="Content/UI/ContainerIndicators.png" sourcerect="1,70,107,31" />
       <StatusEffect type="Always" targettype="This" Voltage="0.0" setvalue="true" />
       <Containable items="mobilebattery">
@@ -83,7 +83,7 @@
       <AlternativeLayout relativesize="0.2725,0.3" pivot="BottomRight" />
       <poweronsound file="Content/Items/PowerOnLight3.ogg" range="1000" loop="false" />
     </MiniMap>
-    <ItemContainer capacity="1" hideitems="true">
+    <ItemContainer capacity="1" hideitems="true" maxstacksize="1" >
       <ContainedStateIndicator texture="Content/UI/ContainerIndicators.png" sourcerect="1,70,107,31" />
       <StatusEffect type="Always" targettype="This" Voltage="0.0" setvalue="true" />
       <Containable items="mobilebattery">
@@ -127,7 +127,7 @@
       <AlternativeLayout relativesize="0.2725,0.3" pivot="BottomRight" />
       <poweronsound file="Content/Items/PowerOnLight3.ogg" range="1000" loop="false" />
     </MiniMap>
-    <ItemContainer capacity="1" hideitems="true">
+    <ItemContainer capacity="1" hideitems="true" maxstacksize="1" >
       <ContainedStateIndicator texture="Content/UI/ContainerIndicators.png" sourcerect="1,70,107,31" />
       <StatusEffect type="Always" targettype="This" Voltage="0.0" setvalue="true" />
       <Containable items="mobilebattery">
@@ -170,7 +170,7 @@
       <GuiFrame relativesize="0.3,0.3" anchor="CenterRight" style="ItemUI" />
       <AlternativeLayout relativesize="0.2725,0.3" pivot="BottomRight" />
     </MiniMap>
-    <ItemContainer capacity="1" hideitems="true">
+    <ItemContainer capacity="1" hideitems="true" maxstacksize="1" >
       <ContainedStateIndicator texture="Content/UI/ContainerIndicators.png" sourcerect="1,70,107,31" />
       <StatusEffect type="Always" targettype="This" Voltage="0.0" setvalue="true" />
       <Containable items="mobilebattery">

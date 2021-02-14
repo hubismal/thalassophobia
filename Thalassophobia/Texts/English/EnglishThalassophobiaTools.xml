@@ -126,7 +126,7 @@
   <!-- Cooking tools -->
   
   <entityname.thal_carver>Meat Cleaver</entityname.thal_carver>
-  <entitydescription.thal_carver>A meat cleaver that will turn carcasses into processable/cookable meat when repeatedly hitting a dead body. Can also be used in cooking stations to slice whole muscles into neater cuts for steaks, porkchops, and other more manageable morsels.</entitydescription.thal_carver>
+  <entitydescription.thal_carver>A cleaver that will carve carcasses into processable meat when repeatedly hitting a dead body. The meat can be used as biomass for hatching.</entitydescription.thal_carver>
   
   <entityname.thal_mediumbrain>Bloody Brain</entityname.thal_mediumbrain>
   <entitydescription.thal_mediumbrain>A fresh, sanguineous average sized brain. Can be eaten, processed, used for science, and much more.</entitydescription.thal_mediumbrain>
@@ -273,31 +273,34 @@
   <entitydescription.thal_secondchance>A steroidal epinephrine solution rigged to automatically inject when in the hotbar of a critically injured person. Going critical with this in your hotbar revives you temporarily, allowing you to seek medical aide.</entitydescription.thal_secondchance>
   
   <entityname.thal_geneticinit>CRISPR-Cas9 Solution</entityname.thal_geneticinit>
-  <entitydescription.thal_geneticinit>Syringe containing extracellular fluid that targets certain genes in DNA using CRISPR, and cleaves them using the Cas9 enzyme to induce genetic plasticity. After application, DNA grafts can be injected into patients for easy DNA splicing, but prolonged inaction could be disastrous. The longer the patient is in 'meltdown', the more unintended genetic oddities they may gain.</entitydescription.thal_geneticinit>
+  <entitydescription.thal_geneticinit>Syringe used for initiating Gene Splicing. Equip it in your hands and select which bodypart you want to fuse DNA with. What happens to a body part depends on the DNA fused; Look at the description. After choosing, inject yourself with a syringe, and then inject yourself with a loaded graft.</entitydescription.thal_geneticinit>
   
   <entityname.thal_geneticgraft>DNA Grafter</entityname.thal_geneticgraft>
-  <entitydescription.thal_geneticgraft>Syringe which DNA samples can be inserted into. When injected into someone undergoing a CRISPR-Cas9 induced meltdown, this attatches the DNA to the cut sections, resulting in en vivo gene splicing.</entitydescription.thal_geneticgraft>
+  <entitydescription.thal_geneticgraft>Syringe which DNA samples can be inserted into. When injected into someone undergoing a CRISPR-Cas9 induced meltdown, this attatches the DNA to the cut sections, resulting in en vivo gene splicing. Gene splicing can be used to cure genetic disorders, and even transform bodyparts. Requires a patient to be injected with a CRISPR-Cas9 solution first.</entitydescription.thal_geneticgraft>
   
   <entityname.thal_dnascanner>DNA Scanner</entityname.thal_dnascanner>
   <entitydescription.thal_dnascanner>A DNA scanner that collects DNA from the saliva molecules of living beings. Will not work on dead creatures. Can be wired.</entitydescription.thal_dnascanner>
   
   <entityname.thal_dnahatcher>Biomorphic Incubation Pod</entityname.thal_dnahatcher>
-  <entitydescription.thal_dnahatcher>Pod used for creating creatures from DNA and biomass. Insert meat until the bar fills up, then press engage to start forming and nurturing the embryo. </entitydescription.thal_dnahatcher>
+  <entitydescription.thal_dnahatcher>Pod used for creating creatures from DNA and biomass. Insert meat until there is enough biomass for your desired creature, then insert its DNA and press engage to start forming and nurturing the embryo. </entitydescription.thal_dnahatcher>
   
   <entityname.thal_dnahuman>Human DNA</entityname.thal_dnahuman>
-  <entitydescription.thal_dnahuman>Complete genetic sequence of the standard Homo Sapien. Can be used to develop anti-Humanoid technologies, or in DNA grafts for reverting humans back to normal. </entitydescription.thal_dnahuman>
+  <entitydescription.thal_dnahuman>Complete genetic sequence of the standard Homo Sapien. Can be used to develop anti-Humanoid technologies, or in DNA grafts for reverting humans back to normal. Grafting this DNA will revert all changes to the bodypart(s) currently in meltdown, and also revert any genetic disorders. </entitydescription.thal_dnahuman>
   
   <entityname.thal_dnamudraptor>Mudraptor DNA</entityname.thal_dnamudraptor>
-  <entitydescription.thal_dnamudraptor>Complete genetic sequence of the standard Europan Mudraptor. Can be used to develop anti-Mudraptor technologies, or in DNA grafts for gene splicing. </entitydescription.thal_dnamudraptor>
+  <entitydescription.thal_dnamudraptor>Complete genetic sequence of the standard Europan Mudraptor. Can be used to develop anti-Mudraptor technologies, or in DNA grafts for gene splicing. DNA Abilities by Grafts:
+  Head : Slowly break down doors using creature attack.
+  Torso : Gain unbreakable mudraptor armor on chest.
+  Limbs : Movement Speed increases substantially.</entitydescription.thal_dnamudraptor>
   
   <entityname.thal_dnacrawler>Crawler DNA</entityname.thal_dnacrawler>
-  <entitydescription.thal_dnacrawler>Complete genetic sequence of the standard Europan Crawler. Can be used to develop anti-crawler technologies, or in DNA grafts for gene splicing. </entitydescription.thal_dnacrawler>
+  <entitydescription.thal_dnacrawler>Complete genetic sequence of the standard Europan Crawler. Can be used to develop anti-crawler technologies, or in DNA grafts for gene splicing. This DNA cannot currently be grafted.</entitydescription.thal_dnacrawler>
   
   <entityname.thal_dnamaggot>Maggot DNA</entityname.thal_dnamaggot>
-  <entitydescription.thal_dnamaggot>Complete genetic sequence of the standard Hive Maggot. Can be used to develop anti-maggot technologies, or in DNA grafts for gene splicing. </entitydescription.thal_dnamaggot>
+  <entitydescription.thal_dnamaggot>Complete genetic sequence of the standard Hive Maggot. Can be used to develop anti-maggot technologies, or in DNA grafts for gene splicing. This DNA cannot currently be grafted.</entitydescription.thal_dnamaggot>
   
   <entityname.thal_dnaramblin>Mushroom DNA</entityname.thal_dnaramblin>
-  <entitydescription.thal_dnaramblin>Complete genetic sequence of the Ramblin' Evil Mushroom. Can be used to develop anti-mushroom technologies, or in DNA grafts for gene splicing. </entitydescription.thal_dnaramblin>
+  <entitydescription.thal_dnaramblin>Complete genetic sequence of the Ramblin' Evil Mushroom. Can be used to develop anti-mushroom technologies, or in DNA grafts for gene splicing. This DNA cannot currently be grafted.</entitydescription.thal_dnaramblin>
   
   <entityname.thal_planter>Hydroponics Planter Box</entityname.thal_planter>
   <entitydescription.thal_planter>An advanced planter box, designed for improved scientific measurement and botanical metrics analysis required by a botanist. Makes the difference between a hobbyist gardener and a true scientist. </entitydescription.thal_planter>

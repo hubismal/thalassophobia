@@ -155,10 +155,19 @@
     <Effect minstrength="0" maxstrength="100" minvitalitydecrease="9001" maxvitalitydecrease="9001" strengthchange="0.0"></Effect>
     <icon texture="Mods/Thalassophobia/UI/MainIconsAtlas.png" sourcerect="896,640,128,128" color="139,60,42,255" origin="0,0" />
   </Affliction>
-  <Affliction name="Gutted (Internal)" identifier="thal_gutted" description="INTERNAL USE ONLY" type="resistance" causeofdeathdescription="Carved Organs" selfcauseofdeathdescription="You have died from having your muscles carved out of you." limbspecific="false" indicatorlimb="Torso" showiconthreshold="1000" maxstrength="100" 
+  <Affliction name="Carved (Internal)" identifier="thal_gutted" description="INTERNAL USE ONLY" type="resistance" causeofdeathdescription="Carved Organs" selfcauseofdeathdescription="You have died from having your muscles carved out of you." limbspecific="false" indicatorlimb="Torso" showiconthreshold="1000" maxstrength="100" 
     showicontoothersthreshold="1000"
     showinhealthscannerthreshold="1000" >
     <Effect minstrength="0" maxstrength="100" minvitalitydecrease="0" maxvitalitydecrease="0" strengthchange="0.0"></Effect>
+    <icon texture="Mods/Thalassophobia/UI/MainIconsAtlas.png" sourcerect="896,640,128,128" color="139,60,42,255" origin="0,0" />
+  </Affliction>
+  <Affliction name="Carved" identifier="thal_unguttable" description="The patient's muscles are removed." type="resistance" causeofdeathdescription="Carved Organs" selfcauseofdeathdescription="You have died from having your muscles carved out of you." limbspecific="false" indicatorlimb="Torso" showiconthreshold="0" maxstrength="1"  >
+    <Effect minstrength="0" maxstrength="100" minvitalitydecrease="0" maxvitalitydecrease="0" strengthchange="0.0">
+    <StatusEffect target="Character" type="Always" delay="1" stackable="false" >
+			<Conditional thal_gutted="gt 1" />
+			<ReduceAffliction identifier="thal_gutted" amount="300" />
+    </StatusEffect>
+    </Effect>
     <icon texture="Mods/Thalassophobia/UI/MainIconsAtlas.png" sourcerect="896,640,128,128" color="139,60,42,255" origin="0,0" />
   </Affliction>
   <!-- used for things like bowling sound effects -->

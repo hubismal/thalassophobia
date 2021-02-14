@@ -140,13 +140,17 @@
         <Item identifier="batterycell" showpreview="false" />
       </Item>
       <Item identifier="toolbelt">
-        <Item identifier="thal_dnahuman" equip="false" />
+				<Item identifier="thal_geneticinit" equip="false" />
+				<Item identifier="thal_geneticgraft" equip="false" >
+					<Item identifier="thal_dnahuman" equip="false" />
+				</Item>
         <Item identifier="thal_recipeconstructor" equip="false" />
         <Item identifier="thal_geneticsign" equip="false" />
         <Item identifier="thal_geneticsign" equip="false" showpreview="false" />
       </Item>
       <Item identifier="thal_carver" equip="false" />
       <Item identifier="thal_dnascanner" equip="false" />
+      
       <Item identifier="thal_dnahatcher" equip="false" />
       <Item identifier="thal_assembler" equip="false" />
       <PreviewSprites dims="120,109">

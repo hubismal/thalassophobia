@@ -20,10 +20,10 @@
 	
 	<!-- Collars -->
 	<entityname.thal_bombcollar>Explosive Collar</entityname.thal_bombcollar>
-	<entitydescription.thal_bombcollar>Extremely dangerous wearable item. Once worn and armed, attempting to remove the collar without disarming will cause a lethal explosion. Can be disabled by a DISARM key.</entitydescription.thal_bombcollar>
+	<entitydescription.thal_bombcollar>Extremely dangerous wearable item. Once worn and armed, attempting to remove the collar without disarming will cause a lethal explosion. Has a random chance to explode when armed. Can be disabled by a DISARM key.</entitydescription.thal_bombcollar>
 	
 	<entityname.thal_bombcollartimed>Timed Explosive Collar</entityname.thal_bombcollartimed>
-	<entitydescription.thal_bombcollartimed>A particularly sadistic variant of the explosive collar where arming it not only prevents removal, but also starts a countdown to the collar's automatic detonation. Assemble a DISARM tool ASAP!</entitydescription.thal_bombcollartimed>
+	<entitydescription.thal_bombcollartimed>A particularly sadistic variant of the explosive collar where arming it not only prevents removal, but also starts a countdown to the collar's automatic detonation. Has a random chance to explode when armed. Assemble a DISARM tool ASAP!</entitydescription.thal_bombcollartimed>
 	
 	<entityname.thal_bombcollarkey>DISARM Tool</entityname.thal_bombcollarkey>
 	<entitydescription.thal_bombcollarkey>Drag onto collar to disarm.</entitydescription.thal_bombcollarkey>
