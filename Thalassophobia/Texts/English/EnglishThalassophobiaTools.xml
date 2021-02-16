@@ -203,41 +203,51 @@
   <msggascylinderrequired>Gas Cylinder Required</msggascylinderrequired>
   
   <entityname.thal_assembler>Atomic Converter</entityname.thal_assembler>
-  <entitydescription.thal_assembler>Handheld subatomic fabricator capable of assembling complex devices. Requires insertion of a Schematic and a material specified by the Schematics' description.</entitydescription.thal_assembler>
+  <entitydescription.thal_assembler>Handheld subatomic fabricator that will convert an input item to an output item provided a schematic. Insert a 'schematic' datachip, then insert the material or item specified by the schematic.</entitydescription.thal_assembler>
   
   <entityname.thal_constructor>Universal Constructor</entityname.thal_constructor>
   <entitydescription.thal_constructor>Attatchable fabricator with the potential to 3D print extremely complex machinery with quantum manipulation capabilities.</entitydescription.thal_constructor>
   <itemmsgconstruct>[[select]] Construct</itemmsgconstruct>
   
-  <entityname.thal_recipeconstructor>Schematic: Universal Constructor</entityname.thal_recipeconstructor>
-  <entitydescription.thal_recipeconstructor>Datachip containing fabrication instructions for the assembly of a Universal Constructor, a device capable of creating items allowing access to the upper echelons of science.
-  Insert into: Atomic Assembler
-  Alongside a: Titanium-Aluminum Bar</entitydescription.thal_recipeconstructor>
+  <entityname.thal_recipeconstructor>Schematic: TiAl Bar -> Universal Constructor</entityname.thal_recipeconstructor>
+  <entitydescription.thal_recipeconstructor>Datachip containing Atomic Converter instructions for the conversion of a Titanium-Aluminum Alloy into a Universal Constructor, a device capable of creating items allowing access to the upper echelons of science.
   
-  <entityname.thal_recipeplanter>Schematic: Small Planter Box</entityname.thal_recipeplanter>
-  <entitydescription.thal_recipeplanter>Datachip containing fabrication instructions for the assembly of a Universal Constructor, a device capable of creating items allowing access to the upper echelons of science.
-  Insert into: Atomic Assembler
-  Alongside a: Metal Crate</entitydescription.thal_recipeplanter>
+  Insert into Atomic Converter alongside a: Titanium-Aluminum Bar</entitydescription.thal_recipeconstructor>
   
-  <entityname.thal_recipefumigator>Schematic: Fumigator</entityname.thal_recipefumigator>
-  <entitydescription.thal_recipefumigator>Datachip containing fabrication instructions for the assembly of a Fumigator, a device capable of ejecting pressurized gasses.
-  Insert into: Atomic Assembler
-  Alongside a: Welding Tool</entitydescription.thal_recipefumigator>
+  <entityname.thal_recipeplanter>Schematic: Metal Crate -> Small Planter Box</entityname.thal_recipeplanter>
+  <entitydescription.thal_recipeplanter>Datachip containing Atomic Converter instructions for the conversion of a Metal Crate into a Small Planter Box, a device capable of growing seeds placed inside it.
   
-  <entityname.thal_recipebotanistmask>Schematic: Respirator</entityname.thal_recipebotanistmask>
-  <entitydescription.thal_recipebotanistmask>Datachip containing fabrication instructions for the assembly of an Aerosol Respirator, a device capable of filtering out toxic gasses.
-  Insert into: Atomic Assembler
-  Alongside a: Diving Mask</entitydescription.thal_recipebotanistmask>
+  Insert into Atomic Converter alongside a: Metal Crate</entitydescription.thal_recipeplanter>
   
-  <entityname.thal_recipedischarger>Schematic: Discharger</entityname.thal_recipedischarger>
-  <entitydescription.thal_recipedischarger>Datachip containing fabrication instructions for the assembly of a Discharger, a weak rechargeable pistol.
-  Insert into: Atomic Assembler
-  Alongside a: Handheld Sonar</entitydescription.thal_recipedischarger>
+  <entityname.thal_recipefumigator>Schematic: Welding Tool -> Fumigator</entityname.thal_recipefumigator>
+  <entitydescription.thal_recipefumigator>Datachip containing Atomic Converter instructions for the conversion of a Welding Tool into a Fumigator, a device capable of ejecting pressurized gasses.
   
-  <entityname.thal_recipefungicide>Schematic: Fungicide</entityname.thal_recipefungicide>
-  <entitydescription.thal_recipefungicide>Datachip containing fabrication instructions for the assembly of an Aerosol Fungicide Cylinder, a pressurized fumigator cylinder for stopping mushroom outbreaks.
-  Insert into: Atomic Assembler
-  Alongside a: Ramblin Evil Seed</entitydescription.thal_recipefungicide>
+  Insert into Atomic Converter alongside a: Welding Tool</entitydescription.thal_recipefumigator>
+  
+  <entityname.thal_recipebotanistmask>Schematic: Diving Mask -> Respirator</entityname.thal_recipebotanistmask>
+  <entitydescription.thal_recipebotanistmask>Datachip containing Atomic Converter instructions for the conversion of a Diving Mask into an Aerosol Respirator, a device capable of filtering out toxic gasses.
+  
+  Insert into Atomic Converter alongside a: Diving Mask</entitydescription.thal_recipebotanistmask>
+  
+  <entityname.thal_recipedischarger>Schematic: Handheld Sonar -> Discharger</entityname.thal_recipedischarger>
+  <entitydescription.thal_recipedischarger>Datachip containing Atomic Converter instructions for the conversion of a Handheld Sonar into a Discharger, a weak rechargeable pistol.
+  
+  Insert into Atomic Converter alongside a: Handheld Sonar</entitydescription.thal_recipedischarger>
+  
+  <entityname.thal_recipefungicide>Schematic: Ramblin Evil Seed -> Fungicide</entityname.thal_recipefungicide>
+  <entitydescription.thal_recipefungicide>Datachip containing Atomic Converter instructions for the conversion of a Ramblin Evil Seed into an Aerosol Fungicide Cylinder, a pressurized fumigator cylinder for stopping mushroom outbreaks.
+  
+  Insert into Atomic Converter alongside a: Ramblin Evil Seed</entitydescription.thal_recipefungicide>
+  
+  <entityname.thal_recipegeneticinit>Schematic: Antirad -> CRISPR-Cas9 Solution</entityname.thal_recipegeneticinit>
+  <entitydescription.thal_recipegeneticinit>Datachip containing Atomic Converter instructions for the conversion of a Antirad into a CRISPR Cas-9 Solution, a microfluid capable of targeting genes for grafting.
+  
+  Insert into Atomic Converter alongside a: Antirad</entitydescription.thal_recipegeneticinit>
+  
+  <entityname.thal_recipegeneticgraft>Schematic: Syringe Gun -> DNA Grafter</entityname.thal_recipegeneticgraft>
+  <entitydescription.thal_recipegeneticgraft>Datachip containing Atomic Converter instructions for the conversion of a Syringe Gun into a DNA Grafter, a specialized hypodermic needle that can be loaded with DNA to graft.
+  
+  Insert into Atomic Converter alongside a: Syringe Gun</entitydescription.thal_recipegeneticgraft>
   
   <entityname.thal_cylinderspore>Ramblin Spore Cylinder</entityname.thal_cylinderspore>
   <entitydescription.thal_cylinderspore>Pressurized gas cylinder containing particle spores for Ramblin Evil Mushrooms. Avoid dropping.</entitydescription.thal_cylinderspore>

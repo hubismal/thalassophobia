@@ -216,19 +216,19 @@
           <Conditional condition="gt 90" />
         </StatusEffect>
       </Button>
-      <Button text="Ritual Paintbrush [90pct Dagger]">
-        <StatusEffect type="OnUse" targettype="Contained, This" delay="30" IsOn="false" drawhudwhenequipped="true">
+      <Button text="Ritual Paintbrush [100pct Dagger]">
+        <StatusEffect type="OnUse" targettype="Contained, This" delay="60" IsOn="false" drawhudwhenequipped="true">
           <SpawnItem spawnposition="ThisInventory" identifier="thal_paintbrush" />
           <RequiredItem items="thal_cultistknife" type="Contained" />
-          <Conditional condition="gt 90" />
+          <Conditional condition="gt 98" />
         </StatusEffect>
         <StatusEffect type="OnUse" target="Contained, This" IsOn="true" drawhudwhenequipped="false">
           <RequiredItem items="thal_cultistknife" type="Contained" />
-          <Conditional condition="gt 90" />
+          <Conditional condition="gt 98" />
         </StatusEffect>
         <StatusEffect type="OnUse" targettype="Contained" targets="thal_cultistknife" IsOn="true" condition="-90">
           <RequiredItem items="thal_cultistknife" type="Contained" />
-          <Conditional condition="gt 90" />
+          <Conditional condition="gt 98" />
         </StatusEffect>
       </Button>
     </CustomInterface>
@@ -479,6 +479,7 @@
         <!-- item target effects (drain, remove, etc) -->
         <StatusEffect type="OnUse" targettype="Contained" targets="huskstinger" IsOn="true" condition="-20">
           <RequiredItem items="huskstinger" type="Contained" />
+          <Remove />
           <Conditional condition="gt 20" />
         </StatusEffect>
       </Button>

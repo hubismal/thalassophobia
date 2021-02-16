@@ -2,8 +2,8 @@
 <infotexts language="English" nowhitespace="false" translatedname="English">
 	
 	<faction.thal_ues>United Europa Society</faction.thal_ues>
-	<faction.thal_ues.description>The United Europa Society is an organization comprised primarily of researchers, doctors, and other unusally well-educated dwellers of Europa. Their primary goal is to fight for the wellbeing of the lower and (what remains of) the middle class by combating famine and poverty. Resultingly, the UES also aims to stop the ongoing war between the Europan Coalition and the Europan Confederacy due to their belief that it has ravaged outposts everywhere. Donating to the UES generally makes outposts more bearable.</faction.thal_ues.description>
-	<faction.thal_ues.shortdescription>A charitable pacifist organization that aims to combat poverty and stop most conflict on Europa for the sake of humanity's wellbeing. Donations to the UES help everyone on Europa.</faction.thal_ues.shortdescription>
+	<faction.thal_ues.description>The United Europa Society is a humanitarian organization comprised primarily of researchers, doctors, and other unusally well-educated people. They strive to combat poverty and end conflict amongst vying factions. Donating to the UES generally makes outposts more safe for everyone including your crew.</faction.thal_ues.description>
+	<faction.thal_ues.shortdescription>A charitable pacifist organization that aims to end poverty and violent conflict for humanity's sake. Donations to the UES help everyone on Europa.</faction.thal_ues.shortdescription>
 	
 	<!-- removed: too similar to the seperatists, location-based outposts are planned in vanilla anyway-->
 	<faction.thal_confederacy>The Europan Confederacy</faction.thal_confederacy>
@@ -11,8 +11,8 @@
 	<faction.thal_confederacy.shortdescription> League of seperatist outposts that formally declared secession from the Coalition, who branded them traitors. Firm believers in individual rights, they fight in a direct war unlike the insurgent Jovian Seperatists.</faction.thal_confederacy.shortdescription>
 	
 	<faction.thal_cartel>Cthonian Cartel</faction.thal_cartel>
-	<faction.thal_cartel.description>On Europa, where death is imminent, the immensely powerful cartel will meet the demand for narcotics from Europans who can't be quelled by alcohol. It is unknown if Cthonian refers to the rocky surface of Jupiter, bears reference to the lovecraftian monsters under the ice, or the 'underworld' from which the cartel originates. In some areas devoid of proper law and order, the cartel acts as a government due to its immense power.</faction.thal_cartel.description>
-	<faction.thal_cartel.shortdescription>Vicious cartel empowered by the need of the average stressed Europan for relief, preferrably the narcotic kind. In areas where government presence is limited, serve as the de-facto law.</faction.thal_cartel.shortdescription>
+	<faction.thal_cartel.description>The Cthonian Cartel is the face of Europa's sprawling criminal underworld. It is unknown if Cthonian refers to the lovecraftian monsters under the ice, or the 'underworld' from which the cartel originates. In some areas with limited coalition presence, the cartel acts as an authority.</faction.thal_cartel.description>
+	<faction.thal_cartel.shortdescription>Powerful crime organization that deals primarily in narcotics. In areas where government presence is limited, serve as the de-facto law.</faction.thal_cartel.shortdescription>
 	
 	<skillname.thal_scienceskill>Scientific Knowledge</skillname.thal_scienceskill>
 	<skillname.thal_clownskill>Tomfoolery</skillname.thal_clownskill>

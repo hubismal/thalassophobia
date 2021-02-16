@@ -58,6 +58,38 @@
 				<Affliction identifier="thal_unguttable" strength="100" />
 				<Conditional thal_unguttable="lt 1" />
         <Conditional thal_gutted="gt 80" />
+        <Conditional SpeciesName="humanhusk" />
+        <ParticleEmitter particle="organeruption" particleamount="50" scalemin="0.5" scalemax="1" velocitymin="100" velocitymax="500" anglemin="0" anglemax="360" colormultiplier="255,0,0,255" />
+        <ParticleEmitter particle="heavygib" drawontop="true" particleamount="1" scalemin="1" scalemax="1" velocitymin="0" velocitymax="0" anglemin="0" anglemax="360" />
+        <Sound file="Mods/Thalassophobia/Items/Food/gib1.ogg" selectionmode="random" range="500" />
+        <Sound file="Mods/Thalassophobia/Items/Food/gib2.ogg" selectionmode="random" range="500" />
+        <Sound file="Mods/Thalassophobia/Items/Food/gib3.ogg" selectionmode="random" range="500" />
+        <Sound file="Mods/Thalassophobia/Items/Food/gib4.ogg" selectionmode="random" range="500" />
+        <Explosion range="0.0" structuredamage="0" itemdamage="0" force="0.0" severlimbsprobability="0.0" decal="blood" decalsize="3.25"></Explosion>
+        <SpawnItem identifier="thal_mediumbrain" spawnposition="This" />
+        <SpawnItem identifier="thal_mediumbreast" spawnposition="This" />
+        <SpawnItem identifier="thal_mediumthigh" spawnposition="This" />
+      </StatusEffect>
+      <StatusEffect type="OnUse" target="Character" Comparison="And" stackable="false" checkconditionalalways="true" comparison="and">
+				<Affliction identifier="thal_unguttable" strength="100" />
+				<Conditional thal_unguttable="lt 1" />
+        <Conditional thal_gutted="gt 80" />
+        <Conditional SpeciesName="gummy" />
+        <ParticleEmitter particle="organeruption" particleamount="50" scalemin="0.5" scalemax="1" velocitymin="100" velocitymax="500" anglemin="0" anglemax="360" colormultiplier="255,0,0,255" />
+        <ParticleEmitter particle="heavygib" drawontop="true" particleamount="1" scalemin="1" scalemax="1" velocitymin="0" velocitymax="0" anglemin="0" anglemax="360" />
+        <Sound file="Mods/Thalassophobia/Items/Food/gib1.ogg" selectionmode="random" range="500" />
+        <Sound file="Mods/Thalassophobia/Items/Food/gib2.ogg" selectionmode="random" range="500" />
+        <Sound file="Mods/Thalassophobia/Items/Food/gib3.ogg" selectionmode="random" range="500" />
+        <Sound file="Mods/Thalassophobia/Items/Food/gib4.ogg" selectionmode="random" range="500" />
+        <Explosion range="0.0" structuredamage="0" itemdamage="0" force="0.0" severlimbsprobability="0.0" decal="blood" decalsize="3.25"></Explosion>
+        <SpawnItem identifier="thal_mediumbrain" spawnposition="This" />
+        <SpawnItem identifier="thal_mediumbreast" spawnposition="This" />
+        <SpawnItem identifier="thal_mediumthigh" spawnposition="This" />
+      </StatusEffect>
+      <StatusEffect type="OnUse" target="Character" Comparison="And" stackable="false" checkconditionalalways="true" comparison="and">
+				<Affliction identifier="thal_unguttable" strength="100" />
+				<Conditional thal_unguttable="lt 1" />
+        <Conditional thal_gutted="gt 80" />
         <Conditional SpeciesName="mudraptor" />
         <ParticleEmitter particle="organeruption" particleamount="50" scalemin="0.5" scalemax="1" velocitymin="100" velocitymax="500" anglemin="0" anglemax="360" colormultiplier="255,0,0,255" />
         <ParticleEmitter particle="heavygib" drawontop="true" particleamount="1" scalemin="1" scalemax="1" velocitymin="0" velocitymax="0" anglemin="0" anglemax="360" />

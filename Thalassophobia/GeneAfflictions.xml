@@ -94,6 +94,7 @@
     </Effect>
     <icon name="genmelt" texture="Mods/Thalassophobia/UI/MainIconsAtlas.png" sourcerect="386,769,128,128" color="60,107,195,255" origin="0,0" />
   </AfflictionHusk>
+  <!-- MUDRAPTOR LIMBS -->
   <AfflictionHusk name="Mudraptor Genes (Head)" identifier="thal_mudraptorhead" description="The patient's DNA is spliced with that of a mudraptor." type="huskinfection" targets="human, humanapostle" huskedspeciesname="gummy" causeofdeathdescription="Melted into DNA-free goop" CauseSpeechImpediment="false" needsair="true" sendmessages="false" selfcauseofdeathdescription="Your DNA has been tarnished and you have melted into goop." limbspecific="false" indicatorlimb="Torso" activationthreshold="0" showiconthreshold="130" maxstrength="100" iconcolors="60,140,195,255;60,107,195,255;60,0,195,255">
     <Effect minstrength="0" maxstrength="80" strengthchange="10" />
     <Effect minstrength="80" maxstrength="100" />
@@ -110,6 +111,12 @@
     <Effect minstrength="80" maxstrength="100">
       <StatusEffect target="Character" SpeedMultiplier="1.2" setvalue="true"></StatusEffect>
     </Effect>
+    <icon name="genmelt" texture="Mods/Thalassophobia/UI/MainIconsAtlas.png" sourcerect="386,769,128,128" color="60,107,195,255" origin="0,0" />
+  </AfflictionHusk>
+  <!-- MAGGOT LIMBS -->
+  <AfflictionHusk name="Maggot Genes (Head)" identifier="thal_maggothead" description="The patient's DNA is spliced with that of a mudraptor." type="huskinfection" targets="human, humanapostle" huskedspeciesname="gummy" causeofdeathdescription="Melted into DNA-free goop" CauseSpeechImpediment="false" needsair="true" sendmessages="false" selfcauseofdeathdescription="Your DNA has been tarnished and you have melted into goop." limbspecific="false" indicatorlimb="Torso" activationthreshold="0" showiconthreshold="130" maxstrength="100" iconcolors="60,140,195,255;60,107,195,255;60,0,195,255">
+    <Effect minstrength="0" maxstrength="80" strengthchange="10" />
+    <Effect minstrength="80" maxstrength="100" />
     <icon name="genmelt" texture="Mods/Thalassophobia/UI/MainIconsAtlas.png" sourcerect="386,769,128,128" color="60,107,195,255" origin="0,0" />
   </AfflictionHusk>
 </Afflictions>

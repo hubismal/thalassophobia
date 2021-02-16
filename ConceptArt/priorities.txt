@@ -5,7 +5,6 @@ I usually do two of these at a time or else my motivation will get fried if I sp
 
 >FINISH THE JESTER CLOWN VARIANT, ASSOCIATED ITEMS AND MONSTERS
 I find this important as the jester easily has the most near-complete items, so I should at least make one part of the game presentable
-}}get around to fixing the mushroom hitboxes
 }}subproblems: draw art for the balloon items
 }}work on the costumes
 

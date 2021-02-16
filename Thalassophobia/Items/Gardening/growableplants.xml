@@ -259,7 +259,6 @@
     <Sprite texture="Content/Items/Gardening/GrowablePlants_Temp.png" depth="0.2" sourcerect="830,636,31,30" origin="0.5,0.5" />
     <!--<PreferredContainer primary="supplycab" minamount="0" maxamount="2" spawnprobability="0.25" />
     <PreferredContainer primary="wreckmedcab" minamount="0" maxamount="3" spawnprobability="0.5" />-->
-    <PreferredContainer primary="seedbag" minamount="0" maxamount="1" spawnprobability="0.5" />
     <Price baseprice="30">
       <Price locationtype="outpost" multiplier="1" minabailable="3" />
       <Price locationtype="city" multiplier="1.2" minavailable="1" />

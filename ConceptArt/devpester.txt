@@ -1,4 +1,2 @@
 HAVE ITEM DESCRIPTIONS SAVED IN .SUB FILES!!!!
-Repairtools attempting to fix structures without a user crashes the game
-npc file loading dillemna
 overall annoyance involved in kinematic doors not initializing collisions properly until sub is loaded into next round.

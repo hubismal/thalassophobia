@@ -142,10 +142,11 @@
       <Item identifier="toolbelt">
 				<Item identifier="thal_geneticinit" equip="false" />
 				<Item identifier="thal_geneticgraft" equip="false" >
-					<Item identifier="thal_dnahuman" equip="false" />
+					<Item identifier="thal_dnamudraptor" equip="false" showpreview="false" />
 				</Item>
-				<Item identifier="thal_dnamudraptor" equip="false" showpreview="false" />
         <Item identifier="thal_recipeconstructor" equip="false"  showpreview="false" />
+        <Item identifier="thal_recipegeneticinit" equip="false"  showpreview="false" />
+        <Item identifier="thal_recipegeneticgraft" equip="false"  showpreview="false" />
         <Item identifier="thal_geneticsign" equip="false" />
         <Item identifier="thal_geneticsign" equip="false" showpreview="false" />
       </Item>

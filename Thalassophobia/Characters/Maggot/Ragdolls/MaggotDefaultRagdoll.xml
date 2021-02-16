@@ -7,19 +7,22 @@
     <attack context="Any" cooldown="5" range="200" damagerange="100" duration="0.5" structuredamage="0" itemdamage="0" structuresoundtype="StructureSlash" targetimpulse="0" targetimpulseworld="0,0" severlimbsprobability="0.0" force="5" rootforceworldstart="2,0" rootforceworldmiddle="2,0" rootforceworldend="2,0" roottransitioneasing="Smooth" applyforceonlimbs="0, 1, 15, 11" torque="20" hitdetectiontype="Distance" onlyhumans="False" targetforce="20" targetforceworld="0,-15" priority="1" targettype="Character" secondarycooldown="0.01" applyforcesonlyonce="True" stickchance="0" cooldownrandomfactor="0.25" afterattack="PursueIfCanAttack" reverse="False" targetlimbtype="Torso" retreat="False" afterattackdelay="0" stun="0" fullspeedafterattack="False" levelwalldamage="0" ranged="False" avoidfriendlyfire="False" requiredangle="20">
       <Affliction identifier="stun" strength="1.5" probability="1" />
       <Affliction identifier="bitewounds" strength="1" probability="1" />
-      <StatusEffect type="OnUse" target="Character" setvalue="true" Isdead="false">
+      <StatusEffect type="OnUse" target="Character" setvalue="true" Isdead="false" Comparison="And" stackable="false" checkconditionalalways="true" comparison="and" >
         <Conditional IsDead="true" />
+        <Conditional SpeciesName="human" />
         <ReduceAffliction identifier="damage" strength="1000" />
         <ReduceAffliction identifier="bloodloss" strength="1000" />
         <Affliction identifier="thal_maggotinfection" strength="10000" />
         <Affliction identifier="stun" strength="10" />
       </StatusEffect>
-      <StatusEffect type="OnUse" target="Character" setvalue="true" Isdead="true" delay="0.5">
+      <StatusEffect type="OnUse" target="Character" setvalue="true" Isdead="true" delay="0.5" Comparison="And" stackable="false" checkconditionalalways="true" comparison="and" >
         <Conditional IsDead="true" />
+        <Conditional SpeciesName="human" />
         <Affliction identifier="thal_maggotinfection" strength="10000" />
       </StatusEffect>
-      <StatusEffect type="OnUse" target="Character" setvalue="true" Isdead="false" delay="1.0">
+      <StatusEffect type="OnUse" target="Character" setvalue="true" Isdead="false" delay="1.0" Comparison="And" stackable="false" checkconditionalalways="true" comparison="and" >
         <Conditional IsDead="true" />
+        <Conditional SpeciesName="human" />
         <Affliction identifier="thal_maggotinfection" strength="10000" />
       </StatusEffect>
     </attack>
