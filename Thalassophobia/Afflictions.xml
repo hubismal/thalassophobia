@@ -5,7 +5,7 @@
     <Effect minstrength="80" maxstrength="100" minvitalitydecrease="-100" maxvitalitydecrease="-101" strengthchange="0.3" />
     <icon texture="Mods/Thalassophobia/UI/MainIconsAtlas.png" sourcerect="640,768,128,128" color="60,107,195,255" origin="-4.0531708E-07,0" />
   </AfflictionHusk>
-  <AfflictionHusk name="Maggot Infestation" identifier="thal_maggotinfection" description="The patient's skin ripples with thousands of tiny maggots underneath the epidermis, burrowing holes in necrotic tissue and gnawing at the nervous system." type="huskinfection" targets="human" huskedspeciesname="[speciesname]hive" causeofdeathdescription="Infested by maggots" selfcauseofdeathdescription="You have been infested by maggots." limbspecific="false" indicatorlimb="Torso" activationthreshold="0" showiconthreshold="30" maxstrength="100" iconcolors="60,140,195,255;60,107,195,255;60,0,195,255">
+  <AfflictionHusk name="Maggot Infestation" identifier="thal_maggotinfection" description="The patient's skin ripples with thousands of tiny maggots underneath the epidermis, burrowing holes in necrotic tissue and gnawing at the nervous system." type="huskinfection" targets="human,gummy" huskedspeciesname="Humanhive" causeofdeathdescription="Infested by maggots" selfcauseofdeathdescription="You have been infested by maggots." limbspecific="false" indicatorlimb="Torso" activationthreshold="0" showiconthreshold="30" maxstrength="100" iconcolors="60,140,195,255;60,107,195,255;60,0,195,255">
     <Effect minstrength="0" maxstrength="80" maxvitalitydecrease="0" strengthchange="900" />
     <Effect minstrength="80" maxstrength="100" minvitalitydecrease="-100" maxvitalitydecrease="-101" strengthchange="900" />
     <StatusEffect target="Character" stackable="false">

@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<contentpackage name="Thalassophobia" path="Mods/Thalassophobia/filelist.xml" corepackage="false" gameversion="0.12.0.2" steamworkshopid="2003946282" installtime="1613326048">
+<contentpackage name="Thalassophobia" path="Mods/Thalassophobia/filelist.xml" corepackage="false" gameversion="0.12.0.3" steamworkshopid="2003946282" installtime="1613548044">
   <Text file="Mods/Thalassophobia/Texts/English/EnglishThalassophobiaLocations.xml" />
   <Text file="Mods/Thalassophobia/Texts/English/EnglishThalassophobiaWeapons.xml" />
   <Text file="Mods/Thalassophobia/Texts/English/EnglishThalassophobiaTools.xml" />

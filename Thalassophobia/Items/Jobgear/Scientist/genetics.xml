@@ -393,11 +393,6 @@
       <Price locationtype="research" multiplier="0.9" minavailable="3" />
       <Price locationtype="military" multiplier="1" minavailable="2" />
     </Price>
-    <Fabricate suitablefabricators="medicalfabricator" requiredtime="60">
-      <RequiredSkill identifier="medical" level="5" />
-      <RequiredItem identifier="organicfiber" />
-    </Fabricate>
-    -->
     <Deconstruct time="20">
       <Item identifier="organicfiber" copycondition="true" mincondition="0.1" />
     </Deconstruct>
@@ -437,18 +432,24 @@
         <Sound file="Content/Items/Medical/Syringe.ogg" type="OnUse" range="500" />
         <Affliction identifier="thal_meltdownhead" amount="1" />
         <ReduceAffliction identifier="thal_mudraptorhead" amount="400" />
+        <ReduceAffliction identifier="thal_maggothead" amount="400" />
+        <ReduceAffliction identifier="thal_shroomhead" amount="400" />
         <Conditional condition="30" />
       </StatusEffect>
       <StatusEffect tags="medical" Comparison="Or" type="OnUse" target="Character, This" duration="0.5">
         <Sound file="Content/Items/Medical/Syringe.ogg" type="OnUse" range="500" delay="0.05" duration="0.5" />
         <Affliction identifier="thal_meltdowntorso" amount="1" />
         <ReduceAffliction identifier="thal_mudraptortorso" amount="400" />
+        <ReduceAffliction identifier="thal_maggottorso" amount="400" />
+        <ReduceAffliction identifier="thal_shroomtorso" amount="400" />
         <Conditional condition="20" />
       </StatusEffect>
       <StatusEffect tags="medical" Comparison="Or" type="OnUse" target="Character, This" delay="0.05" duration="0.5">
         <Sound file="Content/Items/Medical/Syringe.ogg" type="OnUse" range="500" />
         <Affliction identifier="thal_meltdownlimbs" amount="1" />
         <ReduceAffliction identifier="thal_mudraptorlimbs" amount="400" />
+        <ReduceAffliction identifier="thal_maggotlimbs" amount="400" />
+        <ReduceAffliction identifier="thal_shroomlimbs" amount="400" />
         <Conditional condition="10" />
       </StatusEffect>
       <!-- Remove the item when fully used -->
@@ -517,9 +518,30 @@
         <Affliction identifier="thal_mudraptorlimbs" amount="160" />
         <Conditional thal_meltdownlimbs="gt 0" />
       </StatusEffect>
+      <!-- MAGGOT GRAFTS -->
+      <StatusEffect tags="medical" type="OnUse" target="Character" delay="0.05" duration="0.5">
+        <RequiredItem items="thal_dnamaggot" type="Contained" />
+        <Sound file="Content/Items/Medical/Syringe.ogg" type="OnUse" range="500" />
+        <ReduceAffliction identifier="thal_meltdownhead" amount="400" />
+        <Affliction identifier="thal_maggothead" amount="160" />
+        <Conditional thal_meltdownhead="gt 0" />
+      </StatusEffect>
+      <StatusEffect tags="medical" type="OnUse" target="Character" delay="0.05" duration="0.5">
+        <RequiredItem items="thal_dnamaggot" type="Contained" />
+        <Sound file="Content/Items/Medical/Syringe.ogg" type="OnUse" range="500" />
+        <ReduceAffliction identifier="thal_meltdowntorso" amount="400" />
+        <Affliction identifier="thal_maggottorso" amount="160" />
+        <Conditional thal_meltdowntorso="gt 0" />
+      </StatusEffect>
+      <StatusEffect tags="medical" type="OnUse" target="Character" delay="0.05" duration="0.5">
+        <RequiredItem items="thal_dnamaggot" type="Contained" />
+        <Sound file="Content/Items/Medical/Syringe.ogg" type="OnUse" range="500" />
+        <ReduceAffliction identifier="thal_meltdownlimbs" amount="400" />
+        <Affliction identifier="thal_maggotlimbs" amount="160" />
+        <Conditional thal_meltdownlimbs="gt 0" />
+      </StatusEffect>
       <!-- END SPECIFICS -->
       <StatusEffect type="OnUse" target="Contained,Character" delay="0.05" stackable="false" Comparison="Or" disabledeltatime="true">
-        <RemoveItem />
         <Conditional thal_meltdowntorso="gt 0" />
         <Conditional thal_meltdownhead="gt 0" />
         <Conditional thal_meltdownlimbs="gt 0" />
@@ -538,7 +560,7 @@
     </MeleeWeapon>
     <ItemContainer capacity="1" hideitems="true" itempos="16,-15" containedspritedepth="0.56">
       <ContainedStateIndicator texture="Content/UI/ContainerIndicators.png" sourcerect="0,157,92,27" />
-      <Containable items="thal_dnamudraptor,thal_dnahuman" />
+      <Containable items="thal_dnamudraptor,thal_dnahuman,thal_dnamaggot" />
       <StatusEffect type="OnContained" target="This" setvalue="true" condition="50">
         <RequiredItem items="thal_dna" type="Contained" />
       </StatusEffect>
