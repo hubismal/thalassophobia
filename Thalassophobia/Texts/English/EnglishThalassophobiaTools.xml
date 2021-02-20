@@ -299,15 +299,18 @@
   
   <entityname.thal_dnamudraptor>Mudraptor DNA</entityname.thal_dnamudraptor>
   <entitydescription.thal_dnamudraptor>Complete genetic sequence of the standard Europan Mudraptor. Can be used to develop anti-Mudraptor technologies, or in DNA grafts for gene splicing. DNA Abilities by Grafts:
-  Head : Slowly break down doors using creature attack.
-  Torso : Gain unbreakable mudraptor armor on chest.
-  Limbs : Movement Speed increases substantially.</entitydescription.thal_dnamudraptor>
+  Head (Beak): Slowly break down doors using creature attack.
+  Torso (Shell): Gain unbreakable mudraptor armor on chest.
+  Limbs (Tail): Movement Speed increases substantially.</entitydescription.thal_dnamudraptor>
   
   <entityname.thal_dnacrawler>Crawler DNA</entityname.thal_dnacrawler>
   <entitydescription.thal_dnacrawler>Complete genetic sequence of the standard Europan Crawler. Can be used to develop anti-crawler technologies, or in DNA grafts for gene splicing. This DNA cannot currently be grafted.</entitydescription.thal_dnacrawler>
   
   <entityname.thal_dnamaggot>Maggot DNA</entityname.thal_dnamaggot>
-  <entitydescription.thal_dnamaggot>Complete genetic sequence of the standard Hive Maggot. Can be used to develop anti-maggot technologies, or in DNA grafts for gene splicing. This DNA cannot currently be grafted.</entitydescription.thal_dnamaggot>
+  <entitydescription.thal_dnamaggot>Complete genetic sequence of the standard Hive Maggot. Can be used to develop anti-maggot technologies, or in DNA grafts for gene splicing. DNA Abilities by Grafts:
+  Head (Orfice): Aim at the floor and press creature attack to birth a maggot at the cost of health. Cooldown of 4s.
+  Torso (Pupa Sac): Explode into maggots on death.
+  Limbs (Regeneration): Massively increased healing of bleeding affliction.</entitydescription.thal_dnamaggot>
   
   <entityname.thal_dnaramblin>Mushroom DNA</entityname.thal_dnaramblin>
   <entitydescription.thal_dnaramblin>Complete genetic sequence of the Ramblin' Evil Mushroom. Can be used to develop anti-mushroom technologies, or in DNA grafts for gene splicing. This DNA cannot currently be grafted.</entitydescription.thal_dnaramblin>
