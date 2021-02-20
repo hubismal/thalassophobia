@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<huskappendage>
+  <limb id="13" name="mag1" type="None" height="20" width="10" notes="" spriteorientation="NaN" flip="True" mirrorvertically="False" mirrorhorizontally="False" hide="False" attackpriority="1" steerforce="5" radius="0" density="0.1" ignorecollisions="True" angulardamping="7" pullpos="0,0" stepoffset="0,0" refjoint="-1" mouthpos="0,0" healthindex="0" friction="0.3" restitution="0.05" constanttorque="0" constantangle="0" scale="1" attackforcemultiplier="1" minseverancedamage="1" severedfadeouttime="10" applytailangle="False" sinefrequencymultiplier="1" sineamplitudemultiplier="1" blinkfrequency="0" blinkdurationin="0.2" blinkdurationout="0.5" blinkholdtime="0" blinkrotationin="0" blinkrotationout="45" blinkforce="50" blinktransitionin="Linear" blinktransitionout="Linear">
+    <deformablesprite texture="Mods/Thalassophobia/Characters/Gummy/GeneLimbs/ramblinsheet.png" sourcerect="248,25,67,139" origin="0.5,0.5" depth="0" color="255,255,255,255" deadcolor="255,255,255,0" subdivisions="4,4" deadcolortime="0" >
+			<SpriteDeformation type="inflate" resolution="3,3" frequency="1" scale="0.15" sync="1" stopwhenhostisdead="True" typename="inflate" blendmode="Add" usemovementsine="False" sineoffset="0" strength="1" maxrotation="90" onlyinwater="False" />
+    </deformablesprite>
+    <StatusEffect target="Character" type="Always" stackable="false" >
+			<Conditional thal_mushroomized="gt 0" />
+			<ReduceAffliction identifier="thal_mushroomized" amount="20" />
+			<ReduceAffliction identifier="invertcontrols" amount="70" />
+			<ReduceAffliction identifier="damage" strength="10" />
+			<ReduceAffliction identifier="bloodloss" strength="20" />
+			<ReduceAffliction identifier="bleeding" strength="20" />
+     </StatusEffect>
+     <StatusEffect target="Character" type="Always" stackable="true" delay="1" >
+			<Conditional thal_mushroomized="gt 0" />
+			<ReduceAffliction identifier="invertcontrols" amount="100" />
+     </StatusEffect>
+  </limb>
+  <!-- Head to husk appendage -->
+  <joint name="Torso to bloater" limb1="1" limb2="13" limb1anchor="-1,-4" limb2anchor="12,-5" upperlimit="0" lowerlimit="-10" weldjoint="True" canbesevered="False" limitenabled="True" />
+
+</huskappendage>

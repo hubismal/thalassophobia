@@ -14,9 +14,9 @@
   <huskappendage affliction="thal_maggottorso" path="Mods/Thalassophobia/Characters/Gummy/GeneLimbs/Maggottorso.xml" />
   <huskappendage affliction="thal_maggotlimbs" path="Mods/Thalassophobia/Characters/Gummy/GeneLimbs/Maggotlimbs.xml" />
   <!-- mushroom -->
-  <huskappendage affliction="thal_shroomhead" path="Mods/Thalassophobia/Characters/Gummy/GeneLimbs/Maggothead.xml" />
-  <huskappendage affliction="thal_shroomtorso" path="Mods/Thalassophobia/Characters/Gummy/GeneLimbs/Maggothead.xml" />
-  <huskappendage affliction="thal_shroomlimbs" path="Mods/Thalassophobia/Characters/Gummy/GeneLimbs/Maggothead.xml" />
+  <huskappendage affliction="thal_shroomhead" path="Mods/Thalassophobia/Characters/Gummy/GeneLimbs/Shroomhead.xml" />
+  <huskappendage affliction="thal_shroomtorso" path="Mods/Thalassophobia/Characters/Gummy/GeneLimbs/Shroomtorso.xml" />
+  <huskappendage affliction="thal_shroomlimbs" path="Mods/Thalassophobia/Characters/Gummy/GeneLimbs/Shroomlimbs.xml" />
   <bloodemitter particle="blackblood" particleamount="5" anglemin="0" anglemax="0" scalemin="1" scalemax="1" velocitymin="0" velocitymax="0" emitinterval="0" particlespersecond="0" highqualitycollisiondetection="False" copyentityangle="False" />
   <bloodemitter particle="blackwaterblood" particleamount="1" anglemin="0" anglemax="0" scalemin="1" scalemax="1" velocitymin="0" velocitymax="0" emitinterval="0" particlespersecond="0" highqualitycollisiondetection="False" copyentityangle="False" />
   <gibemitter particle="heavygib" particleamount="10" velocitymin="50" velocitymax="500" anglemin="0" anglemax="360" scalemin="1" scalemax="1" emitinterval="0" particlespersecond="0" highqualitycollisiondetection="False" copyentityangle="False" />

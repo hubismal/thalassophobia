@@ -1,10 +1,10 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <huskappendage>
-  <limb id="13" name="RightFoot" type="RightFoot" width="10" height="40" notes="" flip="True" healthindex="3" attackpriority="0.5" steerforce="0" stepoffset="10,-10" radius="10" mass="0" density="10" pullpos="-0.14543161,-6.254539" refjoint="4" ignorecollisions="True" friction="0.3" restitution="0.05" spriteorientation="270" mirrorvertically="False" mirrorhorizontally="False" hide="False" angulardamping="7" mouthpos="0,0" constanttorque="0" constantangle="0" scale="1" attackforcemultiplier="1" minseverancedamage="0.8" severedfadeouttime="10" applytailangle="False" applysinemovement="True">
+  <limb id="13" name="RightFoot" type="RightFoot" width="10" height="40" notes="" flip="True" healthindex="3" attackpriority="0.5" steerforce="0" stepoffset="10,-10" radius="10" mass="0" density="1" pullpos="-0.14543161,-6.254539" refjoint="4" ignorecollisions="True" friction="0.3" restitution="0.05" spriteorientation="270" mirrorvertically="False" mirrorhorizontally="False" hide="False" angulardamping="7" mouthpos="0,0" constanttorque="0" constantangle="0" scale="1" attackforcemultiplier="1" minseverancedamage="0.8" severedfadeouttime="10" applytailangle="False" applysinemovement="True">
     <deformablesprite sourcerect="72,480,82,32" origin="0.4,0.3" depth="0.1" texture="Content/Characters/Mudraptor/Mudraptor.png" color="255,255,255,255" deadcolor="255,255,255,255" deadcolortime="0" />
     <sound tag="footstep_mudraptor" />
   </limb>
-  <limb id="14" name="RightFoot" type="RightFoot" width="10" height="40" notes="" flip="True" healthindex="3" attackpriority="0.5" steerforce="0" stepoffset="10,-10" radius="10" mass="0" density="10" pullpos="-0.14543161,-6.254539" refjoint="4" ignorecollisions="True" friction="0.3" restitution="0.05" spriteorientation="270" mirrorvertically="False" mirrorhorizontally="False" hide="False" angulardamping="7" mouthpos="0,0" constanttorque="0" constantangle="0" scale="1" attackforcemultiplier="1" minseverancedamage="0.8" severedfadeouttime="10" applytailangle="False" applysinemovement="True">
+  <limb id="14" name="RightFoot" type="RightFoot" width="10" height="40" notes="" flip="True" healthindex="3" attackpriority="0.5" steerforce="0" stepoffset="10,-10" radius="10" mass="0" density="1" pullpos="-0.14543161,-6.254539" refjoint="4" ignorecollisions="True" friction="0.3" restitution="0.05" spriteorientation="270" mirrorvertically="False" mirrorhorizontally="False" hide="False" angulardamping="7" mouthpos="0,0" constanttorque="0" constantangle="0" scale="1" attackforcemultiplier="1" minseverancedamage="0.8" severedfadeouttime="10" applytailangle="False" applysinemovement="True">
     <deformablesprite sourcerect="72,480,82,32" origin="0.4,0.3" depth="0.1" texture="Content/Characters/Mudraptor/Mudraptor.png" color="255,255,255,255" deadcolor="255,255,255,255" deadcolortime="0" />
     <sound tag="footstep_mudraptor" />
   </limb>
@@ -13,7 +13,9 @@
 			<spritedeformation type="bendjoint" resolution="3,3" multiplier="1.0" sync="-1" typename="bendjoint" blendmode="Add" usemovementsine="False" stopwhenhostisdead="False" sineoffset="0" maxrotation="30" strength="1" onlyinwater="False" />
 		</deformablesprite>
     <sound tag="footstep_mudraptor" />
-      <StatusEffect target="Character" type="Always" SpeedMultiplier="1.2" setvalue="true"></StatusEffect>
+      <StatusEffect target="Character" type="Always" SpeedMultiplier="1.75" setvalue="true">
+				<Conditional InWater="True" />
+      </StatusEffect>
   </limb>
   
   <!-- Feet appendage -->

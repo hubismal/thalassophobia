@@ -540,6 +540,28 @@
         <Affliction identifier="thal_maggotlimbs" amount="160" />
         <Conditional thal_meltdownlimbs="gt 0" />
       </StatusEffect>
+      <!-- SHROOM GRAFTS -->
+      <StatusEffect tags="medical" type="OnUse" target="Character" delay="0.05" duration="0.5">
+        <RequiredItem items="thal_dnaramblin" type="Contained" />
+        <Sound file="Content/Items/Medical/Syringe.ogg" type="OnUse" range="500" />
+        <ReduceAffliction identifier="thal_meltdownhead" amount="400" />
+        <Affliction identifier="thal_shroomhead" amount="160" />
+        <Conditional thal_meltdownhead="gt 0" />
+      </StatusEffect>
+      <StatusEffect tags="medical" type="OnUse" target="Character" delay="0.05" duration="0.5">
+        <RequiredItem items="thal_dnaramblin" type="Contained" />
+        <Sound file="Content/Items/Medical/Syringe.ogg" type="OnUse" range="500" />
+        <ReduceAffliction identifier="thal_meltdowntorso" amount="400" />
+        <Affliction identifier="thal_shroomtorso" amount="160" />
+        <Conditional thal_meltdowntorso="gt 0" />
+      </StatusEffect>
+      <StatusEffect tags="medical" type="OnUse" target="Character" delay="0.05" duration="0.5">
+        <RequiredItem items="thal_dnaramblin" type="Contained" />
+        <Sound file="Content/Items/Medical/Syringe.ogg" type="OnUse" range="500" />
+        <ReduceAffliction identifier="thal_meltdownlimbs" amount="400" />
+        <Affliction identifier="thal_shroomlimbs" amount="160" />
+        <Conditional thal_meltdownlimbs="gt 0" />
+      </StatusEffect>
       <!-- END SPECIFICS -->
       <StatusEffect type="OnUse" target="Contained,Character" delay="0.05" stackable="false" Comparison="Or" disabledeltatime="true">
         <Conditional thal_meltdowntorso="gt 0" />
@@ -560,7 +582,7 @@
     </MeleeWeapon>
     <ItemContainer capacity="1" hideitems="true" itempos="16,-15" containedspritedepth="0.56">
       <ContainedStateIndicator texture="Content/UI/ContainerIndicators.png" sourcerect="0,157,92,27" />
-      <Containable items="thal_dnamudraptor,thal_dnahuman,thal_dnamaggot" />
+      <Containable items="thal_dnamudraptor,thal_dnahuman,thal_dnamaggot,thal_dnaramblin" />
       <StatusEffect type="OnContained" target="This" setvalue="true" condition="50">
         <RequiredItem items="thal_dna" type="Contained" />
       </StatusEffect>

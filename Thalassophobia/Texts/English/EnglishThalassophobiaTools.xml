@@ -300,8 +300,8 @@
   <entityname.thal_dnamudraptor>Mudraptor DNA</entityname.thal_dnamudraptor>
   <entitydescription.thal_dnamudraptor>Complete genetic sequence of the standard Europan Mudraptor. Can be used to develop anti-Mudraptor technologies, or in DNA grafts for gene splicing. DNA Abilities by Grafts:
   Head (Beak): Slowly break down doors using creature attack.
-  Torso (Shell): Gain unbreakable mudraptor armor on chest.
-  Limbs (Tail): Movement Speed increases substantially.</entitydescription.thal_dnamudraptor>
+  Torso (Shell): Gain bulletproof mudraptor armor on spine.
+  Limbs (Tail): Swim Speed increases massively.</entitydescription.thal_dnamudraptor>
   
   <entityname.thal_dnacrawler>Crawler DNA</entityname.thal_dnacrawler>
   <entitydescription.thal_dnacrawler>Complete genetic sequence of the standard Europan Crawler. Can be used to develop anti-crawler technologies, or in DNA grafts for gene splicing. This DNA cannot currently be grafted.</entitydescription.thal_dnacrawler>
@@ -313,7 +313,10 @@
   Limbs (Regeneration): Massively increased healing of bleeding affliction.</entitydescription.thal_dnamaggot>
   
   <entityname.thal_dnaramblin>Mushroom DNA</entityname.thal_dnaramblin>
-  <entitydescription.thal_dnaramblin>Complete genetic sequence of the Ramblin' Evil Mushroom. Can be used to develop anti-mushroom technologies, or in DNA grafts for gene splicing. This DNA cannot currently be grafted.</entitydescription.thal_dnaramblin>
+  <entitydescription.thal_dnaramblin>Complete genetic sequence of the Ramblin' Evil Mushroom. Can be used to develop anti-mushroom technologies, or in DNA grafts for gene splicing. DNA Abilities by Grafts:
+  Head (Cap): Aim at the floor and press creature attack to discharge invigorating gasses.
+  Torso (Versicolor): The "Mushroomized" affliction greatly heals you.
+  Limbs (Athlete's Foot): Running speed substantially increased, Swimming speed marginally decreased.</entitydescription.thal_dnaramblin>
   
   <entityname.thal_planter>Hydroponics Planter Box</entityname.thal_planter>
   <entitydescription.thal_planter>An advanced planter box, designed for improved scientific measurement and botanical metrics analysis required by a botanist. Makes the difference between a hobbyist gardener and a true scientist. </entitydescription.thal_planter>
