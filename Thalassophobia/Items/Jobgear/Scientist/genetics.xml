@@ -262,7 +262,7 @@
 			<StatusEffect type="OnContained" target="This" drawinventory="false" />
       <GuiFrame relativesize="0.4,0.25" anchor="Center" minsize="140,170" maxsize="280,280" style="ItemUI" />
       <!-- meat processing   -->
-      <StatusEffect type="OnNotContained" target="This" setvalue="false" charge="-10" stackable="false" delay="0.1" disabledeltatime="true" >
+      <StatusEffect type="OnNotContained" target="This" setvalue="false" charge="-10" stackable="false" delay="0.5" disabledeltatime="true" >
         <RequiredItem items="thal_giblet" type="Contained" />
         <sound file="Mods/Thalassophobia/Items/Jobgear/Scientist/blender.ogg" type="OnActive" range="600.0" />
         <Conditional charge="gt 9" />

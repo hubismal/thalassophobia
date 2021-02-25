@@ -8,6 +8,7 @@
       </StatusEffect>
       <StatusEffect tags="thal_mudraptorscanned" target="Character" duration="1.0" stackable="false">
         <Conditional speciesname="mudraptor" />
+        <Conditional speciesname="Mudraptor_hatchling" />
         <Conditional speciesname="glowraptor" />
         <Conditional speciesname="babymudraptor" />
         <Conditional speciesname="petmudraptor" />
@@ -19,6 +20,7 @@
       </StatusEffect>
       <StatusEffect tags="thal_crawlerscanned" target="Character" duration="1.0" stackable="false">
         <Conditional speciesname="crawler" />
+        <Conditional speciesname="Crawler_hatchling" />
         <Conditional speciesname="crawlerhusk" />
         <Conditional speciesname="babycrawler" />
       </StatusEffect>
