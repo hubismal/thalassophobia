@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<huskappendage>
+  <limb id="13" width="5" height="10" name="ChestGills" type="None" spriteorientation="NaN" flip="True" mirrorvertically="False" mirrorhorizontally="False" hide="False" attackpriority="0" steerforce="0" radius="0" density="0.1" ignorecollisions="False" angulardamping="7" pullpos="0,0" stepoffset="0,0" refjoint="-1" mouthpos="0,0" notes="" constanttorque="0" constantangle="0" scale="0.9" attackforcemultiplier="1" minseverancedamage="0.8" healthindex="1" friction="0.3" restitution="0.05" severedfadeouttime="0" applytailangle="False" applysinemovement="True">
+    <deformablesprite texture="Mods/Thalassophobia/Characters/Gummy/GeneLimbs/crawler.png" sourcerect="1,110,107,106" origin="0.5,0.5" depth="0" color="255,255,255,255" deadcolor="255,255,255,0" subdivisions="4,4" deadcolortime="0" >
+			<SpriteDeformation type="inflate" resolution="3,3" frequency="1.5" scale="0.25" sync="1" stopwhenhostisdead="True" typename="inflate" blendmode="Add" usemovementsine="False" sineoffset="0" strength="1" maxrotation="90" onlyinwater="False" />
+    </deformablesprite>
+    <damagemodifier armorsector="0,360" afflictiontypes="damage" damagemultiplier="0" damagesound="LimbArmor" damageparticle="brownchunks" deflectprojectiles="True" afflictionidentifiers="" probabilitymultiplier="1" />
+    <damagemodifier armorsector="0,360" afflictiontypes="bleeding" damagemultiplier="0" damagesound="LimbArmor" deflectprojectiles="True" afflictionidentifiers="" probabilitymultiplier="1" damageparticle="" />
+    <StatusEffect type="OnSevered" target="This">
+      <particleemitter particle="brownchunks" drawontop="true" particleamount="40" velocitymin="100" velocitymax="500" anglemin="0" anglemax="360" scalemin="0.1" scalemax="0.4" />
+    </StatusEffect>
+    <StatusEffect target="Character" type="Always" OxygenAvailable="1000" setvalue="true">
+				<Conditional InWater="True" />
+      </StatusEffect>
+  </limb>
+  <!-- Head to husk appendage -->
+  <joint name="Torso to Mudraptor Armor Append" limb1="1" limb2="13" limb1anchor="-4,-4" limb2anchor="1,-1" upperlimit="90" weldjoint="true" lowerlimit="-90" canbesevered="False" limitenabled="True" />
+
+</huskappendage>

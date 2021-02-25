@@ -84,16 +84,6 @@
     <LightComponent canbeselected="true" name="LightComponent" lightcolor="255,255,255,140" castshadows="false" range="2" powerconsumption="1" IsOn="true" flicker="0.2" allowingameediting="false">
       <sprite name="O2dock light" texture="Mods/Thalassophobia/Items/Containers/Lockers.png" sourcerect="130,854,123,175" origin="0.5,0.5" />
     </LightComponent>
-    <!-- 
-    Originally wanted there to be a way to succ the dock ;) for oxygen without a mask but can't figure out a way to make conditional for voltage work 
-    <Controller selectkey="Action" name="Controller" canbeselected="true" hidehud="false" msg="ItemMsgBreatheUse">
-      <limbposition limb="Head" position="100,-100" />
-      <StatusEffect type="OnActive" target="Character" OxygenAvailable="1000.0" >
-				<sound file="Mods/Thalassophobia/Items/OxygenGenerator/DockBreath.ogg" range="300.0" loop="true" />
-				<Conditional IsOn="true" targetitemcomponent="LightComponent" />
-			</StatusEffect>
-    </Controller>
-    -->
     <Vent name="Vent">
       <StatusEffect type="OnActive" targettype="Contained" targets="oxygentank" Condition="2.0" />
       <StatusEffect type="OnActive" target="This" setvalue="true" voltage="1.0" IsOn="true" OxygenFlow="0">

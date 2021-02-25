@@ -423,30 +423,15 @@
     <Sprite texture="clownpack.png" sourcerect="133,59,114,135" depth="0.6" origin="0.5,0.5" />
     <Body width="114" height="135" density="40" />
     <Wearable slots="Any,OuterClothes" msg="ItemMsgPickUpSelect">
-      <StatusEffect type="Always" target="This" IsShootable="false" setvalue="true" stackable="false">
-        <Conditional IsActive="false" />
+      <StatusEffect type="Always" target="This,Character" IsShootable="false" setvalue="true" stackable="false">
+				<Conditional IsRagdolled="false" />
       </StatusEffect>
-      <statuseffect type="OnWearing" target="This,Character" stackable="false" setvalue="true" IsShootable="true">
-        <Conditional IsShootable="eq false" />
-        <Sound file="Mods/Thalassophobia/Items/Jobgear/Clown/zip.ogg" range="300" loop="false" />
-      </statuseffect>
-      <!--
-      <StatusEffect type="OnWearing" target="This,Character" setvalue="true" IsShootable="true" >
-        <Conditional stun="lt 1" />
-      </StatusEffect>
-      -->
       <damagemodifier afflictionidentifiers="stun" armorsector="180.0,360.0" damagemultiplier="0.15" deflectprojectiles="true" />
       <damagemodifier afflictiontypes="damage" armorsector="180.0,360.0" damagemultiplier="0.15" bleedingmultiplier="0.2" damagesound="LimbArmor" deflectprojectiles="true" />
       <sprite name="clown wearable backpack" texture="clownpack.png" limb="Torso" hidelimb="false" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" sourcerect="0,0,256,256" origin="0.5,0.5" />
     </Wearable>
     <ItemContainer capacity="8" canbeselected="false" hideitems="true" slotsperrow="2" drawinventory="true">
       <Containable items="toyhammer,bikehorn,clownmask,clowncostume,clownitem,smallitem" />
-      <StatusEffect type="OnContained" target="This" drawinventory="true" setvalue="true">
-        <Conditional IsShootable="eq true" />
-      </StatusEffect>
-      <StatusEffect type="OnContained" target="This" drawinventory="false" setvalue="true">
-        <Conditional IsShootable="eq false" />
-      </StatusEffect>
     </ItemContainer>
   </Item>
 </Items>

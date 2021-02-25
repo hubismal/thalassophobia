@@ -16,7 +16,7 @@
 				<Conditional thal_full="gt 98" />
 				<Affliction identifier="thal_full" amount="10"/>
 			</StatusEffect>
-			<StatusEffect type="OnUse" target="This">
+			<StatusEffect type="OnBroken" target="This">
 				<Conditional condition="eq 0" />
 				<sound type="OnUse" file="Mods/Thalassophobia/Items/Food/gulp.ogg" range="600" />
 				<Remove />
@@ -45,7 +45,7 @@
 				<Conditional thal_full="gt 98" />
 				<Affliction identifier="thal_full" amount="10"/>
 			</StatusEffect>
-			<StatusEffect type="OnUse" target="This">
+			<StatusEffect type="OnBroken" target="This">
 				<Conditional condition="eq 0" />
 				<sound file="Mods/Thalassophobia/Items/Food/gulp.ogg" range="600" />
 				<Remove />
@@ -68,7 +68,7 @@
 				<Conditional thal_full="gt 98" />
 				<Affliction identifier="thal_full" amount="10"/>
 			</StatusEffect>
-			<StatusEffect type="OnUse" target="This">
+			<StatusEffect type="OnBroken" target="This">
 				<Conditional condition="eq 0" />
 				<sound file="Mods/Thalassophobia/Items/Food/gulp.ogg" range="600" />
 				<Remove />
@@ -91,7 +91,7 @@
 				<Conditional thal_full="gt 98" />
 				<Affliction identifier="thal_full" amount="10"/>
 			</StatusEffect>
-			<StatusEffect type="OnUse" target="This">
+			<StatusEffect type="OnBroken" target="This">
 				<Conditional condition="eq 0" />
 				<sound file="Mods/Thalassophobia/Items/Food/gulp.ogg" range="600" />
 				<Remove />
@@ -114,7 +114,7 @@
 				<Conditional thal_full="gt 98" />
 				<Affliction identifier="thal_full" amount="10"/>
 			</StatusEffect>
-			<StatusEffect type="OnUse" target="This">
+			<StatusEffect type="OnBroken" target="This">
 				<Conditional condition="eq 0" />
 				<sound file="Mods/Thalassophobia/Items/Food/gulp.ogg" range="600" />
 				<Remove />
@@ -137,7 +137,7 @@
 				<Conditional thal_full="gt 98" />
 				<Affliction identifier="thal_full" amount="10"/>
 			</StatusEffect>
-			<StatusEffect type="OnUse" target="This">
+			<StatusEffect type="OnBroken" target="This">
 				<Conditional condition="eq 0" />
 				<sound file="Mods/Thalassophobia/Items/Food/gulp.ogg" range="600" />
 				<Remove />
@@ -160,7 +160,7 @@
 				<Conditional thal_full="gt 98" />
 				<Affliction identifier="thal_full" amount="10"/>
 			</StatusEffect>
-			<StatusEffect type="OnUse" target="This">
+			<StatusEffect type="OnBroken" target="This">
 				<Conditional condition="eq 0" />
 				<sound file="Mods/Thalassophobia/Items/Food/gulp.ogg" range="600" />
 				<Remove />

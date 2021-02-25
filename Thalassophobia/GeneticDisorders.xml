@@ -35,13 +35,13 @@
     <Effect minstrength="0" maxstrength="100">
       <StatusEffect target="Character" SpeedMultiplier="0.7" setvalue="true" />
     </Effect>
-    <PeriodicEffect mininterval="20" maxinterval="30">
+    <PeriodicEffect mininterval="5" maxinterval="15">
       <StatusEffect target="Character">
-        <Affliction identifier="thal_diarrhea" strength="8" />
+        <Affliction identifier="thal_diarrhea" strength="11" />
       </StatusEffect>
       <StatusEffect target="Character">
         <Conditional thal_full="gt 1" />
-        <Affliction identifier="thal_diarrhea" strength="18" />
+        <Affliction identifier="thal_diarrhea" strength="10" />
       </StatusEffect>
     </PeriodicEffect>
     <icon name="fartdisorder" texture="Mods/Thalassophobia/UI/MainIconsAtlas.png" sourcerect="386,769,128,128" color="60,107,195,255" origin="0,0" />

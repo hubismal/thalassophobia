@@ -214,7 +214,7 @@
     </PowerContainer>
     <RepairTool canbeselected="false" range="500" barrelpos="40,-50" repairthroughholes="true" characterusable="false" requireaimtouse="false" usablein="air" barrelrotation="270">
       <StatusEffect type="OnUse" target="UseTarget" stackable="false" delay="0.1" disabledeltatime="true">
-        <Conditional Stun="lt 1" />
+        <Conditional IsDead="false" />
         <Affliction identifier="thal_scan" amount="5" />
         <Affliction identifier="thal_disorderfart" amount="3" probability="0.01" />
         <Affliction identifier="thal_disorderseizure" amount="3" probability="0.01" />
@@ -239,13 +239,20 @@
       </StatusEffect>
     </Repairable>
   </Item>
-  <Item name="" identifier="thal_dnahatcher" category="Machine" Tags="smallitem,provocative" cargocontaineridentifier="metalcrate" description="" impactsoundtag="impact_metal_light" hideinmenus="false" scale="0.65" hideconditionbar="true" canflipx="false" HealthMultiplier="100" >
+  <Item name="" identifier="thal_dnahatcher" category="Machine" Tags="smallitem,provocative" cargocontaineridentifier="metalcrate" description="" impactsoundtag="impact_metal_light" hideinmenus="false" scale="0.65" hideconditionbar="true" canflipx="false" charge="100" >
     <Sprite name="dna hatcher" texture="Mods/Thalassophobia/Items/Jobgear/Scientist/science.png" sourcerect="667,7,193,232" depth="0.8" origin="0.5,0.5" />
     <Body width="193" height="232" density="5"></Body>
     <ItemLabel scrollable="true" padding="20,30,20,40" textcolor="1,1,1,1" text="Biomass: 0kg">
       <StatusEffect type="OnContained" target="This" textcolor="0,0,0,0" />
       <StatusEffect type="OnNotContained" target="This" textcolor="1,1,1,1" />
     </ItemLabel>
+    <ConnectionPanel selectkey="Action" canbeselected="true" msg="Insert Adequate Biomass, Insert DNA and Activate" hudpriority="10">
+      <GuiFrame relativesize="0.2,0.32" minsize="400,350" maxsize="480,420" anchor="Center" style="ConnectionPanel" />
+      <RequiredItem items="youlostthegame" type="Equipped" />
+      <input name="power" displayname="connection.power" />
+      <input name="toggle" displayname="connection.togglestate" />
+      <input name="set_state" displayname="connection.setstate" />
+    </ConnectionPanel>
     <Holdable pickkey="Use" slots="Any,RightHand,LeftHand" msg="ItemMsgDetachWrench" PickingTime="10.0" aimpos="35,-10" handle1="0,0" attachable="true" attachedbydefault="true" aimable="true">
       <requireditem identifier="wrench" type="Equipped" />
     </Holdable>
@@ -255,37 +262,51 @@
 			<StatusEffect type="OnContained" target="This" drawinventory="false" />
       <GuiFrame relativesize="0.4,0.25" anchor="Center" minsize="140,170" maxsize="280,280" style="ItemUI" />
       <!-- meat processing   -->
-      <StatusEffect type="OnNotContained" target="This" setvalue="true" HealthMultiplier="90" stackable="false" delay="0.1" text="Biomass: 20kg">
+      <StatusEffect type="OnNotContained" target="This" setvalue="false" charge="-10" stackable="false" delay="0.1" disabledeltatime="true" >
         <RequiredItem items="thal_giblet" type="Contained" />
         <sound file="Mods/Thalassophobia/Items/Jobgear/Scientist/blender.ogg" type="OnActive" range="600.0" />
-        <Conditional HealthMultiplier="eq 100" />
+        <Conditional charge="gt 9" />
       </StatusEffect>
-      <StatusEffect type="OnNotContained" target="This" setvalue="true" HealthMultiplier="80" stackable="false" delay="0.1" text="Biomass: 40kg">
-        <RequiredItem items="thal_giblet" type="Contained" />
-        <sound file="Mods/Thalassophobia/Items/Jobgear/Scientist/blender.ogg" type="OnActive" range="600.0" />
-        <Conditional HealthMultiplier="eq 90" />
+      <!-- meat readout -->
+      <StatusEffect type="OnNotContained" target="This" setvalue="true" stackable="false" delay="0.5" text="Biomass: 0kg">
+        <Conditional charge="eq 100" />
       </StatusEffect>
-      <StatusEffect type="OnNotContained" target="This" setvalue="true" HealthMultiplier="70" stackable="false" delay="0.1" text="Biomass: 60kg">
-        <RequiredItem items="thal_giblet" type="Contained" />
-        <sound file="Mods/Thalassophobia/Items/Jobgear/Scientist/blender.ogg" type="OnActive" range="600.0" />
-        <Conditional HealthMultiplier="eq 80" />
+      <StatusEffect type="OnNotContained" target="This" setvalue="true" stackable="false" delay="0.5" text="Biomass: 20kg">
+        <Conditional charge="eq 90" />
       </StatusEffect>
-      <StatusEffect type="OnNotContained" target="This" setvalue="true" HealthMultiplier="60" stackable="false" delay="0.1" text="Biomass: 80kg">
-        <RequiredItem items="thal_giblet" type="Contained" />
-        <sound file="Mods/Thalassophobia/Items/Jobgear/Scientist/blender.ogg" type="OnActive" range="600.0" />
-        <Conditional HealthMultiplier="eq 70" />
+      <StatusEffect type="OnNotContained" target="This" setvalue="true" stackable="false" delay="0.5" text="Biomass: 40kg">
+        <Conditional charge="eq 80" />
       </StatusEffect>
-      <StatusEffect type="OnNotContained" target="This" setvalue="true" HealthMultiplier="50" stackable="false" delay="0.1" text="Biomass:100kg">
-        <RequiredItem items="thal_giblet" type="Contained" />
-        <sound file="Mods/Thalassophobia/Items/Jobgear/Scientist/blender.ogg" type="OnActive" range="600.0" />
-        <Conditional HealthMultiplier="eq 60" />
+      <StatusEffect type="OnNotContained" target="This" setvalue="true" stackable="false" delay="0.5" text="Biomass: 60kg">
+        <Conditional charge="eq 70" />
       </StatusEffect>
-      <StatusEffect type="OnNotContained" targettype="Contained" targets="thal_giblet">
-        <RemoveItem />
+      <StatusEffect type="OnNotContained" target="This" setvalue="true" stackable="false" delay="0.5" text="Biomass: 80kg">
+        <Conditional charge="eq 60" />
+      </StatusEffect>
+      <StatusEffect type="OnNotContained" target="This" setvalue="true" stackable="false" delay="0.5" text="Biomass: 100kg">
+        <Conditional charge="eq 50" />
+      </StatusEffect>
+      <StatusEffect type="OnNotContained" target="This" setvalue="true" stackable="false" delay="0.5" text="Biomass: 120kg">
+        <Conditional charge="eq 40" />
+      </StatusEffect>
+      <StatusEffect type="OnNotContained" target="This" setvalue="true" stackable="false" delay="0.5" text="Biomass: 140kg">
+        <Conditional charge="eq 30" />
+      </StatusEffect>
+      <StatusEffect type="OnNotContained" target="This" setvalue="true" stackable="false" delay="0.5" text="Biomass: 160kg">
+        <Conditional charge="eq 20" />
+      </StatusEffect>
+      <StatusEffect type="OnNotContained" target="This" setvalue="true" stackable="false" delay="0.5" text="Biomass: 180kg">
+        <Conditional charge="eq 10" />
+      </StatusEffect>
+      <StatusEffect type="OnNotContained" target="This" setvalue="true" stackable="false" delay="0.5" text="Biomass: 200kg">
+        <Conditional charge="eq 0" />
+      </StatusEffect>
+      
+      <StatusEffect type="OnNotContained" targettype="Contained, This" targets="thal_giblet" setvalue="true" condition="0" >
         <RequiredItem items="thal_giblet" type="Contained" />
       </StatusEffect>
       <StatusEffect type="OnNotContained" target="This">
-        <Conditional HealthMultiplier="lt 55" />
+        <Conditional charge="lt 9" />
         <RequiredItem items="thal_giblet" type="Contained" />
         <sound file="Mods/Thalassophobia/Items/Jobgear/Scientist/Deny.ogg" type="OnActive" range="600.0" />
       </StatusEffect>
@@ -294,89 +315,93 @@
       <GuiFrame relativesize="0.4,0.1" anchor="BottomCenter" absoluteoffset="0,-30" style="ItemUI" />
       <Button text="Analyze DNA (Requires Adequate Biomass)">
         <!-- human -->
-        <StatusEffect type="OnUse" targettype="This" delay="30" IsOn="false" canbeselected="true" text="Biomass: 0kg" HealthMultiplier="100" setvalue="true" stackable="false">
+        <StatusEffect type="OnUse" targettype="This" delay="30" IsOn="false" charge="30" setvalue="false" stackable="false" disabledeltatime="true" >
           <SpawnCharacter speciesname="human" count="1" spread="8" />
           <sound file="Mods/Thalassophobia/Items/Jobgear/Scientist/Ding.ogg" range="600.0" loop="false" />
           <RequiredItem items="thal_dnahuman" type="Contained" />
-          <Conditional HealthMultiplier="lt 80" />
+          <Conditional charge="lt 80" />
           <ParticleEmitter particle="steamspray" particlespersecond="80" anglemin="0" anglemax="0" velocitymin="200" velocitymax="400" highqualitycollisiondetection="true" colormultiplier="255,255,255,160" />
 					<ParticleEmitter particle="bubbles" particlespersecond="20" anglemin="-10" anglemax="10" scalemin="0.3" scalemax="0.7" velocitymin="5" velocitymax="100" copyentityangle="true" />
         </StatusEffect>
-        <StatusEffect type="OnUse" target="This" IsOn="true" canbeselected="false" text="">
+        <StatusEffect type="OnUse" target="This" IsOn="true" text="">
           <RequiredItem items="thal_dnahuman" type="Contained" />
-          <Conditional HealthMultiplier="lt 80" />
+          <Conditional charge="lt 80" />
         </StatusEffect>
         <StatusEffect type="OnUse" target="This" >
 					<sound file="Mods/Thalassophobia/Items/Jobgear/Scientist/Deny.ogg" range="600.0" loop="false" />
           <RequiredItem items="thal_dnahuman" type="Contained" />
-          <Conditional HealthMultiplier="gt 70" />
+          <Conditional charge="gt 70" />
         </StatusEffect>
         <!-- mudraptor -->
-        <StatusEffect type="OnUse" targettype="This" delay="60" IsOn="false" canbeselected="true" text="Biomass: 0kg" HealthMultiplier="100" setvalue="true" stackable="false">
+        <StatusEffect type="OnUse" targettype="This" delay="60" IsOn="false"  charge="50" setvalue="false" stackable="false" disabledeltatime="true" >
           <SpawnCharacter speciesname="mudraptor" count="1" spread="8" />
           <sound file="Mods/Thalassophobia/Items/Jobgear/Scientist/Ding.ogg" range="600.0" loop="false" />
           <RequiredItem items="thal_dnamudraptor" type="Contained" />
-          <Conditional HealthMultiplier="lt 60" />
+          <Conditional charge="lt 60" />
         </StatusEffect>
-        <StatusEffect type="OnUse" target="This" IsOn="true" canbeselected="false" text="">
+        <StatusEffect type="OnUse" target="This" IsOn="true" text="">
           <RequiredItem items="thal_dnamudraptor" type="Contained" />
-          <Conditional HealthMultiplier="lt 60" />
+          <Conditional charge="lt 60" />
         </StatusEffect>
         <StatusEffect type="OnUse" target="This" >
 					<sound file="Mods/Thalassophobia/Items/Jobgear/Scientist/Deny.ogg" range="600.0" loop="false" />
           <RequiredItem items="thal_dnamudraptor" type="Contained" />
-          <Conditional HealthMultiplier="gt 55" />
+          <Conditional charge="gt 55" />
         </StatusEffect>
         <!-- crawler -->
-        <StatusEffect type="OnUse" targettype="This" delay="40" IsOn="false" canbeselected="true" text="Biomass: 0kg" HealthMultiplier="100" setvalue="true" stackable="false">
+        <StatusEffect type="OnUse" targettype="This" delay="40" IsOn="false"  charge="30" setvalue="false" stackable="false" disabledeltatime="true" >
           <SpawnCharacter speciesname="crawler" count="1" spread="8" />
           <sound file="Mods/Thalassophobia/Items/Jobgear/Scientist/Ding.ogg" range="600.0" loop="false" />
           <RequiredItem items="thal_dnacrawler" type="Contained" />
-          <Conditional HealthMultiplier="lt 80" />
+          <Conditional charge="lt 80" />
         </StatusEffect>
-        <StatusEffect type="OnUse" target="This" IsOn="true" canbeselected="false" text="">
+        <StatusEffect type="OnUse" target="This" IsOn="true" text="">
           <RequiredItem items="thal_dnacrawler" type="Contained" />
-          <Conditional HealthMultiplier="lt 80" />
+          <Conditional charge="lt 80" />
         </StatusEffect>
         <StatusEffect type="OnUse" target="This" >
 					<sound file="Mods/Thalassophobia/Items/Jobgear/Scientist/Deny.ogg" range="600.0" loop="false" />
           <RequiredItem items="thal_dnacrawler" type="Contained" />
-          <Conditional HealthMultiplier="gt 75" />
+          <Conditional charge="gt 75" />
         </StatusEffect>
         <!-- ramblin -->
-        <StatusEffect type="OnUse" targettype="This" delay="40" IsOn="false" canbeselected="true" text="Biomass: 0kg" HealthMultiplier="100" setvalue="true" stackable="false">
+        <StatusEffect type="OnUse" targettype="This" delay="40" IsOn="false"  charge="10" setvalue="false" stackable="false" disabledeltatime="true" >
           <SpawnCharacter speciesname="ramblin" count="1" spread="8" />
           <sound file="Mods/Thalassophobia/Items/Jobgear/Scientist/Ding.ogg" range="600.0" loop="false" />
           <RequiredItem items="thal_dnaramblin" type="Contained" />
-          <Conditional HealthMultiplier="lt 100" />
+          <Conditional charge="lt 100" />
         </StatusEffect>
-        <StatusEffect type="OnUse" target="This" IsOn="true" canbeselected="false" text="">
+        <StatusEffect type="OnUse" target="This" IsOn="true" text="">
           <RequiredItem items="thal_dnaramblin" type="Contained" />
-          <Conditional HealthMultiplier="lt 100" />
+          <Conditional charge="lt 100" />
         </StatusEffect>
         <StatusEffect type="OnUse" target="This" >
 					<sound file="Mods/Thalassophobia/Items/Jobgear/Scientist/Deny.ogg" range="600.0" loop="false" />
           <RequiredItem items="thal_dnaramblin" type="Contained" />
-          <Conditional HealthMultiplier="gt 95" />
+          <Conditional charge="gt 95" />
         </StatusEffect>
         <!-- maggot -->
-        <StatusEffect type="OnUse" targettype="This" delay="40" IsOn="false" canbeselected="true" text="Biomass: 0kg" HealthMultiplier="100" setvalue="true" stackable="false">
+        <StatusEffect type="OnUse" targettype="This" delay="40" IsOn="false" charge="10" setvalue="false" stackable="false"  disabledeltatime="true" >
           <SpawnCharacter speciesname="maggot" count="1" spread="8" />
           <sound file="Mods/Thalassophobia/Items/Jobgear/Scientist/Ding.ogg" range="600.0" loop="false" />
           <RequiredItem items="thal_dnamaggot" type="Contained" />
-          <Conditional HealthMultiplier="lt 100" />
+          <Conditional charge="lt 100" />
         </StatusEffect>
-        <StatusEffect type="OnUse" target="This" IsOn="true" canbeselected="false" text="">
+        <StatusEffect type="OnUse" target="This" IsOn="true" text="">
           <RequiredItem items="thal_dnamaggot" type="Contained" />
-          <Conditional HealthMultiplier="lt 100" />
+          <Conditional charge="lt 100" />
         </StatusEffect>
         <StatusEffect type="OnUse" target="This" >
 					<sound file="Mods/Thalassophobia/Items/Jobgear/Scientist/Deny.ogg" range="600.0" loop="false" />
           <RequiredItem items="thal_dnamaggot" type="Contained" />
-          <Conditional HealthMultiplier="gt 95" />
+          <Conditional charge="gt 95" />
         </StatusEffect>
       </Button>
     </CustomInterface>
+    <PowerContainer capacity="100.0" maxrechargespeed="0.0" maxoutput="0" canbeselected="false" indicatorposition="15,90" indicatorsize="150,15" indicatordepth="0.4" ishorizontal="true" msg="ItemMsgInteractSelect" charge="100" drawhudwhenequipped="false" >
+      <StatusEffect type="OnContained" target="This" indicatorsize="1,1" />
+      <!--<StatusEffect type="OnNotContained" target="This" indicatorsize="150,15" />-->
+    </PowerContainer>
     <LightComponent range="250" lightcolor="180,255,255,200" IsOn="false" powerconsumption="0" pulseamount="0.6" pulsefrequency="0.4" allowingameediting="false">
       <sound file="Mods/Thalassophobia/Items/Jobgear/Clown/cultistaltar.ogg" type="OnActive" range="800.0" loop="true" />
       <Sprite name="dna hatcher light" texture="Mods/Thalassophobia/Items/Jobgear/Scientist/science.png" sourcerect="667,245,193,232" depth="0.8" origin="0.5,0.5" />
@@ -434,6 +459,7 @@
         <ReduceAffliction identifier="thal_mudraptorhead" amount="400" />
         <ReduceAffliction identifier="thal_maggothead" amount="400" />
         <ReduceAffliction identifier="thal_shroomhead" amount="400" />
+        <ReduceAffliction identifier="thal_crawlerhead" amount="400" />
         <Conditional condition="30" />
       </StatusEffect>
       <StatusEffect tags="medical" Comparison="Or" type="OnUse" target="Character, This" duration="0.5">
@@ -442,6 +468,7 @@
         <ReduceAffliction identifier="thal_mudraptortorso" amount="400" />
         <ReduceAffliction identifier="thal_maggottorso" amount="400" />
         <ReduceAffliction identifier="thal_shroomtorso" amount="400" />
+        <ReduceAffliction identifier="thal_crawlertorso" amount="400" />
         <Conditional condition="20" />
       </StatusEffect>
       <StatusEffect tags="medical" Comparison="Or" type="OnUse" target="Character, This" delay="0.05" duration="0.5">
@@ -450,6 +477,7 @@
         <ReduceAffliction identifier="thal_mudraptorlimbs" amount="400" />
         <ReduceAffliction identifier="thal_maggotlimbs" amount="400" />
         <ReduceAffliction identifier="thal_shroomlimbs" amount="400" />
+        <ReduceAffliction identifier="thal_crawlerlimbs" amount="400" />
         <Conditional condition="10" />
       </StatusEffect>
       <!-- Remove the item when fully used -->
@@ -562,6 +590,28 @@
         <Affliction identifier="thal_shroomlimbs" amount="160" />
         <Conditional thal_meltdownlimbs="gt 0" />
       </StatusEffect>
+      <!-- CRAWLER GRAFTS -->
+      <StatusEffect tags="medical" type="OnUse" target="Character" delay="0.05" duration="0.5">
+        <RequiredItem items="thal_dnacrawler" type="Contained" />
+        <Sound file="Content/Items/Medical/Syringe.ogg" type="OnUse" range="500" />
+        <ReduceAffliction identifier="thal_meltdownhead" amount="400" />
+        <Affliction identifier="thal_crawlerhead" amount="160" />
+        <Conditional thal_meltdownhead="gt 0" />
+      </StatusEffect>
+      <StatusEffect tags="medical" type="OnUse" target="Character" delay="0.05" duration="0.5">
+        <RequiredItem items="thal_dnacrawler" type="Contained" />
+        <Sound file="Content/Items/Medical/Syringe.ogg" type="OnUse" range="500" />
+        <ReduceAffliction identifier="thal_meltdowntorso" amount="400" />
+        <Affliction identifier="thal_crawlertorso" amount="160" />
+        <Conditional thal_meltdowntorso="gt 0" />
+      </StatusEffect>
+      <StatusEffect tags="medical" type="OnUse" target="Character" delay="0.05" duration="0.5">
+        <RequiredItem items="thal_dnacrawler" type="Contained" />
+        <Sound file="Content/Items/Medical/Syringe.ogg" type="OnUse" range="500" />
+        <ReduceAffliction identifier="thal_meltdownlimbs" amount="400" />
+        <Affliction identifier="thal_crawlerlimbs" amount="160" />
+        <Conditional thal_meltdownlimbs="gt 0" />
+      </StatusEffect>
       <!-- END SPECIFICS -->
       <StatusEffect type="OnUse" target="Contained,Character" delay="0.05" stackable="false" Comparison="Or" disabledeltatime="true">
         <Conditional thal_meltdowntorso="gt 0" />
@@ -582,7 +632,7 @@
     </MeleeWeapon>
     <ItemContainer capacity="1" hideitems="true" itempos="16,-15" containedspritedepth="0.56">
       <ContainedStateIndicator texture="Content/UI/ContainerIndicators.png" sourcerect="0,157,92,27" />
-      <Containable items="thal_dnamudraptor,thal_dnahuman,thal_dnamaggot,thal_dnaramblin" />
+      <Containable items="thal_dnamudraptor,thal_dnahuman,thal_dnamaggot,thal_dnaramblin,thal_dnacrawler" />
       <StatusEffect type="OnContained" target="This" setvalue="true" condition="50">
         <RequiredItem items="thal_dna" type="Contained" />
       </StatusEffect>
@@ -611,6 +661,22 @@
     </LightComponent>
   </Item>
   <Item name="" identifier="thal_dnacrawler" category="Material" cargocontaineridentifier="metalcrate" description="" Tags="smallitem,thal_dna" spritecolor="255,230,140,200" InventoryIconColor="255,230,140,200" scale="0.5" impactsoundtag="impact_metal_light">
+    <Sprite name="dna" texture="Mods/Thalassophobia/Items/Jobgear/Scientist/science.png" sourcerect="459,198,45,43" depth="0.6" origin="0.5,0.5" />
+    <Body width="55" height="55" density="20" />
+    <Holdable slots="Any,RightHand,LeftHand" handle1="0,0" msg="ItemMsgPickUpSelect" />
+    <LightComponent range="1" castshadows="false" lightcolor="255,230,140,200" IsOn="true" powerconsumption="0" blinkFrequency="0" allowingameediting="false">
+      <Sprite name="dnalight" texture="Mods/Thalassophobia/Items/Jobgear/Scientist/science.png" sourcerect="459,198,45,43" depth="0.6" origin="0.5,0.5" />
+    </LightComponent>
+  </Item>
+    <Item name="" identifier="thal_dnathresher" category="Material" cargocontaineridentifier="metalcrate" description="" Tags="smallitem,thal_dna" spritecolor="255,230,140,200" InventoryIconColor="255,230,140,200" scale="0.5" impactsoundtag="impact_metal_light">
+    <Sprite name="dna" texture="Mods/Thalassophobia/Items/Jobgear/Scientist/science.png" sourcerect="459,198,45,43" depth="0.6" origin="0.5,0.5" />
+    <Body width="55" height="55" density="20" />
+    <Holdable slots="Any,RightHand,LeftHand" handle1="0,0" msg="ItemMsgPickUpSelect" />
+    <LightComponent range="1" castshadows="false" lightcolor="255,230,140,200" IsOn="true" powerconsumption="0" blinkFrequency="0" allowingameediting="false">
+      <Sprite name="dnalight" texture="Mods/Thalassophobia/Items/Jobgear/Scientist/science.png" sourcerect="459,198,45,43" depth="0.6" origin="0.5,0.5" />
+    </LightComponent>
+  </Item>
+    <Item name="" identifier="thal_dnahammer" category="Material" cargocontaineridentifier="metalcrate" description="" Tags="smallitem,thal_dna" spritecolor="255,130,140,200" InventoryIconColor="255,230,140,200" scale="0.5" impactsoundtag="impact_metal_light">
     <Sprite name="dna" texture="Mods/Thalassophobia/Items/Jobgear/Scientist/science.png" sourcerect="459,198,45,43" depth="0.6" origin="0.5,0.5" />
     <Body width="55" height="55" density="20" />
     <Holdable slots="Any,RightHand,LeftHand" handle1="0,0" msg="ItemMsgPickUpSelect" />
