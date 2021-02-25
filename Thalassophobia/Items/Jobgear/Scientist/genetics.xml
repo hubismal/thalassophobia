@@ -301,9 +301,15 @@
       <StatusEffect type="OnNotContained" target="This" setvalue="true" stackable="false" delay="0.5" text="Biomass: 200kg">
         <Conditional charge="eq 0" />
       </StatusEffect>
-      
-      <StatusEffect type="OnNotContained" targettype="Contained, This" targets="thal_giblet" setvalue="true" condition="0" >
+      <!-- failure -->
+      <!-- fix post destruction -->
+      <StatusEffect type="OnNotContained" target="This" setvalue="true" delay="0.3" disabledeltatime="true" condition="100" >
         <RequiredItem items="thal_giblet" type="Contained" />
+        <Conditional charge="gt 9" />
+      </StatusEffect>
+      <StatusEffect type="OnNotContained" targettype="Contained, This" setvalue="true" condition="0" >
+        <RequiredItem items="thal_giblet" type="Contained" />
+        <Conditional charge="gt 9" />
       </StatusEffect>
       <StatusEffect type="OnNotContained" target="This">
         <Conditional charge="lt 9" />
