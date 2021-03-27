@@ -1,4 +1,138 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Items>
-  
+  <Item name="" identifier="thal_attachablejunction" tags="junctionbox" category="Electrical" description="" scale="0.5" allowedlinks="gap,door" linkable="true" damagedbyexplosions="true" explosiondamagemultiplier="0.2">
+    <Upgrade gameversion="0.10.0.0" scale="*0.667" />
+    <Body height="172" width="106" density="50" />
+    <Sprite texture="Content/Items/Electricity/signalcomp.png" sourcerect="264,1,110,127" depth="0.8" canflipx="false" origin="0.5,0.5" />
+    <BrokenSprite texture="Content/Items/Electricity/signalcomp.png" sourcerect="376,1,110,127" depth="0.8" maxcondition="80" fadein="true" />
+    <BrokenSprite texture="Content/Items/Electricity/signalcomp.png" sourcerect="488,1,110,127" depth="0.8" maxcondition="0" />
+    <InfectedSprite texture="Content/Items/Gardening/ballastflora.png" sourcerect="53,640,161,239" origin="0.5,0.5" />
+    <PowerTransfer canbeselected="true" msg="ItemMsgInteractSelect">
+      <GuiFrame relativesize="0.2,0.14" minsize="450,160" anchor="Center" style="ItemUI" />
+      <StatusEffect type="InWater" target="This" condition="-0.25">
+        <Conditional currPowerConsumption="lt -10" />
+      </StatusEffect>
+    </PowerTransfer>
+    <LightComponent range="10.0" lightcolor="255,255,255,0" powerconsumption="1" IsOn="true" castshadows="false" allowingameediting="false">
+      <Upgrade gameversion="0.9.600.0" lightcolor="255,255,255,0" />
+      <sprite texture="Content/Items/Electricity/signalcomp.png" sourcerect="264,186,110,127" depth="0.1" origin="0.5,0.5" alpha="1.0" />
+      <IsActive targetitemcomponent="PowerTransfer" overload="eq False" />
+    </LightComponent>
+    <LightComponent range="10.0" lightcolor="255,255,255,0" powerconsumption="1" IsOn="false" castshadows="false" allowingameediting="false" blinkfrequency="1.5">
+      <Upgrade gameversion="0.9.600.0" lightcolor="255,255,255,0" />
+      <sprite texture="Content/Items/Electricity/signalcomp.png" sourcerect="376,186,110,127" depth="0.1" origin="0.5,0.5" alpha="1.0" />
+      <IsActive targetitemcomponent="PowerTransfer" overload="eq True" />
+    </LightComponent>
+    <ConnectionPanel selectkey="Action" canbeselected="true" msg="ItemMsgRewireScrewdriver" hudpriority="10">
+      <GuiFrame relativesize="0.2,0.32" minsize="400,350" maxsize="480,420" anchor="Center" style="ConnectionPanel" />
+      <RequiredSkill identifier="electrical" level="40" />
+      <StatusEffect type="OnFailure" target="Character" targetlimbs="LeftHand,RightHand">
+        <Sound file="Content/Sounds/Damage/Electrocution1.ogg" range="1000" />
+        <Explosion range="100.0" stun="0" force="5.0" flames="false" shockwave="false" sparks="true" underwaterbubble="false" />
+        <Affliction identifier="stun" strength="5" />
+        <Affliction identifier="burn" strength="5" />
+      </StatusEffect>
+      <RequiredItem items="screwdriver" type="Equipped" />
+      <output name="power" displayname="connection.power" />
+      <output name="signal_0" displayname="connection.signalx~[num]=0" fallbackdisplayname="connection.signalinx~[num]=0" />
+      <output name="signal_1" displayname="connection.signalx~[num]=1" fallbackdisplayname="connection.signalinx~[num]=1" />
+      <output name="signal_2" displayname="connection.signalx~[num]=2" fallbackdisplayname="connection.signalinx~[num]=2" />
+      <output name="signal_3" displayname="connection.signalx~[num]=3" fallbackdisplayname="connection.signalinx~[num]=3" />
+    </ConnectionPanel>
+    <Repairable selectkey="Action" header="electricalrepairsheader" deteriorationspeed="0.1" mindeteriorationdelay="120" maxdeteriorationdelay="720" mindeteriorationcondition="0" RepairThreshold="80" fixDurationHighSkill="5" fixDurationLowSkill="25" msg="ItemMsgRepairScrewdriver" hudpriority="10">
+      <GuiFrame relativesize="0.2,0.16" minsize="400,180" maxsize="480,216" anchor="Center" relativeoffset="0.0,0.27" style="ItemUI" />
+      <RequiredSkill identifier="electrical" level="20" />
+      <RequiredItem items="screwdriver" type="Equipped" />
+      <StatusEffect type="OnFailure" target="Character" targetlimbs="LeftHand,RightHand">
+        <Sound file="Content/Sounds/Damage/Electrocution1.ogg" range="1000" />
+        <Affliction identifier="stun" strength="5" />
+        <Affliction identifier="burn" strength="5" />
+      </StatusEffect>
+      <ParticleEmitter particle="damagebubbles" particleburstamount="2" particleburstinterval="2.0" particlespersecond="2" scalemin="0.5" scalemax="1.5" anglemin="0" anglemax="359" velocitymin="-10" velocitymax="10" mincondition="0.0" maxcondition="50.0" />
+      <ParticleEmitter particle="spark" particleburstamount="5" particlespersecond="5" anglemin="0" anglemax="359" velocitymin="100" velocitymax="500" particleburstinterval="2" scalemin="0.5" scalemax="1" mincondition="0.0" maxcondition="15.0" />
+      <ParticleEmitter particle="fleshsmoke" particlespersecond="2" scalemin="1" scalemax="2" mincondition="0.0" maxcondition="50.0" />
+    </Repairable>
+    <Holdable selectkey="Select" pickkey="Use" slots="Any,RightHand,LeftHand" msg="ItemMsgDetachWrench" PickingTime="10.0" aimpos="35,-10" handle1="0,0" attachable="true" attachedbydefault="true" aimable="true">
+      <requireditem identifier="wrench" type="Equipped" />
+      <!-- If the condition hits zero, set it to 1 when held (OnActive) so that people can still place a broken junction box-->
+      <StatusEffect type="OnContained" target="This" condition="1" setvalue="true">
+        <Conditional condition="eq 0" />
+      </StatusEffect>
+    </Holdable>
+  </Item>
+  <Item name="" identifier="thal_apc" tags="battery,batterycellrecharger" category="Electrical" Scale="0.25" description="" damagedbyexplosions="false" explosiondamagemultiplier="0.0">
+    <Sprite texture="Mods/Thalassophobia/Items/Electricity/poweritems.png" sourcerect="690,12,225,150" depth="0.8" origin="0.5,0.5" />
+    <PowerContainer capacity="200.0" charge="200.0" rechargespeed="50" maxrechargespeed="200.0" maxoutput="5000.0" canbeselected="true" indicatorposition="10,10" indicatorsize="1,1" ishorizontal="false" msg="ItemMsgInteractSelect" uilabel="apcpower">
+      <GuiFrame relativesize="0.25,0.23" minsize="350,200" anchor="Center" style="ItemUI" />
+      <!--minsize="350,250" maxsize="420,300"-->
+      <StatusEffect type="OnActive" target="This" maxoutput="0" setvalue="true">
+        <Conditional blinkfrequency="1.5" targetitemcomponent="LightComponent" />
+        <Sound file="Mods/Thalassophobia/Items/Electricity/EmergencyBuzzer.ogg" range="700" loop="true" />
+      </StatusEffect>
+      <StatusEffect type="OnActive" target="This" maxoutput="5000" setvalue="true">
+        <Conditional blinkfrequency="0.0" targetitemcomponent="LightComponent" />
+      </StatusEffect>
+    </PowerContainer>
+    <LightComponent range="10.0" lightcolor="30,255,80,0" powerconsumption="0" IsOn="true" castshadows="false" allowingameediting="false">
+      <sprite name="apc light" texture="Mods/Thalassophobia/Items/Electricity/poweritems.png" sourcerect="690,250,225,150" depth="0.1" origin="0.5,0.5" alpha="1.0" />
+      <StatusEffect type="OnActive" target="This" lightcolor="100,255,130,160">
+        <Conditional ChargePercentage="gt 99.5" />
+      </StatusEffect>
+      <StatusEffect type="OnActive" target="This" lightcolor="255,180,70,160" Comparison="And">
+        <Conditional ChargePercentage="lte 99.5" />
+        <Conditional ChargePercentage="gt 1" />
+      </StatusEffect>
+      <StatusEffect type="OnActive" target="This" lightcolor="255,50,50,130">
+        <Conditional ChargePercentage="lte 2" />
+      </StatusEffect>
+      <CustomInterface canbeselected="true">
+        <GuiFrame relativesize="0.2,0.13" anchor="Center" absoluteoffset="0,90" style="ItemUI" />
+        <TickBox text="buttoncircuitbreaker">
+          <StatusEffect type="OnUse" targettype="This" blinkfrequency="1.5" setvalue="true" />
+          <StatusEffect type="OnSecondaryUse" targettype="This" blinkfrequency="0.0" setvalue="true" />
+        </TickBox>
+      </CustomInterface>
+    </LightComponent>
+    <ConnectionPanel selectkey="Action" canbeselected="true" msg="ItemMsgRewireScrewdriver" hudpriority="10">
+      <GuiFrame relativesize="0.2,0.32" minsize="400,350" maxsize="480,420" anchor="Center" style="ConnectionPanel" />
+      <RequiredSkill identifier="electrical" level="55" />
+      <StatusEffect type="OnFailure" target="Character" targetlimbs="LeftHand,RightHand">
+        <Sound file="Content/Sounds/Damage/Electrocution1.ogg" range="1000" />
+        <Explosion range="100.0" stun="0" force="5.0" flames="false" shockwave="false" sparks="true" underwaterbubble="false" />
+        <Affliction identifier="stun" strength="5" />
+        <Affliction identifier="burn" strength="5" />
+      </StatusEffect>
+      <requireditem items="Screwdriver" type="Equipped" />
+      <output name="power_out" displayname="connection.powerout" maxwires="5" />
+      <input name="power_in" displayname="connection.powerin" />
+      <!--
+      <input name="set_rate" displayname="connection.batterysetrechargespeed" />
+      <output name="charge" displayname="connection.batterychargestatusout" />
+      <output name="charge_%" displayname="connection.batterychargepercentage" />
+      <output name="charge_rate" displayname="connection.batteryrechargespeedout" />
+      -->
+    </ConnectionPanel>
+    <ItemContainer capacity="1" maxstacksize="1" canbeselected="true" hideitems="true" hudpos="0.5,0.6" uilabel="apcbat">
+      <GuiFrame relativesize="0.2,0.2" anchor="Center" relativeoffset="0,0.2" style="ItemUI" />
+      <Containable items="loadable" />
+      <!-- discharge batteries-->
+      <StatusEffect type="Always" targettype="Contained" Condition="-2.0" disabledeltatime="true">
+        <RequiredItem items="batterycell" type="Contained" />
+        <Conditional ChargePercentage="lt 99" targetcontainer="true" targetitemcomponent="PowerContainer" />
+      </StatusEffect>
+      <StatusEffect type="Always" targettype="Contained" Condition="-0.5" disabledeltatime="true">
+        <RequiredItem items="fulguriumbatterycell" type="Contained" />
+        <Conditional ChargePercentage="lt 99" targetcontainer="true" targetitemcomponent="PowerContainer" />
+      </StatusEffect>
+      <StatusEffect type="Always" targettype="Contained" Condition="-2.0" disabledeltatime="true">
+        <RequiredItem excludedidentifiers="batterycell,fulguriumbatterycell" type="Contained" />
+        <Conditional ChargePercentage="lt 99" targetcontainer="true" targetitemcomponent="PowerContainer" />
+      </StatusEffect>
+      <!-- charge APC -->
+      <StatusEffect type="Always" targettype="This" charge="10">
+        <RequiredItem items="loadable" type="Contained" />
+        <Conditional ChargePercentage="lt 99" targetitemcomponent="PowerContainer" />
+      </StatusEffect>
+    </ItemContainer>
+  </Item>
 </Items>

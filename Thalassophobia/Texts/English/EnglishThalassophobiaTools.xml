@@ -38,6 +38,9 @@
   <entityname.thal_foldingtable>Folding Table</entityname.thal_foldingtable>
   <entitydescription.thal_foldingtable>A steel folding table that can be picked up and moved. Players can also drop items on it.</entitydescription.thal_foldingtable>
   
+  <entityname.thal_attachablejunction>Detachable Junction Box</entityname.thal_attachablejunction>
+  <entitydescription.thal_attachablejunction>A junction box that can be attached and detached from a wall. Useful for electricians managing or building a power grid.</entitydescription.thal_attachablejunction>
+  
   <entityname.thal_dpbm>Dave's Phat Beat Machine</entityname.thal_dpbm>
   <entitydescription.thal_dpbm>A machine that plays and layers instrumental loops. Press a button and wait no more than 9 seconds. Each loop is 9 seconds long.</entitydescription.thal_dpbm>
   
@@ -76,8 +79,19 @@
   <entityname.thal_signaljammer>Signal Jammer</entityname.thal_signaljammer>
   <entitydescription.thal_signaljammer>r3n3g8 engineered shortwave frequency bombarder. Will easily prevent radio communication between crew. The disruption increases with proximity, though, so crew may be able to tell when they're nearby.</entitydescription.thal_signaljammer>
   
+  <!-- CLOWN ITEMS -->
+  
+  <entityname.thal_discoball>Disco Ball</entityname.thal_discoball>
+  <entitydescription.thal_discoball>Can be attached to the wall like a button. Thanks for 10K subs on Thalassophobia!</entitydescription.thal_discoball>
+  
+  <entityname.thal_streetsign>Street "Sign"</entityname.thal_streetsign>
+  <entitydescription.thal_streetsign>An ordinary sign with an improbable capacity for bloodshed.</entitydescription.thal_streetsign>
+  
   <entityname.thal_partyblower>Party Blower</entityname.thal_partyblower>
   <entitydescription.thal_partyblower>Unrolls when blown. BA-DOO!</entitydescription.thal_partyblower>
+  
+  <entityname.thal_wirebind>Wire Bind</entityname.thal_wirebind>
+  <entitydescription.thal_wirebind>DIY Handcuffs made from wires. Will break after some time of being worn due to natural wear and tear.</entitydescription.thal_wirebind>
   
   <entityname.thal_whoopeecushion>Whoopee Cushion</entityname.thal_whoopeecushion>
   <entitydescription.thal_whoopeecushion>A cushion that makes a loud, unflattering noise when squeezed. Can be used like a bike horn, or dropped on the floor where it can be stepped on.</entitydescription.thal_whoopeecushion>
@@ -100,6 +114,12 @@
   <entityname.thal_waterballoon>Rubber Balloon</entityname.thal_waterballoon>
   <entitydescription.thal_waterballoon>A balloon that can be filled with water if the user is in water, and thrown. Can be turned into fantastical balloonsculpture by a Clown.</entitydescription.thal_waterballoon>
   
+  <entityname.thal_clownkit>Portable Circus</entityname.thal_clownkit>
+  <entitydescription.thal_clownkit>A clockwork fabricator used for creating mischevious prank items. While not exactly productive, the fabricator is generally harmless fun.</entitydescription.thal_clownkit>
+  
+  <entityname.thal_miniwardrobe>Mini-Wardrobe</entityname.thal_miniwardrobe>
+  <entitydescription.thal_miniwardrobe></entitydescription.thal_miniwardrobe>
+  
   <!-- decal baloons could be implemented now, but are really for the 0.11.X.X updates where decals are permenant -->
   
   <entityname.thal_paintballoon>Paint Balloon</entityname.thal_paintballoon>
@@ -117,11 +137,34 @@
   <entityname.thal_clownpack>Giggles von Honkington</entityname.thal_clownpack>
   <entitydescription.thal_clownpack>Stylish backpack with a funny face on it. Partially absorbs shocks and ballistics from behind, making running a good option.</entitydescription.thal_clownpack>
   
+  <!-- Cultist stuff -->
+  
   <entityname.thal_candle>Candle</entityname.thal_candle>
   <entitydescription.thal_candle>Decorative light source that uses up wax as it burns. Light/Snuff it by aiming and pressing left click once. Extinguished by water.</entitydescription.thal_candle>
   
+  <entityname.thal_paintbrush>Ritual Paintbrush</entityname.thal_paintbrush>
+  <entitydescription.thal_paintbrush>Aim and use (like you would to attach) to put down a pentagram.</entitydescription.thal_paintbrush>
+  
+  <entityname.thal_pentagram>Summoning Pentagram</entityname.thal_pentagram>
+  <entitydescription.thal_pentagram>A summoning pentagram for the usage of bringing living entities into the world. Cannot be removed once it is placed. Place certain key items within it and press initiate to begin.</entitydescription.thal_pentagram>
+  
   <entityname.thal_ouijaboard>Ouija Board</entityname.thal_ouijaboard>
   <entitydescription.thal_ouijaboard>Occultism board for establishing communications with spirits via poltergism. Used in rituals.</entitydescription.thal_ouijaboard>
+  
+  <entityname.thal_cultistmask>Cultist Mask</entityname.thal_cultistmask>
+  <entitydescription.thal_cultistmask>Mask worn by cultists to show loyalty to the honkmother.</entitydescription.thal_cultistmask>
+  
+  <entityname.thal_zombieknife>Resurrection Dagger</entityname.thal_zombieknife>
+  <entitydescription.thal_zombieknife>Ancient Shaman Voodoo knife. Stabbing a dead human body brings it back to “life“, and serves as a blood source for clowns.</entitydescription.thal_zombieknife>
+  
+  <entityname.thal_cultistcostume>Cultist Costume</entityname.thal_cultistcostume>
+  <entitydescription.thal_cultistcostume>A costume frequently donned by the order. Said to be imbued with the screams of 1000 birthday rituals.</entitydescription.thal_cultistcostume>
+  
+  <entityname.thal_cultistknife>Gutter Dagger</entityname.thal_cultistknife>
+  <entitydescription.thal_cultistknife>A disturbing dagger with a large gutter to collect blood from the living for sacrifices with altars.</entitydescription.thal_cultistknife>
+  
+  <entityname.thal_cultistkit>Glass Altar</entityname.thal_cultistkit>
+  <entitydescription.thal_cultistkit>An altar used for summoning items through blood ritual. Place your gutter dagger inside and select an option to summon an item, if you have the required blood.</entitydescription.thal_cultistkit>
   
   <!-- Cooking tools -->
   
@@ -342,4 +385,111 @@
   <entityname.thal_geneticistsuit>Geneticist Cleansuit</entityname.thal_geneticistsuit>
   <entitydescription.thal_geneticistsuit>Lightweight suit designed for use in mildly radioactive environments. Mildly resists radiations and chance of genetic damage.</entitydescription.thal_geneticistsuit>
   
+  <!-- Energy Weapons -->
+  
+  <entityname.thal_glowsaber>Glowsaber</entityname.thal_glowsaber>
+	<entitydescription.thal_glowsaber>Extremely powerful energy sword that deals large burn damage and is capable of cutting through walls and doors. Its fuel source are the exotic 'glow crystals' produced with antimatter propagators.</entitydescription.thal_glowsaber>
+	
+	<entityname.thal_glowcrystal>Glow Crystal</entityname.thal_glowcrystal>
+	<entitydescription.thal_glowcrystal>A crystalline ammo source for various high-power energy weapons. Somewhat rare; Use wisely.</entitydescription.thal_glowcrystal>
+	
+	<entityname.thal_frostcrystal>Frost Glow Crystal</entityname.thal_frostcrystal>
+	<entitydescription.thal_frostcrystal>A subzero crystalline ammo source for various high-power energy weapons. Its cold core gives it a blue hue. Somewhat rare; Use wisely.</entitydescription.thal_frostcrystal>
+	
+	<entityname.thal_synthcrystal>Synthetic Glow Crystal</entityname.thal_synthcrystal>
+	<entitydescription.thal_synthcrystal>A synthesized crystalline ammo source for various high-power energy weapons. Its artificial nature gives it a red hue. Very rare; Use wisely.</entitydescription.thal_synthcrystal>
+	
+	<!-- Explosives -->
+	<entityname.thal_tripmine>Laser Tripmine</entityname.thal_tripmine>
+	<entitydescription.thal_tripmine>Tripmine that activates when in range of a creature. Triggers better the closer the mine is to the torso.</entitydescription.thal_tripmine>
+	
+	<!-- Collars -->
+	<entityname.thal_bombcollar>Explosive Collar</entityname.thal_bombcollar>
+	<entitydescription.thal_bombcollar>Extremely dangerous wearable item. Once worn and armed, attempting to remove the collar without disarming will cause a lethal explosion. Has a random chance to explode when armed. Can be disabled by a DISARM key.</entitydescription.thal_bombcollar>
+	
+	<entityname.thal_bombcollartimed>Timed Explosive Collar</entityname.thal_bombcollartimed>
+	<entitydescription.thal_bombcollartimed>A particularly sadistic variant of the explosive collar where arming it not only prevents removal, but also starts a countdown to the collar's automatic detonation. Has a random chance to explode when armed. Assemble a DISARM tool ASAP!</entitydescription.thal_bombcollartimed>
+	
+	<entityname.thal_bombcollarkey>DISARM Tool</entityname.thal_bombcollarkey>
+	<entitydescription.thal_bombcollarkey>Drag onto collar to disarm.</entitydescription.thal_bombcollarkey>
+	
+	<entityname.thal_bombvest>Suicide Vest</entityname.thal_bombvest>
+	<entitydescription.thal_bombvest>Vest armed with multiple high grade explosives that will explode upon death of the user. May cause someone to think twice about killing you.</entitydescription.thal_bombvest>
+	
+	<entityname.thal_nukevest>Doomsday De-Vest</entityname.thal_nukevest>
+	<entitydescription.thal_nukevest>Vest armed with various radioactive materials that will cause a nuclear explosion on death of the user. The explosion is not so notable for the physical harm it causes so much as the extremely toxic radioactive fallout left behind.</entitydescription.thal_nukevest>
+	
+	
+  <!-- Turrets -->
+  
+  <entityname.grapplingturret>Carving Laser</entityname.grapplingturret>
+  <entitydescription.grapplingturret>Coalition industrial mining laser intended for destroying rock and harvesting minerals. Notably effective at cutting through walls, but it has been designed to not harm beings.</entitydescription.grapplingturret>
+  <entityname.grapplingturretloader>Carving Laser Loader</entityname.grapplingturretloader>
+  <entitydescription.grapplingturretloader>Used for loading oxygen into the cutting laser.</entitydescription.grapplingturretloader>
+  <entityname.grapplingturretbeam>Carving Laser Beam</entityname.grapplingturretbeam>
+  <entitydescription.grapplingturretbeam>Projectile Shot by Carving Laser. Apparently, you are a really good catch!</entitydescription.grapplingturretbeam>
+  <entityname.grapplingturretammobox>Oxygenite Plasma Pack</entityname.grapplingturretammobox>
+  <entitydescription.grapplingturretammobox>Plasma-generation pack composed of a primer and lots of oxygenite. Used for heavy-duty cutting operations such as carving lasers and cutter packs. Very expensive!</entitydescription.grapplingturretammobox>
+  
+  <entityname.carvinglaser>Carving Laser</entityname.carvinglaser>
+  <entitydescription.carvinglaser>Coalition industrial mining laser intended for destroying rock and harvesting minerals. Notably effective at cutting through walls, but it has been designed to not harm beings.</entitydescription.carvinglaser>
+  <entityname.carvinglaserloader>Carving Laser Loader</entityname.carvinglaserloader>
+  <entitydescription.carvinglaserloader>Used for loading oxygen into the cutting laser.</entitydescription.carvinglaserloader>
+  <entityname.carvinglaserbeam>Carving Laser Beam</entityname.carvinglaserbeam>
+  <entitydescription.carvinglaserbeam>Projectile Shot by Carving Laser. Apparently, you are a really good catch!</entitydescription.carvinglaserbeam>
+  <entityname.carvinglaserammobox>Oxygenite Plasma Pack</entityname.carvinglaserammobox>
+  <entitydescription.carvinglaserammobox>Plasma-generation pack composed of a primer and lots of oxygenite. Used for heavy-duty cutting operations such as carving lasers and cutter packs. Very expensive!</entitydescription.carvinglaserammobox>
+  
+  <entityname.emcannon>Electromagnetic Cannon</entityname.emcannon>
+  <entitydescription.emcannon>Renegade-invented directed-energy weapon capable of directionally firing a pulse that will cause minor burns, but more importantly destroy electrical equipment or entities. The loud dazzling projectile may attract attention of listeners and watchers alike.</entitydescription.emcannon>
+  <entityname.emcannon>Electromagnetic Loader</entityname.emcannon>
+  <entitydescription.emcannon>Used for loading charges into EM Cannon.</entitydescription.emcannon>
+  
+  <entityname.thal_apc>Area Power Controller</entityname.thal_apc>
+  <entitydescription.thal_apc>Device serving as a junction box with a built in circuit breaker that also maintains a charge like a battery. Intended for power control interface for a single room; A "player friendly" relay with minor backup power to keep the lights for a little longer on once external power goes out. Can be manually loaded with batteries to recharge.</entitydescription.thal_apc>
+  
+  <entityname.thal_locator>Acoustic HAM Radio</entityname.thal_locator>
+  <entitydescription.thal_locator>A radio that detects acoustic trasnmissions through water. Can be used to listen in on communications in nearby areas to give your crew sidequests.</entitydescription.thal_locator>
+  <!-- TRANSMISSION BRIEFINGS -->
+  <transmission.weapons.1>The local AHAM Radio has picked up an unencrypted Coalition-signed transmission from a search drone to a map server. Analytics suggest it is heading towards a wildlife research wreck containing high-grade weaponry. If you so choose to take the weapons for yourself, the Coalition will not know it was you.
+[The location of the weapons cache has been marked on the sonar.] </transmission.weapons.1>
+  <transmission.weapons.2>The on-ship AHAM Radio has deciphered a distress signal from a nearby cargo ship carrying a significant surplus of weapons. Public shipment records indicate the ship was thought to be lost years ago, and was effectively forgotten. If you choose to salvage the weapons for yourself, nobody will know. 
+[The location of the weapons cache has been marked on the sonar.]</transmission.weapons.2>
+  <transmission.weapons.3>The onboard AHAM Radio has picked up a series of standby transmissions in the nearby area. Status reports reveal that the ship was an independent mercenary attack sub, and all life support systems are dead, citing an attack by monsters. If you can clear the monsters, the guns would be yours.
+[The location of the weapons cache has been marked on the sonar.] </transmission.weapons.3>
+  <transmission.weapons.4>A local AHAM Radio has picked up on a residual frequency from a nearby datacube containing instructions to a "hidden treasure trove" of weapons. The source is unidentified, and the transmission is unsigned. If you choose to investigate, it may be a trap, so come armed.
+[The location of the weapons cache has been marked on the sonar.] </transmission.weapons.4>
+  
+  <entityname.thal_lootcrateweapons>Abandoned Weaponry Crate</entityname.thal_lootcrateweapons>
+  <entitydescription.thal_lootcrateweapons>A forgotten crate of firearms found floating out in the open. Finders, keepers.</entitydescription.thal_lootcrateweapons>
+  <itemmsglocatorinteract>[[select]] Listen In</itemmsglocatorinteract>
+  <lootlabel.weapons>Treasure:
+Weapon Cache</lootlabel.weapons>
+  <lootlabel.medicine>Treasure:
+Medicine Depot</lootlabel.medicine>
+  <lootlabel.ores>Treasure:
+Rare Materials</lootlabel.ores>
+  <lootlabel.dna>Treasure:
+Science Cache</lootlabel.dna>
+  <lootlabel.alien>Sidequest:
+Anomaly</lootlabel.alien>
+	<lootlabel.monster>Sidequest:
+Boss Creature</lootlabel.monster>
+  <lootlabel.money>Treasure:
+Credits</lootlabel.money>
+  
+  <uilabel.apcpower>Backup Power Bank</uilabel.apcpower>
+  <uilabel.apcbat>Charge APC via Battery</uilabel.apcbat>
+  <buttoncircuitbreaker>Circuit Breaker</buttoncircuitbreaker>
+  <buttonautolimit>Auto Limit Output on Backup Low</buttonautolimit>
+  
+  <entityname.radbeam>Radiation Beam</entityname.radbeam>
+  <entitydescription.radbeam>Beam radiation emitter capable of causing severe burns to living organisms, but completely useless against everything else.</entitydescription.radbeam>
+  <entityname.radbeam>Radiation Beam Loader</entityname.radbeam>
+  <entitydescription.radbeam>Used for loading fuel rods into Radiation Beam.</entitydescription.radbeam>
+  
+  
+  <itemmsgplayselect>[[select]] Play</itemmsgplayselect>
+  <entityname.piano>Grand Piano</entityname.piano>
+  <entitydescription.piano>An expensive Grandwin and Sons Piano. The music is only as good as the pianist. Place away from reactors, vents, sides of the ship, and other noisemakers for best results!</entitydescription.piano>
 </infotexts>

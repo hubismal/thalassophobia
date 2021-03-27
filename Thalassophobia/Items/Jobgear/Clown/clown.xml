@@ -25,7 +25,7 @@
       <StatusEffect type="OnUse" target="This" delay="4" IsOn="false" />
     </RangedWeapon>
   </Item>
-  <Item name="Wire Bind" description="DIY Handcuffs made from wires. Will break after some time of being worn due to natural wear and tear." identifier="thal_wirebind" category="Equipment" cargocontaineridentifier="metalcrate" tags="smallitem" impactsoundtag="impact_metal_light" scale="0.3">
+  <Item name="" description="" identifier="thal_wirebind" category="Equipment" cargocontaineridentifier="metalcrate" tags="smallitem" impactsoundtag="impact_metal_light" scale="0.3">
     <Deconstruct time="1">
       <Item identifier="rubber" outcondition="0.5" />
     </Deconstruct>
@@ -132,7 +132,7 @@
       <StatusEffect type="OnSecondaryUse" target="This" Condition="-100.0" delay="3.0" disabledeltatime="true" checkconditionalalways="true" />
     </Throwable>
   </Item>
-  <Item name="Banana Peel" description="The peel of a banana. Can be tossed and will slip all those who walk over it. Once it's been triggered, must be rethrown to prime it again." identifier="thal_bananapeel" category="Equipment" cargocontaineridentifier="metalcrate" tags="smallitem" impactsoundtag="impact_soft" scale="0.4" interactdistance="150" impacttolerance="0.01">
+  <Item name="" description="" identifier="thal_bananapeel" category="Equipment" cargocontaineridentifier="metalcrate" tags="smallitem" impactsoundtag="impact_soft" scale="0.4" interactdistance="150" impacttolerance="0.01">
     <PreferredContainer primary="crewcab" spawnprobability="0.2" />
     <PreferredContainer primary="outposttrashcan" spawnprobability="0.2" />
     <Deconstruct time="1">
@@ -230,7 +230,7 @@
       <StatusEffect type="OnImpact" target="This" setvalue="true" minimumvelocity="1" delay="1" />
     </MotionSensor>
   </Item>
-  <Item name="Portable Circus" description="A clockwork fabricator used for creating mischevious prank items. While not exactly productive, the fabricator is generally harmless fun." identifier="thal_clownkit" category="Equipment" cargocontaineridentifier="metalcrate" tags="smallitem" impactsoundtag="impact_soft" scale="0.5" interactdistance="150">
+  <Item name="" description="" identifier="thal_clownkit" category="Equipment" cargocontaineridentifier="metalcrate" tags="smallitem" impactsoundtag="impact_soft" scale="0.5" interactdistance="150">
     <InventoryIcon name="PortCircus Inv" texture="Mods/Thalassophobia/Items/Jobgear/Clown/clown.png" sourcerect="3,56,117,133" depth="0.6" origin="0.5,0.5" />
     <Sprite name="PortCircus Sprite" texture="Mods/Thalassophobia/Items/Jobgear/Clown/clown.png" sourcerect="3,56,117,133" depth="0.6" origin="0.5,0.5" />
     <Body width="30" height="15" density="400" />
@@ -387,7 +387,7 @@
       <Sound file="Mods/Thalassophobia/Items/Jobgear/Clown/clownfab.ogg" type="OnActive" range="800" loop="true" />
     </LightComponent>
   </Item>
-  <Item name="Chaos Horn" identifier="thal_chaoshorn" category="Equipment" tags="weapon,smallitem" cargocontaineridentifier="metalcrate" description="Sounds of chaos.">
+  <Item name="" identifier="thal_chaoshorn" category="Equipment" tags="weapon,smallitem" cargocontaineridentifier="metalcrate" description="">
     <Fabricate suitablefabricators="thal_clownkit" requiredtime="40" outcondition="100">
       <RequiredSkill identifier="electrical" level="30" />
       <RequiredItem identifier="ic4block" />
@@ -407,11 +407,11 @@
     </RangedWeapon>
     <aitarget soundrange="1000" fadeouttime="5" />
   </Item>
-  <Item name="Mini-Wardrobe" description="A small wardrobe that can be carried around. Carries lots of clothing." identifier="thal_miniwardrobe" category="Equipment" cargocontaineridentifier="metalcrate" tags="smallitem" impactsoundtag="impact_soft" scale="0.3" interactdistance="150">
+  <Item name="" description="" identifier="thal_miniwardrobe" category="Equipment" cargocontaineridentifier="metalcrate" tags="smallitem" impactsoundtag="impact_soft" scale="0.3" interactdistance="150">
     <Sprite name="miniward" texture="Mods/Thalassophobia/Items/Jobgear/Clown/clown.png" sourcerect="640,348,202,224" depth="0.6" origin="0.5,0.5" />
     <Body width="30" height="15" density="400" />
     <ItemContainer capacity="8" canbeselected="false" hideitems="true" slotsperrow="5" drawinventory="true">
-      <Containable items="captainsuniform1,captainsuniform2,captainsuniform3,doctorsuniform1,doctorsuniform2,clothing,securityuniform1,securityuniform2,securityuniform3,orangejumpsuit1,orangejumpsuit2,bluejumpsuit1,bluejumpsuit2,assistantclothes,clowncostume" />
+      <Containable items="captainsuniform1,captainsuniform2,captainsuniform3,doctorsuniform1,doctorsuniform2,clothing,securityuniform1,securityuniform2,securityuniform3,orangejumpsuit1,orangejumpsuit2,bluejumpsuit1,bluejumpsuit2,assistantclothes,clowncostume,thal_huskcostume" />
     </ItemContainer>
     <Holdable handle1="0,0" slots="Any,RightHand,LeftHand" msg="ItemMsgPickUpSelect"></Holdable>
   </Item>
@@ -424,7 +424,7 @@
     <Body width="114" height="135" density="40" />
     <Wearable slots="Any,OuterClothes" msg="ItemMsgPickUpSelect">
       <StatusEffect type="Always" target="This,Character" IsShootable="false" setvalue="true" stackable="false">
-				<Conditional IsRagdolled="false" />
+        <Conditional IsRagdolled="false" />
       </StatusEffect>
       <damagemodifier afflictionidentifiers="stun" armorsector="180.0,360.0" damagemultiplier="0.15" deflectprojectiles="true" />
       <damagemodifier afflictiontypes="damage" armorsector="180.0,360.0" damagemultiplier="0.15" bleedingmultiplier="0.2" damagesound="LimbArmor" deflectprojectiles="true" />
@@ -433,5 +433,33 @@
     <ItemContainer capacity="8" canbeselected="false" hideitems="true" slotsperrow="2" drawinventory="true">
       <Containable items="toyhammer,bikehorn,clownmask,clowncostume,clownitem,smallitem" />
     </ItemContainer>
+  </Item>
+  <Item name="" identifier="thal_streetsign" category="Equipment" Tags="smallitem,weapon" Scale="0.5" cargocontaineridentifier="metalcrate" impactsoundtag="impact_metal_light">
+    <PreferredContainer primary="armcab" minamount="0" maxamount="1" spawnprobability="0.1" />
+    <Price locationtype="Military" buyprice="1000" />
+    <Price locationtype="City" buyprice="1300" />
+    <Price locationtype="Outpost" buyprice="1900" />
+    <Price locationtype="Research" buyprice="900" />
+    <Price locationtype="Blacksite" buyprice="900" />
+    <InventoryIcon name="streetsign icon" texture="Mods/Thalassophobia/Items/Jobgear/Clown/clown.png" sourcerect="900,0,99,116" origin="0.5,0.5" />
+    <Sprite name="streetsign" texture="Mods/Thalassophobia/Items/Jobgear/Clown/clown.png" sourcerect="904,-2,98,376" depth="0.55" origin="0.49603432,0.5464647" />
+    <Body width="90" height="350" density="30" />
+    <MeleeWeapon slots="Any,RightHand+LeftHand" aimpos="45,10" handle1="0,-30" handle2="0,-10" holdangle="0" reload="0.2" range="150" combatPriority="50" msg="ItemMsgPickUpSelect">
+      <Attack context="Ground" cooldown="3" afterattack="Pursue" range="150" damagerange="150" duration="0.25" structuredamage="0" itemdamage="50" structuresoundtype="StructureSlash" targetforce="0" severlimbsprobability="1.0" torque="-250" force="20" applyforceonlimbs="0, 1, 2, 13" targettype="Any" hitdetectiontype="Distance" stun="0" onlyhumans="False" applyforcesonlyonce="True" targetimpulse="50" targetimpulseworld="0,0" targetforceworld="0,0" stickchance="0" priority="0" secondarycooldown="0" cooldownrandomfactor="0.5" reverse="False" targetlimbtype="None">
+				<Sound file="Content/Sounds/Damage/LimbSlash1.ogg" selectionmode="random" range="500" />
+        <Sound file="Content/Sounds/Damage/LimbSlash2.ogg" range="500" />
+        <Sound file="Content/Sounds/Damage/LimbSlash3.ogg" range="500" />
+        <Sound file="Content/Sounds/Damage/LimbSlash4.ogg" range="500" />
+        <Sound file="Content/Sounds/Damage/LimbSlash5.ogg" range="500" />
+        <Affliction identifier="lacerations" strength="14" />
+        <StatusEffect type="Always" target="This" setvalue="true" structuredamage="10" itemdamage="30"></StatusEffect>
+      </Attack>
+      <!-- Normal glowcrystal attack -->
+      <StatusEffect type="OnActive" target="Character, Parent" SpeedMultiplier="1.2" setvalue="true" disabledeltatime="true" />
+      <StatusEffect type="OnUse" target="Character" disabledeltatime="false" setvalue="false" >
+				
+        <ParticleEmitter particle="bloodsplash" particleamount="9" velocitymin="0" velocitymax="300" anglemin="0" anglemax="360" scalemin="2.0" scalemax="3.0" colormultiplier="2555,0,0,255" />
+      </StatusEffect>
+    </MeleeWeapon>
   </Item>
 </Items>

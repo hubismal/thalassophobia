@@ -8,6 +8,34 @@
     <Sprite identifier="thal_catpolbrief" name="catpol art" texture="Mods/Thalassophobia/Map/Outposts/Art/Art1.png" sourcerect="11,248,357,270" origin="0.29426706,0.7080823" />
   </EventSprites>
   <EventPrefabs>
+		<!-- Test Radio Event -->
+		<ScriptedEvent identifier="thal_radiodropoff">
+			<SpawnAction itemidentifier="thal_lootcrateweapons" spawnlocation="wreck" spawnpointtype="cargo" targettag="dropoffcrate" ignorebyai="true" />
+			<TagAction criteria="player" tag="player" />
+			<WaitAction time="1.0" />
+			<RNGAction chance="0.5">
+				<Success>
+					<RNGAction chance="0.5">
+						<Success>
+							<ConversationAction text="transmission.weapons.1" targettag="player" endeventifinterrupted="true" dialogtype="Mission" />
+						</Success>
+						<Failure>
+							<ConversationAction text="transmission.weapons.2" targettag="player" endeventifinterrupted="true" dialogtype="Mission" />
+						</Failure>
+					</RNGAction>
+				</Success>
+				<Failure>
+					<RNGAction chance="0.5">
+						<Success>
+							<ConversationAction text="transmission.weapons.3" targettag="player" endeventifinterrupted="true" dialogtype="Mission" />
+						</Success>
+						<Failure>
+							<ConversationAction text="transmission.weapons.4" targettag="player" endeventifinterrupted="true" dialogtype="Mission" />
+						</Failure>
+					</RNGAction>
+				</Failure>
+			</RNGAction>
+    </ScriptedEvent>
 		<!--"RNGCALL"
 		used for random events in conjuction with thal_rngseed (in Items/Jobgear/misc.xml)
 		-->

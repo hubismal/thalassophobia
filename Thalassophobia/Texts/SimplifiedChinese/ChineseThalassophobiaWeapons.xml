@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<infotexts language="Simplified Chinese" nowhitespace="true" translatedname="中文(简体)">
+
+	<!--Energy Weapons -->
+	<entityname.thal_glowsaber>辉光剑</entityname.thal_glowsaber>
+	<entitydescription.thal_glowsaber>极其强大的能量剑，可造成较大的燃烧伤害，并能够穿透墙壁和门。 它的燃料来源是用反物质传播剂产生的奇异“发光水晶”。</entitydescription.thal_glowsaber>
+	
+	<entityname.thal_glowcrystal>发光水晶</entityname.thal_glowcrystal>
+	<entitydescription.thal_glowcrystal>一种用于各种大功率能源武器的结晶弹药源。 稀有物品，请明智地使用。</entitydescription.thal_glowcrystal>
+	
+	<entityname.thal_frostcrystal>霜冻水晶</entityname.thal_frostcrystal>
+	<entitydescription.thal_frostcrystal>用于各种大功率能源武器的低于零摄氏度的晶体弹药源。 它的冷芯使其变蓝色。 稀有物品，请明智地使用。</entitydescription.thal_frostcrystal>
+	
+	<entityname.thal_synthcrystal>合成发光水晶</entityname.thal_synthcrystal>
+	<entitydescription.thal_synthcrystal>一种合成的晶体弹药源，用于各种大功率能源武器。 它的人造性质使其具有红色调。 极少，请明智使用。</entitydescription.thal_synthcrystal>
+	
+	<!-- Explosives -->
+	<entityname.thal_tripmine>激光地雷</entityname.thal_tripmine>
+	<entitydescription.thal_tripmine>在生物范围内激活的激光。 地雷离躯干越近，触发效果越好。</entitydescription.thal_tripmine>
+	
+	<!-- Collars -->
+	<entityname.thal_bombcollar>爆炸项圈</entityname.thal_bombcollar>
+	<entitydescription.thal_bombcollar>极其危险的可穿戴物品。 一旦佩戴并开启了，在不解除爆炸物的情况下卸下项圈，就会导致致命的爆炸。 可以通过解除爆炸物工具禁用。</entitydescription.thal_bombcollar>
+	
+	<entityname.thal_bombcollartimed>定时炸药项圈</entityname.thal_bombcollartimed>
+	<entitydescription.thal_bombcollartimed>定时炸弹项圈的一种特别难缠的项圈，在使用状态不会爆炸，而是倒计时结束后爆炸。 尽快使用解除爆炸物工具！</entitydescription.thal_bombcollartimed>
+	
+	<entityname.thal_bombcollarkey>解除爆炸物工具</entityname.thal_bombcollarkey>
+	<entitydescription.thal_bombcollarkey>拖到项圈上以解除武装。</entitydescription.thal_bombcollarkey>
+	
+	<entityname.thal_bombvest>自杀背心</entityname.thal_bombvest>
+	<entitydescription.thal_bombvest>背心装有多种高爆炸药，一旦使用者死亡，炸药就会爆炸。 大概会让某人杀死你时三思而后行。</entitydescription.thal_bombvest>
+	
+	<entityname.thal_nukevest>世界末日背心</entityname.thal_nukevest>
+	<entitydescription.thal_nukevest>背心装有各种放射性物质，会在使用者死亡时引起核爆炸。 爆炸并不会造成多么严重的物理伤害，但会留下致命的放射性尘埃。</entitydescription.thal_nukevest>
+	
+	
+  <!-- Turrets -->
+  
+  <entityname.grapplingturret>采矿激光器</entityname.grapplingturret>
+  <entitydescription.grapplingturret>联盟工业采矿激光器，旨在摧毁岩石和收获矿物。 在切穿墙壁方面特别有效，但其设计目的是不伤害生物。</entitydescription.grapplingturret>
+  <entityname.grapplingturretloader>采矿激光装载机</entityname.grapplingturretloader>
+  <entitydescription.grapplingturretloader>用于将氧气加载到切割激光器中。</entitydescription.grapplingturretloader>
+  <entityname.grapplingturretbeam>采矿激光束</entityname.grapplingturretbeam>
+  <entitydescription.grapplingturretbeam>采矿激光射击的弹丸。 显然，你真的很不错！</entitydescription.grapplingturretbeam>
+  <entityname.grapplingturretammobox>氧等离子体包</entityname.grapplingturretammobox>
+  <entitydescription.grapplingturretammobox>等离子发电包由起爆剂和大量的含氧化合物组成。 用于重型切割操作，例如采矿激光和切割器包装。 非常贵！</entitydescription.grapplingturretammobox>
+  
+  <entityname.carvinglaser>采矿激光器</entityname.carvinglaser>
+  <entitydescription.carvinglaser>联盟工业采矿激光器，旨在摧毁岩石和收获矿物。 在切穿墙壁方面特别有效，但其设计目的是不伤害生物。</entitydescription.carvinglaser>
+  <entityname.carvinglaserloader>雕刻激光装载机</entityname.carvinglaserloader>
+  <entitydescription.carvinglaserloader>用于将氧气加载到切割激光器中。</entitydescription.carvinglaserloader>
+  <entityname.carvinglaserbeam>采矿激光束</entityname.carvinglaserbeam>
+  <entitydescription.carvinglaserbeam>采矿激光射击的弹丸。 显然，你真的很不错！</entitydescription.carvinglaserbeam>
+  <entityname.carvinglaserammobox>氧等离子体包</entityname.carvinglaserammobox>
+  <entitydescription.carvinglaserammobox>等离子发电包由起爆剂和大量的含氧化合物组成。 用于重型切割操作，例如采矿激光和切割器包装。 非常贵！</entitydescription.carvinglaserammobox>
+  
+  <entityname.emcannon>电磁大炮</entityname.emcannon>
+  <entitydescription.emcannon>叛徒发明的定向能量武器，能够定向发射脉冲，会造成轻微的灼伤，但重要的是会破坏电气设备或机械设备。 巨大而耀眼的弹丸可能会引起听众和观看者的注意。</entitydescription.emcannon>
+  <entityname.emcannon>电磁装载机</entityname.emcannon>
+  <entitydescription.emcannon>用于向电磁大炮加载费用。</entitydescription.emcannon>
+  
+  <entityname.radbeam>辐射束发射器</entityname.radbeam>
+  <entitydescription.radbeam>光束辐射发射器能够对活生物体造成严重灼伤，但对其他所有物体完全无效。</entitydescription.radbeam>
+  <entityname.radbeam>辐射束装载机</entityname.radbeam>
+  <entitydescription.radbeam>用于将燃料棒加载到辐射束发射器中。</entitydescription.radbeam>
+  
+  
+  <itemmsgplayselect>[[select]] Play</itemmsgplayselect>
+  <entityname.piano>豪华钢琴</entityname.piano>
+  <entitydescription.piano>人民币的声音</entitydescription.piano>
+</infotexts>

@@ -1,9 +1,9 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Items>
-	<Item name="" identifier="thal_sign" category="Electrical" tags="smallitem,button" cargocontaineridentifier="metalcrate" scale="0.5" impactsoundtag="impact_metal_light" spritecolor="0.95,0.95,0.95,1.0">
+  <Item name="" identifier="thal_sign" category="Electrical" tags="smallitem,button" cargocontaineridentifier="metalcrate" scale="0.5" impactsoundtag="impact_metal_light" spritecolor="0.95,0.95,0.95,1.0">
     <Sprite name="sign" texture="Mods/Thalassophobia/Map/Walls.png" sourcerect="43,232,200,80" depth="0.55" origin="0.5,0.5"></Sprite>
     <Body width="200" height="80" density="40" />
-    <Price baseprice="30" >
+    <Price baseprice="30">
       <Price locationtype="outpost" multiplier="1" minavailable="4" />
       <Price locationtype="city" multiplier="0.9" minavailable="6" />
       <Price locationtype="research" multiplier="1.25" minavailable="1" />
@@ -21,25 +21,23 @@
       <Item identifier="thal_memo" />
     </Deconstruct>
     <ItemLabel textscale="0.6" fontscale="0.6" textcolor="0,0,0,0">
-			<CustomInterface canbeselected="true" drawhudwhenequipped="false" msg="ItemMsgWriteSelectPen">
-      <GuiFrame relativesize="0.70,0.10" anchor="Center" absoluteoffset="20,20" style="ItemUI" />
-      <TextBox text="Sign Contents" propertyname="text">
-      </TextBox>
-      <StatusEffect type="OnNotContained" target="This" setvalue="true" textcolor="0,0,0,1" />
-      <StatusEffect type="OnContained" target="This" setvalue="true" textcolor="0,0,0,0" />
-      <StatusEffect type="OnFire" target="This" setvalue="true" spritecolor="0,0,0,1" />
-      <RequiredItem identifier="thal_pen" type="Equipped" />
-    </CustomInterface>
-		</ItemLabel>
+      <CustomInterface canbeselected="true" drawhudwhenequipped="false" msg="ItemMsgWriteSelectPen">
+        <GuiFrame relativesize="0.70,0.10" anchor="Center" absoluteoffset="20,20" style="ItemUI" />
+        <TextBox text="Sign Contents" propertyname="text"></TextBox>
+        <StatusEffect type="OnNotContained" target="This" setvalue="true" textcolor="0,0,0,1" />
+        <StatusEffect type="OnContained" target="This" setvalue="true" textcolor="0,0,0,0" />
+        <StatusEffect type="OnFire" target="This" setvalue="true" spritecolor="0,0,0,1" />
+        <RequiredItem identifier="thal_pen" type="Equipped" />
+      </CustomInterface>
+    </ItemLabel>
     <Holdable pickkey="Use" slots="Any,RightHand,LeftHand" msg="ItemMsgDetachWrench" PickingTime="2.0" aimpos="35,-10" handle1="0,0" attachable="true" attachedbydefault="true" aimable="true">
       <requireditem identifier="thal_pen" type="Equipped" />
     </Holdable>
   </Item>
-  
   <Item name="" identifier="thal_foldingchair" tags="chair,mediumitem" allowattachitems="false" texturescale="1.0,1.0" scale="0.5" category="Decorative" canflipy="false">
     <sprite texture="foldingchair.png" sourcerect="7,7,125,198" depth="0.51" premultiplyalpha="false" origin="0.5,0.5" canspriteflipx="false" />
     <Body width="118" height="192" density="60" />
-    <Price baseprice="75" >
+    <Price baseprice="75">
       <Price locationtype="outpost" multiplier="1" minavailable="3" />
       <Price locationtype="city" multiplier="0.9" minavailable="3" />
       <Price locationtype="research" multiplier="1.25" minavailable="3" />
@@ -72,5 +70,60 @@
         <Sound file="Content/Items/Weapons/Smack1.ogg" range="800" />
       </Attack>
     </MeleeWeapon>
+  </Item>
+  <Item name="Loot Beacon" identifier="thal_lootbeacon" category="Equipment" Tags="smallitem,sonar" cargocontaineridentifier="metalcrate" Scale="0.5" impactsoundtag="impact_metal_light">
+    <Sprite texture="Content/Items/InventoryIconAtlas.png" sourcerect="832,320,64,64" depth="0.55" origin="0.5,0.5" />
+    <Body width="27" height="60" density="12" bodytype="Kinematic" />
+    <Holdable slots="Any,RightHand,LeftHand" holdangle="30" handle1="-10,0" msg="ItemMsgPickUpSelect" />
+    <!--600K range = 6000m -->
+    <AiTarget soundrange="600000" minsoundrange="600000" sonarlabel="lootlabel.weapons" static="true" sonaricon="artifact" />
+    <LightComponent LightColor="0.0,1.0,0.0,1.0" range="50" powerconsumption="0" blinkfrequency="2" IsOn="true" canbeselected="false">
+      <StatusEffect type="OnActive" targettype="This, NearbyCharacters" delay="5.0" stackable="false" range="200" Condition="0" setvalue="true">
+        <Conditional IsPlayer="true" />
+      </StatusEffect>
+      <StatusEffect type="OnBroken" target="This">
+        <RemoveItem />
+      </StatusEffect>
+    </LightComponent>
+    <CustomInterface canbeselected="false" drawhudwhenequipped="true" allowuioverlap="true">
+      <GuiFrame relativesize="0.16,0.15" anchor="CenterLeft" pivot="BottomLeft" relativeoffset="0.006,-0.05" style="ItemUI" />
+      <!--
+      <TickBox text="sonarbeacon.beaconactive">
+        <StatusEffect type="OnUse" targettype="This" IsOn="true" />
+        <StatusEffect type="OnSecondaryUse" targettype="This" IsOn="false" />
+      </TickBox>
+      -->
+      <!--
+      <TextBox text="sonarbeacon.beaconsignal" propertyname="SonarLabel"/>
+      -->
+    </CustomInterface>
+    <ItemContainer capacity="1" maxstacksize="1" hideitems="true" containedstateindicatorstyle="battery">
+      <Containable items="mobilebattery">
+        <StatusEffect type="OnContaining" targettype="This" Voltage="1.0" setvalue="true" />
+      </Containable>
+    </ItemContainer>
+  </Item>
+  <Item name="" description="" identifier="thal_locator" category="Equipment" cargocontaineridentifier="metalcrate" tags="smallitem" impactsoundtag="impact_soft" scale="0.3" hideconditionbar="true" canflipx="false">
+    <Sprite name="radio" texture="Mods/Thalassophobia/Items/Electricity/poweritems.png" sourcerect="340,380,325,380" depth="0.6" origin="0.5,0.5" />
+    <Body width="130" height="80" density="400" />
+    <ItemLabel scrollable="true" padding="7,12,7,6" textcolor="1,1,1,1" text=""></ItemLabel>
+    <CustomInterface canbeselected="true" drawhudwhenequipped="false" msg="ItemMsgLocatorInteract">
+      <GuiFrame relativesize="0.4,0.5" anchor="BottomCenter" absoluteoffset="0,-30" style="ItemUI" />
+      <Button text="Weapons">
+        <!-- glowsaber -->
+        <StatusEffect type="OnUse" targettype="This" IsOn="false" canbeselected="true" text="">
+          <TriggerEvent identifier="thal_radiodropoff" />
+          <sound volume="2.0" file="Mods/Thalassophobia/Items/Tools/sidequest.ogg" range="200.0" loop="false" />
+        </StatusEffect>
+      </Button>
+    </CustomInterface>
+    <Holdable handle1="0,0" pickkey="Use" slots="Any,RightHand,LeftHand" msg="ItemMsgDetachWrench" PickingTime="10.0" aimpos="35,-10" attachable="true" attachedbydefault="true" aimable="true">
+      <requireditem identifier="wrench" type="Equipped" />
+    </Holdable>
+    <LightComponent range="150" lightcolor="255,245,200,200" IsOn="true" powerconsumption="0" flicker="0.2" pulseamount="0.5" pulsefrequency="0.3" allowingameediting="false" castshadows="false" >
+      <sound file="Mods/Thalassophobia/Items/Electricity/static.ogg" type="OnActive" range="400.0" loop="true" />
+      <StatusEffect type="OnActive" target="This" stackable="false" disabledeltatime="true">
+      </StatusEffect>
+    </LightComponent>
   </Item>
 </Items>

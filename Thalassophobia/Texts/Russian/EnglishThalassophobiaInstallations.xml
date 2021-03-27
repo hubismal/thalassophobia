@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<infotexts language="English" nowhitespace="false" translatedname="English">
+  <!-- Stationary Repairtools -->
+  <entityname.thal_sprinkler>Sprinkler</entityname.thal_sprinkler>
+  <entitydescription.thal_sprinkler>Sprays water onto an area to extinguish fires or water plants. Leaving it running for a ridiculously long time may cause puddles. Or worse.</entitydescription.thal_sprinkler>
+  
+  <entityname.thal_trashcan>Trash Can</entityname.thal_trashcan>
+  <entitydescription.thal_trashcan>Trash can used for disposal of small or medium sized items. Wire the trigger_out pin to a trash chute, and link the chute to the can for the item to be transported.</entitydescription.thal_trashcan>
+  
+  <entityname.thal_trashchute>Trash Chute</entityname.thal_trashchute>
+  <entitydescription.thal_trashchute>Exit point of trash cans.</entitydescription.thal_trashchute>
+  
+  <entityname.thal_blastdoor>Blast Door</entityname.thal_blastdoor>
+  <entitydescription.thal_blastdoor>Slower, heavily armored sliding door incapable of being levered open or shredded by monsters. Does not have a button variant due to impractical nature.</entitydescription.thal_blastdoor>
+  <msgnocrowbar>Cannot be pried with crowbar.</msgnocrowbar>
+  
+  <entityname.thal_glassdoor>Plexiglass Door</entityname.thal_glassdoor>
+  <entitydescription.thal_glassdoor>Slightly weaker, completely transparent door made entirely of a plexiglass-based metamaterial.</entitydescription.thal_glassdoor>
+  
+  <entityname.thal_glassdoorwbuttons>Plexiglass Door with Buttons</entityname.thal_glassdoorwbuttons>
+  <entitydescription.thal_glassdoorwbuttons>Slightly weaker, completely transparent door made entirely of a plexiglass-based metamaterial. Has integrated buttons.</entitydescription.thal_glassdoorwbuttons>
+  
+  <entityname.thal_glasshatch>Plexiglass Hatch</entityname.thal_glasshatch>
+  <entitydescription.thal_glasshatch>Slightly weaker, completely transparent hatch made entirely of a plexiglass-based metamaterial.</entitydescription.thal_glasshatch>
+  
+  <entityname.thal_glasshatchwbuttons>Plexiglass Hatch with Buttons</entityname.thal_glasshatchwbuttons>
+  <entitydescription.thal_glasshatchwbuttons>Slightly weaker, completely transparent hatch made entirely of a plexiglass-based metamaterial. Has integrated buttons.</entitydescription.thal_glasshatchwbuttons>
+  
+  <entityname.thal_oxygendock>Oxygen Refill Dock</entityname.thal_oxygendock>
+  <entitydescription.thal_oxygendock>A dock able to hold three oxygen tanks or welding tanks. Can be linked to oxygen generators to refill any contained o2 tanks, so long as the oxygen is flowing. Only has the vent tag for outpost compatibility; Does not emit oxygen into hull.</entitydescription.thal_oxygendock>
+  <ItemMsgBreatheUse>[[use]] Breathe</ItemMsgBreatheUse>
+  
+  
+  <entityname.thal_shuttervent>Shuttered Vent</entityname.thal_shuttervent>
+  <entitydescription.thal_shuttervent>A vent capable of having its oxygen flow turned on/off through wiring or with a wrench. Can also have things stored inside of it with a wrench, though a sharp eye will notice the jutting cover.</entitydescription.thal_shuttervent>
+  <ItemMsgCrowbarRequired>Crowbar Required</ItemMsgCrowbarRequired>
+  <itemmsgopencrowbarselect>[[select]] Open (Crowbar)</itemmsgopencrowbarselect>
+  <buttoncloseshutter>Close Air Shutter</buttoncloseshutter>
+  <buttonopenshutter>Open Air Shutter</buttonopenshutter>
+  <connection.toggleshutter>toggle_shutter</connection.toggleshutter>
+  <connection.shutterclosed>shutter_closed</connection.shutterclosed>
+  
+  <entityname.thal_vacuum>Oxygen Vacuum</entityname.thal_vacuum>
+  <entitydescription.thal_vacuum>Machine capable of pulling the oxygen out of a room when properly powered and activated. Pulls out slightly less oxygen than an artifact. Ideal for fires and suffocating lifeforms.</entitydescription.thal_vacuum>
+  
+  <entityname.thal_vendingmachine>Vending Machine</entityname.thal_vendingmachine>
+  <entitydescription.thal_vendingmachine>Dispenses whatever is placed inside of it. Requires a crowbar to open, and costs money to refill.</entitydescription.thal_vendingmachine>
+  
+  
+  <!-- Thalamus -->
+  <entityname.thal_thalamuseye>Thalamus Eye</entityname.thal_thalamuseye>
+  <entitydescription.thal_thalamuseye>Cosmetic Thalamus Eye that looks around and makes squishy noises. Can be destroyed.</entitydescription.thal_thalamuseye>
+  <entityname.thal_thalamusseeds>Thalamus Seeds</entityname.thal_thalamusseeds>
+  <entitydescription.thal_thalamusseeds>Cosmetic Thalamus Seeds. Non-interactive. Look like teeth.</entitydescription.thal_thalamusseeds>
+</infotexts>
