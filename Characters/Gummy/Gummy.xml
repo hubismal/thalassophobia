@@ -1,0 +1,60 @@
+﻿<Character speciesname="Gummy" group="human" humanoid="False" displayname="" hasinfo="False" husk="False" usehuskappendage="True" needsair="False" canspeak="False" noise="100" visibility="100" blooddecal="blood" eatingspeed="10" pathfinderpriority="1" needswater="False" bleedparticleair="blooddrop" bleedparticlewater="waterblood" hideinsonar="False" sonardisruption="0" speciestranslationoverride="">
+  <ragdolls folder="default" />
+  <animations folder="default" />
+  <!-- meltdown -->
+  <huskappendage affliction="thal_meltdownhead" path="Mods/Thalassophobia/Characters/Gummy/Gummyhead.xml" />
+  <huskappendage affliction="thal_meltdowntorso" path="Mods/Thalassophobia/Characters/Gummy/Gummyhead.xml" />
+  <huskappendage affliction="thal_meltdownlimbs" path="Mods/Thalassophobia/Characters/Gummy/Gummyhead.xml" />
+  <!-- mudraptor -->
+  <huskappendage affliction="thal_mudraptorhead" path="Mods/Thalassophobia/Characters/Gummy/GeneLimbs/Mudraptorhead.xml" />
+  <huskappendage affliction="thal_mudraptortorso" path="Mods/Thalassophobia/Characters/Gummy/GeneLimbs/Mudraptortorso.xml" />
+  <huskappendage affliction="thal_mudraptorlimbs" path="Mods/Thalassophobia/Characters/Gummy/GeneLimbs/Mudraptorlimbs.xml" />
+  <!-- maggot -->
+  <huskappendage affliction="thal_maggothead" path="Mods/Thalassophobia/Characters/Gummy/GeneLimbs/Maggothead.xml" />
+  <huskappendage affliction="thal_maggottorso" path="Mods/Thalassophobia/Characters/Gummy/GeneLimbs/Maggottorso.xml" />
+  <huskappendage affliction="thal_maggotlimbs" path="Mods/Thalassophobia/Characters/Gummy/GeneLimbs/Maggotlimbs.xml" />
+  <!-- mushroom -->
+  <huskappendage affliction="thal_shroomhead" path="Mods/Thalassophobia/Characters/Gummy/GeneLimbs/Shroomhead.xml" />
+  <huskappendage affliction="thal_shroomtorso" path="Mods/Thalassophobia/Characters/Gummy/GeneLimbs/Shroomtorso.xml" />
+  <huskappendage affliction="thal_shroomlimbs" path="Mods/Thalassophobia/Characters/Gummy/GeneLimbs/Shroomlimbs.xml" />
+  <!-- crawler -->
+  <huskappendage affliction="thal_crawlerhead" path="Mods/Thalassophobia/Characters/Gummy/GeneLimbs/Crawlerhead.xml" />
+  <huskappendage affliction="thal_crawlertorso" path="Mods/Thalassophobia/Characters/Gummy/GeneLimbs/Crawlertorso.xml" />
+  <huskappendage affliction="thal_crawlerlimbs" path="Mods/Thalassophobia/Characters/Gummy/GeneLimbs/Crawlerlimbs.xml" />
+  <!-- thresher -->
+  <huskappendage affliction="thal_thresherhead" path="Mods/Thalassophobia/Characters/Gummy/GeneLimbs/Thresherhead.xml" />
+  <huskappendage affliction="thal_threshertorso" path="Mods/Thalassophobia/Characters/Gummy/GeneLimbs/Threshertorso.xml" />
+  <huskappendage affliction="thal_thresherlimbs" path="Mods/Thalassophobia/Characters/Gummy/GeneLimbs/Thresherlimbs.xml" />
+  <!-- thalamus -->
+  <huskappendage affliction="thal_thalamushead" path="Mods/Thalassophobia/Characters/Gummy/GeneLimbs/Thalamushead.xml" />
+  <huskappendage affliction="thal_threshertorso" path="Mods/Thalassophobia/Characters/Gummy/GeneLimbs/Threshertorso.xml" />
+  <huskappendage affliction="thal_thresherlimbs" path="Mods/Thalassophobia/Characters/Gummy/GeneLimbs/Thresherlimbs.xml" />
+  <bloodemitter particle="blackblood" particleamount="5" anglemin="0" anglemax="0" scalemin="1" scalemax="1" velocitymin="0" velocitymax="0" emitinterval="0" particlespersecond="0" highqualitycollisiondetection="False" copyentityangle="False" />
+  <bloodemitter particle="blackwaterblood" particleamount="1" anglemin="0" anglemax="0" scalemin="1" scalemax="1" velocitymin="0" velocitymax="0" emitinterval="0" particlespersecond="0" highqualitycollisiondetection="False" copyentityangle="False" />
+  <gibemitter particle="heavygib" particleamount="10" velocitymin="50" velocitymax="500" anglemin="0" anglemax="360" scalemin="1" scalemax="1" emitinterval="0" particlespersecond="0" highqualitycollisiondetection="False" copyentityangle="False" />
+  <health usehealthwindow="False" vitality="260" crushdepth="-30000" doesbleed="True" bleedingreduction="20" burnreduction="0" constanthealthregeneration="0" healthregenerationwheneating="0" />
+  <name firstname="Content/Characters/Human/firstnames_[GENDER].txt" lastname="Content/Characters/Human/lastnames.txt" />
+  <ai combatstrength="150" sight="1.0000001" hearing="1" aggressiveboarding="True" attackwhenprovoked="True" aggressionhurt="100" aggressiongreed="10" fleehealththreshold="0" avoidgunfire="True" enforceaggressivebehaviorformissions="True" targetouterwalls="True" randomattack="False" avoidtime="3" minfleetime="20" infiltrate="False">
+    <target tag="provocative" state="Attack" priority="70" reactdistance="20" attackdistance="0" timer="0" ignorecontained="False" ignoreinside="False" ignoreoutside="False" sweepdistance="0" sweepstrength="10" sweepspeed="1" />
+    <target tag="crawler" state="Attack" priority="70" reactdistance="50" attackdistance="0" timer="0" ignorecontained="False" ignoreinside="False" ignoreoutside="False" sweepdistance="0" sweepstrength="10" sweepspeed="1" />
+    <target tag="mudraptor" state="Attack" priority="70" reactdistance="50" attackdistance="0" timer="0" ignorecontained="False" ignoreinside="False" ignoreoutside="False" sweepdistance="0" sweepstrength="10" sweepspeed="1" />
+    <target tag="spineling" state="Attack" priority="70" reactdistance="50" attackdistance="0" timer="0" ignorecontained="False" ignoreinside="False" ignoreoutside="False" sweepdistance="0" sweepstrength="10" sweepspeed="1" />
+    <target tag="hammerheadspawn" state="Attack" priority="70" reactdistance="50" attackdistance="0" timer="0" ignorecontained="False" ignoreinside="False" ignoreoutside="False" sweepdistance="0" sweepstrength="10" sweepspeed="1" />
+    <target tag="husk" state="Attack" priority="70" reactdistance="50" attackdistance="0" timer="0" ignorecontained="False" ignoreinside="False" ignoreoutside="False" sweepdistance="0" sweepstrength="10" sweepspeed="1" />
+    <target tag="humanhusk" state="Attack" priority="70" reactdistance="50" attackdistance="0" timer="0" ignorecontained="False" ignoreinside="False" ignoreoutside="False" sweepdistance="0" sweepstrength="10" sweepspeed="1" />
+    <target tag="jobid:thal_clown" state="Attack" priority="100" reactdistance="1000" attackdistance="0" timer="0" ignorecontained="False" ignoreinside="False" ignoreoutside="False" sweepdistance="0" sweepstrength="10" sweepspeed="1" />
+  </ai>
+  <inventory slots="Card, Head, Headset, InnerClothes, OuterClothes, LeftHand, RightHand,  Bag, Any, Any, Any, Any, Any, Any, Any, Any, Any, Any" accessiblewhenalive="False" commonness="1" />
+  <sound file="Mods/Thalassophobia/Characters/Gummy/scream1.ogg" state="Die" range="800" volume="1" gender="None" />
+  <sound file="Mods/Thalassophobia/Characters/Gummy/scream2.ogg" state="Die" range="800" volume="1" gender="None" />
+  <sound file="Mods/Thalassophobia/Characters/Gummy/scream3.ogg" state="Idle" range="800" volume="1" gender="None" />
+  <sound file="Mods/Thalassophobia/Characters/Gummy/scream4.ogg" state="Idle" range="800" volume="1" gender="None" />
+  <StatusEffect target="Character,This" type="Always" delay="2" duration="5" IsDead="true" >
+		<Affliction identifier="internaldamage" amount="99999" />
+		<sound file="Mods/Thalassophobia/Characters/Gummy/scream4.ogg" range="800" volume="1" selectionmode="random" />
+		<sound file="Mods/Thalassophobia/Characters/Gummy/scream3.ogg" range="800" volume="1" selectionmode="random" />
+		<sound file="Mods/Thalassophobia/Characters/Gummy/scream2.ogg" range="800" volume="1" selectionmode="random" />
+		<sound file="Mods/Thalassophobia/Characters/Gummy/scream1.ogg" range="800" volume="1" selectionmode="random" />
+		<Conditional IsDead="false" />
+			</StatusEffect>
+</Character>

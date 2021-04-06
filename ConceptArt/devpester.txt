@@ -1,2 +1,0 @@
-HAVE ITEM DESCRIPTIONS SAVED IN .SUB FILES!!!!
-overall annoyance involved in kinematic doors not initializing collisions properly until sub is loaded into next round.

@@ -1,0 +1,669 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Randomevents>
+  <EventSprites>
+    <Sprite identifier="thal_reactorleak" name="reactor leak art" texture="Mods/Thalassophobia/Map/Outposts/Art/Art1.png" sourcerect="0,0,252,220" origin="0.40538645,0.6437604" />
+    <Sprite identifier="thal_mime" name="mime art" texture="Mods/Thalassophobia/Map/Outposts/Art/Art1.png" sourcerect="249,0,278,263" origin="0.357064,0.69741046" />
+    <Sprite identifier="thal_intercom" name="intercom art" texture="Mods/Thalassophobia/Map/Outposts/Art/Art1.png" sourcerect="523,2,266,242" origin="0.5,0.5" />
+    <Sprite identifier="thal_nametag" name="nametag art" texture="Mods/Thalassophobia/Map/Outposts/Art/Art1.png" sourcerect="798,2,228,236" origin="0.37978083,0.6113169" />
+    <Sprite identifier="thal_catpolbrief" name="catpol art" texture="Mods/Thalassophobia/Map/Outposts/Art/Art1.png" sourcerect="11,248,357,270" origin="0.29426706,0.7080823" />
+  </EventSprites>
+  <EventPrefabs>
+		<!-- Test Radio Event -->
+		<ScriptedEvent identifier="thal_radiodropoff">
+			<SpawnAction itemidentifier="thal_lootcrateweapons" spawnlocation="wreck" spawnpointtype="cargo" targettag="dropoffcrate" ignorebyai="true" />
+			<TagAction criteria="player" tag="player" />
+			<WaitAction time="1.0" />
+			<RNGAction chance="0.5">
+				<Success>
+					<RNGAction chance="0.5">
+						<Success>
+							<ConversationAction text="transmission.weapons.1" targettag="player" endeventifinterrupted="true" dialogtype="Mission" />
+						</Success>
+						<Failure>
+							<ConversationAction text="transmission.weapons.2" targettag="player" endeventifinterrupted="true" dialogtype="Mission" />
+						</Failure>
+					</RNGAction>
+				</Success>
+				<Failure>
+					<RNGAction chance="0.5">
+						<Success>
+							<ConversationAction text="transmission.weapons.3" targettag="player" endeventifinterrupted="true" dialogtype="Mission" />
+						</Success>
+						<Failure>
+							<ConversationAction text="transmission.weapons.4" targettag="player" endeventifinterrupted="true" dialogtype="Mission" />
+						</Failure>
+					</RNGAction>
+				</Failure>
+			</RNGAction>
+    </ScriptedEvent>
+		<!--"RNGCALL"
+		used for random events in conjuction with thal_rngseed (in Items/Jobgear/misc.xml)
+		-->
+		<ScriptedEvent identifier="thal_rngcall">
+			<WaitAction time="0.5" />
+			<TagAction criteria="itemtag:rngthing" tag="targetmanifest" />
+			<SetDataAction identifier="thal_hitstaken" value="0" operation="set" />
+			<Label name="hitstart" />
+			<RNGAction chance="0.1">
+				<Success>
+					<StatusEffectAction targettag="leakyreactor">
+						<StatusEffect indestructible="false" condition="-5" setvalue="false" />
+					</StatusEffectAction>
+					<SetDataAction identifier="thal_hitstaken" value="1" operation="add" />
+				</Success>
+			</RNGAction>
+			<CheckDataAction identifier="thal_hitstaken" condition="lt 20" >
+				<Success>
+					<GoTo name="hitstart" />
+				</Success>
+			</CheckDataAction>
+    </ScriptedEvent>
+		
+		<!-- "EVENT MASTER"
+		initiates events on outposts by using an autofill item to nondestructively (in the override sense) guarantee this event triggers. used for existing locations like cities and so on that may have other mods with other event sets. xml for the item can be found in Thalassophobia/Items/Jobgear/misc.xml.
+		-->
+		<ScriptedEvent identifier="thal_eventmaster">
+			
+      <!-- try to ensure only one of eventmaster is running because we don't want multiple eventmasters assigning loads and loads of events -->
+      <RNGAction chance="0.1">
+				<Success>
+					<WaitAction time="0.5" />
+				</Success>
+			</RNGAction>
+			<CheckDataAction identifier="thal_eventmasteractive" condition="eq 1">
+				<Failure>
+					<!-- trigger 1 random events -->
+					<SetDataAction identifier="thal_eventmasteractive" value="1" />
+					<SetDataAction identifier="thal_eventsassigned" value="0" />
+						<Label name="eventpick" />
+						
+							<RNGAction chance="0.5">
+								<Success>
+									<RNGAction chance="0.5">
+										<Success>
+											<TriggerEventAction identifier="thal_reactorleak" />
+										</Success>
+										<Failure>
+											<TriggerEventAction identifier="thal_mimeperformance" />
+										</Failure>
+									</RNGAction>
+								</Success>
+								<Failure>
+									<RNGAction chance="0.5">
+										<Success>
+											<TriggerEventAction identifier="thal_uesdonation" />
+										</Success>
+										<Failure>
+											<TriggerEventAction identifier="thal_reactorleak" />
+										</Failure>
+									</RNGAction>
+								</Failure>
+							</RNGAction>
+							<!-- basically "do while i<3; i++" -->
+							<SetDataAction identifier="thal_eventsassigned" operation="add" value="1" />
+							<CheckDataAction identifier="thal_eventsassigned" condition="lt 1" >
+								<Success>
+									<GoTo name="eventpick" />
+								</Success>
+							</CheckDataAction>
+							
+					<WaitAction time="5" />
+					<SetDataAction identifier="thal_eventmasteractive" value="0" />
+					<SetDataAction identifier="thal_eventsassigned" value="0" />
+					
+				</Failure>
+			</CheckDataAction>
+    </ScriptedEvent>
+    <!-- CAMPAIGN INTRO
+		Choose your crews background as captain.
+		-->
+    <ScriptedEvent identifier="thal_campaignstart">
+      <CheckDataAction identifier="thal_pastchosen" condition="eq 1">
+        <Failure>
+          <TagAction criteria="player" tag="player" />
+          <TagAction criteria="itemtag:job:Captain" tag="captainid" />
+          <CheckItemAction targettag="player" itemtags="idcard">
+            <Success>
+              <ConversationAction fadetoblack="true" eventsprite="thal_nametag" targettag="player" text="Welcome to Thalasssophobia's Campaign. Before you begin, you will select your background with your crew, which will affect your starting reputation.">
+                <Option text="See the options." />
+              </ConversationAction>
+              <Label name="pastselect" />
+              <ConversationAction fadetoblack="true" eventsprite="thal_nametag" targettag="player" text="Decide with your crew on a background that seems fun or fitting for you.">
+                <!-- NEW ARRIVALS -->
+                <Option text="We are NEW ARRIVALS ON EUROPA. Fate will forge a name for us with time." endconversation="true" >
+                  <ConversationAction fadetoblack="true" eventsprite="thal_reactorleak" targettag="player" text="thalcampaign_newbrief">
+                    <Option endconversation="true" text="Confirm.">
+                      <SetDataAction identifier="thal_crewbackground" value="none" />
+                      <SetDataAction identifier="thal_pastchosen" value="1" />
+                    </Option>
+                    <Option text="Back to Selection." endconversation="true">
+                      <GoTo name="pastselect" />
+                    </Option>
+                  </ConversationAction>
+                </Option>
+                <!-- ELITE CORPO -->
+                <Option text="We are ELITE CORPORATE AGENTS. Our loyalty lies in Coalition interests." endconversation="true" >
+                  <ConversationAction fadetoblack="true" eventsprite="thal_catpolbrief" targettag="player" text="thalcampaign_corporatebrief">
+                    <Option endconversation="true" text="Confirm.">
+                      <SetDataAction identifier="thal_crewbackground" value="corporate" />
+                      <SetDataAction identifier="thal_pastchosen" value="1" />
+                      <ReputationAction targettype="Faction" identifier="clowns" increase="-30" />
+                      <ReputationAction targettype="Faction" identifier="coalition" increase="40" />
+                      <ReputationAction targettype="Faction" identifier="separatists" increase="-40" />
+                      <ReputationAction targettype="Faction" identifier="huskcult" increase="-30" />
+                    </Option>
+                    <Option text="Back to Selection." endconversation="true">
+                      <GoTo name="pastselect" />
+                    </Option>
+                  </ConversationAction>
+                </Option>
+                <Option text="We are A TRAVELLING CIRCUS. A carnival of chaos will swallow Europa whole." endconversation="true" >
+                  <ConversationAction fadetoblack="true" eventsprite="thal_reactorleak" targettag="player" text="thalcampaign_circusbrief">
+                    <Option endconversation="true" text="Confirm.">
+                      <SetDataAction identifier="thal_crewbackground" value="circus" />
+                      <SetDataAction identifier="thal_pastchosen" value="1" />
+                      <ReputationAction targettype="Faction" identifier="clowns" increase="40" />
+                      <ReputationAction targettype="Faction" identifier="coalition" increase="-40" />
+                      <ReputationAction targettype="Faction" identifier="separatists" increase="-30" />
+                      <ReputationAction targettype="Faction" identifier="huskcult" increase="-30" />
+                    </Option>
+                    <Option text="Back to Selection." endconversation="true">
+                      <GoTo name="pastselect" />
+                    </Option>
+                  </ConversationAction>
+                </Option>
+                <Option text="We are CALYX MISSIONARIES. The teachings of the husk will save humankind." endconversation="true" >
+                  <ConversationAction fadetoblack="true" eventsprite="thal_reactorleak" targettag="player" text="thalcampaign_huskbrief">
+                    <Option endconversation="true" text="Confirm.">
+                      <SetDataAction identifier="thal_crewbackground" value="husk" />
+                      <SetDataAction identifier="thal_pastchosen" value="1" />
+                      <ReputationAction targettype="Faction" identifier="clowns" increase="-30" />
+                      <ReputationAction targettype="Faction" identifier="coalition" increase="-40" />
+                      <ReputationAction targettype="Faction" identifier="separatists" increase="-30" />
+                      <ReputationAction targettype="Faction" identifier="huskcult" increase="40" />
+                    </Option>
+                    <Option text="Back to Selection." endconversation="true">
+                      <GoTo name="pastselect" />
+                    </Option>
+                  </ConversationAction>
+                </Option>
+                <Option text="We are A FOR-HIRE LOWLIVES. Underworld connections find us unusual work." endconversation="true" >
+                  <ConversationAction fadetoblack="true" eventsprite="thal_reactorleak" targettag="player" text="thalcampaign_bluecollarbrief">
+                    <Option endconversation="true" text="Confirm.">
+                      <SetDataAction identifier="thal_crewbackground" value="bluecollar" />
+                      <SetDataAction identifier="thal_pastchosen" value="1" />
+                      <ReputationAction targettype="Faction" identifier="clowns" increase="-10" />
+                      <ReputationAction targettype="Faction" identifier="coalition" increase="-40" />
+                      <ReputationAction targettype="Faction" identifier="separatists" increase="20" />
+                      <ReputationAction targettype="Faction" identifier="huskcult" increase="-20" />
+                      <!-- TODO: Add rep for cthonian cartel -->
+                    </Option>
+                    <Option text="Back to Selection." endconversation="true">
+                      <GoTo name="pastselect" />
+                    </Option>
+                  </ConversationAction>
+                </Option>
+                <Option text="We are RESISTANCE INSURGENTS. Smash the fascist state and free the moon." endconversation="true" >
+                  <ConversationAction fadetoblack="true" eventsprite="thal_reactorleak" targettag="player" text="thalcampaign_terroristbrief">
+                    <Option endconversation="true" text="Confirm.">
+                      <SetDataAction identifier="thal_crewbackground" value="terrorist" />
+                      <SetDataAction identifier="thal_pastchosen" value="1" />
+                      <ReputationAction targettype="Faction" identifier="clowns" increase="-30" />
+                      <ReputationAction targettype="Faction" identifier="coalition" increase="-40" />
+                      <ReputationAction targettype="Faction" identifier="separatists" increase="40" />
+                      <ReputationAction targettype="Faction" identifier="huskcult" increase="-30" />
+                    </Option>
+                    <Option text="Back to Selection." endconversation="true">
+                      <GoTo name="pastselect" />
+                    </Option>
+                  </ConversationAction>
+                </Option>
+              </ConversationAction>
+            </Success>
+          </CheckItemAction>
+        </Failure>
+      </CheckDataAction>
+    </ScriptedEvent>
+    <!--
+    <ScriptedEvent identifier="thal_campaignstartsideline">
+      <CheckDataAction identifier="thal_pastchosen" condition="eq 1">
+        <Failure>
+          <TagAction criteria="player" tag="player" />
+          <CheckItemAction targettag="player" itemtags="job:Captain">
+            <Failure>
+              <Label name="pastwait" />
+              <ConversationAction fadetoblack="true" eventsprite="thal_nametag" targettag="player" text="Welcome to Thalasssophobia's Campaign. Your captain has been presented with a prompt deciding the backstory of your crew, which will affect your reputation with factions, and permenantly affect your dialogue options. Discuss with your captain on a background that seems fun or fitting for you. Press Okay when you have decided on a backstory. You will be kicked back here until your captain has made up his mind.">
+                <Option text="Okay." endconversation="true">
+                  <CheckDataAction identifier="thal_pastchosen" condition="eq 1">
+                    <Failure>
+                      <GoTo name="pastwait" />
+                    </Failure>
+                  </CheckDataAction>
+                </Option>
+              </ConversationAction>
+            </Failure>
+          </CheckItemAction>
+        </Failure>
+      </CheckDataAction>
+    </ScriptedEvent>
+    -->
+    <!-- REACTOR LEAK
+    Choose to risk the lives of everyone on the outpost
+    Or choose to attempt to fix the reactor
+    -->
+    <ScriptedEvent identifier="thal_reactorleak">
+      <TagAction criteria="player" tag="player" />
+      <TagAction criteria="itemtag:reactor" tag="potentialreactor" />
+      <TriggerAction target1tag="potentialreactor" target2tag="player" applytotarget1="leakyreactor" applytotarget2="triggerer_player" radius="150" />
+      <StatusEffectAction targettag="leakyreactor">
+        <StatusEffect indestructible="false" condition="60" setvalue="true" />
+      </StatusEffectAction>
+      <ConversationAction eventsprite="thal_reactorleak" targettag="triggerer_player" text="You pause for a moment in front of a reactor. A shrill hissing noise is coming from somewhere behind the fission gague, but you can't seem to pinpoint the exact location. It's possible the reactor endangers everyone on the outpost, but to investigate further would require some experience with mechanical parts of a fission reactor. A wrench would probably help too.">
+        <Option text="Try to find the source of the noise.">
+          <SkillCheckAction requiredskill="Mechanical" requiredlevel="20" targettag="triggerer_player">
+            <Success>
+              <CheckItemAction targettag="triggerer_player" itemidentifiers="wrench">
+                <Success>
+                  <StatusEffectAction targettag="leakyreactor">
+                    <StatusEffect indestructible="false" condition="50" />
+                  </StatusEffectAction>
+                  <ConversationAction targettag="triggerer_player" text="Using your wrench, you unbolt the panel. With the interface out of the way, the problem stares you in the face: One of the coolant pipes is loose, and the reactor is beginning to overheat. You tighten the pipe with your wrench. Crisis Averted! You've just done the outpost a huge favor." />
+                  <ReputationAction targettype="Location" increase="30" />
+                </Success>
+                <Failure>
+                  <StatusEffectAction targettag="leakyreactor">
+                    <StatusEffect indestructible="false" condition="30" />
+                  </StatusEffectAction>
+                  <ConversationAction targettag="triggerer_player" text="You don't have a wrench on hand, so you'll have to come up with a different solution than taking it apart. Reaching under a grate, you think you feel something loose. You snap it back into position, and the hissing stops for now. It might have been a makeshift fix, but this has definitely helped the outpost." />
+                  <ReputationAction targettype="Location" increase="15" />
+                </Failure>
+              </CheckItemAction>
+            </Success>
+            <Failure>
+              <CheckItemAction targettag="triggerer_player" itemidentifiers="wrench">
+                <Success>
+                  <StatusEffectAction targettag="leakyreactor">
+                    <StatusEffect indestructible="false" condition="30" />
+                  </StatusEffectAction>
+                  <AfflictionAction affliction="burn" strength="10" limbtype="LeftHand" targettag="triggerer_player" />
+                  <ConversationAction targettag="triggerer_player" text="You're... Not really that great with mechanical stuff, but you do have a wrench. You poke around the panel a bit. There appear to be some bolts on the display, so you start with those. Once the panel is off, you tighten an adjoining bolt that appears to have come loose, but lurch back when you burn yourself on a hot piece of metal! Regardless, you think you may have just done well by the outpost, and may have learned a thing or two about reactors." />
+                  <ReputationAction targettype="Location" increase="30" />
+                </Success>
+                <Failure>
+                  <StatusEffectAction targettag="leakyreactor">
+                    <StatusEffect indestructible="false" condition="20" />
+                  </StatusEffectAction>
+                  <ConversationAction targettag="triggerer_player" text="You have no idea what you're doing, and to make matters worse, you don't have a wrench. You stick your hand underneath a grate in the reactor. Feeling around cluelessly, you sort of bump something. The hissing stops. Hooray? Your hand feels weird. Might want to see the doctor about this." />
+                  <ReputationAction targettype="Location" increase="8" />
+                  <AfflictionAction affliction="radiationsickness" strength="1" limbtype="LeftHand" targettag="triggerer_player" />
+                </Failure>
+              </CheckItemAction>
+            </Failure>
+          </SkillCheckAction>
+          <GiveSkillEXPAction skill="mechanical" amount="4" targettag="triggerer_player" />
+        </Option>
+        <Option text="Put as much distance between yourself and the reactor as possible." endconversation="true">
+          <GiveSkillEXPAction skill="mechanical" amount="-1" targettag="triggerer_player" />
+          <WaitAction time="9" />
+          <RNGAction chance="0.2">
+            <Success>
+              <StatusEffectAction targettag="leakyreactor">
+                <StatusEffect indestructible="false" condition="20" setvalue="true">
+                  <Fire />
+                </StatusEffect>
+              </StatusEffectAction>
+            </Success>
+          </RNGAction>
+        </Option>
+      </ConversationAction>
+    </ScriptedEvent>
+    <!-- UES DONATION
+    Member of the United Europa Society approaches player and asks for a donation. 
+    They will stop themselves if the player is already in exceptionally good or bad standing with the UES.
+    The more donated, the better general QOL is on outposts, and some events are more favorable. If corruption has not been exposed in the UES then only half of your donation will actually make it to the fund.
+    There is also an option to mug the member if you are armed. 70pct of the time you will get away with it, 30pct of the time the member will nonlethally defend themselves.
+    -->
+    <ScriptedEvent identifier="thal_uesdonation">
+      <SpawnAction npcsetidentifier="thal_generalnpcs" npcidentifier="uesbeggar" targettag="uesmember" spawnlocation="Outpost" />
+      <TagAction criteria="player" tag="player" />
+      <TriggerAction target1tag="uesmember" target2tag="player" applytotarget2="triggerer_player" radius="100" />
+      <NPCWaitAction npctag="uesmember" wait="true" />
+      <ConversationAction targettag="triggerer_player" text="What looks like a doctor approaches you, holding a boxy object sporting a mark sign on it. “Excuse me, I'm a fund raiser with the UES... Would it be too much to ask for just a moment of your time?“">
+        <Option text="“The U-E-What-now?“">
+          <ConversationAction targettag="triggerer_player" text="The fund raiser pauses and looks at you quizzically. “You know, The United Europa Society? I'll be blunt -- I'm surprised you've never heard of us. We're a charitable, nonprofit organization dedicated to improving the quality of life on Europa. You ever notice how everywhere you go in these outposts, you see psycho clowns, scammers, mudraptors in vents... all that? It's our belief that Europa doesn't have to be like this; Our fundraising aims to increase the quality of life in outposts.“">
+            <Option text="“Okay...“">
+              <ConversationAction targettag="triggerer_player" text="They continue: “We mostly fight poverty by managing soup kitchens, clothing drives, or doing community service like cleaning up the outposts hit hard by the crash.“  They present the donation box. “Just a few marks can make a world of difference!“">
+                <Option text="“So you're going around with that thing asking for donations?“">
+                  <Label name="donationprompt" />
+                  <CheckItemAction targettag="triggerer_player" itemtags="weapon">
+                    <Success>
+                      <!-- Has-Weapon version of dialogue -->
+                      <ConversationAction targettag="triggerer_player" text="They eagerly hold up the donation box. “Would you like to make a contribution?“">
+                        <Option text="Donate 10 Marks">
+                          <GoTo name="donateten" />
+                        </Option>
+                        <Option text="Donate 100 Marks">
+                          <GoTo name="donatehundred" />
+                        </Option>
+                        <Option text="Donate 1000 Marks">
+                          <GoTo name="donatethousand" />
+                        </Option>
+                        <Option text="“Actually, I change my mind, sorry.“" endconversation="true" >
+                          <ReputationAction targettype="Faction" identifier="thal_ues" increase="-1" />
+                        </Option>
+                        <Option text="[Armed] “How about you make a contribution to me, instead?“">
+                          <ReputationAction targettype="Faction" identifier="thal_ues" increase="-50" />
+                          <RNGAction chance="0.7">
+                            <Success>
+                              <ReputationAction targettype="Faction" identifier="thal_ues" increase="-10" />
+                              <MoneyAction amount="400" />
+                              <ConversationAction targettag="triggerer_player" text="They back away, astonished. “You... You know this is a one way transfer device, right? It doesn't contain any... a-actual currency... Forget it! Y-You can have 400 Marks, it's all I have in my personal account, I swear!“ They give you the marks and back off.">
+                                <Option text="Recieve 400 Marks." endconversation="true"  ></Option>
+                              </ConversationAction>
+                            </Success>
+                            <Failure>
+                              <ConversationAction targettag="triggerer_player" text="They back off, astonished. “You goddamn idiot, you know this is a one way currency transfer device, right? I don't have any physical currency, I'm not a panhandler. You just messed with the wrong one!“ You see them reach behind into their clothing for something. Get ready!">
+                                <Option text="Fight." endconversation="true" >
+                                  <CombatAction combatmode="defensive" npctag="uesmember" enemytag="triggerer_player" />
+                                </Option>
+                              </ConversationAction>
+                            </Failure>
+                          </RNGAction>
+                        </Option>
+                      </ConversationAction>
+                    </Success>
+                    <Failure>
+                      <ConversationAction targettag="triggerer_player" text="They eagerly hold up the donation box. “Would you like to make a contribution?“">
+                        <Option text="Donate 10 Marks">
+                          <Label name="donateten" />
+                          <MoneyAction amount="-10" />
+                          <ReputationAction targettype="Faction" identifier="thal_ues" increase="3" />
+                          <CheckDataAction identifier="uesnotcorrupt" condition="eq 1">
+                            <Success>
+                              <SetDataAction identifier="uesfund" value="2" operator="add" />
+                            </Success>
+                            <Failure>
+                              <SetDataAction identifier="uesfund" value="1" operator="add" />
+                            </Failure>
+                          </CheckDataAction>
+                          <ConversationAction targettag="triggerer_player" text="You transfer 10 Marks to the UES. “Thanks, we greatly appreciate it.“" />
+                        </Option>
+                        <Option text="Donate 100 Marks">
+                          <Label name="donatehundred" />
+                          <MoneyAction amount="10" />
+                          <ReputationAction targettype="Faction" identifier="thal_ues" increase="7" />
+                          <CheckDataAction identifier="uesnotcorrupt" condition="eq 1">
+                            <Success>
+                              <SetDataAction identifier="uesfund" value="10" operator="add" />
+                            </Success>
+                            <Failure>
+                              <SetDataAction identifier="uesfund" value="5" operator="add" />
+                            </Failure>
+                          </CheckDataAction>
+                          <ConversationAction targettag="triggerer_player" text="You transfer 100 Marks to the UES. “Wow, 100 marks! This will help greatly. Thank you sincerely.“" />
+                        </Option>
+                        <Option text="Donate 1000 Marks">
+                          <Label name="donatethousand" />
+                          <MoneyAction amount="-1000" />
+                          <ReputationAction targettype="Faction" identifier="thal_ues" increase="15" />
+                          <CheckDataAction identifier="uesnotcorrupt" condition="eq 1">
+                            <Success>
+                              <SetDataAction identifier="uesfund" value="100" operator="add" />
+                            </Success>
+                            <Failure>
+                              <SetDataAction identifier="uesfund" value="50" operator="add" />
+                            </Failure>
+                          </CheckDataAction>
+                          <ConversationAction targettag="triggerer_player" text="You transfer 1000 Marks to the UES. They look flabbergast. “You're serious? I can't thank you enough... this is incredible! Thank you so, so much. We won't forget this.“" />
+                        </Option>
+                        <Option text="“Actually, I change my mind, sorry.“" endconversation="true" >
+                          <ReputationAction targettype="Faction" identifier="thal_ues" increase="-1" />
+                        </Option>
+                      </ConversationAction>
+                    </Failure>
+                  </CheckItemAction>
+                </Option>
+                <Option text="“Sorry, maybe some other time.“" endconversation="true" >
+                  <ReputationAction targettype="Faction" identifier="thal_ues" increase="-1" />
+                </Option>
+                <Option text="“Aren't you guys a bunch of hippies?“">
+                  <ConversationAction targettag="triggerer_player" text="The UES member is clearly irked by your remark: “We oppose the conflict between the coalition and the seperatist forces, if that's what you mean. It's out belief the conflict has done nothing but make a lot of marks for arms manufacturers, all while impovrishing the average colonist. Our donations are purely charitable, though.“">
+                    <Option text="“I see.“">
+                      <Goto name="donationprompt" />
+                    </Option>
+                  </ConversationAction>
+                </Option>
+              </ConversationAction>
+            </Option>
+          </ConversationAction>
+        </Option>
+        <Option text="“I know who you are. Are you looking for a donation?“">
+          <Goto name="donationprompt" />
+        </Option>
+        <Option text="Keep on walking and avert your gaze." endconversation="true">
+          <ReputationAction targettype="Faction" identifier="thal_ues" increase="-10" />
+          <ReputationAction targettype="Faction" identifier="coalition" increase="2" />
+        </Option>
+        <Option text="“I'm sorry, I'm really quite busy right now.“" endconversation="true">
+          <ReputationAction targettype="Faction" identifier="thal_ues" increase="-1" />
+        </Option>
+      </ConversationAction>
+    </ScriptedEvent>
+    <!-- MIME PERFORMANCE
+    You confront a mime performing in an outpost. You can choose to watch a performance and have your character infer a mission from the performance. Mimes will refuse to perform if you have sub -40 clown rep. Or you can act impolite and lower your clown rep.
+    -->
+    <ScriptedEvent identifier="thal_mimeperformance">
+      <SpawnAction npcsetidentifier="thal_generalnpcs" npcidentifier="streetmime" targettag="mime" spawnlocation="Outpost" />
+      <TagAction criteria="player" tag="player" />
+      <TriggerAction target1tag="mime" target2tag="player" applytotarget2="triggerer_player" radius="100" />
+      <NPCWaitAction npctag="mime" wait="true" />
+      <ConversationAction targettag="triggerer_player" text="There's a street mime here. These professional entertainers engage in what many believe to be more sophisticated acts of tomfoolery. While clowns engage in crass, low brow humour, mimes are naturally drawn to better-bred antics, making them more accepted in many outposts regardless of creed." eventsprite="thal_mime" />
+      <CheckReputationAction targettype="faction" identifier="clowns" condition="gt 30">
+        <Success>
+          <!--reputation 30 to 100 -->
+          <ConversationAction targettag="triggerer_player" text="The mime swivels around and sees you. They exagerratedly lean forward to peer at you, and a moment later, their pale face breaks into a big, checkered grin. Your crew's reputation precedes you among many Europan entertainers, and this one seems to have heard good things about the whole lot.">
+            <Option text="Tastefully enjoy a delightful show of expressive gesture.">
+              <Goto name="show" />
+            </Option>
+            <Option text="Politely indicate you have places to be.">
+              <ConversationAction targettag="triggerer_player" text="They seem to understand. The mime waves goodbye and continues looking for other people to entertain.">
+                <Option text="Godspeed." endconversation="true" />
+              </ConversationAction>
+            </Option>
+          </ConversationAction>
+        </Success>
+        <Failure>
+          <!--reputation -40 to 30 -->
+          <CheckReputationAction targettype="faction" identifier="clowns" condition="gt -40">
+            <Success>
+              <ConversationAction targettag="triggerer_player" text="The mime catches you out of the corner of their eye. They look you up and down with their checkered visage, and nod at you acknowledgingly. It would seem the clowns of Europa know a little about your crew, and don't think you're all that bad.">
+                <Option text="You've heard a lot about cryptic mime shows. Ask to see one.">
+                  <Label name="show" />
+                  <ConversationAction targettag="triggerer_player" text="All at once, the mime leaps to life! They fall back into a sitting position on thin air. You know this is their job, but it's seriously quite impressive; It's like there's really a chair there! Gloved fingers then reach out and grip themselves around an invisible steering wheel of some sort: They're... Yes, they're in a submarine at the helm! They look around the make-believe quarters nonchillantly, before something absolutely remarkable happens:">
+                    <Option text="The mime is thrown forwards by an unseen force!">
+                      <RNGAction chance="0.5">
+                        <Success>
+                          <!-- explosive cargo -->
+                          <ConversationAction targettag="triggerer_player" text="Their body is propelled forward! You have no idea how they so convincingly move as though they're really being knocked around, but they manage to make it work all the same. They lay motionless, slumped over an invisible navigation terminal, their legs jutting out at an odd angle as though mangled by a blast. This seems all too familiar, and then it hits you. You've heard stories about this! This is what happens all too much when explosive delivery missions go wrong! The mime opens their eyes, giving you a knowing smile. They stand up, brush themselves off, and give you a cargo clearance pass to a box of valuable explosives in the cargo bay. If you so choose, you can accept this mission to deliver explosive cargo for a handsome reward and the favor of the separatists.">
+                            <Option text="Add explosive cargo to your task manager.">
+                              <MissionAction missiontag="cargoexplosive" />
+                              <Goto name="donation" />
+                            </Option>
+                          </ConversationAction>
+                        </Success>
+                        <Failure>
+                          <!-- kill moloch -->
+                          <ConversationAction targettag="triggerer_player" text="Their body is propelled forward! You have no idea how they so convincingly move as though they're really being knocked around, but they manage to make it work all the same. They jolt up, grab their head and wince in pain, and start barking silent orders into their imaginary headset. They forcefully pull the helm rotor as far back as possible to escape, but something massive seems to strike the ship, and they lose their balance, falling to the ground. Of course, you know this sight too well. The sheer force of the attacks, the panic; This is a Moloch encounter. The mime, seeing that you understand the message, stops what they're doing. The mime presents to you a NFC card with the ID of a tracking beacon on it labeled AGGRO MOLOCH. If you so choose, you can accept this mission for a hefty reward.">
+                            <Option text="Add killing a moloch to your task manager.">
+                              <MissionAction missiontag="killmoloch" />
+                              <Goto name="donation" />
+                            </Option>
+                          </ConversationAction>
+                        </Failure>
+                      </RNGAction>
+                    </Option>
+                    <Option text="Their hands fly into frenzy as they inaudibly shout to an imaginary crew member!">
+                      <RNGAction chance="0.5">
+                        <Success>
+                          <!--clown cargo -->
+                          <ConversationAction targettag="triggerer_player" text="The Mime shouts gibberish at nobody in particular. They become increasingly agitated, and suddenly stand up, pulling an invisible gun out of an unseen holster. They fire a few shots, and their eyes trail something falling to the ground. You're not quite sure what's going on here. Is it a monster? They pick up whatever it is and they... oh. They give it two squeezes. Well, that was kind of a dead giveaway. There's not much being squeezed on a submarine other than a bike horn. It looks like this is... a clown gear shipment gone wrong? The mime ceases the act and looks at you expectantly. It dawns on you what they want you to do. You are given a cargo tag for a box of clown gear in the cargo holding area. If you so choose, you may deliver clown gear for a monetary reward as well as the favor of the Children of the Honkmother.">
+                            <Option text="Add praise the honkmother to your task manager.">
+                              <MissionAction missiontag="cargoclown" />
+                              <Goto name="donation" />
+                            </Option>
+                          </ConversationAction>
+                        </Success>
+                        <Failure>
+                          <!--husk cargo-->
+                          <ConversationAction targettag="triggerer_player" text="They shout towards the aft of their ship some more. They look back, turn back towards the navigation terminal, and finally a look of dread suddenly appears on their face as they process what they saw behind them. They stand up and reach for an imaginary holster on their hip, but it's too late. An invisible assailant pins them down. They let out of a silent scream and desperately reach behind them to try and fight their attacker off, but it's futile. The mime writhes in agony as something pierces their neck. They reach for their throat and try to breathe, but slowly their movements become weaker and their hand falls away. They lie motionless for a bit. Suddenly, their hand spastically jerks back to life. The mime gets up unaturally, bending at the legs and pulling the rest of the body up, with a dead expression on their painted face. You can't bear to watch, you have nightmares about husks already as it is. Seeming satisfied, the mime drops the act and gives you a key to a restricted locker in cargo. You understand: If you so choose, you can deliver husk eggs for money, much to the delight of the Church of Husk.">
+                            <Option text="Add biohazard to your task manager.">
+                              <MissionAction missionidentifier="cargohuskeggs" />
+                              <Goto name="donation" />
+                            </Option>
+                          </ConversationAction>
+                        </Failure>
+                      </RNGAction>
+                    </Option>
+                    <Option text="They pull open an invisible cabinet and slip into nonexistant diving gear!">
+                      <RNGAction chance="0.5">
+                        <Success>
+                          <!--salvage artifact -->
+                          <ConversationAction targettag="triggerer_player" text="The Mime pushes an imaginary button and suddenly gains a lightness. They make broad swimming strokes until they feel up their hands against an invisible wall. They pull out a large tool which they seem... to use to cut the wall? The mime then swims inside, finding a series of logical puzzles that they slowly deduce the solution to. You've heard about this at the institute: This... This is for sure a ruins expedition. Seeing that you understand, the mime drops the act, and hands you a logbook with coordinate data marked INFRASONIC SIGNAL. You understand. It would seem that this mime is offering you a job retrieving an artifact for a hefty reward.">
+                            <Option text="Add salvaging an artifact to your task manager.">
+                              <MissionAction missiontag="salvageartifact" />
+                              <Goto name="donation" />
+                            </Option>
+                          </ConversationAction>
+                        </Success>
+                        <Failure>
+                          <!--wreck-->
+                          <ConversationAction targettag="triggerer_player" text="The Mime pushes an imaginary button and suddenly gains a lightness. They make broad swimming strokes until they feel up their hands against an invisible wall. They pull out a large tool which they seem... to use to cut the wall? The mime then swims inside. There, they seem to engage in combat with various unseen enemies, before picking up the corpse of a humanoid seeming body and going through its things. When the mime attempts to try to operate a bunch of seemingly unresponsive devices, you think you understand: This is a shipwreck. The mime, noticing your understanding, gives you a data chip with a set coordinates. Should you so choose you may attempt to retrieve the logbook for a hefty reward.">
+                            <Option text="Add wreck salvage to your task manager.">
+                              <MissionAction missiontag="salvagewreck" />
+                              <Label name="donation" />
+                              <ConversationAction targettag="triggerer_player" text="The Mime slinks back exhausted, their performance done, and sits down on the floor next to a small electronic box with a mark sign on it.">
+                                <Option text="Leave 10 Marks.">
+                                  <ReputationAction targettype="Faction" identifier="clowns" increase="3" />
+                                  <ConversationAction targettag="triggerer_player" text="The Mime nods at you gratefully.">
+                                    <Option text="Au revior." endconversation="true"  />
+                                  </ConversationAction>
+                                </Option>
+                                <Option text="Depart." />
+                              </ConversationAction>
+                            </Option>
+                          </ConversationAction>
+                        </Failure>
+                      </RNGAction>
+                    </Option>
+                  </ConversationAction>
+                </Option>
+                <Option text="Nod back and keep walking.">
+                  <ConversationAction targettag="triggerer_player" text="They continue on their way as well. No harm no foul." />
+                </Option>
+                <Option text="“Nice beret, you goddamn frog!“">
+                  <ConversationAction targettag="triggerer_player" text="They open their mouth in shock but manage to stifle themself. The mime gives you a cold glare and storms off. The children of the honkmother will hear about this for sure." />
+                  <ReputationAction targettype="Faction" identifier="clowns" increase="-10" />
+                </Option>
+              </ConversationAction>
+            </Success>
+            <Failure>
+              <!--reputation -100 to -40-->
+              <ConversationAction targettag="triggerer_player" text="They're staring right at you and it's apparent they don't want to hang around. Your crew really pissed off the clowns of Europa somewhere along the line! The mime picks up their briefcase and walks away. They don't want to perform for someone with as stiff and upper-lip as you.">
+                <Option text="Oh well." endconversation="true"  >
+                  <ReputationAction targettype="Faction" identifier="clowns" increase="1" />
+                </Option>
+                <Option text="“That's right. Keep walking, you invisible wall humper.“">
+                  <ConversationAction targettag="triggerer_player" text="They ignore you, but your little comment didn't help your standing with the Children of the Honkmother." />
+                  <ReputationAction targettype="Faction" identifier="clowns" increase="-9" />
+                </Option>
+              </ConversationAction>
+            </Failure>
+          </CheckReputationAction>
+        </Failure>
+      </CheckReputationAction>
+    </ScriptedEvent>
+  </EventPrefabs>
+  <!-- Unique event set that only appears at the beginning of campaign -->
+  <EventSet identifier="thal_universalevents" leveltype="outpost" locationtype="outpost,city" allowatstart="true" minleveldifficulty="0" maxleveldifficulty="1" chooserandom="false" ignorecooldown="true">
+    <Commonness commonness="0">
+      <Override leveltype="outpostlevel" commonness="1000" />
+    </Commonness>
+    <EventSet identifier="campaignstart" allowatstart="true" chooserandom="false" ignorecooldown="true">
+      <!--Only regular events in outposts:-->
+      <ScriptedEvent identifier="thal_campaignstart" commonness="100" />
+    </EventSet>
+    <EventSet identifier="outpostevents.randomevents" allowatstart="true" chooserandom="true">
+      <!--Only regular events in outposts and cities:-->
+      <ScriptedEvent identifier="givingdirections" commonness="100" />
+      <ScriptedEvent identifier="soundinthevent" commonness="100" />
+      <ScriptedEvent identifier="clownrelations1" commonness="100" />
+      <ScriptedEvent identifier="clownrelations2" commonness="100" />
+      <ScriptedEvent identifier="goodsamaritan" commonness="100" />
+      <ScriptedEvent identifier="propaganda" commonness="100" />
+      <ScriptedEvent identifier="goblincooking1" commonness="50" />
+      <ScriptedEvent identifier="outbreak" commonness="100" />
+      <ScriptedEvent identifier="miketheidiot1" commonness="25" />
+      <ScriptedEvent identifier="miketheidiot2" commonness="25" />
+      <ScriptedEvent identifier="firefighting" commonness="100" />
+      <ScriptedEvent identifier="sleightofhand" commonness="100" />
+      <ScriptedEvent identifier="foreshadowing" commonness="50" />
+      <ScriptedEvent identifier="clownbrutality" commonness="100" />
+      <ScriptedEvent identifier="separatistrelations" commonness="100" />
+      <ScriptedEvent identifier="huskcultrelations" commonness="100" />
+      <ScriptedEvent identifier="Engineers_are_special" commonness="100" />
+      <ScriptedEvent identifier="mediator" commonness="100" />
+      <ScriptedEvent identifier="blackmarket" commonness="100" />
+      <ScriptedEvent identifier="huskcultist" commonness="100" />
+      <ScriptedEvent identifier="fanclub" commonness="100" />
+      <ScriptedEvent identifier="huskcultambush" commonness="50" />
+    </EventSet>
+    <EventSet identifier="outpostevents.randomevents" allowatstart="true" chooserandom="true" ignorecooldown="true" eventcount="3">
+      <ScriptedEvent identifier="missionevent_cargo1" commonness="125" />
+      <ScriptedEvent identifier="missionevent_cargo2" commonness="50" />
+      <ScriptedEvent identifier="missionevent_cargo3" commonness="100" />
+      <ScriptedEvent identifier="missionevent_killswarm" commonness="100" />
+      <ScriptedEvent identifier="missionevent_killmonstercommon" commonness="85" />
+    </EventSet>
+  </EventSet>
+  
+  <EventSet identifier="thal_blacksiteevents" leveltype="outpost" locationtype="thal_blackSite" allowatstart="true" minleveldifficulty="0" maxleveldifficulty="100" chooserandom="false" ignorecooldown="true">
+    <Commonness commonness="0">
+      <Override leveltype="outpostlevel" commonness="1000" />
+    </Commonness>
+    <EventSet identifier="campaignstart" allowatstart="true" chooserandom="false" ignorecooldown="true">
+      <!--Only regular events in outposts:-->
+    </EventSet>
+    <EventSet identifier="outpostevents.randomevents" allowatstart="true" chooserandom="true">
+      <!--Only regular events in outposts and cities:-->
+      <ScriptedEvent identifier="givingdirections" commonness="100" />
+      <ScriptedEvent identifier="soundinthevent" commonness="100" />
+      <ScriptedEvent identifier="clownrelations1" commonness="100" />
+      <ScriptedEvent identifier="clownrelations2" commonness="100" />
+      <ScriptedEvent identifier="goodsamaritan" commonness="100" />
+      <ScriptedEvent identifier="propaganda" commonness="100" />
+      <ScriptedEvent identifier="goblincooking1" commonness="50" />
+      <ScriptedEvent identifier="outbreak" commonness="100" />
+      <ScriptedEvent identifier="miketheidiot1" commonness="25" />
+      <ScriptedEvent identifier="miketheidiot2" commonness="25" />
+      <ScriptedEvent identifier="firefighting" commonness="100" />
+      <ScriptedEvent identifier="sleightofhand" commonness="100" />
+      <ScriptedEvent identifier="foreshadowing" commonness="50" />
+      <ScriptedEvent identifier="clownbrutality" commonness="100" />
+      <ScriptedEvent identifier="separatistrelations" commonness="100" />
+      <ScriptedEvent identifier="huskcultrelations" commonness="100" />
+      <ScriptedEvent identifier="Engineers_are_special" commonness="100" />
+      <ScriptedEvent identifier="mediator" commonness="100" />
+      <ScriptedEvent identifier="blackmarket" commonness="100" />
+      <ScriptedEvent identifier="huskcultist" commonness="100" />
+      <ScriptedEvent identifier="fanclub" commonness="100" />
+      <ScriptedEvent identifier="huskcultambush" commonness="50" />
+    </EventSet>
+    <EventSet identifier="outpostevents.randomevents" allowatstart="true" chooserandom="true" ignorecooldown="true" eventcount="3">
+      <ScriptedEvent identifier="missionevent_cargo1" commonness="125" />
+      <ScriptedEvent identifier="missionevent_cargo2" commonness="50" />
+      <ScriptedEvent identifier="missionevent_cargo3" commonness="100" />
+      <ScriptedEvent identifier="missionevent_killswarm" commonness="100" />
+      <ScriptedEvent identifier="missionevent_killmonstercommon" commonness="85" />
+    </EventSet>
+  </EventSet>
+</Randomevents>

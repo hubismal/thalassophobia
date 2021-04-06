@@ -1,0 +1,465 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Items>
+  <!-- PRANK STUFF BEGIN -->
+  <Item name="" identifier="thal_jokerevolver" category="Equipment" cargocontaineridentifier="metalcrate" tags="smallitem,weapon,gun" Scale="0.5" impactsoundtag="impact_metal_light">
+    <Deconstruct time="10">
+      <Item identifier="steel" />
+      <Item identifier="plastic" />
+    </Deconstruct>
+    <InventoryIcon texture="Content/Items/InventoryIconAtlas.png" sourcerect="128,64,64,64" origin="0.5,0.5" />
+    <Sprite name="thalassophobia's joke revolver" texture="Content/Items/Weapons/weapons_new.png" sourcerect="0,418,76,41" depth="0.55" origin="0.5,0.5" />
+    <Body width="72" height="40" density="50" />
+    <LightComponent lightcolor="255,255,255,255" castshadows="false" allowingameediting="false" range="0">
+      <sprite name="flag" texture="Mods/Thalassophobia/Items/Jobgear/Clown/clown.png" depth="0.6" sourcerect="546,570,148,79" origin="0.032749236,0.13035554" />
+    </LightComponent>
+    <Holdable slots="Any,RightHand,LeftHand" controlpose="true" aimpos="90,10" handle1="-11,-7" msg="ItemMsgPickUpSelect" />
+    <RangedWeapon reload="5" drawhudwhenequipped="true" crosshairscale="0.2">
+      <!--<StatusEffect type="OnUse" target="This" delay="0.8" IsOn="false" />-->
+      <Sound file="Content/Items/Weapons/Revolver1.ogg" type="OnUse" range="3000" selectionmode="Random" />
+      <Sound file="Content/Items/Weapons/Revolver2.ogg" type="OnUse" range="3000" />
+      <Sound file="Content/Items/Weapons/Revolver3.ogg" type="OnUse" range="3000" />
+      <ParticleEmitter particle="muzzleflash" particleamount="1" velocitymin="0" velocitymax="0" />
+      <StatusEffect type="OnUse" target="This" IsOn="true">
+        <sound file="Mods/Thalassophobia/Items/Jobgear/Clown/diddy.ogg" type="OnUse" range="500" selectionmode="Random" />
+      </StatusEffect>
+      <StatusEffect type="OnUse" target="This" delay="4" IsOn="false" />
+    </RangedWeapon>
+  </Item>
+  <Item name="" description="" identifier="thal_wirebind" category="Equipment" cargocontaineridentifier="metalcrate" tags="smallitem" impactsoundtag="impact_metal_light" scale="0.3">
+    <Deconstruct time="1">
+      <Item identifier="rubber" outcondition="0.5" />
+    </Deconstruct>
+    <InventoryIcon texture="Content/Items/InventoryIconAtlas.png" sourcerect="448,64,64,64" origin="0.5,0.5" />
+    <Sprite name="visible wirebind" texture="clown.png" depth="0.55" sourcerect="168,222,86,35" origin="0.5,0.5" />
+    <BrokenSprite name="invisible wirebind" texture="clown.png" depth="0.55" sourcerect="388,699,86,35" origin="0.5,0.5" maxcondition="90" />
+    <Body width="30" height="15" density="40" />
+    <Wearable slots="Any,RightHand+LeftHand" msg="ItemMsgPickUpSelect" autoequipwhenfull="false">
+      <sprite name="Wirebind thing" texture="clown.png" limb="RightHand" sourcerect="1,1,1,1" origin="0.5,0.5" depth="0.01" scale="0.3" />
+      <StatusEffect type="OnWearing" target="Character" lockhands="true" setvalue="true" tags="bound" />
+      <StatusEffect type="OnBroken" target="This">
+        <Sound file="Content/Sounds/Impact/SoftImpact1.ogg" type="OnActive" range="1000" />
+        <Remove />
+      </StatusEffect>
+    </Wearable>
+    <CustomInterface canbeselected="true" drawhudwhenequipped="true">
+      <GuiFrame relativesize="0.15,0.1" anchor="BottomCenter" absoluteoffset="0,0" style="ItemUI" />
+      <Button text="Struggle">
+        <StatusEffect type="OnUse" target="This" condition="-2" />
+      </Button>
+    </CustomInterface>
+  </Item>
+  <Item name="" identifier="thal_muzzle" category="Equipment" cargocontaineridentifier="metalcrate" tags="smallitem" scale="0.5">
+    <PreferredContainer primary="crewcab" spawnprobability="0.05" />
+    <sprite name="Muzzle Wearable" texture="Mods/Thalassophobia/Items/Jobgear/headgears.png" limb="Head" inheritlimbdepth="true" inherittexturescale="true" hidelimb="false" hideotherwearables="false" sourcerect="226,326,69,68" origin="0.4,0.3" hidewearablesoftype="moustache,beard" />
+    <InventoryIcon name="Gag Sprite" texture="Mods/Thalassophobia/Items/Weapons/Explosives/bombcollar.png" depth="0.6" sourcerect="232,1,214,172" origin="0.5123859,0.53692484" scale="0.5" />
+    <Body width="40" radius="30" density="15" />
+    <Fabricate suitablefabricators="thal_cultistkit" requiredtime="40">
+      <RequiredSkill identifier="medical" level="50" />
+      <RequiredItem identifier="thal_cultistknife" mincondition="0.06" usecondition="true" />
+      <RequiredItem identifier="bandage" usecondition="false" />
+    </Fabricate>
+    <Deconstruct time="10">
+      <Item identifier="rubber" />
+      <Item identifier="plastic" />
+    </Deconstruct>
+    <Wearable limbtype="Head" slots="Any,Head" msg="ItemMsgPickUpSelect" autoequipwhenfull="false">
+      <sprite name="Muzzle Wearable" texture="Mods/Thalassophobia/Items/Jobgear/headgears.png" limb="Head" inheritlimbdepth="true" inherittexturescale="true" hidelimb="false" hideotherwearables="false" sourcerect="230,326,69,68" origin="0.4,0.3" hidewearablesoftype="moustache,beard" />
+      <StatusEffect tags="gagged" type="OnWearing" target="Character" setvalue="true" stackable="false" speechImpediment="100.0" />
+      <StatusEffect type="OnBroken" target="This">
+        <Sound file="Content/Sounds/Impact/SoftImpact1.ogg" type="OnActive" range="1000" />
+        <Remove />
+      </StatusEffect>
+    </Wearable>
+  </Item>
+  <Item name="" identifier="thal_blindfold" category="Equipment" cargocontaineridentifier="metalcrate" tags="smallitem" scale="0.5">
+    <PreferredContainer primary="crewcab" spawnprobability="0.1" />
+    <Sprite name="blindfold sprite" texture="Mods/Thalassophobia/Items/Jobgear/headgears.png" depth="0.6" sourcerect="325,153,69,32" origin="0.5123859,0.53692484" scale="0.5" />
+    <Body width="40" radius="30" density="15" />
+    <InventoryIcon name="Blindfold Inv" texture="Mods/Thalassophobia/Items/Weapons/Explosives/bombcollar.png" depth="0.6" sourcerect="461,13,150,133" origin="0.5,0.5" scale="0.5" />
+    <Body width="40" radius="30" density="15" />
+    <Fabricate suitablefabricators="thal_cultistkit" requiredtime="40">
+      <RequiredSkill identifier="medical" level="50" />
+      <RequiredItem identifier="thal_cultistknife" mincondition="0.06" usecondition="true" />
+      <RequiredItem identifier="bandage" usecondition="false" />
+    </Fabricate>
+    <Deconstruct time="10">
+      <Item identifier="rubber" />
+      <Item identifier="plastic" />
+    </Deconstruct>
+    <Turret HudTint="0,0,0,255" drawhudwhenequipped="true" />
+    <!--
+    <CustomInterface canbeselected="false" drawhudwhenequipped="true" hudpriority="20" depth="9">
+      <GuiFrame relativesize="1.1,1.1" anchor="Center" absoluteoffset="0,0" style="GUIListBoxNoBorder" color="0,0,0,255" />
+    </CustomInterface>
+    -->
+    <Wearable limbtype="Head" slots="Any,Head" msg="ItemMsgPickUpSelect" autoequipwhenfull="false">
+      <sprite name="blindfold Wearable" texture="Mods/Thalassophobia/Items/Jobgear/headgears.png" limb="Head" inheritlimbdepth="true" inherittexturescale="true" depth="0.6" sourcerect="316,156,80,51" origin="0.5661016,0.28514442" />
+    </Wearable>
+  </Item>
+  <Item name="" identifier="thal_partyblower" category="Misc" Tags="smallitem" scale="0.3" impactsoundtag="impact_metal_light" isshootable="true">
+    <PreferredContainer primary="crewcab" spawnprobability="0.01" />
+    <InventoryIcon name="PartyBlower Inv" texture="Mods/Thalassophobia/Items/Jobgear/Clown/clown.png" sourcerect="544,457,73,66" origin="0.5,0.5" />
+    <Sprite name="PartyBlower Base" texture="Mods/Thalassophobia/Items/Jobgear/Clown/clown.png" sourcerect="536,378,90,32" depth="0.6" origin="0.5,0.5" />
+    <Body width="80" height="27" />
+    <Holdable slots="Any,RightHand,LeftHand" aimable="false" aimpos="35,23" handle1="15,0" swingamount="0,0" swingspeed="0.5" swingwhenusing="false" msg="ItemMsgPickUpSelect"></Holdable>
+    <!-- lightcomp used for the uhhh roller thingy, same as shutter does it -->
+    <LightComponent lightcolor="255,255,255,255" castshadows="false" allowingameediting="false" range="0">
+      <sprite name="partyblow roll" texture="Mods/Thalassophobia/Items/Jobgear/Clown/clown.png" depth="0.6" sourcerect="523,412,104,32" origin="0.20141882,0.50792897" />
+    </LightComponent>
+    <RangedWeapon reload="2">
+      <StatusEffect type="OnUse" target="This" IsOn="true">
+        <sound file="Mods/Thalassophobia/Items/Jobgear/Clown/partyblower.ogg" type="OnUse" range="800" selectionmode="Random" />
+      </StatusEffect>
+      <StatusEffect type="OnUse" target="This" delay="0.8" IsOn="false" />
+    </RangedWeapon>
+  </Item>
+  <Item name="" identifier="thal_confettigrenade" category="Equipment" cargocontaineridentifier="explosivecrate" tags="smallitem,weapon,explosive" scale="0.5" impactsoundtag="impact_metal_heavy">
+    <InventoryIcon texture="Content/Items/InventoryIconAtlas.png" sourcerect="580,770,54,63" origin="0.5,0.5" />
+    <Sprite texture="Content/Items/Weapons/weapons_new.png" sourcerect="217,305,40,61" depth="0.55" origin="0.5,0.5" />
+    <Body radius="20" height="10" density="30" />
+    <ItemComponent characterusable="false">
+      <!-- statuseffect that explodes the grenade when used by something else than a character (e.g. a detonator) -->
+      <StatusEffect type="OnUse" target="This" Condition="-100.0" disabledeltatime="true" />
+      <StatusEffect type="OnBroken" target="This">
+        <sound file="Mods/Thalassophobia/Items/Jobgear/Clown/partyblower.ogg" type="OnUse" range="10000" selectionmode="All" />
+        <sound file="Mods/Thalassophobia/Items/Jobgear/Clown/yay.ogg" type="OnUse" range="10000" />
+        <Explosion range="300.0" structuredamage="0" itemdamage="0" stun="0" force="0" severlimbsprobability="0.0" screenshake="0" flames="false" sparks="false" smoke="false"></Explosion>
+        <ParticleEmitter particle="thal_confettifall" particleamount="10" scalemin="0.2" scalemax="0.4" velocitymin="100" velocitymax="250" anglemin="60" anglemax="120" />
+        <Remove />
+      </StatusEffect>
+    </ItemComponent>
+    <Throwable slots="Any,RightHand,LeftHand" holdpos="0,0" handle1="0,0" throwforce="4.0" msg="ItemMsgPickUpSelect">
+      <StatusEffect type="OnSecondaryUse" target="This" Condition="-100.0" delay="3.0" disabledeltatime="true" checkconditionalalways="true" />
+    </Throwable>
+  </Item>
+  <Item name="" description="" identifier="thal_bananapeel" category="Equipment" cargocontaineridentifier="metalcrate" tags="smallitem" impactsoundtag="impact_soft" scale="0.4" interactdistance="150" impacttolerance="0.01">
+    <PreferredContainer primary="crewcab" spawnprobability="0.2" />
+    <PreferredContainer primary="outposttrashcan" spawnprobability="0.2" />
+    <Deconstruct time="1">
+      <Item identifier="bikehorn" />
+    </Deconstruct>
+    <Fabricate suitablefabricators="thal_clownkit" requiredtime="10" outcondition="100">
+      <RequiredSkill identifier="medical" level="10" />
+      <RequiredItem identifier="clowncostume" />
+      <RequiredItem identifier="bikehorn" />
+    </Fabricate>
+    <InventoryIcon name="Banana Peel Inventory" texture="Mods/Thalassophobia/Items/Jobgear/Clown/clown.png" sourcerect="156,157,80,102" depth="0.6" origin="0.5,0.5" />
+    <Sprite name="Banana Peel" texture="Mods/Thalassophobia/Items/Jobgear/Clown/clown.png" sourcerect="3,200,125,53" depth="0.6" origin="0.5,0.5" />
+    <Body width="125" height="53" density="40" friction="0.95" />
+    <MotionSensor rangeY="25" rangeX="20" canbeselected="false" minimumvelocity="90000" ignoredead="true">
+      <StatusEffect type="OnContained" target="This" setvalue="true" minimumvelocity="90000" spritecolor="255,255,255,255" />
+      <StatusEffect type="OnNotContained" target="This" setvalue="true" minimumvelocity="90000" spritecolor="255,255,255,255">
+        <Conditional MotionDetected="true" />
+        <Explosion range="40" stun="5" force="30" shockwave="false" flames="false" flash="false" smoke="false" underwaterbubble="false" sparks="false" camerashake="30.0">
+          <!-- inflicts the peel effect so the stun is consistent. read more in afflictions.xml -->
+        </Explosion>
+        <Sound file="Mods/Thalassophobia/Items/Jobgear/Clown/slip0.ogg" range="400" selectionmode="Random" />
+        <Sound file="Mods/Thalassophobia/Items/Jobgear/Clown/slip1.ogg" range="400" selectionmode="Random" />
+        <Sound file="Mods/Thalassophobia/Items/Jobgear/Clown/slip2.ogg" range="400" selectionmode="Random" />
+        <Sound file="Mods/Thalassophobia/Items/Jobgear/Clown/slip3.ogg" range="400" selectionmode="Random" />
+        <Sound file="Mods/Thalassophobia/Items/Jobgear/Clown/slip4.ogg" range="400" selectionmode="Random" />
+      </StatusEffect>
+      <StatusEffect type="OnImpact" target="This" setvalue="true" minimumvelocity="1" delay="1" spritecolor="100,100,100,255" />
+    </MotionSensor>
+    <Throwable slots="Any,RightHand,LeftHand" holdpos="0,0" handle1="0,0" throwforce="1.5" msg="ItemMsgPickUpSelect">
+      <Sprite name="Banana Peel Throwable" texture="Mods/Thalassophobia/Items/Jobgear/Clown/clown.png" sourcerect="156,157,80,102" depth="0.6" origin="0.5,0.5" />
+    </Throwable>
+  </Item>
+  <Item name="" description="" identifier="thal_bowlingball" category="Equipment" cargocontaineridentifier="metalcrate" tags="smallitem" impactsoundtag="impact_soft" scale="0.25" interactdistance="150" impacttolerance="0.01">
+    <Deconstruct time="1">
+      <Item identifier="bikehorn" />
+    </Deconstruct>
+    <Sprite name="Bowling Ball" texture="Mods/Thalassophobia/Items/Jobgear/Clown/clown.png" sourcerect="700,569,123,122" depth="0.6" origin="0.5,0.5" />
+    <Body radius="60" density="40" friction="0.1" />
+    <!--
+    Internal bikehorn: Used as tracking for whether the ball is active/rolling (aka whether it should trip people)
+    -->
+    <MotionSensor rangeY="25" rangeX="25" canbeselected="false" minimumvelocity="1" ignoredead="true">
+      <!-- disable motion detection when in inventory -->
+      <StatusEffect type="OnContained" target="This" setvalue="true" minimumvelocity="90000" spritecolor="255,255,255,255" />
+      <StatusEffect type="OnContained" target="Contained" delay="0.5">
+        <RequiredItem items="bikehorn" type="Contained" />
+        <Remove />
+      </StatusEffect>
+      <StatusEffect type="OnNotContained" target="This" setvalue="true" delay="0.5" minimumvelocity="1" spritecolor="255,255,255,255" />
+      <StatusEffect type="OnNotContained" target="NearbyCharacters,This" range="100" Comparison="And">
+        <Sound file="Mods/Thalassophobia/Items/Jobgear/Clown/pins.ogg" range="6000" selectionmode="Random" />
+        <Conditional thal_fallen="gt 2" />
+      </StatusEffect>
+      <!-- SECOND PARSER -->
+      <StatusEffect type="OnNotContained" target="This" setvalue="true" Comparison="And" minimumvelocity="90000">
+        <Conditional MotionDetected="false" />
+        <RequiredItem items="bikehorn" type="Contained" />
+      </StatusEffect>
+      <!-- FIRST GATE -->
+      <StatusEffect type="OnNotContained" target="This" delay="0.6" setvalue="true">
+        <Conditional MotionDetected="false" />
+        <SpawnItem spawnposition="ThisInventory" identifier="bikehorn" />
+      </StatusEffect>
+      <StatusEffect type="OnNotContained" target="This" setvalue="true" delay="0.1" minimumvelocity="1" rangeX="30">
+        <Conditional MotionDetected="true" />
+        <Explosion range="40" stun="5" force="0" shockwave="false" flames="false" flash="false" smoke="false" underwaterbubble="false" sparks="false" camerashake="0">
+          <Affliction identifier="thal_fallen" strength="40" />
+        </Explosion>
+      </StatusEffect>
+    </MotionSensor>
+    <ItemContainer capacity="1" canbeselected="false" hideitems="true" slotsperrow="5" drawinventory="false">
+      <ContainedStateIndicator texture="Content/UI/ContainerIndicators.png" sourcerect="1,70,1,1" />
+      <Containable items="bikehorn" />
+    </ItemContainer>
+    <Throwable slots="Any,RightHand,LeftHand" holdpos="0,0" handle1="0,0" aimpos="-30,-40" throwpos="30,40" throwforce="1.5" msg="ItemMsgPickUpSelect">
+      <Sprite name="Banana Peel Throwable" texture="Mods/Thalassophobia/Items/Jobgear/Clown/clown.png" sourcerect="156,157,80,102" depth="0.6" origin="0.5,0.5" />
+    </Throwable>
+  </Item>
+  <Item name="" identifier="thal_whoopeecushion" category="Equipment" tags="weapon,smallitem" cargocontaineridentifier="metalcrate" scale="0.2" impacttolerance="0.01">
+    <Sprite texture="Mods/Thalassophobia/Items/Jobgear/Clown/clown.png" sourcerect="386,385,141,153" depth="0.55" origin="0.5,0.5" />
+    <Body radius="60" density="15" />
+    <Holdable slots="Any,RightHand,LeftHand" aimpos="100,0" handle1="-5,0" msg="ItemMsgPickUpSelect" />
+    <RangedWeapon reload="3">
+      <StatusEffect type="OnUse" target="This">
+        <Sound file="Mods/Thalassophobia/Items/Jobgear/Clown/fart.ogg" range="900" selectionmode="Random" />
+      </StatusEffect>
+      <StatusEffect type="OnImpact" target="This" setvalue="true" minimumvelocity="1" delay="1" />
+    </RangedWeapon>
+    <MotionSensor rangeY="15" rangeX="15" canbeselected="false" minimumvelocity="90000" ignoredead="true">
+      <StatusEffect type="OnContained" target="This" setvalue="true" minimumvelocity="90000" />
+      <StatusEffect type="OnNotContained" target="This" setvalue="true">
+        <Conditional MotionDetected="true" />
+        <Sound file="Mods/Thalassophobia/Items/Jobgear/Clown/fart.ogg" range="900" />
+      </StatusEffect>
+      <StatusEffect type="OnImpact" target="This" setvalue="true" minimumvelocity="1" delay="1" />
+    </MotionSensor>
+  </Item>
+  <Item name="" description="" identifier="thal_clownkit" category="Equipment" cargocontaineridentifier="metalcrate" tags="smallitem" impactsoundtag="impact_soft" scale="0.5" interactdistance="150">
+    <InventoryIcon name="PortCircus Inv" texture="Mods/Thalassophobia/Items/Jobgear/Clown/clown.png" sourcerect="3,56,117,133" depth="0.6" origin="0.5,0.5" />
+    <Sprite name="PortCircus Sprite" texture="Mods/Thalassophobia/Items/Jobgear/Clown/clown.png" sourcerect="3,56,117,133" depth="0.6" origin="0.5,0.5" />
+    <Body width="30" height="15" density="400" />
+    <CustomInterface canbeselected="false" drawhudwhenequipped="true">
+      <GuiFrame relativesize="0.4,0.6" anchor="Center" absoluteoffset="0,-30" style="ItemUI" />
+      <Button text="Bike Horn [1 Rubber + 1 Iron]">
+        <StatusEffect type="OnUse" targettype="This" delay="10" IsOn="false" drawhudwhenequipped="true">
+          <SpawnItem spawnposition="ThisInventory" identifier="bikehorn" />
+          <RequiredItem items="rubber" type="Contained" />
+          <RequiredItem items="iron" type="Contained" />
+        </StatusEffect>
+        <StatusEffect type="OnUse" target="This" IsOn="true" drawhudwhenequipped="false">
+          <RequiredItem items="rubber" type="Contained" />
+          <RequiredItem items="iron" type="Contained" />
+        </StatusEffect>
+        <StatusEffect type="OnUse" targettype="Contained" targets="rubber,iron" IsOn="true">
+          <Remove />
+          <RequiredItem items="rubber" type="Contained" />
+          <RequiredItem items="iron" type="Contained" />
+        </StatusEffect>
+      </Button>
+      <Button text="Blindfold [1 Bandage + 1 Plastiseal]">
+        <StatusEffect type="OnUse" targettype="This" delay="19" IsOn="false" drawhudwhenequipped="true">
+          <SpawnItem spawnposition="ThisInventory" identifier="thal_blindfold" />
+          <RequiredItem items="antibleeding1" type="Contained" />
+          <RequiredItem items="antibleeding2" type="Contained" />
+        </StatusEffect>
+        <StatusEffect type="OnUse" target="This" IsOn="true" drawhudwhenequipped="false">
+          <RequiredItem items="antibleeding1" type="Contained" />
+          <RequiredItem items="antibleeding2" type="Contained" />
+        </StatusEffect>
+        <StatusEffect type="OnUse" targettype="Contained" targets="antibleeding1,antibleeding2" IsOn="true">
+          <Remove />
+          <RequiredItem items="antibleeding1" type="Contained" />
+          <RequiredItem items="antibleeding2" type="Contained" />
+        </StatusEffect>
+      </Button>
+      <Button text="Banana Peel [1 Whoopee Cushion + 1 Joke Revolver]">
+        <StatusEffect type="OnUse" targettype="This" delay="30" IsOn="false" drawhudwhenequipped="true">
+          <SpawnItem spawnposition="ThisInventory" identifier="thal_bananapeel" />
+          <RequiredItem items="thal_whoopeecushion" type="Contained" />
+          <RequiredItem items="thal_jokerevolver" type="Contained" />
+        </StatusEffect>
+        <StatusEffect type="OnUse" target="This" IsOn="true" drawhudwhenequipped="false">
+          <RequiredItem items="thal_whoopeecushion" type="Contained" />
+          <RequiredItem items="thal_jokerevolver" type="Contained" />
+        </StatusEffect>
+        <StatusEffect type="OnUse" targettype="Contained" targets="thal_whoopeecushion,thal_jokerevolver" IsOn="true">
+          <Remove />
+          <RequiredItem items="thal_whoopeecushion" type="Contained" />
+          <RequiredItem items="thal_jokerevolver" type="Contained" />
+        </StatusEffect>
+      </Button>
+      <Button text="Bowling Ball [1 Banana Peel + 1 Confetti Grenade]">
+        <StatusEffect type="OnUse" targettype="This" delay="11" IsOn="false" drawhudwhenequipped="true">
+          <SpawnItem spawnposition="ThisInventory" identifier="thal_bowlingball" />
+          <RequiredItem items="thal_confettigrenade" type="Contained" />
+          <RequiredItem items="thal_bananapeel" type="Contained" />
+        </StatusEffect>
+        <StatusEffect type="OnUse" target="This" IsOn="true" drawhudwhenequipped="false">
+          <RequiredItem items="thal_confettigrenade" type="Contained" />
+          <RequiredItem items="thal_bananapeel" type="Contained" />
+        </StatusEffect>
+        <StatusEffect type="OnUse" targettype="Contained" targets="thal_bananapeel,thal_confettigrenade" IsOn="true">
+          <Remove />
+          <RequiredItem items="thal_confettigrenade" type="Contained" />
+          <RequiredItem items="thal_bananapeel" type="Contained" />
+        </StatusEffect>
+      </Button>
+      <Button text="Party Blower [1 Bike Horn + 1 Diving Mask]">
+        <StatusEffect type="OnUse" targettype="This" delay="20" IsOn="false" drawhudwhenequipped="true">
+          <SpawnItem spawnposition="ThisInventory" identifier="thal_partyblower" />
+          <RequiredItem items="divingmask" type="Contained" />
+          <RequiredItem items="bikehorn" type="Contained" />
+        </StatusEffect>
+        <StatusEffect type="OnUse" target="This" IsOn="true" drawhudwhenequipped="false">
+          <RequiredItem items="divingmask" type="Contained" />
+          <RequiredItem items="bikehorn" type="Contained" />
+        </StatusEffect>
+        <StatusEffect type="OnUse" targettype="Contained" targets="divingmask,bikehorn" IsOn="true">
+          <Remove />
+          <RequiredItem items="divingmask" type="Contained" />
+          <RequiredItem items="bikehorn" type="Contained" />
+        </StatusEffect>
+      </Button>
+      <Button text="Chaos Horn [1 Bike Horn + 1 C-4 Block]">
+        <StatusEffect type="OnUse" targettype="This" delay="20" IsOn="false" drawhudwhenequipped="true">
+          <SpawnItem spawnposition="ThisInventory" identifier="thal_chaoshorn" />
+          <RequiredItem items="c4block" type="Contained" />
+          <RequiredItem items="bikehorn" type="Contained" />
+        </StatusEffect>
+        <StatusEffect type="OnUse" target="This" IsOn="true" drawhudwhenequipped="false">
+          <RequiredItem items="c4block" type="Contained" />
+          <RequiredItem items="bikehorn" type="Contained" />
+        </StatusEffect>
+        <StatusEffect type="OnUse" targettype="Contained" targets="c4block,bikehorn" IsOn="true">
+          <Remove />
+          <RequiredItem items="c4block" type="Contained" />
+          <RequiredItem items="bikehorn" type="Contained" />
+        </StatusEffect>
+      </Button>
+      <Button text="Whoopee Cushion [1 Bike Horn + 1 Oxygen Tank]">
+        <StatusEffect type="OnUse" targettype="This" delay="20" IsOn="false" drawhudwhenequipped="true">
+          <SpawnItem spawnposition="ThisInventory" identifier="thal_whoopeecushion" />
+          <RequiredItem items="oxygentank" type="Contained" />
+          <RequiredItem items="bikehorn" type="Contained" />
+        </StatusEffect>
+        <StatusEffect type="OnUse" target="This" IsOn="true" drawhudwhenequipped="false">
+          <RequiredItem items="oxygentank" type="Contained" />
+          <RequiredItem items="bikehorn" type="Contained" />
+        </StatusEffect>
+        <StatusEffect type="OnUse" targettype="Contained" targets="oxygentank,bikehorn" IsOn="true">
+          <Remove />
+          <RequiredItem items="oxygentank" type="Contained" />
+          <RequiredItem items="bikehorn" type="Contained" />
+        </StatusEffect>
+      </Button>
+      <Button text="Joke Revolver [1 Bike Horn + 1 Harpoon]">
+        <StatusEffect type="OnUse" targettype="This" delay="30" IsOn="false" drawhudwhenequipped="true">
+          <SpawnItem spawnposition="ThisInventory" identifier="thal_jokerevolver" />
+          <RequiredItem items="harpoonammo" type="Contained" />
+          <RequiredItem items="bikehorn" type="Contained" />
+        </StatusEffect>
+        <StatusEffect type="OnUse" target="This" IsOn="true" drawhudwhenequipped="false">
+          <RequiredItem items="harpoonammo" type="Contained" />
+          <RequiredItem items="bikehorn" type="Contained" />
+        </StatusEffect>
+        <StatusEffect type="OnUse" targettype="Contained" targets="harpoonammo,bikehorn" IsOn="true">
+          <Remove />
+          <RequiredItem items="harpoonammo" type="Contained" />
+          <RequiredItem items="bikehorn" type="Contained" />
+        </StatusEffect>
+      </Button>
+      <Button text="Confetti Grenade [1 Any Grenade + 1 Party Blower]">
+        <StatusEffect type="OnUse" targettype="This" delay="11" IsOn="false" drawhudwhenequipped="true">
+          <SpawnItem spawnposition="ThisInventory" identifier="thal_confettigrenade" />
+          <RequiredItem items="stungrenade,fraggrenade,40mmgrenade,40mmstungrenade" type="Contained" />
+          <RequiredItem items="thal_partyblower" type="Contained" />
+        </StatusEffect>
+        <StatusEffect type="OnUse" target="This" IsOn="true" drawhudwhenequipped="false">
+          <RequiredItem items="stungrenade,fraggrenade,40mmgrenade,40mmstungrenade" type="Contained" />
+          <RequiredItem items="thal_partyblower" type="Contained" />
+        </StatusEffect>
+        <StatusEffect type="OnUse" targettype="Contained" targets="stungrenade,fraggrenade,40mmgrenade,40mmstungrenade,thal_partyblower" IsOn="true">
+          <Remove />
+          <RequiredItem items="stungrenade,fraggrenade,40mmgrenade,40mmstungrenade" type="Contained" />
+          <RequiredItem items="thal_partyblower" type="Contained" />
+        </StatusEffect>
+      </Button>
+    </CustomInterface>
+    <ItemContainer capacity="2" canbeselected="false" hideitems="true" slotsperrow="5" drawinventory="true" />
+    <Holdable handle1="0,0" slots="Any,RightHand,LeftHand" msg="ItemMsgPickUpSelect"></Holdable>
+    <LightComponent range="250" lightcolor="255,0,0,100" IsOn="false" powerconsumption="0" blinkFrequency="1" allowingameediting="false">
+      <Sound file="Mods/Thalassophobia/Items/Jobgear/Clown/clownfab.ogg" type="OnActive" range="800" loop="true" />
+    </LightComponent>
+  </Item>
+  <Item name="" identifier="thal_chaoshorn" category="Equipment" tags="weapon,smallitem" cargocontaineridentifier="metalcrate" description="">
+    <Fabricate suitablefabricators="thal_clownkit" requiredtime="40" outcondition="100">
+      <RequiredSkill identifier="electrical" level="30" />
+      <RequiredItem identifier="ic4block" />
+      <RequiredItem identifier="bikehorn" />
+    </Fabricate>
+    <InventoryIcon texture="Content/Items/InventoryIconAtlas.png" sourcerect="769,385,64,64" depth="0.55" origin="0.5,0.5" />
+    <Sprite texture="Content/Items/Jobgear/Old/clownshirt.png" sourcerect="32,50,32,14" depth="0.55" />
+    <Body width="30" height="10" density="15" />
+    <Holdable slots="Any,RightHand,LeftHand" aimpos="100,0" handle1="-5,0" msg="ItemMsgPickUpSelect" />
+    <RangedWeapon reload="4">
+      <StatusEffect type="OnUse" target="This">
+        <Explosion range="1000.0" structuredamage="0" force="0.01" camerashake="20.0" flames="false" smoke="false" sparks="false" underwaterbubble="false" />
+      </StatusEffect>
+      <Sound file="Content/Items/Weapons/ExplosionDebris1.ogg" type="OnUse" range="8000" selectionmode="Random" />
+      <sound file="Content/Items/Weapons/ExplosionDebris2.ogg" type="OnUse" range="8000" />
+      <sound file="Content/Items/Weapons/ExplosionDebris3.ogg" type="OnUse" range="8000" />
+    </RangedWeapon>
+    <aitarget soundrange="1000" fadeouttime="5" />
+  </Item>
+  <Item name="" description="" identifier="thal_miniwardrobe" category="Equipment" cargocontaineridentifier="metalcrate" tags="smallitem" impactsoundtag="impact_soft" scale="0.3" interactdistance="150">
+    <Sprite name="miniward" texture="Mods/Thalassophobia/Items/Jobgear/Clown/clown.png" sourcerect="640,348,202,224" depth="0.6" origin="0.5,0.5" />
+    <Body width="30" height="15" density="400" />
+    <ItemContainer capacity="8" canbeselected="false" hideitems="true" slotsperrow="5" drawinventory="true">
+      <Containable items="captainsuniform1,captainsuniform2,captainsuniform3,doctorsuniform1,doctorsuniform2,clothing,securityuniform1,securityuniform2,securityuniform3,orangejumpsuit1,orangejumpsuit2,bluejumpsuit1,bluejumpsuit2,assistantclothes,clowncostume,thal_huskcostume" />
+    </ItemContainer>
+    <Holdable handle1="0,0" slots="Any,RightHand,LeftHand" msg="ItemMsgPickUpSelect"></Holdable>
+  </Item>
+  <Item name="" identifier="thal_clownpack" category="Equipment" tags="smallitem" scale="0.35" cargocontaineridentifier="metalcrate" description="" impactsoundtag="impact_soft">
+    <Deconstruct time="40">
+      <Item identifier="bikehorn" />
+      <Item identifier="bikehorn" />
+    </Deconstruct>
+    <Sprite texture="clownpack.png" sourcerect="133,59,114,135" depth="0.6" origin="0.5,0.5" />
+    <Body width="114" height="135" density="40" />
+    <Wearable slots="Any,OuterClothes" msg="ItemMsgPickUpSelect">
+      <StatusEffect type="Always" target="This,Character" IsShootable="false" setvalue="true" stackable="false">
+        <Conditional IsRagdolled="false" />
+      </StatusEffect>
+      <damagemodifier afflictionidentifiers="stun" armorsector="180.0,360.0" damagemultiplier="0.15" deflectprojectiles="true" />
+      <damagemodifier afflictiontypes="damage" armorsector="180.0,360.0" damagemultiplier="0.15" bleedingmultiplier="0.2" damagesound="LimbArmor" deflectprojectiles="true" />
+      <sprite name="clown wearable backpack" texture="clownpack.png" limb="Torso" hidelimb="false" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" sourcerect="0,0,256,256" origin="0.5,0.5" />
+    </Wearable>
+    <ItemContainer capacity="8" canbeselected="false" hideitems="true" slotsperrow="2" drawinventory="true">
+      <Containable items="toyhammer,bikehorn,clownmask,clowncostume,clownitem,smallitem" />
+    </ItemContainer>
+  </Item>
+  <Item name="" identifier="thal_streetsign" category="Equipment" Tags="smallitem,weapon" Scale="0.5" cargocontaineridentifier="metalcrate" impactsoundtag="impact_metal_light">
+    <PreferredContainer primary="armcab" minamount="0" maxamount="1" spawnprobability="0.1" />
+    <Price locationtype="Military" buyprice="1000" />
+    <Price locationtype="City" buyprice="1300" />
+    <Price locationtype="Outpost" buyprice="1900" />
+    <Price locationtype="Research" buyprice="900" />
+    <Price locationtype="Blacksite" buyprice="900" />
+    <InventoryIcon name="streetsign icon" texture="Mods/Thalassophobia/Items/Jobgear/Clown/clown.png" sourcerect="900,0,99,116" origin="0.5,0.5" />
+    <Sprite name="streetsign" texture="Mods/Thalassophobia/Items/Jobgear/Clown/clown.png" sourcerect="904,-2,98,376" depth="0.55" origin="0.49603432,0.5464647" />
+    <Body width="90" height="350" density="30" />
+    <MeleeWeapon slots="Any,RightHand+LeftHand" aimpos="45,10" handle1="0,-30" handle2="0,-10" holdangle="0" reload="0.2" range="150" combatPriority="50" msg="ItemMsgPickUpSelect">
+      <Attack context="Ground" cooldown="3" afterattack="Pursue" range="150" damagerange="150" duration="0.25" structuredamage="0" itemdamage="50" structuresoundtype="StructureSlash" targetforce="0" severlimbsprobability="1.0" torque="-250" force="20" applyforceonlimbs="0, 1, 2, 13" targettype="Any" hitdetectiontype="Distance" stun="0" onlyhumans="False" applyforcesonlyonce="True" targetimpulse="50" targetimpulseworld="0,0" targetforceworld="0,0" stickchance="0" priority="0" secondarycooldown="0" cooldownrandomfactor="0.5" reverse="False" targetlimbtype="None">
+				<Sound file="Content/Sounds/Damage/LimbSlash1.ogg" selectionmode="random" range="500" />
+        <Sound file="Content/Sounds/Damage/LimbSlash2.ogg" range="500" />
+        <Sound file="Content/Sounds/Damage/LimbSlash3.ogg" range="500" />
+        <Sound file="Content/Sounds/Damage/LimbSlash4.ogg" range="500" />
+        <Sound file="Content/Sounds/Damage/LimbSlash5.ogg" range="500" />
+        <Affliction identifier="lacerations" strength="14" />
+        <StatusEffect type="Always" target="This" setvalue="true" structuredamage="10" itemdamage="30"></StatusEffect>
+      </Attack>
+      <!-- Normal glowcrystal attack -->
+      <StatusEffect type="OnActive" target="Character, Parent" SpeedMultiplier="1.2" setvalue="true" disabledeltatime="true" />
+      <StatusEffect type="OnUse" target="Character" disabledeltatime="false" setvalue="false" >
+				
+        <ParticleEmitter particle="bloodsplash" particleamount="9" velocitymin="0" velocitymax="300" anglemin="0" anglemax="360" scalemin="2.0" scalemax="3.0" colormultiplier="2555,0,0,255" />
+      </StatusEffect>
+    </MeleeWeapon>
+  </Item>
+</Items>

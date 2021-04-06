@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<huskappendage>
+	<limb id="13" name="plush" type="None" height="10" width="4" notes="" spriteorientation="NaN" flip="True" mirrorvertically="False" mirrorhorizontally="False" hide="False" attackpriority="1" steerforce="5" radius="0" density="0.1" ignorecollisions="False" angulardamping="7" pullpos="0,0" stepoffset="0,0" refjoint="-1" mouthpos="0,0" healthindex="0" friction="0.3" restitution="0.05" constanttorque="0" constantangle="0" scale="0.8" attackforcemultiplier="1" minseverancedamage="1" severedfadeouttime="10" applytailangle="False" sinefrequencymultiplier="1" sineamplitudemultiplier="1" blinkfrequency="0" blinkdurationin="0.2" blinkdurationout="0.5" blinkholdtime="0" blinkrotationin="0" blinkrotationout="45" blinkforce="50" blinktransitionin="Linear" blinktransitionout="Linear">
+    <sprite texture="Mods/Thalassophobia/Characters/Gummy/GeneLimbs/maggot.png" sourcerect="33,144,63,96" origin="0.5,0.5" depth="0.05" color="255,255,255,255" deadcolor="255,255,255,0" deadcolortime="0" />
+			<StatusEffect target="Character" type="Always" >
+        <ReduceAffliction identifier="bleeding" amount="0.7" />
+      </StatusEffect>
+      
+  </limb>
+  <limb id="14" name="branchback" type="None" height="10" width="4" notes="" spriteorientation="NaN" flip="True" mirrorvertically="False" mirrorhorizontally="False" hide="False" attackpriority="1" steerforce="5" radius="0" density="0.1" ignorecollisions="False" angulardamping="7" pullpos="0,0" stepoffset="0,0" refjoint="-1" mouthpos="0,0" healthindex="0" friction="0.3" restitution="0.05" constanttorque="0" constantangle="0" scale="1.0" attackforcemultiplier="1" minseverancedamage="1" severedfadeouttime="10" applytailangle="False" sinefrequencymultiplier="1" sineamplitudemultiplier="1" blinkfrequency="0" blinkdurationin="0.2" blinkdurationout="0.5" blinkholdtime="0" blinkrotationin="0" blinkrotationout="45" blinkforce="50" blinktransitionin="Linear" blinktransitionout="Linear">
+    <sprite texture="Mods/Thalassophobia/Characters/Gummy/GeneLimbs/maggot.png" sourcerect="176,1,38,133" origin="0.86,1.0" depth="1.0" color="255,255,255,255" deadcolor="255,255,255,0" deadcolortime="0" />
+  </limb>
+  <limb id="15" name="branchfront" type="None" height="10" width="4" notes="" spriteorientation="NaN" flip="True" mirrorvertically="False" mirrorhorizontally="False" hide="False" attackpriority="1" steerforce="5" radius="0" density="0.1" ignorecollisions="False" angulardamping="7" pullpos="0,0" stepoffset="0,0" refjoint="-1" mouthpos="0,0" healthindex="0" friction="0.3" restitution="0.05" constanttorque="0" constantangle="0" scale="1.0" attackforcemultiplier="1" minseverancedamage="1" severedfadeouttime="10" applytailangle="False" sinefrequencymultiplier="1" sineamplitudemultiplier="1" blinkfrequency="0" blinkdurationin="0.2" blinkdurationout="0.5" blinkholdtime="0" blinkrotationin="0" blinkrotationout="45" blinkforce="50" blinktransitionin="Linear" blinktransitionout="Linear">
+    <sprite texture="Mods/Thalassophobia/Characters/Gummy/GeneLimbs/maggot.png" sourcerect="176,1,38,133" origin="0.86,1.0" depth="0" color="255,255,255,255" deadcolor="255,255,255,0" deadcolortime="0" />
+  </limb>
+  
+  <!-- Head to husk appendage -->
+  
+  <!-- plush -->
+  <joint name="Front Top Arm to plush" limb1="4" limb2="13" limb1anchor="1,-4" limb2anchor="0,-5" upperlimit="0" lowerlimit="-10" weldjoint="True" canbesevered="False" limitenabled="True" />
+  <joint name="Front Arm to branch" limb1="5" limb2="15" limb1anchor="-1,16" limb2anchor="-5,7" upperlimit="0" lowerlimit="-10" weldjoint="True" canbesevered="False" limitenabled="True" />
+  <joint name="Back Arm to branch" limb1="3" limb2="14" limb1anchor="-1,16" limb2anchor="-5,7" upperlimit="0" lowerlimit="-10" weldjoint="True" canbesevered="False" limitenabled="True" />
+
+</huskappendage>

@@ -1,0 +1,60 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Afflictions>
+  <Affliction name="Combustion Syndrome" identifier="thal_disorderexplode" description="A genetic disorder that makes patients spontaneously explode, somehow. Can be cured by grafting human DNA." type="nausea" causeofdeathdescription="Killed by explosive genetic disorder." selfcauseofdeathdescription="Your explosive genetic disorder has killed you." limbspecific="false" maxstrength="1" karmachangeonapplied="-0.1" damageoverlayalpha="1" iconcolors="255,0,140,255;255,0,140,255">
+    <Effect minstrength="0" maxstrength="100" strengthchange="0.1">
+      <StatusEffect target="Character" SpeedMultiplier="0.7" setvalue="true" />
+    </Effect>
+    <PeriodicEffect mininterval="12" maxinterval="30">
+      <StatusEffect target="Character" SpeedMultiplier="0.0" setvalue="true" duration="1.7" />
+      <StatusEffect target="Character" comparison="and">
+        <Conditional ishuman="true" />
+        <Conditional ismale="true" />
+        <Sound file="Mods/Thalassophobia/Characters/Gummy/scream1.ogg" selectionmode="Random" />
+        <Sound file="Mods/Thalassophobia/Characters/Gummy/scream2.ogg" />
+        <Sound file="Mods/Thalassophobia/Characters/Gummy/scream3.ogg" />
+        <Sound file="Mods/Thalassophobia/Characters/Gummy/scream4.ogg" />
+      </StatusEffect>
+      <StatusEffect target="Character" comparison="and">
+        <Conditional ishuman="true" />
+        <Conditional isfemale="true" />
+        <Sound file="Content/Sounds/HUMAN_chokeFemale1.ogg" selectionmode="Random" />
+        <Sound file="Content/Sounds/HUMAN_chokeFemale2.ogg" />
+        <Sound file="Content/Sounds/HUMAN_chokeFemale3.ogg" />
+      </StatusEffect>
+      <StatusEffect target="Character">
+        <Affliction identifier="stun" strength="0.1" />
+        <Affliction identifier="organdamage" strength="0.5" />
+      </StatusEffect>
+      <StatusEffect target="Character" targetlimbs="Head" duration="1">
+        <Explosion range="90.0" structuredamage="3" itemdamage="3" force="16.0" stun="3" severlimbsprobability="0.0" decal="vomitsplatter" decalsize="1.25" flames="true" />
+      </StatusEffect>
+    </PeriodicEffect>
+    <icon name="explodedisorder" texture="Mods/Thalassophobia/UI/MainIconsAtlas.png" sourcerect="386,769,128,128" color="60,107,195,255" origin="0,0" />
+  </Affliction>
+  <Affliction name="Darrow Gamble Syndrome" identifier="thal_disorderfart" description="A genetic disorder that compromises the effectiveness of a patients intestines. It gets worse when the patient digests food. Can be cured by grafting human DNA." type="nausea" causeofdeathdescription="Killed by explosive genetic disorder." selfcauseofdeathdescription="Your explosive genetic disorder has killed you." limbspecific="false" maxstrength="1" karmachangeonapplied="-0.1" damageoverlayalpha="1" iconcolors="255,0,140,255;255,0,140,255">
+    <Effect minstrength="0" maxstrength="100">
+      <StatusEffect target="Character" SpeedMultiplier="0.7" setvalue="true" />
+    </Effect>
+    <PeriodicEffect mininterval="5" maxinterval="15">
+      <StatusEffect target="Character">
+        <Affliction identifier="thal_diarrhea" strength="11" />
+      </StatusEffect>
+      <StatusEffect target="Character">
+        <Conditional thal_full="gt 1" />
+        <Affliction identifier="thal_diarrhea" strength="10" />
+      </StatusEffect>
+    </PeriodicEffect>
+    <icon name="fartdisorder" texture="Mods/Thalassophobia/UI/MainIconsAtlas.png" sourcerect="386,769,128,128" color="60,107,195,255" origin="0,0" />
+  </Affliction>
+  <Affliction name="Severe Epilepsy" identifier="thal_disorderseizure" description="A genetic disorder that causes random spasms and loss of motor control. Can be cured by grafting human DNA. " type="nausea" causeofdeathdescription="Killed by explosive genetic disorder." selfcauseofdeathdescription="Your explosive genetic disorder has killed you." limbspecific="false" maxstrength="1" karmachangeonapplied="-0.1" damageoverlayalpha="1" iconcolors="255,0,140,255;255,0,140,255">
+    <Effect minstrength="0" maxstrength="100">
+      <StatusEffect target="Character" SpeedMultiplier="1.1" setvalue="true" />
+    </Effect>
+    <PeriodicEffect mininterval="10" maxinterval="15">
+      <StatusEffect target="Character">
+        <Affliction identifier="stun" strength="2" />
+      </StatusEffect>
+    </PeriodicEffect>
+    <icon name="stundisorder" texture="Mods/Thalassophobia/UI/MainIconsAtlas.png" sourcerect="384,768,128,128" color="60,107,195,255" origin="0,0" />
+  </Affliction>
+</Afflictions>

@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Items>
+	<!--
+	TODO:
+	Rework this into a vanilla headset override that gives channels depending on the clothes you wear/afflictions (ie husk, medics, team captains, clowns)
+	-->
+<Item name="" identifier="thal_headsetchannel" scale="0.5" category="Equipment" tags="smallitem" description="" cargocontaineridentifier="metalcrate" impactsoundtag="impact_metal_light">
+    <InventoryIcon texture="Content/Items/InventoryIconAtlas.png" sourcerect="256,0,64,64" origin="0.5,0.5" />
+    <Sprite name="Multichannel Headset" texture="Content/Items/Jobgear/headgears.png" depth="0.6" sourcerect="28,321,49,62" origin="0.5,0.5" />
+    <Body radius="15" height="10" density="30" />
+    <Deconstruct time="10">
+      <Item identifier="headset" />
+      <Item identifier="wificomponent" />
+    </Deconstruct>
+    <WifiComponent range="35000.0" LinkToChat="true" MinChatMessageInterval="0.0" Channel="1">
+      <RequiredItems items="mobilebattery" type="Contained" />
+      <CustomInterface canbeselected="false" drawhudwhenequipped="true">
+      <GuiFrame relativesize="0.15,0.1" anchor="BottomLeft" absoluteoffset="0,0" style="ItemUI" />
+      <TextBox text="Active Channel" propertyname="Channel" />
+      </CustomInterface>
+    </WifiComponent>
+    <ItemContainer capacity="1" hideitems="true">
+      <ContainedStateIndicator texture="Content/UI/ContainerIndicators.png" sourcerect="1,70,107,31" />
+      <Containable items="mobilebattery" />
+    </ItemContainer>
+    <Wearable limbtype="Head" slots="Any,Headset" msg="ItemMsgPickUpSelect" displaycontainedstatus="true">
+      <StatusEffect type="OnWearing" target="Contained" Condition="-0.05">
+        <RequiredItem items="batterycell" type="Contained" />
+      </StatusEffect>
+      <StatusEffect type="OnWearing" target="Contained" Condition="-0.025">
+        <RequiredItem items="fulguriumbatterycell" type="Contained" />
+      </StatusEffect>
+      <StatusEffect type="OnWearing" target="Contained" Condition="-0.05">
+        <RequiredItem excludedidentifiers="batterycell,fulguriumbatterycell" type="Contained" />
+      </StatusEffect>
+      <sprite name="Headset Wearable" texture="Content/Items/Jobgear/headgears.png" limb="Head" hidelimb="false" inheritlimbdepth="true" inherittexturescale="true" hideotherwearables="false" sourcerect="28,321,49,62" origin="0.5,0.6" />
+    </Wearable>
+    
+  <!-- a whole item to make shitting noises......... -->
+  </Item>
+  <Item name="emshitter" identifier="thal_emshitter" scale="0.5" >
+    <Sprite name="shitter" texture="Content/Items/Jobgear/headgears.png" depth="0.6" sourcerect="1,1,1,1" origin="0.5,0.5" />
+    <Body radius="15" height="10" density="30" bodytype="Kinematic" />
+    <ItemContainer capacity="1" hideitems="true">
+      <ContainedStateIndicator texture="Content/UI/ContainerIndicators.png" sourcerect="1,70,107,31" />
+      <Containable items="mobilebattery" />
+      <StatusEffect type="Always" target="This" lifetime="1.0">
+				<Sound file="Mods/Thalassophobia/Items/Jobgear/Clown/fart.ogg" range="900" />
+      </StatusEffect>
+      <StatusEffect type="Always" target="This" delay="2.0">
+				<RemoveItem />
+      </StatusEffect>
+    </ItemContainer>
+  </Item>
+  <!-- autofill spawns in outposts and triggers an event that triggers other events in thalass -->
+  <Item name="eventstarter" identifier="thal_eventstarter" scale="0.5" tags="fuelrod" >
+    <Sprite name="rngflag" texture="Content/Items/Jobgear/headgears.png" depth="0.6" sourcerect="1,1,1,1" origin="0.5,0.5" />
+    <PreferredContainer primary="outpostreactor" minamount="1" maxamount="1" spawnprobability="1.0" />
+    <ItemContainer capacity="1" hideitems="true">
+      <StatusEffect type="Always" target="This" >
+				<TriggerEvent identifier="thal_eventmaster" />
+				<RemoveItem />
+      </StatusEffect>
+    </ItemContainer>
+  </Item>
+  
+  <!--RNG THINGS
+  to use properly, spawnitem rngseed, then wait for 1 second, then use nearbyitems to check nearby rng output's condition. use and comparison to apply effect to you and rngthing (rngthing is junk and will delete itself in a few secs) -->
+  
+  <!-- triggers event, spawns rngthing, deletes self instantly (seems to be some problem with triggerevent and stacking) -->
+  <Item name="rngseed" identifier="thal_rngseed" scale="0.5" >
+    <Sprite name="shitter" texture="Content/Items/Jobgear/headgears.png" depth="0.6" sourcerect="1,1,1,1" origin="0.5,0.5" />
+    <Body radius="15" height="10" density="30" bodytype="Kinematic" />
+    <ItemContainer capacity="1" hideitems="true">
+      <StatusEffect type="Always" target="This" >
+				<TriggerEvent identifier="thal_rngcall" />
+				<SpawnItem identifier="thal_rngoutput" />
+				<RemoveItem />
+      </StatusEffect>
+    </ItemContainer>
+  </Item>
+  
+  <!-- output target for the event, what items utilizing rng should scan for -->
+  <Item name="rngthing" identifier="thal_rngoutput" scale="0.5" tags="rngthing" >
+    <Sprite name="shitter" texture="Content/Items/Jobgear/headgears.png" depth="0.6" sourcerect="1,1,1,1" origin="0.5,0.5" />
+    <Body radius="15" height="10" density="30" bodytype="Kinematic" />
+    <ItemContainer capacity="1" hideitems="true">
+      <StatusEffect type="Always" target="This" stackable="false" delay="3.0" >
+				<RemoveItem />
+      </StatusEffect>
+    </ItemContainer>
+  </Item>
+</Items>

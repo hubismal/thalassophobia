@@ -1,0 +1,495 @@
+<?xml version="1.0" encoding="utf-8"?>
+<infotexts language="English" nowhitespace="false" translatedname="English">
+  <!-- Multitools -->
+  
+  <!-- removed: duplicate functionality of EK armory (even though i did it first!!) >:( -->
+  <entityname.thal_headsetchannel>Multichannel Headset</entityname.thal_headsetchannel>
+  <entitydescription.thal_headsetchannel>Channeled Headset. Enter a number to change the channel.</entitydescription.thal_headsetchannel>
+  
+  <entityname.thal_rainbowsprayer>TruColor Sprayer</entityname.thal_rainbowsprayer>
+  <entitydescription.thal_rainbowsprayer>An modified sprayer engineered for painting with a more vibrant color set. Enter colors in the format Red,Green,Blue,Transparency (ranging from 0 to 255). Requires TruPaint, fabricated from other paints.</entitydescription.thal_rainbowsprayer>
+  
+  <entityname.thal_sign>Sign</entityname.thal_sign>
+  <entitydescription.thal_sign>A standard white sign for displaying text. Can be attatched to a wall and written on with a pen. Water resistant, but flammable.</entitydescription.thal_sign>
+  <ItemMsgWriteSelectPen>[[select]] Write (Pen)</ItemMsgWriteSelectPen>
+  <ItemMsgDetatchUsePen>[[use]] Detatch (Pen)</ItemMsgDetatchUsePen>
+  
+  <!-- removed: overpowered. dislike items that make others obsolete regardless of price. -->
+  <entityname.thal_multitool>Navy Grade Pocketknife</entityname.thal_multitool>
+  <entitydescription.thal_multitool>A mass produced pocketknife issued to many ships by the coalition but used by everyone. Comes with retractable tools mimicking a screwdriver, wrench, and comes with a foldable blade designed with minor alien combat in mind.</entitydescription.thal_multitool>
+  <!-- Handheld Maps -->
+  <entityname.thal_map>Automap</entityname.thal_map>
+  <entitydescription.thal_map>Generic Automap that scans the hull to detect the ship layout as well as any abnormalities in the shell. Useful as a map and easy on the battery.</entitydescription.thal_map>
+  
+  <entityname.thal_mapwater>Hydromap</entityname.thal_mapwater>
+  <entitydescription.thal_mapwater>Specially designed Automap designed to not only scan the hull of the ship and the according breaches, but also the water within the ship. Created for use among Mechanics, but good for anyone looking to patch and drain a ship.</entitydescription.thal_mapwater>
+  
+  <entityname.thal_mapair>Aeromap</entityname.thal_mapair>
+  <entitydescription.thal_mapair>Specially designed Automap designed not only to scan the hull of the ship and breaches, but also the oxygen levels within the ship. Created for use among Engineers, but good for anyone looking to detect electrical fires or general oxygen absence.</entitydescription.thal_mapair>
+  
+  <entityname.thal_mapall>Omnimap</entityname.thal_mapall>
+  <entitydescription.thal_mapall>Advanced Automap engineered to scan for the hull, breaches, water, and oxygen levels. Its all-seeing nature consumes battery faster than usual.</entitydescription.thal_mapall>
+  
+  <entityname.thal_foldingchair>Folding Chair</entityname.thal_foldingchair>
+  <entitydescription.thal_foldingchair>A steel folding chair that can be moved, sat on, or swung wrestling-style.</entitydescription.thal_foldingchair>
+  <ItemMsgSitDownSelect>[[select]] Sit Down</ItemMsgSitDownSelect>
+  <ItemMsgPickUpAction>[[use]] Pick Up</ItemMsgPickUpAction>
+  
+  <entityname.thal_foldingtable>Folding Table</entityname.thal_foldingtable>
+  <entitydescription.thal_foldingtable>A steel folding table that can be picked up and moved. Players can also drop items on it.</entitydescription.thal_foldingtable>
+  
+  <entityname.thal_attachablejunction>Detachable Junction Box</entityname.thal_attachablejunction>
+  <entitydescription.thal_attachablejunction>A junction box that can be attached and detached from a wall. Useful for electricians managing or building a power grid.</entitydescription.thal_attachablejunction>
+  
+  <entityname.thal_dpbm>Dave's Phat Beat Machine</entityname.thal_dpbm>
+  <entitydescription.thal_dpbm>A machine that plays and layers instrumental loops. Press a button and wait no more than 9 seconds. Each loop is 9 seconds long.</entitydescription.thal_dpbm>
+  
+  <entityname.thal_shockmodule>Discharge Module</entityname.thal_shockmodule>
+  <entitydescription.thal_shockmodule>Wireable module that can be hooked up to the wall like a button. On activation, will discharge a stunning bolt of electricity.</entitydescription.thal_shockmodule>
+  
+  <entityname.thal_pen>Pen</entityname.thal_pen>
+  <entitydescription.thal_pen>A cheap waterproof plastic pen with an eraser on the back to rub off ink. Allows you to write on memos and signs, or stab people. Typically restricted to captains to prevent vandalism.</entitydescription.thal_pen>
+  
+  <entityname.thal_memo>Memo</entityname.thal_memo>
+  <entitydescription.thal_memo>A small writeable note. Requires a pen to edit. The contents don't persist between rounds.</entitydescription.thal_memo>
+  
+  <entityname.thal_memoboard>Memo Board</entityname.thal_memoboard>
+  <entitydescription.thal_memoboard>Board used for containing memos. Players can mouse over the notes to see what they say. As of Barotrauma 0.10.5.0+ notes unfortunately do not save their contents between rounds/sub editor.</entitydescription.thal_memoboard>
+  
+  <entityname.thal_breachcharge>Breaching Charge</entityname.thal_breachcharge>
+  <entitydescription.thal_breachcharge>Shaped charge that specializes in shredding doors. Attatch it next to a door, set it, and run for cover. Ideal for ruins, wrecks, and weld-ins.</entitydescription.thal_breachcharge>
+  <!-- Traitor tools -->
+  
+  <entityname.thal_hackeruplink>r3n3g8 Uplink</entityname.thal_hackeruplink>
+  <entitydescription.thal_hackeruplink>A portable menu capable of spawning in items from the r3n3g8 catalogue, provided you have the materials.</entitydescription.thal_hackeruplink>
+  
+  <entityname.thal_powersink>Powersink</entityname.thal_powersink>
+  <entitydescription.thal_powersink>r3n3g8 engineered attatchable module capable of putting a massive load on a power grid when wired in. Useful for electrical pump and dump attacks that will easily mass-fry junctions and occasionally start fires.</entitydescription.thal_powersink>
+  
+  
+  <entityname.thal_structnanogrenade>Structure Repair Grenade</entityname.thal_structnanogrenade>
+  <entitydescription.thal_structnanogrenade>A single-use burst grenade that employs nanobots to quickly repair large segments of hull. Ideal for emergencies where quick hull fixes are needed.</entitydescription.thal_structnanogrenade>
+  
+  
+  <!-- unimplemented: unable to access itemcomponent scope via nearbyitems -->
+  <entityname.thal_doorkey>Door Spoofer Key</entityname.thal_doorkey>
+  <entitydescription.thal_doorkey>r3n3g8 engineered Near Field Communications tag designed to trick a door into opening without the wait of a crowbar. Only good for two uses, so be mindful of automatically closing doors.</entitydescription.thal_doorkey>
+  
+  <!-- unimplemented: unable to access itemcomponent scope via nearbyitems -->
+  <entityname.thal_signaljammer>Signal Jammer</entityname.thal_signaljammer>
+  <entitydescription.thal_signaljammer>r3n3g8 engineered shortwave frequency bombarder. Will easily prevent radio communication between crew. The disruption increases with proximity, though, so crew may be able to tell when they're nearby.</entitydescription.thal_signaljammer>
+  
+  <!-- CLOWN ITEMS -->
+  
+  <entityname.thal_discoball>Disco Ball</entityname.thal_discoball>
+  <entitydescription.thal_discoball>Can be attached to the wall like a button. Thanks for 10K subs on Thalassophobia!</entitydescription.thal_discoball>
+  
+  <entityname.thal_streetsign>Street "Sign"</entityname.thal_streetsign>
+  <entitydescription.thal_streetsign>An ordinary sign with an improbable capacity for bloodshed.</entitydescription.thal_streetsign>
+  
+  <entityname.thal_partyblower>Party Blower</entityname.thal_partyblower>
+  <entitydescription.thal_partyblower>Unrolls when blown. BA-DOO!</entitydescription.thal_partyblower>
+  
+  <entityname.thal_wirebind>Wire Bind</entityname.thal_wirebind>
+  <entitydescription.thal_wirebind>DIY Handcuffs made from wires. Will break after some time of being worn due to natural wear and tear.</entitydescription.thal_wirebind>
+  
+  <entityname.thal_whoopeecushion>Whoopee Cushion</entityname.thal_whoopeecushion>
+  <entitydescription.thal_whoopeecushion>A cushion that makes a loud, unflattering noise when squeezed. Can be used like a bike horn, or dropped on the floor where it can be stepped on.</entitydescription.thal_whoopeecushion>
+  
+  <entityname.thal_confettigrenade>Confetti Grenade</entityname.thal_confettigrenade>
+  <entitydescription.thal_confettigrenade>Looks like a frag grenade but releases confetti. Good for fakeouts and general intimidation. Yay!</entitydescription.thal_confettigrenade>
+  
+  <entityname.thal_blindfold>Blindfold</entityname.thal_blindfold>
+  <entitydescription.thal_blindfold>When worn, obstructs vision. Ineffective on bots.</entitydescription.thal_blindfold>
+  
+  <entityname.thal_chaoshorn>Chaos Horn</entityname.thal_chaoshorn>
+  <entitydescription.thal_chaoshorn>Creates the sound of an explosion, minus the actual explosion. Limited uses, and may alert security. BANG!</entitydescription.thal_chaoshorn>
+  
+  <entityname.thal_muzzle>Muzzle</entityname.thal_muzzle>
+  <entitydescription.thal_muzzle>When worn, prevents any kind of speech.</entitydescription.thal_muzzle>
+  
+  <entityname.thal_bananapeel>Banana Peel</entityname.thal_bananapeel>
+  <entitydescription.thal_bananapeel>Slippery. When dropped or thrown, will slip the first thing that walks on it. Must be thrown again in order for more slipping to occur.</entitydescription.thal_bananapeel>
+  
+  <entityname.thal_waterballoon>Rubber Balloon</entityname.thal_waterballoon>
+  <entitydescription.thal_waterballoon>A balloon that can be filled with water if the user is in water, and thrown. Can be turned into fantastical balloonsculpture by a Clown.</entitydescription.thal_waterballoon>
+  
+  <entityname.thal_clownkit>Portable Circus</entityname.thal_clownkit>
+  <entitydescription.thal_clownkit>A clockwork fabricator used for creating mischevious prank items. While not exactly productive, the fabricator is generally harmless fun.</entitydescription.thal_clownkit>
+  
+  <entityname.thal_miniwardrobe>Mini-Wardrobe</entityname.thal_miniwardrobe>
+  <entitydescription.thal_miniwardrobe></entitydescription.thal_miniwardrobe>
+  
+  <!-- decal baloons could be implemented now, but are really for the 0.11.X.X updates where decals are permenant -->
+  
+  <entityname.thal_paintballoon>Paint Balloon</entityname.thal_paintballoon>
+  <entitydescription.thal_paintballoon>This throwable balloon has been filled with paint. On impact, it will certainly make a mess.</entitydescription.thal_paintballoon>
+  
+  <entityname.thal_bloodballoon>Blood Balloon</entityname.thal_bloodballoon>
+  <entitydescription.thal_bloodballoon>This throwable balloon has been filled with blood. On impact, the residual mess will probably look like a crime scene.</entitydescription.thal_bloodballoon>
+  
+  <entityname.thal_jokerevolver>Joke Revolver</entityname.thal_jokerevolver>
+  <entitydescription.thal_jokerevolver>A revolver that ejects a flag instead of firing bullets. Good for fakeouts and general intimidation.</entitydescription.thal_jokerevolver>
+  
+  <entityname.thal_bowlingball>Bowling Ball</entityname.thal_bowlingball>
+  <entitydescription.thal_bowlingball>Bowl like you would throw a grenade. Great for knocking over pins and people.</entitydescription.thal_bowlingball>
+  
+  <entityname.thal_clownpack>Giggles von Honkington</entityname.thal_clownpack>
+  <entitydescription.thal_clownpack>Stylish backpack with a funny face on it. Partially absorbs shocks and ballistics from behind, making running a good option.</entitydescription.thal_clownpack>
+  
+  <!-- Cultist stuff -->
+  
+  <entityname.thal_candle>Candle</entityname.thal_candle>
+  <entitydescription.thal_candle>Decorative light source that uses up wax as it burns. Light/Snuff it by aiming and pressing left click once. Extinguished by water.</entitydescription.thal_candle>
+  
+  <entityname.thal_paintbrush>Ritual Paintbrush</entityname.thal_paintbrush>
+  <entitydescription.thal_paintbrush>Aim and use (like you would to attach) to put down a pentagram.</entitydescription.thal_paintbrush>
+  
+  <entityname.thal_pentagram>Summoning Pentagram</entityname.thal_pentagram>
+  <entitydescription.thal_pentagram>A summoning pentagram for the usage of bringing living entities into the world. Cannot be removed once it is placed. Place certain key items within it and press initiate to begin.</entitydescription.thal_pentagram>
+  
+  <entityname.thal_ouijaboard>Ouija Board</entityname.thal_ouijaboard>
+  <entitydescription.thal_ouijaboard>Occultism board for establishing communications with spirits via poltergism. Used in rituals.</entitydescription.thal_ouijaboard>
+  
+  <entityname.thal_cultistmask>Cultist Mask</entityname.thal_cultistmask>
+  <entitydescription.thal_cultistmask>Mask worn by cultists to show loyalty to the honkmother.</entitydescription.thal_cultistmask>
+  
+  <entityname.thal_zombieknife>Resurrection Dagger</entityname.thal_zombieknife>
+  <entitydescription.thal_zombieknife>Ancient Shaman Voodoo knife. Stabbing a dead human body brings it back to “life“, and serves as a blood source for clowns.</entitydescription.thal_zombieknife>
+  
+  <entityname.thal_cultistcostume>Cultist Costume</entityname.thal_cultistcostume>
+  <entitydescription.thal_cultistcostume>A costume frequently donned by the order. Said to be imbued with the screams of 1000 birthday rituals.</entitydescription.thal_cultistcostume>
+  
+  <entityname.thal_cultistknife>Gutter Dagger</entityname.thal_cultistknife>
+  <entitydescription.thal_cultistknife>A disturbing dagger with a large gutter to collect blood from the living for sacrifices with altars.</entitydescription.thal_cultistknife>
+  
+  <entityname.thal_cultistkit>Glass Altar</entityname.thal_cultistkit>
+  <entitydescription.thal_cultistkit>An altar used for summoning items through blood ritual. Place your gutter dagger inside and select an option to summon an item, if you have the required blood.</entitydescription.thal_cultistkit>
+  
+  <!-- Cooking tools -->
+  
+  <entityname.thal_carver>Meat Cleaver</entityname.thal_carver>
+  <entitydescription.thal_carver>A cleaver that will carve carcasses into processable meat when repeatedly hitting a dead body. The meat can be used as biomass for hatching.</entitydescription.thal_carver>
+  
+  <entityname.thal_mediumbrain>Bloody Brain</entityname.thal_mediumbrain>
+  <entitydescription.thal_mediumbrain>A fresh, sanguineous average sized brain. Can be eaten, processed, used for science, and much more.</entitydescription.thal_mediumbrain>
+  
+  <entityname.thal_smallbrain>Small Bloody Brain</entityname.thal_smallbrain>
+  <entitydescription.thal_smallbrain>A fresh, sanguineous tiny brain. Can be eaten, processed, used for science, and much more.</entitydescription.thal_smallbrain>
+  
+  <entityname.thal_largebrain>Small Bloody Brain</entityname.thal_largebrain>
+  <entitydescription.thal_largebrain>A fresh, sanguineous colossal brain. Can be eaten, processed, used for science, and much more.</entitydescription.thal_largebrain>
+  
+  <entityname.thal_smallbreast>Small Bloody Breast</entityname.thal_smallbreast>
+  <entitydescription.thal_smallbreast>A fresh, sanguineous tiny pectoral muscle. Can be eaten, processed, used for science, and much more.</entitydescription.thal_smallbreast>
+  
+  <entityname.thal_mediumbreast>Bloody Breast</entityname.thal_mediumbreast>
+  <entitydescription.thal_mediumbreast>A fresh, sanguineous sizeable pectoral muscle. Can be eaten, processed, used for science, and much more.</entitydescription.thal_mediumbreast>
+  
+  <entityname.thal_mediumthigh>Bloody Thigh</entityname.thal_mediumthigh>
+  <entitydescription.thal_mediumthigh>A fresh, sanguineous sizeable quadricep muscle. Can be eaten, processed, used for science, and much more.</entitydescription.thal_mediumthigh>
+  
+  <entityname.thal_smallthigh>Small Bloody Thigh</entityname.thal_smallthigh>
+  <entitydescription.thal_smallthigh>A fresh, sanguineous tiny quadricep muscle. Can be eaten, processed, used for science, and much more.</entitydescription.thal_smallthigh>
+  
+  <entityname.thal_largethigh>Large Bloody Thigh</entityname.thal_largethigh>
+  <entitydescription.thal_largethigh>A fresh, sanguineous colossal quadricep muscle. Can be eaten, processed, used for science, and much more.</entitydescription.thal_largethigh>
+  
+  <entityname.thal_foodcart>Food Cart</entityname.thal_foodcart>
+  <entitydescription.thal_foodcart>Portable Cooking Station. Can be used to prepare a variety of foods depending on what cookware its user has equipped.</entitydescription.thal_foodcart>
+  
+  <entityname.thal_meatgrinder>Meat Grinder</entityname.thal_meatgrinder>
+  <entitydescription.thal_meatgrinder>A handheld meat grinder that can be used to process more manageable meats into ground meat.</entitydescription.thal_meatgrinder>
+  
+  <entityname.thal_meatgrinder>Boiling Pot</entityname.thal_meatgrinder>
+  <entitydescription.thal_meatgrinder>A large pot capable of holding most food items. Capable of boiling whatever it contains, provided a cooking station.</entitydescription.thal_meatgrinder>
+  
+  <entityname.thal_shroomseed>Ramblin Evil Seed</entityname.thal_shroomseed>
+  <entitydescription.thal_shroomseed>Odd smelling seed covered in spores, capable of being planted like any other. Will produce enough yeast shroom to make you rich, but may release spores.</entitydescription.thal_shroomseed>
+  
+  <entityname.thal_shroomcure>Anti-Mycelium</entityname.thal_shroomcure>
+  <entitydescription.thal_shroomcure>Cures Mushroomization. Has a distinct viscosity not unlike Calyxanide.</entitydescription.thal_shroomcure>
+  
+  <entityname.thal_zombieseed>Pupa Seed</entityname.thal_zombieseed>
+  <entitydescription.thal_zombieseed>A strange, cold seed. Will grow into a Pupa Stalk, which grows maggot hives that can be ruptured for saline. The maggots revive dead creatures so be careful!</entitydescription.thal_zombieseed>
+  
+  <entityname.thal_maggothive>Maggot Hive</entityname.thal_maggothive>
+  <entitydescription.thal_maggothive>Ruptures into maggots if </entitydescription.thal_maggothive>
+  
+  <entityname.thal_rustseed>Rustwilt Seed</entityname.thal_rustseed>
+  <entitydescription.thal_rustseed>Foul smelling seed that grows into a rustwilt plant. The plant produces opium, but also unleashes corrosive clouds that may burn through surrounding walls and drain oxygen. Somewhat high maintainence.</entitydescription.thal_rustseed>
+  
+  <entityname.thal_clownseed>Circusprig Seed</entityname.thal_clownseed>
+  <entitydescription.thal_clownseed>Funny smelling seed that grows into a Circusprig plant. The plant grows somewhat unpredictable produce, and has the tendency to leak seltzer water.</entitydescription.thal_clownseed>
+  
+  <entityname.thal_wheatseed>Wheat Seed</entityname.thal_wheatseed>
+  <entitydescription.thal_wheatseed>A wheat seed from Earth, genetically modified to grow more quickly in hydroponic conditions. Essential for making flour.</entitydescription.thal_wheatseed>
+  
+  <entityname.thal_wheatseed>Wheat Seed</entityname.thal_wheatseed>
+  <entitydescription.thal_wheatseed>A wheat seed from Earth, genetically modified to grow more quickly in hydroponic conditions. Essential for making flour.</entitydescription.thal_wheatseed>
+  
+  <entityname.thal_wheat>Wheat</entityname.thal_wheat>
+  <entitydescription.thal_wheat>A bundle of wheat.</entitydescription.thal_wheat>
+  
+  <entityname.thal_sugarcane>Sugarcane</entityname.thal_sugarcane>
+  <entitydescription.thal_sugarcane>A slightly sweet tasting plant from earth, genetically modified to grow more quickly in hydroponic conditions. Unlike many plants, sugarcane grows from itself instead of seeds.</entitydescription.thal_sugarcane>
+  
+  <entityname.thal_botanistsuit>Hydroponics Cleansuit</entityname.thal_botanistsuit>
+  <entitydescription.thal_botanistsuit>Lightweight suit designed for use handling volatile flora. Mildly resists burns and lacerations.</entitydescription.thal_botanistsuit>
+  
+  <entityname.thal_botanistmask>Aerosol Respirator</entityname.thal_botanistmask>
+  <entitydescription.thal_botanistmask>Industrial grade mask with an air filtration system built in, primarily to resist the effects of toxic fumes from plants. Can be loaded with oxygen to behave like a diving mask.</entitydescription.thal_botanistmask>
+  
+  <entityname.thal_fumigator>Fumigator</entityname.thal_fumigator>
+  <entitydescription.thal_fumigator>Modified flamer that discharges gasses from whatever gas cylinder is loaded into it.</entitydescription.thal_fumigator>
+  
+  <msggascylinderrequired>Gas Cylinder Required</msggascylinderrequired>
+  
+  <entityname.thal_assembler>Atomic Converter</entityname.thal_assembler>
+  <entitydescription.thal_assembler>Handheld subatomic fabricator that will convert an input item to an output item provided a schematic. Insert a 'schematic' datachip, then insert the material or item specified by the schematic.</entitydescription.thal_assembler>
+  
+  <entityname.thal_constructor>Universal Constructor</entityname.thal_constructor>
+  <entitydescription.thal_constructor>Attatchable fabricator with the potential to 3D print extremely complex machinery with quantum manipulation capabilities.</entitydescription.thal_constructor>
+  <itemmsgconstruct>[[select]] Construct</itemmsgconstruct>
+  
+  <entityname.thal_recipeconstructor>Schematic: TiAl Bar -> Universal Constructor</entityname.thal_recipeconstructor>
+  <entitydescription.thal_recipeconstructor>Datachip containing Atomic Converter instructions for the conversion of a Titanium-Aluminum Alloy into a Universal Constructor, a device capable of creating items allowing access to the upper echelons of science.
+  
+  Insert into Atomic Converter alongside a: Titanium-Aluminum Bar</entitydescription.thal_recipeconstructor>
+  
+  <entityname.thal_recipeplanter>Schematic: Metal Crate -> Small Planter Box</entityname.thal_recipeplanter>
+  <entitydescription.thal_recipeplanter>Datachip containing Atomic Converter instructions for the conversion of a Metal Crate into a Small Planter Box, a device capable of growing seeds placed inside it.
+  
+  Insert into Atomic Converter alongside a: Metal Crate</entitydescription.thal_recipeplanter>
+  
+  <entityname.thal_recipefumigator>Schematic: Welding Tool -> Fumigator</entityname.thal_recipefumigator>
+  <entitydescription.thal_recipefumigator>Datachip containing Atomic Converter instructions for the conversion of a Welding Tool into a Fumigator, a device capable of ejecting pressurized gasses.
+  
+  Insert into Atomic Converter alongside a: Welding Tool</entitydescription.thal_recipefumigator>
+  
+  <entityname.thal_recipebotanistmask>Schematic: Diving Mask -> Respirator</entityname.thal_recipebotanistmask>
+  <entitydescription.thal_recipebotanistmask>Datachip containing Atomic Converter instructions for the conversion of a Diving Mask into an Aerosol Respirator, a device capable of filtering out toxic gasses.
+  
+  Insert into Atomic Converter alongside a: Diving Mask</entitydescription.thal_recipebotanistmask>
+  
+  <entityname.thal_recipedischarger>Schematic: Handheld Sonar -> Discharger</entityname.thal_recipedischarger>
+  <entitydescription.thal_recipedischarger>Datachip containing Atomic Converter instructions for the conversion of a Handheld Sonar into a Discharger, a weak rechargeable pistol.
+  
+  Insert into Atomic Converter alongside a: Handheld Sonar</entitydescription.thal_recipedischarger>
+  
+  <entityname.thal_recipefungicide>Schematic: Ramblin Evil Seed -> Fungicide</entityname.thal_recipefungicide>
+  <entitydescription.thal_recipefungicide>Datachip containing Atomic Converter instructions for the conversion of a Ramblin Evil Seed into an Aerosol Fungicide Cylinder, a pressurized fumigator cylinder for stopping mushroom outbreaks.
+  
+  Insert into Atomic Converter alongside a: Ramblin Evil Seed</entitydescription.thal_recipefungicide>
+  
+  <entityname.thal_recipegeneticinit>Schematic: Antirad -> CRISPR-Cas9 Solution</entityname.thal_recipegeneticinit>
+  <entitydescription.thal_recipegeneticinit>Datachip containing Atomic Converter instructions for the conversion of a Antirad into a CRISPR Cas-9 Solution, a microfluid capable of targeting genes for grafting.
+  
+  Insert into Atomic Converter alongside a: Antirad</entitydescription.thal_recipegeneticinit>
+  
+  <entityname.thal_recipegeneticgraft>Schematic: Syringe Gun -> DNA Grafter</entityname.thal_recipegeneticgraft>
+  <entitydescription.thal_recipegeneticgraft>Datachip containing Atomic Converter instructions for the conversion of a Syringe Gun into a DNA Grafter, a specialized hypodermic needle that can be loaded with DNA to graft.
+  
+  Insert into Atomic Converter alongside a: Syringe Gun</entitydescription.thal_recipegeneticgraft>
+  
+  <entityname.thal_cylinderspore>Ramblin Spore Cylinder</entityname.thal_cylinderspore>
+  <entitydescription.thal_cylinderspore>Pressurized gas cylinder containing particle spores for Ramblin Evil Mushrooms. Avoid dropping.</entitydescription.thal_cylinderspore>
+  
+  <entityname.thal_cylinderlaughing>Nitrous Oxide Cylinder</entityname.thal_cylinderlaughing>
+  <entitydescription.thal_cylinderlaughing>Pressurized gas cylinder containing Nitrous Oxide, a commonplace gas with analgesic effects stemming from deprivation of oxygen to the brain. Avoid dropping.</entitydescription.thal_cylinderlaughing>
+  
+  <entityname.thal_cylinderfreeze>Liquid Nitrogen Cylinder</entityname.thal_cylinderfreeze>
+  <entitydescription.thal_cylinderfreeze>Pressurized gas cylinder containing Liquid Nitrogen, a cryogenic liquid with and extremely low boiling point capable of rapidly freezing living tissue.</entitydescription.thal_cylinderfreeze>
+  
+  <entityname.thal_cylindershroomcure>Aerosol Fungicide Cylinder</entityname.thal_cylindershroomcure>
+  <entitydescription.thal_cylindershroomcure>Pressurezed gas cylinder containing vaporized Anti-Mycelium. Kills Ramblin Mushrooms and disinfect victims of mushroomization.</entitydescription.thal_cylindershroomcure>
+  
+  <entityname.thal_cylinderteargas>CS Gas Cylinder</entityname.thal_cylinderteargas>
+  <entitydescription.thal_cylinderteargas>Pressurized gas cylinder containing 2-chlorobenzalmalononitrile modified to serve as an airborne irritant. If the gas makes contact with eyes it will result in temporary irritation and blindness. Useful for self defense.</entitydescription.thal_cylinderteargas>
+  
+  <entityname.thal_hydrophonicsign>Hydroponic Hazard Sign</entityname.thal_hydrophonicsign>
+  <entitydescription.thal_hydrophonicsign>A sign that can be dropped on the floor or attatched to a wall in order to indicate an area of botanical hazard ranging from exploding pomegrenades to infectious spores.</entitydescription.thal_hydrophonicsign>
+  
+  <entityname.thal_botanistbook>Botanist's Almanac</entityname.thal_botanistbook>
+  <entitydescription.thal_botanistbook>Book detailing the care of various crops and plants capable of being grown by the botanist.</entitydescription.thal_botanistbook>
+  
+  <entityname.thal_discourager>Static Discourager</entityname.thal_discourager>
+  <entitydescription.thal_discourager>Self defense weapon that administers a controlled shock, which disrupts the nervous system. The lack of complete incapacitation makes it an ideal weapon for self defense.</entitydescription.thal_discourager>
+  
+    <entityname.thal_cultistbook>Abridged Necronomicon</entityname.thal_cultistbook>
+  <entitydescription.thal_cultistbook>Book detailing the basics of the cultist role. Hold to read, type in the topmost bar to navigate.</entitydescription.thal_cultistbook>
+  
+  <entityname.thal_singularity>Gravitational Singularity"</entityname.thal_singularity>
+  <entitydescription.thal_singularity>Horrific gravitational anamoly that grows the more characters are sucked into it.</entitydescription.thal_singularity>
+  
+  <entityname.thal_secondchance>Phoenix Injector</entityname.thal_secondchance>
+  <entitydescription.thal_secondchance>A steroidal epinephrine solution rigged to automatically inject when in the hotbar of a critically injured person. Going critical with this in your hotbar revives you temporarily, allowing you to seek medical aide.</entitydescription.thal_secondchance>
+  
+  <entityname.thal_geneticinit>CRISPR-Cas9 Solution</entityname.thal_geneticinit>
+  <entitydescription.thal_geneticinit>Syringe used for initiating Gene Splicing. Equip it in your hands and select which bodypart you want to fuse DNA with. What happens to a body part depends on the DNA fused; Look at the description. After choosing, inject yourself with a syringe, and then inject yourself with a loaded graft.</entitydescription.thal_geneticinit>
+  
+  <entityname.thal_geneticgraft>DNA Grafter</entityname.thal_geneticgraft>
+  <entitydescription.thal_geneticgraft>Syringe which DNA samples can be inserted into. When injected into someone undergoing a CRISPR-Cas9 induced meltdown, this attatches the DNA to the cut sections, resulting in en vivo gene splicing. Gene splicing can be used to cure genetic disorders, and even transform bodyparts. Requires a patient to be injected with a CRISPR-Cas9 solution first.</entitydescription.thal_geneticgraft>
+  
+  <entityname.thal_dnascanner>DNA Scanner</entityname.thal_dnascanner>
+  <entitydescription.thal_dnascanner>A DNA scanner that collects DNA from the saliva molecules of living beings. Will not work on dead creatures. Attach to a wall and interact with it. Scans whatever is underneath it but breaks over time.</entitydescription.thal_dnascanner>
+  
+  <entityname.thal_dnahatcher>Biomorphic Incubation Pod</entityname.thal_dnahatcher>
+  <entitydescription.thal_dnahatcher>Pod used for creating creatures from DNA and biomass. Insert meat until there is enough biomass for your desired creature, then insert its DNA and press engage to start forming and nurturing the embryo. </entitydescription.thal_dnahatcher>
+  
+  <entityname.thal_dnahuman>Human DNA</entityname.thal_dnahuman>
+  <entitydescription.thal_dnahuman>Complete genetic sequence of the standard Homo Sapien. Can be used to develop anti-Humanoid technologies, or in DNA grafts for reverting humans back to normal. Grafting this DNA will revert all changes to the bodypart(s) currently in meltdown, and also revert any genetic disorders. </entitydescription.thal_dnahuman>
+  
+  <entityname.thal_dnamudraptor>Mudraptor DNA</entityname.thal_dnamudraptor>
+  <entitydescription.thal_dnamudraptor>Complete genetic sequence of the standard Europan Mudraptor. Can be used to develop anti-Mudraptor technologies, or in DNA grafts for gene splicing. DNA Abilities by Grafts:
+  Head (Beak): Slowly break down doors using creature attack.
+  Torso (Shell): Gain bulletproof mudraptor armor on spine.
+  Limbs (Tail): Swim Speed increases massively.</entitydescription.thal_dnamudraptor>
+  
+  <entityname.thal_dnacrawler>Crawler DNA</entityname.thal_dnacrawler>
+  <entitydescription.thal_dnacrawler>Complete genetic sequence of the standard Europan Crawler. Can be used to develop anti-crawler technologies, or in DNA grafts for gene splicing. DNA Abilities by Grafts:
+  Head (Fangs): Lifesteal bite by pressing creature attack.
+  Torso (Gills): Filter oxygen from water even when there is none in the atmosphere.
+  Limbs (Tail): General movement speed increase.</entitydescription.thal_dnacrawler>
+  
+  <entityname.thal_dnathresher>Thresher DNA</entityname.thal_dnathresher>
+  <entitydescription.thal_dnathresher>Complete genetic sequence of the standard Europan Tigerthresher. Can be used to develop anti-crawler technologies, or in DNA grafts for gene splicing. DNA Abilities by Grafts:
+  Head (Bone Jaw): Break down walls and doors very slowly using creature attack.
+  Torso (Exoskeleton): Pressure resistance.
+  Limbs (Bioluminesence): Emit light.</entitydescription.thal_dnathresher>
+  
+  <entityname.thal_dnahammer>Hammerhead DNA</entityname.thal_dnahammer>
+  <entitydescription.thal_dnahammer>Complete genetic sequence of the standard Europan Hammerhead. Can be used to develop anti-crawler technologies, or in DNA grafts for gene splicing. DNA Abilities by Grafts:
+  Head (Hammerhead): Break down walls by aiming and pressing creature attack.
+  Torso (Birthsac): Damaging explosion on death.
+  Limbs (Adrenaline): Speed and resistance increase as vitality goes down.</entitydescription.thal_dnahammer>
+  
+  <entityname.thal_dnamaggot>Maggot DNA</entityname.thal_dnamaggot>
+  <entitydescription.thal_dnamaggot>Complete genetic sequence of the standard Hive Maggot. Can be used to develop anti-maggot technologies, or in DNA grafts for gene splicing. DNA Abilities by Grafts:
+  Head (Orfice): Aim at the floor and press creature attack to birth a maggot at the cost of health. Cooldown of 4s.
+  Torso (Pupa Sac): Burst into maggots on death.
+  Limbs (Regeneration): Massively increased healing of bleeding affliction.</entitydescription.thal_dnamaggot>
+  
+  <entityname.thal_dnaramblin>Mushroom DNA</entityname.thal_dnaramblin>
+  <entitydescription.thal_dnaramblin>Complete genetic sequence of the Ramblin' Evil Mushroom. Can be used to develop anti-mushroom technologies, or in DNA grafts for gene splicing. DNA Abilities by Grafts:
+  Head (Cap): Aim at the floor and press creature attack to discharge invigorating gasses.
+  Torso (Versicolor): The "Mushroomized" affliction greatly heals you.
+  Limbs (Athlete's Foot): Running speed substantially increased, Swimming speed marginally decreased.</entitydescription.thal_dnaramblin>
+  
+  <entityname.thal_planter>Hydroponics Planter Box</entityname.thal_planter>
+  <entitydescription.thal_planter>An advanced planter box, designed for improved scientific measurement and botanical metrics analysis required by a botanist. Makes the difference between a hobbyist gardener and a true scientist. </entitydescription.thal_planter>
+  
+  <entityname.thal_geneticsign>Genetic Hazard Sign</entityname.thal_geneticsign>
+  <entitydescription.thal_geneticsign>A sign that can be dropped on the floor or attatched to a wall in order to indicate an area of genohazard ranging from DNA ionizing radiation to gene manipulation chemicals.</entitydescription.thal_geneticsign>
+  
+  <entityname.thal_geneticistsuit>Geneticist Cleansuit</entityname.thal_geneticistsuit>
+  <entitydescription.thal_geneticistsuit>Lightweight suit designed for use in mildly radioactive environments. Mildly resists radiations and chance of genetic damage.</entitydescription.thal_geneticistsuit>
+  
+  <!-- Energy Weapons -->
+  
+  <entityname.thal_glowsaber>Glowsaber</entityname.thal_glowsaber>
+	<entitydescription.thal_glowsaber>Extremely powerful energy sword that deals large burn damage and is capable of cutting through walls and doors. Its fuel source are the exotic 'glow crystals' produced with antimatter propagators.</entitydescription.thal_glowsaber>
+	
+	<entityname.thal_glowcrystal>Glow Crystal</entityname.thal_glowcrystal>
+	<entitydescription.thal_glowcrystal>A crystalline ammo source for various high-power energy weapons. Somewhat rare; Use wisely.</entitydescription.thal_glowcrystal>
+	
+	<entityname.thal_frostcrystal>Frost Glow Crystal</entityname.thal_frostcrystal>
+	<entitydescription.thal_frostcrystal>A subzero crystalline ammo source for various high-power energy weapons. Its cold core gives it a blue hue. Somewhat rare; Use wisely.</entitydescription.thal_frostcrystal>
+	
+	<entityname.thal_synthcrystal>Synthetic Glow Crystal</entityname.thal_synthcrystal>
+	<entitydescription.thal_synthcrystal>A synthesized crystalline ammo source for various high-power energy weapons. Its artificial nature gives it a red hue. Very rare; Use wisely.</entitydescription.thal_synthcrystal>
+	
+	<!-- Explosives -->
+	<entityname.thal_tripmine>Laser Tripmine</entityname.thal_tripmine>
+	<entitydescription.thal_tripmine>Tripmine that activates when in range of a creature. Triggers better the closer the mine is to the torso.</entitydescription.thal_tripmine>
+	
+	<!-- Collars -->
+	<entityname.thal_bombcollar>Explosive Collar</entityname.thal_bombcollar>
+	<entitydescription.thal_bombcollar>Extremely dangerous wearable item. Once worn and armed, attempting to remove the collar without disarming will cause a lethal explosion. Has a random chance to explode when armed. Can be disabled by a DISARM key.</entitydescription.thal_bombcollar>
+	
+	<entityname.thal_bombcollartimed>Timed Explosive Collar</entityname.thal_bombcollartimed>
+	<entitydescription.thal_bombcollartimed>A particularly sadistic variant of the explosive collar where arming it not only prevents removal, but also starts a countdown to the collar's automatic detonation. Has a random chance to explode when armed. Assemble a DISARM tool ASAP!</entitydescription.thal_bombcollartimed>
+	
+	<entityname.thal_bombcollarkey>DISARM Tool</entityname.thal_bombcollarkey>
+	<entitydescription.thal_bombcollarkey>Drag onto collar to disarm.</entitydescription.thal_bombcollarkey>
+	
+	<entityname.thal_bombvest>Suicide Vest</entityname.thal_bombvest>
+	<entitydescription.thal_bombvest>Vest armed with multiple high grade explosives that will explode upon death of the user. May cause someone to think twice about killing you.</entitydescription.thal_bombvest>
+	
+	<entityname.thal_nukevest>Doomsday De-Vest</entityname.thal_nukevest>
+	<entitydescription.thal_nukevest>Vest armed with various radioactive materials that will cause a nuclear explosion on death of the user. The explosion is not so notable for the physical harm it causes so much as the extremely toxic radioactive fallout left behind.</entitydescription.thal_nukevest>
+	
+	
+  <!-- Turrets -->
+  
+  <entityname.grapplingturret>Carving Laser</entityname.grapplingturret>
+  <entitydescription.grapplingturret>Coalition industrial mining laser intended for destroying rock and harvesting minerals. Notably effective at cutting through walls, but it has been designed to not harm beings.</entitydescription.grapplingturret>
+  <entityname.grapplingturretloader>Carving Laser Loader</entityname.grapplingturretloader>
+  <entitydescription.grapplingturretloader>Used for loading oxygen into the cutting laser.</entitydescription.grapplingturretloader>
+  <entityname.grapplingturretbeam>Carving Laser Beam</entityname.grapplingturretbeam>
+  <entitydescription.grapplingturretbeam>Projectile Shot by Carving Laser. Apparently, you are a really good catch!</entitydescription.grapplingturretbeam>
+  <entityname.grapplingturretammobox>Oxygenite Plasma Pack</entityname.grapplingturretammobox>
+  <entitydescription.grapplingturretammobox>Plasma-generation pack composed of a primer and lots of oxygenite. Used for heavy-duty cutting operations such as carving lasers and cutter packs. Very expensive!</entitydescription.grapplingturretammobox>
+  
+  <entityname.carvinglaser>Carving Laser</entityname.carvinglaser>
+  <entitydescription.carvinglaser>Coalition industrial mining laser intended for destroying rock and harvesting minerals. Notably effective at cutting through walls, but it has been designed to not harm beings.</entitydescription.carvinglaser>
+  <entityname.carvinglaserloader>Carving Laser Loader</entityname.carvinglaserloader>
+  <entitydescription.carvinglaserloader>Used for loading oxygen into the cutting laser.</entitydescription.carvinglaserloader>
+  <entityname.carvinglaserbeam>Carving Laser Beam</entityname.carvinglaserbeam>
+  <entitydescription.carvinglaserbeam>Projectile Shot by Carving Laser. Apparently, you are a really good catch!</entitydescription.carvinglaserbeam>
+  <entityname.carvinglaserammobox>Oxygenite Plasma Pack</entityname.carvinglaserammobox>
+  <entitydescription.carvinglaserammobox>Plasma-generation pack composed of a primer and lots of oxygenite. Used for heavy-duty cutting operations such as carving lasers and cutter packs. Very expensive!</entitydescription.carvinglaserammobox>
+  
+  <entityname.emcannon>Electromagnetic Cannon</entityname.emcannon>
+  <entitydescription.emcannon>Renegade-invented directed-energy weapon capable of directionally firing a pulse that will cause minor burns, but more importantly destroy electrical equipment or entities. The loud dazzling projectile may attract attention of listeners and watchers alike.</entitydescription.emcannon>
+  <entityname.emcannon>Electromagnetic Loader</entityname.emcannon>
+  <entitydescription.emcannon>Used for loading charges into EM Cannon.</entitydescription.emcannon>
+  
+  <entityname.thal_apc>Area Power Controller</entityname.thal_apc>
+  <entitydescription.thal_apc>Device serving as a junction box with a built in circuit breaker that also maintains a charge like a battery. Intended for power control interface for a single room; A "player friendly" relay with minor backup power to keep the lights for a little longer on once external power goes out. Can be manually loaded with batteries to recharge.</entitydescription.thal_apc>
+  
+  <entityname.thal_locator>Acoustic HAM Radio</entityname.thal_locator>
+  <entitydescription.thal_locator>A radio that detects acoustic trasnmissions through water. Can be used to listen in on communications in nearby areas to give your crew sidequests.</entitydescription.thal_locator>
+  <!-- TRANSMISSION BRIEFINGS -->
+  <transmission.weapons.1>The local AHAM Radio has picked up an unencrypted Coalition-signed transmission from a search drone to a map server. Analytics suggest it is heading towards a wildlife research wreck containing high-grade weaponry. If you so choose to take the weapons for yourself, the Coalition will not know it was you.
+[The location of the weapons cache has been marked on the sonar.] </transmission.weapons.1>
+  <transmission.weapons.2>The on-ship AHAM Radio has deciphered a distress signal from a nearby cargo ship carrying a significant surplus of weapons. Public shipment records indicate the ship was thought to be lost years ago, and was effectively forgotten. If you choose to salvage the weapons for yourself, nobody will know. 
+[The location of the weapons cache has been marked on the sonar.]</transmission.weapons.2>
+  <transmission.weapons.3>The onboard AHAM Radio has picked up a series of standby transmissions in the nearby area. Status reports reveal that the ship was an independent mercenary attack sub, and all life support systems are dead, citing an attack by monsters. If you can clear the monsters, the guns would be yours.
+[The location of the weapons cache has been marked on the sonar.] </transmission.weapons.3>
+  <transmission.weapons.4>A local AHAM Radio has picked up on a residual frequency from a nearby datacube containing instructions to a "hidden treasure trove" of weapons. The source is unidentified, and the transmission is unsigned. If you choose to investigate, it may be a trap, so come armed.
+[The location of the weapons cache has been marked on the sonar.] </transmission.weapons.4>
+  
+  <entityname.thal_lootcrateweapons>Abandoned Weaponry Crate</entityname.thal_lootcrateweapons>
+  <entitydescription.thal_lootcrateweapons>A forgotten crate of firearms found floating out in the open. Finders, keepers.</entitydescription.thal_lootcrateweapons>
+  <itemmsglocatorinteract>[[select]] Listen In</itemmsglocatorinteract>
+  <lootlabel.weapons>Treasure:
+Weapon Cache</lootlabel.weapons>
+  <lootlabel.medicine>Treasure:
+Medicine Depot</lootlabel.medicine>
+  <lootlabel.ores>Treasure:
+Rare Materials</lootlabel.ores>
+  <lootlabel.dna>Treasure:
+Science Cache</lootlabel.dna>
+  <lootlabel.alien>Sidequest:
+Anomaly</lootlabel.alien>
+	<lootlabel.monster>Sidequest:
+Boss Creature</lootlabel.monster>
+  <lootlabel.money>Treasure:
+Credits</lootlabel.money>
+  
+  <uilabel.apcpower>Backup Power Bank</uilabel.apcpower>
+  <uilabel.apcbat>Charge APC via Battery</uilabel.apcbat>
+  <buttoncircuitbreaker>Circuit Breaker</buttoncircuitbreaker>
+  <buttonautolimit>Auto Limit Output on Backup Low</buttonautolimit>
+  
+  <entityname.radbeam>Radiation Beam</entityname.radbeam>
+  <entitydescription.radbeam>Beam radiation emitter capable of causing severe burns to living organisms, but completely useless against everything else.</entitydescription.radbeam>
+  <entityname.radbeam>Radiation Beam Loader</entityname.radbeam>
+  <entitydescription.radbeam>Used for loading fuel rods into Radiation Beam.</entitydescription.radbeam>
+  
+  
+  <itemmsgplayselect>[[select]] Play</itemmsgplayselect>
+  <entityname.piano>Grand Piano</entityname.piano>
+  <entitydescription.piano>An expensive Grandwin and Sons Piano. The music is only as good as the pianist. Place away from reactors, vents, sides of the ship, and other noisemakers for best results!</entitydescription.piano>
+</infotexts>

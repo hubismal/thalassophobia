@@ -1,0 +1,311 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Items>
+  <!-- -->
+  <Item name="" identifier="thal_shroomseed" category="Material" Tags="smallitem,seed,plantitem" cargocontaineridentifier="metalcrate" scale="0.5" impactsoundtag="impact_soft" spritecolor="255,54,0,255">
+    <Sprite texture="Content/Items/Gardening/GrowablePlants_Temp.png" depth="0.2" sourcerect="830,636,31,30" origin="0.5,0.5" />
+    <!--<PreferredContainer primary="supplycab" minamount="0" maxamount="2" spawnprobability="0.25" />
+    <PreferredContainer primary="wreckmedcab" minamount="0" maxamount="3" spawnprobability="0.5" />-->
+    <PreferredContainer primary="seedbag" minamount="0" maxamount="1" spawnprobability="0.5" />
+    <Price baseprice="30">
+      <Price locationtype="outpost" multiplier="1" minabailable="3" />
+      <Price locationtype="city" multiplier="1.2" minavailable="1" />
+      <Price locationtype="research" multiplier="0.9" minavailable="2" />
+    </Price>
+    <Deconstruct time="30">
+      <Item identifier="carbon" copycondition="true" mincondition="0.1" />
+    </Deconstruct>
+    <Growable growthspeed="1.2" pickingtime="3" maximumvines="20" maxhealth="100" hardiness="0.175" floodtolerance="2.0" seedrate="0.1" productrate="0.5" flowertint="255,255,255,255" flowerquantity="13" baseflowerscale="0.5" vinescale="0.25" vinetint="244,220,140,255">
+      <ProducedItem identifier="yeastshroom" probability="0.1" />
+      <ProducedItem identifier="thal_sporeemitter" probability="0.8"></ProducedItem>
+      <VineSprites vineatlas="Content/Items/Gardening/branches.png" decayatlas="Content/Items/Gardening/branches_overlay.png">
+        <LeafSprite texture="Content/Items/Gardening/GrowablePlants_Temp.png" sourcerect="0,0,256,256" />
+        <LeafSprite texture="Content/Items/Gardening/GrowablePlants_Temp.png" sourcerect="256,0,256,256" />
+        <FlowerSprite name="shroomflower1" texture="Mods/Thalassophobia/Items/Gardening/GrowablePlants_Temp.png" sourcerect="142,33,100,100" origin="0.5,0.5" />
+        <FlowerSprite name="shroomflower2" texture="Mods/Thalassophobia/Items/Gardening/GrowablePlants_Temp.png" sourcerect="281,34,91,88" origin="0.5,0.5" />
+        <FlowerSprite name="shroomflower3" texture="Mods/Thalassophobia/Items/Gardening/GrowablePlants_Temp.png" sourcerect="669,40,75,87" origin="0.5,0.5" />
+        <FlowerSprite name="shroomflower4" texture="Mods/Thalassophobia/Items/Gardening/GrowablePlants_Temp.png" sourcerect="523,33,98,97" origin="0.5,0.5" />
+        <FlowerSprite name="shroomflower5" texture="Mods/Thalassophobia/Items/Gardening/GrowablePlants_Temp.png" sourcerect="402,39,92,89" origin="0.5,0.5" />
+        <VineSprite type="Stem" sourcerect="640,128,128,128" />
+        <VineSprite type="CrossJunction" sourcerect="512,128,128,128" />
+        <VineSprite type="VerticalLane" sourcerect="512,0,128,128" />
+        <VineSprite type="HorizontalLane" sourcerect="640,0,128,128" />
+        <VineSprite type="TurnTopRight" sourcerect="0,0,128,128" />
+        <VineSprite type="TurnTopLeft" sourcerect="384,0,128,128" />
+        <VineSprite type="TurnBottomLeft" sourcerect="256,0,128,128" />
+        <VineSprite type="TurnBottomRight" sourcerect="128,0,128,128" />
+        <VineSprite type="TSectionTop" sourcerect="128,128,128,128" />
+        <VineSprite type="TSectionLeft" sourcerect="256,128,128,128" />
+        <VineSprite type="TSectionBottom" sourcerect="384,128,128,128" />
+        <VineSprite type="TSectionRight" sourcerect="0,128,128,128" />
+        <VineSprite type="StumpTop" sourcerect="768,0,128,128" />
+        <VineSprite type="StumpLeft" sourcerect="896,0,128,128" />
+        <VineSprite type="StumpBottom" sourcerect="768,128,128,128" />
+        <VineSprite type="StumpRight" sourcerect="896,128,128,128" />
+      </VineSprites>
+    </Growable>
+    <Body radius="15" density="12" />
+    <Holdable canBeCombined="false" slots="Any,RightHand,LeftHand" handle1="0,0" msg="ItemMsgPickUpSelect" />
+  </Item>
+  <!--spore emitter utilized by mushrooms -->
+  <Item name="sporeemitter" identifier="thal_sporeemitter" category="Equipment" cargocontaineridentifier="metalcrate" tags="smallitem" scale="0.5" hideinmenus="true" pickdistance="0" noninteractable="true">
+    <sprite name="sporeem" texture="Mods/Thalassophobia/Items/Jobgear/headgears.png" sourcerect="0,0,1,1" origin="0.4,0.3" />
+    <Body width="40" radius="30" density="15" bodytype="Kinematic" />
+    <LightComponent lightcolor="255,255,150,100" range="150" powerconsumption="0" allowingameediting="false" castshadows="false" IsOn="true">
+      <StatusEffect type="Always" target="This">
+        <ParticleEmitter particle="thal_spore" burstamount="3" particlespersecond="4" velocitymin="0" velocitymax="0" anglemin="0" anglemax="360" scalemin="1.0" scalemax="1.0" />
+        <ParticleEmitter particle="thal_shroomsmoke" burstamount="2" particlespersecond="4" velocitymin="0" velocitymax="0" anglemin="0" anglemax="360" scalemin="1.0" scalemax="1.0" colormultiplier="255,255,150,255" />
+        <sound file="Mods/Thalassophobia/Items/Jobgear/Clown/sporecloud.ogg" range="500.0" loop="false" />
+      </StatusEffect>
+      <StatusEffect type="Always" target="This" delay="1" stackable="false">
+        <Explosion range="90" force="1" flash="false" shockwave="false" sparks="false" flames="false" smoke="false" camerashake="0" underwaterbubble="true" structuredamage="0" itemdamage="0" flashrange="0" flashduration="0">
+          <Affliction identifier="thal_mushroomized" strength="5" />
+        </Explosion>
+      </StatusEffect>
+      <StatusEffect type="Always" target="This" delay="6" stackable="false">
+        <Remove />
+      </StatusEffect>
+      <StatusEffect type="InWater" target="This" stackable="false">
+        <Remove />
+      </StatusEffect>
+    </LightComponent>
+  </Item>
+  <!-- used for spawning ramblins because afflictions don't play sound -->
+  <Item name="ramblinburst" identifier="thal_ramblinburst" category="Equipment" cargocontaineridentifier="metalcrate" tags="smallitem" scale="0.5" hideinmenus="true">
+    <sprite name="ramblinburst" texture="Mods/Thalassophobia/Items/Jobgear/headgears.png" limb="Head" inheritlimbdepth="true" inherittexturescale="true" hidelimb="false" hideotherwearables="false" sourcerect="0,0,1,1" origin="0.4,0.3" />
+    <Body width="40" radius="30" density="15" bodytype="Kinematic" />
+    <LightComponent lightcolor="1.0,1.0,0.0,0.0" range="0.0" powerconsumption="0" allowingameediting="false">
+      <StatusEffect type="Always" target="This" stackable="false">
+        <sound file="Content/Characters/Leucocyte/CARRIER_cellDeath1.ogg" range="1000" volume="1" selectionmode="Random" />
+        <sound file="Content/Characters/Leucocyte/CARRIER_cellDeath2.ogg" range="1000" volume="1" selectionmode="Random" />
+        <sound file="Content/Characters/Leucocyte/CARRIER_cellDeath3.ogg" range="1000" volume="1" selectionmode="Random" />
+        <Explosion range="70" force="1" stun="2" flash="false" shockwave="false" sparks="false" flames="false" smoke="false" camerashake="0" underwaterbubble="true" structuredamage="0" itemdamage="0" flashrange="0" flashduration="0">
+          <ParticleEmitter particle="thal_shroomsmoke" burstamount="5" particlespersecond="4" velocitymin="0" velocitymax="0" anglemin="0" anglemax="360" scalemin="1.0" scalemax="1.0" />
+        </Explosion>
+        <sound file="Mods/Thalassophobia/Items/Jobgear/Clown/sporecloud.ogg" range="500.0" loop="false" />
+        <Remove />
+      </StatusEffect>
+    </LightComponent>
+  </Item>
+  <Item name="" identifier="thal_zombieseed" category="Material" Tags="smallitem,seed,plantitem" cargocontaineridentifier="metalcrate" scale="0.5" impactsoundtag="impact_soft" spritecolor="165,144,209,255">
+    <Sprite texture="Content/Items/Gardening/GrowablePlants_Temp.png" depth="0.2" sourcerect="830,636,31,30" origin="0.5,0.5" />
+    <PreferredContainer primary="seedbag" minamount="0" maxamount="1" spawnprobability="0.5" />
+    <Price baseprice="30">
+      <Price locationtype="outpost" multiplier="1" minabailable="3" />
+      <Price locationtype="city" multiplier="1.2" minavailable="1" />
+      <Price locationtype="research" multiplier="0.9" minavailable="2" />
+    </Price>
+    <Deconstruct time="30">
+      <Item identifier="carbon" copycondition="true" mincondition="0.1" />
+    </Deconstruct>
+    <Growable growthspeed="2.0" pickingtime="3" maximumvines="30" maxhealth="120" hardiness="0.175" floodtolerance="2.0" seedrate="0.05" productrate="0.1" flowertint="255,255,255,255" flowerquantity="20" baseflowerscale="0.5" vinescale="0.25" vinetint="165,144,209,255" leaftint="165,144,209,255">
+      <ProducedItem identifier="thal_maggothive" probability="0.8"></ProducedItem>
+      <ProducedItem identifier="thal_mimeinflictor" probability="0.3"></ProducedItem>
+      <VineSprites vineatlas="Content/Items/Gardening/branches.png" decayatlas="Content/Items/Gardening/branches_overlay.png">
+        <LeafSprite name="leafzombflower1" texture="Mods/Thalassophobia/Items/Gardening/GrowablePlants_Temp.png" sourcerect="519,132,95,100" origin="0.5,0.5" />
+        <FlowerSprite name="zombflower1" texture="Mods/Thalassophobia/Items/Gardening/GrowablePlants_Temp.png" sourcerect="519,132,95,100" origin="0.5,0.5" />
+        <FlowerSprite name="zombflower2" texture="Mods/Thalassophobia/Items/Gardening/GrowablePlants_Temp.png" sourcerect="129,142,68,104" origin="0.5,0.5" />
+        <FlowerSprite name="zombflower3" texture="Mods/Thalassophobia/Items/Gardening/GrowablePlants_Temp.png" sourcerect="215,129,76,107" origin="0.5,0.5" />
+        <FlowerSprite name="zombflower4" texture="Mods/Thalassophobia/Items/Gardening/GrowablePlants_Temp.png" sourcerect="38,131,66,121" origin="0.5,0.5" />
+        <FlowerSprite name="zombflower5" texture="Mods/Thalassophobia/Items/Gardening/GrowablePlants_Temp.png" sourcerect="636,138,121,92" origin="0.5,0.5" />
+        <FlowerSprite name="zombflower6" texture="Mods/Thalassophobia/Items/Gardening/GrowablePlants_Temp.png" sourcerect="415,129,64,99" origin="0.5,0.5" />
+        <FlowerSprite name="zombflower7" texture="Mods/Thalassophobia/Items/Gardening/GrowablePlants_Temp.png" sourcerect="319,121,76,117" origin="0.5,0.5" />
+        <VineSprite type="Stem" sourcerect="640,128,128,128" />
+        <VineSprite type="CrossJunction" sourcerect="512,128,128,128" />
+        <VineSprite type="VerticalLane" sourcerect="512,0,128,128" />
+        <VineSprite type="HorizontalLane" sourcerect="640,0,128,128" />
+        <VineSprite type="TurnTopRight" sourcerect="0,0,128,128" />
+        <VineSprite type="TurnTopLeft" sourcerect="384,0,128,128" />
+        <VineSprite type="TurnBottomLeft" sourcerect="256,0,128,128" />
+        <VineSprite type="TurnBottomRight" sourcerect="128,0,128,128" />
+        <VineSprite type="TSectionTop" sourcerect="128,128,128,128" />
+        <VineSprite type="TSectionLeft" sourcerect="256,128,128,128" />
+        <VineSprite type="TSectionBottom" sourcerect="384,128,128,128" />
+        <VineSprite type="TSectionRight" sourcerect="0,128,128,128" />
+        <VineSprite type="StumpTop" sourcerect="768,0,128,128" />
+        <VineSprite type="StumpLeft" sourcerect="896,0,128,128" />
+        <VineSprite type="StumpBottom" sourcerect="768,128,128,128" />
+        <VineSprite type="StumpRight" sourcerect="896,128,128,128" />
+      </VineSprites>
+    </Growable>
+    <Body radius="15" density="12" />
+    <Holdable canBeCombined="false" slots="Any,RightHand,LeftHand" handle1="0,0" msg="ItemMsgPickUpSelect" />
+  </Item>
+  <!-- maggot hive spawned by pupa plant -->
+  <Item name="Maggot Hive" identifier="thal_maggothive" category="Equipment" cargocontaineridentifier="metalcrate" tags="smallitem" scale="0.5" health="20" hideinmenus="false" noninteractable="false" damagedbyexplosions="true" damagedbyprojectiles="true" damagedbyrepairtools="true" damagedbymeleeweapons="true" isshootable="true">
+    <Sprite name="hivefront" texture="Mods/Thalassophobia/Items/Gardening/GrowablePlants_Temp.png" sourcerect="241,239,102,96" origin="0.5,0.5" depth="0.6" />
+    <DecorativeSprite name="hivehole" texture="Mods/Thalassophobia/Items/Gardening/GrowablePlants_Temp.png" sourcerect="418,256,51,64" origin="0.5,0.5" depth="0.62" />
+    <DecorativeSprite name="hivemag" texture="Mods/Thalassophobia/Items/Gardening/GrowablePlants_Temp.png" sourcerect="350,259,47,55" origin="0.5,0.5" depth="0.61" offset="9,9" offsetanim="Noise" offsetanimspeed="2" />
+    <DecorativeSprite name="hivemag2" texture="Mods/Thalassophobia/Items/Gardening/GrowablePlants_Temp.png" sourcerect="493,259,47,55" origin="0.5,0.5" depth="0.61" offset="9,9" offsetanim="Noise" offsetanimspeed="1" />
+    <Body width="40" radius="30" density="15" bodytype="Kinematic" />
+    <LightComponent lightcolor="255,255,150,00" range="0" powerconsumption="0" allowingameediting="false" castshadows="false" IsOn="true">
+      <StatusEffect type="Always" target="This" scale="0.03">
+        <sound file="Mods/Thalassophobia/Map/Thalamus/eye.ogg" range="500.0" loop="true" />
+      </StatusEffect>
+      <!--Destroyed-->
+      <StatusEffect type="OnDeath" target="This">
+        <Sound file="Content/Map/Thalamus/Sounds/CARRIER_organs2.ogg" range="900" selectionmode="Random" />
+        <Sound file="Content/Map/Thalamus/Sounds/CARRIER_organs3.ogg" range="900" selectionmode="Random" />
+        <Sound file="Content/Map/Thalamus/Sounds/CARRIER_organs4.ogg" range="900" selectionmode="Random" />
+        <Sound file="Content/Map/Thalamus/Sounds/CARRIER_organs5.ogg" range="900" selectionmode="Random" />
+        <ParticleEmitter particle="organeruption" particleamount="50" scalemin="0.5" scalemax="1" velocitymin="100" velocitymax="500" anglemin="0" anglemax="360" />
+        <ParticleEmitter particle="heavygib" drawontop="true" particleamount="1" scalemin="1" scalemax="1" velocitymin="0" velocitymax="0" anglemin="0" anglemax="360" />
+        <ParticleEmitter particle="gib" particleamount="10" scalemin="0.25" scalemax="1" velocitymin="100" velocitymax="300" anglemin="0" anglemax="360" />
+        <ParticleEmitter particle="bloodsplash" particleamount="5" velocitymin="0" velocitymax="300" anglemin="0" anglemax="360" scalemin="0.5" scalemax="1" />
+        <ParticleEmitter particle="whitegoosplash" particleamount="5" velocitymin="0" velocitymax="300" anglemin="0" anglemax="360" scalemin="0.5" scalemax="1" />
+        <SpawnItem identifier="antibloodloss1" spawnposition="This" />
+        <Remove />
+      </StatusEffect>
+      <!--Burst -->
+      <StatusEffect type="Always" target="This" delay="1.0" stackable="false">
+        <Conditional scale="gt 1.4" />
+        <Sound file="Content/Map/Thalamus/Sounds/CARRIER_organs2.ogg" range="900" selectionmode="Random" />
+        <Sound file="Content/Map/Thalamus/Sounds/CARRIER_organs3.ogg" range="900" selectionmode="Random" />
+        <Sound file="Content/Map/Thalamus/Sounds/CARRIER_organs4.ogg" range="900" selectionmode="Random" />
+        <Sound file="Content/Map/Thalamus/Sounds/CARRIER_organs5.ogg" range="900" selectionmode="Random" />
+        <ParticleEmitter particle="organeruption" particleamount="50" scalemin="0.5" scalemax="1" velocitymin="100" velocitymax="500" anglemin="0" anglemax="360" />
+        <ParticleEmitter particle="heavygib" drawontop="true" particleamount="1" scalemin="1" scalemax="1" velocitymin="0" velocitymax="0" anglemin="0" anglemax="360" />
+        <ParticleEmitter particle="gib" particleamount="6" scalemin="0.25" scalemax="1" velocitymin="100" velocitymax="300" anglemin="0" anglemax="360" />
+        <ParticleEmitter particle="whitegoosplash" particleamount="6" velocitymin="0" velocitymax="300" anglemin="0" anglemax="360" scalemin="0.5" scalemax="1" />
+        <SpawnCharacter speciesname="maggot" count="2" spread="8" />
+        <Explosion range="100" force="10" stun="2" flash="false" shockwave="false" sparks="false" flames="false" smoke="false" camerashake="3" underwaterbubble="true" structuredamage="0" itemdamage="0" flashrange="0" flashduration="0"></Explosion>
+        <Remove />
+      </StatusEffect>
+      <StatusEffect type="OnFire" target="This" Condition="-5.0" />
+      <StatusEffect type="OnDamaged" target="This">
+        <Sound file="Content/Map/Thalamus/Sounds/CARRIER_organs6.ogg" range="800" selectionmode="Random" />
+        <Sound file="Content/Map/Thalamus/Sounds/CARRIER_organs7.ogg" range="800" selectionmode="Random" />
+        <Sound file="Content/Map/Thalamus/Sounds/CARRIER_organs8.ogg" range="800" selectionmode="Random" />
+        <Sound file="Content/Map/Thalamus/Sounds/CARRIER_organs9.ogg" range="800" selectionmode="Random" />
+        <ParticleEmitter particle="bloodsplash" particleamount="1" scalemin="1" scalemax="1.5" velocitymin="0" velocitymax="100" anglemin="0" anglemax="360" />
+        <ParticleEmitter particle="waterblood" particleamount="1" anglemin="0" anglemax="360" scalemin="2" scalemax="4" />
+        <ParticleEmitter particle="gib" particleamount="4" scalemin="0.25" scalemax="1" velocitymin="100" velocitymax="300" anglemin="0" anglemax="360" />
+      </StatusEffect>
+    </LightComponent>
+  </Item>
+  <Item name="" identifier="thal_rustseed" category="Material" Tags="smallitem,seed,plantitem" cargocontaineridentifier="metalcrate" scale="0.5" impactsoundtag="impact_soft" spritecolor="180,100,0,255">
+    <Sprite texture="Content/Items/Gardening/GrowablePlants_Temp.png" depth="0.2" sourcerect="830,636,31,30" origin="0.5,0.5" />
+    <PreferredContainer primary="seedbag" minamount="0" maxamount="1" spawnprobability="0.5" />
+    <Price baseprice="60">
+      <Price locationtype="outpost" multiplier="1" minabailable="3" />
+      <Price locationtype="city" multiplier="1.2" minavailable="1" />
+      <Price locationtype="research" multiplier="0.9" minavailable="2" />
+    </Price>
+    <Deconstruct time="30">
+      <Item identifier="carbon" copycondition="true" mincondition="0.1" />
+    </Deconstruct>
+    <Growable growthspeed="1.5" pickingtime="3" maximumvines="30" maxhealth="100" hardiness="0.175" floodtolerance="2.0" seedrate="0.03" productrate="0.2" flowertint="255,255,255,255" flowerquantity="9" baseflowerscale="0.5" vinescale="0.25" vinetint="180,100,0,255">
+      <ProducedItem identifier="opium" probability="0.2" />
+      <ProducedItem identifier="thal_rustcloud" probability="0.8"></ProducedItem>
+      <VineSprites vineatlas="Content/Items/Gardening/branches.png" decayatlas="Content/Items/Gardening/branches_overlay.png">
+        <LeafSprite name="rustleaf1" texture="Mods/Thalassophobia/Items/Gardening/GrowablePlants_Temp.png" sourcerect="12,341,103,93" origin="0.5,0.5" />
+        <LeafSprite name="rustleaf2" texture="Mods/Thalassophobia/Items/Gardening/GrowablePlants_Temp.png" sourcerect="122,346,103,90" origin="0.5,0.5" />
+        <LeafSprite name="rustleaf3" texture="Mods/Thalassophobia/Items/Gardening/GrowablePlants_Temp.png" sourcerect="9,246,111,95" origin="0.5,0.5" />
+        <LeafSprite name="rustleaf4" texture="Mods/Thalassophobia/Items/Gardening/GrowablePlants_Temp.png" sourcerect="124,236,93,110" origin="0.5,0.5" />
+        <FlowerSprite name="rustbell1" texture="Mods/Thalassophobia/Items/Gardening/GrowablePlants_Temp.png" sourcerect="247,344,81,88" origin="0.5,0.5" />
+        <FlowerSprite name="rustbell2" texture="Mods/Thalassophobia/Items/Gardening/GrowablePlants_Temp.png" sourcerect="338,348,84,85" origin="0.5,0.5" />
+        <FlowerSprite name="rustbell3" texture="Mods/Thalassophobia/Items/Gardening/GrowablePlants_Temp.png" sourcerect="523,353,81,77" origin="0.5,0.5" />
+        <FlowerSprite name="rustbell4" texture="Mods/Thalassophobia/Items/Gardening/GrowablePlants_Temp.png" sourcerect="431,348,83,81" origin="0.5,0.5" />
+        <VineSprite type="Stem" sourcerect="640,128,128,128" />
+        <VineSprite type="CrossJunction" sourcerect="512,128,128,128" />
+        <VineSprite type="VerticalLane" sourcerect="512,0,128,128" />
+        <VineSprite type="HorizontalLane" sourcerect="640,0,128,128" />
+        <VineSprite type="TurnTopRight" sourcerect="0,0,128,128" />
+        <VineSprite type="TurnTopLeft" sourcerect="384,0,128,128" />
+        <VineSprite type="TurnBottomLeft" sourcerect="256,0,128,128" />
+        <VineSprite type="TurnBottomRight" sourcerect="128,0,128,128" />
+        <VineSprite type="TSectionTop" sourcerect="128,128,128,128" />
+        <VineSprite type="TSectionLeft" sourcerect="256,128,128,128" />
+        <VineSprite type="TSectionBottom" sourcerect="384,128,128,128" />
+        <VineSprite type="TSectionRight" sourcerect="0,128,128,128" />
+        <VineSprite type="StumpTop" sourcerect="768,0,128,128" />
+        <VineSprite type="StumpLeft" sourcerect="896,0,128,128" />
+        <VineSprite type="StumpBottom" sourcerect="768,128,128,128" />
+        <VineSprite type="StumpRight" sourcerect="896,128,128,128" />
+      </VineSprites>
+    </Growable>
+    <Body radius="15" density="12" />
+    <Holdable canBeCombined="false" slots="Any,RightHand,LeftHand" handle1="0,0" msg="ItemMsgPickUpSelect" />
+  </Item>
+  <Item name="rustcloud" identifier="thal_rustcloud" category="Equipment" cargocontaineridentifier="metalcrate" tags="smallitem" scale="0.5" hideinmenus="true" pickdistance="0" noninteractable="true">
+    <sprite name="sporeem" texture="Mods/Thalassophobia/Items/Jobgear/headgears.png" sourcerect="0,0,1,1" origin="0.4,0.3" />
+    <Body width="40" radius="30" density="15" bodytype="Kinematic" />
+    <LightComponent lightcolor="255,255,150,100" range="170" powerconsumption="0" allowingameediting="false" castshadows="false" IsOn="true">
+      <StatusEffect type="Always" target="This">
+        <ParticleEmitter particle="thal_shroomsmoke" burstamount="2" particlespersecond="4" velocitymin="0" velocitymax="0" anglemin="0" anglemax="360" scalemin="1.4" scalemax="1.4" colormultiplier="140,90,0,255" />
+        <sound file="Mods/Thalassophobia/Items/Jobgear/Scientist/GasCloud.ogg" range="500.0" loop="false" />
+      </StatusEffect>
+      <StatusEffect type="Always" target="This" delay="0.5">
+        <ParticleEmitter particle="thal_shroomsmoke" burstamount="2" particlespersecond="4" velocitymin="0" velocitymax="0" anglemin="0" anglemax="360" scalemin="1.2" scalemax="1.2" colormultiplier="140,90,0,255" />
+        <sound file="Mods/Thalassophobia/Items/Gardening/MetalGroan1.ogg" range="1000.0" loop="false" selectionmode="Random" />
+        <sound file="Mods/Thalassophobia/Items/Gardening/MetalGroan2.ogg" range="1000.0" loop="false" selectionmode="Random" />
+        <sound file="Mods/Thalassophobia/Items/Gardening/MetalGroan3.ogg" range="1000.0" loop="false" selectionmode="Random" />
+      </StatusEffect>
+      <StatusEffect type="Always" target="This" delay="1" stackable="false">
+        <Explosion range="125" force="1" flash="false" shockwave="false" sparks="false" flames="false" smoke="false" camerashake="0" underwaterbubble="false" structuredamage="3" itemdamage="14" flashrange="0" flashduration="0">
+          <Affliction identifier="oxygenlow" strength="3" />
+        </Explosion>
+      </StatusEffect>
+      <StatusEffect type="Always" target="Hull" delay="0.3" stackable="false" Oxygen="-2000.0" disabledeltatime="true"></StatusEffect>
+      <StatusEffect type="Always" target="This" delay="6" stackable="false">
+        <Remove />
+      </StatusEffect>
+      <StatusEffect type="InWater" target="This" stackable="false">
+        <Remove />
+      </StatusEffect>
+    </LightComponent>
+  </Item>
+  
+  <Item name="" identifier="thal_wheatseed" category="Material" Tags="smallitem,seed,plantitem" cargocontaineridentifier="metalcrate" scale="0.5" impactsoundtag="impact_soft" hideinmenus="true" isshootable="true" requireaimtouse="false" >
+    <Sprite texture="Content/Items/Gardening/GrowablePlants_Temp.png" depth="0.2" sourcerect="830,636,31,30" origin="0.5,0.5" />
+    <!--<PreferredContainer primary="supplycab" minamount="0" maxamount="2" spawnprobability="0.25" />
+    <PreferredContainer primary="wreckmedcab" minamount="0" maxamount="3" spawnprobability="0.5" />-->
+    <Price baseprice="30">
+      <Price locationtype="outpost" multiplier="1" minabailable="3" />
+      <Price locationtype="city" multiplier="1.2" minavailable="1" />
+      <Price locationtype="research" multiplier="0.9" minavailable="2" />
+    </Price>
+    <Deconstruct time="30">
+      <Item identifier="carbon" copycondition="true" mincondition="0.1" />
+    </Deconstruct>
+    <Growable growthspeed="5" pickingtime="3" maximumvines="2" maxhealth="100" hardiness="0.175" floodtolerance="2.0" seedrate="0" productrate="0" flowertint="255,255,255,255" flowerquantity="1" baseflowerscale="0.5" vinescale="0.25" vinetint="244,220,140,255">
+      <ProducedItem identifier="yeastshroom" probability="0.0" />
+      <VineSprites vineatlas="Content/Items/Gardening/branches.png" decayatlas="Content/Items/Gardening/branches_overlay.png">
+        <FlowerSprite name="shroomflower1" texture="Mods/Thalassophobia/Items/Gardening/GrowablePlants_Temp.png" sourcerect="142,33,1,1" origin="0.5,0.5" />
+        <VineSprite type="Stem" sourcerect="640,128,1,1" />
+        <VineSprite type="CrossJunction" sourcerect="512,128,1,1" />
+        <VineSprite type="VerticalLane" sourcerect="512,0,1,1" />
+        <VineSprite type="HorizontalLane" sourcerect="640,0,1,1" />
+        <VineSprite type="TurnTopRight" sourcerect="0,0,1,1" />
+        <VineSprite type="TurnTopLeft" sourcerect="384,0,1,1" />
+        <VineSprite type="TurnBottomLeft" sourcerect="256,0,1,1" />
+        <VineSprite type="TurnBottomRight" sourcerect="128,0,1,1" />
+        <VineSprite type="TSectionTop" sourcerect="128,128,1,1" />
+        <VineSprite type="TSectionLeft" sourcerect="256,128,1,1" />
+        <VineSprite type="TSectionBottom" sourcerect="384,128,1,1" />
+        <VineSprite type="TSectionRight" sourcerect="0,128,1,1" />
+        <VineSprite type="StumpTop" sourcerect="768,0,1,1" />
+        <VineSprite type="StumpLeft" sourcerect="896,0,1,1" />
+        <VineSprite type="StumpBottom" sourcerect="768,128,1,1" />
+        <VineSprite type="StumpRight" sourcerect="896,128,1,1" />
+      </VineSprites>
+    </Growable>
+    <Body radius="15" density="12" />
+    <Holdable canBeCombined="false" slots="Any,RightHand,LeftHand" handle1="0,0" msg="ItemMsgPickUpSelect" >
+		</Holdable>
+  </Item>
+  
+  <Item name="wheatstalk" identifier="thal_wheatstalk" category="Material" Tags="smallitem,seed,plantitem,thal_produce" cargocontaineridentifier="metalcrate" scale="0.47" impactsoundtag="impact_soft" hideinmenus="true" noninteractable="true" isshootable="true" >
+		<Body radius="15" density="12" bodytype="Kinematic" />
+    <Sprite name="phase 1" texture="Mods/Thalassophobia/Items/Gardening/GrowableEarth.png" depth="0.8" sourcerect="0,0,120,160" origin="0.5,1.4" />
+    <BrokenSprite name="phase 1.5" texture="Mods/Thalassophobia/Items/Gardening/GrowableEarth.png" depth="0.8" sourcerect="0,0,120,160" origin="0.5,1.4" mincondition="75" maxcondition="99" />
+    <BrokenSprite name="phase 2" texture="Mods/Thalassophobia/Items/Gardening/GrowableEarth.png" sourcerect="120,0,120,160" origin="0.5,1.4" depth="0.8" mincondition="50" maxcondition="75" />
+    <BrokenSprite name="phase 3" texture="Mods/Thalassophobia/Items/Gardening/GrowableEarth.png" sourcerect="240,0,120,160" origin="0.5,1.4" depth="0.8" mincondition="25" maxcondition="50" />
+    <BrokenSprite name="phase 4" texture="Mods/Thalassophobia/Items/Gardening/GrowableEarth.png" sourcerect="360,0,120,160" origin="0.5,1.4" depth="0.8" mincondition="0" maxcondition="25" />
+    <BrokenSprite name="phase 5" texture="Mods/Thalassophobia/Items/Gardening/GrowableEarth.png" sourcerect="480,0,120,160" origin="0.5,1.4" depth="0.8" maxcondition="0" />
+    <ItemComponent>
+			<StatusEffect target="This" type="Always" condition="-10" >
+			
+			</StatusEffect>
+    </ItemComponent>
+  </Item>
+</Items>

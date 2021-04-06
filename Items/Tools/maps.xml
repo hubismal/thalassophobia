@@ -1,0 +1,181 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Items>
+  <!-- Standard Issue Automap -->
+  <Item name="" identifier="thal_map" category="Equipment" Tags="smallitem,handheldsonar" cargocontaineridentifier="metalcrate" impactsoundtag="impact_metal_light" scale="0.2">
+    <PreferredContainer primary="divingcab" minamount="1" maxamount="2" spawnprobability="1" />
+    <PreferredContainer primary="wreckstoragecab" minamount="0" maxamount="1" spawnprobability="0.125" />
+    <Price locationtype="City" buyprice="300" />
+    <Price locationtype="Research" buyprice="300" />
+    <Price locationtype="Military" buyprice="300" />
+    <Price locationtype="Outpost" buyprice="350" />
+    <Deconstruct time="15">
+      <Item identifier="fpgacircuit" />
+      <Item identifier="plastic" />
+    </Deconstruct>
+    <Fabricate suitablefabricators="fabricator" requiredtime="20">
+      <RequiredItem identifier="fpgacircuit" />
+      <RequiredItem identifier="plastic" />
+      <RequiredItem identifier="rubber" />
+    </Fabricate>
+    <Sprite name="basicmap sprite" texture="Mods/Thalassophobia/Items/Tools/maps.png" sourcerect="2,1,139,80" depth="0.55" origin="0.5,0.5">
+      <StatusEffect type="Always" targettype="This" sourcerect="1,1,89,120" setvalue="true">
+        <RequiredItem items="batterycell" type="Contained" />
+      </StatusEffect>
+    </Sprite>
+    <Body width="24" height="12" density="40" />
+    <Holdable slots="Any,RightHand,LeftHand" holdangle="30" handle1="-10,0" msg="ItemMsgPickUpSelect">
+      <StatusEffect type="OnActive" targettype="Contained" Condition="-0.5">
+        <RequiredItem items="batterycell" type="Contained" />
+      </StatusEffect>
+      <StatusEffect type="OnActive" targettype="Contained" Condition="-0.25">
+        <RequiredItem items="fulguriumbatterycell" type="Contained" />
+      </StatusEffect>
+      <StatusEffect type="OnActive" targettype="Contained" Condition="-0.5">
+        <RequiredItem excludedidentifiers="batterycell,fulguriumbatterycell" type="Contained" />
+      </StatusEffect>
+    </Holdable>
+    <MiniMap MinVoltage="1.0" PowerConsumption="10" canbeselected="false" msg="ItemMsgInteractSelect" drawhudwhenequipped="true" requirewaterdetectors="true" requireoxygendetectors="true" showhullintegrity="true">
+      <GuiFrame relativesize="0.3,0.3" anchor="CenterRight" style="ItemUI" />
+      <AlternativeLayout relativesize="0.2725,0.3" pivot="BottomRight" />
+      <poweronsound file="Content/Items/PowerOnLight3.ogg" range="1000" loop="false" />
+    </MiniMap>
+    <ItemContainer capacity="1" hideitems="true" maxstacksize="1">
+      <ContainedStateIndicator texture="Content/UI/ContainerIndicators.png" sourcerect="1,70,107,31" />
+      <StatusEffect type="Always" targettype="This" Voltage="0.0" setvalue="true" />
+      <Containable items="mobilebattery">
+        <StatusEffect type="OnContaining" targettype="This" Voltage="1.0" setvalue="true" />
+      </Containable>
+    </ItemContainer>
+  </Item>
+  <!-- Hydrosensitive Automap -->
+  <Item name="" identifier="thal_mapwater" category="Equipment" Tags="smallitem,handheldsonar" cargocontaineridentifier="metalcrate" impactsoundtag="impact_metal_light" scale="0.2">
+    <Price locationtype="Research" buyprice="900" />
+    <Price locationtype="City" buyprice="800" />
+    <Deconstruct time="28">
+      <Item identifier="thal_map" />
+      <Item identifier="waterdetector" />
+    </Deconstruct>
+    <Fabricate suitablefabricators="fabricator" requiredtime="90">
+      <RequiredSkill identifier="mechanical" level="40" />
+      <RequiredItem identifier="thal_map" />
+      <RequiredItem identifier="waterdetector" />
+      <RequiredItem identifier="wrench" />
+    </Fabricate>
+    <Sprite name="watermap sprite" texture="Mods/Thalassophobia/Items/Tools/maps.png" sourcerect="145,0,139,80" depth="0.55" origin="0.5,0.5">
+      <StatusEffect type="Always" targettype="This" sourcerect="1,1,89,120" setvalue="true">
+        <RequiredItem items="batterycell" type="Contained" />
+      </StatusEffect>
+    </Sprite>
+    <Body width="24" height="12" density="40" />
+    <Holdable slots="Any,RightHand,LeftHand" holdangle="30" handle1="-10,0" msg="ItemMsgPickUpSelect">
+      <StatusEffect type="OnActive" targettype="Contained" Condition="-0.5">
+        <RequiredItem items="batterycell" type="Contained" />
+      </StatusEffect>
+      <StatusEffect type="OnActive" targettype="Contained" Condition="-0.25">
+        <RequiredItem items="fulguriumbatterycell" type="Contained" />
+      </StatusEffect>
+      <StatusEffect type="OnActive" targettype="Contained" Condition="-0.5">
+        <RequiredItem excludedidentifiers="batterycell,fulguriumbatterycell" type="Contained" />
+      </StatusEffect>
+    </Holdable>
+    <MiniMap MinVoltage="1.0" PowerConsumption="10" canbeselected="false" msg="ItemMsgInteractSelect" drawhudwhenequipped="true" requirewaterdetectors="false" requireoxygendetectors="true" showhullintegrity="true">
+      <GuiFrame relativesize="0.3,0.3" anchor="CenterRight" style="ItemUI" />
+      <AlternativeLayout relativesize="0.2725,0.3" pivot="BottomRight" />
+      <poweronsound file="Content/Items/PowerOnLight3.ogg" range="1000" loop="false" />
+    </MiniMap>
+    <ItemContainer capacity="1" hideitems="true" maxstacksize="1" >
+      <ContainedStateIndicator texture="Content/UI/ContainerIndicators.png" sourcerect="1,70,107,31" />
+      <StatusEffect type="Always" targettype="This" Voltage="0.0" setvalue="true" />
+      <Containable items="mobilebattery">
+        <StatusEffect type="OnContaining" targettype="This" Voltage="1.0" setvalue="true" />
+      </Containable>
+    </ItemContainer>
+  </Item>
+  <!-- Aerosensitive Automap -->
+  <Item name="" identifier="thal_mapair" category="Equipment" Tags="smallitem,handheldsonar" cargocontaineridentifier="metalcrate" impactsoundtag="impact_metal_light" scale="0.2">
+    <Price locationtype="Research" buyprice="900" />
+    <Price locationtype="City" buyprice="800" />
+    <Deconstruct time="28">
+      <Item identifier="thal_map" />
+      <Item identifier="oxygendetector" />
+    </Deconstruct>
+    <Fabricate suitablefabricators="fabricator" requiredtime="90">
+      <RequiredSkill identifier="electrical" level="40" />
+      <RequiredItem identifier="thal_map" />
+      <RequiredItem identifier="oxygendetector" />
+      <RequiredItem identifier="screwdriver" />
+    </Fabricate>
+    <Sprite name="airmap sprite" texture="Mods/Thalassophobia/Items/Tools/maps.png" sourcerect="288,0,139,80" depth="0.55" origin="0.5,0.5">
+      <StatusEffect type="Always" targettype="This" sourcerect="1,1,89,120" setvalue="true">
+        <RequiredItem items="batterycell" type="Contained" />
+      </StatusEffect>
+    </Sprite>
+    <Body width="24" height="12" density="40" />
+    <Holdable slots="Any,RightHand,LeftHand" holdangle="30" handle1="-10,0" msg="ItemMsgPickUpSelect">
+      <StatusEffect type="OnActive" targettype="Contained" Condition="-0.5">
+        <RequiredItem items="batterycell" type="Contained" />
+      </StatusEffect>
+      <StatusEffect type="OnActive" targettype="Contained" Condition="-0.25">
+        <RequiredItem items="fulguriumbatterycell" type="Contained" />
+      </StatusEffect>
+      <StatusEffect type="OnActive" targettype="Contained" Condition="-0.5">
+        <RequiredItem excludedidentifiers="batterycell,fulguriumbatterycell" type="Contained" />
+      </StatusEffect>
+    </Holdable>
+    <MiniMap MinVoltage="1.0" PowerConsumption="10" canbeselected="false" msg="ItemMsgInteractSelect" drawhudwhenequipped="true" requirewaterdetectors="true" requireoxygendetectors="false" showhullintegrity="true">
+      <GuiFrame relativesize="0.3,0.3" anchor="CenterRight" style="ItemUI" />
+      <AlternativeLayout relativesize="0.2725,0.3" pivot="BottomRight" />
+      <poweronsound file="Content/Items/PowerOnLight3.ogg" range="1000" loop="false" />
+    </MiniMap>
+    <ItemContainer capacity="1" hideitems="true" maxstacksize="1" >
+      <ContainedStateIndicator texture="Content/UI/ContainerIndicators.png" sourcerect="1,70,107,31" />
+      <StatusEffect type="Always" targettype="This" Voltage="0.0" setvalue="true" />
+      <Containable items="mobilebattery">
+        <StatusEffect type="OnContaining" targettype="This" Voltage="1.0" />
+      </Containable>
+    </ItemContainer>
+  </Item>
+  <!-- Omniscient Automap -->
+  <Item name="" identifier="thal_mapall" category="Equipment" Tags="smallitem,handheldsonar" cargocontaineridentifier="metalcrate" impactsoundtag="impact_metal_light" scale="0.2">
+    <Deconstruct time="28">
+      <Item identifier="thal_map" />
+      <Item identifier="oxygendetector" />
+      <Item identifier="waterdetector" />
+    </Deconstruct>
+    <Fabricate suitablefabricators="fabricator" requiredtime="120">
+      <RequiredSkill identifier="electrical" level="50" />
+      <RequiredSkill identifier="mechanical" level="50" />
+      <RequiredItem identifier="thal_mapair" />
+      <RequiredItem identifier="thal_mapwater" />
+      <RequiredItem identifier="alienpowercell" />
+    </Fabricate>
+    <Sprite name="allmap sprite" texture="Mods/Thalassophobia/Items/Tools/maps.png" sourcerect="0,81,139,80" depth="0.55" origin="0.5,0.5">
+      <StatusEffect type="Always" targettype="This" sourcerect="1,1,89,120" setvalue="true">
+        <RequiredItem items="batterycell" type="Contained" />
+      </StatusEffect>
+    </Sprite>
+    <Body width="24" height="12" density="40" />
+    <Holdable slots="Any,RightHand,LeftHand" holdangle="30" handle1="-10,0" msg="ItemMsgPickUpSelect">
+      <StatusEffect type="OnActive" targettype="Contained" Condition="-1.0">
+        <RequiredItem items="batterycell" type="Contained" />
+      </StatusEffect>
+      <StatusEffect type="OnActive" targettype="Contained" Condition="-0.5">
+        <RequiredItem items="fulguriumbatterycell" type="Contained" />
+      </StatusEffect>
+      <StatusEffect type="OnActive" targettype="Contained" Condition="-1.0">
+        <RequiredItem excludedidentifiers="batterycell,fulguriumbatterycell" type="Contained" />
+      </StatusEffect>
+    </Holdable>
+    <MiniMap PowerConsumption="100" canbeselected="false" msg="ItemMsgInteractSelect" drawhudwhenequipped="true" requirewaterdetectors="false" requireoxygendetectors="false" showhullintegrity="true">
+      <GuiFrame relativesize="0.3,0.3" anchor="CenterRight" style="ItemUI" />
+      <AlternativeLayout relativesize="0.2725,0.3" pivot="BottomRight" />
+    </MiniMap>
+    <ItemContainer capacity="1" hideitems="true" maxstacksize="1" >
+      <ContainedStateIndicator texture="Content/UI/ContainerIndicators.png" sourcerect="1,70,107,31" />
+      <StatusEffect type="Always" targettype="This" Voltage="0.0" setvalue="true" />
+      <Containable items="mobilebattery">
+        <StatusEffect type="OnContaining" targettype="This" Voltage="1.0" setvalue="true" />
+      </Containable>
+    </ItemContainer>
+  </Item>
+</Items>

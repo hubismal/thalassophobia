@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<infotexts language="Simplified Chinese" nowhitespace="true" translatedname="中文(简体)">
+  <!-- Stationary Repairtools -->
+  <entityname.thal_sprinkler>洒水器</entityname.thal_sprinkler>
+  <entitydescription.thal_sprinkler>向区域喷水以扑灭大火或给水生植物浇水。 使其长时间运行可能会引起水坑。 或更糟。</entitydescription.thal_sprinkler>
+  
+  <entityname.thal_trashcan>垃圾箱</entityname.thal_trashcan>
+  <entitydescription.thal_trashcan>垃圾桶可用于处理中小型物品。 将trigger_out连接到垃圾斜槽，然后将斜槽连接到要运输物品的罐子上。</entitydescription.thal_trashcan>
+  
+  <entityname.thal_trashchute>垃圾槽</entityname.thal_trashchute>
+  <entitydescription.thal_trashchute>垃圾桶的出口点。</entitydescription.thal_trashchute>
+  
+  <entityname.thal_blastdoor>装甲门</entityname.thal_blastdoor>
+  <entitydescription.thal_blastdoor>速度慢，装甲重的滑动门，无法被怪物撬开或切碎。 没有按钮版本。</entitydescription.thal_blastdoor>
+  <msgnocrowbar>不能用撬棍撬。</msgnocrowbar>
+  
+  <entityname.thal_glassdoor>有机玻璃门</entityname.thal_glassdoor>
+  <entitydescription.thal_glassdoor>比普通门稍弱，完全透明的门完全由有机玻璃基超材料制成。</entitydescription.thal_glassdoor>
+  
+  <entityname.thal_glassdoorwbuttons>带按钮的有机玻璃门</entityname.thal_glassdoorwbuttons>
+  <entitydescription.thal_glassdoorwbuttons>比普通门稍弱，完全透明的门完全由有机玻璃基超材料制成。 具有集成的按钮。</entitydescription.thal_glassdoorwbuttons>
+  
+  <entityname.thal_glasshatch>有机玻璃舱口盖</entityname.thal_glasshatch>
+  <entitydescription.thal_glasshatch>比普通门稍弱，完全透明的舱口，完全由基于有机玻璃的超材料制成。</entitydescription.thal_glasshatch>
+  
+  <entityname.thal_glasshatchwbuttons>带按钮的有机玻璃舱口盖</entityname.thal_glasshatchwbuttons>
+  <entitydescription.thal_glasshatchwbuttons>比普通门稍弱，完全透明的舱口，完全由基于有机玻璃的超材料制成。 具有集成的按钮。</entitydescription.thal_glasshatchwbuttons>
+  
+  <entityname.thal_oxygendock>氧气补充坞</entityname.thal_oxygendock>
+  <entitydescription.thal_oxygendock>能够容纳三个氧气罐或焊接罐的补充坞。 只要氧气还在流动，就可以与氧气发生器连接以重新填充任何包含在内的氧气罐。 仅具有发泄标签以实现前哨站兼容性； 不会向船体释放氧气。</entitydescription.thal_oxygendock>
+  <ItemMsgBreatheUse>[[use]] Breathe</ItemMsgBreatheUse>
+  
+  
+  <entityname.thal_shuttervent>百叶窗</entityname.thal_shuttervent>
+  <entitydescription.thal_shuttervent>可以通过配线或扳手打开/关闭氧气流的通风口。 也可以用扳手将物品存放在其中，尽管锐利的眼睛会注意到突出的盖子。</entitydescription.thal_shuttervent>
+  <ItemMsgCrowbarRequired>Crowbar Required</ItemMsgCrowbarRequired>
+  <itemmsgopencrowbarselect>[[select]] Open (Crowbar)</itemmsgopencrowbarselect>
+  <buttoncloseshutter>>关闭空气百叶窗</buttoncloseshutter>
+  <buttonopenshutter>>打开空气百叶窗r</buttonopenshutter>
+  <connection.toggleshutter>toggle_shutter</connection.toggleshutter>
+  <connection.shutterclosed>shutter_closed</connection.shutterclosed>
+  
+  <entityname.thal_vacuum>氧气真空机</entityname.thal_vacuum>
+  <entitydescription.thal_vacuum>机器，在正确供电和启动后能够将氧气抽出房间。  是解决火灾和窒息活物的理想选择。</entitydescription.thal_vacuum>
+  
+  <entityname.thal_vendingmachine>自动售货机</entityname.thal_vendingmachine>
+  <entitydescription.thal_vendingmachine>分配放置在其中的任何东西。 需要撬棍才能打开，并且要花钱才能重新装满。</entitydescription.thal_vendingmachine>
+  
+  
+  <!-- Thalamus -->
+  <entityname.thal_thalamuseye>丘脑之眼</entityname.thal_thalamuseye>
+  <entitydescription.thal_thalamuseye>丘脑之眼，环顾四周并发出柔软的声音。 可以被摧毁。</entitydescription.thal_thalamuseye>
+  <entityname.thal_thalamusseeds>丘脑种子</entityname.thal_thalamusseeds>
+  <entitydescription.thal_thalamusseeds>丘脑种子。 不能互动。 看起来像牙齿。</entitydescription.thal_thalamusseeds>
+</infotexts>

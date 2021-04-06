@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<huskappendage>
+  <limb id="13" name="CrawTail" type="Tail" width="1" height="1" notes="" flip="True" healthindex="3" attackpriority="0.5" steerforce="0" stepoffset="10,-10" radius="10" mass="0" density="1" pullpos="-0.14543161,-6.254539" refjoint="4" ignorecollisions="True" friction="0.3" restitution="0.05" spriteorientation="270" mirrorvertically="False" mirrorhorizontally="False" hide="False" angulardamping="7" mouthpos="0,0" constanttorque="0" constantangle="0" scale="1.1" attackforcemultiplier="1" minseverancedamage="0.8" severedfadeouttime="10" applytailangle="False" applysinemovement="True">
+    <deformablesprite sourcerect="104,196,152,61" origin="1.0,0.5" depth="0.1" texture="Mods/Thalassophobia/Characters/Gummy/GeneLimbs/crawler.png" color="255,255,255,255" deadcolor="255,255,255,255" deadcolortime="0" subdivisions="4,1" >
+			<spritedeformation type="bendjoint" resolution="3,3" multiplier="1.0" sync="-1" typename="bendjoint" blendmode="Add" usemovementsine="False" stopwhenhostisdead="False" sineoffset="0" maxrotation="30" strength="1" onlyinwater="False" />
+		</deformablesprite>
+    <sound tag="footstep_crawler" />
+      <StatusEffect target="Character" type="Always" SpeedMultiplier="1.2" setvalue="true">
+      </StatusEffect>
+  </limb>
+  
+  <!-- Torso appendage -->
+  <joint name="Torso to Tail" limb1="1" limb2="13" limb1anchor="-3,-16" limb2anchor="1,-1" upperlimit="56" weldjoint="false" lowerlimit="42" canbesevered="False" limitenabled="True" />
+
+</huskappendage>

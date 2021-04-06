@@ -1,0 +1,170 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Items>
+  <Item name="" identifier="thal_mediumbrain" category="Equipment" tags="thal_giblet,smallitem,decoy" cargocontaineridentifier="metalcrate" damagedbymonsters="true" description="" scale="0.25" impactsoundtag="impact_wetsplat" >
+    <Sprite name="medbrain" texture="Mods/Thalassophobia/Items/Food/Cooking/organs.png" sourcerect="3,98,128,94" depth="0.55" origin="0.5,0.5" />
+    <Body width="128" height="60" density="15" />
+    <AiTarget sightrange="1000" static="true" />
+    <Holdable slots="Any,RightHand,LeftHand" aimable="false" aimpos="35,23" handle1="15,0" swingamount="20,20" swingspeed="2" swingwhenusing="true" msg="ItemMsgPickUpSelect">
+			<StatusEffect type="OnUse" target="This,Character" condition="-10" swingwhenusing="true" swingspeed="2" aimpos="35,23" >
+				<Conditional thal_full="lt 99" />
+				<Affliction identifier="thal_nutrition" amount="0.6"/>
+				<Affliction identifier="thal_full" amount="2.5"/>
+				<Affliction identifier="thal_foodpoisoning" amount="0.5" />
+				<sound file="Mods/Thalassophobia/Map/Thalamus/eye.ogg" type="OnUse" range="600" loop="true" />
+			</StatusEffect>
+			<StatusEffect type="OnUse" target="This,Character" swingwhenusing="false" swingspeed="0" aimpos="40,10" >
+				<Conditional thal_full="gt 98" />
+				<Affliction identifier="thal_full" amount="10"/>
+			</StatusEffect>
+			<StatusEffect type="OnBroken" target="This">
+				<Conditional condition="eq 0" />
+				<sound type="OnUse" file="Mods/Thalassophobia/Items/Food/gulp.ogg" range="600" />
+				<Remove />
+			</StatusEffect>
+    </Holdable>
+  </Item>
+  <Item name="" identifier="thal_smallbrain" category="Equipment" tags="thal_giblet,smallitem,decoy" cargocontaineridentifier="metalcrate" damagedbymonsters="true" description="" scale="0.1" impactsoundtag="impact_wetsplat" >
+    <Sprite name="smolbrain" texture="Mods/Thalassophobia/Items/Food/Cooking/organs.png" sourcerect="151,112,156,89" depth="0.55" origin="0.5,0.5" />
+    <Body width="156" height="60" density="15" />
+    <AiTarget sightrange="1000" static="true" />
+    <Holdable slots="Any,RightHand,LeftHand" aimpos="100,0" handle1="-5,0" msg="ItemMsgPickUpSelect" />
+  </Item>
+  <Item name="" identifier="thal_largebrain" category="Equipment" tags="thal_giblet,smallitem,decoy" cargocontaineridentifier="metalcrate" damagedbymonsters="true" description="" scale="0.5" impactsoundtag="impact_wetsplat" >
+    <Sprite name="largebrain" texture="Mods/Thalassophobia/Items/Food/Cooking/organs.png" sourcerect="208,25,114,96" depth="0.55" origin="0.5,0.5" />
+    <Body width="30" height="10" density="15" />
+    <AiTarget sightrange="1000" static="true" />
+    <Holdable slots="Any,RightHand,LeftHand" aimable="false" aimpos="35,23" handle1="15,0" swingamount="20,20" swingspeed="2" swingwhenusing="true" msg="ItemMsgPickUpSelect">
+			<StatusEffect type="OnUse" target="This,Character" condition="-7" swingwhenusing="true" swingspeed="2" aimpos="35,23" >
+				<Conditional thal_full="lt 99" />
+				<Affliction identifier="thal_nutrition" amount="0.6"/>
+				<Affliction identifier="thal_full" amount="2.5"/>
+				<Affliction identifier="thal_foodpoisoning" amount="0.5" />
+				<sound file="Mods/Thalassophobia/Map/Thalamus/eye.ogg" type="OnUse" range="600" loop="true" />
+			</StatusEffect>
+			<StatusEffect type="OnUse" target="This,Character" swingwhenusing="false" swingspeed="0" aimpos="40,10" >
+				<Conditional thal_full="gt 98" />
+				<Affliction identifier="thal_full" amount="10"/>
+			</StatusEffect>
+			<StatusEffect type="OnBroken" target="This">
+				<Conditional condition="eq 0" />
+				<sound file="Mods/Thalassophobia/Items/Food/gulp.ogg" range="600" />
+				<Remove />
+			</StatusEffect>
+    </Holdable>
+  </Item>
+  <Item name="" identifier="thal_mediumbreast" category="Equipment" tags="thal_giblet,smallitem,decoy" cargocontaineridentifier="metalcrate" damagedbymonsters="true" description="" scale="0.3" impactsoundtag="impact_wetsplat" >
+    <Sprite name="medbreast" texture="Mods/Thalassophobia/Items/Food/Cooking/organs.png" sourcerect="591,5,137,84" depth="0.55" origin="0.5,0.5" />
+    <Body width="137" height="60" density="15" />
+    <AiTarget sightrange="1000" static="true" />
+    <Holdable slots="Any,RightHand,LeftHand" aimable="false" aimpos="35,23" handle1="15,0" swingamount="20,20" swingspeed="2" swingwhenusing="true" msg="ItemMsgPickUpSelect">
+			<StatusEffect type="OnUse" target="This,Character" condition="-8" swingwhenusing="true" swingspeed="2" aimpos="35,23" >
+				<Conditional thal_full="lt 99" />
+				<Affliction identifier="thal_nutrition" amount="1"/>
+				<Affliction identifier="thal_full" amount="2.5"/>
+				<Affliction identifier="thal_foodpoisoning" amount="0.5" />
+				<sound file="Mods/Thalassophobia/Map/Thalamus/eye.ogg" type="OnUse" range="600" loop="true" />
+			</StatusEffect>
+			<StatusEffect type="OnUse" target="This,Character" swingwhenusing="false" swingspeed="0" aimpos="40,10" >
+				<Conditional thal_full="gt 98" />
+				<Affliction identifier="thal_full" amount="10"/>
+			</StatusEffect>
+			<StatusEffect type="OnBroken" target="This">
+				<Conditional condition="eq 0" />
+				<sound file="Mods/Thalassophobia/Items/Food/gulp.ogg" range="600" />
+				<Remove />
+			</StatusEffect>
+    </Holdable>
+  </Item>
+  <Item name="" identifier="thal_smallbreast" category="Equipment" tags="thal_giblet,smallitem,decoy" cargocontaineridentifier="metalcrate" damagedbymonsters="true" description="" scale="0.2" impactsoundtag="impact_wetsplat" >
+    <Sprite name="smallbreast" texture="Mods/Thalassophobia/Items/Food/Cooking/organs.png" sourcerect="445,16,140,75" depth="0.55" origin="0.5,0.5" />
+    <Body width="140" height="60" density="15" />
+    <AiTarget sightrange="1000" static="true" />
+    <Holdable slots="Any,RightHand,LeftHand" aimable="false" aimpos="35,23" handle1="15,0" swingamount="20,20" swingspeed="2" swingwhenusing="true" msg="ItemMsgPickUpSelect">
+			<StatusEffect type="OnUse" target="This,Character" condition="-15" swingwhenusing="true" swingspeed="2" aimpos="35,23" >
+				<Conditional thal_full="lt 99" />
+				<Affliction identifier="thal_nutrition" amount="1"/>
+				<Affliction identifier="thal_full" amount="2.5"/>
+				<Affliction identifier="thal_foodpoisoning" amount="0.5" />
+				<sound file="Mods/Thalassophobia/Map/Thalamus/eye.ogg" type="OnUse" range="600" loop="true" />
+			</StatusEffect>
+			<StatusEffect type="OnUse" target="This,Character" swingwhenusing="false" swingspeed="0" aimpos="40,10" >
+				<Conditional thal_full="gt 98" />
+				<Affliction identifier="thal_full" amount="10"/>
+			</StatusEffect>
+			<StatusEffect type="OnBroken" target="This">
+				<Conditional condition="eq 0" />
+				<sound file="Mods/Thalassophobia/Items/Food/gulp.ogg" range="600" />
+				<Remove />
+			</StatusEffect>
+    </Holdable>
+  </Item>
+  <Item name="" identifier="thal_smallthigh" category="Equipment" tags="thal_giblet,smallitem,decoy" cargocontaineridentifier="metalcrate" damagedbymonsters="true" description="" scale="0.28" impactsoundtag="impact_wetsplat" >
+    <Sprite texture="Mods/Thalassophobia/Items/Food/Cooking/organs.png" sourcerect="315,19,107,70" depth="0.55" origin="0.5,0.5" />
+    <Body width="107" height="55" density="15" />
+    <AiTarget sightrange="1000" static="true" />
+    <Holdable slots="Any,RightHand,LeftHand" aimable="false" aimpos="35,23" handle1="15,0" swingamount="20,20" swingspeed="2" swingwhenusing="true" msg="ItemMsgPickUpSelect">
+			<StatusEffect type="OnUse" target="This,Character" condition="-13" swingwhenusing="true" swingspeed="2" aimpos="35,23" >
+				<Conditional thal_full="lt 99" />
+				<Affliction identifier="thal_nutrition" amount="1"/>
+				<Affliction identifier="thal_full" amount="2.5"/>
+				<Affliction identifier="thal_foodpoisoning" amount="0.5" />
+				<sound file="Mods/Thalassophobia/Map/Thalamus/eye.ogg" type="OnUse" range="600" loop="true" />
+			</StatusEffect>
+			<StatusEffect type="OnUse" target="This,Character" swingwhenusing="false" swingspeed="0" aimpos="40,10" >
+				<Conditional thal_full="gt 98" />
+				<Affliction identifier="thal_full" amount="10"/>
+			</StatusEffect>
+			<StatusEffect type="OnBroken" target="This">
+				<Conditional condition="eq 0" />
+				<sound file="Mods/Thalassophobia/Items/Food/gulp.ogg" range="600" />
+				<Remove />
+			</StatusEffect>
+    </Holdable>
+  </Item>
+  <Item name="" identifier="thal_mediumthigh" category="Equipment" tags="thal_giblet,smallitem,decoy" cargocontaineridentifier="metalcrate" damagedbymonsters="true" description="" scale="0.35" impactsoundtag="impact_wetsplat" >
+    <Sprite texture="Mods/Thalassophobia/Items/Food/Cooking/organs.png" sourcerect="152,7,149,94" depth="0.55" origin="0.5,0.5" />
+    <Body width="149" height="55" density="15" />
+    <AiTarget sightrange="1000" static="true" />
+    <Holdable slots="Any,RightHand,LeftHand" aimable="false" aimpos="35,23" handle1="15,0" swingamount="20,20" swingspeed="2" swingwhenusing="true" msg="ItemMsgPickUpSelect">
+			<StatusEffect type="OnUse" target="This,Character" condition="-11" swingwhenusing="true" swingspeed="2" aimpos="35,23" >
+				<Conditional thal_full="lt 99" />
+				<Affliction identifier="thal_nutrition" amount="1"/>
+				<Affliction identifier="thal_full" amount="2.5"/>
+				<Affliction identifier="thal_foodpoisoning" amount="0.5" />
+				<sound file="Mods/Thalassophobia/Map/Thalamus/eye.ogg" type="OnUse" range="600" loop="true" />
+			</StatusEffect>
+			<StatusEffect type="OnUse" target="This,Character" swingwhenusing="false" swingspeed="0" aimpos="40,10" >
+				<Conditional thal_full="gt 98" />
+				<Affliction identifier="thal_full" amount="10"/>
+			</StatusEffect>
+			<StatusEffect type="OnBroken" target="This">
+				<Conditional condition="eq 0" />
+				<sound file="Mods/Thalassophobia/Items/Food/gulp.ogg" range="600" />
+				<Remove />
+			</StatusEffect>
+    </Holdable>
+  </Item>
+  <Item name="" identifier="thal_largethigh" category="Equipment" tags="thal_giblet,smallitem,decoy" cargocontaineridentifier="metalcrate" damagedbymonsters="true" description="" scale="0.5" impactsoundtag="impact_wetsplat" >
+    <Sprite texture="Mods/Thalassophobia/Items/Food/Cooking/organs.png" sourcerect="0,2,136,94" depth="0.55" origin="0.5,0.5" />
+    <Body width="136" height="60" density="15" />
+    <AiTarget sightrange="1000" static="true" />
+    <Holdable slots="Any,RightHand,LeftHand" aimable="false" aimpos="35,23" handle1="15,0" swingamount="20,20" swingspeed="2" swingwhenusing="true" msg="ItemMsgPickUpSelect">
+			<StatusEffect type="OnUse" target="This,Character" condition="-6" swingwhenusing="true" swingspeed="2" aimpos="35,23" >
+				<Conditional thal_full="lt 99" />
+				<Affliction identifier="thal_nutrition" amount="1"/>
+				<Affliction identifier="thal_full" amount="2.5"/>
+				<Affliction identifier="thal_foodpoisoning" amount="0.5" />
+				<sound file="Mods/Thalassophobia/Map/Thalamus/eye.ogg" type="OnUse" range="600" loop="true" />
+			</StatusEffect>
+			<StatusEffect type="OnUse" target="This,Character" swingwhenusing="false" swingspeed="0" aimpos="40,10" >
+				<Conditional thal_full="gt 98" />
+				<Affliction identifier="thal_full" amount="10"/>
+			</StatusEffect>
+			<StatusEffect type="OnBroken" target="This">
+				<Conditional condition="eq 0" />
+				<sound file="Mods/Thalassophobia/Items/Food/gulp.ogg" range="600" />
+				<Remove />
+			</StatusEffect>
+    </Holdable>
+  </Item>
+</Items>

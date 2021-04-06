@@ -1,0 +1,96 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Items>
+  <Override>
+    <Item name="" identifier="handcuffs" category="Equipment" cargocontaineridentifier="metalcrate" tags="smallitem,handlocker" scale="0.5" impactsoundtag="impact_metal_light" equipconfirmationtext="handcuffequipconfirmation">
+      <Upgrade gameversion="0.10.0.0" scale="0.5" />
+      <PreferredContainer primary="armcab" minamount="0" maxamount="2" spawnprobability="1" />
+      <Price baseprice="30" soldeverywhere="false">
+        <Price locationtype="outpost" multiplier="1" minavailable="1" />
+        <Price locationtype="city" multiplier="0.9" minavailable="2" />
+        <Price locationtype="research" multiplier="1" sold="false" />
+        <Price locationtype="military" multiplier="0.9" minavailable="3" />
+        <Price locationtype="mine" multiplier="1" sold="false" />
+      </Price>
+      <Deconstruct time="10">
+        <Item identifier="steel" />
+      </Deconstruct>
+      <Fabricate suitablefabricators="fabricator" requiredtime="10">
+        <RequiredSkill identifier="weapons" level="20" />
+        <RequiredItem identifier="steel" />
+      </Fabricate>
+      <InventoryIcon texture="Content/Items/InventoryIconAtlas.png" sourcerect="192,0,64,64" origin="0.5,0.5" />
+      <Sprite texture="Content/Items/Jobgear/Security/SecurityVest.png" sourcerect="129,2,54,42" depth="0.6" />
+      <Body width="50" height="34" density="40" />
+      <Wearable slots="Any,RightHand+LeftHand" msg="ItemMsgPickUpSelect" autoequipwhenfull="false">
+        <sprite texture="Content/Items/Jobgear/Security/SecurityVest.png" limb="RightHand" sourcerect="185,1,25,16" origin="0.5,-0.7" depth="0.01" inherittexturescale="true" />
+        <sprite texture="Content/Items/Jobgear/Security/SecurityVest.png" limb="LeftHand" sourcerect="210,1,25,17" origin="0.5,-0.7" depth="0.01" inherittexturescale="true" />
+        <StatusEffect type="OnWearing" target="Character" lockhands="true" setvalue="true" />
+        <StatusEffect type="OnWearing" target="Character,This" setvalue="true" SpeedMultiplier="0.0">
+          <Conditional isshootable="eq true" />
+        </StatusEffect>
+        <StatusEffect type="OnWearing" target="Character,This" setvalue="true" condition="100">
+          <Conditional stun="gt 0" />
+        </StatusEffect>
+        <CustomInterface canbeselected="false" drawhudwhenequipped="true">
+          <GuiFrame relativesize="0.3,0.1" anchor="BottomCenter" absoluteoffset="0,0" style="ItemUI" />
+          <Tickbox text="Struggle (Disables Movement)">
+            <StatusEffect type="OnUse" target="This" condition="-0.015" IsOn="true">
+              <Sound file="Mods/Thalassophobia/Items/Jobgear/Security/cuffsbreakout.ogg" range="800" loop="true" />
+            </StatusEffect>
+            <StatusEffect type="OnUse" target="This" setvalue="true" IsOn="true" isshootable="true" />
+            <StatusEffect type="OnSecondaryUse" target="This" condition="100" setvalue="true" IsOn="false" isshootable="false" />
+          </Tickbox>
+        </CustomInterface>
+        <StatusEffect type="OnBroken" target="This">
+          <SpawnItem identifier="handcuffs" spawnposition="This" />
+          <Sound file="Mods/Thalassophobia/Items/Jobgear/Security/cuffbreak.ogg" range="1200" />
+          <Remove />
+        </StatusEffect>
+      </Wearable>
+    </Item>
+  </Override>
+  <Item name="" identifier="thal_breachcharge" category="Equipment" cargocontaineridentifier="explosivecrate" tags="smallitem,weapon,explosive" scale="0.4" impactsoundtag="impact_metal_heavy">
+    <PreferredContainer primary="secarmcab" minamount="1" maxamount="2" spawnprobability="1" />
+    <PreferredContainer primary="wreckarmcab" minamount="0" maxamount="1" spawnprobability="0.1" />
+    <Upgrade gameversion="0.9.3.0" scale="0.5" />
+    <Price locationtype="Military" buyprice="250" />
+    <Deconstruct time="10">
+      <Item identifier="iron" />
+      <Item identifier="uex" mincondition="0.9" />
+    </Deconstruct>
+    <Fabricate suitablefabricators="fabricator" requiredtime="20">
+      <RequiredSkill identifier="weapons" level="60" />
+      <RequiredItem identifier="iron" />
+      <RequiredItem identifier="uex" />
+    </Fabricate>
+    <Sprite name="breach charge" texture="Mods/Thalassophobia/Items/Electricity/poweritems.png" sourcerect="571,17,113,151" origin="0.5712885,0.446652" depth="0.8" />
+    <Body width="40" height="60" density="30" />
+    <Holdable pickkey="Use" slots="Any,RightHand,LeftHand" msg="ItemMsgDetachWrench" PickingTime="10.0" aimpos="35,-10" handle1="0,0" attachable="true" attachedbydefault="true" aimable="true">
+      <requireditem identifier="wrench" type="Equipped" />
+    </Holdable>
+    <LightComponent lightcolor="0,255,255,255" castshadows="false" allowingameediting="false" IsOn="false" blinkfrequency="4" range="80">
+      <LightTexture texture="Content/Lights/pointlight_bounce.png" origin="0.5,0.5" />
+      <sprite texture="Content/Items/Electricity/signalcomp.png" sourcerect="68,35,23,24" origin="0.5,0.5" />
+      <CustomInterface selectkey="Select" canbeselected="true" drawhudwhenequipped="false" msg="ItemMsgInteractSelect">
+        <StatusEffect type="OnUse" target="This" Condition="-100.0" disabledeltatime="true" delay="4.0" />
+        <GuiFrame relativesize="0.15,0.1" anchor="Center" absoluteoffset="0,0" style="ItemUI" />
+        <Button text="Activate">
+          <StatusEffect type="OnUse" target="This" Condition="-100.0" disabledeltatime="true" delay="4.0" />
+          <StatusEffect type="OnUse" target="This" setvalue="true" IsOn="true">
+            <sound file="Mods/Thalassophobia/Items/Weapons/Explosives/Countdown240.ogg" range="800.0" loop="false" volume="1.0" />
+          </StatusEffect>
+        </Button>
+        <StatusEffect type="OnBroken" target="NearbyItems" range="100" setvalue="true" condition="0" targetidentifiers="door,hatch,windoweddoor,doorwbuttons,hatchwbuttons,windoweddoorwbuttons,alienhatch,aliendoor,doorwrecked,hatchwrecked,windoweddoorwrecked,doorwbuttonswrecked,hatchwbuttonswrecked,windoweddoorwbuttonswrecked" />
+        <StatusEffect type="OnBroken" target="This">
+          <sound file="Content/Items/Weapons/ExplosionMedium1.ogg" type="OnUse" range="10000" selectionmode="All" />
+          <sound file="Content/Items/Weapons/ExplosionDebris1.ogg" type="OnUse" range="10000" />
+          <Explosion range="100.0" structuredamage="0" itemdamage="0" stun="5" force="20.0" severlimbsprobability="0.5">
+            <Affliction identifier="bleeding" strength="20" />
+            <Affliction identifier="lacerations" strength="100" />
+          </Explosion>
+          <Remove />
+        </StatusEffect>
+      </CustomInterface>
+    </LightComponent>
+  </Item>
+</Items>

@@ -1,0 +1,527 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Items>
+  <!-- CULTIST STUFF BEGIN -->
+  <Item name="" identifier="thal_cultistmask" category="Equipment" cargocontaineridentifier="metalcrate" tags="smallitem" description="" scale="0.5">
+    <Sprite name="Cultist Mask" texture="Mods/Thalassophobia/Items/Jobgear/headgears.png" depth="0.6" sourcerect="432,321,117,84" origin="0.5123859,0.53692484" scale="0.5" />
+    <Body width="40" radius="30" density="15" />
+    <Deconstruct time="10">
+      <Item identifier="bikehorn" />
+    </Deconstruct>
+    <Wearable limbtype="Head" slots="Any,Head" msg="ItemMsgPickUpSelect">
+      <sprite name="Cultist Mask Wearable" texture="Mods/Thalassophobia/Items/Jobgear/headgears.png" limb="Head" inheritlimbdepth="true" inherittexturescale="true" depth="0.6" sourcerect="437,323,110,80" origin="0.21839365,0.45777225" />
+      <StatusEffect tags="clown" type="OnWearing" target="Character" HideFace="true" stackable="false" />
+    </Wearable>
+  </Item>
+  <Item name="" description="" identifier="thal_cultistcostume" category="Equipment" cargocontaineridentifier="metalcrate" tags="smallitem" impactsoundtag="impact_soft" scale="0.5">
+    <InventoryIcon name="Cultist Costume Icon" texture="Mods/Thalassophobia/Items/Jobgear/OutfitIcons.png" sourcerect="129,413,128,101" origin="0.5,0.5" />
+    <Sprite name="Cultist Costume (floor)" texture="Mods/Thalassophobia/Items/Jobgear/MiscJobGear.png" sourcerect="6,163,195,68" depth="0.6" origin="0.5,0.5" />
+    <Body width="100" height="50" density="30" friction="0.8" restitution="0.01" />
+    <Deconstruct time="40">
+      <Item identifier="bikehorn" />
+      <Item identifier="bikehorn" />
+      <Item identifier="bikehorn" />
+    </Deconstruct>
+    <Wearable slots="Any,InnerClothes" msg="ItemMsgPickUpSelect">
+      <sprite name="Cultist Hood" texture="Mods/Thalassophobia/Items/Jobgear/headgears.png" limb="Head" hidelimb="true" inherittexturescale="true" sourcerect="404,190,114,131" origin="0.5150161,0.4612497" depth="0.0" />
+      <sprite name="Cultist Torso" texture="clown_torso_[GENDER].png" limb="Torso" hidelimb="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" depth="0.1" />
+      <sprite name="Cultist Right Lower Arm" texture="clown_torso_[GENDER].png" limb="RightHand" hidelimb="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="Cultist Left Lower Arm" texture="clown_torso_[GENDER].png" limb="LeftHand" hidelimb="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="Cultist Right Upper Arm" texture="clown_torso_[GENDER].png" limb="RightArm" hidelimb="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="Cultist Left Upper Arm" texture="clown_torso_[GENDER].png" limb="LeftArm" hidelimb="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="Cultist Waist" texture="clown_legs_female.png" limb="Waist" hidelimb="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="Cultist Right Thigh" texture="clown_legs_female.png" limb="RightThigh" hidelimb="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="Cultist Left Thigh" texture="clown_legs_female.png" limb="LeftThigh" hidelimb="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="Cultist Right Leg" texture="clown_legs_female.png" limb="RightLeg" hidelimb="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="Cultist Left Leg" texture="clown_legs_female.png" limb="LeftLeg" hidelimb="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" sourcerect="0,0,256,256" origin="0.5,0.5" />
+      <sprite name="Cultist Right Shoe" texture="clown_legs_female.png" limb="RightFoot" sound="footstep_armor" hidelimb="true" inherittexturescale="true" inheritorigin="false" inheritsourcerect="false" sourcerect="1,86,81,161" origin="0.4074074,0.41614908" />
+      <sprite name="Cultist Left Shoe" texture="clown_legs_female.png" limb="LeftFoot" sound="footstep_armor" hidelimb="true" inherittexturescale="true" inheritorigin="false" inheritsourcerect="false" sourcerect="1,86,81,161" origin="0.41975307,0.4099379" />
+      <!-- HENK -->
+      <damagemodifier afflictiontypes="damage" armorsector="0.0,360.0" damagemultiplier="0.7" damagesound="LimbClown" />
+    </Wearable>
+  </Item>
+  <Item name="" description="" identifier="thal_zombieknife" category="Equipment" Tags="smallitem,weapon" cargocontaineridentifier="metalcrate" scale="0.25" impactsoundtag="impact_metal_light">
+    <InventoryIcon texture="Mods/Thalassophobia/Items/Jobgear/Clown/clown.png" sourcerect="510,-4,112,114" origin="0.47357765,0.48258916" name="cultistknifeinventory" />
+    <Sprite texture="Mods/Thalassophobia/Items/Jobgear/Clown/clown.png" sourcerect="381,281,196,93" depth="0.55" origin="0.5,0.5" name="cultistknife sprite" />
+    <Body width="110" height="25" density="50" />
+    <MeleeWeapon slots="Any,RightHand,LeftHand" aimpos="50,0" handle1="10,-6" reload="2" range="50" combatPriority="25" holdangle="90" msg="ItemMsgPickUpSelect" condition="0">
+      <Attack targetimpulse="10" severlimbsprobability="0.1" itemdamage="2">
+        <Affliction identifier="lacerations" strength="2" />
+        <Sound file="Content/Sounds/Damage/LimbSlash1.ogg" selectionmode="random" range="500" />
+        <Sound file="Content/Sounds/Damage/LimbSlash2.ogg" range="500" />
+        <Sound file="Content/Sounds/Damage/LimbSlash3.ogg" range="500" />
+        <Sound file="Content/Sounds/Damage/LimbSlash4.ogg" range="500" />
+        <Sound file="Content/Sounds/Damage/LimbSlash5.ogg" range="500" />
+        <Sound file="Content/Sounds/Damage/LimbSlash6.ogg" range="500" />
+      </Attack>
+      <StatusEffect type="OnUse" target="This, Character" condition="-10.0">
+        <Conditional IsDead="true" />
+        <ParticleEmitter particle="thal_rune" particlespersecond="4" particleburstinterval="2" particleburstamount="20" velocitymin="190" velocitymax="250" anglemin="0" anglemax="360" scalemin="0.4" scalemax="0.7" />
+        <Sound file="Mods/Thalassophobia/Items/Jobgear/Clown/clownchime0.ogg" selectionmode="random" range="500" />
+        <Sound file="Mods/Thalassophobia/Items/Jobgear/Clown/clownchime1.ogg" range="500" />
+        <Sound file="Mods/Thalassophobia/Items/Jobgear/Clown/clownchime2.ogg" range="500" />
+      </StatusEffect>
+      <StatusEffect type="OnUse" target="Character" setvalue="true" Isdead="false">
+        <Conditional IsDead="true" />
+        <Affliction identifier="thal_apostleinfection" strength="10000" />
+        <ReduceAffliction identifier="damage" strength="1000" />
+      </StatusEffect>
+      <StatusEffect type="OnUse" target="Character" setvalue="true" Isdead="false" delay="0.2">
+        <Conditional IsDead="true" />
+        <Affliction identifier="thal_apostleinfection" strength="10000" />
+        <ReduceAffliction identifier="damage" strength="1000" />
+      </StatusEffect>
+      <!-- Item becomes unusable at 0 condition so keep it above-->
+      <StatusEffect type="OnBroken" target="This">
+        <Remove />
+      </StatusEffect>
+    </MeleeWeapon>
+  </Item>
+  <Item name="" description="" identifier="thal_cultistknife" category="Equipment" Tags="smallitem,weapon" cargocontaineridentifier="metalcrate" scale="0.25" impactsoundtag="impact_metal_light">
+    <InventoryIcon texture="Mods/Thalassophobia/Items/Jobgear/Clown/clown.png" sourcerect="510,-4,112,114" origin="0.47357765,0.48258916" name="cultistknifeinventory" />
+    <Sprite texture="Mods/Thalassophobia/Items/Jobgear/Clown/clown.png" sourcerect="381,281,196,93" depth="0.55" origin="0.5,0.5" name="cultistknife sprite" />
+    <Body width="110" height="25" density="50" />
+    <MeleeWeapon slots="Any,RightHand,LeftHand" aimpos="50,0" handle1="10,-6" reload="0.75" range="50" combatPriority="25" holdangle="90" msg="ItemMsgPickUpSelect" condition="0">
+      <Attack targetimpulse="10" severlimbsprobability="0.1" itemdamage="2">
+        <Affliction identifier="lacerations" strength="7" />
+        <Affliction identifier="bleeding" strength="3" />
+        <Sound file="Content/Sounds/Damage/LimbSlash1.ogg" selectionmode="random" range="500" />
+        <Sound file="Content/Sounds/Damage/LimbSlash2.ogg" range="500" />
+        <Sound file="Content/Sounds/Damage/LimbSlash3.ogg" range="500" />
+        <Sound file="Content/Sounds/Damage/LimbSlash4.ogg" range="500" />
+        <Sound file="Content/Sounds/Damage/LimbSlash5.ogg" range="500" />
+        <Sound file="Content/Sounds/Damage/LimbSlash6.ogg" range="500" />
+      </Attack>
+      <StatusEffect type="OnUse" target="This, Character" condition="10.0">
+        <Conditional IsDead="false" />
+        <ParticleEmitter particle="thal_rune" particlespersecond="4" particleburstinterval="2" particleburstamount="20" velocitymin="190" velocitymax="250" anglemin="0" anglemax="360" scalemin="0.4" scalemax="0.7" />
+        <Sound file="Mods/Thalassophobia/Items/Jobgear/Clown/clownchime0.ogg" selectionmode="random" range="500" />
+        <Sound file="Mods/Thalassophobia/Items/Jobgear/Clown/clownchime1.ogg" range="500" />
+        <Sound file="Mods/Thalassophobia/Items/Jobgear/Clown/clownchime2.ogg" range="500" />
+      </StatusEffect>
+      <!-- Item becomes unusable at 0 condition so keep it above-->
+      <StatusEffect type="OnContained" target="This" setvalue="true" condition="1.0">
+        <Conditional Condition="0" />
+      </StatusEffect>
+      <!-- Try to always keep bar showing, it disappears at 100 so keep it at 99 -->
+      <StatusEffect type="OnContained" target="This" setvalue="true" condition="99">
+        <Conditional Condition="100" />
+      </StatusEffect>
+    </MeleeWeapon>
+    <!-- Knife spawns in with a one-time switch that sets gutter to empty and never activates again-->
+    <LightComponent range="0" lightcolor="0,0,0,0" castshadows="true" allowingameediting="false">
+      <StatusEffect type="Always" target="This" setvalue="true" condition="1" castshadows="false">
+        <Conditional castshadows="true" />
+      </StatusEffect>
+    </LightComponent>
+    <ItemContainer hideitems="true" capacity="0" drawinventory="false" canbeselected="false" ShowConditionInContainedStateIndicator="true">
+      <Containable items="youJustLostTheGame" />
+      <!--looks like ass
+      <ContainedStateIndicator texture="Mods/Thalassophobia/UI/ContainerIndicators.png" sourcerect="2,32,101,37" origin="0.5,0.5" />
+      -->
+    </ItemContainer>
+  </Item>
+  <Item name="" description="" identifier="thal_cultistkit" category="Equipment" cargocontaineridentifier="metalcrate" tags="smallitem" impactsoundtag="impact_soft" scale="0.4" hideconditionbar="true">
+    <InventoryIcon name="blodbank Inv" texture="Mods/Thalassophobia/Items/Jobgear/Clown/clown.png" sourcerect="412,3,102,87" depth="0.6" origin="0.5,0.5" />
+    <Sprite name="bloodbank Sprite" texture="Mods/Thalassophobia/Items/Jobgear/Clown/clown.png" sourcerect="0,258,368,148" depth="0.6" origin="0.5,0.5" />
+    <Body width="30" height="15" density="400" />
+    <CustomInterface canbeselected="false" drawhudwhenequipped="true">
+      <GuiFrame relativesize="0.4,0.6" anchor="Center" absoluteoffset="0,-30" style="ItemUI" />
+      <Button text="Wire Bind [50pct Dagger]">
+        <StatusEffect type="OnUse" targettype="Contained, This" delay="30" IsOn="false" drawhudwhenequipped="true">
+          <SpawnItem spawnposition="ThisInventory" identifier="thal_wirebind" />
+          <RequiredItem items="thal_cultistknife" type="Contained" />
+          <Conditional condition="gt 50" />
+        </StatusEffect>
+        <StatusEffect type="OnUse" target="Contained, This" IsOn="true" drawhudwhenequipped="false">
+          <RequiredItem items="thal_cultistknife" type="Contained" />
+          <Conditional condition="gt 50" />
+        </StatusEffect>
+        <StatusEffect type="OnUse" targettype="Contained" targets="thal_cultistknife" IsOn="true" condition="-50">
+          <RequiredItem items="thal_cultistknife" type="Contained" />
+          <Conditional condition="gt 50" />
+        </StatusEffect>
+      </Button>
+      <Button text="Muzzle [70pct Dagger]">
+        <StatusEffect type="OnUse" targettype="Contained, This" delay="25" IsOn="false" drawhudwhenequipped="true">
+          <SpawnItem spawnposition="ThisInventory" identifier="thal_muzzle" />
+          <RequiredItem items="thal_cultistknife" type="Contained" />
+          <Conditional condition="gt 70" />
+        </StatusEffect>
+        <StatusEffect type="OnUse" target="Contained, This" IsOn="true" drawhudwhenequipped="false">
+          <RequiredItem items="thal_cultistknife" type="Contained" />
+          <Conditional condition="gt 70" />
+        </StatusEffect>
+        <StatusEffect type="OnUse" targettype="Contained" targets="thal_cultistknife" IsOn="true" condition="-70">
+          <RequiredItem items="thal_cultistknife" type="Contained" />
+          <Conditional condition="gt 70" />
+        </StatusEffect>
+      </Button>
+      <Button text="Blindfold [60pct Dagger]">
+        <StatusEffect type="OnUse" targettype="Contained, This" delay="25" IsOn="false" drawhudwhenequipped="true">
+          <SpawnItem spawnposition="ThisInventory" identifier="thal_blindfold" />
+          <RequiredItem items="thal_cultistknife" type="Contained" />
+          <Conditional condition="gt 60" />
+        </StatusEffect>
+        <StatusEffect type="OnUse" target="Contained, This" IsOn="true" drawhudwhenequipped="false">
+          <RequiredItem items="thal_cultistknife" type="Contained" />
+          <Conditional condition="gt 60" />
+        </StatusEffect>
+        <StatusEffect type="OnUse" targettype="Contained" targets="thal_cultistknife" IsOn="true" condition="-60">
+          <RequiredItem items="thal_cultistknife" type="Contained" />
+          <Conditional condition="gt 60" />
+        </StatusEffect>
+      </Button>
+      <Button text="Candle [10pct Dagger]">
+        <StatusEffect type="OnUse" targettype="Contained, This" delay="10" IsOn="false" drawhudwhenequipped="true">
+          <SpawnItem spawnposition="ThisInventory" identifier="thal_candle" />
+          <RequiredItem items="thal_cultistknife" type="Contained" />
+          <Conditional condition="gt 10" />
+        </StatusEffect>
+        <StatusEffect type="OnUse" target="Contained, This" IsOn="true" drawhudwhenequipped="false">
+          <RequiredItem items="thal_cultistknife" type="Contained" />
+          <Conditional condition="gt 10" />
+        </StatusEffect>
+        <StatusEffect type="OnUse" targettype="Contained" targets="thal_cultistknife" IsOn="true" condition="-10">
+          <RequiredItem items="thal_cultistknife" type="Contained" />
+          <Conditional condition="gt 10" />
+        </StatusEffect>
+      </Button>
+      <Button text="Ouija Board [20pct Dagger]">
+        <StatusEffect type="OnUse" targettype="Contained, This" delay="15" IsOn="false" drawhudwhenequipped="true">
+          <SpawnItem spawnposition="ThisInventory" identifier="thal_ouijaboard" />
+          <RequiredItem items="thal_cultistknife" type="Contained" />
+          <Conditional condition="gt 20" />
+        </StatusEffect>
+        <StatusEffect type="OnUse" target="Contained, This" IsOn="true" drawhudwhenequipped="false">
+          <RequiredItem items="thal_cultistknife" type="Contained" />
+          <Conditional condition="gt 20" />
+        </StatusEffect>
+        <StatusEffect type="OnUse" targettype="Contained" targets="thal_cultistknife" IsOn="true" condition="-20">
+          <RequiredItem items="thal_cultistknife" type="Contained" />
+          <Conditional condition="gt 20" />
+        </StatusEffect>
+      </Button>
+      <Button text="Resurrection Dagger [90pct Dagger]">
+        <StatusEffect type="OnUse" targettype="Contained, This" delay="30" IsOn="false" drawhudwhenequipped="true">
+          <SpawnItem spawnposition="ThisInventory" identifier="thal_zombieknife" />
+          <RequiredItem items="thal_cultistknife" type="Contained" />
+          <Conditional condition="gt 90" />
+        </StatusEffect>
+        <StatusEffect type="OnUse" target="Contained, This" IsOn="true" drawhudwhenequipped="false">
+          <RequiredItem items="thal_cultistknife" type="Contained" />
+          <Conditional condition="gt 90" />
+        </StatusEffect>
+        <StatusEffect type="OnUse" targettype="Contained" targets="thal_cultistknife" IsOn="true" condition="-90">
+          <RequiredItem items="thal_cultistknife" type="Contained" />
+          <Conditional condition="gt 90" />
+        </StatusEffect>
+      </Button>
+      <Button text="Ritual Paintbrush [100pct Dagger]">
+        <StatusEffect type="OnUse" targettype="Contained, This" delay="60" IsOn="false" drawhudwhenequipped="true">
+          <SpawnItem spawnposition="ThisInventory" identifier="thal_paintbrush" />
+          <RequiredItem items="thal_cultistknife" type="Contained" />
+          <Conditional condition="gt 98" />
+        </StatusEffect>
+        <StatusEffect type="OnUse" target="Contained, This" IsOn="true" drawhudwhenequipped="false">
+          <RequiredItem items="thal_cultistknife" type="Contained" />
+          <Conditional condition="gt 98" />
+        </StatusEffect>
+        <StatusEffect type="OnUse" targettype="Contained" targets="thal_cultistknife" IsOn="true" condition="-90">
+          <RequiredItem items="thal_cultistknife" type="Contained" />
+          <Conditional condition="gt 98" />
+        </StatusEffect>
+      </Button>
+    </CustomInterface>
+    <ItemContainer capacity="2" canbeselected="false" hideitems="true" slotsperrow="5" drawinventory="true">
+      <!-- Do this so that the altar itself doesn't fulfill the condition requirements (since the status effects target both the altar and the knife inside) -->
+      <StatusEffect type="Always" target="This" condition="1" setvalue="true" />
+    </ItemContainer>
+    <Holdable handle1="0,0" slots="Any,RightHand,LeftHand" msg="ItemMsgPickUpSelect"></Holdable>
+    <LightComponent range="250" lightcolor="255,0,0,100" IsOn="false" powerconsumption="0" flicker="0.1" allowingameediting="false">
+      <sound file="Mods/Thalassophobia/Items/Jobgear/Clown/cultistaltar.ogg" type="OnActive" range="800.0" loop="true" />
+      <StatusEffect type="OnActive" target="This" stackable="false" disabledeltatime="true">
+        <ParticleEmitter particle="blooddrop" particlespersecond="2" particleburstamount="3" velocitymin="0" velocitymax="300" anglemin="0" anglemax="360" scalemin="0.5" scalemax="1" />
+        <ParticleEmitter particle="thal_rune" particlespersecond="4" particleburstinterval="2" particleburstamount="2" velocitymin="90" velocitymax="150" anglemin="0" anglemax="360" scalemin="0.3" scalemax="0.5" />
+      </StatusEffect>
+    </LightComponent>
+  </Item>
+  <Item name="" identifier="thal_candle" category="Equipment" cargocontaineridentifier="metalcrate" Scale="0.3" tags="smallitem,light,provocative" requireaimtouse="true" attachable="true" attachedbydefault="true" impactsoundtag="impact_soft" isshootable="true" damagedbyexplosions="true" damagedbyprojectiles="true" damagedbymeleeweapons="true" damagedbyrepairtools="true">
+    <Price baseprice="50">
+      <Price locationtype="outpost" multiplier="1" minavailable="3" />
+      <Price locationtype="city" multiplier="0.9" minavailable="3" />
+    </Price>
+    <Deconstruct time="10">
+      <Item identifier="flashpowder" mincondition="0.9" outcondition="0.25" />
+      <Item identifier="rubber" mincondition="0.9" outcondition="0.25" />
+    </Deconstruct>
+    <Fabricate suitablefabricators="thal_cultistkit" requiredtime="20">
+      <RequiredItem identifier="thal_cultistknife" mincondition="0.10" usecondition="true" />
+    </Fabricate>
+    <Sprite texture="Mods/Thalassophobia/Items/Jobgear/Clown/clown.png" sourcerect="491,747,76,145" depth="0.8" origin="0.5979346,0.48941234" />
+    <BrokenSprite texture="Mods/Thalassophobia/Items/Jobgear/Clown/clown.png" sourcerect="567,747,74,146" depth="0.8" maxcondition="65" origin="0.5,0.5" />
+    <BrokenSprite texture="Mods/Thalassophobia/Items/Jobgear/Clown/clown.png" sourcerect="642,748,65,146" depth="0.8" maxcondition="30" origin="0.5,0.5" />
+    <BrokenSprite texture="Mods/Thalassophobia/Items/Jobgear/Clown/clown.png" sourcerect="710,748,65,146" depth="0.8" maxcondition="5" origin="0.5,0.5" />
+    <Body width="76" height="145" density="12" />
+    <Holdable slots="Any,RightHand,LeftHand" holdpos="0,0" handle1="0,0" throwforce="4.0" aimpos="35,-10" msg="ItemMsgPickUpSelect" />
+    <LightComponent castshadows="false" LightColor="255,40,40,60" Flicker="0.5" range="300" IsOn="false">
+      <StatusEffect type="OnUse" targettype="This" IsOn="true" delay="0.05">
+        <Conditional IsOn="eq False" targetitemcomponent="LightComponent" />
+        <sound file="Content/Items/Tools/FlareIgnite.ogg" range="800.0" />
+      </StatusEffect>
+      <StatusEffect type="OnUse" targettype="This" IsOn="false" delay="0.05">
+        <Conditional IsOn="eq True" targetitemcomponent="LightComponent" />
+        <sound file="Content/Items/Tools/FlareIgnite.ogg" range="800.0" />
+      </StatusEffect>
+      <StatusEffect type="InWater" targettype="This" IsOn="false" />
+      <StatusEffect type="OnActive" targettype="This" Condition="-0.5" />
+      <StatusEffect type="OnActive" targettype="This">
+        <Conditional PhysicsBodyActive="eq true" />
+        <ParticleEmitter particle="flare" particlespersecond="4" />
+      </StatusEffect>
+      <StatusEffect type="OnBroken" targettype="This" IsOn="false" />
+    </LightComponent>
+    <AiTarget sightrange="4000" />
+  </Item>
+  <Item name="" identifier="thal_ouijaboard" category="Equipment" requireaimtosecondaryuse="false" cargocontaineridentifier="metalcrate" Scale="0.5" tags="smallitem,ritualitem,thal_ouijaboardo" attachable="true" attachedbydefault="true" impactsoundtag="impact_soft" isshootable="true" damagedbyexplosions="true" damagedbyprojectiles="true" damagedbymeleeweapons="true" damagedbyrepairtools="true" canflipx="false" canflipy="false">
+    <Price baseprice="70">
+      <Price locationtype="outpost" multiplier="1" minavailable="2" />
+      <Price locationtype="city" multiplier="0.9" minavailable="1" />
+    </Price>
+    <Deconstruct time="10">
+      <Item identifier="thal_memo" mincondition="0.9" />
+      <Item identifier="thal_memo" />
+    </Deconstruct>
+    <Sprite name="Ouija Board Base" texture="Mods/Thalassophobia/Items/Jobgear/Clown/clown.png" sourcerect="690,227,174,110" depth="0.8" origin="0.5,0.5" />
+    <BrokenSprite name="Ouija broken" texture="Mods/Thalassophobia/Items/Jobgear/Clown/clown.png" sourcerect="715,122,174,110" depth="0.8" maxcondition="1" origin="0.5,0.5" />
+    <DecorativeSprite name="Ouija Pointer" texture="Mods/Thalassophobia/Items/Jobgear/Clown/clown.png" sourcerect="865,229,34,46" depth="0.6" origin="0.5,0.5" offset="120,70" offsetanim="Noise" offsetanimspeed="0.1">
+      <AnimationConditional IsOn="true" targetitemcomponent="LightComponent" />
+    </DecorativeSprite>
+    <Body width="174" height="120" density="12" />
+    <Holdable slots="Any,RightHand,LeftHand" holdpos="0,0" handle1="0,0" holdangle="90" aimpos="35,-10" msg="ItemMsgPickUpSelect" aimable="false" characterusable="false" />
+    <LightComponent castshadows="false" LightColor="0,0,0,0" Flicker="0.5" range="10" IsOn="true">
+      <!--
+      <StatusEffect type="Always" targettype="This" IsOn="true" lifetime="0.1" >
+        <Conditional IsOn="eq False" targetitemcomponent="LightComponent" />
+        <sound file="Content/Items/Tools/FlareIgnite.ogg" range="800.0" />
+      </StatusEffect>
+      -->
+      <StatusEffect type="OnNotContained" targettype="This" IsOn="true">
+        <Conditional requireaimtosecondaryuse="eq true" />
+      </StatusEffect>
+      <StatusEffect type="OnFire" targettype="This" Condition="-2" />
+      <StatusEffect type="OnBroken" targettype="This" IsOn="false" />
+      <!-- Automatically turn off every once in a while -->
+      <StatusEffect type="OnActive" targettype="This" IsOn="false" requireaimtosecondaryuse="false" delay="2" stackable="false"></StatusEffect>
+    </LightComponent>
+    <AiTarget sightrange="4000" />
+  </Item>
+  <Item name="" identifier="thal_paintbrush" category="Misc" Tags="smallitem" scale="0.3" impactsoundtag="impact_metal_light" isshootable="true">
+    <PreferredContainer primary="crewcab" spawnprobability="0.01" />
+    <Sprite name="brush" texture="Mods/Thalassophobia/Items/Jobgear/Clown/clown.png" sourcerect="714,1013,126,131" depth="0.6" origin="0.5,0.5" />
+    <Body width="80" height="27" />
+    <Holdable slots="Any,RightHand,LeftHand" aimable="false" aimpos="35,23" handle1="15,0" swingamount="0,0" swingspeed="0.5" swingwhenusing="false" msg="ItemMsgPickUpSelect"></Holdable>
+    <RangedWeapon reload="2">
+      <StatusEffect type="OnUse" target="This" IsOn="true">
+        <SpawnItem identifier="thal_pentagram" />
+        <Remove />
+      </StatusEffect>
+      <StatusEffect type="OnUse" target="This" delay="0.8" IsOn="false" />
+    </RangedWeapon>
+  </Item>
+  <Item name="Summoning Pentagram" description="A summoning pentagram for the usage of bringing living entities into the world. Cannot be removed once it is placed." identifier="thal_pentagram" category="Equipment" cargocontaineridentifier="metalcrate" tags="smallitem" impactsoundtag="impact_soft" scale="0.45" interactdistance="50" hideconditionbar="true" damagedbyexplosions="true" damagedbyprojectiles="true" damagedbyrepairtools="true" damagedbymeleeweapons="true" isshootable="true">
+    <InventoryIcon name="penta Inv" texture="Mods/Thalassophobia/Items/Jobgear/Clown/clown.png" sourcerect="732,-2,132,126" depth="0.6" origin="0.5,0.5" />
+    <Sprite name="penta Sprite" texture="Mods/Thalassophobia/Items/Jobgear/Clown/clown.png" sourcerect="4,404,374,368" depth="0.6" origin="0.5,0.5" />
+    <Body width="50" height="50" density="400" bodytype="Kinematic" />
+    <LightComponent range="900.0" lightcolor="255,0,0,100" IsOn="false" powerconsumption="0" blinkFrequency="10" allowingameediting="false" castshadows="true">
+      <StatusEffect delay="0.1" type="OnBroken" target="This" Condition="-100.0">
+        <Explosion range="10.0" structuredamage="0" itemdamage="0" force="20.0" severlimbsprobability="0.4" decal="explosion" decalsize="0.5" camerashake="5.0"></Explosion>
+        <Remove />
+      </StatusEffect>
+      <StatusEffect type="OnBroken" target="This" Condition="-100.0" castshadows="false">
+        <RequiredItem items="thal_cultistknife" type="contained" />
+        <Conditional castshadows="true" />
+        <SpawnItem identifier="thal_cultistknife" />
+      </StatusEffect>
+      <StatusEffect type="OnNotContained" target="This" Voltage="1.0" setvalue="true">
+        <Conditional IsActive="true" targetitemcomponent="Fabricator" />
+      </StatusEffect>
+      <Sprite name="penta light Sprite" texture="Mods/Thalassophobia/Items/Jobgear/Clown/clown.png" sourcerect="4,780,374,368" depth="0.6" origin="0.5,0.5" />
+      <sound file="Mods/Thalassophobia/Items/Jobgear/Clown/uboa.ogg" type="OnActive" range="10000.0" loop="true" volume="2" />
+      <StatusEffect type="OnActive" target="This" stackable="false" disabledeltatime="true">
+        <ParticleEmitter particle="thal_rune" particlespersecond="4" particleburstinterval="2" particleburstamount="5" velocitymin="190" velocitymax="250" anglemin="0" anglemax="360" scalemin="0.7" scalemax="1.0" />
+        <ParticleEmitter particle="thal_pentacircle" burstamount="3" particlespersecond="2" velocitymin="0" velocitymax="0" anglemin="0" anglemax="360" scalemin="1.0" scalemax="1.0" />
+      </StatusEffect>
+      <!-- Cold cav bad end -->
+    </LightComponent>
+    <ItemContainer capacity="1" canbeselected="true" hideitems="true" msg="ItemMsgOpenSelect" drawinventory="false">
+      <GuiFrame relativesize="0.2,0.25" anchor="Center" minsize="140,170" maxsize="280,280" style="ItemUI" />
+      <Containable items="smallitem,mediumitem" />
+      <StatusEffect type="Always" target="This" condition="1" setvalue="true" drawinventory="true">
+        <Conditional drawinventory="false" />
+      </StatusEffect>
+      <StatusEffect type="OnContained" target="This">
+        <Remove />
+        <SpawnItem identifier="thal_paintbrush" />
+      </StatusEffect>
+    </ItemContainer>
+    <CustomInterface canbeselected="true" IsOn="true">
+      <GuiFrame relativesize="0.2,0.1" anchor="Center" absoluteoffset="0,90" style="ItemUI" />
+      <Button text="Initiate Ritual">
+        <!-- 
+				START
+				XX
+				Cold Cavern Sampler:
+				Core: 50pct Dagger
+				1 candle
+				XX
+				-->
+        <!-- set subject depending on contained -->
+        <StatusEffect type="OnUse" targettype="This" description="ccsampler">
+          <RequiredItem items="thal_cultistknife" type="Contained" />
+        </StatusEffect>
+        <!-- successful completion, reward -->
+        <StatusEffect type="OnUse" targettype="Contained, This" delay="15" IsOn="false" canbeselected="true">
+          <SpawnCharacter speciesname="ramblin" count="2" />
+          <RequiredItem items="thal_cultistknife" type="Contained" />
+          <Conditional condition="gt 20" />
+        </StatusEffect>
+        <!-- successful initiation, set to on -->
+        <StatusEffect type="OnUse" target="Contained, This" IsOn="true" canbeselected="false">
+          <RequiredItem items="thal_cultistknife" type="Contained" />
+          <Conditional condition="gt 20" />
+          <Explosion range="50.0" structuredamage="0" itemdamage="0" force="0.0" fire="false" flames="false" sparks="false" shockwave="false" underwaterbubbles="false" severlimbsprobability="0.0" decal="clownmural" decalsize="0.5" camerashake="5.0"></Explosion>
+        </StatusEffect>
+        <!-- item target effects (drain, remove, etc) -->
+        <StatusEffect type="OnUse" targettype="Contained" targets="thal_cultistknife" IsOn="true" condition="-20">
+          <RequiredItem items="thal_cultistknife" type="Contained" />
+          <Conditional condition="gt 20" />
+        </StatusEffect>
+        <!-- END CC SAMPLER -->
+        <!-- 
+        XX
+        GLOWPOCALYPSE 
+        XX
+        -->
+        <StatusEffect type="OnUse" targettype="This" description="ccsampler">
+          <RequiredItem items="thal_sabercrystal" type="Contained" />
+        </StatusEffect>
+        <!-- successful completion, reward -->
+        <StatusEffect type="OnUse" targettype="Contained, This" delay="15" IsOn="false" canbeselected="true">
+          <SpawnCharacter speciesname="glowraptor" count="1" />
+          <SpawnItem identifier="uranium" />
+          <SpawnItem identifier="uranium" />
+          <SpawnItem identifier="thorium" />
+          <RequiredItem items="thal_sabercrystal" type="Contained" />
+          <Conditional condition="gt 20" />
+        </StatusEffect>
+        <!-- successful initiation, set to on -->
+        <StatusEffect type="OnUse" target="Contained, This" IsOn="true" canbeselected="false">
+          <RequiredItem items="thal_sabercrystal" type="Contained" />
+          <Conditional condition="gt 20" />
+          <Explosion range="50.0" structuredamage="0" itemdamage="0" force="0.0" fire="false" sparks="false" flames="false" shockwave="false" underwaterbubbles="false" severlimbsprobability="0.0" decal="clownmural" decalsize="0.5" camerashake="5.0" />
+        </StatusEffect>
+        <!-- item target effects (drain, remove, etc) -->
+        <StatusEffect type="OnUse" targettype="Contained" targets="thal_sabercrystal" IsOn="true" condition="-20">
+          <RequiredItem items="thal_sabercrystal" type="Contained" />
+          <Conditional condition="gt 20" />
+        </StatusEffect>
+        <!-- 
+        XX
+        Mudraptor
+        XX
+        -->
+        <StatusEffect type="OnUse" targettype="This" description="ccsampler">
+          <RequiredItem items="mudraptorshell" type="Contained" />
+        </StatusEffect>
+        <!-- successful completion, reward -->
+        <StatusEffect type="OnUse" targettype="Contained, This" delay="15" IsOn="false" canbeselected="true">
+          <SpawnCharacter speciesname="crawler" count="2" />
+          <SpawnItem identifier="steel" />
+          <SpawnItem identifier="steel" />
+          <SpawnItem identifier="steel" />
+          <SpawnItem identifier="steel" />
+          <RequiredItem items="mudraptorshell" type="Contained" />
+          <Conditional condition="gt 20" />
+        </StatusEffect>
+        <!-- successful initiation, set to on -->
+        <StatusEffect type="OnUse" target="Contained, This" IsOn="true" canbeselected="false">
+          <RequiredItem items="mudraptorshell" type="Contained" />
+          <Conditional condition="gt 20" />
+          <Explosion range="50.0" structuredamage="0" itemdamage="0" force="0.0" fire="false" sparks="false" flames="false" shockwave="false" underwaterbubbles="false" severlimbsprobability="0.0" decal="clownmural" decalsize="0.5" camerashake="5.0" />
+        </StatusEffect>
+        <!-- item target effects (drain, remove, etc) -->
+        <StatusEffect type="OnUse" targettype="Contained" targets="mudraptorshell" IsOn="true" condition="-20">
+          <RequiredItem items="mudraptorshell" type="Contained" />
+          <Conditional condition="gt 20" />
+        </StatusEffect>
+        <!-- 
+        XX
+        GLOWPOCALYPSE 
+        XX
+        -->
+        <StatusEffect type="OnUse" targettype="This" description="ccsampler">
+          <RequiredItem items="huskstinger" type="Contained" />
+        </StatusEffect>
+        <!-- successful completion, reward -->
+        <StatusEffect type="OnUse" targettype="Contained, This" delay="15" IsOn="false" canbeselected="true">
+          <SpawnCharacter speciesname="husk" count="2" />
+          <SpawnItem identifier="huskeggs" />
+          <SpawnItem identifier="calyxanide" />
+          <Conditional condition="gt 20" />
+          <RequiredItem items="huskstinger" type="Contained" />
+        </StatusEffect>
+        <!-- successful initiation, set to on -->
+        <StatusEffect type="OnUse" target="Contained, This" IsOn="true" canbeselected="false">
+          <RequiredItem items="huskstinger" type="Contained" />
+          <Conditional condition="gt 20" />
+          <Explosion range="50.0" structuredamage="0" itemdamage="0" force="0.0" fire="false" sparks="false" flames="false" shockwave="false" underwaterbubbles="false" severlimbsprobability="0.0" decal="clownmural" decalsize="0.5" camerashake="5.0" />
+        </StatusEffect>
+        <!-- item target effects (drain, remove, etc) -->
+        <StatusEffect type="OnUse" targettype="Contained" targets="huskstinger" IsOn="true" condition="-20">
+          <RequiredItem items="huskstinger" type="Contained" />
+          <Remove />
+          <Conditional condition="gt 20" />
+        </StatusEffect>
+      </Button>
+      <Button text="Destroy Pentagram">
+        <StatusEffect type="OnUse" targettype="This" setvalue="true" condition="0"></StatusEffect>
+      </Button>
+    </CustomInterface>
+  </Item>
+  <!-- guide -->
+  <Item name="" identifier="thal_cultistbook" category="Electrical" Tags="smallitem,logic" cargocontaineridentifier="metalcrate" scale="0.3" impactsoundtag="impact_metal_light" isshootable="true" canflipx="false">
+    <Price baseprice="100" soldeverywhere="false" />
+    <InventoryIcon texture="clown.png" sourcerect="565,904,123,141" origin="0.5,0.5" />
+    <Sprite texture="clown.png" sourcerect="409,906,143,175" depth="0.55" origin="0.5,0.5" />
+    <Body width="130" height="160" density="8" />
+    <Holdable slots="Any,RightHand+LeftHand" holdangle="30" handle1="-10,0" msg="ItemMsgPickUpSelect" />
+    <Terminal canbeselected="false" msg="ItemMsgInteractSelect" AllowInGameEditing="false" drawhudwhenequipped="true" welcomemessage="The Abridged Necronomicon\n\nHubismal and Sons Publishing\n\nCopyright 2036\n\nType 'intro' into the topmost box and then press enter to begin.">
+      <StatusEffect target="This" type="Always" setvalue="true" delay="0.1" stackable="false" msg0="---\nWELCOME\n---\nWelcome to the Abridged Necronomicon!\n\nThis book is for cultists who don't have time to read the long, boring necronomicon, and teaches you the basics of occultism like how to summon scary stuff, talk to the dead, and the basics of blood rituals!\n\nThis electronic book is navigated by entering terms into the topmost box. Enter the term 'index' to view a list of available terms.">
+        <Conditional OriginalOutpost="eq intro" />
+      </StatusEffect>
+      <StatusEffect target="This" type="Always" setvalue="true" delay="0.1" stackable="false" msg0="---\nINDEX\n---\nHere is an index of available terms followed by what their pages are:\nglassaltar: directions for using the blood altar to get items\npentagram: basic usage of the summoning pentagram\ncoldcavern: ritual directions for summoning the 'Cold Cavern Sampler'\nglow: ritual directions for summoning the 'Glowpocalypse'\n: ritual directions for summoning the 'Calyx Outbreak'\n">
+        <Conditional OriginalOutpost="eq index" />
+      </StatusEffect>
+      <StatusEffect target="This" type="Always" setvalue="true" delay="0.1" stackable="false" msg0="---\nGLASS ALTAR + GUTTER DAGGER\n---\nCongratulations on your purchase of a honkcraftian altar and dagger combo! These items serve to aid to collect blood and summon items.\n\nYour GUTTER DAGGER has a bar on it that indicates how much blood it has collected. Stab things to gain blood! You may be tempted to stab your COLLEAGUES, but remember that EUROPAN CREATURES provide more blood overall. Only draw blood from human subjects with their CONSENT.\n\nYour GLASS ALTAR is where blood can be redeemed for SPECIAL ITEMS via blood ritual. Place your GUTTER DAGGER inside of the altar, and equip the altar in your hand to see the options. You must have the indicated amount of blood in the dagger or the ritual will not work! Wait for the ritual to finish, and your item will appear inside of the altar, allowing removal.">
+        <Conditional OriginalOutpost="eq glassaltar" />
+      </StatusEffect>
+      <StatusEffect target="This" type="Always" setvalue="true" delay="0.1" stackable="false" msg0="---\nSUMMONING PENTAGRAM\n---\nIf you want to bring forsaken life into the world, look no further than your SUMMONING PENTAGRAM.\n\nYou can create a summoning pentagram with your GLASS ALTAR provided you have enough blood (refer to section 'glassaltar'). Equip it, aim with the right mouse button, and place with your USE key (E or left mouse). Once your pentagram is laid out, it cannot be removed nondestructively!\n\nYou can now SUMMON CREATURES. Various SUMMONING ITEMS in the game can be placed in your pentagram and initiate a ritual, and will also spawn some LOOT, provided you don't mind a little bit of fighting! Refer to these sections to learn about a few basic summons!\ncoldcavern: ritual directions for summoning the 'Cold Cavern Sampler'\nglow: ritual directions for summoning the `Glowpocalypse'\nhusk: ritual directions for summoning the 'Calyx Outbreak'\n...and many more! Experiment with items closely associated with living creatures (eg husk stingers for husks, paralyzant for thalamus, etc).">
+        <Conditional OriginalOutpost="eq pentagram" />
+      </StatusEffect>
+      <StatusEffect target="This" type="Always" setvalue="true" delay="0.1" stackable="false" msg0="---\nRITUAL: COLD CAVERN SAMPLER\n---\nSummoning Item: Mudraptor Shell\nSummons Per Item: 2\nTime Required: 45 seconds\nSuccessful Outcome: 3 Hydrophixate, 1 Stantium, 2 Crawlers\nChance of Failure: 5%\nFailure Outcome: Pentagram Destroyed, 3 Mudraptors, 1 Crawler\n\nAn ideal summon for newbie cultists of underarmed ships. The low risks, easily obtainable item, and pushover success enemies make for a reliable source of basic resources.">
+        <Conditional OriginalOutpost="eq coldcavern" />
+      </StatusEffect>
+      <StatusEffect target="This" type="Always" setvalue="true" delay="0.1" stackable="false" msg0="---\nRITUAL: CALYX OUTBREAK\n---\nSummoning Item: Husk Stinger\nSummons Per Item: 3\nTime Required: 60 seconds\nSuccessful Outcome: 1 Calyxanide, 1 Husk Eggs, 2 Husk\nChance of Failure: 15%\nFailure Outcome: Pentagram Destroyed, 1 Husked Crawler, 2 Husk, 1 Husk Eggs\n\nFew enemies summoned ensures that smaller crews will be less overwhelmed, but being caught off guard by a failure may easily result in a husk outbreak among the crew. Stay vigilant with this one, and you will find yourself with plenty of calyxanide.">
+        <Conditional OriginalOutpost="eq husk" />
+      </StatusEffect>
+      <StatusEffect target="This" type="Always" setvalue="true" delay="0.1" stackable="false" msg0="---\nRITUAL: GLOWPOCALYPSE\n---\nSummoning Item: Glow/Synth/Frost Crystal\nSummons Per Item: 3\nTime Required: 40 seconds\nSuccessful Outcome: 2 Uranium, 1 Thorium, 1 Glowraptor\nChance of Failure: 30%\nFailure Outcome: Pentagram Destroyed, Small Nuclear Explosion, 3 Glowraptors\n\nA somewhat risky gamble with an alluring payoff of lots of fuel for the reactor. Recommended that your crew have the firepower to back up this venture.">
+        <Conditional OriginalOutpost="eq glow" />
+      </StatusEffect>
+      <GuiFrame relativesize="0.6,0.6" anchor="Center" style="ItemUI" pivot="center" relativeoffset="0,-0.4" />
+    </Terminal>
+    <CustomInterface canbeselected="false" drawhudwhenequipped="true">
+      <GuiFrame relativesize="0.6,0.10" anchor="BottomCenter" pivot="center" style="ItemUI" relativeoffset="0,0.8" />
+      <TextBox text="Enter Index/Section/Page Here (lowercase)" propertyname="OriginalOutpost"></TextBox>
+    </CustomInterface>
+  </Item>
+</Items>

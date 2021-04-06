@@ -1,0 +1,43 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!-- PIANO, SHEET MUSIC -->
+<Items>
+  <Item name="Grand Piano" identifier="piano" category="Misc" Tags="smallitem, piano" scale="0.5" description="" price="1000" impactsoundtag="impact_metal_heavy" isshootable="true">
+    <Sprite texture="instruments.png" sourcerect="0,8,345,344" depth="0.55" origin="0.5,0.5" />
+    <Controller name="Controller" UserPos="-100.0, -50.0" direction="Right" canbeselected="true" msg="ItemMsgPlaySelect" hidehud="false">
+      <limbposition limb="LeftHand" position="52,-170" />
+      <limbposition limb="RightHand" position="52,-170" />
+      <StatusEffect type="OnActive" target="This"></StatusEffect>
+    </Controller>
+    <ItemContainer capacity="1" canbeselected="true" hideitems="true">
+      <GuiFrame relativesize="0.2,0.25" anchor="TopCenter" minsize="140,170" maxsize="280,280" style="ItemUI" />
+      <Containable items="sheetmus" />
+      <StatusEffect type="Always" target="Contained, This">
+        <Conditional IsActive="true" targetitemcomponent="Controller" />
+        <RequiredItem items="sheetmus" type="Contained" />
+        <Use />
+      </StatusEffect>
+    </ItemContainer>
+  </Item>
+  <Item name="Sheet Music: Subaquatic Symphony" identifier="thal_sheetmussubaq" category="Misc" Tags="smallitem,sheetmus" cargocontaineridentifier="metalcrate" hideinmenus="false" description="" scale="0.5" impactsoundtag="impact_metal_light" spritecolor="220,220,255,255" inventoryiconcolor="220,220,255,255" >
+    <InventoryIcon name="shmsub" texture="instruments.png" sourcerect="369,41,100,104" depth="0.55" origin="0.5,0.5" />
+    <Sprite name="shmsubsprite" texture="instruments.png" sourcerect="382,168,73,96" depth="0.55" origin="0.5,0.5" />
+    <Body width="73" height="96" density="30"></Body>
+    <Holdable slots="Any,RightHand,LeftHand" msg="ItemMsgPickUpSelect" CharacterUsable="false">
+      <StatusEffect type="OnUse" target="This, Parent">
+        <Conditional HasTag="piano" />
+        <sound file="Mods/Thalassophobia/Items/Misc/PianoSubaquatic.ogg" range="600" loop="true" />
+      </StatusEffect>
+    </Holdable>
+  </Item>
+  <Item name="Sheet Music: Cats on Europa" identifier="thal_sheetmuscatsonmars" category="Misc" Tags="smallitem,sheetmus" cargocontaineridentifier="metalcrate" hideinmenus="false" description="" scale="0.5" impactsoundtag="impact_metal_light" spritecolor="255,220,220,255" inventoryiconcolor="255,220,220,255" >
+    <InventoryIcon name="shmcom" texture="instruments.png" sourcerect="369,41,100,104" depth="0.55" origin="0.5,0.5" />
+    <Sprite name="shmcomsprite" texture="instruments.png" sourcerect="382,168,73,96" depth="0.55" origin="0.5,0.5" />
+    <Body width="73" height="96" density="30"></Body>
+    <Holdable slots="Any,RightHand,LeftHand" msg="ItemMsgPickUpSelect" CharacterUsable="false">
+      <StatusEffect type="OnUse" target="This, Parent">
+        <Conditional HasTag="piano" />
+        <sound file="Mods/Thalassophobia/Items/Misc/PianoSubaquatic.ogg" range="600" loop="true" />
+      </StatusEffect>
+    </Holdable>
+  </Item>
+</Items>
