@@ -25,6 +25,10 @@
   <huskappendage affliction="thal_thresherhead" path="Mods/Thalassophobia/Characters/Gummy/GeneLimbs/Thresherhead.xml" />
   <huskappendage affliction="thal_threshertorso" path="Mods/Thalassophobia/Characters/Gummy/GeneLimbs/Threshertorso.xml" />
   <huskappendage affliction="thal_thresherlimbs" path="Mods/Thalassophobia/Characters/Gummy/GeneLimbs/Thresherlimbs.xml" />
+  <!-- hammerhead -->
+  <huskappendage affliction="thal_hammerhead" path="Mods/Thalassophobia/Characters/Gummy/GeneLimbs/Hammerhead.xml" />
+  <huskappendage affliction="thal_hammertorso" path="Mods/Thalassophobia/Characters/Gummy/GeneLimbs/Hammertorso.xml" />
+  <huskappendage affliction="thal_hammerlimbs" path="Mods/Thalassophobia/Characters/Gummy/GeneLimbs/Hammerlimbs.xml" />
   <!-- thalamus -->
   <huskappendage affliction="thal_thalamushead" path="Mods/Thalassophobia/Characters/Gummy/GeneLimbs/Thalamushead.xml" />
   <huskappendage affliction="thal_threshertorso" path="Mods/Thalassophobia/Characters/Gummy/GeneLimbs/Threshertorso.xml" />
