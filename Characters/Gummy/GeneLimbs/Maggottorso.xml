@@ -4,7 +4,8 @@
     <deformablesprite texture="Mods/Thalassophobia/Characters/Gummy/GeneLimbs/maggot.png" sourcerect="122,138,83,111" origin="0.37,0.45" depth="0" color="255,255,255,255" deadcolor="255,255,255,0" subdivisions="4,4" deadcolortime="0" >
 			<SpriteDeformation type="inflate" resolution="3,3" frequency="3" scale="0.3" sync="1" stopwhenhostisdead="True" typename="inflate" blendmode="Add" usemovementsine="False" sineoffset="0" strength="1" maxrotation="90" onlyinwater="False" />
     </deformablesprite>
-    <StatusEffect target="Character" type="OnDeath" stackable="false" >
+    <StatusEffect target="Character" type="OnDeath" stackable="false" setvalue="true" CanSpeak="false" >
+			<Conditional CanSpeak="eq true" />
         <SpawnCharacter speciesname="maggot" count="3" spread="1" />
         <ParticleEmitter particle="organeruption" particleamount="50" scalemin="0.5" scalemax="0.5" velocitymin="100" velocitymax="500" anglemin="0" anglemax="360" colormultiplier="255,0,0,255" />
         <ParticleEmitter particle="heavygib" drawontop="true" particleamount="20" scalemin="0.5" scalemax="0.5" velocitymin="0" velocitymax="0" anglemin="0" anglemax="360" />
@@ -15,6 +16,7 @@
         <Explosion range="0.0" structuredamage="0" itemdamage="0" force="4.0" severlimbsprobability="0.0" decal="blood" decalsize="3.25"></Explosion>
         <Conditional speciesname="human" />
       </StatusEffect>
+      <!-- quickkill? -->
   </limb>
   <!-- Head to husk appendage -->
   <joint name="Torso to bloater" limb1="1" limb2="13" limb1anchor="3,-5" limb2anchor="19,0" upperlimit="0" lowerlimit="-10" weldjoint="True" canbesevered="False" limitenabled="True" />
