@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<huskappendage>
+  <limb id="13" name="hammerTail" type="Tail" width="10" height="10" notes="" flip="True" healthindex="3" attackpriority="0.5" steerforce="0" stepoffset="10,-10" radius="10" mass="0" density="1" pullpos="-0.14543161,-6.254539" refjoint="4" ignorecollisions="True" friction="0.3" restitution="0.05" spriteorientation="270" mirrorvertically="False" mirrorhorizontally="False" hide="False" angulardamping="7" mouthpos="0,0" constanttorque="0" constantangle="0" scale="0.7" attackforcemultiplier="1" minseverancedamage="0.8" severedfadeouttime="10" applytailangle="False" applysinemovement="True" blinkfrequency="2" blinkdurationin="0.2" blinkdurationout="0.5" blinkholdtime="3" blinkrotationin="0" blinkrotationout="145" blinkforce="100" blinktransitionin="Linear" blinktransitionout="Linear" >
+    <deformablesprite texture="Mods/Thalassophobia/Characters/Gummy/GeneLimbs/Hammerhead.png" depth="0.1" sourcerect="27,281,309,62" color="255,255,255,255" deadcolor="255,255,255,255" deadcolortime="0" subdivisions="4,1" origin="0.97,0.5" >
+			<spritedeformation type="bendjoint" resolution="3,3" multiplier="1.0" sync="-1" typename="bendjoint" blendmode="Add" usemovementsine="False" stopwhenhostisdead="False" sineoffset="0" maxrotation="30" strength="1" onlyinwater="False" />
+		</deformablesprite>
+    <sound tag="footstep_mudraptor" />
+      <StatusEffect target="Character" type="Always" setvalue="true">
+				<Conditional InWater="True" />
+				<ReduceAffliction identifier="damage" strength="1" />
+      </StatusEffect>
+  </limb>
+  
+  <!-- Feet appendage -->
+  <joint name="Torso to Tail" limb1="1" limb2="13" limb1anchor="-3,-16" limb2anchor="1,-1" upperlimit="56" weldjoint="false" lowerlimit="42" canbesevered="False" limitenabled="True" />
+
+</huskappendage>
