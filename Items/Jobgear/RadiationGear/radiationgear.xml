@@ -20,7 +20,7 @@
     <ContainedSprite name="Diving Suit In Horizontal Locker" allowedcontainertags="divingsuitcontainerhorizontal" texture="Mods/Thalassophobia/Items/Jobgear/RadiationGear/DivingSuitLocker.png" sourcerect="236,340,228,66" depth="0.55" origin="0.6,0.5" />
     <Body radius="45" width="34" density="15" />
     <Wearable slots="OuterClothes" msg="ItemMsgEquipSelect">
-      <StatusEffect type="OnWearing" target="Character" HideFace="true" duration="0.1" stackable="false" />
+      <StatusEffect type="OnWearing" target="Character" HideFace="true" duration="0.1" stackable="false" tags="thal_wearingradsuit" />
       <sprite name="Rad Suit Helmet Wearable" texture="DivingSuit_Torso.png" limb="Head" inheritlimbdepth="true" inherittexturescale="true" hidelimb="true" hideotherwearables="true" sourcerect="248,7,141,158" origin="0.45,0.36942676"></sprite>
       <sprite name="radsuit torso Wearable" texture="DivingSuit_Torso.png" limb="Torso" inheritlimbdepth="true" hidelimb="true" hideotherwearables="true" inherittexturescale="true" inheritorigin="false" inheritsourcerect="false" sourcerect="0,34,125,246" origin="0.496,0.37398374" />
       <sprite texture="DivingSuit_Legs.png" limb="Waist" inheritlimbdepth="true" hidelimb="true" hideotherwearables="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" sourcerect="0,0,270,256" origin="0.5,0.5" />
