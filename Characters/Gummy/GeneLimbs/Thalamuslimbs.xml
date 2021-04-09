@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<huskappendage>
+  <limb id="13" width="15" height="160" name="PoisonGland" type="None" notes="" scale="0.3" flip="True" mirrorvertically="False" mirrorhorizontally="False" hide="False" spriteorientation="0" steerforce="0" radius="0" density="1" ignorecollisions="False" angulardamping="7" attackpriority="1" pullpos="0,0" stepoffset="0,0" refjoint="-1" mouthpos="0,0" constanttorque="600" constantangle="20" attackforcemultiplier="1" minseverancedamage="1" severedfadeouttime="10" applytailangle="False" sinefrequencymultiplier="1" sineamplitudemultiplier="1" blinkfrequency="0" blinkdurationin="0.2" blinkdurationout="0.5" blinkholdtime="0" blinkrotationin="0" blinkrotationout="45" blinkforce="50" blinktransitionin="Linear" blinktransitionout="Linear" healthindex="0" friction="0.3" restitution="0.05">
+    <sprite texture="Mods/Thalassophobia/Characters/Gummy/GeneLimbs/thalamus.png" sourcerect="255,199,275,318" origin="0.05,0.51" depth="1.0" color="255,255,255,255" deadcolor="255,255,255,255" deadcolortime="0" />
+    <lightsource color="200,200,255,0" range="300" castshadows="false" scale="1" offset="0,0" rotation="-90" flicker="0" flickerspeed="1" pulsefrequency="0.2" pulseamount="0.6" blinkfrequency="0">
+      <lighttexture texture="Content/Lights/pointlight_falloff.png" origin="0.5,0.5" size="1.5,1.5" />
+      <Sprite texture="Mods/Thalassophobia/Characters/Gummy/GeneLimbs/thalamus.png" sourcerect="232,32,131,129" origin="0.05,0.5" alpha="0.7" />
+    </lightsource>
+  </limb>
+  <!-- Head to husk appendage -->
+  <joint name="Head to Mudraptor Append" limb1="1" limb2="13" limb1anchor="2,-1" limb2anchor="-2,0" upperlimit="0" weldjoint="true" lowerlimit="-10" canbesevered="False" limitenabled="True" />
+
+</huskappendage>
