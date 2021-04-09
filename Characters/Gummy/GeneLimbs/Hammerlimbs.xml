@@ -7,7 +7,8 @@
     <sound tag="footstep_mudraptor" />
       <StatusEffect target="Character" type="Always" setvalue="true">
 				<Conditional InWater="True" />
-				<ReduceAffliction identifier="damage" strength="1" />
+				<ReduceAffliction identifier="damage" strength="0.5" />
+				<ReduceAffliction identifier="bloodloss" strength="1" />
       </StatusEffect>
   </limb>
   
