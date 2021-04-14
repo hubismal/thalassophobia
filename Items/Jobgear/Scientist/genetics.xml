@@ -693,7 +693,7 @@
       <Sprite name="dnalight" texture="Mods/Thalassophobia/Items/Jobgear/Scientist/science.png" sourcerect="459,198,45,43" depth="0.6" origin="0.5,0.5" />
     </LightComponent>
   </Item>
-    <Item name="" identifier="thal_dnathalamus" category="Material" cargocontaineridentifier="metalcrate" description="" Tags="smallitem,thal_dna" spritecolor="255,130,140,200" InventoryIconColor="255,230,140,200" scale="0.5" impactsoundtag="impact_metal_light">
+    <Item name="" identifier="thal_dnathalamus" category="Material" hideinmenus="true" cargocontaineridentifier="metalcrate" description="" Tags="smallitem,thal_dna" spritecolor="255,130,140,200" InventoryIconColor="255,230,140,200" scale="0.5" impactsoundtag="impact_metal_light">
     <Sprite name="dna" texture="Mods/Thalassophobia/Items/Jobgear/Scientist/science.png" sourcerect="459,198,45,43" depth="0.6" origin="0.5,0.5" />
     <Body width="55" height="55" density="20" />
     <Holdable slots="Any,RightHand,LeftHand" handle1="0,0" msg="ItemMsgPickUpSelect" />
