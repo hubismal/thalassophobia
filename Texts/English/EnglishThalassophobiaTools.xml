@@ -371,10 +371,10 @@
   Limbs (Regeneration): Massively increased healing of bleeding affliction.</entitydescription.thal_dnamaggot>
   
   <entityname.thal_dnathalamus>Thalamus DNA</entityname.thal_dnathalamus>
-  <entitydescription.thal_dnathalamus>Complete genetic sequence of the Europan Thalamus. Can be used to develop anti-maggot technologies, or in DNA grafts for gene splicing. DNA Abilities by Grafts:
-  Head (Orfice): Aim at the floor and press creature attack to birth a maggot at the cost of health. Cooldown of 4s.
-  Torso (Pupa Sac): Burst into maggots on death.
-  Limbs (Regeneration): Massively increased healing of bleeding affliction.</entitydescription.thal_dnathalamus>
+  <entitydescription.thal_dnathalamus>Complete genetic sequence of the Europan Thalamus. Can be used to develop anti-thalamus technologies, or in DNA grafts for gene splicing. DNA Abilities by Grafts:
+  Head (Fleshgun): Shoots a grappling rope that can pull in enemies.
+  Torso (Seed pod): Infects sub with ballast flora on death.
+  Limbs (Toxin Organ): Completely resistant to most poisons.</entitydescription.thal_dnathalamus>
   
   <entityname.thal_dnaramblin>Mushroom DNA</entityname.thal_dnaramblin>
   <entitydescription.thal_dnaramblin>Complete genetic sequence of the Ramblin' Evil Mushroom. Can be used to develop anti-mushroom technologies, or in DNA grafts for gene splicing. DNA Abilities by Grafts:
