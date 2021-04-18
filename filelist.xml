@@ -62,4 +62,5 @@
   <Character file="Mods/Thalassophobia/Characters/Watcherpet/Watcherpet.xml" />
   <Submarine file="Mods/Thalassophobia/Submarines/[Thal] Gnitterbuss.sub" />
   <Submarine file="Mods/Thalassophobia/Submarines/[Thal] Gnitterbike.sub" />
+  <Character file="Mods/Thalassophobia/Characters/Humanfake/Humanfake.xml" />
 </contentpackage>
