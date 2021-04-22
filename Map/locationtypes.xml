@@ -3,7 +3,7 @@
     <thal_blackSite
     identifier="thal_blackSite"
     namefile="Mods/Thalassophobia/Map/locationNames/blackSite.txt"
-    commonnessperzone="1: 0.5, 2: 1.0, 3: 2.5" 
+    commonnessperzone="1: 0.0, 2: 0.0, 3: 0.0" 
     hasoutpost="true" >
 
     <Symbol texture="Mods/Thalassophobia/Map/MapAtlas.png" sourcerect="640,640,128,128" color="100,150,100,255"/>
