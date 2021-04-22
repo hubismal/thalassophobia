@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<huskappendage>
+  <limb id="13" name="hammersac" type="None" height="20" width="10" notes="" spriteorientation="NaN" flip="True" mirrorvertically="False" mirrorhorizontally="False" hide="False" attackpriority="1" steerforce="5" radius="0" density="0.1" ignorecollisions="True" angulardamping="7" pullpos="0,0" stepoffset="0,0" refjoint="-1" mouthpos="0,0" healthindex="0" friction="0.3" restitution="0.05" constanttorque="0" constantangle="0" scale="0.6" attackforcemultiplier="1" minseverancedamage="1" severedfadeouttime="10" applytailangle="False" sinefrequencymultiplier="1" sineamplitudemultiplier="1" blinkfrequency="0" blinkdurationin="0.2" blinkdurationout="0.5" blinkholdtime="0" blinkrotationin="0" blinkrotationout="45" blinkforce="50" blinktransitionin="Linear" blinktransitionout="Linear">
+    <deformablesprite texture="Mods/Thalassophobia/Characters/Gummy/GeneLimbs/Hammerhead.png" sourcerect="57,18,266,258" origin="0.65,0.45" depth="0" color="255,255,255,255" deadcolor="255,255,255,0" subdivisions="4,4" deadcolortime="0" >
+			<SpriteDeformation type="inflate" resolution="3,3" frequency="3" scale="0.3" sync="1" stopwhenhostisdead="True" typename="inflate" blendmode="Add" usemovementsine="False" sineoffset="0" strength="1" maxrotation="90" onlyinwater="False" />
+    </deformablesprite>
+    <conditionalsprite exclusive="True">
+      <conditional isDead="True" />
+      <deformablesprite texture="Content/Characters/Hammerheadmatriarch/Hammerheadmatriarch.png" sourcerect="366,0,1,1" origin="0.4631682,0.5593005" depth="0.3" subdivisions="5,5">
+      </deformablesprite>
+    </conditionalsprite>
+    <StatusEffect target="Character" type="OnDeath" stackable="false" >
+        <SpawnCharacter speciesname="hammerheadspawn" count="5" spread="4" />
+        <ParticleEmitter particle="organeruption" particleamount="50" scalemin="0.5" scalemax="0.5" velocitymin="100" velocitymax="500" anglemin="0" anglemax="360" colormultiplier="255,0,0,255" />
+        <ParticleEmitter particle="heavygib" drawontop="true" particleamount="20" scalemin="0.5" scalemax="0.5" velocitymin="0" velocitymax="0" anglemin="0" anglemax="360" />
+        <Sound file="Mods/Thalassophobia/Items/Food/gib1.ogg" selectionmode="random" range="500" />
+        <Sound file="Mods/Thalassophobia/Items/Food/gib2.ogg" selectionmode="random" range="500" />
+        <Sound file="Mods/Thalassophobia/Items/Food/gib3.ogg" selectionmode="random" range="500" />
+        <Sound file="Mods/Thalassophobia/Items/Food/gib4.ogg" selectionmode="random" range="500" />
+        <Explosion range="550.0" smoke="false" sparks="false" shockwave="true" underwaterbubble="false" structuredamage="100" itemdamage="20" force="2.0" severlimbsprobability="0.0" decal="blood" decalsize="3.25" screenshake="10" >
+					<Affliction identifier="burn" strength="40" probability="1" />
+					<Affliction identifier="bitewounds" strength="100" probability="1" />
+					<Affliction identifier="bleeding" strength="10" probability="1" />
+        </Explosion>
+        <Conditional speciesname="human" />
+      </StatusEffect>
+  </limb>
+  <!-- Head to husk appendage -->
+  <joint name="Torso to bloater" limb1="1" limb2="13" limb1anchor="3,-5" limb2anchor="19,0" upperlimit="0" lowerlimit="-10" weldjoint="True" canbesevered="False" limitenabled="True" />
+
+</huskappendage>

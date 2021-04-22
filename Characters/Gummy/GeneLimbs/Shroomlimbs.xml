@@ -11,6 +11,17 @@
      <StatusEffect target="Character" type="Always" SpeedMultiplier="0.75" setvalue="true" disabledeltatime="true">
 			<Conditional InWater="true" />
      </StatusEffect>
+  <StatusEffect type="OnDamaged" target="This" targetlimb="Torso" disabledeltatime="False" delay="0.4" stackable="false">
+    <SpawnItem identifier="acidemitter" spawnposition="This" count="3" spread="5" />
+    <Sound file="Content/Characters/Watcher/WATCHER_burst1.ogg" range="5000" selectionmode="Random"/>
+    <Sound file="Content/Characters/Watcher/WATCHER_burst2.ogg" range="5000" />
+    <Sound file="Content/Characters/Watcher/WATCHER_burst3.ogg" range="5000" />
+    <Sound file="Content/Characters/Watcher/WATCHER_burst4.ogg" range="5000" />
+    <Sound file="Content/Characters/Watcher/WATCHER_burst5.ogg" range="5000" />
+    <Sound file="Content/Characters/Watcher/WATCHER_burst6.ogg" range="5000" />
+    <Sound file="Content/Characters/Watcher/WATCHER_burst7.ogg" range="5000" />
+    <Sound file="Content/Characters/Watcher/WATCHER_burst8.ogg" range="5000" />
+  </StatusEffect>
   </limb>
   <!-- Head to husk appendage -->
   <joint name="BFoot to shoe" limb1="8" limb2="13" limb1anchor="-6,1" limb2anchor="0, -1" upperlimit="0" lowerlimit="-10" weldjoint="True" canbesevered="False" limitenabled="True" />

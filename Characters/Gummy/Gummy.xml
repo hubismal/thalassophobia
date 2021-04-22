@@ -25,10 +25,14 @@
   <huskappendage affliction="thal_thresherhead" path="Mods/Thalassophobia/Characters/Gummy/GeneLimbs/Thresherhead.xml" />
   <huskappendage affliction="thal_threshertorso" path="Mods/Thalassophobia/Characters/Gummy/GeneLimbs/Threshertorso.xml" />
   <huskappendage affliction="thal_thresherlimbs" path="Mods/Thalassophobia/Characters/Gummy/GeneLimbs/Thresherlimbs.xml" />
+  <!-- hammerhead -->
+  <huskappendage affliction="thal_hammerhead" path="Mods/Thalassophobia/Characters/Gummy/GeneLimbs/Hammerhead.xml" />
+  <huskappendage affliction="thal_hammertorso" path="Mods/Thalassophobia/Characters/Gummy/GeneLimbs/Hammertorso.xml" />
+  <huskappendage affliction="thal_hammerlimbs" path="Mods/Thalassophobia/Characters/Gummy/GeneLimbs/Hammerlimbs.xml" />
   <!-- thalamus -->
   <huskappendage affliction="thal_thalamushead" path="Mods/Thalassophobia/Characters/Gummy/GeneLimbs/Thalamushead.xml" />
-  <huskappendage affliction="thal_threshertorso" path="Mods/Thalassophobia/Characters/Gummy/GeneLimbs/Threshertorso.xml" />
-  <huskappendage affliction="thal_thresherlimbs" path="Mods/Thalassophobia/Characters/Gummy/GeneLimbs/Thresherlimbs.xml" />
+  <huskappendage affliction="thal_thalamustorso" path="Mods/Thalassophobia/Characters/Gummy/GeneLimbs/Thalamustorso.xml" />
+  <huskappendage affliction="thal_thalamuslimbs" path="Mods/Thalassophobia/Characters/Gummy/GeneLimbs/Thalamuslimbs.xml" />
   <bloodemitter particle="blackblood" particleamount="5" anglemin="0" anglemax="0" scalemin="1" scalemax="1" velocitymin="0" velocitymax="0" emitinterval="0" particlespersecond="0" highqualitycollisiondetection="False" copyentityangle="False" />
   <bloodemitter particle="blackwaterblood" particleamount="1" anglemin="0" anglemax="0" scalemin="1" scalemax="1" velocitymin="0" velocitymax="0" emitinterval="0" particlespersecond="0" highqualitycollisiondetection="False" copyentityangle="False" />
   <gibemitter particle="heavygib" particleamount="10" velocitymin="50" velocitymax="500" anglemin="0" anglemax="360" scalemin="1" scalemax="1" emitinterval="0" particlespersecond="0" highqualitycollisiondetection="False" copyentityangle="False" />

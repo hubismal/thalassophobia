@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<huskappendage>
+  <limb id="13" name="RaptorHead" type="None" width="40" height="0" notes="" flip="True" healthindex="1" attackpriority="2" steerforce="5" stepoffset="0,0" radius="20" mass="0" density="5" pullpos="0,0" refjoint="-1" ignorecollisions="False" friction="0.3" restitution="0.05" spriteorientation="NaN" mirrorvertically="False" mirrorhorizontally="False" hide="False" angulardamping="7" mouthpos="4,-3" constanttorque="0" constantangle="0" scale="0.6" attackforcemultiplier="1" minseverancedamage="0.8" severedfadeouttime="10" applytailangle="False" applysinemovement="True">
+    <sprite sourcerect="580,26,184,96" origin="0.36,0.66" depth="0.09" color="255,255,255,255" deadcolor="255,255,255,255" deadcolortime="0" texture="Mods/Thalassophobia/Characters/Gummy/GeneLimbs/Tigerthresher.png" />
+    <damagemodifier damagesound="LimbSlash" damagemultiplier="2" armorsector="0,360" deflectprojectiles="False" afflictionidentifiers="" afflictiontypes="damage,bleeding" probabilitymultiplier="20" damageparticle="" />
+    <lightsource color="255,255,255,150" range="1" offset="-18,28" castshadows="false">
+      <lighttexture texture="Content/Lights/pointlight_bright.png" origin="0.5,0.5" size="1,1" />
+      <deformablesprite texture="Content/Characters/Watcher/gazerage.png" sourcerect="124,0,100,54" origin="0.5,0.5" size="1,1" />
+      <conditional watchersgaze="gt 0"/>
+    </lightsource>
+  </limb>
+  <limb id="14" name="RaptorJaw" type="None" width="70" height="0" notes="" flip="True" healthindex="1" attackpriority="0" steerforce="0" stepoffset="0,0" radius="15" mass="0" density="5" pullpos="0,0" refjoint="-1" ignorecollisions="False" friction="0.3" restitution="0.05" spriteorientation="NaN" mirrorvertically="False" mirrorhorizontally="False" hide="False" angulardamping="7" mouthpos="0,0" constanttorque="0" constantangle="0" scale="0.6" attackforcemultiplier="1" minseverancedamage="0.8" severedfadeouttime="0" applytailangle="False" applysinemovement="True">
+    <sprite sourcerect="588,126,159,60" origin="0.45537472,0.5573791" depth="0.06" texture="Mods/Thalassophobia/Characters/Gummy/GeneLimbs/Tigerthresher.png" color="255,255,255,255" deadcolor="255,255,255,255" deadcolortime="0" />
+    <attack context="Any" cooldown="2" afterattack="Pursue" range="150" damagerange="150" duration="0.2" structuredamage="8" itemdamage="0" structuresoundtype="StructureSlash" targetforce="0" severlimbsprobability="0.3" torque="100" force="10" applyforceonlimbs="1, 3" targettype="Any" hitdetectiontype="Distance" stun="0" onlyhumans="False" applyforcesonlyonce="True" targetimpulse="20" targetimpulseworld="0,0" targetforceworld="0,-5" stickchance="0" priority="1" secondarycooldown="0" cooldownrandomfactor="0.5" reverse="False" targetlimbtype="None" afterattackdelay="0" retreat="False" rootforceworldstart="0,0" rootforceworldmiddle="0,0" rootforceworldend="0,0" roottransitioneasing="Linear" levelwalldamage="30" >
+      <Affliction identifier="stun" strength="1" probability="1" />
+      <StatusEffect type="OnUse" target="This" targetlimb="Head">
+				<Affliction identifier="burn" strength="10" probability="1" />
+        <sound file="Mods/Thalassophobia/Characters/Gummy/GeneLimbs/MudAtt1.ogg" range="300.0" loop="false" selectionmode="random" />
+        <sound file="Mods/Thalassophobia/Characters/Gummy/GeneLimbs/MudAtt2.ogg" range="300.0" loop="false" selectionmode="random" />
+        <sound file="Mods/Thalassophobia/Characters/Gummy/GeneLimbs/MudAtt3.ogg" range="300.0" loop="false" selectionmode="random" />
+      </StatusEffect>
+    </attack>
+  </limb>
+  <!-- Head to husk appendage -->
+  <joint name="Head to Mudraptor Append" limb1="0" limb2="13" limb1anchor="2,-1" limb2anchor="-2,0" upperlimit="0" weldjoint="true" lowerlimit="-10" canbesevered="False" limitenabled="True" />
+  <joint limb1="0" limb2="14" limb1anchor="-3,-7" limb2anchor="-8, 0" name="Joint Jaw" canbesevered="True" severanceprobabilitymodifier="0.5" breaksound="gore" limitenabled="True" upperlimit="12" lowerlimit="-15" stiffness="0.25" scale="1" weldjoint="False" clockwiserotation="False" />
+
+</huskappendage>

@@ -405,6 +405,38 @@
           <RequiredItem items="thal_dnamaggot" type="Contained" />
           <Conditional charge="gt 95" />
         </StatusEffect>
+        <!-- hammerhead spawn -->
+        <StatusEffect type="OnUse" targettype="This" delay="40" IsOn="false" charge="10" setvalue="false" stackable="false"  disabledeltatime="true" >
+          <SpawnCharacter speciesname="hammerheadspawn" count="1" spread="8" />
+          <sound file="Mods/Thalassophobia/Items/Jobgear/Scientist/Ding.ogg" range="600.0" loop="false" />
+          <RequiredItem items="thal_dnahammer" type="Contained" />
+          <Conditional charge="lt 100" />
+        </StatusEffect>
+        <StatusEffect type="OnUse" target="This" IsOn="true" text="">
+          <RequiredItem items="thal_dnahammer" type="Contained" />
+          <Conditional charge="lt 100" />
+        </StatusEffect>
+        <StatusEffect type="OnUse" target="This" >
+					<sound file="Mods/Thalassophobia/Items/Jobgear/Scientist/Deny.ogg" range="600.0" loop="false" />
+          <RequiredItem items="thal_dnahammer" type="Contained" />
+          <Conditional charge="gt 95" />
+        </StatusEffect>
+        <!-- tigerthresher -->
+        <StatusEffect type="OnUse" targettype="This" delay="60" IsOn="false"  charge="50" setvalue="false" stackable="false" disabledeltatime="true" >
+          <SpawnCharacter speciesname="tigerthresher" count="1" spread="8" />
+          <sound file="Mods/Thalassophobia/Items/Jobgear/Scientist/Ding.ogg" range="600.0" loop="false" />
+          <RequiredItem items="thal_dnathresher" type="Contained" />
+          <Conditional charge="lt 60" />
+        </StatusEffect>
+        <StatusEffect type="OnUse" target="This" IsOn="true" text="">
+          <RequiredItem items="thal_dnathresher" type="Contained" />
+          <Conditional charge="lt 60" />
+        </StatusEffect>
+        <StatusEffect type="OnUse" target="This" >
+					<sound file="Mods/Thalassophobia/Items/Jobgear/Scientist/Deny.ogg" range="600.0" loop="false" />
+          <RequiredItem items="thal_dnathresher" type="Contained" />
+          <Conditional charge="gt 55" />
+        </StatusEffect>
       </Button>
     </CustomInterface>
     <PowerContainer capacity="100.0" maxrechargespeed="0.0" maxoutput="0" canbeselected="false" indicatorposition="15,90" indicatorsize="150,15" indicatordepth="0.4" ishorizontal="true" msg="ItemMsgInteractSelect" charge="100" drawhudwhenequipped="false" >
@@ -469,6 +501,8 @@
         <ReduceAffliction identifier="thal_maggothead" amount="400" />
         <ReduceAffliction identifier="thal_shroomhead" amount="400" />
         <ReduceAffliction identifier="thal_crawlerhead" amount="400" />
+        <ReduceAffliction identifier="thal_thresherhead" amount="400" />
+        <ReduceAffliction identifier="thal_hammerhead" amount="400" />
         <Conditional condition="30" />
       </StatusEffect>
       <StatusEffect tags="medical" Comparison="Or" type="OnUse" target="Character, This" duration="0.5">
@@ -478,6 +512,8 @@
         <ReduceAffliction identifier="thal_maggottorso" amount="400" />
         <ReduceAffliction identifier="thal_shroomtorso" amount="400" />
         <ReduceAffliction identifier="thal_crawlertorso" amount="400" />
+        <ReduceAffliction identifier="thal_threshertorso" amount="400" />
+        <ReduceAffliction identifier="thal_hammertorso" amount="400" />
         <Conditional condition="20" />
       </StatusEffect>
       <StatusEffect tags="medical" Comparison="Or" type="OnUse" target="Character, This" delay="0.05" duration="0.5">
@@ -487,6 +523,8 @@
         <ReduceAffliction identifier="thal_maggotlimbs" amount="400" />
         <ReduceAffliction identifier="thal_shroomlimbs" amount="400" />
         <ReduceAffliction identifier="thal_crawlerlimbs" amount="400" />
+        <ReduceAffliction identifier="thal_thresherlimbs" amount="400" />
+        <ReduceAffliction identifier="thal_hammerlimbs" amount="400" />
         <Conditional condition="10" />
       </StatusEffect>
       <!-- Remove the item when fully used -->
@@ -621,6 +659,50 @@
         <Affliction identifier="thal_crawlerlimbs" amount="160" />
         <Conditional thal_meltdownlimbs="gt 0" />
       </StatusEffect>
+      <!-- HAMMERHEAD GRAFTS -->
+      <StatusEffect tags="medical" type="OnUse" target="Character" delay="0.05" duration="0.5">
+        <RequiredItem items="thal_dnahammer" type="Contained" />
+        <Sound file="Content/Items/Medical/Syringe.ogg" type="OnUse" range="500" />
+        <ReduceAffliction identifier="thal_meltdownhead" amount="400" />
+        <Affliction identifier="thal_hammerhead" amount="160" />
+        <Conditional thal_meltdownhead="gt 0" />
+      </StatusEffect>
+      <StatusEffect tags="medical" type="OnUse" target="Character" delay="0.05" duration="0.5">
+        <RequiredItem items="thal_dnahammer" type="Contained" />
+        <Sound file="Content/Items/Medical/Syringe.ogg" type="OnUse" range="500" />
+        <ReduceAffliction identifier="thal_meltdowntorso" amount="400" />
+        <Affliction identifier="thal_hammertorso" amount="160" />
+        <Conditional thal_meltdowntorso="gt 0" />
+      </StatusEffect>
+      <StatusEffect tags="medical" type="OnUse" target="Character" delay="0.05" duration="0.5">
+        <RequiredItem items="thal_dnahammer" type="Contained" />
+        <Sound file="Content/Items/Medical/Syringe.ogg" type="OnUse" range="500" />
+        <ReduceAffliction identifier="thal_meltdownlimbs" amount="400" />
+        <Affliction identifier="thal_hammerlimbs" amount="160" />
+        <Conditional thal_meltdownlimbs="gt 0" />
+      </StatusEffect>
+      <!-- THRESHER GRAFTS -->
+      <StatusEffect tags="medical" type="OnUse" target="Character" delay="0.05" duration="0.5">
+        <RequiredItem items="thal_dnathresher" type="Contained" />
+        <Sound file="Content/Items/Medical/Syringe.ogg" type="OnUse" range="500" />
+        <ReduceAffliction identifier="thal_meltdownhead" amount="400" />
+        <Affliction identifier="thal_thresherhead" amount="160" />
+        <Conditional thal_meltdownhead="gt 0" />
+      </StatusEffect>
+      <StatusEffect tags="medical" type="OnUse" target="Character" delay="0.05" duration="0.5">
+        <RequiredItem items="thal_dnathresher" type="Contained" />
+        <Sound file="Content/Items/Medical/Syringe.ogg" type="OnUse" range="500" />
+        <ReduceAffliction identifier="thal_meltdowntorso" amount="400" />
+        <Affliction identifier="thal_threshertorso" amount="160" />
+        <Conditional thal_meltdowntorso="gt 0" />
+      </StatusEffect>
+      <StatusEffect tags="medical" type="OnUse" target="Character" delay="0.05" duration="0.5">
+        <RequiredItem items="thal_dnathresher" type="Contained" />
+        <Sound file="Content/Items/Medical/Syringe.ogg" type="OnUse" range="500" />
+        <ReduceAffliction identifier="thal_meltdownlimbs" amount="400" />
+        <Affliction identifier="thal_thresherlimbs" amount="160" />
+        <Conditional thal_meltdownlimbs="gt 0" />
+      </StatusEffect>
       <!-- END SPECIFICS -->
       <StatusEffect type="OnUse" target="Contained,Character" delay="0.05" stackable="false" Comparison="Or" disabledeltatime="true">
         <Conditional thal_meltdowntorso="gt 0" />
@@ -641,7 +723,7 @@
     </MeleeWeapon>
     <ItemContainer capacity="1" hideitems="true" itempos="16,-15" containedspritedepth="0.56">
       <ContainedStateIndicator texture="Content/UI/ContainerIndicators.png" sourcerect="0,157,92,27" />
-      <Containable items="thal_dnamudraptor,thal_dnahuman,thal_dnamaggot,thal_dnaramblin,thal_dnacrawler" />
+      <Containable items="thal_dnamudraptor,thal_dnahuman,thal_dnamaggot,thal_dnaramblin,thal_dnacrawler,thal_dnahammer,thal_dnathresher" />
       <StatusEffect type="OnContained" target="This" setvalue="true" condition="50">
         <RequiredItem items="thal_dna" type="Contained" />
       </StatusEffect>
