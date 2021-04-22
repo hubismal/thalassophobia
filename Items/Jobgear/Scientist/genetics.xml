@@ -169,6 +169,30 @@
         <Conditional HasStatusTag="thal_ramblinscanned" />
         <SpawnItem spawnposition="ThisInventory" identifier="thal_dnaramblin" />
       </StatusEffect>
+      <!-- hammer scan logic -->
+      <!-- charge/buzz if ramblindna inside -->
+      <StatusEffect target="NearbyCharacters, This" type="OnUse" checkconditionalalways="true" stackable="false" range="200" charge="25" originalOutpost="hammer">
+        <Conditional HasStatusTag="thal_ramblinscanned" />
+        <Sound file="Mods/Thalassophobia/Items/Jobgear/Scientist/scanactive.ogg" type="OnUse" range="500" loop="true" />
+        <RequiredItem items="thal_dnahammer" type="Contained" />
+      </StatusEffect>
+      <!-- spawn ramblindna inside if detected -->
+      <StatusEffect target="NearbyCharacters, This" type="OnUse" checkconditionalalways="true" stackable="false" range="200" originalOutpost="hammer">
+        <Conditional HasStatusTag="thal_hammerscanned" />
+        <SpawnItem spawnposition="ThisInventory" identifier="thal_dnahammer" />
+      </StatusEffect>
+      <!-- thresher scan logic -->
+      <!-- charge/buzz if ramblindna inside -->
+      <StatusEffect target="NearbyCharacters, This" type="OnUse" checkconditionalalways="true" stackable="false" range="200" charge="25" originalOutpost="thresher">
+        <Conditional HasStatusTag="thal_ramblinscanned" />
+        <Sound file="Mods/Thalassophobia/Items/Jobgear/Scientist/scanactive.ogg" type="OnUse" range="500" loop="true" />
+        <RequiredItem items="thal_dnathresher" type="Contained" />
+      </StatusEffect>
+      <!-- spawn ramblindna inside if detected -->
+      <StatusEffect target="NearbyCharacters, This" type="OnUse" checkconditionalalways="true" stackable="false" range="200" originalOutpost="thresher">
+        <Conditional HasStatusTag="thal_thresherscanned" />
+        <SpawnItem spawnposition="ThisInventory" identifier="thal_dnathresher" />
+      </StatusEffect>
       <!--end logic-->
       <StatusEffect target="This" type="OnUse" checkconditionalalways="true" stackable="false" charge="-20"></StatusEffect>
       <StatusEffect type="Always" targettype="Contained" targets="thal_dna" delay="1.0" stackable="false">
@@ -208,6 +232,20 @@
         <RequiredItem items="thal_dnaramblin" type="Contained" />
         <Conditional ChargePercentage="gt 99" />
         <SpawnItem identifier="thal_dnaramblin" />
+        <sound file="Mods/Thalassophobia/Items/Jobgear/Scientist/Ding.ogg" range="600.0" loop="false" />
+        <ParticleEmitter particle="steamspray" particleamount="50" scalemin="0.5" scalemax="1" velocitymin="50" velocitymax="100" anglemin="0" anglemax="360" colormultiplier="240,255,255,255" />
+      </StatusEffect>
+      <StatusEffect type="Always" target="This" charge="0" setvalue="true">
+        <RequiredItem items="thal_dnahammer" type="Contained" />
+        <Conditional ChargePercentage="gt 99" />
+        <SpawnItem identifier="thal_dnahammer" />
+        <sound file="Mods/Thalassophobia/Items/Jobgear/Scientist/Ding.ogg" range="600.0" loop="false" />
+        <ParticleEmitter particle="steamspray" particleamount="50" scalemin="0.5" scalemax="1" velocitymin="50" velocitymax="100" anglemin="0" anglemax="360" colormultiplier="240,255,255,255" />
+      </StatusEffect>
+      <StatusEffect type="Always" target="This" charge="0" setvalue="true">
+        <RequiredItem items="thal_dnathresher" type="Contained" />
+        <Conditional ChargePercentage="gt 99" />
+        <SpawnItem identifier="thal_dnathresher" />
         <sound file="Mods/Thalassophobia/Items/Jobgear/Scientist/Ding.ogg" range="600.0" loop="false" />
         <ParticleEmitter particle="steamspray" particleamount="50" scalemin="0.5" scalemax="1" velocitymin="50" velocitymax="100" anglemin="0" anglemax="360" colormultiplier="240,255,255,255" />
       </StatusEffect>

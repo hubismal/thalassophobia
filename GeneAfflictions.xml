@@ -34,6 +34,15 @@
         <Conditional speciesname="maggot" />
         <Conditional speciesname="humanhive" />
       </StatusEffect>
+      <StatusEffect tags="thal_hammerscanned" target="Character" duration="1.0" stackable="false">
+        <Conditional speciesname="hammerheadspawn" />
+        <Conditional speciesname="hammerhead" />
+        <Conditional speciesname="hammerheadmatriarch" />
+      </StatusEffect>
+      <StatusEffect tags="thal_thresherscanned" target="Character" duration="1.0" stackable="false">
+        <Conditional speciesname="tigerthresher" />
+        <Conditional speciesname="bonethresher" />
+      </StatusEffect>
       <StatusEffect tags="thal_xenoscanned" target="Character" duration="1.0" stackable="false">
         <Conditional speciesname="xenomorph" />
         <Conditional speciesname="xeno" />
