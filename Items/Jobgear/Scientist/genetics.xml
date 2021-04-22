@@ -77,6 +77,12 @@
       <StatusEffect type="OnActive" target="This" lightcolor="120,120,120,110" text="Scanner Ready - Insert Conscious Specimen Into Beam" delay="1.0" checkconditionalalways="true">
         <Conditional charge="lt 1" targetitemcomponent="PowerContainer" />
       </StatusEffect>
+      <StatusEffect type="OnActive" target="This" lightcolor="245,50,180,100" text="Hammerhead DNA Detected" delay="1.0" checkconditionalalways="true">
+        <RequiredItem items="thal_dnahammer" type="Contained" />
+      </StatusEffect>
+      <StatusEffect type="OnActive" target="This" lightcolor="245,50,180,100" text="Thresher DNA Detected" delay="1.0" checkconditionalalways="true">
+        <RequiredItem items="thal_dnathresher" type="Contained" />
+      </StatusEffect>
       <StatusEffect type="OnActive" target="This" lightcolor="245,50,180,100" text="Mushroom DNA Detected" delay="1.0" checkconditionalalways="true">
         <RequiredItem items="thal_dnaramblin" type="Contained" />
       </StatusEffect>
@@ -170,9 +176,9 @@
         <SpawnItem spawnposition="ThisInventory" identifier="thal_dnaramblin" />
       </StatusEffect>
       <!-- hammer scan logic -->
-      <!-- charge/buzz if ramblindna inside -->
+      <!-- charge/buzz if hammerdna inside -->
       <StatusEffect target="NearbyCharacters, This" type="OnUse" checkconditionalalways="true" stackable="false" range="200" charge="25" originalOutpost="hammer">
-        <Conditional HasStatusTag="thal_ramblinscanned" />
+        <Conditional HasStatusTag="thal_hammerscanned" />
         <Sound file="Mods/Thalassophobia/Items/Jobgear/Scientist/scanactive.ogg" type="OnUse" range="500" loop="true" />
         <RequiredItem items="thal_dnahammer" type="Contained" />
       </StatusEffect>
@@ -184,7 +190,7 @@
       <!-- thresher scan logic -->
       <!-- charge/buzz if ramblindna inside -->
       <StatusEffect target="NearbyCharacters, This" type="OnUse" checkconditionalalways="true" stackable="false" range="200" charge="25" originalOutpost="thresher">
-        <Conditional HasStatusTag="thal_ramblinscanned" />
+        <Conditional HasStatusTag="thal_thresherscanned" />
         <Sound file="Mods/Thalassophobia/Items/Jobgear/Scientist/scanactive.ogg" type="OnUse" range="500" loop="true" />
         <RequiredItem items="thal_dnathresher" type="Contained" />
       </StatusEffect>
@@ -250,13 +256,13 @@
         <ParticleEmitter particle="steamspray" particleamount="50" scalemin="0.5" scalemax="1" velocitymin="50" velocitymax="100" anglemin="0" anglemax="360" colormultiplier="240,255,255,255" />
       </StatusEffect>
     </PowerContainer>
-    <RepairTool canbeselected="false" range="50" barrelpos="40,-50" repairthroughholes="false" characterusable="false" requireaimtouse="false" usablein="air" barrelrotation="270">
+    <RepairTool canbeselected="false" range="60" barrelpos="40,-50" repairthroughholes="false" characterusable="false" requireaimtouse="false" usablein="air" barrelrotation="270">
       <StatusEffect type="OnUse" target="UseTarget" stackable="false" delay="0.1" disabledeltatime="true">
         <Conditional IsDead="false" />
         <Affliction identifier="thal_scan" amount="5" />
       </StatusEffect>
       <RequiredItem items="youJustLostTheGame" type="Equipped" />
-      <ParticleEmitter particle="thal_grid" velocitymin="100.0" velocitymax="100.0" particlespersecond="10" colormultiplier="50,200,200,200" />
+      <ParticleEmitter particle="thal_grid" velocitymin="60.0" velocitymax="60.0" particlespersecond="3" colormultiplier="50,200,200,200" />
       <sound file="Mods/Thalassophobia/Items/Jobgear/Scientist/scanner.ogg" type="OnUse" range="500.0" loop="true" />
       <StatusEffect type="OnNotContained" target="This" setvalue="true" requireaimtouse="false"></StatusEffect>
       <StatusEffect type="OnContained" target="This" setvalue="true" requireaimtouse="true"></StatusEffect>
