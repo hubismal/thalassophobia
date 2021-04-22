@@ -64,7 +64,7 @@
 		-->
 		<ScriptedEvent identifier="thal_eventmaster">
 			
-			<CheckDataAction identifier="campaign.location.type" condition="abandonedoutpost"> <!-- don't trigger these events at abaandoned outposts -->
+			<CheckDataAction identifier="campaign.location.type" condition="eq abandonedoutpost"> <!-- don't trigger these events at abaandoned outposts -->
 				<Failure>
 					
 					<!-- try to ensure only one of eventmaster is running because we don't want multiple eventmasters assigning loads and loads of events -->
