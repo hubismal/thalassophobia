@@ -64,52 +64,58 @@
 		-->
 		<ScriptedEvent identifier="thal_eventmaster">
 			
-      <!-- try to ensure only one of eventmaster is running because we don't want multiple eventmasters assigning loads and loads of events -->
-      <RNGAction chance="0.1">
-				<Success>
-					<WaitAction time="0.5" />
-				</Success>
-			</RNGAction>
-			<CheckDataAction identifier="thal_eventmasteractive" condition="eq 1">
+			<CheckDataAction identifier="campaign.location.type" condition="abandonedoutpost"> <!-- don't trigger these events at abaandoned outposts -->
 				<Failure>
-					<!-- trigger 1 random events -->
-					<SetDataAction identifier="thal_eventmasteractive" value="1" />
-					<SetDataAction identifier="thal_eventsassigned" value="0" />
-						<Label name="eventpick" />
-						
-							<RNGAction chance="0.5">
-								<Success>
+					
+					<!-- try to ensure only one of eventmaster is running because we don't want multiple eventmasters assigning loads and loads of events -->
+					<RNGAction chance="0.1">
+						<Success>
+							<WaitAction time="0.5" />
+						</Success>
+					</RNGAction>
+					<CheckDataAction identifier="thal_eventmasteractive" condition="eq 1">
+						<Failure>
+							<!-- trigger 1 random events -->
+							<SetDataAction identifier="thal_eventmasteractive" value="1" />
+							<SetDataAction identifier="thal_eventsassigned" value="0" />
+								<Label name="eventpick" />
+								
 									<RNGAction chance="0.5">
 										<Success>
-											<TriggerEventAction identifier="thal_reactorleak" />
+											<RNGAction chance="0.5">
+												<Success>
+													<TriggerEventAction identifier="thal_reactorleak" />
+												</Success>
+												<Failure>
+													<TriggerEventAction identifier="thal_mimeperformance" />
+												</Failure>
+											</RNGAction>
 										</Success>
 										<Failure>
-											<TriggerEventAction identifier="thal_mimeperformance" />
+											<RNGAction chance="0.5">
+												<Success>
+													<TriggerEventAction identifier="thal_uesdonation" />
+												</Success>
+												<Failure>
+													<TriggerEventAction identifier="thal_reactorleak" />
+												</Failure>
+											</RNGAction>
 										</Failure>
 									</RNGAction>
-								</Success>
-								<Failure>
-									<RNGAction chance="0.5">
+									<!-- basically "do while i<3; i++" -->
+									<SetDataAction identifier="thal_eventsassigned" operation="add" value="1" />
+									<CheckDataAction identifier="thal_eventsassigned" condition="lt 1" >
 										<Success>
-											<TriggerEventAction identifier="thal_uesdonation" />
+											<GoTo name="eventpick" />
 										</Success>
-										<Failure>
-											<TriggerEventAction identifier="thal_reactorleak" />
-										</Failure>
-									</RNGAction>
-								</Failure>
-							</RNGAction>
-							<!-- basically "do while i<3; i++" -->
-							<SetDataAction identifier="thal_eventsassigned" operation="add" value="1" />
-							<CheckDataAction identifier="thal_eventsassigned" condition="lt 1" >
-								<Success>
-									<GoTo name="eventpick" />
-								</Success>
-							</CheckDataAction>
+									</CheckDataAction>
+									
+							<WaitAction time="5" />
+							<SetDataAction identifier="thal_eventmasteractive" value="0" />
+							<SetDataAction identifier="thal_eventsassigned" value="0" />
 							
-					<WaitAction time="5" />
-					<SetDataAction identifier="thal_eventmasteractive" value="0" />
-					<SetDataAction identifier="thal_eventsassigned" value="0" />
+						</Failure>
+					</CheckDataAction>
 					
 				</Failure>
 			</CheckDataAction>
