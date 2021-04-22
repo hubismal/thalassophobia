@@ -216,9 +216,6 @@
       <StatusEffect type="OnUse" target="UseTarget" stackable="false" delay="0.1" disabledeltatime="true">
         <Conditional IsDead="false" />
         <Affliction identifier="thal_scan" amount="5" />
-        <Affliction identifier="thal_disorderfart" amount="3" probability="0.01" />
-        <Affliction identifier="thal_disorderseizure" amount="3" probability="0.01" />
-        <Affliction identifier="thal_disorderexplode" amount="3" probability="0.01" />
       </StatusEffect>
       <RequiredItem items="youJustLostTheGame" type="Equipped" />
       <ParticleEmitter particle="thal_grid" velocitymin="100.0" velocitymax="100.0" particlespersecond="10" colormultiplier="50,200,200,200" />
