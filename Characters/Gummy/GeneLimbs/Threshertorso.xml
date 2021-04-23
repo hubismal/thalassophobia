@@ -4,7 +4,7 @@
     <sprite texture="Mods/Thalassophobia/Characters/Gummy/GeneLimbs/Tigerthresher.png" sourcerect="419,16,158,267" origin="0.5,0.5" depth="0.9" color="255,255,255,255" deadcolor="255,255,255,255" deadcolortime="0" />
       <StatusEffect target="Character" type="Always" SpeedMultiplier="0.85" setvalue="true" >
       </StatusEffect>
-      <StatusEffect target="Character" type="Always" disabledeltatime="true" setvalue="true" PressureProtection="100.0" >
+      <StatusEffect target="Character" type="Always" disabledeltatime="true" setvalue="true" PressureProtection="4000.0" >
       </StatusEffect>
   </limb>
   <!-- Head to husk appendage -->
