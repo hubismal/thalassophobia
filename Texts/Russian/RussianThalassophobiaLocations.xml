@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<infotexts language="Russian" nowhitespace="false" translatedname="English">
+
+	<tutorial.clowntraining>Подготовка клоунов</tutorial.clowntraining>
+	
+	<thalcampaign_start.1>Добро пожаловать в кампанию талассофобии. Перед тем, как вы начнете, выберете своё прошлое, что повлияет на вашу стартовую репутацию.</thalcampaign_start.1>
+	<thalcampaign_start.2>Решите со своей командой ваше прошлое, которое кажется вам забавным или подходящим.</thalcampaign_start.2>
+	
+	<thalcampaign_start.seeoptions>Ознакомьтесь с вариантами.</thalcampaign_start.seeoptions>
+	<thalcampaign_start.confirm>Принять</thalcampaign_start.confirm>
+	<thalcampaign_start.back>Вернутся к выбору...</thalcampaign_start.back>
+	
+	<thalcampaign_start.newline>Вы - НОВОПРИБЫВШИЕ НА ЕВРОПЕ. Мир Баротравмы для вас новый и таинственный, и вы хотите увидеть его своими глазами.</thalcampaign_start.newline>
+	<thalcampaign_newbrief>Вы начинаете без привилегий, льгот или бонусов репутации, но, наоборот, вы находитесь на нейтральном положении со всеми фракциями. По ходу кампании вам будет предоставлена возможность присоединиться к фракциям и покинуть их, как вам заблагорассудится.
+
+Выберите этот путь, чтобы начать с чистого листа, как в классической баротравме.
+	</thalcampaign_newbrief>
+	
+	<thalcampaign_start.corporateline>Мы - КОРПОРАТИВНЫЕ АГЕНТЫ. Мы лояльны Коалиции.</thalcampaign_start.corporateline>
+	<thalcampaign_corporatebrief>Корпоративные агенты - это профи по спецоперациям, работающие на Коалиционную антитеррористическую полицию (CATPOL). Ваша задача состоит в том, чтобы выследить сепаратистских повстанцев и положить конец мятежу. У вас есть специальный доступ к засекреченым водам, где хранятся секретные правительственные проекты. Если вы отойдете слишком далеко от интересов Коалиции, командование сверху активирует ваш имплантированный режим самоуничтожения.
+
+Выберите этот путь для получения опыта работы в качестве потенциально коррумпированного силового сотрудника правоохранительных органов
+	</thalcampaign_corporatebrief>
+	
+	<thalcampaign_start.circusline>Мы - ЦИРКАЧИ. Европа погрузится в хаос.</thalcampaign_start.circusline>
+	<thalcampaign_circusbrief>По мере того как человечество продлевает свое пребывание на Европе, все больше и больше подлодок таинственным образом регистрируются как "передвижные цирки". Лояльные никому, кроме самого хаоса, корабли клоунов были замечены идущими от аванпоста к аванпосту, беспокоя своих обитателей раздражающими клоунскими выходками.
+
+Выберите этот путь для дикой поездки, чтобы шароёбится и смотреть, как горит мир.
+	</thalcampaign_circusbrief>
+	
+	<thalcampaign_start.huskline>Мы - МИССИОНЕРЫ КАЛИКСА. Учение паразита спасет человечество.</thalcampaign_start.huskline>
+	<thalcampaign_huskbrief>Человечество должно причащаться яйцами, развивая нас, чтобы приспособиться к жизни на Европе. Ваше задание от верховного жреца - распространять влияние паразитов. По пути священнослужители будут помогать вам, чтобы убедиться, что ваша миссия выполняется.
+
+Выберите этот путь, чтобы принять участие в заговоре трансгуманизма.
+	</thalcampaign_huskbrief>
+	<thalcampaign_start.bluecollarline>Мы - НАЕМНОЕ ОТРЕБЬЕ. Преступные связи находят нам нелегальную работу.</thalcampaign_start.bluecollarline>
+	<thalcampaign_bluecollarbrief>На Европе ты никто, пока не "в игре". Как уличная шайка, вы делаете все это для получения марок, не задавая никаких вопросов. Заказ на убийство? Расплюнуть. Контрабанда наркотиков? Легкотня. Улицы - это то место, где вы родились и выросли.
+
+Выберите этот путь, чтобы испытать раскинувшийся преступный мир и Европу.
+	</thalcampaign_bluecollarbrief>
+	
+	<thalcampaign_start.terroristline>Мы - ПОВСТАНЦЫ СОПРОТИВЛЕНИЯ. Разгромите фашистское государство и освободите Луну.</thalcampaign_start.terroristline>
+	<thalcampaign_terroristbrief>В течение многих лет люди Европы страдали под тираническим правлением всеохватывающей Коалиции. Слежка, жестокость полиции, безудержная коррупция - и все это в то время, как толстосумы Коалиции живут в роскошных станциях. Хватит... ХВАТИТ!
+
+Выберите этот путь, чтобы разбить государство и прижать его.
+	</thalcampaign_terroristbrief>
+
+  <!-- Locations -->
+
+  <locationname.thal_mineRadioactive>Ядерный рудник.</locationname.thal_mineRadioactive>
+  <locationnameformat.thal_mineRadioactive>[name]</locationnameformat.thal_mineRadioactive>
+  <locationchange.thal_mineRadioactive.changeto.outpost>Новый аванпост был создан на [previousname], бывшем ядерном руднике.</locationchange.thal_mineRadioactive.changeto.outpost>
+  <locationchange.thal_mineRadioactive.changeto.military>Новый военный форпост был создан на [previousname], бывшем ядерном руднике.</locationchange.thal_mineRadioactive.changeto.military>
+  <locationchange.thal_mineRadioactive.changeto.research>Новый исследовательский аванпост был создан на [previousname], бывшем ядерном руднике.</locationchange.thal_mineRadioactive.changeto.research>
+  
+  <locationname.thal_blackSite>Засекреченые воды.</locationname.thal_blackSite>
+  <locationnameformat.thal_blackSite>[name]</locationnameformat.thal_blackSite>
+  <locationchange.thal_blackSite.changeto.outpost>[previousname] был преобразован в аванпост после того, как нарушение безопасности поставило под угрозу оперативную безопасность.</locationchange.thal_blackSite.changeto.outpost>
+  <locationchange.thal_blackSite.changeto.military>Новый военный аванпост был создан в [previousname], ранее засекреченном месте.</locationchange.thal_blackSite.changeto.military>
+  <locationchange.thal_blackSite.changeto.research>Новый исследовательский аванпост был создан в [previousname], ранее засекреченном месте.</locationchange.thal_blackSite.changeto.research>
+  
+</infotexts>

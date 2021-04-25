@@ -5,16 +5,16 @@
     <Sprite identifier="thal_mime" name="mime art" texture="Mods/Thalassophobia/Map/Outposts/Art/Art1.png" sourcerect="249,0,278,263" origin="0.357064,0.69741046" />
     <Sprite identifier="thal_intercom" name="intercom art" texture="Mods/Thalassophobia/Map/Outposts/Art/Art1.png" sourcerect="523,2,266,242" origin="0.5,0.5" />
     <Sprite identifier="thal_nametag" name="nametag art" texture="Mods/Thalassophobia/Map/Outposts/Art/Art1.png" sourcerect="798,2,228,236" origin="0.37978083,0.6113169" />
-    <Sprite identifier="thal_catpolbrief" name="catpol art" texture="Mods/Thalassophobia/Map/Outposts/Art/Art1.png" sourcerect="11,248,357,270" origin="0.29426706,0.7080823" />
-    <Sprite identifier="thal_terrorbrief" name="terror art" texture="Mods/Thalassophobia/Map/Outposts/Art/Art1.png" sourcerect="372,248,414,331" origin="0.29426706,0.7080823" />
+    <Sprite identifier="thal_catpolbrief" name="catpol art" texture="Mods/Thalassophobia/Map/Outposts/Art/Art1.png" sourcerect="11,248,357,270" origin="0.17953315,0.8345021" />
+    <Sprite identifier="thal_terrorbrief" name="terror art" texture="Mods/Thalassophobia/Map/Outposts/Art/Art1.png" sourcerect="372,248,414,331" origin="0.13479336,0.866331" />
     <Sprite identifier="thal_huskbrief" name="husk art" texture="Mods/Thalassophobia/Map/Outposts/Art/Art1.png" sourcerect="795,241,221,381" origin="0.29426706,0.7080823" />
-    <Sprite identifier="thal_clownbrief" name="clown art" texture="Mods/Thalassophobia/Map/Outposts/Art/Art1.png" sourcerect="472,636,495,339" origin="0.29426706,0.7080823" />
-    <Sprite identifier="thal_thugbrief" name="thug art" texture="Mods/Thalassophobia/Map/Outposts/Art/Art1.png" sourcerect="27,530,415,374" origin="0.29426706,0.7080823" />
+    <Sprite identifier="thal_clownbrief" name="clown art" texture="Mods/Thalassophobia/Map/Outposts/Art/Art1.png" sourcerect="472,636,495,339" origin="0.076211,0.9163159" />
+    <Sprite identifier="thal_thugbrief" name="thug art" texture="Mods/Thalassophobia/Map/Outposts/Art/Art1.png" sourcerect="27,530,415,374" origin="0.12685409,0.8401901" />
   </EventSprites>
   <EventPrefabs>
     <!-- Test Radio Event -->
     <ScriptedEvent identifier="thal_radiodropoff">
-      <SpawnAction itemidentifier="thal_lootcrateweapons" spawnlocation="wreck" spawnpointtype="cargo" targettag="dropoffcrate" ignorebyai="true" />
+      <SpawnAction itemidentifier="thal_lootcrateweapons" spawnlocation="wreck" spawnpointtype="Corpse" targettag="dropoffcrate" ignorebyai="true" />
       <TagAction criteria="player" tag="player" />
       <WaitAction time="1.0" />
       <RNGAction chance="0.5">
@@ -66,7 +66,7 @@
 		initiates events on outposts by using an autofill item to nondestructively (in the override sense) guarantee this event triggers. used for existing locations like cities and so on that may have other mods with other event sets. xml for the item can be found in Thalassophobia/Items/Jobgear/misc.xml.
 		-->
     <ScriptedEvent identifier="thal_eventmaster">
-      <CheckDataAction identifier="campaign.location.type" condition="eq abandonedoutpost">
+      <CheckDataAction identifier="campaign.location.type" condition="eq abandonedoutpost" forcestring="true" >
         <!-- don't trigger these events at abaandoned outposts -->
         <Failure>
           <!-- try to ensure only one of eventmaster is running because we don't want multiple eventmasters assigning loads and loads of events -->
@@ -80,6 +80,7 @@
               <!-- trigger 1 random events -->
               <SetDataAction identifier="thal_eventmasteractive" value="1" />
               <SetDataAction identifier="thal_eventsassigned" value="0" />
+							<TriggerEventAction identifier="thal_campaignstart" />
               <Label name="eventpick" />
               <RNGAction chance="0.5">
                 <Success>
@@ -124,31 +125,32 @@
     <ScriptedEvent identifier="thal_campaignstart">
       <CheckDataAction identifier="thal_pastchosen" condition="eq 1">
         <Failure>
-          <TagAction criteria="player" tag="player" />
-          <TagAction criteria="itemtag:job:Captain" tag="captainid" />
+          <TagAction criteria="player" tag="potentialplayer" />
+          <TagAction criteria="itemidentifier:idcard" tag="id" />
+					<TriggerAction target1tag="id" target2tag="potentialplayer" applytotarget1="dumbid" applytotarget2="player" radius="250" />
           <CheckItemAction targettag="player" itemtags="idcard">
             <Success>
-              <ConversationAction fadetoblack="true" eventsprite="thal_nametag" targettag="player" text="Welcome to Thalasssophobia's Campaign. Before you begin, you will select your background with your crew, which will affect your starting reputation.">
-                <Option text="See the options." />
+              <ConversationAction fadetoblack="true" eventsprite="thal_nametag" targettag="player" text="thalcampaign_start.1">
+                <Option text="thalcampaign_start.seeoptions" />
               </ConversationAction>
               <Label name="pastselect" />
-              <ConversationAction fadetoblack="true" eventsprite="thal_nametag" targettag="player" text="Decide with your crew on a background that seems fun or fitting for you.">
+              <ConversationAction fadetoblack="true" eventsprite="thal_nametag" targettag="player" text="thalcampaign_start.2">
                 <!-- NEW ARRIVALS -->
-                <Option text="We are NEW ARRIVALS ON EUROPA. Fate will forge a name for us with time." endconversation="true">
+                <Option text="thalcampaign_start.newline" endconversation="true">
                   <ConversationAction fadetoblack="true" eventsprite="thal_reactorleak" targettag="player" text="thalcampaign_newbrief">
-                    <Option endconversation="true" text="Confirm.">
+                    <Option endconversation="true" text="thalcampaign_start.confirm">
                       <SetDataAction identifier="thal_crewbackground" value="none" />
                       <SetDataAction identifier="thal_pastchosen" value="1" />
                     </Option>
-                    <Option text="Back to Selection." endconversation="true">
+                    <Option text="thalcampaign_start.back" endconversation="true">
                       <GoTo name="pastselect" />
                     </Option>
                   </ConversationAction>
                 </Option>
                 <!-- ELITE CORPO -->
-                <Option text="We are ELITE CORPORATE AGENTS. Our loyalty lies in Coalition interests." endconversation="true">
+                <Option text="thalcampaign_start.corporateline" endconversation="true">
                   <ConversationAction fadetoblack="true" eventsprite="thal_catpolbrief" targettag="player" text="thalcampaign_corporatebrief">
-                    <Option endconversation="true" text="Confirm.">
+                    <Option endconversation="true" text="thalcampaign_start.confirm">
                       <SetDataAction identifier="thal_crewbackground" value="corporate" />
                       <SetDataAction identifier="thal_pastchosen" value="1" />
                       <ReputationAction targettype="Faction" identifier="clowns" increase="-30" />
@@ -156,14 +158,15 @@
                       <ReputationAction targettype="Faction" identifier="separatists" increase="-40" />
                       <ReputationAction targettype="Faction" identifier="huskcult" increase="-30" />
                     </Option>
-                    <Option text="Back to Selection." endconversation="true">
+                    <Option text="thalcampaign_start.back" endconversation="true">
                       <GoTo name="pastselect" />
                     </Option>
                   </ConversationAction>
                 </Option>
-                <Option text="We are A TRAVELLING CIRCUS. A carnival of chaos will swallow Europa whole." endconversation="true">
+                <!-- CLOWNS -->
+                <Option text="thalcampaign_start.circusline" endconversation="true">
                   <ConversationAction fadetoblack="true" eventsprite="thal_clownbrief" targettag="player" text="thalcampaign_circusbrief">
-                    <Option endconversation="true" text="Confirm.">
+                    <Option endconversation="true" text="thalcampaign_start.confirm">
                       <SetDataAction identifier="thal_crewbackground" value="circus" />
                       <SetDataAction identifier="thal_pastchosen" value="1" />
                       <ReputationAction targettype="Faction" identifier="clowns" increase="40" />
@@ -171,14 +174,15 @@
                       <ReputationAction targettype="Faction" identifier="separatists" increase="-30" />
                       <ReputationAction targettype="Faction" identifier="huskcult" increase="-30" />
                     </Option>
-                    <Option text="Back to Selection." endconversation="true">
+                    <Option text="thalcampaign_start.back" endconversation="true">
                       <GoTo name="pastselect" />
                     </Option>
                   </ConversationAction>
                 </Option>
-                <Option text="We are CALYX MISSIONARIES. The teachings of the husk will save humankind." endconversation="true">
+                <!-- HUSKS -->
+                <Option text="thalcampaign_start.huskline" endconversation="true">
                   <ConversationAction fadetoblack="true" eventsprite="thal_huskbrief" targettag="player" text="thalcampaign_huskbrief">
-                    <Option endconversation="true" text="Confirm.">
+                    <Option endconversation="true" text="thalcampaign_start.confirm">
                       <SetDataAction identifier="thal_crewbackground" value="husk" />
                       <SetDataAction identifier="thal_pastchosen" value="1" />
                       <ReputationAction targettype="Faction" identifier="clowns" increase="-30" />
@@ -186,14 +190,14 @@
                       <ReputationAction targettype="Faction" identifier="separatists" increase="-30" />
                       <ReputationAction targettype="Faction" identifier="huskcult" increase="40" />
                     </Option>
-                    <Option text="Back to Selection." endconversation="true">
+                    <Option text="thalcampaign_start.back" endconversation="true">
                       <GoTo name="pastselect" />
                     </Option>
                   </ConversationAction>
                 </Option>
-                <Option text="We are A FOR-HIRE LOWLIVES. Underworld connections find us unusual work." endconversation="true">
+                <Option text="thalcampaign_start.bluecollarline" endconversation="true">
                   <ConversationAction fadetoblack="true" eventsprite="thal_thugbrief" targettag="player" text="thalcampaign_bluecollarbrief">
-                    <Option endconversation="true" text="Confirm.">
+                    <Option endconversation="true" text="thalcampaign_start.confirm">
                       <SetDataAction identifier="thal_crewbackground" value="bluecollar" />
                       <SetDataAction identifier="thal_pastchosen" value="1" />
                       <ReputationAction targettype="Faction" identifier="clowns" increase="-10" />
@@ -202,14 +206,14 @@
                       <ReputationAction targettype="Faction" identifier="huskcult" increase="-20" />
                       <!-- TODO: Add rep for cthonian cartel -->
                     </Option>
-                    <Option text="Back to Selection." endconversation="true">
+                    <Option text="thalcampaign_start.back" endconversation="true">
                       <GoTo name="pastselect" />
                     </Option>
                   </ConversationAction>
                 </Option>
-                <Option text="We are RESISTANCE INSURGENTS. Smash the fascist state and free the moon." endconversation="true">
+                <Option text="thalcampaign_start.terroristline" endconversation="true">
                   <ConversationAction fadetoblack="true" eventsprite="thal_terrorbrief" targettag="player" text="thalcampaign_terroristbrief">
-                    <Option endconversation="true" text="Confirm.">
+                    <Option endconversation="true" text="thalcampaign_start.confirm">
                       <SetDataAction identifier="thal_crewbackground" value="terrorist" />
                       <SetDataAction identifier="thal_pastchosen" value="1" />
                       <ReputationAction targettype="Faction" identifier="clowns" increase="-30" />
@@ -217,7 +221,7 @@
                       <ReputationAction targettype="Faction" identifier="separatists" increase="40" />
                       <ReputationAction targettype="Faction" identifier="huskcult" increase="-30" />
                     </Option>
-                    <Option text="Back to Selection." endconversation="true">
+                    <Option text="thalcampaign_start.back" endconversation="true">
                       <GoTo name="pastselect" />
                     </Option>
                   </ConversationAction>
@@ -588,47 +592,6 @@
     </ScriptedEvent>
   </EventPrefabs>
   <!-- Unique event set that only appears at the beginning of campaign -->
-  <EventSet identifier="thal_universalevents" leveltype="outpost" locationtype="outpost,city" allowatstart="true" minleveldifficulty="0" maxleveldifficulty="1" chooserandom="false" ignorecooldown="true">
-    <Commonness commonness="0">
-      <Override leveltype="outpostlevel" commonness="1000" />
-    </Commonness>
-    <EventSet identifier="campaignstart" allowatstart="true" chooserandom="false" ignorecooldown="true">
-      <!--Only regular events in outposts:-->
-      <ScriptedEvent identifier="thal_campaignstart" commonness="100" />
-    </EventSet>
-    <EventSet identifier="outpostevents.randomevents" allowatstart="true" chooserandom="true">
-      <!--Only regular events in outposts and cities:-->
-      <ScriptedEvent identifier="givingdirections" commonness="100" />
-      <ScriptedEvent identifier="soundinthevent" commonness="100" />
-      <ScriptedEvent identifier="clownrelations1" commonness="100" />
-      <ScriptedEvent identifier="clownrelations2" commonness="100" />
-      <ScriptedEvent identifier="goodsamaritan" commonness="100" />
-      <ScriptedEvent identifier="propaganda" commonness="100" />
-      <ScriptedEvent identifier="goblincooking1" commonness="50" />
-      <ScriptedEvent identifier="outbreak" commonness="100" />
-      <ScriptedEvent identifier="miketheidiot1" commonness="25" />
-      <ScriptedEvent identifier="miketheidiot2" commonness="25" />
-      <ScriptedEvent identifier="firefighting" commonness="100" />
-      <ScriptedEvent identifier="sleightofhand" commonness="100" />
-      <ScriptedEvent identifier="foreshadowing" commonness="50" />
-      <ScriptedEvent identifier="clownbrutality" commonness="100" />
-      <ScriptedEvent identifier="separatistrelations" commonness="100" />
-      <ScriptedEvent identifier="huskcultrelations" commonness="100" />
-      <ScriptedEvent identifier="Engineers_are_special" commonness="100" />
-      <ScriptedEvent identifier="mediator" commonness="100" />
-      <ScriptedEvent identifier="blackmarket" commonness="100" />
-      <ScriptedEvent identifier="huskcultist" commonness="100" />
-      <ScriptedEvent identifier="fanclub" commonness="100" />
-      <ScriptedEvent identifier="huskcultambush" commonness="50" />
-    </EventSet>
-    <EventSet identifier="outpostevents.randomevents" allowatstart="true" chooserandom="true" ignorecooldown="true" eventcount="3">
-      <ScriptedEvent identifier="missionevent_cargo1" commonness="125" />
-      <ScriptedEvent identifier="missionevent_cargo2" commonness="50" />
-      <ScriptedEvent identifier="missionevent_cargo3" commonness="100" />
-      <ScriptedEvent identifier="missionevent_killswarm" commonness="100" />
-      <ScriptedEvent identifier="missionevent_killmonstercommon" commonness="85" />
-    </EventSet>
-  </EventSet>
   <!--
   <EventSet identifier="thal_blacksiteevents" leveltype="outpost" locationtype="thal_blackSite" allowatstart="true" minleveldifficulty="0" maxleveldifficulty="100" chooserandom="false" ignorecooldown="true">
     <Commonness commonness="0">

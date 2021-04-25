@@ -1,0 +1,345 @@
+<?xml version="1.0" encoding="utf-8"?>
+<infotexts language="Russian" nowhitespace="false" translatedname="Русский">
+  <!-- Multitools -->
+  
+  <!-- removed: duplicate functionality of EK armory (even though i did it first!!) >:( -->
+  <entityname.thal_headsetchannel>Мультиканальные наушники</entityname.thal_headsetchannel>
+  <entitydescription.thal_headsetchannel>Канальная гарнитура. Введите номер для смены канала.</entitydescription.thal_headsetchannel>
+  
+  <entityname.thal_rainbowsprayer>Трёхцветный спрей</entityname.thal_rainbowsprayer>
+  <entitydescription.thal_rainbowsprayer>Модифицированный распылитель, предназначенный для окраски с более ярким набором цветов. Введите цвета в формате Красный,Зеленый,Синий,Прозрачность (в диапазоне от 0 до 255). Требуется трупная краска, изготовленная из других красок.</entitydescription.thal_rainbowsprayer>
+  
+  <entityname.thal_sign>Табличка</entityname.thal_sign>
+  <entitydescription.thal_sign>Стандартная белая табличка для отображения текста. Может быть прикреплен к стене. Водостойкий, но легковоспламеняющийся.</entitydescription.thal_sign>
+  <ItemMsgWriteSelectPen>[[select]] Писать (Ручкой)</ItemMsgWriteSelectPen>
+  <ItemMsgDetatchUsePen>[[use]] Снять </ItemMsgDetatchUsePen>
+  
+  <!-- removed: overpowered. dislike items that make others obsolete regardless of price. -->
+  <entityname.thal_multitool>Карманный нож военно-морского флота</entityname.thal_multitool>
+  <entitydescription.thal_multitool>Перочинный нож массового производства, выданный ВЭК многим кораблям, но используемый всеми. Поставляется с встроенными инструментами, имитирующими отвертку, гаечный ключ, и поставляется со складным лезвием, разработанным с учетом незначительных инопланетных боев.</entitydescription.thal_multitool>
+  <!-- Handheld Maps -->
+  <entityname.thal_map>Автокарта</entityname.thal_map>
+  <entitydescription.thal_map>Универсальная автоматическая карта, которая сканирует корпус, чтобы просматривать схему судна. Полезно как карта и держится долго на одной батарейте.</entitydescription.thal_map>
+  
+  <entityname.thal_mapwater>Гидрокарта</entityname.thal_mapwater>
+  <entitydescription.thal_mapwater>Специально разработанная автоматическая карта предназначена для сканирования не только корпуса подлодки, но и пробоин в обшивке с уровнем затопленности судна. Создан для использования среди механиков, но хорош для тех, кто хочет залатать и осушить корабль.</entitydescription.thal_mapwater>
+  
+  <entityname.thal_mapair>Аэрокарта</entityname.thal_mapair>
+  <entitydescription.thal_mapair>Специально разработанная автоматическая карта предназначалась не только для сканирования корпуса корабля и пробоин, но и для измерения уровня кислорода внутри корабля. Создан для использования среди инженеров, но хорош для тех, кто хочет обнаружить пожары или общее отсутствие кислорода.</entitydescription.thal_mapair>
+  
+  <entityname.thal_mapall>Омникарта</entityname.thal_mapall>
+  <entitydescription.thal_mapall>Усовершенствованная автоматическая карта, разработанная для сканирования корпуса, пробоин, уровня воды и кислорода. Изза большего функционала потребляет батарею быстрее, чем его аналоги.</entitydescription.thal_mapall>
+  
+  <entityname.thal_foldingchair>Складной Стул</entityname.thal_foldingchair>
+  <entitydescription.thal_foldingchair>Стальной складной стул, который можно двигать, сидеть на нем или размахивать им как будто ты рестлер.</entitydescription.thal_foldingchair>
+  <ItemMsgSitDownSelect>[[select]] Сесть</ItemMsgSitDownSelect>
+  <ItemMsgPickUpAction>[[use]] Подорать</ItemMsgPickUpAction>
+  
+  <entityname.thal_foldingtable>Складной стол</entityname.thal_foldingtable>
+  <entitydescription.thal_foldingtable>Стальной складной стол, который можно поднять и передвинуть. Игроки также могут сбрасывать на него предметы.</entitydescription.thal_foldingtable>
+  
+  <entityname.thal_dpbm>Dave's Phat Beat Machine</entityname.thal_dpbm>
+  <entitydescription.thal_dpbm>A machine that plays and layers instrumental loops. Press a button and wait no more than 9 seconds. Each loop is 9 seconds long.</entitydescription.thal_dpbm>
+  
+  <entityname.thal_shockmodule>Разрядный модуль</entityname.thal_shockmodule>
+  <entitydescription.thal_shockmodule>Проводной модуль, который можно подключить к стене, как кнопку. При активации разряжается ошеломляющий разряд электричества.</entitydescription.thal_shockmodule>
+  
+  <entityname.thal_pen>Ручка</entityname.thal_pen>
+  <entitydescription.thal_pen>Дешевая водонепроницаемая пластиковая ручка с ластиком на обратной стороне, чтобы стереть чернила. Позволяет писать на записках и табличках или колоть людей. Обычно ограничиваются капитанами, чтобы предотвратить вандализм.</entitydescription.thal_pen>
+  
+  <entityname.thal_memo>Листок</entityname.thal_memo>
+  <entitydescription.thal_memo>Небольшой листок бумаги. Для редактирования требуется ручка. Содержимое не сохраняется между раундами.</entitydescription.thal_memo>
+  
+  <entityname.thal_memoboard>Доска обьявлений</entityname.thal_memoboard>
+  <entitydescription.thal_memoboard>Доска, используемая для хранения записок. Игроки могут наводить курсор мыши на бумажки, чтобы увидеть, что там написанно. Начиная с Barotrauma 0.10.5.0+ заметки, к сожалению, не сохраняют свое содержимое между раундами/субредактором.</entitydescription.thal_memoboard>
+  
+  <entityname.thal_breachcharge>Пробойный заряд</entityname.thal_breachcharge>
+  <entitydescription.thal_breachcharge>Кумулятивный заряд, который специализируется на измельчении дверей. Прикрепите его рядом с дверью, установите и бегите в укрытие. Идеально подходит для руин, затонувших судов и сварных швов.</entitydescription.thal_breachcharge>
+  <!-- Traitor tools -->
+  
+  <entityname.thal_hackeruplink>r3n3g8 Uplink</entityname.thal_hackeruplink>
+  <entitydescription.thal_hackeruplink>A portable menu capable of spawning in items from the r3n3g8 catalogue, provided you have the materials.</entitydescription.thal_hackeruplink>
+  
+  <entityname.thal_powersink>Поглотитель энергии</entityname.thal_powersink>
+  <entitydescription.thal_powersink>сконструированный r3n3g8 прикрепляемый модуль, способный при подключении к электросети создавать огромную нагрузку. Полезно для электронасосных атак, которые легко поджаривают соединения в электронике и иногда вызывают пожары.</entitydescription.thal_powersink>
+  
+  
+  <entityname.thal_structnanogrenade>Граната для ремонта корпуса</entityname.thal_structnanogrenade>
+  <entitydescription.thal_structnanogrenade>Одноразовая граната, которая использует наноботов для быстрого ремонта больших сегментов корпуса. Идеально подходит для чрезвычайных ситуаций, когда требуется быстрая починка.</entitydescription.thal_structnanogrenade>
+  
+  
+  <!-- unimplemented: unable to access itemcomponent scope via nearbyitems -->
+  <entityname.thal_doorkey>Консоль отладки дверей</entityname.thal_doorkey>
+  <entitydescription.thal_doorkey>сделанная r3n3g8 консоль отладки для вскрытия дверей без монтировки и пропуска. Только на 2 использования, так что будьте аккуратны к авт. закрытию дверей.</entitydescription.thal_doorkey>
+  
+  <!-- unimplemented: unable to access itemcomponent scope via nearbyitems -->
+  <entityname.thal_signaljammer>Глушилка</entityname.thal_signaljammer>
+  <entitydescription.thal_signaljammer>спроектированный r3n3g8 коротковолновый частотный бомбардир. Легко предотвратит радиосвязь между экипажами. Однако глушение увеличивается с приближением, так что экипаж может в состоянии определить, когда источник помехов находятся поблизости.</entitydescription.thal_signaljammer>
+  
+  <entityname.thal_partyblower>Дуделка</entityname.thal_partyblower>
+  <entitydescription.thal_partyblower>Аналог гудка, но более надоедливый.</entitydescription.thal_partyblower>
+  
+  <entityname.thal_whoopeecushion>Подушка-пердушка</entityname.thal_whoopeecushion>
+  <entitydescription.thal_whoopeecushion>Подушка, которая издает громкий, нелепый звук, когда ее сжимают. Можно использовать как велосипедный гудок или бросить на пол, где на него можно наступить.</entitydescription.thal_whoopeecushion>
+  
+  <entityname.thal_confettigrenade>Конфетти граната</entityname.thal_confettigrenade>
+  <entitydescription.thal_confettigrenade>На вид выглядит как осколочная граната, но к сожалению, или к счастю, после взрыва остаётся куча конфетти.</entitydescription.thal_confettigrenade>
+  
+  <entityname.thal_blindfold>Повязка</entityname.thal_blindfold>
+  <entitydescription.thal_blindfold>Кусок старого, грязного бинта. Подходит для того, чтобы кого-то ослепить на время.</entitydescription.thal_blindfold>
+  
+  <entityname.thal_chaoshorn>Гудок хаоса</entityname.thal_chaoshorn>
+  <entitydescription.thal_chaoshorn>Создает звук взрыва, за вычетом самого взрыва. Ограниченное использование, и может насторожить СБ.</entitydescription.thal_chaoshorn>
+  
+  <entityname.thal_muzzle>Намордник</entityname.thal_muzzle>
+  <entitydescription.thal_muzzle>Обычный намордник для мелких обитателей европы, хотя может понадобится чтобы заткнуть кого-нибудь.</entitydescription.thal_muzzle>
+  
+  <entityname.thal_bananapeel>Банановая Кожура</entityname.thal_bananapeel>
+  <entitydescription.thal_bananapeel>Кожура банана. Любой, кто наступит на неё - подскользнётся и упадёт. Можно кидать сколько угодно.</entitydescription.thal_bananapeel>
+  
+  <entityname.thal_waterballoon>Резиновый шарик.</entityname.thal_waterballoon>
+  <entitydescription.thal_waterballoon>Шарик, который можно наполнить водой, если пользователь находится в воде, и бросить. Может быть превращен в фантастическую скульптуру воздушного шара клоуном.</entitydescription.thal_waterballoon>
+  
+  <!-- decal baloons could be implemented now, but are really for the 0.11.X.X updates where decals are permenant -->
+  
+  <entityname.thal_paintballoon>Шарик с краской</entityname.thal_paintballoon>
+  <entitydescription.thal_paintballoon>Этот бросаемый воздушный шар был наполнен краской. При ударе он, конечно, устроит беспорядок.</entitydescription.thal_paintballoon>
+  
+  <entityname.thal_bloodballoon>Шарик с кровью</entityname.thal_bloodballoon>
+  <entitydescription.thal_bloodballoon>Этот бросаемый шар был наполнен кровью. При ударе остаточный беспорядок, вероятно, будет выглядеть как место преступления.</entitydescription.thal_bloodballoon>
+  
+  <entityname.thal_jokerevolver>Игрушечный револьвер</entityname.thal_jokerevolver>
+  <entitydescription.thal_jokerevolver>Револьвер, который выбрасывает флаг вместо того, чтобы стрелять пулями. Хорошо подходит для общего запугивания.</entitydescription.thal_jokerevolver>
+  
+  <entityname.thal_bowlingball>Шар для боулинга</entityname.thal_bowlingball>
+  <entitydescription.thal_bowlingball>Отлично подходит для опрокидывания булавок и людей.</entitydescription.thal_bowlingball>
+  
+  <entityname.thal_clownpack>Хахатун фон Хонкингтон</entityname.thal_clownpack>
+  <entitydescription.thal_clownpack>Стильный рюкзак с забавной мордашкой на нем. Частично поглощает удары и баллистику сзади, что делает побег хорошим вариантом.</entitydescription.thal_clownpack>
+  
+  <entityname.thal_candle>Свечка</entityname.thal_candle>
+  <entitydescription.thal_candle>Декоративный источник света, который расходует воск при горении. Зажгите/потушите его, прицелившись и нажав один раз левую кнопку мыши. Гасится водой.</entitydescription.thal_candle>
+  
+  <entityname.thal_ouijaboard>Доска Уиджа</entityname.thal_ouijaboard>
+  <entitydescription.thal_ouijaboard>Оккультная доска для установления свящи с духами с помощью полтергейзма. Используется в ритуалах.</entitydescription.thal_ouijaboard>
+  
+  <!-- Cooking tools -->
+  
+  <entityname.thal_carver>Тесак мясника</entityname.thal_carver>
+  <entitydescription.thal_carver>Тесак, который будет разделывать туши на перерабатываемое мясо при многократном ударе по мертвому телу. Мясо можно использовать в качестве биомассы для инкубации.</entitydescription.thal_carver>
+  
+  <entityname.thal_mediumbrain>Человеческий мозг</entityname.thal_mediumbrain>
+  <entitydescription.thal_mediumbrain>Свежий, окровавленный мозг среднего размера. Может быть съеден, обработан, использован для науки и многого другого.</entitydescription.thal_mediumbrain>
+  
+  <entityname.thal_smallbrain>Маленький человеческий мозг</entityname.thal_smallbrain>
+  <entitydescription.thal_smallbrain>Свежий, маленький окровавленный мозг. Может быть съеден, обработан, использован для науки и многого другого.</entitydescription.thal_smallbrain>
+  
+  <entityname.thal_largebrain>Огромный человеческий мозг</entityname.thal_largebrain>
+  <entitydescription.thal_largebrain>Свежий, окровавленный мозг огромного размера. Может быть съеден, обработан, использован для науки и многого другого.</entitydescription.thal_largebrain>
+  
+  <entityname.thal_smallbreast>Маленькая окровавленная грудинка</entityname.thal_smallbreast>
+  <entitydescription.thal_smallbreast>Свежая, окровавленная крошечная грудная мышца. Может быть съеден, обработан, использован для науки и многого другого.</entitydescription.thal_smallbreast>
+  
+  <entityname.thal_mediumbreast>Окровавленная грудинка</entityname.thal_mediumbreast>
+  <entitydescription.thal_mediumbreast>Свежая, окровавленная крупная грудная мышца. Может быть съеден, обработан, использован для науки и многого другого.</entitydescription.thal_mediumbreast>
+  
+  <entityname.thal_mediumthigh>Окровавленное бедро</entityname.thal_mediumthigh>
+  <entitydescription.thal_mediumthigh>Свежая, окровавленная, крупная четырехглавая мышца. Может быть съеден, обработан, использован для науки и многого другого.</entitydescription.thal_mediumthigh>
+  
+  <entityname.thal_smallthigh>Маленькое Окровавленное Бедро</entityname.thal_smallthigh>
+  <entitydescription.thal_smallthigh>Свежая, окровавленная крошечная четырехглавая мышца. Может быть съеден, обработан, использован для науки и многого другого.</entitydescription.thal_smallthigh>
+  
+  <entityname.thal_largethigh>Большое Окровавленное Бедро</entityname.thal_largethigh>
+  <entitydescription.thal_largethigh>Свежая, окровавленная, огромная четырехглавая мышца. Может быть съеден, обработан, использован для науки и многого другого.</entitydescription.thal_largethigh>
+  
+  <entityname.thal_foodcart>Тележка с едой</entityname.thal_foodcart>
+  <entitydescription.thal_foodcart>Портативная Кухонная Станция. Может использоваться для приготовления различных блюд в зависимости от того, какой посудой его оборудовал пользователь.</entitydescription.thal_foodcart>
+  
+  <entityname.thal_meatgrinder>Мясорубка</entityname.thal_meatgrinder>
+  <entitydescription.thal_meatgrinder>Ручная мясорубка, которую можно использовать для переработки мяса в фарш.</entitydescription.thal_meatgrinder>
+  
+  <entityname.thal_meatgrinder>Котелок</entityname.thal_meatgrinder>
+  <entitydescription.thal_meatgrinder>Большой котелок, способный вместить большинство продуктов. Способный кипятить все, что в нем содержится, при условии наличия кулинарной станции.</entitydescription.thal_meatgrinder>
+  
+  <entityname.thal_shroomseed>Бессвязное Злое Семя</entityname.thal_shroomseed>
+  <entitydescription.thal_shroomseed>Странно пахнущее семя, покрытое спорами, способное быть посаженным, как и любое другое. Будет производить достаточно дрожжей-грибков, чтобы сделать вас богатым, но может выпустить споры.</entitydescription.thal_shroomseed>
+  
+  <entityname.thal_shroomcure>Анти-Мицелий</entityname.thal_shroomcure>
+  <entitydescription.thal_shroomcure>Лечит Грибообразование. Обладает отчетливой вязкостью, мало чем отличающейся от каликсанида.</entitydescription.thal_shroomcure>
+  
+  <entityname.thal_zombieseed>семя пупы</entityname.thal_zombieseed>
+  <entitydescription.thal_zombieseed>Странное, холодное семя. Вырастет в Куколку Стебель, на котором вырастет личинка улья, которую можно разорвать на физраствор. Личинки оживляют мертвых существ так что будьте осторожны!</entitydescription.thal_zombieseed>
+  
+  <entityname.thal_maggothive>Улей личинок</entityname.thal_maggothive>
+  <entitydescription.thal_maggothive>Разрывается на личинки, если будет уничтожено</entitydescription.thal_maggothive>
+  
+  <entityname.thal_rustseed>Ржаво-увядающие семя</entityname.thal_rustseed>
+  <entitydescription.thal_rustseed>Дурно пахнущее семя, которое вырастает в ржавое увядающее растение. Завод производит опиум, но также выпускает едкие облака, которые могут прожечь окружающие стены и истощить кислород. Несколько высокое техническое обслуживание.</entitydescription.thal_rustseed>
+  
+  <entityname.thal_clownseed>Семя циркачного прига</entityname.thal_clownseed>
+  <entitydescription.thal_clownseed>Забавно пахнущее семя, которое вырастает в цирковое растение. Растение выращивает несколько непредсказуемую продукцию и имеет тенденцию к утечке сельтерской воды.</entitydescription.thal_clownseed>
+  
+  <entityname.thal_wheatseed>Семена пшеницы</entityname.thal_wheatseed>
+  <entitydescription.thal_wheatseed>Семена пшеницы с Земли, генетически модифицированные, чтобы быстрее расти в гидропонных условиях. Необходим для приготовления муки.</entitydescription.thal_wheatseed>
+  
+  <entityname.thal_wheatseed>Семена пшеницы</entityname.thal_wheatseed>
+  <entitydescription.thal_wheatseed>Семена пшеницы с Земли, генетически модифицированные, чтобы быстрее расти в гидропонных условиях. Необходим для приготовления муки.</entitydescription.thal_wheatseed>
+  
+  <entityname.thal_wheat>Пшеница</entityname.thal_wheat>
+  <entitydescription.thal_wheat>Пучок пшеницы.</entitydescription.thal_wheat>
+  
+  <entityname.thal_sugarcane>Сахарный тростник</entityname.thal_sugarcane>
+  <entitydescription.thal_sugarcane>A slightly sweet tasting plant from earth, genetically modified to grow more quickly in hydroponic conditions. Unlike many plants, sugarcane grows from itself instead of seeds.</entitydescription.thal_sugarcane>
+  
+  <entityname.thal_botanistsuit>Защитный костюм гидропоники</entityname.thal_botanistsuit>
+  <entitydescription.thal_botanistsuit>Легкий костюм, предназначенный для использования с летучей флорой. Мягко сопротивляется ожогам и рваным ранам.</entitydescription.thal_botanistsuit>
+  
+  <entityname.thal_botanistmask>Аэрозольный респиратор</entityname.thal_botanistmask>
+  <entitydescription.thal_botanistmask>Маска промышленного класса со встроенной системой фильтрации воздуха, в первую очередь для защиты от воздействия токсичных паров растений. Может быть загружен кислородом, чтобы работать как водолазная маска.</entitydescription.thal_botanistmask>
+  
+  <entityname.thal_fumigator>Фумигатор</entityname.thal_fumigator>
+  <entitydescription.thal_fumigator>Модифицированный огнемет, который выпускает газы из любого газового баллона, загруженного в него.</entitydescription.thal_fumigator>
+  
+  <msggascylinderrequired>Требуется газовый баллон</msggascylinderrequired>
+  
+  <entityname.thal_assembler>Атомный преобразователь</entityname.thal_assembler>
+  <entitydescription.thal_assembler>Ручной субатомный фабрикатор, который преобразует входной элемент в выходной, снабжен схемой. Вставьте чип данных "схемы", затем вставьте материал или элемент, указанный схемой.</entitydescription.thal_assembler>
+  
+  <entityname.thal_constructor>Универсальный конструктор</entityname.thal_constructor>
+  <entitydescription.thal_constructor>Прикрепляемый фабрикатор с потенциалом 3D - печати чрезвычайно сложного оборудования с возможностями квантовой манипуляции.</entitydescription.thal_constructor>
+  <itemmsgconstruct>[[select]] Создать</itemmsgconstruct>
+  
+  <entityname.thal_recipeconstructor>Схема: Слиток из Титана-алюминия -> Универсальный конструктор</entityname.thal_recipeconstructor>
+  <entitydescription.thal_recipeconstructor>Микросхема с данными, содержащая инструкции Атомного преобразователя для превращения титано-алюминиевого сплава в Универсальный конструктор, устройство, способное создавать предметы, позволяющие получить доступ к высшим эшелонам науки.
+  
+  Вставить в Атомный преобразователь рядом с: Титано-алюминиевый слиток</entitydescription.thal_recipeconstructor>
+  
+  <entityname.thal_recipeplanter>Схема: Металлический ящик -> Небольшой ящик для рассады</entityname.thal_recipeplanter>
+  <entitydescription.thal_recipeplanter>Микросхема с данными, содержащая инструкции Атомного преобразователя для преобразования Металлического ящика в Небольшой ящик для рассады, устройство, способное выращивать семена, помещенные внутри него.
+  
+  Вставить в Атомный преобразователь рядом с: Металлическим ящиком</entitydescription.thal_recipeplanter>
+  
+  <entityname.thal_recipefumigator>Схема: Сварочный инструмент -> Фумигатор</entityname.thal_recipefumigator>
+  <entitydescription.thal_recipefumigator>Микросхема с данными, содержит инструкции Атомного преобразователя для преобразования Сварочного инструмента в Фумигатор, устройство, способное выбрасывать газы под давлением.
+  
+  Вставить в Атомный преобразователь вместе с: Сварочным инструментом</entitydescription.thal_recipefumigator>
+  
+  <entityname.thal_recipebotanistmask>Схема: Подводная маска -> Респиратор</entityname.thal_recipebotanistmask>
+  <entitydescription.thal_recipebotanistmask>Микросхема с данными, содержит инструкции Атомного преобразователя для преобразования Водолазной маски в аэрозольный респиратор, устройство, способное отфильтровывать ядовитые газы.
+  
+  Вставить в Атомный преобразователь вместе с: Подводной маской</entitydescription.thal_recipebotanistmask>
+  
+  <entityname.thal_recipedischarger>Схема: Ручной сонар -> Разрядник</entityname.thal_recipedischarger>
+  <entitydescription.thal_recipedischarger>Микросхема с данными, содержит инструкции Атомного преобразователя для преобразования Ручного сонара в Разрядник, слабый перезаряжаемый пистолет.
+  
+  Вставить в Атомный преобразователь рядом с а: Ручной гидролокатор</entitydescription.thal_recipedischarger>
+  
+  <entityname.thal_recipefungicide>Схема: Бессвязное Злое Семя -> Фунгицид</entityname.thal_recipefungicide>
+  <entitydescription.thal_recipefungicide>Микросхема с данными, содержит инструкции Атомнного преобразователя для превращения Бессвязного Злого Семени в аэрозольный фунгицидный цилиндр, герметичный фумигаторный цилиндр для остановки вспышек грибов.
+  
+ Вставьте в атомный преобразователь рядом с: Бессвязное Злое Семя</entitydescription.thal_recipefungicide>
+  
+  <entityname.thal_recipegeneticinit>Схема: Антирад -> Решение CRISPR-Cas9</entityname.thal_recipegeneticinit>
+  <entitydescription.thal_recipegeneticinit>Микросхема с данными, содержит инструкции Атомного преобразователя для преобразования введенного в раствор CRISPR Cas9 микрожидкости, способной нацеливаться на гены для трансплантации.
+  
+  Вставить в атомный преобразователь рядом с: Антирад</entitydescription.thal_recipegeneticinit>
+  
+  <entityname.thal_recipegeneticgraft>Схема: Шприц-пистолет - > ДНК-графтер</entityname.thal_recipegeneticgraft>
+  <entitydescription.thal_recipegeneticgraft>Микросхема с данными, содержит инструкции Атомного преобразователя для преобразования Шприц-пистолета в ДНК-графтер, специализированную подкожную иглу, которая может быть загружена ДНК для трансплантации.
+  
+  Вставить в Атомный преобразователь вместе с: Шприц-пистолетом</entitydescription.thal_recipegeneticgraft>
+  
+  <entityname.thal_cylinderspore>Бессвязный Споровый цилиндр</entityname.thal_cylinderspore>
+  <entitydescription.thal_cylinderspore>Баллон с газом под давлением, содержащий частицы споры для Бродячих Злых грибов. Избегайте падения.</entitydescription.thal_cylinderspore>
+  
+  <entityname.thal_cylinderlaughing>Баллон с закисью азота</entityname.thal_cylinderlaughing>
+  <entitydescription.thal_cylinderlaughing>Газовый баллон под давлением, содержащий закись азота, обычный газ с обезболивающим действием, возникающим из-за недостатка кислорода в мозге. Избегайте падения.</entitydescription.thal_cylinderlaughing>
+  
+  <entityname.thal_cylinderfreeze>Баллон с жидким азотом</entityname.thal_cylinderfreeze>
+  <entitydescription.thal_cylinderfreeze>Газовый баллон под давлением, содержащий жидкий азот, криогенную жидкость с чрезвычайно низкой температурой кипения, способную быстро замораживать живые ткани.</entitydescription.thal_cylinderfreeze>
+  
+  <entityname.thal_cylindershroomcure>Аэрозольный Фунгицидный баллон</entityname.thal_cylindershroomcure>
+  <entitydescription.thal_cylindershroomcure>Баллон с газом под давлением, содержащий испаренный Анти-мицелий. Убивает бродячие грибы и дезинфицирует жертвы грибообразования.</entitydescription.thal_cylindershroomcure>
+  
+  <entityname.thal_cylinderteargas>Газовый баллон CS</entityname.thal_cylinderteargas>
+  <entitydescription.thal_cylinderteargas>Баллон с газом под давлением, содержащий 2-хлорбензальмалонитрил, модифицированный для использования в качестве воздушного раздражителя. Если газ попадет в глаза, это приведет к временному раздражению и слепоте. Полезно для самозащиты.</entitydescription.thal_cylinderteargas>
+  
+  <entityname.thal_hydrophonicsign>Знак опасности Гидропоники</entityname.thal_hydrophonicsign>
+  <entitydescription.thal_hydrophonicsign>Знак, который может быть брошен на пол или прикреплен к стене, чтобы указать область ботанической опасности, начиная от взрывающихся помегренад и заканчивая инфекционными спорами.</entitydescription.thal_hydrophonicsign>
+  
+  <entityname.thal_botanistbook>Альманах ботаника</entityname.thal_botanistbook>
+  <entitydescription.thal_botanistbook>Книга подробно описывает уход за различными культурами и растениями, способными быть выращенными ботаником.</entitydescription.thal_botanistbook>
+  
+  <entityname.thal_discourager>Обескураживатель статики</entityname.thal_discourager>
+  <entitydescription.thal_discourager>Оружие самообороны, которое управляет контролируемым шоком, который поражает нервную систему. Отсутствие полной недееспособности делает его идеальным оружием для самообороны.</entitydescription.thal_discourager>
+  
+    <entityname.thal_cultistbook>Сокращенный Некрономикон</entityname.thal_cultistbook>
+  <entitydescription.thal_cultistbook>Книга подробно описывает основы роли культиста. Удерживая нажатой клавишу для чтения, введите самую верхнюю строку для навигации.</entitydescription.thal_cultistbook>
+  
+  <entityname.thal_singularity>Гравитационная сингулярность"</entityname.thal_singularity>
+  <entitydescription.thal_singularity>Ужасная гравитационная аномалия, которая растет, чем больше персонажей втягивается в нее.</entitydescription.thal_singularity>
+  
+  <entityname.thal_secondchance>Инжектор Феникса</entityname.thal_secondchance>
+  <entitydescription.thal_secondchance>Стероидный раствор адреналина, предназначенный для автоматического введения в горячую ванну тяжелораненого. Переход в критическое состояние с этим в вашем горячем баре временно оживляет вас, позволяя вам обратиться за медицинской помощью.</entitydescription.thal_secondchance>
+  
+  <entityname.thal_geneticinit>Решение CRISPR-Cas9</entityname.thal_geneticinit>
+  <entitydescription.thal_geneticinit>Шприц, используемый для инициации сплайсинга генов. Возьмите его в руки и выберите, с какой частью тела вы хотите слить ДНК. То, что происходит с частью тела, зависит от слитой ДНК; Посмотрите на описание. После выбора сделайте себе инъекцию шприцем, а затем сделайте себе инъекцию заряженным трансплантатом.</entitydescription.thal_geneticinit>
+  
+  <entityname.thal_geneticgraft>ДНК-графтер</entityname.thal_geneticgraft>
+  <entitydescription.thal_geneticgraft>Шприц, в который можно вставить образцы ДНК. При инъекции в кого-то, подвергающегося индуцированному CRISPR-Cas9 расплавлению, это прикрепляет ДНК к разрезанным участкам, что приводит к сплайсингу генов en vivo. Сращивание генов можно использовать для лечения генетических нарушений и даже для трансформации частей тела. Требуется, чтобы пациенту сначала ввели раствор CRISPR-Cas9.</entitydescription.thal_geneticgraft>
+  
+  <entityname.thal_dnascanner>ДНК-сканер</entityname.thal_dnascanner>
+  <entitydescription.thal_dnascanner>ДНК-сканер, который собирает ДНК из молекул слюны живых существ. Не будет работать на мертвых существах. Прикрепитесь к стене и взаимодействуйте с ней. Сканирует все, что находится под ним, но со временем ломается.</entitydescription.thal_dnascanner>
+  
+  <entityname.thal_dnahatcher>Биоморфная Инкубационная капсула</entityname.thal_dnahatcher>
+  <entitydescription.thal_dnahatcher>Стручок используется для создания существ из ДНК и биомассы. Вставляйте мясо до тех пор, пока не будет достаточно биомассы для желаемого существа, затем вставьте его ДНК и нажмите кнопку engage, чтобы начать формирование и воспитание эмбриона. </entitydescription.thal_dnahatcher>
+  
+  <entityname.thal_dnahuman>ДНК человека</entityname.thal_dnahuman>
+  <entitydescription.thal_dnahuman>Полная генетическая последовательность стандартного Homo Sapiens. Может быть использован для разработки антигуманоидных технологий или в ДНК-трансплантатах для возвращения человека к нормальной жизни. Прививка этой ДНК вернет все изменения в части(частях) тела, которые в настоящее время находятся в расплавленном состоянии, а также вернет любые генетические нарушения. </entitydescription.thal_dnahuman>
+  
+  <entityname.thal_dnamudraptor>ДНК грязевого раптора</entityname.thal_dnamudraptor>
+  <entitydescription.thal_dnamudraptor>Полная генетическая последовательность стандартного европейского грязевого раптора. Может быть использован для разработки технологий борьбы с грязевыми хищниками или в ДНК-трансплантатах для сплайсинга генов. Способности ДНК с помощью трансплантатов:
+Голова (спина): Медленно ломайте двери, используя атаку существа.
+Туловище (панцирь): Получите пуленепробиваемую грязевую броню раптора на позвоночнике.
+Конечности (Хвост): Скорость плавания значительно увеличивается.</entitydescription.thal_dnamudraptor>
+  
+  <entityname.thal_dnacrawler>ДНК Ползуна</entityname.thal_dnacrawler>
+  <entitydescription.thal_dnacrawler>Полная генетическая последовательность стандартного европейского ползунаа. Может быть использован для разработки анти-гусеничных технологий или в ДНК-трансплантатах для сплайсинга генов. Способности ДНК с помощью трансплантатов:
+Голова (клыки): Укус Лайфстила при нажатии на атаку существа.
+Туловище (жабры): Фильтруют кислород из воды даже тогда, когда его нет в атмосфере.
+Конечности (Хвост): Общее увеличение скорости движения.</entitydescription.thal_dnacrawler>
+  
+  <entityname.thal_dnathresher>ДНК Тигровой акулы</entityname.thal_dnathresher>
+  <entitydescription.thal_dnathresher>Полная генетическая последовательность стандартной европейской тигровой акулы. Может быть использован для разработки анти-гусеничных технологий или в ДНК-трансплантатах для сплайсинга генов. Способности ДНК с помощью трансплантатов:
+Голова (Костяная челюсть): Очень медленно разрушайте стены и двери, используя атаку существ.
+Туловище (Экзоскелет): Сопротивление давлению.
+Конечности (Биолюминесценция): Излучают свет.</entitydescription.thal_dnathresher>
+  
+  <entityname.thal_dnahammer>ДНК Молотоглава</entityname.thal_dnahammer>
+  <entitydescription.thal_dnahammer>Полная генетическая последовательность стандартного европейского Молотглава. Может быть использован для разработки анти-гусеничных технологий или в ДНК-трансплантатах для сплайсинга генов. Способности ДНК с помощью трансплантатов:
+Голова (Молот): Разрушайте стены, целясь и нажимая на атаку существа.
+Туловище (родовой мешок): Разрушительный взрыв при смерти.
+Конечности (адреналин): Скорость и сопротивление увеличиваются по мере снижения жизненной силы.</entitydescription.thal_dnahammer>
+  
+  <entityname.thal_dnamaggot>ДНК личинки</entityname.thal_dnamaggot>
+  <entitydescription.thal_dnamaggot>Полная генетическая последовательность стандартной личинки Улья. Может быть использован для разработки технологий борьбы с личинками или в ДНК-трансплантатах для сплайсинга генов. Способности ДНК с помощью трансплантатов:
+Голова (офис): Цельтесь в пол и нажмите атаку существа, чтобы родить личинку ценой здоровья. Перезарядка 4с.
+Туловище (Куколочный мешок): Лопается на личинки при смерти.
+Конечности (Регенерация): Массово увеличенное заживление кровоточащего недуга.</entitydescription.thal_dnamaggot>
+  
+  <entityname.thal_dnaramblin>ДНК грибов</entityname.thal_dnaramblin>
+  <entitydescription.thal_dnaramblin>Полная генетическая последовательность Бродячего" Злого гриба". Может быть использован для разработки противогрибковых технологий или в ДНК-трансплантатах для сплайсинга генов. Способности ДНК с помощью трансплантатов:
+Голова (колпачок): Цельтесь в пол и нажимайте на атаку существа, чтобы выпустить бодрящие газы.
+Торс (Versicolor): "Грибовидное" недомогание сильно исцеляет вас.
+Конечности (Стопа спортсмена): Скорость бега существенно увеличилась, скорость плавания незначительно снизилась.</entitydescription.thal_dnaramblin>
+  
+  <entityname.thal_planter>Коробка рассады гидропоники</entityname.thal_planter>
+  <entitydescription.thal_planter>Усовершенствованная рассадная коробка, предназначенная для улучшенных научных измерений и анализа ботанических показателей, необходимых ботанику. Вот в чем разница между садовником-любителем и настоящим ученым. </entitydescription.thal_planter>
+  
+  <entityname.thal_geneticsign>Знак Генетической опасности</entityname.thal_geneticsign>
+  <entitydescription.thal_geneticsign>Знак, который может быть брошен на пол или прикреплен к стене, чтобы указать область генопасности, начиная от ионизирующего излучения ДНК и заканчивая химическими веществами для манипулирования генами.</entitydescription.thal_geneticsign>
+  
+  <entityname.thal_geneticistsuit>Защитный костюм гинетика</entityname.thal_geneticistsuit>
+  <entitydescription.thal_geneticistsuit>Легкий костюм, предназначенный для использования в слаборадиоактивных средах. Слабо сопротивляется радиации и возможности генетического повреждения.</entitydescription.thal_geneticistsuit>
+  
+</infotexts>
