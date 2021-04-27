@@ -78,6 +78,9 @@
   <thalcampaign_uesdonation.iknow>“Я знаю, кто ты. Вы ищете пожертвование?“</thalcampaign_uesdonation.iknow>
   <thalcampaign_uesdonation.keepwalking>Продолжайте идти и отводите взгляд.</thalcampaign_uesdonation.keepwalking>
   <thalcampaign_uesdonation.busy>“Мне очень жаль, но сейчас я действительно очень занят.“</thalcampaign_uesdonation.busy>
+  <thalcampaign_uesdonation.terrorinquiry>[Агент CATPOL] “На самом деле, мне нужно немного вашего времени. Были ли вы свидетелем какого-либо подозрительного заговора против Коалиции?“</thalcampaign_uesdonation.terrorinquiry>
+  <thalcampaign_uesdonation.catpol>[Агент CATPOL] “Цветочник ЕЭС, да? Отдайте мне все собранные сегодня средства, и я сделаю вид, что не застал вас за попрошайничеством без разрешения Коалиции.“</thalcampaign_uesdonation.catpol>
+  <thalcampaign_uesdonation.blackmail>Сборщик средств ЕЭС в ярости. - Такие дерьмовые агенты, как ты, - вот почему у нас не может быть хороших вещей. Я надеюсь, что вы и все ваши друзья по коалиции получите то, что вам причитается.“ Они неохотно дают вам 300 марок и уходят.</thalcampaign_uesdonation.blackmail>
 
   <!-- Locations -->
 
