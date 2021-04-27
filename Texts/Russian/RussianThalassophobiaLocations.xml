@@ -3,6 +3,8 @@
 
 	<tutorial.clowntraining>Подготовка клоунов</tutorial.clowntraining>
 	
+	<!-- PAST CHOOSING -->
+	
 	<thalcampaign_start.1>Добро пожаловать в кампанию талассофобии. Перед тем, как вы начнете, выберете своё прошлое, что повлияет на вашу стартовую репутацию.</thalcampaign_start.1>
 	<thalcampaign_start.2>Решите со своей командой ваше прошлое, которое кажется вам забавным или подходящим.</thalcampaign_start.2>
 	
@@ -39,11 +41,43 @@
 Выберите этот путь, чтобы испытать раскинувшийся преступный мир и Европу.
 	</thalcampaign_bluecollarbrief>
 	
-	<thalcampaign_start.terroristline>Мы - ПОВСТАНЦЫ СОПРОТИВЛЕНИЯ. Разгромите фашистское государство и освободите Луну.</thalcampaign_start.terroristline>
+	<thalcampaign_start.terroristline>Мы - ПОВСТАНЦЫ СОПРОТИВЛЕНИЯ. Освободите луну!</thalcampaign_start.terroristline>
 	<thalcampaign_terroristbrief>В течение многих лет люди Европы страдали под тираническим правлением всеохватывающей Коалиции. Слежка, жестокость полиции, безудержная коррупция - и все это в то время, как толстосумы Коалиции живут в роскошных станциях. Хватит... ХВАТИТ!
 
 Выберите этот путь, чтобы разбить государство и прижать его.
 	</thalcampaign_terroristbrief>
+
+	<!-- UES DONATION -->
+	
+	<thalcampaign_uesdonation.start>К вам подходит врач, держа в руках какую-то коробку, украшенную знаком марки. - "Извините, я занимаюсь сбором средств в ЕЭС... Не будет ли слишком нагло, если я попрошу всего лишь минуту вашего времени?“</thalcampaign_uesdonation.start>
+  <thalcampaign_uesdonation.clueless>“У-Е-Что?“</thalcampaign_uesdonation.clueless>
+  <thalcampaign_uesdonation.lore>Сборщик средств делает паузу и вопросительно смотрит на вас. - Я удивлен, что вы никогда о нас не слышали. Мы - благотворительная некоммерческая организация, занимающаяся улучшением качества жизни на Европе. Вы когда-нибудь замечали, что везде, куда бы вы ни пошли в этих аванпостах, вы видите клоунов-маньяков, низших существ, грязерапторов в вентиляционных отверстиях... и тому подобное? ЕЭС считает, что Европа не должна быть такой; Наш сбор средств направлен на повышение качества жизни в аванпостах.“</thalcampaign_uesdonation.lore>
+  <thalcampaign_uesdonation.okay>“Хорошо...“</thalcampaign_uesdonation.okay>
+  <thalcampaign_uesdonation.fewmarks>Он продолжает: “Мы в основном боремся с бедностью, управляя столовыми, раздавая одежду или выполняя общественные работы, такие как уборка аванпостов, сильно пострадавших от аварии“. Он представляет коробку для пожертвований: “Всего несколько марок могут изменить мир!"</thalcampaign_uesdonation.fewmarks>
+  <thalcampaign_uesdonation.goingaround>- Значит, ты ходишь с этой штукой и просишь пожертвования?“</thalcampaign_uesdonation.goingaround>
+  <thalcampaign_uesdonation.donationoptions>Он нетерпеливо держит коробку для пожертвований. “Вы хотели бы внести свой вклад?“</thalcampaign_uesdonation.donationoptions>
+  <thalcampaign_uesdonation.10mk>Пожертвовать 10 марок</thalcampaign_uesdonation.10mk>
+  <thalcampaign_uesdonation.react10>Вы переводите 10 марок в ЕЭС. - "Спасибо, мы вам очень признательны.“</thalcampaign_uesdonation.react10>
+  <thalcampaign_uesdonation.100mk>Пожертвовать 100 марок</thalcampaign_uesdonation.100mk>
+  <thalcampaign_uesdonation.react100>Вы переводите 100 марок в ЕЭС. “Ух ты, 100 марок! Это очень поможет. Искренне благодарю вас.“</thalcampaign_uesdonation.react100>
+  <thalcampaign_uesdonation.1000mk>Пожертвовать 1000 марок</thalcampaign_uesdonation.1000mk>
+  <thalcampaign_uesdonation.react1000>Вы переводите 1000 марок в ЕЭС. Они выглядят ошеломленными. - "Ты серьезно? Я не могу отблагодарить вас... это невероятно! Большое вам спасибо. Мы этого не забудем.“</thalcampaign_uesdonation.react1000>
+  <thalcampaign_uesdonation.nvm>- "Вообще-то, я передумал, извини.“</thalcampaign_uesdonation.nvm>
+  <thalcampaign_uesdonation.mug>[Вооруженный] “Как насчет того, чтобы вместо этого внести свой вклад мне?“</thalcampaign_uesdonation.mug>
+  <thalcampaign_uesdonation.mugsuccess>Они отступают, пораженные. -"Т-ты ведь знаешь, что это устройство для передачи данных в один конец, верно? ...Знаешь что, забудь об этом! Вот: Вы можете получить 400 марок, это все, что у меня есть на моем личном счете, клянусь. Только не делай мне больно!“ Они переводят тебе марки и отступают. ЕЭС узнает об этом.</thalcampaign_uesdonation.mugsuccess>
+  <thalcampaign_uesdonation.mugfail>Они отступают, пораженные. - "Кем, черт возьми, ты себя возомнил, воруя у благотворительности? Ты, подлый кусок дерьма ползунов!" Их рука ныряет в куртку. Приготовьтесь к бою!</thalcampaign_uesdonation.mugfail>
+  <thalcampaign_uesdonation.later>- "Извини, может быть, в другой раз.“</thalcampaign_uesdonation.later>
+  <thalcampaign_uesdonation.hippies>“Разве вы, ребята, не кучка хиппи?“</thalcampaign_uesdonation.hippies>
+  <thalcampaign_uesdonation.irked>Член ЕЭС явно раздражен вашим замечанием: “Мы выступаем против конфликта между коалицией и сепаратистскими силами, если вы это имеете в виду. Выходит, что "война с терроризмом" не сделала ничего, кроме того, что оставила много марок для производителей оружия, и все это за счет простых людей. Никогда не было "хорошей войны" или "плохого мира". Как бы то ни было, ни один из наших средств не тратится на политические цели. Мы просто хотим облегчить страдания.“</thalcampaign_uesdonation.irked>
+  <thalcampaign_uesdonation.alright>“Тогда ладно.“</thalcampaign_uesdonation.alright>
+  <thalcampaign_uesdonation.political>“Значит, вас поддерживает Коалиция, или как?“</thalcampaign_uesdonation.political>
+  <thalcampaign_uesdonation.humanity>Член ЕЭС бросает косой взгляд: “На самом деле мы ни с кем не "вместе". ЕЭС - это друзья самого человечества. Неужели это так плохо, что мы не олигархи, стремящиеся к власти, кровожадные сепаратисты, культисты, поклоняющиеся паразитам, или психопаты-клоуны? Некоторые люди говорят, что, в отличие от других парней, наши пацифистские идеалы недостижимы на адском ландшафте, которым является Европа. Я думаю, что после этой кампании по сбору средств мы увидим, сколько людей готовы поверить.“</thalcampaign_uesdonation.humanity>
+  <thalcampaign_uesdonation.believe>“Поверить?“</thalcampaign_uesdonation.believe>
+  <thalcampaign_uesdonation.join>“Я хотел бы вступить в ЕЭС.“</thalcampaign_uesdonation.join>
+  <thalcampaign_uesdonation.membership>Сборщик средств улыбается. “Ну, на самом деле я не вербовщик. Я был заперт в этом захолустном форпосте по сбору средств до... почти до конца времен, так что у меня нет с собой документов. Однако я перешлю ваш запрос вышестоящему начальству, и мы посмотрим, сможет ли кто-нибудь связаться с вами в дальнейшем в ваших путешествиях на другом аванпосте, хорошо?“</thalcampaign_uesdonation.membership>
+  <thalcampaign_uesdonation.iknow>“Я знаю, кто ты. Вы ищете пожертвование?“</thalcampaign_uesdonation.iknow>
+  <thalcampaign_uesdonation.keepwalking>Продолжайте идти и отводите взгляд.</thalcampaign_uesdonation.keepwalking>
+  <thalcampaign_uesdonation.busy>“Мне очень жаль, но сейчас я действительно очень занят.“</thalcampaign_uesdonation.busy>
 
   <!-- Locations -->
 

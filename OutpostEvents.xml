@@ -336,41 +336,41 @@
       <TagAction criteria="player" tag="player" />
       <TriggerAction target1tag="uesmember" target2tag="player" applytotarget2="triggerer_player" radius="100" />
       <NPCWaitAction npctag="uesmember" wait="true" />
-      <ConversationAction targettag="triggerer_player" text="What looks like a doctor approaches you, holding a boxy object sporting a mark sign on it. “Excuse me, I'm a fund raiser with the UES... Would it be too much to ask for just a moment of your time?“">
-        <Option text="“The U-E-What-now?“">
-          <ConversationAction targettag="triggerer_player" text="The fund raiser pauses and looks at you quizzically. “You know, The United Europa Society? I'll be blunt -- I'm surprised you've never heard of us. We're a charitable, nonprofit organization dedicated to improving the quality of life on Europa. You ever notice how everywhere you go in these outposts, you see psycho clowns, scammers, mudraptors in vents... all that? It's our belief that Europa doesn't have to be like this; Our fundraising aims to increase the quality of life in outposts.“">
-            <Option text="“Okay...“">
-              <ConversationAction targettag="triggerer_player" text="They continue: “We mostly fight poverty by managing soup kitchens, clothing drives, or doing community service like cleaning up the outposts hit hard by the crash.“  They present the donation box. “Just a few marks can make a world of difference!“">
-                <Option text="“So you're going around with that thing asking for donations?“">
+      <ConversationAction targettag="triggerer_player" text="thalcampaign_uesdonation.start">
+        <Option text="thalcampaign_uesdonation.clueless">
+          <ConversationAction targettag="triggerer_player" text="thalcampaign_uesdonation.lore">
+            <Option text="thalcampaign_uesdonation.okay">
+              <ConversationAction targettag="triggerer_player" text="thalcampaign_uesdonation.fewmarks">
+                <Option text="thalcampaign_uesdonation.goingaround">
                   <Label name="donationprompt" />
                   <CheckItemAction targettag="triggerer_player" itemtags="weapon">
                     <Success>
                       <!-- Has-Weapon version of dialogue -->
-                      <ConversationAction targettag="triggerer_player" text="They eagerly hold up the donation box. “Would you like to make a contribution?“">
-                        <Option text="Donate 10 Marks">
+                      <ConversationAction targettag="triggerer_player" text="thalcampaign_uesdonation.donationoptions">
+                        <Option text="thalcampaign_uesdonation.10mk">
                           <GoTo name="donateten" />
                         </Option>
-                        <Option text="Donate 100 Marks">
+                        <Option text="thalcampaign_uesdonation.100mk">
                           <GoTo name="donatehundred" />
                         </Option>
-                        <Option text="Donate 1000 Marks">
+                        <Option text="thalcampaign_uesdonation.1000mk">
                           <GoTo name="donatethousand" />
                         </Option>
-                        <Option text="“Actually, I change my mind, sorry.“" endconversation="true">
+                        <Option text="thalcampaign_uesdonation.nvm" endconversation="true">
                           <ReputationAction targettype="Faction" identifier="thal_ues" increase="-1" />
                         </Option>
-                        <Option text="[Armed] “How about you make a contribution to me, instead?“">
-                          <ReputationAction targettype="Faction" identifier="thal_ues" increase="-50" />
+                        <Option text="thalcampaign_uesdonation.mug">
+                          <ReputationAction targettype="Faction" identifier="thal_ues" increase="-40" />
                           <RNGAction chance="0.7">
                             <Success>
                               <ReputationAction targettype="Faction" identifier="thal_ues" increase="-10" />
                               <MoneyAction amount="400" />
-                              <ConversationAction targettag="triggerer_player" text="They back away, astonished. “You... You know this is a one way transfer device, right? It doesn't contain any... a-actual currency... Forget it! Y-You can have 400 Marks, it's all I have in my personal account, I swear!“ They give you the marks and back off.">
+                              <ConversationAction targettag="triggerer_player" text="thalcampaign_uesdonation.mugsuccess">
                                 <Option text="Recieve 400 Marks." endconversation="true"></Option>
                               </ConversationAction>
                             </Success>
                             <Failure>
-                              <ConversationAction targettag="triggerer_player" text="They back off, astonished. “You goddamn idiot, you know this is a one way currency transfer device, right? I don't have any physical currency, I'm not a panhandler. You just messed with the wrong one!“ You see them reach behind into their clothing for something. Get ready!">
+                              <ConversationAction targettag="triggerer_player" text="thalcampaign_uesdonation.mugfail">
                                 <Option text="Fight." endconversation="true">
                                   <CombatAction combatmode="defensive" npctag="uesmember" enemytag="triggerer_player" />
                                 </Option>
@@ -381,8 +381,8 @@
                       </ConversationAction>
                     </Success>
                     <Failure>
-                      <ConversationAction targettag="triggerer_player" text="They eagerly hold up the donation box. “Would you like to make a contribution?“">
-                        <Option text="Donate 10 Marks">
+                      <ConversationAction targettag="triggerer_player" text="thalcampaign_uesdonation.donationoptions">
+                        <Option text="thalcampaign_uesdonation.10mk">
                           <Label name="donateten" />
                           <MoneyAction amount="-10" />
                           <ReputationAction targettype="Faction" identifier="thal_ues" increase="3" />
@@ -394,9 +394,9 @@
                               <SetDataAction identifier="uesfund" value="1" operator="add" />
                             </Failure>
                           </CheckDataAction>
-                          <ConversationAction targettag="triggerer_player" text="You transfer 10 Marks to the UES. “Thanks, we greatly appreciate it.“" />
+                          <ConversationAction targettag="triggerer_player" text="thalcampaign_uesdonation.react10" />
                         </Option>
-                        <Option text="Donate 100 Marks">
+                        <Option text="thalcampaign_uesdonation.100mk">
                           <Label name="donatehundred" />
                           <MoneyAction amount="10" />
                           <ReputationAction targettype="Faction" identifier="thal_ues" increase="7" />
@@ -408,9 +408,9 @@
                               <SetDataAction identifier="uesfund" value="5" operator="add" />
                             </Failure>
                           </CheckDataAction>
-                          <ConversationAction targettag="triggerer_player" text="You transfer 100 Marks to the UES. “Wow, 100 marks! This will help greatly. Thank you sincerely.“" />
+                          <ConversationAction targettag="triggerer_player" text="thalcapmaign_uesdonation.react100" />
                         </Option>
-                        <Option text="Donate 1000 Marks">
+                        <Option text="thalcampaign_uesdonation.1000mk">
                           <Label name="donatethousand" />
                           <MoneyAction amount="-1000" />
                           <ReputationAction targettype="Faction" identifier="thal_ues" increase="15" />
@@ -422,37 +422,44 @@
                               <SetDataAction identifier="uesfund" value="50" operator="add" />
                             </Failure>
                           </CheckDataAction>
-                          <ConversationAction targettag="triggerer_player" text="You transfer 1000 Marks to the UES. They look flabbergast. “You're serious? I can't thank you enough... this is incredible! Thank you so, so much. We won't forget this.“" />
+                          <ConversationAction targettag="triggerer_player" text="thalcampaign_uesdonation.react1000" />
                         </Option>
-                        <Option text="“Actually, I change my mind, sorry.“" endconversation="true">
+                        <Option text="thalcampaign_uesdonation.nvm" endconversation="true">
                           <ReputationAction targettype="Faction" identifier="thal_ues" increase="-1" />
                         </Option>
                       </ConversationAction>
                     </Failure>
                   </CheckItemAction>
                 </Option>
-                <Option text="“Sorry, maybe some other time.“" endconversation="true">
-                  <ReputationAction targettype="Faction" identifier="thal_ues" increase="-1" />
-                </Option>
-                <Option text="“Aren't you guys a bunch of hippies?“">
-                  <ConversationAction targettag="triggerer_player" text="The UES member is clearly irked by your remark: “We oppose the conflict between the coalition and the seperatist forces, if that's what you mean. It's out belief the conflict has done nothing but make a lot of marks for arms manufacturers, all while impovrishing the average colonist. Our donations are purely charitable, though.“">
-                    <Option text="“I see.“">
+                <Option text="thalcampaign_uesdonation.political">
+                  <ConversationAction targettag="triggerer_player" text="thalcampaign_uesdonation.humanity">
+                    <Option text="thalcampaign_uesdonation.believe">
                       <Goto name="donationprompt" />
                     </Option>
                   </ConversationAction>
+                </Option>
+                <Option text="thalcampaign_uesdonation.hippies">
+                  <ConversationAction targettag="triggerer_player" text="thalcampaign_uesdonation.irked">
+                    <Option text="thalcampaign_uesdonation.alright">
+                      <Goto name="donationprompt" />
+                    </Option>
+                  </ConversationAction>
+                </Option>
+                <Option text="thalcampaign_uesdonation.later" endconversation="true">
+                  <ReputationAction targettype="Faction" identifier="thal_ues" increase="-1" />
                 </Option>
               </ConversationAction>
             </Option>
           </ConversationAction>
         </Option>
-        <Option text="“I know who you are. Are you looking for a donation?“">
+        <Option text="thalcampaign_uesdonation.iknow">
           <Goto name="donationprompt" />
         </Option>
-        <Option text="Keep on walking and avert your gaze." endconversation="true">
-          <ReputationAction targettype="Faction" identifier="thal_ues" increase="-10" />
+        <Option text="thalcampaign_uesdonation.keepwalking" endconversation="true">
+          <ReputationAction targettype="Faction" identifier="thal_ues" increase="-5" />
           <ReputationAction targettype="Faction" identifier="coalition" increase="2" />
         </Option>
-        <Option text="“I'm sorry, I'm really quite busy right now.“" endconversation="true">
+        <Option text="thalcampaign_uesdonation.busy" endconversation="true">
           <ReputationAction targettype="Faction" identifier="thal_ues" increase="-1" />
         </Option>
       </ConversationAction>
@@ -465,20 +472,64 @@
       <TagAction criteria="player" tag="player" />
       <TriggerAction target1tag="mime" target2tag="player" applytotarget2="triggerer_player" radius="100" />
       <NPCWaitAction npctag="mime" wait="true" />
-      <ConversationAction targettag="triggerer_player" text="There's a street mime here. These professional entertainers engage in what many believe to be more sophisticated acts of tomfoolery. While clowns engage in crass, low brow humour, mimes are naturally drawn to better-bred antics, making them more accepted in many outposts regardless of creed." eventsprite="thal_mime" />
+      <ConversationAction targettag="triggerer_player" text="thalcampaign_mimeperformance.start" eventsprite="thal_mime" />
       <CheckReputationAction targettype="faction" identifier="clowns" condition="gt 30">
-        <Success>
-          <!--reputation 30 to 100 -->
-          <ConversationAction targettag="triggerer_player" text="The mime swivels around and sees you. They exagerratedly lean forward to peer at you, and a moment later, their pale face breaks into a big, checkered grin. Your crew's reputation precedes you among many Europan entertainers, and this one seems to have heard good things about the whole lot.">
-            <Option text="Tastefully enjoy a delightful show of expressive gesture.">
-              <Goto name="show" />
-            </Option>
-            <Option text="Politely indicate you have places to be.">
-              <ConversationAction targettag="triggerer_player" text="They seem to understand. The mime waves goodbye and continues looking for other people to entertain.">
-                <Option text="Godspeed." endconversation="true" />
-              </ConversationAction>
-            </Option>
-          </ConversationAction>
+        <Success><!--reputation 30 to 100 -->
+					<CheckDataAction identifier="thal_crewbackground" condition="eq circus" forcestring="true">
+						<Success><!-- DIALOGUE FOR TRAVELLING CIRCUS -->
+							<ConversationAction targettag="triggerer_player" text="thalcampaign_mimeperformance.grin">
+								<Option text="thalcampaign_mimeperformance.enjoy">
+									<Goto name="show" />
+								</Option>
+								<Option text="[Travelling Circus] Whisper the secret phrase: “Aisepray the Onkmotherhay!“">
+									<ConversationAction targettag="triggerer_player" text="The mime's eyes widen and his head darts around to check for any eavesdroppers. When the coast is clear, he reaches into his suitcase and unveils a few missions he's jotted down on a sign. You can take your pick, without the interprative dance crap that non-clowns have to deal with.">
+										<Option text="Add explosive cargo to your task manager.">
+											<MissionAction missiontag="cargoexplosive" />
+											<Goto name="donation" />
+										</Option>
+										<Option text="Add praise the honkmother (clown cargo) to your task manager.">
+											<MissionAction missiontag="cargoclown" />
+											<Goto name="donation" />
+										</Option>
+										<Option text="Add biohazard (husk egg cargo) to your task manager.">
+											<MissionAction missiontag="cargohuskeggs" />
+											<Goto name="donation" />
+										</Option>
+										<Option text="Add salvaging an artifact to your task manager.">
+											<MissionAction missiontag="salvageartifact" />
+											<Goto name="donation" />
+										</Option>
+										<Option text="Add salvaging a wreck to your task manager.">
+											<MissionAction missiontag="salvagewreck" />
+											<Goto name="donation" />
+										</Option>
+										<Option text="Add killing a moloch to your task manager.">
+											<MissionAction missiontag="killmoloch" />
+											<Goto name="donation" />
+										</Option>
+									</ConversationAction>
+								</Option>
+								<Option text="Politely indicate you have places to be.">
+									<ConversationAction targettag="triggerer_player" text="They seem to understand. The mime waves goodbye and continues looking for other people to entertain.">
+										<Option text="Godspeed." endconversation="true" />
+									</ConversationAction>
+								</Option>
+							</ConversationAction>
+						</Success>
+						<Failure><!-- DIALOGUE FOR NOT TRAVELLING CIRCUS -->
+							<ConversationAction targettag="triggerer_player" text="thalcampaign_mimeperformance.grin">
+								<Option text="thalcampaign_mimeperformance.enjoy">
+									<Goto name="show" />
+								</Option>
+								<Option text="Politely indicate you have places to be.">
+									<ConversationAction targettag="triggerer_player" text="They seem to understand. The mime waves goodbye and continues looking for other people to entertain.">
+										<Option text="Godspeed." endconversation="true" />
+									</ConversationAction>
+								</Option>
+							</ConversationAction>
+						</Failure>
+					</CheckDataAction>
+					
         </Success>
         <Failure>
           <!--reputation -40 to 30 -->
@@ -576,12 +627,12 @@
             </Success>
             <Failure>
               <!--reputation -100 to -40-->
-              <ConversationAction targettag="triggerer_player" text="They're staring right at you and it's apparent they don't want to hang around. Your crew really pissed off the clowns of Europa somewhere along the line! The mime picks up their briefcase and walks away. They don't want to perform for someone with as stiff and upper-lip as you.">
+              <ConversationAction targettag="triggerer_player" text="They're staring right at you and it's apparent they don't want to hang around. Your crew really pissed off the clowns of Europa somewhere along the line! The mime picks up their briefcase and walks away. They don't want to perform for someone with as stiff an upper-lip as you.">
                 <Option text="Oh well." endconversation="true">
                   <ReputationAction targettype="Faction" identifier="clowns" increase="1" />
                 </Option>
                 <Option text="“That's right. Keep walking, you invisible wall humper.“">
-                  <ConversationAction targettag="triggerer_player" text="They ignore you, but your little comment didn't help your standing with the Children of the Honkmother." />
+                  <ConversationAction targettag="triggerer_player" text="They ignore you, but your little comment probably didn't help your standing with the Children of the Honkmother." />
                   <ReputationAction targettype="Faction" identifier="clowns" increase="-9" />
                 </Option>
               </ConversationAction>

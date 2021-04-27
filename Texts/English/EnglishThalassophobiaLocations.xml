@@ -3,6 +3,8 @@
 
 	<tutorial.clowntraining>Clown Training</tutorial.clowntraining>
 	
+	<!-- PAST CHOOSING -->
+	
 	<thalcampaign_start.1>Welcome to Thalasssophobia's Campaign. Before you begin, you will select your background with your crew, which will affect your starting reputation.</thalcampaign_start.1>
 	<thalcampaign_start.2>Decide with your crew on a background that seems fun or fitting for you.</thalcampaign_start.2>
 	
@@ -45,6 +47,47 @@
 	Choose this route to smash the state and stick it to the man.
 	</thalcampaign_terroristbrief>
 
+  <!-- UES DONATION -->
+  
+  <thalcampaign_uesdonation.start>A doctor approaches you, holding some kind of box decorated with a mark sign. “Excuse me, I'm a fund raiser with the UES... Would it be too much to ask for just a moment of your time?“</thalcampaign_uesdonation.start>
+  <thalcampaign_uesdonation.clueless>“The U-E-What-now?“</thalcampaign_uesdonation.clueless>
+  <thalcampaign_uesdonation.lore>The fund raiser pauses and looks at you quizzically. “I'm surprised you've never heard of us. We're a charitable, nonprofit organization dedicated to improving the quality of life on Europa. You ever notice how everywhere you go in these outposts, you see maniac clowns, lowlives, mudraptors in vents... the like? The UES believes that Europa doesn't have to be like this; Our fundraising aims to increase the quality of life in outposts.“</thalcampaign_uesdonation.lore>
+  <thalcampaign_uesdonation.okay>“Okay...“</thalcampaign_uesdonation.okay>
+  <thalcampaign_uesdonation.fewmarks>They continue: “We mostly fight poverty by managing soup kitchens, clothing drives, or doing community service like cleaning up the outposts hit hard by the crash.“ They present the donation box: “Just a few marks can make a world of difference!“</thalcampaign_uesdonation.fewmarks>
+  <thalcampaign_uesdonation.goingaround>“And you're going around with that thing asking for donations?“</thalcampaign_uesdonation.goingaround>
+  <thalcampaign_uesdonation.donationoptions>They eagerly hold up the donation box. “Would you like to make a contribution?“</thalcampaign_uesdonation.donationoptions>
+  <thalcampaign_uesdonation.10mk>Donate 10 Marks</thalcampaign_uesdonation.10mk>
+  <thalcampaign_uesdonation.react10>You transfer 10 Marks to the UES. “Thanks, we greatly appreciate it.“</thalcampaign_uesdonation.react10>
+  <thalcampaign_uesdonation.100mk>Donate 100 Marks</thalcampaign_uesdonation.100mk>
+  <thalcampaign_uesdonation.react100>You transfer 100 Marks to the UES. “Wow, 100 marks! This will help greatly. Thank you sincerely.“</thalcampaign_uesdonation.react100>
+  <thalcampaign_uesdonation.1000mk>Donate 1000 Marks</thalcampaign_uesdonation.1000mk>
+  <thalcampaign_uesdonation.react1000>You transfer 1000 Marks to the UES. They look flabbergast. “You're serious? I can't thank you enough... this is incredible! Thank you so, so much. We won't forget this.“</thalcampaign_uesdonation.react1000>
+  <thalcampaign_uesdonation.nvm>“Actually, I change my mind, sorry.“</thalcampaign_uesdonation.nvm>
+  <thalcampaign_uesdonation.mug>[Armed] “How about you make a contribution to me instead?“</thalcampaign_uesdonation.mug>
+  <thalcampaign_uesdonation.mugsuccess>They back away, astonished. “Y-You know this is a one-way transfer device, right? ...You know what, forget it! Here: You can have 400 Marks, it's all I have in my personal account, I swear. Just don't hurt me!“ They give you the marks and back off. The UES will hear about this.</thalcampaign_uesdonation.mugsuccess>
+  <thalcampaign_uesdonation.mugfail>They back away, astonished. “Who the hell do you think you are, stealing from charity? You low-down piece of crawler shit!" Their hand dives into their jacket. Get ready to fight!</thalcampaign_uesdonation.mugfail>
+  <thalcampaign_uesdonation.later>“Sorry, maybe some other time.“</thalcampaign_uesdonation.later>
+  <thalcampaign_uesdonation.hippies>“Aren't you guys a bunch of hippies?“</thalcampaign_uesdonation.hippies>
+  <thalcampaign_uesdonation.irked>The UES member is clearly irked by your remark: “We oppose the conflict between the coalition and the seperatist forces, if that's what you mean. It's out belief the 'war on terrorism' has done nothing but make a lot of marks for weapon manufacturers, all at the cost of the common people. There was never a 'good war' or a 'bad peace'. Regardless, none of our fundraising is spent politically. We just want to ease suffering.“</thalcampaign_uesdonation.irked>
+  <thalcampaign_uesdonation.alright>“Alright then.“</thalcampaign_uesdonation.alright>
+  <thalcampaign_uesdonation.political>“So you're backed by the Coalition, or what?“</thalcampaign_uesdonation.political>
+  <thalcampaign_uesdonation.humanity>The UES member gives a sidelong look: “We're not really 'with' anyone. The UES is friends to humanity itself. Is it really so bad that we're not power-tripping oligarchs, murderous seperatists, parasite-worshipping cultists or psycho clowns? Some people say that unlike the other guys, our pacifist ideals aren't achievable on the hellscape that is Europa. I guess after this fundraising campaign, we'll see how many people are willing to believe.“</thalcampaign_uesdonation.humanity>
+  <thalcampaign_uesdonation.believe>“Believe?“</thalcampaign_uesdonation.believe>
+  <thalcampaign_uesdonation.join>“I'd like to join the UES.“</thalcampaign_uesdonation.join>
+  <thalcampaign_uesdonation.membership>The fund raiser smiles. “Well, I'm not really a recruiter. I've been penned in this middle-of-nowhere outpost on fundraising duty until... pretty much the end of time, so I don't have the paperwork on me. I'll forward your request to higher-ups though, and we'll see if someone can contact you further into your travels at a different outpost, okay?“</thalcampaign_uesdonation.membership>
+  <thalcampaign_uesdonation.iknow>“I know who you are. Are you looking for a donation?“</thalcampaign_uesdonation.iknow>
+  <thalcampaign_uesdonation.keepwalking>Keep on walking and avert your gaze.</thalcampaign_uesdonation.keepwalking>
+  <thalcampaign_uesdonation.busy>“I'm sorry, I'm really quite busy right now.“</thalcampaign_uesdonation.busy>
+  <thalcampaign_uesdonation.terrorinquiry>[CATPOL Agent] “Actually, I need a moment of *your* time. Have you been witness to any suspected conspiracy against the Coalition?“</thalcampaign_uesdonation.terrorinquiry>
+  <thalcampaign_uesdonation.catpol>[CATPOL Agent] “A UES flowerboy, huh? Give me all of today's funds raised, and I'll pretend I didn't catch you panhandling without a Coalition Permit.“</thalcampaign_uesdonation.catpol>
+  <thalcampaign_uesdonation.blackmail>The UES fund raiser is furious. “Shithead CATs like you are why we can't have nice things. I hope you and all your Coalition buddies get what's coming to you.“ They begrudgingly give you 300 Marks and walk away.</thalcampaign_uesdonation.blackmail>
+  
+  <!-- MIME PERFORMANCE -->
+  
+  <thalcampaign_mimeperformance.start>There's a street mime here. These professional entertainers engage in what many believe to be more sophisticated acts of tomfoolery. While clowns engage in crass, low brow humour, mimes are naturally drawn to better-bred antics, making them more accepted in many outposts, regardless of creed.</thalcampaign_mimeperformance.start>
+  <thalcampaign_mimeperformance.grin>The mime swivels around and sees you. They exagerratedly lean forward to peer at you, hand shielding their eyes from an imaginary sun. A moment later, their pale face breaks into a big, checkered grin. Your crew's reputation precedes you among many Europan entertainers, and this one seems to have heard good things about the whole lot.</thalcampaign_mimeperformance.grin>
+  <thalcampaign_mimeperformance.enjoy>Tastefully enjoy a delightful show of expressive gesture.</thalcampaign_mimeperformance.enjoy>
+  
   <!-- Locations -->
 
   <locationname.thal_mineRadioactive>Nuclear Extraction Mine</locationname.thal_mineRadioactive>
