@@ -498,4 +498,43 @@ Credits</lootlabel.money>
   <itemmsgplayselect>[[select]] Play</itemmsgplayselect>
   <entityname.piano>Grand Piano</entityname.piano>
   <entitydescription.piano>An expensive Grandwin and Sons Piano. The music is only as good as the pianist. Place away from reactors, vents, sides of the ship, and other noisemakers for best results!</entitydescription.piano>
+  
+  <!-- GUIDES -->
+  <entityname.thal_guidegen>Genetics Guidebook</entityname.thal_guidegen>
+  <entitydescription.thal_guidegen>Current Page:</entitydescription.thal_guidegen>
+  <guidebookinstruction>Enter page name (Read item tooltip)</guidebookinstruction>
+  <thal_guidegen_introlabel>HELP/INTRO</thal_guidegen_introlabel>
+  <entityname.thal_guidegen_intro>ඞHELP/INTRO
+  
+		This book serves as an introduction to the genetics system of the Thalassophobia mod. It is navigated by typing the name of the page in the textbox that appears when the item is held, and then pressing enter. After pressing enter, the tooltip description of the item (what you're reading now) will update with information relevant to the page. 
+  
+	You can type "help" at any time to return to this page.
+  
+	Try it out now: Equip the item, and type "index" (no quotes) in the box to navigate to an index full of page names. </entityname.thal_guidegen_intro>
+	<thal_guidegen_indexlabel>INDEX</thal_guidegen_indexlabel>
+  <entityname.thal_guidegen_index>ඞINDEX
+  
+	Enter any of the following words (without the "-" at the beginning) into the nav bar to view their entries. 
+  
+	If you are new to this, it is recommended you go in order.
+  
+	-scanner
+	-dna
+	-meatcleaver
+	-cloning
+	-grafting
+	-knowngrafts</entityname.thal_guidegen_index>
+	<thal_guidegen_scannerlabel>SCANNING</thal_guidegen_scannerlabel>
+	<entityname.thal_guidegen_scanner>ඞSCANNING
+  
+	Every geneticist starts with a scanner to obtain DNA by scanning creatures. DNA is the backbone of the entire geneticist role.
+	You can hold right mouse button to aim, and press E or Left-Mouse to attach your scanner to a wall. Attached, you can interact with the scanner to turn it on and off. The emitted beam is hazardous and will have slow but deadly effects on people around it left on for too long. It will also break down quickly while active, so use wisely. To detach the scanner, use a wrench. You can also wire the scanner with a screwdriver in order to operate with signals.
+	To obtain DNA, a *living* creature must stand under the beam of a scanner for ~30 seconds. The progress of the scan can be seen on the scanner in the form of a progress bar that gradually filcowpowhapls when a creature is being scanned. If a creature exits the beam, the bar will deplete quickly: maintain their position by any means necessary.
+	The Institute recommends that scientists use Paralyzant in order to keep the creature alive but motionless. However, more robust scientists have been known to use other tricks to avoid wasting Paralyzant. Remember that safety of the crew comes first!
+	Once the bar is full, a fresh fragment of DNA will drop out of the scanner. To read more about DNA and what it can do, enter "dna" into the nav bar.</entityname.thal_guidegen_scanner>
+	<thal_guidegen_scannerlabel>DNA HANDLING</thal_guidegen_scannerlabel>
+	<entityname.thal_guidegen_dna>ඞDNA HANDLING
+  
+	DNA is a delicate, valuable resource. It is naturally scarce (unless it comes with your submarine), and is difficult to obtain as it requires a live creature to be scanned. Most importantly, DNA erodes when not submerged in water, or when not in special cold storage containers. Damage/Erosion is irreversable; The condition of DNA can only ever worsen. Given long enough, all DNA will ineviteably erode completely.
+	DNA that has eroded completely will become corrupted. Corrupted DNA behaves erratically, and involuntary usage on subjects is considered unethical malpractice. Despite this, experimenting on willing test subjects is encouraged as many of its side effects are potentially beneficial.</entityname.thal_guidegen_dna>
 </infotexts>

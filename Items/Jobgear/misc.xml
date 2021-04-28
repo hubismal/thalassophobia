@@ -1,5 +1,91 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Items>
+	<!-- GUIDES -->
+	<Item name="" identifier="thal_guidegen" hideconditionbar="true" spritecolor="180,255,220,255" InventoryIconColor="180,255,220,255" category="Equipment" Tags="smallitem" cargocontaineridentifier="metalcrate" description="" scale="0.5" impactsoundtag="impact_soft" showcontentsintooltip="true">
+    <!--<PreferredContainer primary="medcab" minamount="1" maxamount="1" spawnprobability="1" />-->
+    <InventoryIcon texture="Content/Items/InventoryIconAtlas.png" sourcerect="897,449,63,63" origin="0.5,0.5" />
+    <Sprite texture="Content/Items/Medical/Medicines.png" sourcerect="223,69,38,70" depth="0.6" origin="0.5,0.5" />
+    <Body width="25" height="40" density="8" />
+    <Holdable slots="Any,RightHand+LeftHand" holdpos="57,-20" aimable="false" handle1="-25,32" handle2="-27,34" msg="ItemMsgPickUpSelect" >
+      <!-- page statuses -->
+      <!-- HELP/INTRO -->
+      <StatusEffect type="OnActive" target="Contained" >
+				<RequiredItems identifier="thal_guidegen_scanner,thal_guidegen_index,thal_guidegen_dna" type="Contained" />
+				<Conditional OriginalOutpost="help" targetcontainer="true" />
+				<RemoveItem />
+      </StatusEffect>
+      <StatusEffect type="OnActive" target="This" delay="0.1" >
+				<RequiredItems identifier="thal_guidegen_scanner,thal_guidegen_index,thal_guidegen_dna" type="Contained" />
+				<Conditional OriginalOutpost="help" />
+				<SpawnItem spawnposition="ThisInventory" identifier="thal_guidegen_intro" />
+      </StatusEffect>
+			<!-- INDEX -->
+      <StatusEffect type="OnActive" target="Contained" >
+				<RequiredItems identifier="thal_guidegen_scanner,thal_guidegen_intro,thal_guidegen_dna" type="Contained" />
+				<Conditional OriginalOutpost="index" targetcontainer="true" />
+				<RemoveItem />
+      </StatusEffect>
+      <StatusEffect type="OnActive" target="This" delay="0.1" >
+				<RequiredItems identifier="thal_guidegen_scanner,thal_guidegen_intro,thal_guidegen_dna" type="Contained" />
+				<Conditional OriginalOutpost="index" />
+				<SpawnItem spawnposition="ThisInventory" identifier="thal_guidegen_index" />
+      </StatusEffect>
+      <!-- SCANNER -->
+      <StatusEffect type="OnActive" target="Contained" >
+				<RequiredItems identifier="thal_guidegen_index,thal_guidegen_intro,thal_guidegen_dna" type="Contained" />
+				<Conditional OriginalOutpost="scanner" targetcontainer="true" />
+				<RemoveItem />
+      </StatusEffect>
+      <StatusEffect type="OnActive" target="This" delay="0.1" >
+				<RequiredItems identifier="thal_guidegen_index,thal_guidegen_intro,thal_guidegen_dna" type="Contained" />
+				<Conditional OriginalOutpost="scanner" />
+				<SpawnItem spawnposition="ThisInventory" identifier="thal_guidegen_scanner" />
+      </StatusEffect>
+      <!-- DNA -->
+      <StatusEffect type="OnActive" target="Contained" >
+				<RequiredItems identifier="thal_guidegen_index,thal_guidegen_intro,thal_guidegen_scanner" type="Contained" />
+				<Conditional OriginalOutpost="scanner" targetcontainer="true" />
+				<RemoveItem />
+      </StatusEffect>
+      <StatusEffect type="OnActive" target="This" delay="0.1" >
+				<RequiredItems identifier="thal_guidegen_index,thal_guidegen_intro,thal_guidegen_scanner" type="Contained" />
+				<Conditional OriginalOutpost="scanner" />
+				<SpawnItem spawnposition="ThisInventory" identifier="thal_guidegen_scanner" />
+      </StatusEffect>
+		</Holdable>
+    <ItemContainer capacity="1" hideitems="true" itempos="16,-15" canbeselected="true" containedspritedepth="0.56" drawhudwhenequipped="true" uilabel="apcbat" spawnwithid="thal_guidegen_intro" drawinventory="false" >
+      <ContainedStateIndicator texture="Content/UI/ContainerIndicators.png" sourcerect="0,157,1,1" />
+      <CustomInterface canbeselected="true" drawhudwhenequipped="true" msg="ItemMsgWriteSelectPen" uilabel="apcbat" >
+        <GuiFrame relativesize="0.50,0.10" anchor="Bottom" absoluteoffset="20,20" style="ItemUI" uilabel="apcbat" />
+        <TextBox text="guidebookinstruction" propertyname="OriginalOutpost"></TextBox>
+      </CustomInterface>
+      <CustomInterface canbeselected="false" drawhudwhenequipped="true">
+      <GuiFrame relativesize="0.15,0.5" anchor="TopRight" absoluteoffset="20,20" style="ItemUI" color="0,0,0,0" />
+      <Button text="help">
+        <StatusEffect type="OnUse" targettype="This" OriginalOutpost="help" />
+      </Button>
+      <Button text="index">
+        <StatusEffect type="OnUse" targettype="This" OriginalOutpost="index" />
+      </Button>
+      <Button text="scanner">
+        <StatusEffect type="OnUse" targettype="This" OriginalOutpost="scanner" />
+      </Button>
+      <Button text="dna">
+        <StatusEffect type="OnUse" targettype="This" OriginalOutpost="dna" />
+      </Button>
+    </CustomInterface>
+    </ItemContainer>
+  </Item>
+  <!-- pages -->
+  <Item name="" identifier="thal_guidegen_intro" Tags="smallitem" hideinmenus="true">
+    <Sprite texture="Content/Items/Medical/Medicines.png" sourcerect="223,69,38,70" depth="0.6" origin="0.5,0.5" />
+  </Item>
+  <Item name="" identifier="thal_guidegen_index" Tags="smallitem" hideinmenus="true">
+    <Sprite texture="Content/Items/Medical/Medicines.png" sourcerect="223,69,38,70" depth="0.6" origin="0.5,0.5" />
+  </Item>
+  <Item name="" identifier="thal_guidegen_scanner" Tags="smallitem" hideinmenus="true">
+    <Sprite texture="Content/Items/Medical/Medicines.png" sourcerect="223,69,38,70" depth="0.6" origin="0.5,0.5" />
+  </Item>
 	<!--
 	TODO:
 	Rework this into a vanilla headset override that gives channels depending on the clothes you wear/afflictions (ie husk, medics, team captains, clowns)
