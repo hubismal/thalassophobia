@@ -135,4 +135,60 @@
       </StatusEffect>
     </ItemContainer>
   </Item>
+  <Item name="Multipurpose Loadable Turret" 
+        description="Accepts Syringes, Revolver Ammunition, Harpoons, Grenades"
+        identifier="thal_minicoilgun" Tags="turret" category="Machine" interactthroughwalls="true" Scale="0.3" interactdistance="101" spritecolor="1.0,1.0,1.0,1.0" focusonselected="true" offsetonselected="250" linkable="true" allowedlinks="coilgunequipment">
+    <Sprite texture="Content/Items/Weapons/Turrets.png" depth="0.01" sourcerect="768,0,256,256" canflipy="false" />
+    <Body width="80" radius="80" />
+    <Turret canbeselected="false" characterusable="false" linkable="true" barrelpos="128,88" rotationlimits="0,360" powerconsumption="0.0" showchargeindicator="true" showprojectileindicator="true" recoildistance="90" reload="4" springstiffnesslowskill="1.3" springstiffnesshighskill="50" springdampinglowskill="0.5" springdampinghighskill="10" rotationspeedlowskill="1" rotationspeedhighskill="8">
+			<sound file="Mods/Thalassophobia/Items/Electricity/Medturret1.ogg" range="1000" type="OnUse" />
+			<sound file="Mods/Thalassophobia/Items/Electricity/Medturret2.ogg" range="1000" type="OnUse" />
+			<sound file="Mods/Thalassophobia/Items/Electricity/Medturret3.ogg" range="1000" type="OnUse" />
+      <RailSprite texture="Content/Items/Weapons/Turrets.png" depth="0.011" sourcerect="904,256,120,287" origin="0.64, 0.7" />
+      <BarrelSprite texture="Content/Items/Weapons/Turrets.png" depth="0.012" sourcerect="779,256,125,333" origin="0.6, 0.8" />
+      <Crosshair texture="Content/Items/Weapons/Crosshairs.png" sourcerect="256,0,256,256" />
+      <CrosshairPointer texture="Content/Items/Weapons/Crosshairs.png" sourcerect="0,0,256,256" />
+      <MoveSound file="Mods/Thalassophobia/Items/Electricity/MedturretTurn.ogg" />
+      <StartMoveSound file="Mods/Thalassophobia/Items/Electricity/MedturretTurn.ogg" />
+      <EndMoveSound file="Mods/Thalassophobia/Items/Electricity/MedturretStop.ogg" />
+      <RequiredSkill identifier="electrical" level="40" />
+			<LightComponent LightColor="0.5,0.8,0.8,0.8" range="500" powerconsumption="0" allowingameediting="false" IsOn="false" ignorecontinuoustoggle="true" >
+        <LightTexture texture="Content/Lights/lightcone.png" origin="0.0, 0.5" size="1.0,1.0" />
+			</LightComponent>
+      <StatusEffect type="OnUse" target="This">
+        <Explosion range="500.0" structuredamage="0" force="0.01" camerashake="9.0" flames="false" flash="false" smoke="false" sparks="false" underwaterbubble="false" />
+      </StatusEffect>
+      <StatusEffect type="OnUse" target="This">
+				<RequiredItem items="revolverammmo" type="Contained" />
+				<Sound file="Content/Items/Weapons/Revolver1.ogg" type="OnUse" range="3000" selectionmode="Random" />
+				<Sound file="Content/Items/Weapons/Revolver2.ogg" type="OnUse" range="3000" />
+				<Sound file="Content/Items/Weapons/Revolver3.ogg" type="OnUse" range="3000" />
+      </StatusEffect>
+    </Turret>
+    <aitarget maxsightrange="3000" maxsoundrange="8000" fadeouttime="5" />
+    <ConnectionPanel selectkey="Action" canbeselected="true" msg="ItemMsgRewireScrewdriver" hudpriority="10">
+      <GuiFrame relativesize="0.2,0.32" minsize="400,350" maxsize="480,420" anchor="Center" style="ConnectionPanel" />
+      <RequiredItem items="screwdriver" type="Equipped" />
+      <input name="position_in" displayname="connection.turretaimingin" />
+      <input name="activate" displayname="connection.turrettriggerin">
+        <StatusEffect type="OnUse" target="This">
+          <Use />
+        </StatusEffect>
+      </input>
+      <input name="toggle" displayname="connection.togglestate" />
+      <input name="set_state" displayname="connection.setstate" />
+    </ConnectionPanel>
+    <ItemContainer capacity="1" maxstacksize="3" itempos="0,10" hideitems="false" containedstateindicatorstyle="syringe" canbeselected="true" >
+			
+			<StatusEffect type="OnUse" target="This">
+				<RequiredItem items="syringe" type="Contained" />
+				<!--<sound file="Mods/Thalassophobia/Items/Electricity/Medturret1.ogg" range="900" />-->
+			</StatusEffect>
+      <GuiFrame relativesize="0.2,0.25" anchor="Center" minsize="140,170" maxsize="280,280" style="ItemUI" />
+      <Containable items="syringe,revolverammo,harpoonammo,grenade,shotgunammo,stungunammo" />
+    </ItemContainer>
+    <Holdable selectkey="Select" pickkey="Use" slots="Any,RightHand,LeftHand" msg="ItemMsgDetachWrench" PickingTime="10.0" aimpos="35,-10" handle1="0,0" attachable="true" attachedbydefault="true" aimable="true">
+      <requireditem identifier="wrench" type="Equipped" />
+    </Holdable>
+  </Item>
 </Items>
