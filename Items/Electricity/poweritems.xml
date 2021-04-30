@@ -39,7 +39,7 @@
       <output name="signal_2" displayname="connection.signalx~[num]=2" fallbackdisplayname="connection.signalinx~[num]=2" />
       <output name="signal_3" displayname="connection.signalx~[num]=3" fallbackdisplayname="connection.signalinx~[num]=3" />
     </ConnectionPanel>
-    <Repairable selectkey="Action" header="electricalrepairsheader" deteriorationspeed="0.1" mindeteriorationdelay="120" maxdeteriorationdelay="720" mindeteriorationcondition="0" RepairThreshold="80" fixDurationHighSkill="5" fixDurationLowSkill="25" msg="ItemMsgRepairScrewdriver" hudpriority="10">
+    <Repairable selectkey="Action" header="electricalrepairsheader" deteriorationspeed="0.0" mindeteriorationdelay="120" maxdeteriorationdelay="720" mindeteriorationcondition="0" RepairThreshold="80" fixDurationHighSkill="5" fixDurationLowSkill="25" msg="ItemMsgRepairScrewdriver" hudpriority="10">
       <GuiFrame relativesize="0.2,0.16" minsize="400,180" maxsize="480,216" anchor="Center" relativeoffset="0.0,0.27" style="ItemUI" />
       <RequiredSkill identifier="electrical" level="20" />
       <RequiredItem items="screwdriver" type="Equipped" />
@@ -135,59 +135,63 @@
       </StatusEffect>
     </ItemContainer>
   </Item>
-  <Item name="Multipurpose Loadable Turret" 
-        description="Accepts Syringes, Revolver Ammunition, Harpoons, Grenades"
-        identifier="thal_minicoilgun" Tags="turret" category="Machine" interactthroughwalls="true" Scale="0.3" interactdistance="101" spritecolor="1.0,1.0,1.0,1.0" focusonselected="true" offsetonselected="250" linkable="true" allowedlinks="coilgunequipment">
-    <Sprite texture="Content/Items/Weapons/Turrets.png" depth="0.01" sourcerect="768,0,256,256" canflipy="false" />
+  <!-- MULTILOADABLE TURRET (MLT) -->
+  <Item name="Slingshot Turret" description="Accepts Syringes, Revolver Ammunition, Harpoons, Grenades" identifier="thal_minicoilgun" Tags="turret" category="Machine" interactthroughwalls="true" Scale="0.4" interactdistance="50" spritecolor="1.0,1.0,1.0,1.0" focusonselected="true" offsetonselected="250" canflipx="false" linkable="true" allowedlinks="coilgunequipment">
+    <Sprite texture="Mods/Thalassophobia/Items/Electricity/Turrets.png" depth="0.01" sourcerect="782,4,255,184" canflipy="false" origin="0.48498476,0.4605797" />
     <Body width="80" radius="80" />
-    <Turret canbeselected="false" characterusable="false" linkable="true" barrelpos="128,88" rotationlimits="0,360" powerconsumption="0.0" showchargeindicator="true" showprojectileindicator="true" recoildistance="90" reload="4" springstiffnesslowskill="1.3" springstiffnesshighskill="50" springdampinglowskill="0.5" springdampinghighskill="10" rotationspeedlowskill="1" rotationspeedhighskill="8">
-			<sound file="Mods/Thalassophobia/Items/Electricity/Medturret1.ogg" range="1000" type="OnUse" />
-			<sound file="Mods/Thalassophobia/Items/Electricity/Medturret2.ogg" range="1000" type="OnUse" />
-			<sound file="Mods/Thalassophobia/Items/Electricity/Medturret3.ogg" range="1000" type="OnUse" />
-      <RailSprite texture="Content/Items/Weapons/Turrets.png" depth="0.011" sourcerect="904,256,120,287" origin="0.64, 0.7" />
-      <BarrelSprite texture="Content/Items/Weapons/Turrets.png" depth="0.012" sourcerect="779,256,125,333" origin="0.6, 0.8" />
+    <Repairable selectkey="Action" header="electricalrepairsheader" deteriorationspeed="0.0" mindeteriorationdelay="120" maxdeteriorationdelay="720" mindeteriorationcondition="0" RepairThreshold="80" fixDurationHighSkill="4" fixDurationLowSkill="25" msg="ItemMsgRepairScrewdriver" hudpriority="10">
+      <GuiFrame relativesize="0.2,0.16" minsize="400,180" maxsize="480,216" anchor="Center" relativeoffset="0.0,0.27" style="ItemUI" />
+      <RequiredSkill identifier="electrical" level="30" />
+      <RequiredItem items="screwdriver" type="Equipped" />
+      <StatusEffect type="OnFailure" target="Character" targetlimbs="LeftHand,RightHand">
+        <Sound file="Content/Sounds/Damage/Electrocution1.ogg" range="1000" />
+        <Affliction identifier="stun" strength="5" />
+        <Affliction identifier="burn" strength="5" />
+      </StatusEffect>
+      <ParticleEmitter particle="damagebubbles" particleburstamount="2" particleburstinterval="2.0" particlespersecond="2" scalemin="0.5" scalemax="1.5" anglemin="0" anglemax="359" velocitymin="-10" velocitymax="10" mincondition="0.0" maxcondition="50.0" />
+      <ParticleEmitter particle="spark" particleburstamount="5" particlespersecond="5" anglemin="0" anglemax="359" velocitymin="100" velocitymax="500" particleburstinterval="2" scalemin="0.5" scalemax="1" mincondition="0.0" maxcondition="15.0" />
+      <ParticleEmitter particle="fleshsmoke" particlespersecond="2" scalemin="1" scalemax="2" mincondition="0.0" maxcondition="50.0" />
+    </Repairable>
+    <Turret canbeselected="false" characterusable="false" linkable="true" barrelpos="208,88" rotationlimits="0,360" powerconsumption="0.0" showchargeindicator="true" showprojectileindicator="true" recoildistance="110" reload="4" springstiffnesslowskill="45" springstiffnesshighskill="50" springdampinglowskill="8" springdampinghighskill="10" rotationspeedlowskill="6" rotationspeedhighskill="8">
+      <sound file="Mods/Thalassophobia/Items/Electricity/Medturret1.ogg" range="1000" type="OnUse" />
+      <sound file="Mods/Thalassophobia/Items/Electricity/Medturret2.ogg" range="1000" type="OnUse" />
+      <sound file="Mods/Thalassophobia/Items/Electricity/Medturret3.ogg" range="1000" type="OnUse" />
+      <RailSprite texture="Mods/Thalassophobia/Items/Electricity/Turrets.png" depth="0.011" sourcerect="910,256,140,305" origin="0.6058086,0.66460675" />
+      <BarrelSprite texture="Mods/Thalassophobia/Items/Electricity/Turrets.png" depth="0.012" sourcerect="778,184,137,450" origin="0.51795185,0.74352455" />
       <Crosshair texture="Content/Items/Weapons/Crosshairs.png" sourcerect="256,0,256,256" />
       <CrosshairPointer texture="Content/Items/Weapons/Crosshairs.png" sourcerect="0,0,256,256" />
       <MoveSound file="Mods/Thalassophobia/Items/Electricity/MedturretTurn.ogg" />
       <StartMoveSound file="Mods/Thalassophobia/Items/Electricity/MedturretTurn.ogg" />
       <EndMoveSound file="Mods/Thalassophobia/Items/Electricity/MedturretStop.ogg" />
       <RequiredSkill identifier="electrical" level="40" />
-			<LightComponent LightColor="0.5,0.8,0.8,0.8" range="500" powerconsumption="0" allowingameediting="false" IsOn="false" ignorecontinuoustoggle="true" >
+      <LightComponent LightColor="200,180,100,160" range="500" powerconsumption="0" allowingameediting="false" IsOn="false" ignorecontinuoustoggle="true">
         <LightTexture texture="Content/Lights/lightcone.png" origin="0.0, 0.5" size="1.0,1.0" />
-			</LightComponent>
-      <StatusEffect type="OnUse" target="This">
-        <Explosion range="500.0" structuredamage="0" force="0.01" camerashake="9.0" flames="false" flash="false" smoke="false" sparks="false" underwaterbubble="false" />
-      </StatusEffect>
-      <StatusEffect type="OnUse" target="This">
-				<RequiredItem items="revolverammmo" type="Contained" />
-				<Sound file="Content/Items/Weapons/Revolver1.ogg" type="OnUse" range="3000" selectionmode="Random" />
-				<Sound file="Content/Items/Weapons/Revolver2.ogg" type="OnUse" range="3000" />
-				<Sound file="Content/Items/Weapons/Revolver3.ogg" type="OnUse" range="3000" />
+        
+      </LightComponent>
+      <StatusEffect type="OnUse" target="This" Condition="-5" >
+        <Explosion range="400.0" structuredamage="0" force="0.01" camerashake="9.0" flames="false" flash="true" smoke="false" sparks="false" underwaterbubble="false" />
       </StatusEffect>
     </Turret>
     <aitarget maxsightrange="3000" maxsoundrange="8000" fadeouttime="5" />
     <ConnectionPanel selectkey="Action" canbeselected="true" msg="ItemMsgRewireScrewdriver" hudpriority="10">
-      <GuiFrame relativesize="0.2,0.32" minsize="400,350" maxsize="480,420" anchor="Center" style="ConnectionPanel" />
+      <GuiFrame relativesize="0.3,0.32" minsize="400,350" maxsize="480,420" anchor="Center" style="ConnectionPanel" />
       <RequiredItem items="screwdriver" type="Equipped" />
       <input name="position_in" displayname="connection.turretaimingin" />
       <input name="activate" displayname="connection.turrettriggerin">
         <StatusEffect type="OnUse" target="This">
+					<Conditional Condition="gt 1" />
           <Use />
         </StatusEffect>
       </input>
       <input name="toggle" displayname="connection.togglestate" />
       <input name="set_state" displayname="connection.setstate" />
     </ConnectionPanel>
-    <ItemContainer capacity="1" maxstacksize="3" itempos="0,10" hideitems="false" containedstateindicatorstyle="syringe" canbeselected="true" >
-			
-			<StatusEffect type="OnUse" target="This">
-				<RequiredItem items="syringe" type="Contained" />
-				<!--<sound file="Mods/Thalassophobia/Items/Electricity/Medturret1.ogg" range="900" />-->
-			</StatusEffect>
+    <ItemContainer capacity="1" maxstacksize="3" itempos="127,-90" hideitems="false" containedstateindicatorstyle="syringe" canbeselected="true">
+			<RequiredItem items="wrench" type="Equipped" />
       <GuiFrame relativesize="0.2,0.25" anchor="Center" minsize="140,170" maxsize="280,280" style="ItemUI" />
       <Containable items="syringe,revolverammo,harpoonammo,grenade,shotgunammo,stungunammo" />
     </ItemContainer>
-    <Holdable selectkey="Select" pickkey="Use" slots="Any,RightHand,LeftHand" msg="ItemMsgDetachWrench" PickingTime="10.0" aimpos="35,-10" handle1="0,0" attachable="true" attachedbydefault="true" aimable="true">
+    <Holdable selectkey="Select" pickkey="Use" slots="RightHand+LeftHand" msg="ItemMsgDetachWrench" PickingTime="10.0" holdpos="35,-10" handle1="0,0" attachable="true" attachedbydefault="true" aimable="true">
       <requireditem identifier="wrench" type="Equipped" />
     </Holdable>
   </Item>
