@@ -1,5 +1,89 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Items>
+  <Item name="" description="" identifier="thal_controlpanel" tags="periscope" category="Machine" type="Controller" disableitemusagewhenselected="true" scale="0.5" isshootable="true" requireaimtouse="false" requireaimtosecondaryuse="false">
+    <Sprite name="Control Panel" texture="Turrets.png" depth="0.8" sourcerect="3,637,176,215" origin="0.5,0.5" />
+    <Body height="172" width="106" density="50" />
+    <Controller direction="Right" selectkey="Select" canbeselected="true" msg="ItemMsgPeriscopeWrench">
+      <requireditem identifier="wrench" type="Equipped" />
+      <limbposition limb="LeftHand" position="67,-140" />
+      <limbposition limb="RightHand" position="67,-140" />
+      <StatusEffect type="OnActive" target="This">
+        <Sound file="Mods/Thalassophobia/Items/Electricity/static.ogg" range="1000" dontmuffle="true" loop="true" />
+      </StatusEffect>
+    </Controller>
+    <StatusHUD drawhudwhenequipped="false" canbeselected="true" selectkey="Select" range="0" fadeoutrange="0">
+      <requireditem identifier="wrench" type="Equipped" />
+		</StatusHUD>
+    <ItemLabel scrollable="true" padding="27,-120,13,20" textcolor="1,1,1,0.9" textscale="0.9" >
+      <LightComponent range="10.0" lightcolor="0.5,1.0,0.4,0.1" IsOn="true" castshadows="false" allowingameediting="false">
+        <sprite name="Panel Backlight" texture="Mods/Thalassophobia/Items/Electricity/Turrets.png" sourcerect="20,849,148,107" depth="0.025" origin="0.48,0.9" scale="0.9,0.9" alpha="1.0" />
+      </LightComponent>
+    </ItemLabel>
+    <Holdable selectkey="Select" pickkey="Use" slots="Any,RightHand+LeftHand" msg="ItemMsgDetachWrench" PickingTime="5.0" holdpos="65,0" handle1="-40,0" handle2="-40,0" attachable="true" attachedbydefault="true" aimable="true">
+      <requireditem identifier="wrench" type="Equipped" />
+      <StatusEffect type="OnUse" target="This">
+        <Sound file="Mods/Thalassophobia/Items/Electricity/boltsup.ogg" range="1000" loop="false" dontmuffle="true" />
+      </StatusEffect>
+      <StatusEffect type="OnPicked" target="This" text="">
+        <Sound file="Mods/Thalassophobia/Items/Electricity/boltsdown.ogg" range="1000" loop="false" dontmuffle="true" />
+      </StatusEffect>
+    </Holdable>
+    <MemoryComponent canbeselected="false" allowingameediting="false" />
+    <CustomInterface allowuioverlap="true" canbeselected="true" selectkey="Select">
+      <GuiFrame relativesize="0.4,0.7" anchor="Center" relativeoffset="0,0" style="InnerFrame" color="0,0,0,160" />
+      <RequiredItem items="screwdriver" type="Equipped" />
+      <StatusEffect type="OnActive" target="This">
+        <Sound file="Mods/Thalassophobia/Items/Electricity/boltsdown.ogg" range="3000" dontmuffle="true" />
+      </StatusEffect>
+    </CustomInterface>
+    <CustomInterface allowuioverlap="true" canbeselected="true" selectkey="Select" msg="ItemMsgPanelScrewdriver">
+      <RequiredItem items="screwdriver" type="Equipped" />
+      <GuiFrame relativesize="0.35,0.10" anchor="Center" relativeoffset="0.0,0.2" style="ItemUI" color="255,0,0,0" textcolor="255,0,0,255" />
+      <TextBox text="conttext" propertyname="Value">
+        <StatusEffect type="OnUse" target="This">
+          <Sound file="Mods/Thalassophobia/Items/Electricity/boltsdown.ogg" range="200" />
+        </StatusEffect>
+      </TextBox>
+    </CustomInterface>
+    <CustomInterface allowuioverlap="true" canbeselected="true" selectkey="Select">
+      <GuiFrame relativesize="0.35,0.32" anchor="Center" relativeoffset="0,-0.2" style="ItemUI" color="20,255,20,0" />
+      <RequiredItem items="screwdriver" type="Equipped" />
+      <Button text="buttonpulse1" connection="signal_out1">
+        <StatusEffect type="OnUse" target="This">
+          <Sound file="Mods/Thalassophobia/Items/Electricity/multitool_pulse.ogg" range="900" />
+        </StatusEffect>
+      </Button>
+      <Button text="buttonpulse2" connection="signal_out2">
+        <StatusEffect type="OnUse" target="This">
+          <Sound file="Mods/Thalassophobia/Items/Electricity/multitool_pulse.ogg" range="900" />
+        </StatusEffect>
+      </Button>
+      <Button text="buttonpulse3" connection="signal_out3">
+        <StatusEffect type="OnUse" target="This">
+          <Sound file="Mods/Thalassophobia/Items/Electricity/multitool_pulse.ogg" range="900" />
+        </StatusEffect>
+      </Button>
+    </CustomInterface>
+    <CustomInterface allowuioverlap="true" canbeselected="true" selectkey="Select">
+      <GuiFrame relativesize="0.35,0.12" anchor="Center" relativeoffset="0,0" style="ItemUI" color="20,255,20,0" />
+      <RequiredItem items="screwdriver" type="Equipped" />
+      <TickBox text="switchcont1" connection="signal_out4" />
+      <TickBox text="switchcont2" connection="signal_out5" />
+    </CustomInterface>
+    <ConnectionPanel selectkey="Action" canbeselected="true" msg="ItemMsgRewireScrewdriver" hudpriority="10">
+      <GuiFrame relativesize="0.2,0.32" minsize="400,350" maxsize="480,420" anchor="Center" style="ConnectionPanel" />
+      <RequiredItem items="screwdriver" type="Equipped" />
+      <input name="set_text" displayname="connection.set_text" fallbackdisplayname="connection.setoutput" />
+      <output name="position_out" displayname="connection.turretaimingout" fallbackdisplayname="inputtype.aim" />
+      <output name="trigger_out" displayname="connection.turrettriggerout" fallbackdisplayname="inputtype.shoot" />
+      <output name="signal_out1" displayname="connection.pulsesignaloutx~[num]=1" />
+      <output name="signal_out2" displayname="connection.pulsesignaloutx~[num]=2" />
+      <output name="signal_out3" displayname="connection.pulsesignaloutx~[num]=3" />
+      <output name="signal_out4" displayname="connection.contsignaloutx~[num]=1" />
+      <output name="signal_out5" displayname="connection.contsignaloutx~[num]=2" />
+      <output name="signal_out" displayname="connection.textout" />
+    </ConnectionPanel>
+  </Item>
   <Item name="" identifier="thal_attachablejunction" tags="junctionbox" category="Electrical" description="" scale="0.5" allowedlinks="gap,door" linkable="true" damagedbyexplosions="true" explosiondamagemultiplier="0.2">
     <Upgrade gameversion="0.10.0.0" scale="*0.667" />
     <Body height="172" width="106" density="50" />
@@ -135,9 +219,9 @@
       </StatusEffect>
     </ItemContainer>
   </Item>
-  <!-- MULTILOADABLE TURRET (MLT) -->
-  <Item name="Slingshot Turret" description="Accepts Syringes, Revolver Ammunition, Harpoons, Grenades" identifier="thal_minicoilgun" Tags="turret" category="Machine" interactthroughwalls="true" Scale="0.4" interactdistance="50" spritecolor="1.0,1.0,1.0,1.0" focusonselected="true" offsetonselected="250" canflipx="false" linkable="true" allowedlinks="coilgunequipment">
-    <Sprite texture="Mods/Thalassophobia/Items/Electricity/Turrets.png" depth="0.01" sourcerect="782,4,255,184" canflipy="false" origin="0.48498476,0.4605797" />
+  <!-- SLINGSHOT TURRET -->
+  <Item name="" description="" identifier="thal_minicoilgun" Tags="turret" category="Machine" interactthroughwalls="true" Scale="0.4" interactdistance="100" spritecolor="1.0,1.0,1.0,1.0" focusonselected="true" offsetonselected="250" canflipx="false" linkable="true" allowedlinks="coilgunequipment">
+    <Sprite texture="Mods/Thalassophobia/Items/Electricity/Turrets.png" depth="0.01" sourcerect="0,4,216,187" canflipy="false" origin="0.00,0.44890583" />
     <Body width="80" radius="80" />
     <Repairable selectkey="Action" header="electricalrepairsheader" deteriorationspeed="0.0" mindeteriorationdelay="120" maxdeteriorationdelay="720" mindeteriorationcondition="0" RepairThreshold="80" fixDurationHighSkill="4" fixDurationLowSkill="25" msg="ItemMsgRepairScrewdriver" hudpriority="10">
       <GuiFrame relativesize="0.2,0.16" minsize="400,180" maxsize="480,216" anchor="Center" relativeoffset="0.0,0.27" style="ItemUI" />
@@ -156,8 +240,8 @@
       <sound file="Mods/Thalassophobia/Items/Electricity/Medturret1.ogg" range="1000" type="OnUse" />
       <sound file="Mods/Thalassophobia/Items/Electricity/Medturret2.ogg" range="1000" type="OnUse" />
       <sound file="Mods/Thalassophobia/Items/Electricity/Medturret3.ogg" range="1000" type="OnUse" />
-      <RailSprite texture="Mods/Thalassophobia/Items/Electricity/Turrets.png" depth="0.011" sourcerect="910,256,140,305" origin="0.6058086,0.66460675" />
-      <BarrelSprite texture="Mods/Thalassophobia/Items/Electricity/Turrets.png" depth="0.012" sourcerect="778,184,137,450" origin="0.51795185,0.74352455" />
+      <RailSprite texture="Mods/Thalassophobia/Items/Electricity/Turrets.png" depth="0.011" sourcerect="110,256,140,305" origin="0.6058086,0.66460675" />
+      <BarrelSprite texture="Mods/Thalassophobia/Items/Electricity/Turrets.png" depth="0.012" sourcerect="0,184,113,450" origin="0.42,0.74" />
       <Crosshair texture="Content/Items/Weapons/Crosshairs.png" sourcerect="256,0,256,256" />
       <CrosshairPointer texture="Content/Items/Weapons/Crosshairs.png" sourcerect="0,0,256,256" />
       <MoveSound file="Mods/Thalassophobia/Items/Electricity/MedturretTurn.ogg" />
@@ -166,9 +250,9 @@
       <RequiredSkill identifier="electrical" level="40" />
       <LightComponent LightColor="200,180,100,160" range="500" powerconsumption="0" allowingameediting="false" IsOn="false" ignorecontinuoustoggle="true">
         <LightTexture texture="Content/Lights/lightcone.png" origin="0.0, 0.5" size="1.0,1.0" />
-        
+        <Sprite texture="Mods/Thalassophobia/Items/Electricity/Turrets.png" depth="0.012" sourcerect="0,184,137,450" origin="0.42," />
       </LightComponent>
-      <StatusEffect type="OnUse" target="This" Condition="-5" >
+      <StatusEffect type="OnUse" target="This" Condition="-5">
         <Explosion range="400.0" structuredamage="0" force="0.01" camerashake="9.0" flames="false" flash="true" smoke="false" sparks="false" underwaterbubble="false" />
       </StatusEffect>
     </Turret>
@@ -179,15 +263,15 @@
       <input name="position_in" displayname="connection.turretaimingin" />
       <input name="activate" displayname="connection.turrettriggerin">
         <StatusEffect type="OnUse" target="This">
-					<Conditional Condition="gt 1" />
+          <Conditional Condition="gt 1" />
           <Use />
         </StatusEffect>
       </input>
       <input name="toggle" displayname="connection.togglestate" />
       <input name="set_state" displayname="connection.setstate" />
     </ConnectionPanel>
-    <ItemContainer capacity="1" maxstacksize="3" itempos="127,-90" hideitems="false" containedstateindicatorstyle="syringe" canbeselected="true">
-			<RequiredItem items="wrench" type="Equipped" />
+    <ItemContainer capacity="1" maxstacksize="3" itempos="210,-90" hideitems="false" containedstateindicatorstyle="syringe" canbeselected="true">
+      <RequiredItem items="wrench" type="Equipped" />
       <GuiFrame relativesize="0.2,0.25" anchor="Center" minsize="140,170" maxsize="280,280" style="ItemUI" />
       <Containable items="syringe,revolverammo,harpoonammo,grenade,shotgunammo,stungunammo" />
     </ItemContainer>

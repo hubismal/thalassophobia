@@ -451,6 +451,24 @@
   <entityname.emcannon>Electromagnetic Loader</entityname.emcannon>
   <entitydescription.emcannon>Used for loading charges into EM Cannon.</entitydescription.emcannon>
   
+  <entityname.thal_minicoilgun>Slingshot Turret</entityname.thal_minicoilgun>
+  <entitydescription.thal_minicoilgun>An attachable/detachable turret that can be loaded with most projectile ammo that goes into handheld weapons (syringes, shotgun shells, 40mm grenades, etc). Requires no power but has a somewhat long reload time, 3 shots max, and requires a wrench to reload. Pairs well with a Multipanel.</entitydescription.thal_minicoilgun>
+  <uilabel.minicoilgun>Load Syringes or Ammunition for Handheld Weapons</uilabel.minicoilgun>
+  
+  <entityname.thal_controlpanel>Multipanel</entityname.thal_controlpanel>
+  <entitydescription.thal_controlpanel>Attachable control panel with 3 signal pulse buttons, 2 constant 1/0 switches, and one string signal text input. Used for portable wiring debugging, or more nefariously, for signal hacking.</entitydescription.thal_controlpanel>
+  <ItemMsgPeriscopeWrench>[[select]] Aim Wired Cameras/Turrets (Wrench)</ItemMsgPeriscopeWrench>
+  <ItemMsgPanelScrewdriver>[[select]] Hack (Screwdriver)</ItemMsgPanelScrewdriver>
+  <ButtonPulse1>pulse: signal_out_1</ButtonPulse1>
+  <ButtonPulse2>pulse: signal_out_2</ButtonPulse2>
+  <ButtonPulse3>pulse: signal_out_3</ButtonPulse3>
+  <SwitchCont1>Switch On/Off: cont_signal_out_1</SwitchCont1>
+  <SwitchCont2>Switch On/Off: cont_signal_out_2</SwitchCont2>
+  <ContText>Continuous Text Signal: text_out</ContText>
+  <connection.pulsesignaloutx>pulse_signal_out_[num]</connection.pulsesignaloutx>
+  <connection.contsignaloutx>cont_signal_out_[num]</connection.contsignaloutx>
+  <connection.textout>text_out</connection.textout>
+  
   <entityname.thal_apc>Area Power Controller</entityname.thal_apc>
   <entitydescription.thal_apc>Device serving as a junction box with a built in circuit breaker that also maintains a charge like a battery. Intended for power control interface for a single room; A "player friendly" relay with minor backup power to keep the lights for a little longer on once external power goes out. Can be manually loaded with batteries to recharge.</entitydescription.thal_apc>
   
