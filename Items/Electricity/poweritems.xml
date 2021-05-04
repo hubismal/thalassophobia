@@ -1,20 +1,40 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Items>
+	<!-- ATTACHABLE CAMERA -->
+  <Item name="" identifier="thal_attachablecamera" category="Electrical" Tags="smallitem,camera" focusonselected="true" offsetonselected="400" cargocontaineridentifier="metalcrate" description="" Scale="0.6">
+    <Body height="172" width="215" density="50" />
+    <Sprite texture="Turrets.png" depth="0.8" sourcerect="175,953,70,73" origin="0.5,0.5" />
+    <ConnectionPanel selectkey="Action" canbeselected="true" msg="ItemMsgRewireScrewdriver" hudpriority="10">
+      <GuiFrame relativesize="0.2,0.32" minsize="400,350" maxsize="480,420" anchor="Center" style="ConnectionPanel" />
+      <RequiredItem items="screwdriver" type="Equipped" />
+      <input name="control_in" displayname="connection.controlin" />
+    </ConnectionPanel>
+    <Holdable selectkey="Select" pickkey="Use" slots="Any,RightHand+LeftHand" msg="ItemMsgDetachWrench" PickingTime="5.0" holdpos="65,0" handle1="-40,0" handle2="-40,0" attachable="true" attachedbydefault="true" aimable="true">
+      <requireditem identifier="wrench" type="Equipped" />
+      <StatusEffect type="OnUse" target="This">
+        <Sound file="Mods/Thalassophobia/Items/Electricity/boltsup.ogg" range="1000" loop="false" dontmuffle="true" />
+      </StatusEffect>
+      <StatusEffect type="OnPicked" target="This" text="">
+        <Sound file="Mods/Thalassophobia/Items/Electricity/boltsdown.ogg" range="1000" loop="false" dontmuffle="true" />
+      </StatusEffect>
+    </Holdable>
+  </Item>
+  <!-- MULTIPANEL -->
   <Item name="" description="" identifier="thal_controlpanel" tags="periscope" category="Machine" type="Controller" disableitemusagewhenselected="true" scale="0.5" isshootable="true" requireaimtouse="false" requireaimtosecondaryuse="false">
     <Sprite name="Control Panel" texture="Turrets.png" depth="0.8" sourcerect="3,637,176,215" origin="0.5,0.5" />
-    <Body height="172" width="106" density="50" />
+    <Body height="172" width="215" density="50" />
     <Controller direction="Right" selectkey="Select" canbeselected="true" msg="ItemMsgPeriscopeWrench">
       <requireditem identifier="wrench" type="Equipped" />
       <limbposition limb="LeftHand" position="67,-140" />
       <limbposition limb="RightHand" position="67,-140" />
       <StatusEffect type="OnActive" target="This">
-        <Sound file="Mods/Thalassophobia/Items/Electricity/static.ogg" range="1000" dontmuffle="true" loop="true" />
+        <Sound file="Mods/Thalassophobia/Items/Electricity/hackstatic.ogg" range="1000" dontmuffle="true" loop="true" />
       </StatusEffect>
     </Controller>
     <StatusHUD drawhudwhenequipped="false" canbeselected="true" selectkey="Select" range="0" fadeoutrange="0">
       <requireditem identifier="wrench" type="Equipped" />
-		</StatusHUD>
-    <ItemLabel scrollable="true" padding="27,-120,13,20" textcolor="1,1,1,0.9" textscale="0.9" >
+    </StatusHUD>
+    <ItemLabel scrollable="true" padding="27,-120,13,20" textcolor="1,1,1,0.9" textscale="0.9">
       <LightComponent range="10.0" lightcolor="0.5,1.0,0.4,0.1" IsOn="true" castshadows="false" allowingameediting="false">
         <sprite name="Panel Backlight" texture="Mods/Thalassophobia/Items/Electricity/Turrets.png" sourcerect="20,849,148,107" depth="0.025" origin="0.48,0.9" scale="0.9,0.9" alpha="1.0" />
       </LightComponent>
@@ -222,7 +242,7 @@
   <!-- SLINGSHOT TURRET -->
   <Item name="" description="" identifier="thal_minicoilgun" Tags="turret" category="Machine" interactthroughwalls="true" Scale="0.4" interactdistance="100" spritecolor="1.0,1.0,1.0,1.0" focusonselected="true" offsetonselected="250" canflipx="false" linkable="true" allowedlinks="coilgunequipment">
     <Sprite texture="Mods/Thalassophobia/Items/Electricity/Turrets.png" depth="0.01" sourcerect="0,4,216,187" canflipy="false" origin="0.00,0.44890583" />
-    <Body width="80" radius="80" />
+    <Body width="140" radius="140" />
     <Repairable selectkey="Action" header="electricalrepairsheader" deteriorationspeed="0.0" mindeteriorationdelay="120" maxdeteriorationdelay="720" mindeteriorationcondition="0" RepairThreshold="80" fixDurationHighSkill="4" fixDurationLowSkill="25" msg="ItemMsgRepairScrewdriver" hudpriority="10">
       <GuiFrame relativesize="0.2,0.16" minsize="400,180" maxsize="480,216" anchor="Center" relativeoffset="0.0,0.27" style="ItemUI" />
       <RequiredSkill identifier="electrical" level="30" />

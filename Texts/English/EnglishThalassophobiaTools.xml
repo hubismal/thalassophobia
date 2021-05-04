@@ -451,6 +451,9 @@
   <entityname.emcannon>Electromagnetic Loader</entityname.emcannon>
   <entitydescription.emcannon>Used for loading charges into EM Cannon.</entitydescription.emcannon>
   
+  <entityname.thal_attachablecamera>Attachable Camera</entityname.thal_attachablecamera>
+  <entitydescription.thal_attachablecamera>An attachable camera that can be placed down and wired to a controller to spy on an area.</entitydescription.thal_attachablecamera>
+  
   <entityname.thal_minicoilgun>Slingshot Turret</entityname.thal_minicoilgun>
   <entitydescription.thal_minicoilgun>An attachable/detachable turret that can be loaded with most projectile ammo that goes into handheld weapons (syringes, shotgun shells, 40mm grenades, etc). Requires no power but has a somewhat long reload time, 3 shots max, and requires a wrench to reload. Pairs well with a Multipanel.</entitydescription.thal_minicoilgun>
   <uilabel.minicoilgun>Load Syringes or Ammunition for Handheld Weapons</uilabel.minicoilgun>
