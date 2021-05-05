@@ -1,6 +1,83 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Items>
-	<!-- ATTACHABLE CAMERA -->
+  <Item name="" identifier="thal_habitationdevice" category="Electrical" Tags="smallitem" focusonselected="true" offsetonselected="400" cargocontaineridentifier="metalcrate" canflipx="false" canflipy="false" description="" Scale="0.5">
+    <Body height="264" width="414" density="50" />
+    <Sprite texture="poweritems.png" depth="0.8" sourcerect="23,723,414,264" origin="0.5,0.5" />
+    <DecorativeSprite texture="Content/Items/OxygenGenerator/oxygengenerator.png" depth="0.82" sourcerect="852,180,121,121" rotationspeed="360" offset="-135,-60" >
+      <AnimationConditional OriginalOutpost="eq blow" />
+    </DecorativeSprite>
+    <ConnectionPanel selectkey="Action" canbeselected="true" msg="ItemMsgRewireScrewdriver" hudpriority="10">
+      <GuiFrame relativesize="0.2,0.32" minsize="400,350" maxsize="480,420" anchor="Center" style="ConnectionPanel" />
+      <RequiredItem items="screwdriver" type="Equipped" />
+      <input name="power_in" displayname="connection.powerin" />
+    </ConnectionPanel>
+    <!-- map -->
+    <MiniMap PowerConsumption="100" minvoltage="0.3" canbeselected="true" msg="ItemMsgInteractSelect" drawhudwhenequipped="false" requirewaterdetectors="false" requireoxygendetectors="false" showhullintegrity="true">
+      <GuiFrame relativesize="0.35,0.3" anchor="TopCenter" relativeoffset="-0.2,0.0" style="InnerFrame" allowuioverlap="true" />
+    </MiniMap>
+    <!-- pump -->
+    <Pump canbeselected="false" maxflow="250" PowerConsumption="100" MinVoltage="0.3" msg="ItemMsgInteractSelect">
+      <!-- TODO: define max size-->
+      <CustomInterface allowuioverlap="true" canbeselected="true" selectkey="Select">
+        <GuiFrame relativesize="0.35,0.15" anchor="Center" relativeoffset="0,0" style="ItemUI" color="20,255,20,255" />
+        <TickBox text="pumpoutwater">
+          <StatusEffect type="OnUse" target="This" setvalue="true" flowpercentage="-100"></StatusEffect>
+          <StatusEffect type="OnSecondaryUse" target="This" setvalue="true" flowpercentage="0"></StatusEffect>
+        </TickBox>
+        <TickBox text="generateoxygen">
+          <StatusEffect type="OnUse" target="This" setvalue="true" Originaloutpost="blow"></StatusEffect>
+          <StatusEffect type="OnSecondaryUse" target="This" setvalue="true" Originaloutpost="suck" canflipy="false" >
+          </StatusEffect>
+        </TickBox>
+      </CustomInterface>
+      <StatusEffect type="OnContained" target="This" setvalue="true" IsOn="false" flowpercentage="-100" />
+      <GuiFrame relativesize="0.35,0.2" minsize="420,220" anchor="Center" style="ItemUI" allowuioverlap="true" />
+      <sound file="Content/Items/Pump/Pump.ogg" type="OnActive" range="500.0" volumeproperty="CurrFlow" volume="0.005" loop="true" />
+      <sound file="Content/Items/Pump/PumpBroken.ogg" type="Always" range="500.0" volumeproperty="CurrentBrokenVolume" volume="0.004" loop="true" />
+      <PumpInEmitter particle="bubbles" particlespersecond="5" position="7,-51" anglemin="180" anglemax="180" velocitymin="100" velocitymax="200" scalemin="0.5" scalemax="0.6" />
+      <PumpInEmitter particle="watersplash" particlespersecond="50" position="7,-51" anglemin="180" anglemax="180" velocitymin="200" velocitymax="400" scalemin="0.5" scalemax="0.6" />
+      <PumpOutEmitter particle="bubbles" particlespersecond="5" position="7,-51" anglemin="0" anglemax="360" velocitymin="0" velocitymax="0" scalemin="0.5" scalemax="0.6" />
+    </Pump>
+    <!-- pseudo oxygen generator (light that targets hull)-->
+    <!-- TODO: Make the vent animation not work when no power -->
+    <LightComponent range="100.0" pulseamount="0.6" pulsefrequency="0.3" lightcolor="0.5,1.0,0.4,0.1" powerconsumption="100" minvoltage="0.3" IsOn="true" castshadows="false" allowingameediting="false">
+      <Sprite texture="Mods/Thalassophobia/Items/Electricity/poweritems.png" depth="0.8" sourcerect="500,720,414,264" origin="0.5,0.5" name="habitlight" />
+      <StatusEffect type="Always" target="This" canflipy="false">
+				<Conditional Voltage="lt 0.1" />
+      </StatusEffect>
+      <!-- fill tanks -->
+      <StatusEffect type="OnActive" target="Contained" Condition="1">
+        <Conditional Originaloutpost="blow" targetcontainer="true" />
+      </StatusEffect>
+      <!-- generate oxygen-->
+      <StatusEffect type="OnActive" target="Hull,This" Oxygen="4000.0" canflipy="true" >
+        <Conditional Originaloutpost="blow" />
+        <sound file="Mods/Thalassophobia/Items/OxygenGenerator/OxyDock.ogg" range="600.0" loop="true" />
+      </StatusEffect>
+      <!-- U RAPPIN' AWFUL -->
+      <StatusEffect type="OnActive" target="Hull,This" lightcolor="1.0,0.3,0.3,0.8">
+        <Conditional OxygenPercentage="lt 31" />
+      </StatusEffect>
+      <!-- U RAPPIN' COOL -->
+      <StatusEffect type="OnActive" target="Hull,This" lightcolor="0.5,1.0,0.4,0.8">
+        <Conditional OxygenPercentage="gt 31" />
+      </StatusEffect>
+    </LightComponent>
+    <ItemContainer capacity="5" maxstacksize="1" canbeselected="true" hideitems="false" itempos="150,-200" iteminterval="45,0" msg="ItemMsgOxygenRefill" uilabel="thal_oxygenrefill" spawnwithid="oxygentank" >
+      <GuiFrame relativesize="0.35,0.2" anchor="BottomCenter" style="ItemUI" />
+      <Containable items="oxygentank" />
+    </ItemContainer>
+    <Holdable selectkey="Select" pickkey="Use" slots="Any,RightHand+LeftHand" msg="ItemMsgDetachWrench" PickingTime="15.0" holdpos="90,0" handle1="-80,0" handle2="-80,0" attachable="true" attachedbydefault="true" aimable="true">
+      <requireditem identifier="wrench" type="Equipped" />
+      <StatusEffect type="OnUse" target="This" IsOn="true">
+        <Sound file="Mods/Thalassophobia/Items/Electricity/boltsup.ogg" range="900" loop="false" />
+      </StatusEffect>
+      <StatusEffect type="OnPicked" target="This" text="">
+        <Sound file="Mods/Thalassophobia/Items/Electricity/boltsdown.ogg" range="900" loop="false" />
+      </StatusEffect>
+    </Holdable>
+  </Item>
+  <!-- ATTACHABLE CAMERA -->
   <Item name="" identifier="thal_attachablecamera" category="Electrical" Tags="smallitem,camera" focusonselected="true" offsetonselected="400" cargocontaineridentifier="metalcrate" description="" Scale="0.6">
     <Body height="172" width="215" density="50" />
     <Sprite texture="Turrets.png" depth="0.8" sourcerect="175,953,70,73" origin="0.5,0.5" />
@@ -28,7 +105,7 @@
       <limbposition limb="LeftHand" position="67,-140" />
       <limbposition limb="RightHand" position="67,-140" />
       <StatusEffect type="OnActive" target="This">
-        <Sound file="Mods/Thalassophobia/Items/Electricity/hackstatic.ogg" range="1000" dontmuffle="true" loop="true" />
+        <Sound file="Mods/Thalassophobia/Items/Electricity/hackstatic.ogg" range="900" volume="0.5" dontmuffle="true" loop="true" />
       </StatusEffect>
     </Controller>
     <StatusHUD drawhudwhenequipped="false" canbeselected="true" selectkey="Select" range="0" fadeoutrange="0">
@@ -270,7 +347,6 @@
       <RequiredSkill identifier="electrical" level="40" />
       <LightComponent LightColor="200,180,100,160" range="500" powerconsumption="0" allowingameediting="false" IsOn="false" ignorecontinuoustoggle="true">
         <LightTexture texture="Content/Lights/lightcone.png" origin="0.0, 0.5" size="1.0,1.0" />
-        <Sprite texture="Mods/Thalassophobia/Items/Electricity/Turrets.png" depth="0.012" sourcerect="0,184,137,450" origin="0.42," />
       </LightComponent>
       <StatusEffect type="OnUse" target="This" Condition="-5">
         <Explosion range="400.0" structuredamage="0" force="0.01" camerashake="9.0" flames="false" flash="true" smoke="false" sparks="false" underwaterbubble="false" />

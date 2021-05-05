@@ -120,10 +120,9 @@
     <Holdable handle1="0,0" pickkey="Use" slots="Any,RightHand,LeftHand" msg="ItemMsgDetachWrench" PickingTime="10.0" aimpos="35,-10" attachable="true" attachedbydefault="true" aimable="true">
       <requireditem identifier="wrench" type="Equipped" />
     </Holdable>
-    <LightComponent range="150" lightcolor="255,245,200,200" IsOn="true" powerconsumption="0" flicker="0.2" pulseamount="0.5" pulsefrequency="0.3" allowingameediting="false" castshadows="false" >
+    <LightComponent range="150" lightcolor="255,245,200,200" IsOn="true" powerconsumption="0" flicker="0.2" pulseamount="0.5" pulsefrequency="0.3" allowingameediting="false" castshadows="false">
       <sound file="Mods/Thalassophobia/Items/Electricity/static.ogg" type="OnActive" range="400.0" loop="true" />
-      <StatusEffect type="OnActive" target="This" stackable="false" disabledeltatime="true">
-      </StatusEffect>
+      <StatusEffect type="OnActive" target="This" stackable="false" disabledeltatime="true"></StatusEffect>
     </LightComponent>
   </Item>
 </Items>

@@ -451,6 +451,12 @@
   <entityname.emcannon>Electromagnetic Loader</entityname.emcannon>
   <entitydescription.emcannon>Used for loading charges into EM Cannon.</entitydescription.emcannon>
   
+  <entityname.thal_habitationdevice>Habitation Device</entityname.thal_habitationdevice>
+  <entitydescription.thal_habitationdevice>Attachable device that drains water and outputs oxygen when powered. Features a minimap to keep track of life support, and the light turns red when a room has insufficient power. Ideal for makeshift bases or shelters within alien ruins, wrecks, or other places lacking power grids. Pairs well with a battery or singularity generator.</entitydescription.thal_habitationdevice>
+  <pumpoutwater>Drain Water (Consumes More Power)</pumpoutwater>
+  <generateoxygen>Generate+Discharge O2 (Consumes More Power)</generateoxygen>
+  <uilabel.thal_oxygenrefill>Oxygen Refill Dock</uilabel.thal_oxygenrefill>
+  
   <entityname.thal_attachablecamera>Attachable Camera</entityname.thal_attachablecamera>
   <entitydescription.thal_attachablecamera>An attachable camera that can be placed down and wired to a controller to spy on an area.</entitydescription.thal_attachablecamera>
   
