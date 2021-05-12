@@ -1,5 +1,56 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Items>
+	<Item name="zhide" identifier="limbhidetest" aliases="Bandage" category="Equipment" Tags="smallitem,medical" maxstacksize="8" useinhealthinterface="true" cargocontaineridentifier="mediccrate" description="" scale="0.5" impactsoundtag="impact_soft">
+    <Upgrade gameversion="0.10.0.0" scale="0.5" />
+    <PreferredContainer primary="medcab" minamount="6" maxamount="8" spawnprobability="1" />
+    <PreferredContainer primary="supplycab" minamount="3" maxamount="4" spawnprobability="0.5" />
+    <PreferredContainer primary="wreckmedcab,abandonedmedcab" minamount="0" maxamount="6" spawnprobability="0.5" />
+    <PreferredContainer primary="outpostmedcompartment" minamount="0" maxamount="3" spawnprobability="0.25" />
+    <Price baseprice="40" >
+      <Price locationtype="outpost" multiplier="1" minavailable="25" />
+      <Price locationtype="city" multiplier="0.9" minavailable="30" />
+      <Price locationtype="research" multiplier="0.9" minavailable="25" />
+      <Price locationtype="military" multiplier="1" minavailable="30" />
+      <Price locationtype="mine" multiplier="0.75" minavailable="20" />
+    </Price>
+    <Fabricate suitablefabricators="medicalfabricator" requiredtime="15" amount="2">
+      <RequiredSkill identifier="medical" level="5" />
+      <RequiredItem identifier="organicfiber" />
+    </Fabricate>
+    <Deconstruct time="20">
+      <Item identifier="organicfiber" mincondition="0.1" outcondition="0.5"/>
+    </Deconstruct>
+    <SuitableTreatment identifier="bleeding" suitability="9" />
+    <SuitableTreatment identifier="burn" suitability="15" />
+    <InventoryIcon texture="Content/Items/InventoryIconAtlas.png" sourcerect="128,448,64,64" origin="0.5,0.5" />
+    <Sprite texture="Content/Items/Medical/Medicines.png" sourcerect="310,33,26,42" depth="0.6" origin="0.5,0.5" />
+    <Body width="25" height="40" density="20" />
+    <Holdable canBeCombined="true" removeOnCombined="true" slots="Any,RightHand,LeftHand" aimpos="5,0" handle1="-5,0" holdangle="10" reload="1.0" msg="ItemMsgPickUpSelect">
+      <RequiredSkill identifier="medical" level="10" />
+      <StatusEffect tags="medical" type="OnUse" target="Character, Limb" hidden="true" targetlimbs="LeftHand, RightHand" setvalue="true" duration="12.0">
+        <Sound file="Content/Items/Medical/Bandage1.ogg" type="OnUse" range="500" />
+        <Sound file="Content/Items/Medical/Bandage2.ogg" type="OnUse" range="500" />
+        <HideLimb duration="10" />
+        <ReduceAffliction identifier="bleeding" amount="2" />
+        <ReduceAffliction identifier="burn" amount="1.5" />
+        <Use />
+      </StatusEffect>
+    </Holdable>
+    <ItemComponent>
+    <StatusEffect tags="medical" type="Always" target="This, Character, Limb" hidden="true" targetlimbs="LeftHand, RightHand" setvalue="true" duration="12.0">
+        <Sound file="Content/Items/Medical/Bandage1.ogg" type="OnUse" range="500" />
+        <Sound file="Content/Items/Medical/Bandage2.ogg" type="OnUse" range="500" />
+        <HideLimb duration="10" />
+        <ReduceAffliction identifier="bleeding" amount="2" />
+        <ReduceAffliction identifier="burn" amount="1.5" />
+        <Use />
+      </StatusEffect>
+    </ItemComponent>
+  </Item>
+  
+  
+  
+  
   <Item name="“Singularity" identifier="thal_singularity" category="Equipment" cargocontaineridentifier="metalcrate" tags="smallitem" scale="0.3" health="100" hideinmenus="false" noninteractable="true" isshootable="true">
     <Sprite name="singularity" texture="Mods/Thalassophobia/Items/Jobgear/Scientist/singularity.png" sourcerect="0,0,400,400" origin="0.5,0.5" depth="0.02" />
     <DecorativeSprite texture="Mods/Thalassophobia/Items/Jobgear/Scientist/singularity.png" sourcerect="0,0,400,400" depth="0.01" rotationspeed="360"></DecorativeSprite>

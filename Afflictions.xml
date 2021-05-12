@@ -25,8 +25,8 @@
     </Effect>
     <icon texture="Mods/Thalassophobia/UI/MainIconsAtlas.png" sourcerect="896,640,128,128" color="139,60,42,255" origin="0,0" />
   </Affliction>
-  <Affliction name="Explosive Diarrhea" identifier="thal_diarrhea" description="The patient is experiencing extreme discomfort near their bowel region. Gas trapped in their intestines causes painful, loud, and unflattering happenings near the colon. It will go away with time, unless it is being caused by a seperate factor (like a genetic disorder)." type="poison" causeofdeathdescription="Died of diarrhea." selfcauseofdeathdescription="You have been killed by your diarrhea." limbspecific="false" indicatorlimb="Torso" showiconthreshold="1" maxstrength="100">
-    <Effect minstrength="0" maxstrength="40" strengthchange="-0.5">
+  <Affliction name="Explosive Diarrhea" identifier="thal_diarrhea" description="The patient is experiencing extreme discomfort near their bowel region. Gas trapped in their intestines causes painful, loud, and unflattering happenings near the colon. It will go away with time, unless it is being caused by a seperate factor (like a genetic disorder)." type="poison" causeofdeathdescription="Died of diarrhea." selfcauseofdeathdescription="You have been killed by your diarrhea." limbspecific="false" indicatorlimb="Torso" showiconthreshold="0" maxstrength="100">
+    <Effect minstrength="10" maxstrength="40" strengthchange="-0.5">
       <StatusEffect target="Character" SpeedMultiplier="0.9" setvalue="true" stackable="false" tags="shidding" duration="0.1">
         <Affliction identifier="organdamage" amount="0.05" />
       </StatusEffect>
