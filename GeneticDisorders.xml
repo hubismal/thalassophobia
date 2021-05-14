@@ -93,24 +93,37 @@
     <icon name="stundisorder" texture="Mods/Thalassophobia/UI/MainIconsAtlas.png" sourcerect="384,768,128,128" color="60,107,195,255" origin="0,0" />
   </Affliction>
   
-  <Affliction name="EMP Syndrome" identifier="thal_disorderemp" description="A genetic disorder that periodically wrecks items damageable by EMP near the player. Can be cured by grafting uncorrupted human DNA. " type="nausea" causeofdeathdescription="Killed by explosive genetic disorder." selfcauseofdeathdescription="Your explosive genetic disorder has killed you." limbspecific="false" maxstrength="1" karmachangeonapplied="-0.1" damageoverlayalpha="1" iconcolors="255,0,140,255;255,0,140,255">
-    <PeriodicEffect mininterval="20" maxinterval="25">
-      <StatusEffect target="Character">
-				<Conditional InWater="eq false" />
+  <Affliction name="EMP Syndrome" identifier="thal_disorderemp" description="A genetic disorder that periodically wrecks items damageable by EMP near the player. Becomes lethal in water. Can be cured by grafting uncorrupted human DNA. " type="nausea" causeofdeathdescription="Killed by explosive genetic disorder." selfcauseofdeathdescription="Your explosive genetic disorder has killed you." limbspecific="false" maxstrength="1" karmachangeonapplied="-0.1" damageoverlayalpha="1" iconcolors="255,0,140,255;255,0,140,255">
+    <PeriodicEffect mininterval="8" maxinterval="15">
+      <StatusEffect target="Character" stackable="false" disabledeltatime="false" >
 				<sound file="Content/Items/Weapons/ExplosionSmall1.ogg" range="1000" selectionmode="All" />
         <sound file="Content/Items/Weapons/Emp.ogg" range="1000" />
-        <Explosion range="400" force="0.1" smoke="false" sparks="true" empstrength="10" flames="false" applyfireeffects="false" screencolor="200,255,255,190" screencolorrange="400" screencolorduration="2.0" >
+        <ParticleEmitter particle="thal_zap" particleamount="2" scalemin="1" scalemax="2" velocitymin="0" velocitymax="0" anglemin="0" anglemax="360" colormultiplier="200,255,255,190" />
+        <Explosion range="400" force="2" stun="2" smoke="false" sparks="false" empstrength="100" flames="false" applyfireeffects="false" screencolor="200,255,255,220" screencolorrange="400" screencolorduration="2.0" >
+        </Explosion>
+      </StatusEffect>
+      <StatusEffect target="Character" stackable="false" >
+				<Conditional InWater="eq true" />
+        <Explosion range="600" force="0.1" stun="4" smoke="false" sparks="false" empstrength="100" flames="false" applyfireeffects="false" >
+					<Affliction identifier="burn" amount="4" />
         </Explosion>
       </StatusEffect>
     </PeriodicEffect>
+    <Effect minstrength="0" maxstrength="100">
+			<StatusEffect target="Character" stackable="false" duration="1.0" disabledeltatime="false" >
+				<ParticleEmitter particle="thal_zap" copyentityangle="false" anglemin="0" anglemax="360" particleamount="1" particlespersecond="2" velocitymin="40" velocitymax="75" scalemin="0.2" scalemax="0.5" colormultiplier="200,255,255,100" />
+				<sound file="Mods/Thalassophobia/Items/Jobgear/Scientist/WeldSpark.ogg" range="700" loop="true" />
+      </StatusEffect>
+    </Effect>
     <icon name="stundisorder" texture="Mods/Thalassophobia/UI/MainIconsAtlas.png" sourcerect="384,768,128,128" color="60,107,195,255" origin="0,0" />
   </Affliction>
   
   <Affliction name="Hypothermia Syndrome" identifier="thal_disorderhypo" description="A genetic disorder that results in the patient's skin reacting with extreme sensitivity to cold water. Will gradually freeze and slow down the patient with prolonged exposure. Can be cured by grafting uncorrupted human DNA. " type="nausea" causeofdeathdescription="Killed by explosive genetic disorder." selfcauseofdeathdescription="Your explosive genetic disorder has killed you." limbspecific="false" maxstrength="1" karmachangeonapplied="-0.1" damageoverlayalpha="1" iconcolors="255,0,140,255;255,0,140,255">
     <Effect minstrength="0" maxstrength="100">
-			<StatusEffect target="Character">
+			<StatusEffect target="Character" stackable="false" duration="1.0" checkconditionalalways="true" disabledeltatime="false"  >
+				<ParticleEmitter particle="thal_grain" copyentityangle="false" anglemin="0" anglemax="360" particlespersecond="2" velocitymin="40" velocitymax="75" scalemin="0.5" scalemax="0.5" colormultiplier="230,232,255,90" />
 				<Conditional InWater="eq true" />
-				<Affliction identifier="thal_frozen" strength="1" />
+				<Affliction identifier="thal_frozen" amount="1" />
       </StatusEffect>
     </Effect>
     <icon name="stundisorder" texture="Mods/Thalassophobia/UI/MainIconsAtlas.png" sourcerect="384,768,128,128" color="60,107,195,255" origin="0,0" />
@@ -118,9 +131,10 @@
   
   <Affliction name="Spewing Blood Syndrome" identifier="thal_disorderbloodloss" description="A genetic disorder that drastically increases blood pressure, making bleeding much more lethal. Can be cured by grafting uncorrupted human DNA. " type="nausea" causeofdeathdescription="Killed by explosive genetic disorder." selfcauseofdeathdescription="Your explosive genetic disorder has killed you." limbspecific="false" maxstrength="1" karmachangeonapplied="-0.1" damageoverlayalpha="1" iconcolors="255,0,140,255;255,0,140,255">
     <Effect minstrength="0" maxstrength="100">
-			<StatusEffect target="Character">
+			<StatusEffect target="Character" stackable="false" duration="1.0" checkconditionalalways="true" >
 				<Conditional bleeding="gt 0" />
-				<Affliction identifier="bloodloss" strength="0.7" />
+				<ParticleEmitter particle="thal_splash" copyentityangle="false" anglemin="0" anglemax="360" particlespersecond="2" velocitymin="40" velocitymax="75" scalemin="0.9" scalemax="0.9" colormultiplier="120,5,5,255" />
+				<Affliction identifier="bloodloss" amount="1.2" />
       </StatusEffect>
     </Effect>
     <icon name="stundisorder" texture="Mods/Thalassophobia/UI/MainIconsAtlas.png" sourcerect="384,768,128,128" color="60,107,195,255" origin="0,0" />
@@ -131,6 +145,7 @@
       <StatusEffect target="Character">
 				<Conditional InWater="eq false" />
 				<SpawnItem identifier="thal_teargascloud" />
+				<SpawnItem identifier="thal_emshitter" />
       </StatusEffect>
     </PeriodicEffect>
     <icon name="stundisorder" texture="Mods/Thalassophobia/UI/MainIconsAtlas.png" sourcerect="384,768,128,128" color="60,107,195,255" origin="0,0" />
@@ -140,29 +155,35 @@
     <Effect minstrength="0" maxstrength="100"
       minskillmultiplier="0.25"
       maxskillmultiplier="0.25">
+      <StatusEffect target="Character" stackable="false" duration="0.1" targetlimb="Head" >
+				<ParticleEmitter particle="thal_qmark" copyentityangle="false" anglemin="0" anglemax="180" particlespersecond="2" velocitymin="40" velocitymax="75" scalemin="0.4" scalemax="0.4" colormultiplier="232,233,168,255" />
+      </StatusEffect>
     </Effect>
     <icon name="stundisorder" texture="Mods/Thalassophobia/UI/MainIconsAtlas.png" sourcerect="384,768,128,128" color="60,107,195,255" origin="0,0" />
   </Affliction>
   
-  <Affliction name="Holophobia Syndrome" identifier="thal_disorderweapon" description="A genetic disorder that gives the patient a crippling fear of weapons. Holding weapons in the hand will gradually make the patient nauseous. Can be cured by grafting uncorrupted human DNA. " type="nausea" causeofdeathdescription="Killed by explosive genetic disorder." selfcauseofdeathdescription="Your explosive genetic disorder has killed you." limbspecific="false" maxstrength="1" karmachangeonapplied="-0.1" damageoverlayalpha="1" iconcolors="255,0,140,255;255,0,140,255">
+  <Affliction name="PTSD Syndrome" identifier="thal_disorderweapon" description="A genetic disorder that gives the patient a crippling fear of weapons. Holding weapons in the hand will gradually make the patient nauseous and experience flashbacks. Can be cured by grafting uncorrupted human DNA. " type="nausea" causeofdeathdescription="Killed by explosive genetic disorder." selfcauseofdeathdescription="Your explosive genetic disorder has killed you." limbspecific="false" maxstrength="1" karmachangeonapplied="-0.1" damageoverlayalpha="1" iconcolors="255,0,140,255;255,0,140,255">
     <Effect minstrength="0" maxstrength="100">
-			<StatusEffect target="Character" stackable="false" duration="5" >
+			<StatusEffect target="Character" targetlimb="RightHand" stackable="false" duration="0.1" >
 				<RequiredItems items="weapon" type="Equipped" />
-				<Affliction identifier="nausea" strength="0.9" />
-				<Affliction identifier="thal_blinded" strength="0.1" />
+				<Affliction identifier="nausea" strength="2" />
+				<Affliction identifier="thal_blinded" strength="5" />
+				<ParticleEmitter particle="thal_squiggly" copyentityangle="false" anglemin="0" anglemax="360" particlespersecond="5" velocitymin="40" velocitymax="75" scalemin="0.5" scalemax="0.5" colormultiplier="220,80,80,255" />
+				<sound file="Content/Sounds/Water/WaterAmbienceMoving.ogg" range="100" volume="2" loop="true" />
       </StatusEffect>
     </Effect>
     <icon name="stundisorder" texture="Mods/Thalassophobia/UI/MainIconsAtlas.png" sourcerect="384,768,128,128" color="60,107,195,255" origin="0,0" />
   </Affliction>
   
   
-  <Affliction name="Impostor Syndrome" identifier="thal_disorderid" description="A genetic disorder that inflicts psychological pain when an ID card is in your direct inventory. Additionally distorts the face to make the patient otherwise unrecognizable. Can be cured by grafting uncorrupted human DNA. " type="nausea" causeofdeathdescription="Killed by explosive genetic disorder." selfcauseofdeathdescription="Your explosive genetic disorder has killed you." limbspecific="false" maxstrength="1" karmachangeonapplied="-0.1" damageoverlayalpha="1" iconcolors="255,0,140,255;255,0,140,255">
+  <Affliction name="Anti-State Syndrome" identifier="thal_disorderid" description="A genetic disorder that prevents movement when an ID card belonging to a security guard, captain, or any similar role is in your direct inventory. Additionally distorts the face to make the patient otherwise unrecognizable. Can be cured by grafting uncorrupted human DNA. " type="nausea" causeofdeathdescription="Killed by explosive genetic disorder." selfcauseofdeathdescription="Your explosive genetic disorder has killed you." limbspecific="false" maxstrength="1" karmachangeonapplied="-0.1" damageoverlayalpha="1" iconcolors="255,0,140,255;255,0,140,255">
     <Effect minstrength="0" maxstrength="100">
 			<StatusEffect target="Character" duration="1.0" stackable="false" >
-				<RequiredItems items="idcard" type="Picked" />
+				<RequiredItems items="job:Captain,job:SecurityOfficer,job:Warden" type="Picked" />
 				<Affliction identifier="bloodloss" strength="0.1" />
       </StatusEffect>
-      <StatusEffect target="Character" hideface="true" duration="0.1" stackable="false" >
+      <StatusEffect target="Character" hideface="true" targetlimb="Head" duration="0.1" stackable="false" >
+				<ParticleEmitter particle="thal_squiggly" copyentityangle="false" anglemin="0" anglemax="360" particlespersecond="5" velocitymin="50" velocitymax="75" scalemin="0.5" scalemax="0.5" colormultiplier="200,20,20,255" />
       </StatusEffect>
     </Effect>
     
@@ -170,8 +191,9 @@
   </Affliction>
   
   <Affliction name="Rad Sensitivity Syndrome" identifier="thal_disorderrad" description="A skin disorder that makes the skin burn and blister when in contact with even non-ionizing radiation. Can be cured by grafting uncorrupted human DNA. " type="nausea" causeofdeathdescription="Killed by explosive genetic disorder." selfcauseofdeathdescription="Your explosive genetic disorder has killed you." limbspecific="false" maxstrength="1" karmachangeonapplied="-0.1" damageoverlayalpha="1" iconcolors="255,0,140,255;255,0,140,255">
-    <Effect minstrength="0" maxstrength="100">
-			<StatusEffect target="Character" targetlimbs="LeftHand, RightHand" >
+    <Effect minstrength="0" maxstrength="100" checkconditionalalways="true" >
+			<StatusEffect target="Character" stackable="false" targetlimbs="LeftHand, RightHand" >
+				<ParticleEmitter particle="thal_grain" copyentityangle="false" anglemin="0" anglemax="360" particlespersecond="2" velocitymin="40" velocitymax="75" scalemin="0.5" scalemax="0.5" colormultiplier="180,232,180,190" />
 				<RequiredItems items="reactorfuel,uranium,thorium,fulgurium" type="Picked" />
 				<Affliction identifier="burn" strength="0.4" />
       </StatusEffect>
@@ -182,8 +204,9 @@
   
   <Affliction name="Mumble Syndrome" identifier="thal_disordermumble" description="A disorder that makes patient unable to speak when their face is obscured. Can be cured by grafting uncorrupted human DNA. " type="nausea" causeofdeathdescription="Killed by explosive genetic disorder." selfcauseofdeathdescription="Your explosive genetic disorder has killed you." limbspecific="false" maxstrength="1" karmachangeonapplied="-0.1" damageoverlayalpha="1" iconcolors="255,0,140,255;255,0,140,255">
     <Effect minstrength="0" maxstrength="100">
-			<StatusEffect target="Character" SpeechImpediment="100" setvalue="true" >
+			<StatusEffect target="Character" SpeechImpediment="100" targetlimb="Head" stackable="false" checkconditionalalways="true" duration="0.1" >
 				<Conditional HideFace="eq true" />
+				<ParticleEmitter particle="thal_squiggly" copyentityangle="false" anglemin="0" anglemax="360" particlespersecond="4" velocitymin="40" velocitymax="75" scalemin="0.6" scalemax="0.75" colormultiplier="180,10,180,255" />
       </StatusEffect>
     </Effect>
     

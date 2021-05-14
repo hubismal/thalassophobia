@@ -589,6 +589,23 @@
     <Sprite texture="Content/Items/Medical/Medicines.png" sourcerect="223,69,38,70" depth="0.6" origin="0.5,0.5" />
     <Body width="25" height="40" density="20" />
     <MeleeWeapon canBeCombined="true" removeOnCombined="true" slots="Any,RightHand+LeftHand" aimable="true" controlpose="false" aimpos="40,-10" handle1="-6,-2" handle2="-1,-2" msg="ItemMsgPickUpSelect">
+			<!-- EFFECTS INITIAL -->
+			<StatusEffect tags="medical" type="OnUse" target="Character" delay="0.05" disabledeltatime="true" >
+        <RequiredItem items="thal_dna" type="Contained" excludebroken="false"  />
+        <Affliction identifier="thal_fxinject" amount="3" />
+				<Affliction identifier="stun" amount="3" />
+        <Conditional thal_meltdownhead="gt 0" />
+        <Conditional thal_meltdowntorso="gt 0" />
+        <Conditional thal_meltdownlimbs="gt 0" />
+      </StatusEffect>
+      <!-- EFFECTS CORRUPTION -->
+      <StatusEffect tags="medical" type="OnUse" target="Character" delay="4" disabledeltatime="true" >
+        <RequiredItem items="thal_corruptdnahuman,thal_dnacorrupt" type="Contained" excludebroken="false"  />
+        <Affliction identifier="thal_fxglitch" amount="3" />
+        <Conditional thal_meltdownhead="gt 0" />
+        <Conditional thal_meltdowntorso="gt 0" />
+        <Conditional thal_meltdownlimbs="gt 0" />
+      </StatusEffect>
       <!-- HUMAN GRAFTS (REVERSIONS) -->
       <StatusEffect tags="medical" type="OnUse" target="Character" delay="0.05" duration="2">
         <RequiredItem items="thal_dnahuman" type="Contained" excludebroken="false"  />
@@ -862,7 +879,9 @@
       </StatusEffect>
       <!-- add tag "thal_corruptdna(type)" when condition hits zero so grafters know how to behave -->
       <StatusEffect type="OnBroken" target="This" Tags="thal_corruptdnahuman" IsOn="false" >
-        <Sound file="Content/Sounds/Damage/GlassBreak1.ogg" type="OnBroken" volume="1.0" range="200" />
+        <Sound file="Mods/Thalassophobia/Items/Jobgear/Scientist/Corrupt1.ogg" volume="1.0" range="500" selectionmode="random" />
+        <Sound file="Mods/Thalassophobia/Items/Jobgear/Scientist/Corrupt2.ogg" volume="1.0" range="500" />
+        <Sound file="Mods/Thalassophobia/Items/Jobgear/Scientist/Corrupt3.ogg" volume="1.0" range="500" />
       </StatusEffect>
     </LightComponent>
   </Item>
