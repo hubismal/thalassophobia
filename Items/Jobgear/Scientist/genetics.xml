@@ -624,6 +624,14 @@
         <ReduceAffliction identifier="thal_disorderweapon" amount="400" />
         <ReduceAffliction identifier="thal_disorderid" amount="400" />
         <ReduceAffliction identifier="thal_disorderrad" amount="400" />
+        <ReduceAffliction identifier="thal_disorderstupid" amount="400" />
+        <ReduceAffliction identifier="thal_disordermumble" amount="400" />
+        <ReduceAffliction identifier="thal_disorderbait" amount="400" />
+        <ReduceAffliction identifier="thal_disorderdeath" amount="400" />
+        <ReduceAffliction identifier="thal_disorderpressure" amount="400" />
+        <ReduceAffliction identifier="thal_disorderthal" amount="400" />
+        <ReduceAffliction identifier="thal_disorderbuff" amount="400" />
+        <ReduceAffliction identifier="thal_disorderhusk" amount="400" />
         <Conditional thal_meltdownhead="gt 0" />
       </StatusEffect>
       <StatusEffect tags="medical" type="OnUse" target="Character" delay="0.05" duration="2">
@@ -643,6 +651,14 @@
         <ReduceAffliction identifier="thal_disorderweapon" amount="400" />
         <ReduceAffliction identifier="thal_disorderid" amount="400" />
         <ReduceAffliction identifier="thal_disorderrad" amount="400" />
+        <ReduceAffliction identifier="thal_disorderstupid" amount="400" />
+        <ReduceAffliction identifier="thal_disordermumble" amount="400" />
+        <ReduceAffliction identifier="thal_disorderbait" amount="400" />
+        <ReduceAffliction identifier="thal_disorderdeath" amount="400" />
+        <ReduceAffliction identifier="thal_disorderpressure" amount="400" />
+        <ReduceAffliction identifier="thal_disorderthal" amount="400" />
+        <ReduceAffliction identifier="thal_disorderbuff" amount="400" />
+        <ReduceAffliction identifier="thal_disorderhusk" amount="400" />
         <Conditional thal_meltdowntorso="gt 0" />
       </StatusEffect>
       <StatusEffect tags="medical" type="OnUse" target="Character" delay="0.05" duration="2">
@@ -659,10 +675,17 @@
         <ReduceAffliction identifier="thal_disorderairloss" amount="400" />
         <ReduceAffliction identifier="thal_disorderbreathe" amount="400" />
         <ReduceAffliction identifier="thal_disorderacid" amount="400" />
-        <ReduceAffliction identifier="thal_disorderstupid" amount="400" />
         <ReduceAffliction identifier="thal_disorderweapon" amount="400" />
         <ReduceAffliction identifier="thal_disorderid" amount="400" />
         <ReduceAffliction identifier="thal_disorderrad" amount="400" />
+        <ReduceAffliction identifier="thal_disorderstupid" amount="400" />
+        <ReduceAffliction identifier="thal_disordermumble" amount="400" />
+        <ReduceAffliction identifier="thal_disorderbait" amount="400" />
+        <ReduceAffliction identifier="thal_disorderdeath" amount="400" />
+        <ReduceAffliction identifier="thal_disorderpressure" amount="400" />
+        <ReduceAffliction identifier="thal_disorderthal" amount="400" />
+        <ReduceAffliction identifier="thal_disorderbuff" amount="400" />
+        <ReduceAffliction identifier="thal_disorderhusk" amount="400" />
         <Conditional thal_meltdownlimbs="gt 0" />
       </StatusEffect>
       <!-- HUMAN CORRUPTIONS -->
