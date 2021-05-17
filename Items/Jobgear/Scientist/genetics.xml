@@ -600,7 +600,7 @@
       </StatusEffect>
       <!-- EFFECTS CORRUPTION -->
       <StatusEffect tags="medical" type="OnUse" target="Character" delay="4" disabledeltatime="true" >
-        <RequiredItem items="thal_corruptdnahuman,thal_dnacorrupt" type="Contained" excludebroken="false"  />
+        <RequiredItem items="thal_corruptdnahuman,thal_dnacorrupt,thal_corruptdna" type="Contained" excludebroken="false"  />
         <Affliction identifier="thal_fxglitch" amount="3" />
         <Conditional thal_meltdownhead="gt 0" />
         <Conditional thal_meltdowntorso="gt 0" />
@@ -665,6 +665,7 @@
         <RequiredItem items="thal_dnahuman" type="Contained" excludebroken="false"  />
         <Sound file="Content/Items/Medical/Syringe.ogg" type="OnUse" range="500" />
         <ReduceAffliction identifier="thal_meltdownlimbs" amount="400" />
+        
         <ReduceAffliction identifier="thal_disorderfart" amount="400" />
         <ReduceAffliction identifier="thal_disorderseizure" amount="400" />
         <ReduceAffliction identifier="thal_disorderexplode" amount="400" />
@@ -690,15 +691,15 @@
       </StatusEffect>
       <!-- HUMAN CORRUPTIONS -->
       <StatusEffect type="OnUse" target="Character" disabledeltatime="true" delay="4" >
-        <RequiredItem items="thal_corruptdnahuman" type="Contained" excludebroken="false"  />
-        <Sound file="Content/Items/Medical/Syringe.ogg" type="OnUse" range="500" />
-        <ReduceAffliction identifier="thal_meltdownlimbs" amount="400" />
-        <Affliction identifier="thal_disorderfart" strength="100" probability="0.6" />
-        <Affliction identifier="thal_disorderbloodloss" strength="100" probability="0.75" />
+        <RequiredItem items="thal_dnahuman" type="Contained" excludebroken="false"  />
+        <RequiredItem items="thal_corruptdna" type="Contained" excludebroken="false"  />
+        <Affliction identifier="thal_disorderhusk" strength="100" probability="0.6" />
+        <Affliction identifier="thal_disorderweapon" strength="100" probability="0.75" />
         <Affliction identifier="thal_disorderseizure" strength="100" probability="0.6" />
-        <Affliction identifier="thal_disorderstupid" strength="100" probability="0.6" />
-        <Affliction identifier="thal_disorderid" strength="100" probability="0.7" />
-        <Affliction identifier="thal_disorderrad" strength="100" probability="0.7" />
+        <Affliction identifier="thal_disorderbloodloss" strength="100" probability="0.6" />
+        <Affliction identifier="thal_disordermumble" strength="100" probability="0.6" />
+        <Affliction identifier="thal_disorderdeath" strength="100" probability="0.5" />
+        <Affliction identifier="thal_disorderrad" strength="100" probability="0.6" />
         <Conditional thal_meltdownhead="gt 0" />
         <Conditional thal_meltdownlimbs="gt 0" />
         <Conditional thal_meltdowntorso="gt 0" />
@@ -725,6 +726,21 @@
         <Affliction identifier="thal_mudraptorlimbs" amount="160" />
         <Conditional thal_meltdownlimbs="gt 0" />
       </StatusEffect>
+      <!-- MUDRAPTOR CORRUPTIONS -->
+      <StatusEffect type="OnUse" target="Character" disabledeltatime="true" delay="4" >
+        <RequiredItem items="thal_dnamudraptor" type="Contained" excludebroken="false"  />
+        <RequiredItem items="thal_corruptdna" type="Contained" excludebroken="false"  />
+        <Affliction identifier="thal_disorderhypo" strength="100" probability="0.6" />
+        <Affliction identifier="thal_disorderpressure" strength="100" probability="0.75" />
+        <Affliction identifier="thal_disorderweapon" strength="100" probability="0.6" />
+        <Affliction identifier="thal_disorderstupid" strength="100" probability="0.6" />
+        <Affliction identifier="thal_disordermumble" strength="100" probability="0.6" />
+        <Affliction identifier="thal_disorderid" strength="100" probability="0.6" />
+        <Affliction identifier="thal_disorderrad" strength="100" probability="0.6" />
+        <Conditional thal_meltdownhead="gt 0" />
+        <Conditional thal_meltdownlimbs="gt 0" />
+        <Conditional thal_meltdowntorso="gt 0" />
+      </StatusEffect>
       <!-- MAGGOT GRAFTS -->
       <StatusEffect tags="medical" type="OnUse" target="Character" delay="0.05" duration="0.5">
         <RequiredItem items="thal_dnamaggot" type="Contained" excludebroken="false"  />
@@ -746,6 +762,21 @@
         <ReduceAffliction identifier="thal_meltdownlimbs" amount="400" />
         <Affliction identifier="thal_maggotlimbs" amount="160" />
         <Conditional thal_meltdownlimbs="gt 0" />
+      </StatusEffect>
+      <!-- MAGGOT CORRUPTIONS -->
+      <StatusEffect type="OnUse" target="Character" disabledeltatime="true" delay="4" >
+        <RequiredItem items="thal_dnamaggot" type="Contained" excludebroken="false"  />
+        <RequiredItem items="thal_corruptdna" type="Contained" excludebroken="false"  />
+        <Affliction identifier="thal_disorderbloodloss" strength="100" probability="0.6" />
+        <Affliction identifier="thal_disorderseizure" strength="100" probability="0.75" />
+        <Affliction identifier="thal_disorderemp" strength="100" probability="0.6" />
+        <Affliction identifier="thal_disorderpressure" strength="100" probability="0.6" />
+        <Affliction identifier="thal_disordermumble" strength="100" probability="0.6" />
+        <Affliction identifier="thal_disorderweapon" strength="100" probability="0.6" />
+        <Affliction identifier="thal_disorderrad" strength="100" probability="0.6" />
+        <Conditional thal_meltdownhead="gt 0" />
+        <Conditional thal_meltdownlimbs="gt 0" />
+        <Conditional thal_meltdowntorso="gt 0" />
       </StatusEffect>
       <!-- SHROOM GRAFTS -->
       <StatusEffect tags="medical" type="OnUse" target="Character" delay="0.05" duration="0.5">
@@ -769,6 +800,21 @@
         <Affliction identifier="thal_shroomlimbs" amount="160" />
         <Conditional thal_meltdownlimbs="gt 0" />
       </StatusEffect>
+      <!-- SHROOM CORRUPTIONS -->
+      <StatusEffect type="OnUse" target="Character" disabledeltatime="true" delay="4" >
+        <RequiredItem items="thal_dnaramblin" type="Contained" excludebroken="false"  />
+        <RequiredItem items="thal_corruptdna" type="Contained" excludebroken="false"  />
+        <Affliction identifier="thal_disorderacid" strength="100" probability="0.6" />
+        <Affliction identifier="thal_disorderbuff" strength="100" probability="0.75" />
+        <Affliction identifier="thal_disorderseizure" strength="100" probability="0.6" />
+        <Affliction identifier="thal_disorderpressure" strength="100" probability="0.6" />
+        <Affliction identifier="thal_disorderairloss" strength="100" probability="0.6" />
+        <Affliction identifier="thal_disorderfart" strength="100" probability="0.5" />
+        <Affliction identifier="thal_disorderhusk" strength="100" probability="0.5" />
+        <Conditional thal_meltdownhead="gt 0" />
+        <Conditional thal_meltdownlimbs="gt 0" />
+        <Conditional thal_meltdowntorso="gt 0" />
+      </StatusEffect>
       <!-- CRAWLER GRAFTS -->
       <StatusEffect tags="medical" type="OnUse" target="Character" delay="0.05" duration="0.5">
         <RequiredItem items="thal_dnacrawler" type="Contained" excludebroken="false"  />
@@ -790,6 +836,21 @@
         <ReduceAffliction identifier="thal_meltdownlimbs" amount="400" />
         <Affliction identifier="thal_crawlerlimbs" amount="160" />
         <Conditional thal_meltdownlimbs="gt 0" />
+      </StatusEffect>
+      <!-- CRAWLER CORRUPTIONS -->
+      <StatusEffect type="OnUse" target="Character" disabledeltatime="true" delay="4" >
+        <RequiredItem items="thal_dnacrawler" type="Contained" excludebroken="false"  />
+        <RequiredItem items="thal_corruptdna" type="Contained" excludebroken="false"  />
+        <Affliction identifier="thal_disorderbreathe" strength="100" probability="0.6" />
+        <Affliction identifier="thal_disorderhypo" strength="100" probability="0.75" />
+        <Affliction identifier="thal_disorderseizure" strength="100" probability="0.6" />
+        <Affliction identifier="thal_disorderpressure" strength="100" probability="0.6" />
+        <Affliction identifier="thal_disorderweapon" strength="100" probability="0.6" />
+        <Affliction identifier="thal_disorderbloodloss" strength="100" probability="0.6" />
+        <Affliction identifier="thal_disorderairloss" strength="100" probability="0.6" />
+        <Conditional thal_meltdownhead="gt 0" />
+        <Conditional thal_meltdownlimbs="gt 0" />
+        <Conditional thal_meltdowntorso="gt 0" />
       </StatusEffect>
       <!-- HAMMERHEAD GRAFTS -->
       <StatusEffect tags="medical" type="OnUse" target="Character" delay="0.05" duration="0.5">
@@ -813,6 +874,21 @@
         <Affliction identifier="thal_hammerlimbs" amount="160" />
         <Conditional thal_meltdownlimbs="gt 0" />
       </StatusEffect>
+      <!-- HAMMERHEAD CORRUPTIONS -->
+      <StatusEffect type="OnUse" target="Character" disabledeltatime="true" delay="4" >
+        <RequiredItem items="thal_dnahammer" type="Contained" excludebroken="false"  />
+        <RequiredItem items="thal_corruptdna" type="Contained" excludebroken="false"  />
+        <Affliction identifier="thal_disorderexplode" strength="100" probability="0.6" />
+        <Affliction identifier="thal_disorderhypo" strength="100" probability="0.75" />
+        <Affliction identifier="thal_disorderemp" strength="100" probability="0.6" />
+        <Affliction identifier="thal_disorderfire" strength="100" probability="0.6" />
+        <Affliction identifier="thal_disorderdeath" strength="100" probability="0.6" />
+        <Affliction identifier="thal_disorderbloodloss" strength="100" probability="0.6" />
+        <Affliction identifier="thal_disorderpressure" strength="100" probability="0.6" />
+        <Conditional thal_meltdownhead="gt 0" />
+        <Conditional thal_meltdownlimbs="gt 0" />
+        <Conditional thal_meltdowntorso="gt 0" />
+      </StatusEffect>
       <!-- THRESHER GRAFTS -->
       <StatusEffect tags="medical" type="OnUse" target="Character" delay="0.05" duration="0.5">
         <RequiredItem items="thal_dnathresher" type="Contained" excludebroken="false"  />
@@ -834,6 +910,21 @@
         <ReduceAffliction identifier="thal_meltdownlimbs" amount="400" />
         <Affliction identifier="thal_thresherlimbs" amount="160" />
         <Conditional thal_meltdownlimbs="gt 0" />
+      </StatusEffect>
+      <!-- THRESHER CORRUPTIONS -->
+      <StatusEffect type="OnUse" target="Character" disabledeltatime="true" delay="4" >
+        <RequiredItem items="thal_dnathresher" type="Contained" excludebroken="false"  />
+        <RequiredItem items="thal_corruptdna" type="Contained" excludebroken="false"  />
+        <Affliction identifier="thal_disorderexplode" strength="100" probability="0.6" />
+        <Affliction identifier="thal_disorderhusk" strength="100" probability="0.75" />
+        <Affliction identifier="thal_disorderbait" strength="100" probability="0.6" />
+        <Affliction identifier="thal_disorderfire" strength="100" probability="0.6" />
+        <Affliction identifier="thal_disorderdeath" strength="100" probability="0.6" />
+        <Affliction identifier="thal_disorderthal" strength="100" probability="0.6" />
+        <Affliction identifier="thal_disorderweapon" strength="100" probability="0.6" />
+        <Conditional thal_meltdownhead="gt 0" />
+        <Conditional thal_meltdownlimbs="gt 0" />
+        <Conditional thal_meltdowntorso="gt 0" />
       </StatusEffect>
       <!-- END SPECIFICS -->
       <StatusEffect type="OnUse" target="Contained,Character" delay="0.05" stackable="false" Comparison="Or" disabledeltatime="true">
@@ -863,18 +954,44 @@
     </ItemContainer>
   </Item>
   <Item name="" identifier="thal_dnamudraptor" category="Material" cargocontaineridentifier="metalcrate" description="" Tags="smallitem,thal_dna" spritecolor="180,160,255,255" InventoryIconColor="180,160,255,200" scale="0.5" impactsoundtag="impact_metal_light">
-    <PreferredContainer primary="medcab" minamount="0" maxamount="1" spawnprobability="0.4" />
-    <PreferredContainer primary="thal_geneticgraft" minamount="1" maxamount="1" spawnprobability="0.7" />
-    <PreferredContainer primary="wreckmedcab" minamount="1" maxamount="3" spawnprobability="0.5" />
+    <!-- AI try to put DNA in preservation areas -->
+    <PreferredContainer primary="thal_dnapreserve" minamount="0" maxamount="0" spawnprobability="0.0" />
     <Sprite name="dna" texture="Mods/Thalassophobia/Items/Jobgear/Scientist/science.png" sourcerect="459,198,45,43" depth="0.6" origin="0.5,0.5" />
+    <BrokenSprite name="corrupt dna" texture="Mods/Thalassophobia/Items/Jobgear/Scientist/science.png" sourcerect="454,406,52,51" depth="0.6" origin="0.5,0.5" maxcondition="0" fadein="false" />
     <Body width="55" height="55" density="20" />
     <Holdable slots="Any,RightHand,LeftHand" handle1="0,0" msg="ItemMsgPickUpSelect" />
     <LightComponent range="1" castshadows="false" lightcolor="180,160,255,255" IsOn="true" powerconsumption="0" blinkFrequency="0" allowingameediting="false">
       <Sprite name="dnalight" texture="Mods/Thalassophobia/Items/Jobgear/Scientist/science.png" sourcerect="459,198,45,43" depth="0.6" origin="0.5,0.5" />
+      <!-- flicker=0 means stored properly, flicker 0.9 means stored improperly -->
+      <StatusEffect type="OnContained" target="This" setvalue="true" delay="1.0" stackable="false" flicker="0.9">
+				<Conditional Condition="gt 0" />
+      </StatusEffect>
+      <StatusEffect type="OnContained" target="This" comparison="Or" setvalue="true" flicker="0">
+        <Conditional HasTag="eq thal_dnapreserve" targetcontainer="true" />
+      </StatusEffect>
+      <!-- Note that dna will still decay even when in "waterproof" containers -->
+      <StatusEffect type="OnContained" target="This" comparison="And" condition="-0.5">
+        <Conditional flicker="eq 0.9" />
+        <Conditional Condition="gt 0" />
+        <sound file="Mods/Thalassophobia/Items/Jobgear/Scientist/Dnacorrupt.ogg" range="270.0" loop="true" />
+      </StatusEffect>
+      <!-- for lying around -->
+      <StatusEffect type="OnNotContained" target="This" comparison="And" condition="-0.5">
+        <Conditional InWater="eq false" />
+        <Conditional Condition="gt 0" />
+        <sound file="Mods/Thalassophobia/Items/Jobgear/Scientist/Dnacorrupt.ogg" range="270.0" loop="true" />
+      </StatusEffect>
+      <!-- add tag "thal_corruptdna(type)" when condition hits zero so grafters know how to behave -->
+      <StatusEffect type="OnBroken" target="This" Tags="thal_corruptdna" IsOn="false" >
+        <Sound file="Mods/Thalassophobia/Items/Jobgear/Scientist/Corrupt1.ogg" volume="1.0" range="500" selectionmode="random" />
+        <Sound file="Mods/Thalassophobia/Items/Jobgear/Scientist/Corrupt2.ogg" volume="1.0" range="500" />
+        <Sound file="Mods/Thalassophobia/Items/Jobgear/Scientist/Corrupt3.ogg" volume="1.0" range="500" />
+      </StatusEffect>
     </LightComponent>
   </Item>
   <Item name="" identifier="thal_dnahuman" category="Material" cargocontaineridentifier="metalcrate" description="" Tags="smallitem,thal_dna" spritecolor="150,255,180,200" InventoryIconColor="150,255,180,200" scale="0.5" impactsoundtag="impact_metal_light">
-    <PreferredContainer primary="thal_dnapreserve" minamount="1" maxamount="1" spawnprobability="0.5" />
+    <!-- AI try to put DNA in preservation areas -->
+    <PreferredContainer primary="thal_dnapreserve" minamount="0" maxamount="0" spawnprobability="0.0" />
     <Sprite name="dna" texture="Mods/Thalassophobia/Items/Jobgear/Scientist/science.png" sourcerect="459,198,45,43" depth="0.6" origin="0.5,0.5" />
     <BrokenSprite name="corrupt dna" texture="Mods/Thalassophobia/Items/Jobgear/Scientist/science.png" sourcerect="454,406,52,51" depth="0.6" origin="0.5,0.5" maxcondition="0" fadein="false" />
     <Body width="55" height="55" density="20" />
@@ -888,20 +1005,20 @@
       <StatusEffect type="OnContained" target="This" comparison="Or" setvalue="true" flicker="0">
         <Conditional HasTag="eq thal_dnapreserve" targetcontainer="true" />
       </StatusEffect>
+      <!-- Note that dna will still decay even when in "waterproof" containers -->
       <StatusEffect type="OnContained" target="This" comparison="And" condition="-0.5">
         <Conditional flicker="eq 0.9" />
-        <Conditional InWater="eq false" />
         <Conditional Condition="gt 0" />
-        <sound file="Mods/Thalassophobia/Items/Jobgear/Scientist/Sizzle.ogg" range="270.0" loop="true" />
+        <sound file="Mods/Thalassophobia/Items/Jobgear/Scientist/Dnacorrupt.ogg" range="270.0" loop="true" />
       </StatusEffect>
       <!-- for lying around -->
       <StatusEffect type="OnNotContained" target="This" comparison="And" condition="-0.5">
         <Conditional InWater="eq false" />
         <Conditional Condition="gt 0" />
-        <sound file="Mods/Thalassophobia/Items/Jobgear/Scientist/Sizzle.ogg" range="270.0" loop="true" />
+        <sound file="Mods/Thalassophobia/Items/Jobgear/Scientist/Dnacorrupt.ogg" range="270.0" loop="true" />
       </StatusEffect>
       <!-- add tag "thal_corruptdna(type)" when condition hits zero so grafters know how to behave -->
-      <StatusEffect type="OnBroken" target="This" Tags="thal_corruptdnahuman" IsOn="false" >
+      <StatusEffect type="OnBroken" target="This" Tags="thal_corruptdna" IsOn="false" >
         <Sound file="Mods/Thalassophobia/Items/Jobgear/Scientist/Corrupt1.ogg" volume="1.0" range="500" selectionmode="random" />
         <Sound file="Mods/Thalassophobia/Items/Jobgear/Scientist/Corrupt2.ogg" volume="1.0" range="500" />
         <Sound file="Mods/Thalassophobia/Items/Jobgear/Scientist/Corrupt3.ogg" volume="1.0" range="500" />
@@ -909,125 +1026,219 @@
     </LightComponent>
   </Item>
   <Item name="" identifier="thal_dnacrawler" category="Material" cargocontaineridentifier="metalcrate" description="" Tags="smallitem,thal_dna" spritecolor="255,230,140,200" InventoryIconColor="255,230,140,200" scale="0.5" impactsoundtag="impact_metal_light">
+    <!-- AI try to put DNA in preservation areas -->
+    <PreferredContainer primary="thal_dnapreserve" minamount="0" maxamount="0" spawnprobability="0.0" />
     <Sprite name="dna" texture="Mods/Thalassophobia/Items/Jobgear/Scientist/science.png" sourcerect="459,198,45,43" depth="0.6" origin="0.5,0.5" />
+    <BrokenSprite name="corrupt dna" texture="Mods/Thalassophobia/Items/Jobgear/Scientist/science.png" sourcerect="454,406,52,51" depth="0.6" origin="0.5,0.5" maxcondition="0" fadein="false" />
     <Body width="55" height="55" density="20" />
     <Holdable slots="Any,RightHand,LeftHand" handle1="0,0" msg="ItemMsgPickUpSelect" />
     <LightComponent range="1" castshadows="false" lightcolor="255,230,140,200" IsOn="true" powerconsumption="0" blinkFrequency="0" allowingameediting="false">
       <Sprite name="dnalight" texture="Mods/Thalassophobia/Items/Jobgear/Scientist/science.png" sourcerect="459,198,45,43" depth="0.6" origin="0.5,0.5" />
-    </LightComponent>
-  </Item>
-  <Item name="" identifier="thal_dnathresher" category="Material" cargocontaineridentifier="metalcrate" description="" Tags="smallitem,thal_dna" spritecolor="255,230,140,200" InventoryIconColor="255,230,140,200" scale="0.5" impactsoundtag="impact_metal_light">
-    <Sprite name="dna" texture="Mods/Thalassophobia/Items/Jobgear/Scientist/science.png" sourcerect="459,198,45,43" depth="0.6" origin="0.5,0.5" />
-    <Body width="55" height="55" density="20" />
-    <Holdable slots="Any,RightHand,LeftHand" handle1="0,0" msg="ItemMsgPickUpSelect" />
-    <LightComponent range="1" castshadows="false" lightcolor="255,230,140,200" IsOn="true" powerconsumption="0" blinkFrequency="0" allowingameediting="false">
-      <Sprite name="dnalight" texture="Mods/Thalassophobia/Items/Jobgear/Scientist/science.png" sourcerect="459,198,45,43" depth="0.6" origin="0.5,0.5" />
+      <!-- flicker=0 means stored properly, flicker 0.9 means stored improperly -->
+      <StatusEffect type="OnContained" target="This" setvalue="true" delay="1.0" stackable="false" flicker="0.9">
+				<Conditional Condition="gt 0" />
+      </StatusEffect>
+      <StatusEffect type="OnContained" target="This" comparison="Or" setvalue="true" flicker="0">
+        <Conditional HasTag="eq thal_dnapreserve" targetcontainer="true" />
+      </StatusEffect>
+      <!-- Note that dna will still decay even when in "waterproof" containers -->
+      <StatusEffect type="OnContained" target="This" comparison="And" condition="-0.5">
+        <Conditional flicker="eq 0.9" />
+        <Conditional Condition="gt 0" />
+        <sound file="Mods/Thalassophobia/Items/Jobgear/Scientist/Dnacorrupt.ogg" range="270.0" loop="true" />
+      </StatusEffect>
+      <!-- for lying around -->
+      <StatusEffect type="OnNotContained" target="This" comparison="And" condition="-0.5">
+        <Conditional InWater="eq false" />
+        <Conditional Condition="gt 0" />
+        <sound file="Mods/Thalassophobia/Items/Jobgear/Scientist/Dnacorrupt.ogg" range="270.0" loop="true" />
+      </StatusEffect>
+      <!-- add tag "thal_corruptdna(type)" when condition hits zero so grafters know how to behave -->
+      <StatusEffect type="OnBroken" target="This" Tags="thal_corruptdna" IsOn="false" >
+        <Sound file="Mods/Thalassophobia/Items/Jobgear/Scientist/Corrupt1.ogg" volume="1.0" range="500" selectionmode="random" />
+        <Sound file="Mods/Thalassophobia/Items/Jobgear/Scientist/Corrupt2.ogg" volume="1.0" range="500" />
+        <Sound file="Mods/Thalassophobia/Items/Jobgear/Scientist/Corrupt3.ogg" volume="1.0" range="500" />
+      </StatusEffect>
     </LightComponent>
   </Item>
   <Item name="" identifier="thal_dnahammer" category="Material" cargocontaineridentifier="metalcrate" description="" Tags="smallitem,thal_dna" spritecolor="255,130,140,200" InventoryIconColor="255,230,140,200" scale="0.5" impactsoundtag="impact_metal_light">
+    <!-- AI try to put DNA in preservation areas -->
+    <PreferredContainer primary="thal_dnapreserve" minamount="0" maxamount="0" spawnprobability="0.0" />
     <Sprite name="dna" texture="Mods/Thalassophobia/Items/Jobgear/Scientist/science.png" sourcerect="459,198,45,43" depth="0.6" origin="0.5,0.5" />
+    <BrokenSprite name="corrupt dna" texture="Mods/Thalassophobia/Items/Jobgear/Scientist/science.png" sourcerect="454,406,52,51" depth="0.6" origin="0.5,0.5" maxcondition="0" fadein="false" />
     <Body width="55" height="55" density="20" />
     <Holdable slots="Any,RightHand,LeftHand" handle1="0,0" msg="ItemMsgPickUpSelect" />
-    <LightComponent range="1" castshadows="false" lightcolor="255,230,140,200" IsOn="true" powerconsumption="0" blinkFrequency="0" allowingameediting="false">
+    <LightComponent range="1" castshadows="false" lightcolor="255,130,140,200" IsOn="true" powerconsumption="0" blinkFrequency="0" allowingameediting="false">
       <Sprite name="dnalight" texture="Mods/Thalassophobia/Items/Jobgear/Scientist/science.png" sourcerect="459,198,45,43" depth="0.6" origin="0.5,0.5" />
+      <!-- flicker=0 means stored properly, flicker 0.9 means stored improperly -->
+      <StatusEffect type="OnContained" target="This" setvalue="true" delay="1.0" stackable="false" flicker="0.9">
+				<Conditional Condition="gt 0" />
+      </StatusEffect>
+      <StatusEffect type="OnContained" target="This" comparison="Or" setvalue="true" flicker="0">
+        <Conditional HasTag="eq thal_dnapreserve" targetcontainer="true" />
+      </StatusEffect>
+      <!-- Note that dna will still decay even when in "waterproof" containers -->
+      <StatusEffect type="OnContained" target="This" comparison="And" condition="-0.5">
+        <Conditional flicker="eq 0.9" />
+        <Conditional Condition="gt 0" />
+        <sound file="Mods/Thalassophobia/Items/Jobgear/Scientist/Dnacorrupt.ogg" range="270.0" loop="true" />
+      </StatusEffect>
+      <!-- for lying around -->
+      <StatusEffect type="OnNotContained" target="This" comparison="And" condition="-0.5">
+        <Conditional InWater="eq false" />
+        <Conditional Condition="gt 0" />
+        <sound file="Mods/Thalassophobia/Items/Jobgear/Scientist/Dnacorrupt.ogg" range="270.0" loop="true" />
+      </StatusEffect>
+      <!-- add tag "thal_corruptdna(type)" when condition hits zero so grafters know how to behave -->
+      <StatusEffect type="OnBroken" target="This" Tags="thal_corruptdna" IsOn="false" >
+        <Sound file="Mods/Thalassophobia/Items/Jobgear/Scientist/Corrupt1.ogg" volume="1.0" range="500" selectionmode="random" />
+        <Sound file="Mods/Thalassophobia/Items/Jobgear/Scientist/Corrupt2.ogg" volume="1.0" range="500" />
+        <Sound file="Mods/Thalassophobia/Items/Jobgear/Scientist/Corrupt3.ogg" volume="1.0" range="500" />
+      </StatusEffect>
+    </LightComponent>
+  </Item>
+  <Item name="" identifier="thal_dnathresher" category="Material" cargocontaineridentifier="metalcrate" description="" Tags="smallitem,thal_dna" spritecolor="180,180,20,255" InventoryIconColor="180,180,20,255" scale="0.5" impactsoundtag="impact_metal_light">
+    <!-- AI try to put DNA in preservation areas -->
+    <PreferredContainer primary="thal_dnapreserve" minamount="0" maxamount="0" spawnprobability="0.0" />
+    <Sprite name="dna" texture="Mods/Thalassophobia/Items/Jobgear/Scientist/science.png" sourcerect="459,198,45,43" depth="0.6" origin="0.5,0.5" />
+    <BrokenSprite name="corrupt dna" texture="Mods/Thalassophobia/Items/Jobgear/Scientist/science.png" sourcerect="454,406,52,51" depth="0.6" origin="0.5,0.5" maxcondition="0" fadein="false" />
+    <Body width="55" height="55" density="20" />
+    <Holdable slots="Any,RightHand,LeftHand" handle1="0,0" msg="ItemMsgPickUpSelect" />
+    <LightComponent range="1" castshadows="false" lightcolor="180,180,20,255" IsOn="true" powerconsumption="0" blinkFrequency="0" allowingameediting="false">
+      <Sprite name="dnalight" texture="Mods/Thalassophobia/Items/Jobgear/Scientist/science.png" sourcerect="459,198,45,43" depth="0.6" origin="0.5,0.5" />
+      <!-- flicker=0 means stored properly, flicker 0.9 means stored improperly -->
+      <StatusEffect type="OnContained" target="This" setvalue="true" delay="1.0" stackable="false" flicker="0.9">
+				<Conditional Condition="gt 0" />
+      </StatusEffect>
+      <StatusEffect type="OnContained" target="This" comparison="Or" setvalue="true" flicker="0">
+        <Conditional HasTag="eq thal_dnapreserve" targetcontainer="true" />
+      </StatusEffect>
+      <!-- Note that dna will still decay even when in "waterproof" containers -->
+      <StatusEffect type="OnContained" target="This" comparison="And" condition="-0.5">
+        <Conditional flicker="eq 0.9" />
+        <Conditional Condition="gt 0" />
+        <sound file="Mods/Thalassophobia/Items/Jobgear/Scientist/Dnacorrupt.ogg" range="270.0" loop="true" />
+      </StatusEffect>
+      <!-- for lying around -->
+      <StatusEffect type="OnNotContained" target="This" comparison="And" condition="-0.5">
+        <Conditional InWater="eq false" />
+        <Conditional Condition="gt 0" />
+        <sound file="Mods/Thalassophobia/Items/Jobgear/Scientist/Dnacorrupt.ogg" range="270.0" loop="true" />
+      </StatusEffect>
+      <!-- add tag "thal_corruptdna(type)" when condition hits zero so grafters know how to behave -->
+      <StatusEffect type="OnBroken" target="This" Tags="thal_corruptdna" IsOn="false" >
+        <Sound file="Mods/Thalassophobia/Items/Jobgear/Scientist/Corrupt1.ogg" volume="1.0" range="500" selectionmode="random" />
+        <Sound file="Mods/Thalassophobia/Items/Jobgear/Scientist/Corrupt2.ogg" volume="1.0" range="500" />
+        <Sound file="Mods/Thalassophobia/Items/Jobgear/Scientist/Corrupt3.ogg" volume="1.0" range="500" />
+      </StatusEffect>
     </LightComponent>
   </Item>
   <Item name="DON'T USE" identifier="thal_dnathalamus" category="Material" cargocontaineridentifier="metalcrate" description="" Tags="smallitem,thal_dna" spritecolor="255,130,140,200" hideinmenus="true" InventoryIconColor="255,230,140,200" scale="0.5" impactsoundtag="impact_metal_light">
+    <!-- AI try to put DNA in preservation areas -->
+    <PreferredContainer primary="thal_dnapreserve" minamount="0" maxamount="0" spawnprobability="0.0" />
     <Sprite name="dna" texture="Mods/Thalassophobia/Items/Jobgear/Scientist/science.png" sourcerect="459,198,45,43" depth="0.6" origin="0.5,0.5" />
+    <BrokenSprite name="corrupt dna" texture="Mods/Thalassophobia/Items/Jobgear/Scientist/science.png" sourcerect="454,406,52,51" depth="0.6" origin="0.5,0.5" maxcondition="0" fadein="false" />
     <Body width="55" height="55" density="20" />
     <Holdable slots="Any,RightHand,LeftHand" handle1="0,0" msg="ItemMsgPickUpSelect" />
-    <LightComponent range="1" castshadows="false" lightcolor="255,230,140,200" IsOn="true" powerconsumption="0" blinkFrequency="0" allowingameediting="false">
+    <LightComponent range="1" castshadows="false" lightcolor="150,255,180,200" IsOn="true" powerconsumption="0" blinkFrequency="0" allowingameediting="false">
       <Sprite name="dnalight" texture="Mods/Thalassophobia/Items/Jobgear/Scientist/science.png" sourcerect="459,198,45,43" depth="0.6" origin="0.5,0.5" />
+      <!-- flicker=0 means stored properly, flicker 0.9 means stored improperly -->
+      <StatusEffect type="OnContained" target="This" setvalue="true" delay="1.0" stackable="false" flicker="0.9">
+				<Conditional Condition="gt 0" />
+      </StatusEffect>
+      <StatusEffect type="OnContained" target="This" comparison="Or" setvalue="true" flicker="0">
+        <Conditional HasTag="eq thal_dnapreserve" targetcontainer="true" />
+      </StatusEffect>
+      <!-- Note that dna will still decay even when in "waterproof" containers -->
+      <StatusEffect type="OnContained" target="This" comparison="And" condition="-0.5">
+        <Conditional flicker="eq 0.9" />
+        <Conditional Condition="gt 0" />
+        <sound file="Mods/Thalassophobia/Items/Jobgear/Scientist/Dnacorrupt.ogg" range="270.0" loop="true" />
+      </StatusEffect>
+      <!-- for lying around -->
+      <StatusEffect type="OnNotContained" target="This" comparison="And" condition="-0.5">
+        <Conditional InWater="eq false" />
+        <Conditional Condition="gt 0" />
+        <sound file="Mods/Thalassophobia/Items/Jobgear/Scientist/Dnacorrupt.ogg" range="270.0" loop="true" />
+      </StatusEffect>
+      <!-- add tag "thal_corruptdna(type)" when condition hits zero so grafters know how to behave -->
+      <StatusEffect type="OnBroken" target="This" Tags="thal_corruptdna" IsOn="false" >
+        <Sound file="Mods/Thalassophobia/Items/Jobgear/Scientist/Corrupt1.ogg" volume="1.0" range="500" selectionmode="random" />
+        <Sound file="Mods/Thalassophobia/Items/Jobgear/Scientist/Corrupt2.ogg" volume="1.0" range="500" />
+        <Sound file="Mods/Thalassophobia/Items/Jobgear/Scientist/Corrupt3.ogg" volume="1.0" range="500" />
+      </StatusEffect>
     </LightComponent>
   </Item>
   <Item name="" identifier="thal_dnaramblin" category="Material" cargocontaineridentifier="metalcrate" description="" Tags="smallitem,thal_dna" spritecolor="245,50,180,200" InventoryIconColor="245,50,180,200" scale="0.5" impactsoundtag="impact_metal_light">
+    <!-- AI try to put DNA in preservation areas -->
+    <PreferredContainer primary="thal_dnapreserve" minamount="0" maxamount="0" spawnprobability="0.0" />
     <Sprite name="dna" texture="Mods/Thalassophobia/Items/Jobgear/Scientist/science.png" sourcerect="459,198,45,43" depth="0.6" origin="0.5,0.5" />
+    <BrokenSprite name="corrupt dna" texture="Mods/Thalassophobia/Items/Jobgear/Scientist/science.png" sourcerect="454,406,52,51" depth="0.6" origin="0.5,0.5" maxcondition="0" fadein="false" />
     <Body width="55" height="55" density="20" />
     <Holdable slots="Any,RightHand,LeftHand" handle1="0,0" msg="ItemMsgPickUpSelect" />
-    <LightComponent range="1" castshadows="false" lightcolor="245,50,180,200" IsOn="true" powerconsumption="0" blinkFrequency="0" allowingameediting="false">
+    <LightComponent range="1" castshadows="false" lightcolor="150,255,180,200" IsOn="true" powerconsumption="0" blinkFrequency="0" allowingameediting="false">
       <Sprite name="dnalight" texture="Mods/Thalassophobia/Items/Jobgear/Scientist/science.png" sourcerect="459,198,45,43" depth="0.6" origin="0.5,0.5" />
+      <!-- flicker=0 means stored properly, flicker 0.9 means stored improperly -->
+      <StatusEffect type="OnContained" target="This" setvalue="true" delay="1.0" stackable="false" flicker="0.9">
+				<Conditional Condition="gt 0" />
+      </StatusEffect>
+      <StatusEffect type="OnContained" target="This" comparison="Or" setvalue="true" flicker="0">
+        <Conditional HasTag="eq thal_dnapreserve" targetcontainer="true" />
+      </StatusEffect>
+      <!-- Note that dna will still decay even when in "waterproof" containers -->
+      <StatusEffect type="OnContained" target="This" comparison="And" condition="-0.5">
+        <Conditional flicker="eq 0.9" />
+        <Conditional Condition="gt 0" />
+        <sound file="Mods/Thalassophobia/Items/Jobgear/Scientist/Dnacorrupt.ogg" range="270.0" loop="true" />
+      </StatusEffect>
+      <!-- for lying around -->
+      <StatusEffect type="OnNotContained" target="This" comparison="And" condition="-0.5">
+        <Conditional InWater="eq false" />
+        <Conditional Condition="gt 0" />
+        <sound file="Mods/Thalassophobia/Items/Jobgear/Scientist/Dnacorrupt.ogg" range="270.0" loop="true" />
+      </StatusEffect>
+      <!-- add tag "thal_corruptdna(type)" when condition hits zero so grafters know how to behave -->
+      <StatusEffect type="OnBroken" target="This" Tags="thal_corruptdna" IsOn="false" >
+        <Sound file="Mods/Thalassophobia/Items/Jobgear/Scientist/Corrupt1.ogg" volume="1.0" range="500" selectionmode="random" />
+        <Sound file="Mods/Thalassophobia/Items/Jobgear/Scientist/Corrupt2.ogg" volume="1.0" range="500" />
+        <Sound file="Mods/Thalassophobia/Items/Jobgear/Scientist/Corrupt3.ogg" volume="1.0" range="500" />
+      </StatusEffect>
     </LightComponent>
   </Item>
   <Item name="" identifier="thal_dnamaggot" category="Material" cargocontaineridentifier="metalcrate" description="" Tags="smallitem,thal_dna" spritecolor="180,140,80,200" InventoryIconColor="180,140,80,200" scale="0.5" impactsoundtag="impact_metal_light">
+    <!-- AI try to put DNA in preservation areas -->
+    <PreferredContainer primary="thal_dnapreserve" minamount="0" maxamount="0" spawnprobability="0.0" />
     <Sprite name="dna" texture="Mods/Thalassophobia/Items/Jobgear/Scientist/science.png" sourcerect="459,198,45,43" depth="0.6" origin="0.5,0.5" />
+    <BrokenSprite name="corrupt dna" texture="Mods/Thalassophobia/Items/Jobgear/Scientist/science.png" sourcerect="454,406,52,51" depth="0.6" origin="0.5,0.5" maxcondition="0" fadein="false" />
     <Body width="55" height="55" density="20" />
     <Holdable slots="Any,RightHand,LeftHand" handle1="0,0" msg="ItemMsgPickUpSelect" />
-    <LightComponent range="1" castshadows="false" lightcolor="180,140,80,200" IsOn="true" powerconsumption="0" blinkFrequency="0" allowingameediting="false">
+    <LightComponent range="1" castshadows="false" lightcolor="150,255,180,200" IsOn="true" powerconsumption="0" blinkFrequency="0" allowingameediting="false">
       <Sprite name="dnalight" texture="Mods/Thalassophobia/Items/Jobgear/Scientist/science.png" sourcerect="459,198,45,43" depth="0.6" origin="0.5,0.5" />
+      <!-- flicker=0 means stored properly, flicker 0.9 means stored improperly -->
+      <StatusEffect type="OnContained" target="This" setvalue="true" delay="1.0" stackable="false" flicker="0.9">
+				<Conditional Condition="gt 0" />
+      </StatusEffect>
+      <StatusEffect type="OnContained" target="This" comparison="Or" setvalue="true" flicker="0">
+        <Conditional HasTag="eq thal_dnapreserve" targetcontainer="true" />
+      </StatusEffect>
+      <!-- Note that dna will still decay even when in "waterproof" containers -->
+      <StatusEffect type="OnContained" target="This" comparison="And" condition="-0.5">
+        <Conditional flicker="eq 0.9" />
+        <Conditional Condition="gt 0" />
+        <sound file="Mods/Thalassophobia/Items/Jobgear/Scientist/Dnacorrupt.ogg" range="270.0" loop="true" />
+      </StatusEffect>
+      <!-- for lying around -->
+      <StatusEffect type="OnNotContained" target="This" comparison="And" condition="-0.5">
+        <Conditional InWater="eq false" />
+        <Conditional Condition="gt 0" />
+        <sound file="Mods/Thalassophobia/Items/Jobgear/Scientist/Dnacorrupt.ogg" range="270.0" loop="true" />
+      </StatusEffect>
+      <!-- add tag "thal_corruptdna(type)" when condition hits zero so grafters know how to behave -->
+      <StatusEffect type="OnBroken" target="This" Tags="thal_corruptdna" IsOn="false" >
+        <Sound file="Mods/Thalassophobia/Items/Jobgear/Scientist/Corrupt1.ogg" volume="1.0" range="500" selectionmode="random" />
+        <Sound file="Mods/Thalassophobia/Items/Jobgear/Scientist/Corrupt2.ogg" volume="1.0" range="500" />
+        <Sound file="Mods/Thalassophobia/Items/Jobgear/Scientist/Corrupt3.ogg" volume="1.0" range="500" />
+      </StatusEffect>
     </LightComponent>
-  </Item>
-  <Item name="I AM ERROR" identifier="thal_dnathalamusprojectile" tags="fleshguntendon,thalamus,revolverammo,smallitem,stungundart,stungunammo" health="200" hideinmenus="true" category="Thalamus" sonarsize="5" scale="1" damagedbyexplosions="false" damagedbyprojectiles="false" damagedbyrepairtools="false" damagedbymeleeweapons="false" impactsoundtag="impact_soft">
-    <InventoryIcon texture="Content/Map/Thalamus/thalamus.png" sourcerect="676,296,24,48" origin="0.5,0.5" />
-    <Sprite texture="Content/Map/Thalamus/thalamus.png" sourcerect="672,288,32,64" depth="0.55" origin="0.5,0.5" />
-    <Body radius="10" density="0" bodytype="Kinematic" />
-    <Rope targetpullforce="10" projectilepullforce="10" maxlength="10000" snaponcollision="false" spritewidth="30" tile="true">
-      <Sprite texture="Content/Map/Thalamus/thalamus.png" sourcerect="617,352,174,32" depth="0.57" origin="0.5,0.5" />
-      <EndSprite texture="Content/Map/Thalamus/thalamus.png" sourcerect="672,288,32,64" depth="0.56" origin="0.5,0.5" />
-      <!-- Automatically snap after 300 seconds -->
-      <StatusEffect type="OnUse" target="This" Snapped="true" delay="300" />
-      <!-- Remove 1 second after snapping -->
-      <StatusEffect type="Always" target="This" delay="1" checkconditionalalways="true">
-        <Conditional Snapped="true" />
-      </StatusEffect>
-      <!-- Snap after 5 seconds if not stuck to anything -->
-      <!--
-      <StatusEffect type="OnUse" target="This" Snapped="true" delay="5" checkconditionalalways="true">
-        <Conditional targetitemcomponent="Projectile" IsStuckToTarget="false" />
-      </StatusEffect>
-      -->
-      <StatusEffect type="OnDeath" target="This" Snapped="true">
-        <Sound file="Content/Sounds/Damage/Gore1.ogg" range="2000" selectionmode="Random" />
-        <Sound file="Content/Sounds/Damage/Gore2.ogg" range="2000" />
-        <Sound file="Content/Sounds/Damage/Gore3.ogg" range="2000" />
-        <ParticleEmitter particle="organeruption" particleamount="50" scalemin="0.5" scalemax="1" velocitymin="100" velocitymax="500" anglemin="0" anglemax="360" />
-        <ParticleEmitter particle="heavygib" drawontop="true" particleamount="3" scalemin="1" scalemax="1" velocitymin="0" velocitymax="0" anglemin="0" anglemax="360" />
-        <ParticleEmitter particle="gib" particleamount="20" scalemin="0.25" scalemax="1" velocitymin="100" velocitymax="300" anglemin="0" anglemax="360" />
-        <ParticleEmitter particle="bloodsplash" particleamount="10" velocitymin="0" velocitymax="300" anglemin="0" anglemax="360" scalemin="1" scalemax="1.5" />
-        <ParticleEmitter particle="whitegoosplash" particleamount="10" velocitymin="0" velocitymax="300" anglemin="0" anglemax="360" scalemin="1" scalemax="1.5" />
-      </StatusEffect>
-      <StatusEffect type="OnDamaged" target="This">
-        <Sound file="Content/Sounds/Damage/LimbSlash2.ogg" range="1000" />
-        <ParticleEmitter particle="bloodsplash" particleamount="1" scalemin="1" scalemax="1.5" velocitymin="0" velocitymax="100" anglemin="0" anglemax="360" />
-        <ParticleEmitter particle="waterblood" particleamount="1" anglemin="0" anglemax="360" scalemin="2" scalemax="4" />
-        <ParticleEmitter particle="gib" particleamount="4" scalemin="0.25" scalemax="1" velocitymin="100" velocitymax="300" anglemin="0" anglemax="360" />
-      </StatusEffect>
-    </Rope>
-    <Projectile characterusable="false" launchimpulse="1.0" sticktostructures="true" sticktocharacters="True" stickpermanently="true" maxtargetstohit="0">
-      <Attack structuredamage="5" targetforce="10" itemdamage="20" severlimbsprobability="0.1">
-        <Affliction identifier="bleeding" strength="40" />
-        <Affliction identifier="gunshotwound" strength="30" />
-        <Affliction identifier="stun" strength="0.4" />
-      </Attack>
-      <StatusEffect type="OnImpact" target="This">
-        <Sound file="Content/Map/Thalamus/Sounds/CARRIER_harpoonHit1.ogg" range="1000" selectionmode="Random" />
-        <Sound file="Content/Map/Thalamus/Sounds/CARRIER_harpoonHit2.ogg" range="1000" />
-        <ParticleEmitter particle="gib" anglemin="0" anglemax="360" particleamount="15" velocitymin="100" velocitymax="2000" scalemin="0.5" scalemax="1.0" />
-        <ParticleEmitter particle="heavygib" anglemin="0" anglemax="360" particleamount="15" velocitymin="100" velocitymax="500" scalemin="0.5" scalemax="1.0" />
-      </StatusEffect>
-    </Projectile>
-  </Item>
-  <Item name="fleshrev" identifier="thal_testrevolver" category="Equipment" cargocontaineridentifier="metalcrate" tags="smallitem,weapon,gun" Scale="0.5" impactsoundtag="impact_metal_light">
-    <InventoryIcon texture="Content/Items/InventoryIconAtlas.png" sourcerect="128,64,64,64" origin="0.5,0.5" />
-    <Sprite texture="weapons_new.png" sourcerect="0,418,76,41" depth="0.55" origin="0.5,0.5" />
-    <Body width="72" height="40" density="50" />
-    <Holdable slots="Any,RightHand,LeftHand" controlpose="true" aimpos="90,10" handle1="-11,-7" msg="ItemMsgPickUpSelect" />
-    <RangedWeapon barrelpos="14,6" spread="0" unskilledspread="2" combatPriority="70" drawhudwhenequipped="true" crosshairscale="0.2">
-      <Crosshair texture="Content/Items/Weapons/Crosshairs.png" sourcerect="0,256,256,256" />
-      <CrosshairPointer texture="Content/Items/Weapons/Crosshairs.png" sourcerect="256,256,256,256" />
-      <Sound file="Content/Items/Weapons/Revolver1.ogg" type="OnUse" range="3000" selectionmode="Random" />
-      <Sound file="Content/Items/Weapons/Revolver2.ogg" type="OnUse" range="3000" />
-      <Sound file="Content/Items/Weapons/Revolver3.ogg" type="OnUse" range="3000" />
-      <ParticleEmitter particle="muzzleflash" particleamount="1" velocitymin="0" velocitymax="0" />
-      <StatusEffect type="OnUse">
-        <Explosion range="150.0" force="5" shockwave="false" smoke="false" flames="false" sparks="false" underwaterbubble="false" camerashake="6.0" />
-      </StatusEffect>
-      <RequiredItems items="revolverammo" type="Contained" msg="ItemMsgAmmoRequired" />
-      <RequiredSkill identifier="weapons" level="40" />
-    </RangedWeapon>
-    <ItemContainer capacity="1" maxstacksize="6" hideitems="true" containedstateindicatorstyle="bullet">
-      <Containable items="revolverammo" />
-    </ItemContainer>
-    <aitarget sightrange="2000" soundrange="5000" fadeouttime="5" />
-    <Upgrade gameversion="0.10.0.0" scale="0.5" />
   </Item>
 </Items>
