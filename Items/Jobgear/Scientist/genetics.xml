@@ -486,7 +486,7 @@
       <StatusEffect type="OnActive" target="This" stackable="false" disabledeltatime="true"></StatusEffect>
     </LightComponent>
   </Item>
-  <Item name="" identifier="thal_geneticinit" spritecolor="255,220,200,255" InventoryIconColor="255,220,200,255" hideconditionbar="true" category="Equipment" Tags="smallitem,medical" useinhealthinterface="true" cargocontaineridentifier="chemicalcrate" description="" scale="0.5" impactsoundtag="impact_soft">
+  <Item name="" identifier="thal_geneticinit" spritecolor="255,220,180,255" InventoryIconColor="255,240,180,255" hideconditionbar="true" category="Equipment" Tags="smallitem,medical" useinhealthinterface="true" cargocontaineridentifier="chemicalcrate" description="" scale="0.5" impactsoundtag="impact_soft">
     <PreferredContainer primary="medcab" minamount="1" maxamount="3" spawnprobability="1" />
     <PreferredContainer primary="wreckmedcab" minamount="0" maxamount="2" spawnprobability="0.5" />
     <Price baseprice="1000">
@@ -569,7 +569,7 @@
       </StatusEffect>
     </MeleeWeapon>
   </Item>
-  <Item name="" identifier="thal_geneticgraft" hideconditionbar="true" spritecolor="180,255,220,255" InventoryIconColor="180,255,220,255" category="Equipment" Tags="smallitem,medical" useinhealthinterface="true" cargocontaineridentifier="chemicalcrate" description="" scale="0.5" impactsoundtag="impact_soft">
+  <Item name="" identifier="thal_geneticgraft" hideconditionbar="true" spritecolor="200,180,250,255" InventoryIconColor="200,180,250,255" category="Equipment" Tags="smallitem,medical" useinhealthinterface="true" cargocontaineridentifier="chemicalcrate" description="" scale="0.5" impactsoundtag="impact_soft">
     <PreferredContainer primary="medcab" minamount="1" maxamount="1" spawnprobability="1" />
     <PreferredContainer primary="wreckmedcab" minamount="0" maxamount="2" spawnprobability="0.5" />
     <SuitableTreatment identifier="thal_disorderexplode" suitability="10" />
@@ -806,8 +806,8 @@
         <RequiredItem items="thal_corruptdna" type="Contained" excludebroken="false"  />
         <Affliction identifier="thal_disorderacid" strength="100" probability="0.6" />
         <Affliction identifier="thal_disorderbuff" strength="100" probability="0.75" />
-        <Affliction identifier="thal_disorderseizure" strength="100" probability="0.6" />
         <Affliction identifier="thal_disorderpressure" strength="100" probability="0.6" />
+        <Affliction identifier="thal_disorderseizure" strength="100" probability="0.6" />
         <Affliction identifier="thal_disorderairloss" strength="100" probability="0.6" />
         <Affliction identifier="thal_disorderfart" strength="100" probability="0.5" />
         <Affliction identifier="thal_disorderhusk" strength="100" probability="0.5" />
@@ -953,6 +953,352 @@
       <StatusEffect type="OnContained" target="This" setvalue="true" condition="100" delay="3.0" />
     </ItemContainer>
   </Item>
+  
+  <Item name="" identifier="thal_disordersave" Health="80" spritecolor="210,255,200,255" InventoryIconColor="210,255,200,255" category="Equipment" Tags="smallitem,medical" useinhealthinterface="true" cargocontaineridentifier="chemicalcrate" description="" scale="0.5" impactsoundtag="impact_soft" OriginalOutpost="nodata" showcontentsintooltip="true" >
+    <PreferredContainer primary="medcab" minamount="1" maxamount="1" spawnprobability="1" />
+    <PreferredContainer primary="wreckmedcab" minamount="0" maxamount="2" spawnprobability="0.5" />
+    <Deconstruct time="20">
+      <Item identifier="organicfiber" copycondition="true" mincondition="0.1" />
+    </Deconstruct>
+    <InventoryIcon texture="Content/Items/InventoryIconAtlas.png" sourcerect="897,449,63,63" origin="0.5,0.5" />
+    <Sprite texture="Content/Items/Medical/Medicines.png" sourcerect="223,69,38,70" depth="0.6" origin="0.5,0.5" />
+    <Body width="25" height="40" density="20" />
+    <MeleeWeapon canBeCombined="true" removeOnCombined="true" slots="Any,RightHand+LeftHand" aimable="true" controlpose="false" aimpos="40,-10" handle1="-6,-2" handle2="-1,-2" msg="ItemMsgPickUpSelect" reload="1.0" >
+			<CustomInterface canbeselected="false" drawhudwhenequipped="true">
+        <GuiFrame relativesize="0.3,0.3" anchor="BottomCenter" absoluteoffset="20,20" style="ItemUI" color="0,0,0,0" />
+        <Button text="Reset to Sample Mode">
+          <StatusEffect type="OnUse" target="Contained" setvalue="true">
+            <Remove />
+          </StatusEffect>
+          <StatusEffect type="OnUse" target="This" setvalue="true" originalOutpost="nodata" >
+          </StatusEffect>
+        </Button>
+        <Button text="Cull Mode (Reduce to 1 Use)">
+          <StatusEffect type="OnUse" target="This" setvalue="true" drawinventory="true" condition="1">
+            <Sound file="Mods/Thalassophobia/Items/Jobgear/Scientist/Savedisorder.ogg" type="OnUse" range="500" />
+          </StatusEffect>
+        </Button>
+      </CustomInterface>
+			<StatusEffect type="OnBroken" target="This" delay="0.1" stackable="false">
+        <Remove />
+      </StatusEffect>
+			<!-- SAVE EFFECTS-->
+      <!-- READ/SPAWN EFFECTS -->
+      <StatusEffect tags="medical" type="OnUse" target="Character,This" disabledeltatime="true" originalOutpost="yesdata" comparison="And" delay="0.1" >
+        <SpawnItem identifier="thal_disdatfart" spawnposition="ThisInventory" />
+        <Affliction identifier="thal_fxbinary" amount="3" />
+        <Conditional thal_disorderfart="gt 0" />
+        <Conditional OriginalOutpost="eq nodata" />
+      </StatusEffect>
+      <StatusEffect tags="medical" type="OnUse" target="Character,This" disabledeltatime="true" originalOutpost="yesdata" comparison="And" delay="0.1" >
+        <SpawnItem identifier="thal_disdatseizure" spawnposition="ThisInventory" />
+        <Affliction identifier="thal_fxbinary" amount="3" />
+        <Conditional thal_disorderseizure="gt 0" />
+        <Conditional OriginalOutpost="eq nodata" />
+      </StatusEffect>
+      <StatusEffect tags="medical" type="OnUse" target="Character,This" disabledeltatime="true" originalOutpost="yesdata" comparison="And" delay="0.1" >
+        <SpawnItem identifier="thal_disdatexplode" spawnposition="ThisInventory" />
+        <Affliction identifier="thal_fxbinary" amount="3" />
+        <Conditional thal_disorderexplode="gt 0" />
+        <Conditional OriginalOutpost="eq nodata" />
+      </StatusEffect>
+      <StatusEffect tags="medical" type="OnUse" target="Character,This" disabledeltatime="true" originalOutpost="yesdata" comparison="And" delay="0.1" >
+        <SpawnItem identifier="thal_disdatfire" spawnposition="ThisInventory" />
+        <Affliction identifier="thal_fxbinary" amount="3" />
+        <Conditional thal_disorderfire="gt 0" />
+        <Conditional OriginalOutpost="eq nodata" />
+      </StatusEffect>
+      <StatusEffect tags="medical" type="OnUse" target="Character,This" disabledeltatime="true" originalOutpost="yesdata" comparison="And" delay="0.1" >
+        <SpawnItem identifier="thal_disdatairloss" spawnposition="ThisInventory" />
+        <Affliction identifier="thal_fxbinary" amount="3" />
+        <Conditional thal_disorderairloss="gt 0" />
+        <Conditional OriginalOutpost="eq nodata" />
+      </StatusEffect>
+      <StatusEffect tags="medical" type="OnUse" target="Character,This" disabledeltatime="true" originalOutpost="yesdata" comparison="And" delay="0.1" >
+        <SpawnItem identifier="thal_disdatbreathe" spawnposition="ThisInventory" />
+        <Affliction identifier="thal_fxbinary" amount="3" />
+        <Conditional thal_disorderbreathe="gt 0" />
+        <Conditional OriginalOutpost="eq nodata" />
+      </StatusEffect>
+      <StatusEffect tags="medical" type="OnUse" target="Character,This" disabledeltatime="true" originalOutpost="yesdata" comparison="And" delay="0.1" >
+        <SpawnItem identifier="thal_disdatemp" spawnposition="ThisInventory" />
+        <Affliction identifier="thal_fxbinary" amount="3" />
+        <Conditional thal_disorderemp="gt 0" />
+        <Conditional OriginalOutpost="eq nodata" />
+      </StatusEffect>
+      <StatusEffect tags="medical" type="OnUse" target="Character,This" disabledeltatime="true" originalOutpost="yesdata" comparison="And" delay="0.1" >
+        <SpawnItem identifier="thal_disdathypo" spawnposition="ThisInventory" />
+        <Affliction identifier="thal_fxbinary" amount="3" />
+        <Conditional thal_disorderhypo="gt 0" />
+        <Conditional OriginalOutpost="eq nodata" />
+      </StatusEffect>
+      <StatusEffect tags="medical" type="OnUse" target="Character,This" disabledeltatime="true" originalOutpost="yesdata" comparison="And" delay="0.1" >
+        <SpawnItem identifier="thal_disdatbloodloss" spawnposition="ThisInventory" />
+        <Affliction identifier="thal_fxbinary" amount="3" />
+        <Conditional thal_disorderbloodloss="gt 0" />
+        <Conditional OriginalOutpost="eq nodata" />
+      </StatusEffect>
+      <StatusEffect tags="medical" type="OnUse" target="Character,This" disabledeltatime="true" originalOutpost="yesdata" comparison="And" delay="0.1" >
+        <SpawnItem identifier="thal_disdatacid" spawnposition="ThisInventory" />
+        <Affliction identifier="thal_fxbinary" amount="3" />
+        <Conditional thal_disorderacid="gt 0" />
+        <Conditional OriginalOutpost="eq nodata" />
+      </StatusEffect>
+      <StatusEffect tags="medical" type="OnUse" target="Character,This" disabledeltatime="true" originalOutpost="yesdata" comparison="And" delay="0.1" >
+        <SpawnItem identifier="thal_disdatstupid" spawnposition="ThisInventory" />
+        <Affliction identifier="thal_fxbinary" amount="3" />
+        <Conditional thal_disorderstupid="gt 0" />
+        <Conditional OriginalOutpost="eq nodata" />
+      </StatusEffect>
+      <StatusEffect tags="medical" type="OnUse" target="Character,This" disabledeltatime="true" originalOutpost="yesdata" comparison="And" delay="0.1" >
+        <SpawnItem identifier="thal_disdatweapon" spawnposition="ThisInventory" />
+        <Affliction identifier="thal_fxbinary" amount="3" />
+        <Conditional thal_disorderweapon="gt 0" />
+        <Conditional OriginalOutpost="eq nodata" />
+      </StatusEffect>
+      <StatusEffect tags="medical" type="OnUse" target="Character,This" disabledeltatime="true" originalOutpost="yesdata" comparison="And" delay="0.1" >
+        <SpawnItem identifier="thal_disdatid" spawnposition="ThisInventory" />
+        <Affliction identifier="thal_fxbinary" amount="3" />
+        <Conditional thal_disorderid="gt 0" />
+        <Conditional OriginalOutpost="eq nodata" />
+      </StatusEffect>
+      <StatusEffect tags="medical" type="OnUse" target="Character,This" disabledeltatime="true" originalOutpost="yesdata" comparison="And" delay="0.1" >
+        <SpawnItem identifier="thal_disdatrad" spawnposition="ThisInventory" />
+        <Affliction identifier="thal_fxbinary" amount="3" />
+        <Conditional thal_disorderrad="gt 0" />
+        <Conditional OriginalOutpost="eq nodata" />
+      </StatusEffect>
+      <StatusEffect tags="medical" type="OnUse" target="Character,This" disabledeltatime="true" originalOutpost="yesdata" comparison="And" delay="0.1" >
+        <SpawnItem identifier="thal_disdatmumble" spawnposition="ThisInventory" />
+        <Affliction identifier="thal_fxbinary" amount="3" />
+        <Conditional thal_disordermumble="gt 0" />
+        <Conditional OriginalOutpost="eq nodata" />
+      </StatusEffect>
+      <StatusEffect tags="medical" type="OnUse" target="Character,This" disabledeltatime="true" originalOutpost="yesdata" comparison="And" delay="0.1" >
+        <SpawnItem identifier="thal_disdatbait" spawnposition="ThisInventory" />
+        <Affliction identifier="thal_fxbinary" amount="3" />
+        <Conditional thal_disorderbait="gt 0" />
+        <Conditional OriginalOutpost="eq nodata" />
+      </StatusEffect>
+      <StatusEffect tags="medical" type="OnUse" target="Character,This" disabledeltatime="true" originalOutpost="yesdata" comparison="And" delay="0.1" >
+        <SpawnItem identifier="thal_disdatdeath" spawnposition="ThisInventory" />
+        <Affliction identifier="thal_fxbinary" amount="3" />
+        <Conditional thal_disorderdeath="gt 0" />
+        <Conditional OriginalOutpost="eq nodata" />
+      </StatusEffect>
+      <StatusEffect tags="medical" type="OnUse" target="Character,This" disabledeltatime="true" originalOutpost="yesdata" comparison="And" delay="0.1" >
+        <SpawnItem identifier="thal_disdatpressure" spawnposition="ThisInventory" />
+        <Affliction identifier="thal_fxbinary" amount="3" />
+        <Conditional thal_disorderpressure="gt 0" />
+        <Conditional OriginalOutpost="eq nodata" />
+      </StatusEffect>
+      <StatusEffect tags="medical" type="OnUse" target="Character,This" disabledeltatime="true" originalOutpost="yesdata" comparison="And" delay="0.1" >
+        <SpawnItem identifier="thal_disdatthal" spawnposition="ThisInventory" />
+        <Affliction identifier="thal_fxbinary" amount="3" />
+        <Conditional thal_disorderthal="gt 0" />
+        <Conditional OriginalOutpost="eq nodata" />
+      </StatusEffect>
+      <StatusEffect tags="medical" type="OnUse" target="Character,This" disabledeltatime="true" originalOutpost="yesdata" comparison="And" delay="0.1" >
+        <SpawnItem identifier="thal_disdatbuff" spawnposition="ThisInventory" />
+        <Affliction identifier="thal_fxbinary" amount="3" />
+        <Conditional thal_disorderbuff="gt 0" />
+        <Conditional OriginalOutpost="eq nodata" />
+      </StatusEffect>
+      <StatusEffect tags="medical" type="OnUse" target="Character,This" disabledeltatime="true" originalOutpost="yesdata" comparison="And" delay="0.1" >
+        <SpawnItem identifier="thal_disdathusk" spawnposition="ThisInventory" />
+        <Affliction identifier="thal_fxbinary" amount="3" />
+        <Conditional thal_disorderhusk="gt 0" />
+        <Conditional OriginalOutpost="eq nodata" />
+      </StatusEffect>
+      
+      <!-- FX FOR APPLYING-->
+      <StatusEffect tags="medical" type="OnUse" target="Character,This" delay="0" disabledeltatime="true" >
+        <Affliction identifier="thal_fxglitch" amount="3" />
+        <Conditional OriginalOutpost="eq yesdata" />
+      </StatusEffect>
+      <StatusEffect type="OnUse" target="This" delay="0" disabledeltatime="true" Condition="-8" >
+        <Conditional OriginalOutpost="eq yesdata" />
+      </StatusEffect>
+      <!-- APPLY DISORDERS -->
+      <StatusEffect tags="medical" type="OnUse" target="Character,This" delay="0" disabledeltatime="true" Condition="-2" >
+        <Affliction identifier="thal_disorderfart" amount="3" />
+        <RequiredItem items="thal_disdatfart" type="Contained" excludebroken="false"  />
+      </StatusEffect>
+      <StatusEffect tags="medical" type="OnUse" target="Character,This" delay="0" disabledeltatime="true" Condition="-2" >
+        <Affliction identifier="thal_disorderseizure" amount="3" />
+        <RequiredItem items="thal_disdatseizure" type="Contained" excludebroken="false"  />
+      </StatusEffect>
+      <StatusEffect tags="medical" type="OnUse" target="Character,This" delay="0" disabledeltatime="true" Condition="-6" >
+        <Affliction identifier="thal_disorderexplode" amount="3" />
+        <RequiredItem items="thal_disdatexplode" type="Contained" excludebroken="false"  />
+      </StatusEffect>
+      <StatusEffect tags="medical" type="OnUse" target="Character,This" delay="0" disabledeltatime="true" Condition="-12" >
+        <Affliction identifier="thal_disorderfire" amount="3" />
+        <RequiredItem items="thal_disdatfire" type="Contained" excludebroken="false"  />
+      </StatusEffect>
+      <StatusEffect tags="medical" type="OnUse" target="Character,This" delay="0" disabledeltatime="true" Condition="-8" >
+        <Affliction identifier="thal_disorderairloss" amount="3" />
+        <RequiredItem items="thal_disdatairloss" type="Contained" excludebroken="false"  />
+      </StatusEffect>
+      <StatusEffect tags="medical" type="OnUse" target="Character,This" delay="0" disabledeltatime="true" Condition="-6" >
+        <Affliction identifier="thal_disorderbreathe" amount="3" />
+        <RequiredItem items="thal_disdatbreathe" type="Contained" excludebroken="false"  />
+      </StatusEffect>
+      <StatusEffect tags="medical" type="OnUse" target="Character,This" delay="0" disabledeltatime="true" Condition="-8" >
+        <Affliction identifier="thal_disorderemp" amount="3" />
+        <RequiredItem items="thal_disdatemp" type="Contained" excludebroken="false"  />
+      </StatusEffect>
+      <StatusEffect tags="medical" type="OnUse" target="Character,This" delay="0" disabledeltatime="true" Condition="-6" >
+        <Affliction identifier="thal_disorderhypo" amount="3" />
+        <RequiredItem items="thal_disdathypo" type="Contained" excludebroken="false"  />
+      </StatusEffect>
+      <StatusEffect tags="medical" type="OnUse" target="Character,This" delay="0" disabledeltatime="true" Condition="-6" >
+        <Affliction identifier="thal_disorderbloodloss" amount="3" />
+        <RequiredItem items="thal_disdatbloodloss" type="Contained" excludebroken="false"  />
+      </StatusEffect>
+      <StatusEffect tags="medical" type="OnUse" target="Character,This" delay="0" disabledeltatime="true" Condition="-6" >
+        <Affliction identifier="thal_disorderacid" amount="3" />
+        <RequiredItem items="thal_disdatacid" type="Contained" excludebroken="false"  />
+      </StatusEffect>
+      <StatusEffect tags="medical" type="OnUse" target="Character,This" delay="0" disabledeltatime="true" Condition="-4" >
+        <Affliction identifier="thal_disorderstupid" amount="3" />
+        <RequiredItem items="thal_disdatstupid" type="Contained" excludebroken="false"  />
+      </StatusEffect>
+      <StatusEffect tags="medical" type="OnUse" target="Character,This" delay="0" disabledeltatime="true" Condition="-8" >
+        <Affliction identifier="thal_disorderweapon" amount="3" />
+        <RequiredItem items="thal_disdatweapon" type="Contained" excludebroken="false"  />
+      </StatusEffect>
+      <StatusEffect tags="medical" type="OnUse" target="Character,This" delay="0" disabledeltatime="true" Condition="-6" >
+        <Affliction identifier="thal_disorderid" amount="3" />
+        <RequiredItem items="thal_disdatid" type="Contained" excludebroken="false"  />
+      </StatusEffect>
+      <StatusEffect tags="medical" type="OnUse" target="Character,This" delay="0" disabledeltatime="true" Condition="-2" >
+        <Affliction identifier="thal_disorderrad" amount="3" />
+        <RequiredItem items="thal_disdatrad" type="Contained" excludebroken="false"  />
+      </StatusEffect>
+      <StatusEffect tags="medical" type="OnUse" target="Character,This" delay="0" disabledeltatime="true" Condition="-6" >
+        <Affliction identifier="thal_disordermumble" amount="3" />
+        <RequiredItem items="thal_disdatmumble" type="Contained" excludebroken="false"  />
+      </StatusEffect>
+      <StatusEffect tags="medical" type="OnUse" target="Character,This" delay="0" disabledeltatime="true" Condition="-2" >
+        <Affliction identifier="thal_disorderbait" amount="3" />
+        <RequiredItem items="thal_disdatbait" type="Contained" excludebroken="false"  />
+      </StatusEffect>
+      <StatusEffect tags="medical" type="OnUse" target="Character,This" delay="0" disabledeltatime="true" Condition="-8" >
+        <Affliction identifier="thal_disorderdeath" amount="3" />
+        <RequiredItem items="thal_disdatdeath" type="Contained" excludebroken="false"  />
+      </StatusEffect>
+      <StatusEffect tags="medical" type="OnUse" target="Character,This" delay="0" disabledeltatime="true" Condition="-6" >
+        <Affliction identifier="thal_disorderpressure" amount="3" />
+        <RequiredItem items="thal_disdatpressure" type="Contained" excludebroken="false"  />
+      </StatusEffect>
+      <StatusEffect tags="medical" type="OnUse" target="Character,This" delay="0" disabledeltatime="true" Condition="-4" >
+        <Affliction identifier="thal_disorderthal" amount="3" />
+        <RequiredItem items="thal_disdatthal" type="Contained" excludebroken="false"  />
+      </StatusEffect>
+      <StatusEffect tags="medical" type="OnUse" target="Character,This" delay="0" disabledeltatime="true" Condition="-2" >
+        <Affliction identifier="thal_disorderbuff" amount="3" />
+        <RequiredItem items="thal_disdatbuff" type="Contained" excludebroken="false"  />
+      </StatusEffect>
+      <StatusEffect tags="medical" type="OnUse" target="Character,This" delay="0" disabledeltatime="true" Condition="-6" >
+        <Affliction identifier="thal_disorderhusk" amount="3" />
+        <RequiredItem items="thal_disdathusk" type="Contained" excludebroken="false"  />
+      </StatusEffect>
+    </MeleeWeapon>
+    <ItemContainer capacity="30" hideitems="true" drawinventory="false" itempos="16,-15" containedspritedepth="0.56" ShowConditionInContainedStateIndicator="true" >
+      <ContainedStateIndicator texture="Content/UI/ContainerIndicators.png" sourcerect="0,157,92,27" />
+      <Containable items="thal_disdat" />
+    </ItemContainer>
+  </Item>
+  <!-- 
+  DATA ICONS 
+  -->
+  <Item identifier="thal_disdatfart" tags="thal_disdat" spritecolor="255,0,140,255" >
+    <Sprite texture="Mods/Thalassophobia/UI/MainIconsAtlas.png" sourcerect="768,896,128,128" depth="0.6" origin="0.5,0.5" /><Body radius="1" />
+    <Holdable slots="None" ><StatusEffect type="OnNotContained" target="This"><RemoveItem/></StatusEffect></Holdable>
+  </Item>
+  <Item identifier="thal_disdatexplode" tags="thal_disdat" descriptionidentifier="thal_disdatfart" spritecolor="255,0,140,255"  >
+    <Sprite texture="Mods/Thalassophobia/UI/MainIconsAtlas.png" sourcerect="640,896,128,128" depth="0.6" origin="0.5,0.5" /><Body radius="1" />
+<Holdable slots="None" ><StatusEffect type="OnNotContained" target="This"><RemoveItem/></StatusEffect></Holdable>
+  </Item>
+  <Item identifier="thal_disdatseizure" tags="thal_disdat" descriptionidentifier="thal_disdatfart" spritecolor="255,0,140,255"  >
+    <Sprite texture="Mods/Thalassophobia/UI/MainIconsAtlas.png" sourcerect="128,512,128,128" depth="0.6" origin="0.5,0.5" /><Body radius="1" />
+<Holdable slots="None" ><StatusEffect type="OnNotContained" target="This"><RemoveItem/></StatusEffect></Holdable>
+  </Item>
+  <Item identifier="thal_disdatfire" tags="thal_disdat" descriptionidentifier="thal_disdatfart" spritecolor="255,0,140,255"  >
+    <Sprite texture="Mods/Thalassophobia/UI/MainIconsAtlas.png" sourcerect="256,512,128,128" depth="0.6" origin="0.5,0.5" /><Body radius="1" />
+<Holdable slots="None" ><StatusEffect type="OnNotContained" target="This"><RemoveItem/></StatusEffect></Holdable>
+  </Item>
+  <Item identifier="thal_disdatairloss" tags="thal_disdat" descriptionidentifier="thal_disdatfart" spritecolor="255,0,140,255"  >
+    <Sprite texture="Mods/Thalassophobia/UI/MainIconsAtlas.png" sourcerect="384,512,128,128" depth="0.6" origin="0.5,0.5" /><Body radius="1" />
+<Holdable slots="None" ><StatusEffect type="OnNotContained" target="This"><RemoveItem/></StatusEffect></Holdable>
+  </Item>
+  <Item identifier="thal_disdatbreathe" tags="thal_disdat" descriptionidentifier="thal_disdatfart" spritecolor="255,0,140,255"  >
+    <Sprite texture="Mods/Thalassophobia/UI/MainIconsAtlas.png" sourcerect="512,512,128,128" depth="0.6" origin="0.5,0.5" /><Body radius="1" />
+<Holdable slots="None" ><StatusEffect type="OnNotContained" target="This"><RemoveItem/></StatusEffect></Holdable>
+  </Item>
+  <Item identifier="thal_disdatemp" tags="thal_disdat" descriptionidentifier="thal_disdatfart" spritecolor="255,0,140,255"  >
+    <Sprite texture="Mods/Thalassophobia/UI/MainIconsAtlas.png" sourcerect="640,512,128,128" depth="0.6" origin="0.5,0.5" /><Body radius="1" />
+<Holdable slots="None" ><StatusEffect type="OnNotContained" target="This"><RemoveItem/></StatusEffect></Holdable>
+  </Item>
+  <Item identifier="thal_disdathypo" tags="thal_disdat" descriptionidentifier="thal_disdatfart" spritecolor="255,0,140,255"  >
+    <Sprite texture="Mods/Thalassophobia/UI/MainIconsAtlas.png" sourcerect="768,512,128,128" depth="0.6" origin="0.5,0.5" /><Body radius="1" />
+<Holdable slots="None" ><StatusEffect type="OnNotContained" target="This"><RemoveItem/></StatusEffect></Holdable>
+  </Item>
+  <Item identifier="thal_disdatbloodloss" tags="thal_disdat" descriptionidentifier="thal_disdatfart" spritecolor="255,0,140,255"  >
+    <Sprite texture="Mods/Thalassophobia/UI/MainIconsAtlas.png" sourcerect="896,512,128,128" depth="0.6" origin="0.5,0.5" /><Body radius="1" />
+<Holdable slots="None" ><StatusEffect type="OnNotContained" target="This"><RemoveItem/></StatusEffect></Holdable>
+  </Item>
+  <Item identifier="thal_disdatacid" tags="thal_disdat" descriptionidentifier="thal_disdatfart" spritecolor="255,0,140,255"  >
+    <Sprite  texture="Mods/Thalassophobia/UI/MainIconsAtlas.png" sourcerect="768,384,128,128" depth="0.6" origin="0.5,0.5" /><Body radius="1" />
+<Holdable slots="None" ><StatusEffect type="OnNotContained" target="This"><RemoveItem/></StatusEffect></Holdable>
+  </Item>
+  <Item identifier="thal_disdatstupid" tags="thal_disdat" descriptionidentifier="thal_disdatfart" spritecolor="255,0,140,255"  >
+    <Sprite texture="Mods/Thalassophobia/UI/MainIconsAtlas.png" sourcerect="128,384,128,128" depth="0.6" origin="0.5,0.5" /><Body radius="1" />
+<Holdable slots="None" ><StatusEffect type="OnNotContained" target="This"><RemoveItem/></StatusEffect></Holdable>
+  </Item>
+  <Item identifier="thal_disdatweapon" tags="thal_disdat" descriptionidentifier="thal_disdatfart" spritecolor="255,0,140,255"  >
+    <Sprite texture="Mods/Thalassophobia/UI/MainIconsAtlas.png" sourcerect="256,384,128,128" depth="0.6" origin="0.5,0.5" /><Body radius="1" />
+<Holdable slots="None" ><StatusEffect type="OnNotContained" target="This"><RemoveItem/></StatusEffect></Holdable>
+  </Item>
+  <Item identifier="thal_disdatid" tags="thal_disdat" descriptionidentifier="thal_disdatfart" spritecolor="255,0,140,255"  >
+    <Sprite  texture="Mods/Thalassophobia/UI/MainIconsAtlas.png" sourcerect="384,384,128,128" depth="0.6" origin="0.5,0.5" /><Body radius="1" />
+<Holdable slots="None" ><StatusEffect type="OnNotContained" target="This"><RemoveItem/></StatusEffect></Holdable>
+  </Item>
+  <Item identifier="thal_disdatrad" tags="thal_disdat" descriptionidentifier="thal_disdatfart" spritecolor="255,0,140,255"  >
+    <Sprite  texture="Mods/Thalassophobia/UI/MainIconsAtlas.png" sourcerect="512,384,128,128"  depth="0.6" origin="0.5,0.5" /><Body radius="1" />
+<Holdable slots="None" ><StatusEffect type="OnNotContained" target="This"><RemoveItem/></StatusEffect></Holdable>
+  </Item>
+  <Item identifier="thal_disdatmumble" tags="thal_disdat" descriptionidentifier="thal_disdatfart" spritecolor="255,0,140,255"  >
+    <Sprite texture="Mods/Thalassophobia/UI/MainIconsAtlas.png" sourcerect="640,384,128,128" depth="0.6" origin="0.5,0.5" /><Body radius="1" />
+<Holdable slots="None" ><StatusEffect type="OnNotContained" target="This"><RemoveItem/></StatusEffect></Holdable>
+  </Item>
+  <Item identifier="thal_disdatbait" tags="thal_disdat" descriptionidentifier="thal_disdatfart" spritecolor="255,0,140,255"  >
+    <Sprite texture="Mods/Thalassophobia/UI/MainIconsAtlas.png" sourcerect="896,384,128,128" depth="0.6" origin="0.5,0.5" /><Body radius="1" />
+<Holdable slots="None" ><StatusEffect type="OnNotContained" target="This"><RemoveItem/></StatusEffect></Holdable>
+  </Item>
+  <Item identifier="thal_disdatdeath" tags="thal_disdat" descriptionidentifier="thal_disdatfart" spritecolor="255,0,140,255"  >
+    <Sprite texture="Mods/Thalassophobia/UI/MainIconsAtlas.png" sourcerect="0,896,128,128" depth="0.6" origin="0.5,0.5" /><Body radius="1" />
+<Holdable slots="None" ><StatusEffect type="OnNotContained" target="This"><RemoveItem/></StatusEffect></Holdable>
+  </Item>
+  <Item identifier="thal_disdatpressure" tags="thal_disdat" descriptionidentifier="thal_disdatfart" spritecolor="255,0,140,255"  >
+    <Sprite  texture="Mods/Thalassophobia/UI/MainIconsAtlas.png" sourcerect="128,896,128,128" depth="0.6" origin="0.5,0.5" /><Body radius="1" />
+<Holdable slots="None" ><StatusEffect type="OnNotContained" target="This"><RemoveItem/></StatusEffect></Holdable>
+  </Item>
+  <Item identifier="thal_disdatthal" tags="thal_disdat" descriptionidentifier="thal_disdatfart" spritecolor="255,0,140,255"  >
+    <Sprite texture="Mods/Thalassophobia/UI/MainIconsAtlas.png" sourcerect="256,896,128,128" depth="0.6" origin="0.5,0.5" /><Body radius="1" />
+<Holdable slots="None" ><StatusEffect type="OnNotContained" target="This"><RemoveItem/></StatusEffect></Holdable>
+  </Item>
+  <Item identifier="thal_disdatbuff" tags="thal_disdat" descriptionidentifier="thal_disdatfart" spritecolor="255,0,140,255"  >
+    <Sprite texture="Mods/Thalassophobia/UI/MainIconsAtlas.png" sourcerect="384,896,128,128" depth="0.6" origin="0.5,0.5" /><Body radius="1" />
+<Holdable slots="None" ><StatusEffect type="OnNotContained" target="This"><RemoveItem/></StatusEffect></Holdable>
+  </Item>
+  <Item identifier="thal_disdathusk" tags="thal_disdat" descriptionidentifier="thal_disdatfart" spritecolor="255,0,140,255"  >
+    <Sprite  texture="Mods/Thalassophobia/UI/MainIconsAtlas.png" sourcerect="512,896,128,128" depth="0.6" origin="0.5,0.5" /><Body radius="1" />
+<Holdable slots="None" ><StatusEffect type="OnNotContained" target="This"><RemoveItem/></StatusEffect></Holdable>
+  </Item>
+  
+  
   <Item name="" identifier="thal_dnamudraptor" category="Material" cargocontaineridentifier="metalcrate" description="" Tags="smallitem,thal_dna" spritecolor="180,160,255,255" InventoryIconColor="180,160,255,200" scale="0.5" impactsoundtag="impact_metal_light">
     <!-- AI try to put DNA in preservation areas -->
     <PreferredContainer primary="thal_dnapreserve" minamount="0" maxamount="0" spawnprobability="0.0" />

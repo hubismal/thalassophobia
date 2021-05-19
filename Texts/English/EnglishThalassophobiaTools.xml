@@ -331,6 +331,33 @@
   <entityname.thal_geneticgraft>DNA Grafter</entityname.thal_geneticgraft>
   <entitydescription.thal_geneticgraft>Syringe which DNA samples can be inserted into. When injected into someone undergoing a CRISPR-Cas9 induced meltdown, this attatches the DNA to the cut sections, resulting in en vivo gene splicing. Gene splicing can be used to cure genetic disorders, and even transform bodyparts. Requires a patient to be injected with a CRISPR-Cas9 solution first.</entitydescription.thal_geneticgraft>
   
+  <entityname.thal_disordersave>DNA Transplanter</entityname.thal_disordersave>
+  <entitydescription.thal_disordersave>Syringe capable of trasnfering genetic disorders or mutations (not actual creature splices). Inject a person who is inflicted with disorders/mutations to store them. Afterwards, any future injections with the same transplanter will grant the injectee whatever disorders are stored. Actual creature limb splices are not stored, only the mutations/disorders. Has limited uses.
+  
+  Currently Stored Disorders (Blank if None):</entitydescription.thal_disordersave>
+  <entityname.thal_disdatfart>Indigestion Syndrome</entityname.thal_disdatfart>
+  <entityname.thal_disdatexplode>Combustion Syndrome</entityname.thal_disdatexplode>
+  <entityname.thal_disdatseizure>Stumble Syndrome</entityname.thal_disdatseizure>
+  <entityname.thal_disdatfire>Thermal Syndrome</entityname.thal_disdatfire>
+  <entityname.thal_disdatairloss>Vacuum Syndrome</entityname.thal_disdatairloss>
+  <entityname.thal_disdatbreathe>Lung Failure Syndrome</entityname.thal_disdatbreathe>
+  <entityname.thal_disdatemp>EMP Syndrome</entityname.thal_disdatemp>
+  <entityname.thal_disdathypo>Hypothermia Syndrome</entityname.thal_disdathypo>
+  <entityname.thal_disdatbloodloss>Pressurized Blood Syndrome</entityname.thal_disdatbloodloss>
+  <entityname.thal_disdatacid>Acid Gas Syndrome</entityname.thal_disdatacid>
+  <entityname.thal_disdatstupid>Retardation Syndrome</entityname.thal_disdatstupid>
+  <entityname.thal_disdatweapon>PTSD Syndrome</entityname.thal_disdatweapon>
+  <entityname.thal_disdatid>Authority Arrest Syndrome</entityname.thal_disdatid>
+  <entityname.thal_disdatrad>Rad Sensitivity Syndrome</entityname.thal_disdatrad>
+  <entityname.thal_disdatmumble>Mumble Syndrome</entityname.thal_disdatmumble>
+  <entityname.thal_disdatbait>Bait Syndrome</entityname.thal_disdatbait>
+  <entityname.thal_disdatdeath>Sudden Death Syndrome</entityname.thal_disdatdeath>
+  <entityname.thal_disdatpressure>InstaCrush Syndrome</entityname.thal_disdatpressure>
+  <entityname.thal_disdatthal>Thalassophobia Syndrome</entityname.thal_disdatthal>
+  <entityname.thal_disdatbuff>High Metabolism Syndrome</entityname.thal_disdatbuff>
+  <entityname.thal_disdathusk>Topped-Off Husk Syndrome</entityname.thal_disdathusk>
+  <entitydescription.thal_disdatfart>An icon representing DNA data for a mutation/syndrome stored on a transplanter. Drag it out of your inventory to delete it.</entitydescription.thal_disdatfart>
+  
   <entityname.thal_dnascanner>DNA Scanner</entityname.thal_dnascanner>
   <entitydescription.thal_dnascanner>A DNA scanner that collects DNA from the saliva molecules of living beings. Will not work on dead creatures. Attach to a wall and interact with it. Scans whatever is underneath it but breaks over time.</entitydescription.thal_dnascanner>
   
