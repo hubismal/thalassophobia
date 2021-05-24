@@ -108,8 +108,10 @@
     </Fabricate>
   </Item>
   <Item name="" identifier="thal_bombcollartimed" category="Equipment" cargocontaineridentifier="metalcrate" tags="smallitem" description="" scale="0.5">
+		<!--
     <PreferredContainer primary="armcab" minamount="1" maxamount="1" spawnprobability="0.5" />
     <PreferredContainer primary="wreckarmcab" minamount="1" maxamount="2" spawnprobability="0.1" />
+    -->
     <Sprite name="Bombcollar Normal" texture="Mods/Thalassophobia/Items/Weapons/Explosives/bombcollar.png" depth="0.6" sourcerect="5,0,215,167" origin="0.5123859,0.53692484" scale="0.5" />
     <Body width="40" radius="30" density="15" />
     <Fabricate suitablefabricators="fabricator" requiredtime="100">
