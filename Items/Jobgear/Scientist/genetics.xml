@@ -955,7 +955,7 @@
   </Item>
   
   <Item name="" identifier="thal_disordersave" Health="80" spritecolor="210,255,200,255" InventoryIconColor="210,255,200,255" category="Equipment" Tags="smallitem,medical" useinhealthinterface="true" cargocontaineridentifier="chemicalcrate" description="" scale="0.5" impactsoundtag="impact_soft" OriginalOutpost="nodata" showcontentsintooltip="true" >
-    <PreferredContainer primary="medcab" minamount="1" maxamount="1" spawnprobability="1" />
+    <PreferredContainer primary="medcab" minamount="1" maxamount="2" spawnprobability="1" />
     <PreferredContainer primary="wreckmedcab" minamount="0" maxamount="2" spawnprobability="0.5" />
     <Deconstruct time="20">
       <Item identifier="organicfiber" copycondition="true" mincondition="0.1" />
@@ -1301,7 +1301,7 @@
   
   <Item name="" identifier="thal_dnamudraptor" category="Material" cargocontaineridentifier="metalcrate" description="" Tags="smallitem,thal_dna" spritecolor="180,160,255,255" InventoryIconColor="180,160,255,200" scale="0.5" impactsoundtag="impact_metal_light">
     <!-- AI try to put DNA in preservation areas -->
-    <PreferredContainer primary="thal_dnapreserve" minamount="0" maxamount="0" spawnprobability="0.0" />
+    <PreferredContainer primary="thal_dnapreserve" minamount="0" maxamount="4" spawnprobability="0.0" />
     <Sprite name="dna" texture="Mods/Thalassophobia/Items/Jobgear/Scientist/science.png" sourcerect="459,198,45,43" depth="0.6" origin="0.5,0.5" />
     <BrokenSprite name="corrupt dna" texture="Mods/Thalassophobia/Items/Jobgear/Scientist/science.png" sourcerect="454,406,52,51" depth="0.6" origin="0.5,0.5" maxcondition="0" fadein="false" />
     <Body width="55" height="55" density="20" />
@@ -1337,7 +1337,7 @@
   </Item>
   <Item name="" identifier="thal_dnahuman" category="Material" cargocontaineridentifier="metalcrate" description="" Tags="smallitem,thal_dna" spritecolor="150,255,180,200" InventoryIconColor="150,255,180,200" scale="0.5" impactsoundtag="impact_metal_light">
     <!-- AI try to put DNA in preservation areas -->
-    <PreferredContainer primary="thal_dnapreserve" minamount="0" maxamount="0" spawnprobability="0.0" />
+    <PreferredContainer primary="thal_dnapreserve" minamount="0" maxamount="4" spawnprobability="0.0" />
     <Sprite name="dna" texture="Mods/Thalassophobia/Items/Jobgear/Scientist/science.png" sourcerect="459,198,45,43" depth="0.6" origin="0.5,0.5" />
     <BrokenSprite name="corrupt dna" texture="Mods/Thalassophobia/Items/Jobgear/Scientist/science.png" sourcerect="454,406,52,51" depth="0.6" origin="0.5,0.5" maxcondition="0" fadein="false" />
     <Body width="55" height="55" density="20" />
@@ -1373,7 +1373,7 @@
   </Item>
   <Item name="" identifier="thal_dnacrawler" category="Material" cargocontaineridentifier="metalcrate" description="" Tags="smallitem,thal_dna" spritecolor="255,230,140,200" InventoryIconColor="255,230,140,200" scale="0.5" impactsoundtag="impact_metal_light">
     <!-- AI try to put DNA in preservation areas -->
-    <PreferredContainer primary="thal_dnapreserve" minamount="0" maxamount="0" spawnprobability="0.0" />
+    <PreferredContainer primary="thal_dnapreserve" minamount="0" maxamount="4" spawnprobability="0.0" />
     <Sprite name="dna" texture="Mods/Thalassophobia/Items/Jobgear/Scientist/science.png" sourcerect="459,198,45,43" depth="0.6" origin="0.5,0.5" />
     <BrokenSprite name="corrupt dna" texture="Mods/Thalassophobia/Items/Jobgear/Scientist/science.png" sourcerect="454,406,52,51" depth="0.6" origin="0.5,0.5" maxcondition="0" fadein="false" />
     <Body width="55" height="55" density="20" />
@@ -1409,7 +1409,7 @@
   </Item>
   <Item name="" identifier="thal_dnahammer" category="Material" cargocontaineridentifier="metalcrate" description="" Tags="smallitem,thal_dna" spritecolor="255,130,140,200" InventoryIconColor="255,230,140,200" scale="0.5" impactsoundtag="impact_metal_light">
     <!-- AI try to put DNA in preservation areas -->
-    <PreferredContainer primary="thal_dnapreserve" minamount="0" maxamount="0" spawnprobability="0.0" />
+    <PreferredContainer primary="thal_dnapreserve" minamount="0" maxamount="4" spawnprobability="0.0" />
     <Sprite name="dna" texture="Mods/Thalassophobia/Items/Jobgear/Scientist/science.png" sourcerect="459,198,45,43" depth="0.6" origin="0.5,0.5" />
     <BrokenSprite name="corrupt dna" texture="Mods/Thalassophobia/Items/Jobgear/Scientist/science.png" sourcerect="454,406,52,51" depth="0.6" origin="0.5,0.5" maxcondition="0" fadein="false" />
     <Body width="55" height="55" density="20" />
@@ -1445,7 +1445,7 @@
   </Item>
   <Item name="" identifier="thal_dnathresher" category="Material" cargocontaineridentifier="metalcrate" description="" Tags="smallitem,thal_dna" spritecolor="180,180,20,255" InventoryIconColor="180,180,20,255" scale="0.5" impactsoundtag="impact_metal_light">
     <!-- AI try to put DNA in preservation areas -->
-    <PreferredContainer primary="thal_dnapreserve" minamount="0" maxamount="0" spawnprobability="0.0" />
+    <PreferredContainer primary="thal_dnapreserve" minamount="0" maxamount="4" spawnprobability="0.0" />
     <Sprite name="dna" texture="Mods/Thalassophobia/Items/Jobgear/Scientist/science.png" sourcerect="459,198,45,43" depth="0.6" origin="0.5,0.5" />
     <BrokenSprite name="corrupt dna" texture="Mods/Thalassophobia/Items/Jobgear/Scientist/science.png" sourcerect="454,406,52,51" depth="0.6" origin="0.5,0.5" maxcondition="0" fadein="false" />
     <Body width="55" height="55" density="20" />
@@ -1481,7 +1481,7 @@
   </Item>
   <Item name="DON'T USE" identifier="thal_dnathalamus" category="Material" cargocontaineridentifier="metalcrate" description="" Tags="smallitem,thal_dna" spritecolor="255,130,140,200" hideinmenus="true" InventoryIconColor="255,230,140,200" scale="0.5" impactsoundtag="impact_metal_light">
     <!-- AI try to put DNA in preservation areas -->
-    <PreferredContainer primary="thal_dnapreserve" minamount="0" maxamount="0" spawnprobability="0.0" />
+    <PreferredContainer primary="thal_dnapreserve" minamount="0" maxamount="4" spawnprobability="0.0" />
     <Sprite name="dna" texture="Mods/Thalassophobia/Items/Jobgear/Scientist/science.png" sourcerect="459,198,45,43" depth="0.6" origin="0.5,0.5" />
     <BrokenSprite name="corrupt dna" texture="Mods/Thalassophobia/Items/Jobgear/Scientist/science.png" sourcerect="454,406,52,51" depth="0.6" origin="0.5,0.5" maxcondition="0" fadein="false" />
     <Body width="55" height="55" density="20" />
@@ -1517,7 +1517,7 @@
   </Item>
   <Item name="" identifier="thal_dnaramblin" category="Material" cargocontaineridentifier="metalcrate" description="" Tags="smallitem,thal_dna" spritecolor="245,50,180,200" InventoryIconColor="245,50,180,200" scale="0.5" impactsoundtag="impact_metal_light">
     <!-- AI try to put DNA in preservation areas -->
-    <PreferredContainer primary="thal_dnapreserve" minamount="0" maxamount="0" spawnprobability="0.0" />
+    <PreferredContainer primary="thal_dnapreserve" minamount="0" maxamount="4" spawnprobability="0.0" />
     <Sprite name="dna" texture="Mods/Thalassophobia/Items/Jobgear/Scientist/science.png" sourcerect="459,198,45,43" depth="0.6" origin="0.5,0.5" />
     <BrokenSprite name="corrupt dna" texture="Mods/Thalassophobia/Items/Jobgear/Scientist/science.png" sourcerect="454,406,52,51" depth="0.6" origin="0.5,0.5" maxcondition="0" fadein="false" />
     <Body width="55" height="55" density="20" />
@@ -1553,7 +1553,7 @@
   </Item>
   <Item name="" identifier="thal_dnamaggot" category="Material" cargocontaineridentifier="metalcrate" description="" Tags="smallitem,thal_dna" spritecolor="180,140,80,200" InventoryIconColor="180,140,80,200" scale="0.5" impactsoundtag="impact_metal_light">
     <!-- AI try to put DNA in preservation areas -->
-    <PreferredContainer primary="thal_dnapreserve" minamount="0" maxamount="0" spawnprobability="0.0" />
+    <PreferredContainer primary="thal_dnapreserve" minamount="0" maxamount="4" spawnprobability="0.0" />
     <Sprite name="dna" texture="Mods/Thalassophobia/Items/Jobgear/Scientist/science.png" sourcerect="459,198,45,43" depth="0.6" origin="0.5,0.5" />
     <BrokenSprite name="corrupt dna" texture="Mods/Thalassophobia/Items/Jobgear/Scientist/science.png" sourcerect="454,406,52,51" depth="0.6" origin="0.5,0.5" maxcondition="0" fadein="false" />
     <Body width="55" height="55" density="20" />
