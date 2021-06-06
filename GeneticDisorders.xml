@@ -383,7 +383,7 @@
 		<!-- Logic is stored in Characters/Gummy/GeneLimbs/MudraptorTorso.xml -->
     <icon name="metabolismdisorder" texture="Mods/Thalassophobia/UI/MainIconsAtlas.png" sourcerect="384,0,128,128" color="60,107,195,255" origin="0,0" />
   </Affliction>
-  <Affliction name="Hammerhead Shooter Allele" identifier="thal_disordermudraptor" description="An allele that makes the patient smarter, raising all skills. " type="buff" causeofdeathdescription="Killed by explosive genetic disorder." selfcauseofdeathdescription="Your explosive genetic disorder has killed you." limbspecific="false" maxstrength="1" karmachangeonapplied="-0.1" damageoverlayalpha="1" iconcolors="217,255,120,255;217,255,120,255">
+  <Affliction name="Hammerhead Shooter Allele" identifier="thal_disorderhammer" description="An allele that makes the patient smarter, raising all skills. " type="buff" causeofdeathdescription="Killed by explosive genetic disorder." selfcauseofdeathdescription="Your explosive genetic disorder has killed you." limbspecific="false" maxstrength="1" karmachangeonapplied="-0.1" damageoverlayalpha="1" iconcolors="217,255,120,255;217,255,120,255">
 		<!-- Logic is stored in Characters/Gummy/GeneLimbs/HammerHead.xml -->
     <icon name="metabolismdisorder" texture="Mods/Thalassophobia/UI/MainIconsAtlas.png" sourcerect="384,0,128,128" color="60,107,195,255" origin="0,0" />
   </Affliction>

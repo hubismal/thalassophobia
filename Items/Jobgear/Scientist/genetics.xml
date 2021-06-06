@@ -572,16 +572,6 @@
   <Item name="" identifier="thal_geneticgraft" hideconditionbar="true" spritecolor="200,180,250,255" InventoryIconColor="200,180,250,255" category="Equipment" Tags="smallitem,medical" useinhealthinterface="true" cargocontaineridentifier="chemicalcrate" description="" scale="0.5" impactsoundtag="impact_soft">
     <PreferredContainer primary="medcab" minamount="1" maxamount="1" spawnprobability="1" />
     <PreferredContainer primary="wreckmedcab" minamount="0" maxamount="2" spawnprobability="0.5" />
-    <SuitableTreatment identifier="thal_disorderexplode" suitability="10" />
-    <SuitableTreatment identifier="thal_disorderfart" suitability="10" />
-    <SuitableTreatment identifier="thal_disorderseizure" suitability="10" />
-    <SuitableTreatment identifier="thal_disorderfire" suitability="10" />
-    <SuitableTreatment identifier="thal_disorderemp" suitability="10" />
-    <SuitableTreatment identifier="thal_disorderbloodloss" suitability="10" />
-    <SuitableTreatment identifier="thal_disorderhypo" suitability="10" />
-    <SuitableTreatment identifier="thal_disorderairloss" suitability="10" />
-    <SuitableTreatment identifier="thal_disorderbreathe" suitability="10" />
-    <SuitableTreatment identifier="thal_disorderacid" suitability="10" />
     <Deconstruct time="20">
       <Item identifier="organicfiber" copycondition="true" mincondition="0.1" />
     </Deconstruct>
@@ -632,67 +622,24 @@
         <ReduceAffliction identifier="thal_disorderthal" amount="400" />
         <ReduceAffliction identifier="thal_disorderbuff" amount="400" />
         <ReduceAffliction identifier="thal_disorderhusk" amount="400" />
+        <ReduceAffliction identifier="thal_disorderclown" amount="400" />
+        <ReduceAffliction identifier="thal_disordercard" amount="400" />
+        <ReduceAffliction identifier="thal_disordersmart" amount="400" />
+        <ReduceAffliction identifier="thal_disorderpoison" amount="400" />
+        <ReduceAffliction identifier="thal_disordercrawler" amount="400" />
+        <ReduceAffliction identifier="thal_disorderthresher" amount="400" />
+        <ReduceAffliction identifier="thal_disordermudraptor" amount="400" />
+        <ReduceAffliction identifier="thal_disorderhammer" amount="400" />
         <Conditional thal_meltdownhead="gt 0" />
-      </StatusEffect>
-      <StatusEffect tags="medical" type="OnUse" target="Character" delay="0.05" duration="2">
-        <RequiredItem items="thal_dnahuman" type="Contained" excludebroken="false"  />
-        <Sound file="Content/Items/Medical/Syringe.ogg" type="OnUse" range="500" />
-        <ReduceAffliction identifier="thal_meltdowntorso" amount="400" />
-        <ReduceAffliction identifier="thal_disorderfart" amount="400" />
-        <ReduceAffliction identifier="thal_disorderseizure" amount="400" />
-        <ReduceAffliction identifier="thal_disorderexplode" amount="400" />
-        <ReduceAffliction identifier="thal_disorderfire" amount="400" />
-        <ReduceAffliction identifier="thal_disorderemp" amount="400" />
-        <ReduceAffliction identifier="thal_disorderbloodloss" amount="400" />
-        <ReduceAffliction identifier="thal_disorderhypo" amount="400" />
-        <ReduceAffliction identifier="thal_disorderairloss" amount="400" />
-        <ReduceAffliction identifier="thal_disorderbreathe" amount="400" />
-        <ReduceAffliction identifier="thal_disorderacid" amount="400" />
-        <ReduceAffliction identifier="thal_disorderweapon" amount="400" />
-        <ReduceAffliction identifier="thal_disorderid" amount="400" />
-        <ReduceAffliction identifier="thal_disorderrad" amount="400" />
-        <ReduceAffliction identifier="thal_disorderstupid" amount="400" />
-        <ReduceAffliction identifier="thal_disordermumble" amount="400" />
-        <ReduceAffliction identifier="thal_disorderbait" amount="400" />
-        <ReduceAffliction identifier="thal_disorderdeath" amount="400" />
-        <ReduceAffliction identifier="thal_disorderpressure" amount="400" />
-        <ReduceAffliction identifier="thal_disorderthal" amount="400" />
-        <ReduceAffliction identifier="thal_disorderbuff" amount="400" />
-        <ReduceAffliction identifier="thal_disorderhusk" amount="400" />
         <Conditional thal_meltdowntorso="gt 0" />
-      </StatusEffect>
-      <StatusEffect tags="medical" type="OnUse" target="Character" delay="0.05" duration="2">
-        <RequiredItem items="thal_dnahuman" type="Contained" excludebroken="false"  />
-        <Sound file="Content/Items/Medical/Syringe.ogg" type="OnUse" range="500" />
-        <ReduceAffliction identifier="thal_meltdownlimbs" amount="400" />
-        
-        <ReduceAffliction identifier="thal_disorderfart" amount="400" />
-        <ReduceAffliction identifier="thal_disorderseizure" amount="400" />
-        <ReduceAffliction identifier="thal_disorderexplode" amount="400" />
-        <ReduceAffliction identifier="thal_disorderfire" amount="400" />
-        <ReduceAffliction identifier="thal_disorderemp" amount="400" />
-        <ReduceAffliction identifier="thal_disorderbloodloss" amount="400" />
-        <ReduceAffliction identifier="thal_disorderhypo" amount="400" />
-        <ReduceAffliction identifier="thal_disorderairloss" amount="400" />
-        <ReduceAffliction identifier="thal_disorderbreathe" amount="400" />
-        <ReduceAffliction identifier="thal_disorderacid" amount="400" />
-        <ReduceAffliction identifier="thal_disorderweapon" amount="400" />
-        <ReduceAffliction identifier="thal_disorderid" amount="400" />
-        <ReduceAffliction identifier="thal_disorderrad" amount="400" />
-        <ReduceAffliction identifier="thal_disorderstupid" amount="400" />
-        <ReduceAffliction identifier="thal_disordermumble" amount="400" />
-        <ReduceAffliction identifier="thal_disorderbait" amount="400" />
-        <ReduceAffliction identifier="thal_disorderdeath" amount="400" />
-        <ReduceAffliction identifier="thal_disorderpressure" amount="400" />
-        <ReduceAffliction identifier="thal_disorderthal" amount="400" />
-        <ReduceAffliction identifier="thal_disorderbuff" amount="400" />
-        <ReduceAffliction identifier="thal_disorderhusk" amount="400" />
         <Conditional thal_meltdownlimbs="gt 0" />
       </StatusEffect>
+      
       <!-- HUMAN CORRUPTIONS -->
       <StatusEffect type="OnUse" target="Character" disabledeltatime="true" delay="4" >
         <RequiredItem items="thal_dnahuman" type="Contained" excludebroken="false"  />
         <RequiredItem items="thal_corruptdna" type="Contained" excludebroken="false"  />
+        <Affliction identifier="thal_disordersmart" strength="100" probability="0.2" />
         <Affliction identifier="thal_disorderhusk" strength="100" probability="0.6" />
         <Affliction identifier="thal_disorderweapon" strength="100" probability="0.75" />
         <Affliction identifier="thal_disorderseizure" strength="100" probability="0.6" />
@@ -730,6 +677,7 @@
       <StatusEffect type="OnUse" target="Character" disabledeltatime="true" delay="4" >
         <RequiredItem items="thal_dnamudraptor" type="Contained" excludebroken="false"  />
         <RequiredItem items="thal_corruptdna" type="Contained" excludebroken="false"  />
+        <Affliction identifier="thal_disordermudraptor" strength="100" probability="0.3" />
         <Affliction identifier="thal_disorderhypo" strength="100" probability="0.6" />
         <Affliction identifier="thal_disorderpressure" strength="100" probability="0.75" />
         <Affliction identifier="thal_disorderweapon" strength="100" probability="0.6" />
@@ -767,6 +715,7 @@
       <StatusEffect type="OnUse" target="Character" disabledeltatime="true" delay="4" >
         <RequiredItem items="thal_dnamaggot" type="Contained" excludebroken="false"  />
         <RequiredItem items="thal_corruptdna" type="Contained" excludebroken="false"  />
+        <Affliction identifier="thal_disordercard" strength="100" probability="0.3" />
         <Affliction identifier="thal_disorderbloodloss" strength="100" probability="0.6" />
         <Affliction identifier="thal_disorderseizure" strength="100" probability="0.75" />
         <Affliction identifier="thal_disorderemp" strength="100" probability="0.6" />
@@ -804,6 +753,7 @@
       <StatusEffect type="OnUse" target="Character" disabledeltatime="true" delay="4" >
         <RequiredItem items="thal_dnaramblin" type="Contained" excludebroken="false"  />
         <RequiredItem items="thal_corruptdna" type="Contained" excludebroken="false"  />
+        <Affliction identifier="thal_disorderclown" strength="100" probability="0.3" />
         <Affliction identifier="thal_disorderacid" strength="100" probability="0.6" />
         <Affliction identifier="thal_disorderbuff" strength="100" probability="0.75" />
         <Affliction identifier="thal_disorderpressure" strength="100" probability="0.6" />
@@ -841,6 +791,7 @@
       <StatusEffect type="OnUse" target="Character" disabledeltatime="true" delay="4" >
         <RequiredItem items="thal_dnacrawler" type="Contained" excludebroken="false"  />
         <RequiredItem items="thal_corruptdna" type="Contained" excludebroken="false"  />
+        <Affliction identifier="thal_disordercrawler" strength="100" probability="0.3" />
         <Affliction identifier="thal_disorderbreathe" strength="100" probability="0.6" />
         <Affliction identifier="thal_disorderhypo" strength="100" probability="0.75" />
         <Affliction identifier="thal_disorderseizure" strength="100" probability="0.6" />
@@ -878,6 +829,7 @@
       <StatusEffect type="OnUse" target="Character" disabledeltatime="true" delay="4" >
         <RequiredItem items="thal_dnahammer" type="Contained" excludebroken="false"  />
         <RequiredItem items="thal_corruptdna" type="Contained" excludebroken="false"  />
+        <Affliction identifier="thal_disorderpoison" strength="100" probability="0.3" />
         <Affliction identifier="thal_disorderexplode" strength="100" probability="0.6" />
         <Affliction identifier="thal_disorderhypo" strength="100" probability="0.75" />
         <Affliction identifier="thal_disorderemp" strength="100" probability="0.6" />
@@ -915,6 +867,7 @@
       <StatusEffect type="OnUse" target="Character" disabledeltatime="true" delay="4" >
         <RequiredItem items="thal_dnathresher" type="Contained" excludebroken="false"  />
         <RequiredItem items="thal_corruptdna" type="Contained" excludebroken="false"  />
+        <Affliction identifier="thal_disorderthresher" strength="100" probability="0.3" />
         <Affliction identifier="thal_disorderexplode" strength="100" probability="0.6" />
         <Affliction identifier="thal_disorderhusk" strength="100" probability="0.75" />
         <Affliction identifier="thal_disorderbait" strength="100" probability="0.6" />
@@ -1294,6 +1247,38 @@
 <Holdable slots="None" ><StatusEffect type="OnNotContained" target="This"><RemoveItem/></StatusEffect></Holdable>
   </Item>
   <Item identifier="thal_disdathusk" tags="thal_disdat" descriptionidentifier="thal_disdatfart" spritecolor="255,0,140,255"  >
+    <Sprite  texture="Mods/Thalassophobia/UI/MainIconsAtlas.png" sourcerect="512,896,128,128" depth="0.6" origin="0.5,0.5" /><Body radius="1" />
+<Holdable slots="None" ><StatusEffect type="OnNotContained" target="This"><RemoveItem/></StatusEffect></Holdable>
+  </Item>
+  <Item identifier="thal_disdatclown" tags="thal_disdat" descriptionidentifier="thal_disdatfart" spritecolor="255,0,140,255"  >
+    <Sprite  texture="Mods/Thalassophobia/UI/MainIconsAtlas.png" sourcerect="512,896,128,128" depth="0.6" origin="0.5,0.5" /><Body radius="1" />
+<Holdable slots="None" ><StatusEffect type="OnNotContained" target="This"><RemoveItem/></StatusEffect></Holdable>
+  </Item>
+  <Item identifier="thal_disdatcard" tags="thal_disdat" descriptionidentifier="thal_disdatfart" spritecolor="255,0,140,255"  >
+    <Sprite  texture="Mods/Thalassophobia/UI/MainIconsAtlas.png" sourcerect="512,896,128,128" depth="0.6" origin="0.5,0.5" /><Body radius="1" />
+<Holdable slots="None" ><StatusEffect type="OnNotContained" target="This"><RemoveItem/></StatusEffect></Holdable>
+  </Item>
+  <Item identifier="thal_disdatsmart" tags="thal_disdat" descriptionidentifier="thal_disdatfart" spritecolor="255,0,140,255"  >
+    <Sprite  texture="Mods/Thalassophobia/UI/MainIconsAtlas.png" sourcerect="512,896,128,128" depth="0.6" origin="0.5,0.5" /><Body radius="1" />
+<Holdable slots="None" ><StatusEffect type="OnNotContained" target="This"><RemoveItem/></StatusEffect></Holdable>
+  </Item>
+  <Item identifier="thal_disdatpoison" tags="thal_disdat" descriptionidentifier="thal_disdatfart" spritecolor="255,0,140,255"  >
+    <Sprite  texture="Mods/Thalassophobia/UI/MainIconsAtlas.png" sourcerect="512,896,128,128" depth="0.6" origin="0.5,0.5" /><Body radius="1" />
+<Holdable slots="None" ><StatusEffect type="OnNotContained" target="This"><RemoveItem/></StatusEffect></Holdable>
+  </Item>
+  <Item identifier="thal_disdatmudraptor" tags="thal_disdat" descriptionidentifier="thal_disdatfart" spritecolor="255,0,140,255"  >
+    <Sprite  texture="Mods/Thalassophobia/UI/MainIconsAtlas.png" sourcerect="512,896,128,128" depth="0.6" origin="0.5,0.5" /><Body radius="1" />
+<Holdable slots="None" ><StatusEffect type="OnNotContained" target="This"><RemoveItem/></StatusEffect></Holdable>
+  </Item>
+  <Item identifier="thal_disdathammer" tags="thal_disdat" descriptionidentifier="thal_disdatfart" spritecolor="255,0,140,255"  >
+    <Sprite  texture="Mods/Thalassophobia/UI/MainIconsAtlas.png" sourcerect="512,896,128,128" depth="0.6" origin="0.5,0.5" /><Body radius="1" />
+<Holdable slots="None" ><StatusEffect type="OnNotContained" target="This"><RemoveItem/></StatusEffect></Holdable>
+  </Item>
+  <Item identifier="thal_disdatcrawler" tags="thal_disdat" descriptionidentifier="thal_disdatfart" spritecolor="255,0,140,255"  >
+    <Sprite  texture="Mods/Thalassophobia/UI/MainIconsAtlas.png" sourcerect="512,896,128,128" depth="0.6" origin="0.5,0.5" /><Body radius="1" />
+<Holdable slots="None" ><StatusEffect type="OnNotContained" target="This"><RemoveItem/></StatusEffect></Holdable>
+  </Item>
+  <Item identifier="thal_disdatthresher" tags="thal_disdat" descriptionidentifier="thal_disdatfart" spritecolor="255,0,140,255"  >
     <Sprite  texture="Mods/Thalassophobia/UI/MainIconsAtlas.png" sourcerect="512,896,128,128" depth="0.6" origin="0.5,0.5" /><Body radius="1" />
 <Holdable slots="None" ><StatusEffect type="OnNotContained" target="This"><RemoveItem/></StatusEffect></Holdable>
   </Item>
