@@ -296,13 +296,13 @@
   <Affliction name="Jugglernaut Allele" identifier="thal_disorderclown" description="A disorder that makes the patient have a low chance of randomly gaining husk infection at full health. Try to stay hurt if you can. Can be cured by grafting uncorrupted human DNA. " type="buff" causeofdeathdescription="Killed by explosive genetic disorder." selfcauseofdeathdescription="Your explosive genetic disorder has killed you." limbspecific="false" maxstrength="1" karmachangeonapplied="-0.1" damageoverlayalpha="1" iconcolors="217,255,120,255;217,255,120,255">
 		<Effect minstrength="0" maxstrength="100" >
 			<!-- reduce incremental stun over time (requires more hits from baton) -->
-      <StatusEffect target="Character" checkconditionalalways="true" comparison="And" SpeedMultiplier="1.2" stackable="setvalue="true" >
+      <StatusEffect target="Character" checkconditionalalways="true" comparison="And" SpeedMultiplier="1.2" stackable="false" setvalue="true" >
 				<Conditional HasStatusTag="clown" />
 				<Conditional incrementalstun="gt 0" />
 				<ReduceAffliction identifier="incrementalstun" strength="4" />
       </StatusEffect>
       <!-- speed up progressive stun reaching the top -->
-      <StatusEffect target="Character" checkconditionalalways="true" comparison="And" SpeedMultiplier="1.2" stackable="setvalue="true" >
+      <StatusEffect target="Character" checkconditionalalways="true" comparison="And" SpeedMultiplier="1.2" stackable="false" setvalue="true" >
 				<Conditional HasStatusTag="clown" />
 				<Conditional progressivestun="gt 0" />
 				<Conditional progressivestun="lt 90" />
@@ -373,18 +373,18 @@
   </Affliction>
   <Affliction name="Thresher Pressure allele" identifier="thal_disorderthresher" description="An allele that makes the patient smarter, raising all skills. " type="buff" causeofdeathdescription="Killed by explosive genetic disorder." selfcauseofdeathdescription="Your explosive genetic disorder has killed you." limbspecific="false" maxstrength="1" karmachangeonapplied="-0.1" damageoverlayalpha="1" iconcolors="217,255,120,255;217,255,120,255">
 		<!-- Logic is stored in Characters/Gummy/GeneLimbs/ThresherTorso.xml -->
-    <icon name="metabolismdisorder" texture="Mods/Thalassophobia/UI/MainIconsAtlas.png" sourcerect="384,0,128,128" color="60,107,195,255" origin="0,0" />
+    <icon name="metabolismdisorder" texture="Mods/Thalassophobia/UI/MainIconsAtlas.png" sourcerect="512,0,128,128" color="60,107,195,255" origin="0,0" />
   </Affliction>
   <Affliction name="Crawler Cannibal Allele" identifier="thal_disordercrawler" description="An allele that makes the patient smarter, raising all skills. " type="buff" causeofdeathdescription="Killed by explosive genetic disorder." selfcauseofdeathdescription="Your explosive genetic disorder has killed you." limbspecific="false" maxstrength="1" karmachangeonapplied="-0.1" damageoverlayalpha="1" iconcolors="217,255,120,255;217,255,120,255">
 		<!-- Logic is stored in Characters/Gummy/GeneLimbs/CrawlerHead.xml -->
-    <icon name="metabolismdisorder" texture="Mods/Thalassophobia/UI/MainIconsAtlas.png" sourcerect="384,0,128,128" color="60,107,195,255" origin="0,0" />
+    <icon name="metabolismdisorder" texture="Mods/Thalassophobia/UI/MainIconsAtlas.png" sourcerect="640,0,128,128" color="60,107,195,255" origin="0,0" />
   </Affliction>
   <Affliction name="Mudraptor No Crush Allele" identifier="thal_disordermudraptor" description="An allele that makes the patient smarter, raising all skills. " type="buff" causeofdeathdescription="Killed by explosive genetic disorder." selfcauseofdeathdescription="Your explosive genetic disorder has killed you." limbspecific="false" maxstrength="1" karmachangeonapplied="-0.1" damageoverlayalpha="1" iconcolors="217,255,120,255;217,255,120,255">
 		<!-- Logic is stored in Characters/Gummy/GeneLimbs/MudraptorTorso.xml -->
-    <icon name="metabolismdisorder" texture="Mods/Thalassophobia/UI/MainIconsAtlas.png" sourcerect="384,0,128,128" color="60,107,195,255" origin="0,0" />
+    <icon name="metabolismdisorder" texture="Mods/Thalassophobia/UI/MainIconsAtlas.png" sourcerect="768,0,128,128" color="60,107,195,255" origin="0,0" />
   </Affliction>
   <Affliction name="Hammerhead Shooter Allele" identifier="thal_disorderhammer" description="An allele that makes the patient smarter, raising all skills. " type="buff" causeofdeathdescription="Killed by explosive genetic disorder." selfcauseofdeathdescription="Your explosive genetic disorder has killed you." limbspecific="false" maxstrength="1" karmachangeonapplied="-0.1" damageoverlayalpha="1" iconcolors="217,255,120,255;217,255,120,255">
 		<!-- Logic is stored in Characters/Gummy/GeneLimbs/HammerHead.xml -->
-    <icon name="metabolismdisorder" texture="Mods/Thalassophobia/UI/MainIconsAtlas.png" sourcerect="384,0,128,128" color="60,107,195,255" origin="0,0" />
+    <icon name="metabolismdisorder" texture="Mods/Thalassophobia/UI/MainIconsAtlas.png" sourcerect="896,0,128,128" color="60,107,195,255" origin="0,0" />
   </Affliction>
 </Afflictions>

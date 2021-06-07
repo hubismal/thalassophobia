@@ -1,53 +1,17 @@
 ﻿<prefabs>
-  <carvelasermuzzle
-    lifetime="3"
-    startdelaymin="0"
-    startdelaymax="0"
-    angularvelocitymin="0"
-    angularvelocitymax="0"
+  <beamparticle
+    startsizemin="0.9,1.2"
+    startsizemax="0.9,1.2"
+    sizechangemin="0,-3"
+    sizechangemax="0,-3"
     startrotationmin="0"
     startrotationmax="0"
-    rotatetodirection="True"
-    drag="0"
-    waterdrag="0"
-    velocitychange="0,0"
-    velocitychangewater="0,0"
-    collisionradius="3000"
-    usecollision="True"
-    deleteoncollision="True"
-    friction="0.5"
-    restitution="1"
-    startsizemin="10,1"
-    startsizemax="10,1"
-    growtime="0.02"
     startcolor="255,255,255,255"
-    endcolor="255,255,255,255"
-    drawtarget="Both"
-    blendstate="Additive"
-    loopanim="False"
-    sizechangemin="0,0"
-    sizechangemax="0,0"
-    animduration="1"
-    drawontop="False">
-    <sprite
-      texture="Content/Particles/ParticleAtlas.png"
-      sourcerect="395,41,108,11"
-      origin="0.1,0.5" />
-  </carvelasermuzzle>
-  <beamparticle
-    startsizemin="1,1"
-    startsizemax="1,1"
-    sizechangemin="0,0"
-    sizechangemax="0,0"
-    startrotationmin="0"
-    startrotationmax="360"
-    startcolor="255,255,255,255"
-    endcolor="0,216,210,140"
+    endcolor="0,216,210,255"
     animduration="5"
-    colorchange="0.0, 0.0, 0.0, -0.2"
     growtime="0"
-    lifetime="0.4"
-    drawtarget="Water"
+    lifetime="0.7"
+    drawtarget="Both"
     velocitychange="0,0"
     startdelaymin="0"
     startdelaymax="0"
@@ -64,11 +28,15 @@
     restitution="0.5"
     blendstate="Additive"
     loopanim="True"
-    drawontop="False">
+    drawontop="True"
+    lifetimemin="0"
+    middlecolor="255,255,255,255"
+    usemiddlecolor="False">
     <sprite
-      texture="Content/Particles/ParticleAtlas.png"
-      sourcerect="395,41,108,11"
-      origin="0.1,0.5" />
+      name="beamparticle"
+      texture="Mods/Thalassophobia/Particles/geneparticles.png"
+      sourcerect="10,692,208,30"
+      origin="0.5,0.5" />
   </beamparticle>
   <glowBlood
     startsizemin="1,1"
@@ -99,7 +67,10 @@
     blendstate="Additive"
     animduration="1"
     loopanim="True"
-    drawontop="False">
+    drawontop="False"
+    lifetimemin="0"
+    middlecolor="255,255,255,255"
+    usemiddlecolor="False">
     <animatedsprite
       texture="Content/Particles/Spatter1.png"
       sourcerect="0,0,1024,1024"
@@ -149,7 +120,10 @@
     restitution="0.5"
     blendstate="Additive"
     loopanim="True"
-    drawontop="False">
+    drawontop="False"
+    lifetimemin="0"
+    middlecolor="255,255,255,255"
+    usemiddlecolor="False">
     <animatedsprite
       texture="Content/Particles/Smoke.png"
       sourcerect="0,0,4096,4096"
@@ -186,7 +160,10 @@
     blendstate="Additive"
     animduration="1"
     loopanim="True"
-    drawontop="False">
+    drawontop="False"
+    lifetimemin="0"
+    middlecolor="255,255,255,255"
+    usemiddlecolor="False">
     <sprite
       texture="Content/Particles/SmokeParticleSheet.png"
       sourcerect="0,410,204,204" />
@@ -232,7 +209,10 @@
     friction="0.5"
     restitution="0.5"
     blendstate="Additive"
-    drawontop="False">
+    drawontop="False"
+    lifetimemin="0"
+    middlecolor="255,255,255,255"
+    usemiddlecolor="False">
     <animatedsprite
       texture="Content/Particles/SmokeParticleSheet.png"
       sourcerect="0,0,1024,1024"
@@ -268,7 +248,10 @@
     sizechangemin="0,0"
     sizechangemax="0,0"
     animduration="3"
-    drawontop="False">
+    drawontop="False"
+    lifetimemin="0"
+    middlecolor="255,255,255,255"
+    usemiddlecolor="False">
     <sprite
       texture="Mods/Thalassophobia/Particles/confetti.png"
       sourcerect="0,0,300,300"
@@ -303,7 +286,10 @@
     blendstate="AlphaBlend"
     animduration="1"
     loopanim="True"
-    drawontop="False">
+    drawontop="False"
+    lifetimemin="0"
+    middlecolor="255,255,255,255"
+    usemiddlecolor="False">
     <sprite
       texture="Mods/Thalassophobia/Particles/cultparticles.png"
       sourcerect="0,0,40,40"
@@ -414,7 +400,10 @@
     blendstate="Additive"
     animduration="1"
     loopanim="True"
-    drawontop="False">
+    drawontop="False"
+    lifetimemin="0"
+    middlecolor="255,255,255,255"
+    usemiddlecolor="False">
     <sprite
       texture="Mods/Thalassophobia/Particles/cultparticles.png"
       sourcerect="0,80,200,200"
@@ -449,7 +438,10 @@
     blendstate="AlphaBlend"
     animduration="1"
     loopanim="True"
-    drawontop="False">
+    drawontop="False"
+    lifetimemin="0"
+    middlecolor="255,255,255,255"
+    usemiddlecolor="False">
     <sprite
       texture="Mods/Thalassophobia/Particles/cultparticles.png"
       sourcerect="661,42,140,137"
@@ -484,7 +476,10 @@
     blendstate="AlphaBlend"
     animduration="1"
     loopanim="True"
-    drawontop="False">
+    drawontop="False"
+    lifetimemin="0"
+    middlecolor="255,255,255,255"
+    usemiddlecolor="False">
     <sprite
       texture="Mods/Thalassophobia/Particles/cultparticles.png"
       sourcerect="661,42,140,137"
@@ -519,7 +514,10 @@
     blendstate="AlphaBlend"
     animduration="1"
     loopanim="True"
-    drawontop="False">
+    drawontop="False"
+    lifetimemin="0"
+    middlecolor="255,255,255,255"
+    usemiddlecolor="False">
     <sprite
       texture="Mods/Thalassophobia/Particles/cultparticles.png"
       sourcerect="661,42,140,137"
@@ -554,7 +552,10 @@
     blendstate="AlphaBlend"
     animduration="1"
     loopanim="True"
-    drawontop="False">
+    drawontop="False"
+    lifetimemin="0"
+    middlecolor="255,255,255,255"
+    usemiddlecolor="False">
     <sprite
       texture="Content/Particles/SmokeParticleSheet.png"
       sourcerect="0,410,204,204" />
@@ -597,7 +598,10 @@
     loopanim="False"
     startdelaymin="0"
     startdelaymax="0"
-    drawontop="False">
+    drawontop="False"
+    lifetimemin="0"
+    middlecolor="255,255,255,255"
+    usemiddlecolor="False">
     <sprite
       texture="Mods/Thalassophobia/Items/Jobgear/Scientist/science.png"
       sourcerect="329,183,21,28"
@@ -652,7 +656,10 @@
     loopanim="False"
     startdelaymin="0"
     startdelaymax="0"
-    drawontop="False">
+    drawontop="False"
+    lifetimemin="0"
+    middlecolor="255,255,255,255"
+    usemiddlecolor="False">
     <sprite
       texture="Mods/Thalassophobia/Items/Jobgear/Scientist/science.png"
       sourcerect="452,254,133,134"
@@ -688,7 +695,10 @@
     blendstate="AlphaBlend"
     animduration="1.5"
     loopanim="True"
-    drawontop="True">
+    drawontop="True"
+    lifetimemin="0"
+    middlecolor="255,255,255,255"
+    usemiddlecolor="False">
     <animatedsprite
       texture="Mods/Thalassophobia/Particles/geneparticles.png"
       sourcerect="0,0,360,40"
@@ -725,7 +735,10 @@
     blendstate="Additive"
     animduration="0.4"
     loopanim="True"
-    drawontop="False">
+    drawontop="False"
+    lifetimemin="0"
+    middlecolor="255,255,255,255"
+    usemiddlecolor="False">
     <animatedsprite
       texture="Mods/Thalassophobia/Particles/geneparticles.png"
       sourcerect="0,40,320,80"
@@ -762,7 +775,10 @@
     blendstate="AlphaBlend"
     animduration="1.5"
     loopanim="False"
-    drawontop="False">
+    drawontop="False"
+    lifetimemin="0"
+    middlecolor="255,255,255,255"
+    usemiddlecolor="False">
     <animatedsprite
       texture="Content/Particles/Spatter1.png"
       sourcerect="0,0,1024,1024"
@@ -811,7 +827,10 @@
     blendstate="AlphaBlend"
     animduration="1.5"
     loopanim="False"
-    drawontop="False">
+    drawontop="False"
+    lifetimemin="0"
+    middlecolor="255,255,255,255"
+    usemiddlecolor="False">
     <sprite
       texture="Mods/Thalassophobia/Particles/geneparticles.png"
       sourcerect="0,200,80,120"
@@ -846,7 +865,10 @@
     blendstate="Additive"
     animduration="1.5"
     loopanim="False"
-    drawontop="True">
+    drawontop="True"
+    lifetimemin="0"
+    middlecolor="255,255,255,255"
+    usemiddlecolor="False">
     <sprite
       texture="Mods/Thalassophobia/Particles/geneparticles.png"
       sourcerect="80,200,80,120"
@@ -881,7 +903,10 @@
     blendstate="Additive"
     animduration="0.4"
     loopanim="True"
-    drawontop="True">
+    drawontop="True"
+    lifetimemin="0"
+    middlecolor="255,255,255,255"
+    usemiddlecolor="False">
     <animatedsprite
       texture="Mods/Thalassophobia/Particles/geneparticles.png"
       sourcerect="2,335,158,201"
@@ -930,7 +955,10 @@
     blendstate="Additive"
     animduration="1.5"
     loopanim="False"
-    drawontop="True">
+    drawontop="True"
+    lifetimemin="0"
+    middlecolor="255,255,255,255"
+    usemiddlecolor="False">
     <sprite
       texture="Mods/Thalassophobia/Particles/geneparticles.png"
       sourcerect="185,143,381,394"
@@ -965,7 +993,10 @@
     blendstate="Additive"
     animduration="0.4"
     loopanim="True"
-    drawontop="False">
+    drawontop="False"
+    lifetimemin="0"
+    middlecolor="255,255,255,255"
+    usemiddlecolor="False">
     <animatedsprite
       texture="Mods/Thalassophobia/Particles/geneparticles.png"
       sourcerect="0,120,160,80"
@@ -1002,7 +1033,10 @@
     blendstate="Additive"
     animduration="0.4"
     loopanim="True"
-    drawontop="True">
+    drawontop="True"
+    lifetimemin="0"
+    middlecolor="255,255,255,255"
+    usemiddlecolor="False">
     <animatedsprite
       texture="Mods/Thalassophobia/Particles/geneparticles.png"
       sourcerect="7,543,483,155"

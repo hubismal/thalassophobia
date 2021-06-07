@@ -356,6 +356,14 @@
   <entityname.thal_disdatthal>Thalassophobia Syndrome</entityname.thal_disdatthal>
   <entityname.thal_disdatbuff>High Metabolism Syndrome</entityname.thal_disdatbuff>
   <entityname.thal_disdathusk>Topped-Off Husk Syndrome</entityname.thal_disdathusk>
+  <entityname.thal_disdatclown>Jugglernaut Allele</entityname.thal_disdatclown>
+  <entityname.thal_disdatcard>Card Collector Allele</entityname.thal_disdatcard>
+  <entityname.thal_disdatsmart>Hidden Talent Allele</entityname.thal_disdatsmart>
+  <entityname.thal_disdatpoison>Peak Health Allele</entityname.thal_disdatpoison>
+  <entityname.thal_disdatcrawler>Crawler Dracu-Lecter Allele</entityname.thal_disdatcrawler>
+  <entityname.thal_disdatthresher>Thresher Abyssal Allele</entityname.thal_disdatthresher>
+  <entityname.thal_disdathammer>Hammer Freeze-Ray Allele</entityname.thal_disdathammer>
+  <entityname.thal_disdatmudraptor>Mudraptor Speed-Diver Allele</entityname.thal_disdatmudraptor>
   <entitydescription.thal_disdatfart>An icon representing DNA data for a mutation/syndrome stored on a transplanter. Drag it out of your inventory to delete it.</entitydescription.thal_disdatfart>
   
   <entityname.thal_dnascanner>DNA Scanner</entityname.thal_dnascanner>

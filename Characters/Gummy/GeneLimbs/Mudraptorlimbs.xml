@@ -16,8 +16,9 @@
       <StatusEffect target="Character" type="Always" SpeedMultiplier="1.75" setvalue="true">
 				<Conditional InWater="True" />
       </StatusEffect>
-      <StatusEffect target="Character" type="Always" PressureTimer="1" setvalue="false">
+      <StatusEffect target="Character" type="Always" PressureTimer="-15" Comparison="And" setvalue="false">
 				<Conditional thal_disordermudraptor="gt 0" /><!-- UPGRADE -->
+				<Conditional PressureTimer="gt 0" />
       </StatusEffect>
   </limb>
   

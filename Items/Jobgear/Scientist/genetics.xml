@@ -1063,6 +1063,54 @@
         <Conditional thal_disorderhusk="gt 0" />
         <Conditional OriginalOutpost="eq nodata" />
       </StatusEffect>
+      <StatusEffect tags="medical" type="OnUse" target="Character,This" disabledeltatime="true" originalOutpost="yesdata" comparison="And" delay="0.1" >
+        <SpawnItem identifier="thal_disdatsmart" spawnposition="ThisInventory" />
+        <Affliction identifier="thal_fxbinary" amount="3" />
+        <Conditional thal_disordersmart="gt 0" />
+        <Conditional OriginalOutpost="eq nodata" />
+      </StatusEffect>
+      <StatusEffect tags="medical" type="OnUse" target="Character,This" disabledeltatime="true" originalOutpost="yesdata" comparison="And" delay="0.1" >
+        <SpawnItem identifier="thal_disdatcard" spawnposition="ThisInventory" />
+        <Affliction identifier="thal_fxbinary" amount="3" />
+        <Conditional thal_disordercard="gt 0" />
+        <Conditional OriginalOutpost="eq nodata" />
+      </StatusEffect>
+      <StatusEffect tags="medical" type="OnUse" target="Character,This" disabledeltatime="true" originalOutpost="yesdata" comparison="And" delay="0.1" >
+        <SpawnItem identifier="thal_disdatpoison" spawnposition="ThisInventory" />
+        <Affliction identifier="thal_fxbinary" amount="3" />
+        <Conditional thal_disorderpoison="gt 0" />
+        <Conditional OriginalOutpost="eq nodata" />
+      </StatusEffect>
+      <StatusEffect tags="medical" type="OnUse" target="Character,This" disabledeltatime="true" originalOutpost="yesdata" comparison="And" delay="0.1" >
+        <SpawnItem identifier="thal_disdatclown" spawnposition="ThisInventory" />
+        <Affliction identifier="thal_fxbinary" amount="3" />
+        <Conditional thal_disorderclown="gt 0" />
+        <Conditional OriginalOutpost="eq nodata" />
+      </StatusEffect>
+      <StatusEffect tags="medical" type="OnUse" target="Character,This" disabledeltatime="true" originalOutpost="yesdata" comparison="And" delay="0.1" >
+        <SpawnItem identifier="thal_disdatmudraptor" spawnposition="ThisInventory" />
+        <Affliction identifier="thal_fxbinary" amount="3" />
+        <Conditional thal_disordermudraptor="gt 0" />
+        <Conditional OriginalOutpost="eq nodata" />
+      </StatusEffect>
+      <StatusEffect tags="medical" type="OnUse" target="Character,This" disabledeltatime="true" originalOutpost="yesdata" comparison="And" delay="0.1" >
+        <SpawnItem identifier="thal_disdatcrawler" spawnposition="ThisInventory" />
+        <Affliction identifier="thal_fxbinary" amount="3" />
+        <Conditional thal_disordercrawler="gt 0" />
+        <Conditional OriginalOutpost="eq nodata" />
+      </StatusEffect>
+      <StatusEffect tags="medical" type="OnUse" target="Character,This" disabledeltatime="true" originalOutpost="yesdata" comparison="And" delay="0.1" >
+        <SpawnItem identifier="thal_disdatthresher" spawnposition="ThisInventory" />
+        <Affliction identifier="thal_fxbinary" amount="3" />
+        <Conditional thal_disorderthresher="gt 0" />
+        <Conditional OriginalOutpost="eq nodata" />
+      </StatusEffect>
+      <StatusEffect tags="medical" type="OnUse" target="Character,This" disabledeltatime="true" originalOutpost="yesdata" comparison="And" delay="0.1" >
+        <SpawnItem identifier="thal_disdathammer" spawnposition="ThisInventory" />
+        <Affliction identifier="thal_fxbinary" amount="3" />
+        <Conditional thal_disorderhammer="gt 0" />
+        <Conditional OriginalOutpost="eq nodata" />
+      </StatusEffect>
       
       <!-- FX FOR APPLYING-->
       <StatusEffect tags="medical" type="OnUse" target="Character,This" delay="0" disabledeltatime="true" >
@@ -1157,6 +1205,38 @@
         <Affliction identifier="thal_disorderhusk" amount="3" />
         <RequiredItem items="thal_disdathusk" type="Contained" excludebroken="false"  />
       </StatusEffect>
+      <StatusEffect tags="medical" type="OnUse" target="Character,This" delay="0" disabledeltatime="true" Condition="-6" >
+        <Affliction identifier="thal_disordersmart" amount="3" />
+        <RequiredItem items="thal_disdatsmart" type="Contained" excludebroken="false"  />
+      </StatusEffect>
+      <StatusEffect tags="medical" type="OnUse" target="Character,This" delay="0" disabledeltatime="true" Condition="-6" >
+        <Affliction identifier="thal_disordercard" amount="3" />
+        <RequiredItem items="thal_disdatcard" type="Contained" excludebroken="false"  />
+      </StatusEffect>
+      <StatusEffect tags="medical" type="OnUse" target="Character,This" delay="0" disabledeltatime="true" Condition="-6" >
+        <Affliction identifier="thal_disorderclown" amount="3" />
+        <RequiredItem items="thal_disdatclown" type="Contained" excludebroken="false"  />
+      </StatusEffect>
+      <StatusEffect tags="medical" type="OnUse" target="Character,This" delay="0" disabledeltatime="true" Condition="-6" >
+        <Affliction identifier="thal_disorderpoison" amount="3" />
+        <RequiredItem items="thal_disdatpoison" type="Contained" excludebroken="false"  />
+      </StatusEffect>
+      <StatusEffect tags="medical" type="OnUse" target="Character,This" delay="0" disabledeltatime="true" Condition="-6" >
+        <Affliction identifier="thal_disordermudraptor" amount="3" />
+        <RequiredItem items="thal_disdatmudraptor" type="Contained" excludebroken="false"  />
+      </StatusEffect>
+      <StatusEffect tags="medical" type="OnUse" target="Character,This" delay="0" disabledeltatime="true" Condition="-6" >
+        <Affliction identifier="thal_disordercrawler" amount="3" />
+        <RequiredItem items="thal_disdatcrawler" type="Contained" excludebroken="false"  />
+      </StatusEffect>
+      <StatusEffect tags="medical" type="OnUse" target="Character,This" delay="0" disabledeltatime="true" Condition="-6" >
+        <Affliction identifier="thal_disorderthresher" amount="3" />
+        <RequiredItem items="thal_disdatthresher" type="Contained" excludebroken="false"  />
+      </StatusEffect>
+      <StatusEffect tags="medical" type="OnUse" target="Character,This" delay="0" disabledeltatime="true" Condition="-6" >
+        <Affliction identifier="thal_disorderhammer" amount="3" />
+        <RequiredItem items="thal_disdathammer" type="Contained" excludebroken="false"  />
+      </StatusEffect>
     </MeleeWeapon>
     <ItemContainer capacity="30" hideitems="true" drawinventory="false" itempos="16,-15" containedspritedepth="0.56" ShowConditionInContainedStateIndicator="true" >
       <ContainedStateIndicator texture="Content/UI/ContainerIndicators.png" sourcerect="0,157,92,27" />
@@ -1250,35 +1330,35 @@
     <Sprite  texture="Mods/Thalassophobia/UI/MainIconsAtlas.png" sourcerect="512,896,128,128" depth="0.6" origin="0.5,0.5" /><Body radius="1" />
 <Holdable slots="None" ><StatusEffect type="OnNotContained" target="This"><RemoveItem/></StatusEffect></Holdable>
   </Item>
-  <Item identifier="thal_disdatclown" tags="thal_disdat" descriptionidentifier="thal_disdatfart" spritecolor="255,0,140,255"  >
+  <Item identifier="thal_disdatclown" tags="thal_disdat" descriptionidentifier="thal_disdatfart" spritecolor="217,255,120,255"  >
     <Sprite  texture="Mods/Thalassophobia/UI/MainIconsAtlas.png" sourcerect="512,896,128,128" depth="0.6" origin="0.5,0.5" /><Body radius="1" />
 <Holdable slots="None" ><StatusEffect type="OnNotContained" target="This"><RemoveItem/></StatusEffect></Holdable>
   </Item>
-  <Item identifier="thal_disdatcard" tags="thal_disdat" descriptionidentifier="thal_disdatfart" spritecolor="255,0,140,255"  >
+  <Item identifier="thal_disdatcard" tags="thal_disdat" descriptionidentifier="thal_disdatfart" spritecolor="217,255,120,255"  >
     <Sprite  texture="Mods/Thalassophobia/UI/MainIconsAtlas.png" sourcerect="512,896,128,128" depth="0.6" origin="0.5,0.5" /><Body radius="1" />
 <Holdable slots="None" ><StatusEffect type="OnNotContained" target="This"><RemoveItem/></StatusEffect></Holdable>
   </Item>
-  <Item identifier="thal_disdatsmart" tags="thal_disdat" descriptionidentifier="thal_disdatfart" spritecolor="255,0,140,255"  >
+  <Item identifier="thal_disdatsmart" tags="thal_disdat" descriptionidentifier="thal_disdatfart" spritecolor="217,255,120,255"  >
     <Sprite  texture="Mods/Thalassophobia/UI/MainIconsAtlas.png" sourcerect="512,896,128,128" depth="0.6" origin="0.5,0.5" /><Body radius="1" />
 <Holdable slots="None" ><StatusEffect type="OnNotContained" target="This"><RemoveItem/></StatusEffect></Holdable>
   </Item>
-  <Item identifier="thal_disdatpoison" tags="thal_disdat" descriptionidentifier="thal_disdatfart" spritecolor="255,0,140,255"  >
+  <Item identifier="thal_disdatpoison" tags="thal_disdat" descriptionidentifier="thal_disdatfart" spritecolor="217,255,120,255"  >
     <Sprite  texture="Mods/Thalassophobia/UI/MainIconsAtlas.png" sourcerect="512,896,128,128" depth="0.6" origin="0.5,0.5" /><Body radius="1" />
 <Holdable slots="None" ><StatusEffect type="OnNotContained" target="This"><RemoveItem/></StatusEffect></Holdable>
   </Item>
-  <Item identifier="thal_disdatmudraptor" tags="thal_disdat" descriptionidentifier="thal_disdatfart" spritecolor="255,0,140,255"  >
+  <Item identifier="thal_disdatmudraptor" tags="thal_disdat" descriptionidentifier="thal_disdatfart" spritecolor="217,255,120,255"  >
     <Sprite  texture="Mods/Thalassophobia/UI/MainIconsAtlas.png" sourcerect="512,896,128,128" depth="0.6" origin="0.5,0.5" /><Body radius="1" />
 <Holdable slots="None" ><StatusEffect type="OnNotContained" target="This"><RemoveItem/></StatusEffect></Holdable>
   </Item>
-  <Item identifier="thal_disdathammer" tags="thal_disdat" descriptionidentifier="thal_disdatfart" spritecolor="255,0,140,255"  >
+  <Item identifier="thal_disdathammer" tags="thal_disdat" descriptionidentifier="thal_disdatfart" spritecolor="217,255,120,255"  >
     <Sprite  texture="Mods/Thalassophobia/UI/MainIconsAtlas.png" sourcerect="512,896,128,128" depth="0.6" origin="0.5,0.5" /><Body radius="1" />
 <Holdable slots="None" ><StatusEffect type="OnNotContained" target="This"><RemoveItem/></StatusEffect></Holdable>
   </Item>
-  <Item identifier="thal_disdatcrawler" tags="thal_disdat" descriptionidentifier="thal_disdatfart" spritecolor="255,0,140,255"  >
+  <Item identifier="thal_disdatcrawler" tags="thal_disdat" descriptionidentifier="thal_disdatfart" spritecolor="217,255,120,255"  >
     <Sprite  texture="Mods/Thalassophobia/UI/MainIconsAtlas.png" sourcerect="512,896,128,128" depth="0.6" origin="0.5,0.5" /><Body radius="1" />
 <Holdable slots="None" ><StatusEffect type="OnNotContained" target="This"><RemoveItem/></StatusEffect></Holdable>
   </Item>
-  <Item identifier="thal_disdatthresher" tags="thal_disdat" descriptionidentifier="thal_disdatfart" spritecolor="255,0,140,255"  >
+  <Item identifier="thal_disdatthresher" tags="thal_disdat" descriptionidentifier="thal_disdatfart" spritecolor="217,255,120,255"  >
     <Sprite  texture="Mods/Thalassophobia/UI/MainIconsAtlas.png" sourcerect="512,896,128,128" depth="0.6" origin="0.5,0.5" /><Body radius="1" />
 <Holdable slots="None" ><StatusEffect type="OnNotContained" target="This"><RemoveItem/></StatusEffect></Holdable>
   </Item>
@@ -1570,6 +1650,39 @@
         <Sound file="Mods/Thalassophobia/Items/Jobgear/Scientist/Corrupt2.ogg" volume="1.0" range="500" />
         <Sound file="Mods/Thalassophobia/Items/Jobgear/Scientist/Corrupt3.ogg" volume="1.0" range="500" />
       </StatusEffect>
+    </LightComponent>
+  </Item>
+  <Item name="hammerheadprojectile" identifier="thal_hammerprojectile" category="Misc" impacttolerance="0" scale="0.5" sonarsize="2" hideinmenus="true">
+    <Sprite texture="Content/Characters/Spineling/Spineling.png" sourcerect="0,215,180,18" depth="0.55" hideinmenus="true" />
+    <Body width="190" height="20" density="20" />
+    <Projectile characterusable="false" launchimpulse="150" hitscan="false" >
+      <Attack structuredamage="0" severlimbsprobability="0.0">
+       
+      </Attack>
+      <StatusEffect type="OnActive" target="This" lifetime="0.5">
+        <ParticleEmitter particle="beamparticle" copyentityangle="true" anglemin="0" anglemax="0" particleamount="1" velocitymin="-10" velocitymax="-100" scalemin="1" scalemax="1" />
+      </StatusEffect>
+      <StatusEffect type="OnNotContained" target="This" stackable="false" delay="1">
+        <Remove />
+      </StatusEffect>
+      <StatusEffect type="OnImpact" target="This">
+				<RemoveItem />
+			</StatusEffect>
+      <StatusEffect type="OnImpact" target="This">
+        <ParticleEmitter particle="thal_grain" particleamount="3" particlespersecond="1" scalemin="2" scalemax="2" velocitymin="0" velocitymax="0" anglemin="0" anglemax="360" colormultiplier="100,100,255,255" />
+        <ParticleEmitter particle="iceshards" copyentityangle="false" anglemin="0" anglemax="360" particleamount="5" velocitymin="100" velocitymax="300" scalemin="1" scalemax="2" colormultiplier="30,30,255,255" />
+        <SpawnItem identifier="thal_freezecloud" />
+        <sound file="Content/Sounds/Damage/GlassBreak1.ogg" range="900" volume="1.0" selectionmode="random" dontmuffle="false" />
+        <sound file="Content/Sounds/Damage/GlassBreak2.ogg" range="900" volume="1.0" selectionmode="random" dontmuffle="false" />
+        <sound file="Content/Sounds/Damage/GlassBreak3.ogg" range="900" volume="1.0" selectionmode="random" dontmuffle="false" />
+        <sound file="Content/Sounds/Damage/GlassBreak4.ogg" range="900" volume="1.0" selectionmode="random" dontmuffle="false" />
+        <Explosion range="200" force="17" stun="3" smoke="false" sparks="false" flames="false" applyfireeffects="false" screencolorduration="2.0" >
+					 <Affliction identifier="thal_frozen" strength="10" />
+        </Explosion>
+        <RemoveItem />
+      </StatusEffect>
+    </Projectile>
+    <LightComponent range="600" castshadows="False" drawbehindsubs="False" ison="True" blinkfrequency="0" lightcolor="200,200,255,160" isactive="True" minvoltage="0" powerconsumption="0" vulnerabletoemp="False" pickingtime="0" canbepicked="False" allowingameediting="False" msg="">
     </LightComponent>
   </Item>
 </Items>
