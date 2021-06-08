@@ -1,10 +1,16 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <huskappendage>
   <limb id="13" width="1" height="1" name="ChestArmor" type="None" spriteorientation="NaN" flip="True" mirrorvertically="False" mirrorhorizontally="False" hide="False" attackpriority="0" steerforce="0" radius="0" density="0.1" ignorecollisions="False" angulardamping="7" pullpos="0,0" stepoffset="0,0" refjoint="-1" mouthpos="0,0" notes="" constanttorque="0" constantangle="0" scale="0.7" attackforcemultiplier="1" minseverancedamage="0.8" healthindex="1" friction="0.3" restitution="0.05" severedfadeouttime="0" applytailangle="False" applysinemovement="True">
-    <sprite texture="Mods/Thalassophobia/Characters/Gummy/GeneLimbs/Tigerthresher.png" sourcerect="419,16,158,267" origin="0.5,0.5" depth="0.9" color="255,255,255,255" deadcolor="255,255,255,255" deadcolortime="0" />
-      <StatusEffect target="Character" type="Always" SpeedMultiplier="0.85" setvalue="true" >
+    <sprite texture="Mods/Thalassophobia/Characters/Gummy/GeneLimbs/Tigerthresher.png" sourcerect="419,16,158,267" origin="0.5,0.5" depth="0.9" color="255,255,255,255" deadcolor="255,255,255,255" deadcolortime="0" /><!-- NO UPGRADE (SLOW) -->
+      <StatusEffect target="Character" type="Always" checkconditionalawlays="true" SpeedMultiplier="0.85" setvalue="true" >
+				<Conditional thal_disorderthresher="lt 0.5" />
       </StatusEffect>
-      <StatusEffect target="Character" type="Always" disabledeltatime="true" setvalue="true" PressureProtection="4000.0" >
+      <StatusEffect target="Character" type="Always" disabledeltatime="true" setvalue="true" PressureProtection="20000.0" >
+				<Conditional thal_disorderthresher="gt 0" /><!-- UPGRADE (DEEPER PROTECTION) -->
+      </StatusEffect>
+      <StatusEffect target="Character" type="Always" disabledeltatime="true" setvalue="true" Comparison="And" PressureProtection="4000.0" >
+				<Conditional thal_disorderthresher="lt 0.5" /><!-- NO UPGRADE (SHALLOW PROTECTION) -->
+				<Conditional PressureProtection="lte 4000" />
       </StatusEffect>
   </limb>
   <!-- Head to husk appendage -->

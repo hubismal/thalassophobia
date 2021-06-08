@@ -331,53 +331,109 @@
   <entityname.thal_geneticgraft>DNA Grafter</entityname.thal_geneticgraft>
   <entitydescription.thal_geneticgraft>Syringe which DNA samples can be inserted into. When injected into someone undergoing a CRISPR-Cas9 induced meltdown, this attatches the DNA to the cut sections, resulting in en vivo gene splicing. Gene splicing can be used to cure genetic disorders, and even transform bodyparts. Requires a patient to be injected with a CRISPR-Cas9 solution first.</entitydescription.thal_geneticgraft>
   
+  <entityname.thal_disordersave>DNA Transplanter</entityname.thal_disordersave>
+  <entitydescription.thal_disordersave>Syringe capable of trasnfering genetic disorders or mutations (not actual creature splices). Inject a person who is inflicted with disorders/mutations to store them. Afterwards, any future injections with the same transplanter will grant the injectee whatever disorders are stored. Actual creature limb splices are not stored, only the mutations/disorders. Has limited uses.
+  
+  Currently Stored Disorders (Blank if None):</entitydescription.thal_disordersave>
+  <entityname.thal_disdatfart>Indigestion Syndrome</entityname.thal_disdatfart>
+  <entityname.thal_disdatexplode>Combustion Syndrome</entityname.thal_disdatexplode>
+  <entityname.thal_disdatseizure>Stumble Syndrome</entityname.thal_disdatseizure>
+  <entityname.thal_disdatfire>Thermal Syndrome</entityname.thal_disdatfire>
+  <entityname.thal_disdatairloss>Vacuum Syndrome</entityname.thal_disdatairloss>
+  <entityname.thal_disdatbreathe>Lung Failure Syndrome</entityname.thal_disdatbreathe>
+  <entityname.thal_disdatemp>EMP Syndrome</entityname.thal_disdatemp>
+  <entityname.thal_disdathypo>Hypothermia Syndrome</entityname.thal_disdathypo>
+  <entityname.thal_disdatbloodloss>Pressurized Blood Syndrome</entityname.thal_disdatbloodloss>
+  <entityname.thal_disdatacid>Acid Gas Syndrome</entityname.thal_disdatacid>
+  <entityname.thal_disdatstupid>Retardation Syndrome</entityname.thal_disdatstupid>
+  <entityname.thal_disdatweapon>PTSD Syndrome</entityname.thal_disdatweapon>
+  <entityname.thal_disdatid>Authority Arrest Syndrome</entityname.thal_disdatid>
+  <entityname.thal_disdatrad>Rad Sensitivity Syndrome</entityname.thal_disdatrad>
+  <entityname.thal_disdatmumble>Mumble Syndrome</entityname.thal_disdatmumble>
+  <entityname.thal_disdatbait>Bait Syndrome</entityname.thal_disdatbait>
+  <entityname.thal_disdatdeath>Sudden Death Syndrome</entityname.thal_disdatdeath>
+  <entityname.thal_disdatpressure>InstaCrush Syndrome</entityname.thal_disdatpressure>
+  <entityname.thal_disdatthal>Thalassophobia Syndrome</entityname.thal_disdatthal>
+  <entityname.thal_disdatbuff>High Metabolism Syndrome</entityname.thal_disdatbuff>
+  <entityname.thal_disdathusk>Topped-Off Husk Syndrome</entityname.thal_disdathusk>
+  <entityname.thal_disdatclown>Jugglernaut Allele</entityname.thal_disdatclown>
+  <entityname.thal_disdatcard>Card Collector Allele</entityname.thal_disdatcard>
+  <entityname.thal_disdatsmart>Hidden Talent Allele</entityname.thal_disdatsmart>
+  <entityname.thal_disdatpoison>Peak Health Allele</entityname.thal_disdatpoison>
+  <entityname.thal_disdatcrawler>Crawler Dracu-Lecter Allele</entityname.thal_disdatcrawler>
+  <entityname.thal_disdatthresher>Thresher Abyssal Allele</entityname.thal_disdatthresher>
+  <entityname.thal_disdathammer>Hammer Freeze-Ray Allele</entityname.thal_disdathammer>
+  <entityname.thal_disdatmudraptor>Mudraptor Speed-Diver Allele</entityname.thal_disdatmudraptor>
+  <entitydescription.thal_disdatfart>An icon representing DNA data for a mutation/syndrome stored on a transplanter. Drag it out of your inventory to delete it.</entitydescription.thal_disdatfart>
+  
   <entityname.thal_dnascanner>DNA Scanner</entityname.thal_dnascanner>
   <entitydescription.thal_dnascanner>A DNA scanner that collects DNA from the saliva molecules of living beings. Will not work on dead creatures. Attach to a wall and interact with it. Scans whatever is underneath it but breaks over time.</entitydescription.thal_dnascanner>
+  
+  <entityname.thal_dnabox>DNA Cooler</entityname.thal_dnabox>
+  <entitydescription.thal_dnabox>A handheld cryogenic cooler designed to store and preserve DNA without degradation. In the event of the cooler being lost, DNA can also be preserved by submerging it in water.</entitydescription.thal_dnabox>
   
   <entityname.thal_dnahatcher>Biomorphic Incubation Pod</entityname.thal_dnahatcher>
   <entitydescription.thal_dnahatcher>Pod used for creating creatures from DNA and biomass. Insert meat until there is enough biomass for your desired creature, then insert its DNA and press engage to start forming and nurturing the embryo. </entitydescription.thal_dnahatcher>
   
   <entityname.thal_dnahuman>Human DNA</entityname.thal_dnahuman>
-  <entitydescription.thal_dnahuman>Complete genetic sequence of the standard Homo Sapien. Can be used to develop anti-Humanoid technologies, or in DNA grafts for reverting humans back to normal. Grafting this DNA will revert all changes to the bodypart(s) currently in meltdown, and also revert any genetic disorders. </entitydescription.thal_dnahuman>
+  <entitydescription.thal_dnahuman>Decays when not stored in water or a cryogenic container. Corrupts when fully broken.
+		
+		Complete genetic sequence of the standard Homo Sapien. Can be used to develop anti-Humanoid technologies, or in DNA grafts for reverting humans back to normal. 
+		
+		Grafting this DNA will revert all changes to the bodypart(s) currently in meltdown, and will also cure any genetic disorders.</entitydescription.thal_dnahuman>
   
   <entityname.thal_dnamudraptor>Mudraptor DNA</entityname.thal_dnamudraptor>
-  <entitydescription.thal_dnamudraptor>Complete genetic sequence of the standard Europan Mudraptor. Can be used to develop anti-Mudraptor technologies, or in DNA grafts for gene splicing. DNA Abilities by Grafts:
+  <entitydescription.thal_dnamudraptor>Decays when not stored in water or a cryogenic container. Corrupts when fully broken.
+  
+  Complete genetic sequence of the standard Europan Mudraptor. Can be used to develop anti-Mudraptor technologies, or in DNA grafts for gene splicing. DNA Abilities by Grafts:
   Head (Beak): Slowly break down doors using creature attack.
   Torso (Shell): Gain bulletproof mudraptor armor on spine.
   Limbs (Tail): Swim Speed increases massively.</entitydescription.thal_dnamudraptor>
   
   <entityname.thal_dnacrawler>Crawler DNA</entityname.thal_dnacrawler>
-  <entitydescription.thal_dnacrawler>Complete genetic sequence of the standard Europan Crawler. Can be used to develop anti-crawler technologies, or in DNA grafts for gene splicing. DNA Abilities by Grafts:
+  <entitydescription.thal_dnacrawler>Decays when not stored in water or a cryogenic container. Corrupts when fully broken.
+  
+  Complete genetic sequence of the standard Europan Crawler. Can be used to develop anti-crawler technologies, or in DNA grafts for gene splicing. DNA Abilities by Grafts:
   Head (Fangs): Lifesteal bite by pressing creature attack.
   Torso (Gills): Filter oxygen from water even when there is none in the atmosphere.
   Limbs (Tail): General movement speed increase.</entitydescription.thal_dnacrawler>
   
   <entityname.thal_dnathresher>Thresher DNA</entityname.thal_dnathresher>
-  <entitydescription.thal_dnathresher>Complete genetic sequence of the standard Europan Tigerthresher and Bonethresher. Can be used to develop anti-thresher technologies, or in DNA grafts for gene splicing. DNA Abilities by Grafts:
+  <entitydescription.thal_dnathresher>Decays when not stored in water or a cryogenic container. Corrupts when fully broken.
+  
+  Complete genetic sequence of the standard Europan Tigerthresher and Bonethresher. Can be used to develop anti-thresher technologies, or in DNA grafts for gene splicing. DNA Abilities by Grafts:
   Head (Bone Jaw): Break down walls using creature attack.
   Torso (Exoskeleton): Pressure resistance.
   Limbs (Bioluminesence): Emit light.</entitydescription.thal_dnathresher>
   
   <entityname.thal_dnahammer>Hammerhead DNA</entityname.thal_dnahammer>
-  <entitydescription.thal_dnahammer>Complete genetic sequence of the standard Europan Hammerhead. Can be used to develop anti-hammerhead technologies, or in DNA grafts for gene splicing. DNA Abilities by Grafts:
+  <entitydescription.thal_dnahammer>Decays when not stored in water or a cryogenic container. Corrupts when fully broken.
+  
+  Complete genetic sequence of the standard Europan Hammerhead. Can be used to develop anti-hammerhead technologies, or in DNA grafts for gene splicing. DNA Abilities by Grafts:
   Head (Hammer Ridge): Hit creatures for massive damage and knockback.
   Torso (Birthsac): Damaging explosion on death.
   Limbs (Mucous Gland): Slow regeneration when in water.</entitydescription.thal_dnahammer>
   
   <entityname.thal_dnamaggot>Maggot DNA</entityname.thal_dnamaggot>
-  <entitydescription.thal_dnamaggot>Complete genetic sequence of the standard Hive Maggot. Can be used to develop anti-maggot technologies, or in DNA grafts for gene splicing. DNA Abilities by Grafts:
+  <entitydescription.thal_dnamaggot>Decays when not stored in water or a cryogenic container. Corrupts when fully broken.
+  
+  Complete genetic sequence of the standard Hive Maggot. Can be used to develop anti-maggot technologies, or in DNA grafts for gene splicing. DNA Abilities by Grafts:
   Head (Orfice): Aim at the floor and press creature attack to birth a maggot at the cost of health. Cooldown of 4s.
   Torso (Pupa Sac): Burst into maggots on death.
   Limbs (Regeneration): Massively increased healing of bleeding affliction.</entitydescription.thal_dnamaggot>
   
   <entityname.thal_dnathalamus>Thalamus DNA</entityname.thal_dnathalamus>
-  <entitydescription.thal_dnathalamus>Complete genetic sequence of the Europan Thalamus. Can be used to develop anti-thalamus technologies, or in DNA grafts for gene splicing. DNA Abilities by Grafts:
+  <entitydescription.thal_dnathalamus>Decays when not stored in water or a cryogenic container. Corrupts when fully broken.
+  
+  Complete genetic sequence of the Europan Thalamus. Can be used to develop anti-thalamus technologies, or in DNA grafts for gene splicing. DNA Abilities by Grafts:
   Head (Fleshgun): Shoots a grappling rope that can pull in enemies.
   Torso (Seed pod): Infects sub with ballast flora on death.
   Limbs (Toxin Organ): Completely resistant to most poisons.</entitydescription.thal_dnathalamus>
   
   <entityname.thal_dnaramblin>Mushroom DNA</entityname.thal_dnaramblin>
-  <entitydescription.thal_dnaramblin>Complete genetic sequence of the Ramblin' Evil Mushroom. Can be used to develop anti-mushroom technologies, or in DNA grafts for gene splicing. DNA Abilities by Grafts:
+  <entitydescription.thal_dnaramblin>Decays when not stored in water or a cryogenic container. Corrupts when fully broken.
+  
+  Complete genetic sequence of the Ramblin' Evil Mushroom. Can be used to develop anti-mushroom technologies, or in DNA grafts for gene splicing. DNA Abilities by Grafts:
   Head (Cap): Aim at the floor and press creature attack to discharge invigorating gasses.
   Torso (Versicolor): The "Mushroomized" affliction greatly heals you.
   Limbs (Athlete's Foot): Running speed substantially increased, Swimming speed marginally decreased.</entitydescription.thal_dnaramblin>

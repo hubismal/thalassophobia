@@ -405,7 +405,7 @@
         <RequiredItems items="thal_cylinderteargas,thal_cylinderlaughing,thal_cylindershroomcure,oxygentank" type="Contained" />
       </StatusEffect>
     </LightComponent>
-    <ItemContainer capacity="1" hideitems="false" itempos="16,-15" containedspritedepth="0.56" maxstacksize="1" >
+    <ItemContainer capacity="1" hideitems="false" itempos="16,-15" containedspritedepth="0.56" maxstacksize="1">
       <ContainedStateIndicator texture="Content/UI/ContainerIndicators.png" sourcerect="0,157,92,27" />
       <Containable items="weldingfuel,oxygensource,gascylinder" />
     </ItemContainer>
