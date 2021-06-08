@@ -369,6 +369,9 @@
   <entityname.thal_dnascanner>DNA Scanner</entityname.thal_dnascanner>
   <entitydescription.thal_dnascanner>A DNA scanner that collects DNA from the saliva molecules of living beings. Will not work on dead creatures. Attach to a wall and interact with it. Scans whatever is underneath it but breaks over time.</entitydescription.thal_dnascanner>
   
+  <entityname.thal_dnabox>DNA Cooler</entityname.thal_dnabox>
+  <entitydescription.thal_dnabox>A handheld cryogenic cooler designed to store and preserve DNA without degradation. In the event of the cooler being lost, DNA can also be preserved by submerging it in water.</entitydescription.thal_dnabox>
+  
   <entityname.thal_dnahatcher>Biomorphic Incubation Pod</entityname.thal_dnahatcher>
   <entitydescription.thal_dnahatcher>Pod used for creating creatures from DNA and biomass. Insert meat until there is enough biomass for your desired creature, then insert its DNA and press engage to start forming and nurturing the embryo. </entitydescription.thal_dnahatcher>
   

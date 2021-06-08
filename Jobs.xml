@@ -139,20 +139,20 @@
         <Item identifier="healthscanner" equip="true" />
         <Item identifier="batterycell" showpreview="false" />
       </Item>
-      <Item identifier="toolbelt">
+      <Item identifier="toolbelt" equip="true" >
 				<Item identifier="thal_geneticinit" equip="false" />
-				<Item identifier="thal_geneticgraft" equip="false" >
-					<Item identifier="thal_dnahuman" equip="false" showpreview="false" />
-				</Item>
+				<Item identifier="thal_geneticgraft" equip="false" />
         <Item identifier="thal_recipeconstructor" equip="false"  showpreview="false" />
         <Item identifier="thal_recipegeneticinit" equip="false"  showpreview="false" />
         <Item identifier="thal_recipegeneticgraft" equip="false"  showpreview="false" />
         <Item identifier="thal_geneticsign" equip="false" />
-        <Item identifier="thal_geneticsign" equip="false" showpreview="false" />
       </Item>
       <Item identifier="thal_carver" equip="false" />
       <Item identifier="thal_dnascanner" equip="false" />
       <Item identifier="thal_dnahatcher" equip="false" />
+      <Item identifier="thal_dnabox" equip="false" >
+					<Item identifier="thal_dnahuman" equip="false" showpreview="false" />
+				</Item>
       <Item identifier="thal_assembler" equip="false" showpreview="false" />
       <PreviewSprites dims="120,109">
         <sprite texture="Content/Items/Jobgear/Captain/captain_torso_[GENDER]_1.png" sourcerect="2,38,120,109" offset="0,0" />
