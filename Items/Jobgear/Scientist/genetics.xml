@@ -44,7 +44,7 @@
       <requireditem identifier="wrench" type="Equipped" />
     </Holdable>
   </Item>
-  <Item name="" identifier="thal_dnascanner" category="Machine" Tags="mediumitem,provocative" cargocontaineridentifier="metalcrate" description="" impactsoundtag="impact_metal_light" requireaimtouse="true" hideinmenus="false" scale="0.5" characterusable="false" damagedbyexplosions="true" explosiondamagemultiplier="0.8" canflipx="false">
+  <Item name="" identifier="thal_dnascanner" category="Machine" Tags="mediumitem,provocative,thal_dnapreserve" cargocontaineridentifier="metalcrate" description="" impactsoundtag="impact_metal_light" requireaimtouse="true" hideinmenus="false" scale="0.5" characterusable="false" damagedbyexplosions="true" explosiondamagemultiplier="0.8" canflipx="false">
     <Sprite name="dna scanner" texture="Mods/Thalassophobia/Items/Jobgear/Scientist/science.png" sourcerect="5,263,261,113" depth="0.8" origin="0.5,0.5" />
     <BrokenSprite name="dna scanner" texture="Mods/Thalassophobia/Items/Jobgear/Scientist/science.png" sourcerect="5,382,261,113" depth="0.8" origin="0.5,0.5" maxcondition="40" fadein="true" />
     <Body width="261" height="113" density="5"></Body>
@@ -364,114 +364,114 @@
         <StatusEffect type="OnUse" targettype="This" delay="30" IsOn="false" charge="30" setvalue="false" stackable="false" disabledeltatime="true">
           <SpawnCharacter speciesname="human" count="1" spread="8" />
           <sound file="Mods/Thalassophobia/Items/Jobgear/Scientist/Ding.ogg" range="600.0" loop="false" />
-          <RequiredItem items="thal_dnahuman" type="Contained" />
+          <RequiredItem items="thal_dnahuman" type="Contained" excludebroken="false" />
           <Conditional charge="lt 80" />
           <ParticleEmitter particle="steamspray" particlespersecond="80" anglemin="0" anglemax="0" velocitymin="200" velocitymax="400" highqualitycollisiondetection="true" colormultiplier="255,255,255,160" />
           <ParticleEmitter particle="bubbles" particlespersecond="20" anglemin="-10" anglemax="10" scalemin="0.3" scalemax="0.7" velocitymin="5" velocitymax="100" copyentityangle="true" />
         </StatusEffect>
         <StatusEffect type="OnUse" target="This" IsOn="true" text="">
-          <RequiredItem items="thal_dnahuman" type="Contained" />
+          <RequiredItem items="thal_dnahuman" type="Contained" excludebroken="false" />
           <Conditional charge="lt 80" />
         </StatusEffect>
         <StatusEffect type="OnUse" target="This">
           <sound file="Mods/Thalassophobia/Items/Jobgear/Scientist/Deny.ogg" range="600.0" loop="false" />
-          <RequiredItem items="thal_dnahuman" type="Contained" />
+          <RequiredItem items="thal_dnahuman" type="Contained" excludebroken="false" />
           <Conditional charge="gt 70" />
         </StatusEffect>
         <!-- mudraptor -->
         <StatusEffect type="OnUse" targettype="This" delay="60" IsOn="false" charge="50" setvalue="false" stackable="false" disabledeltatime="true">
           <SpawnCharacter speciesname="mudraptor" count="1" spread="8" />
           <sound file="Mods/Thalassophobia/Items/Jobgear/Scientist/Ding.ogg" range="600.0" loop="false" />
-          <RequiredItem items="thal_dnamudraptor" type="Contained" />
+          <RequiredItem items="thal_dnamudraptor" type="Contained" excludebroken="false" />
           <Conditional charge="lt 60" />
         </StatusEffect>
         <StatusEffect type="OnUse" target="This" IsOn="true" text="">
-          <RequiredItem items="thal_dnamudraptor" type="Contained" />
+          <RequiredItem items="thal_dnamudraptor" type="Contained" excludebroken="false" />
           <Conditional charge="lt 60" />
         </StatusEffect>
         <StatusEffect type="OnUse" target="This">
           <sound file="Mods/Thalassophobia/Items/Jobgear/Scientist/Deny.ogg" range="600.0" loop="false" />
-          <RequiredItem items="thal_dnamudraptor" type="Contained" />
+          <RequiredItem items="thal_dnamudraptor" type="Contained" excludebroken="false" />
           <Conditional charge="gt 55" />
         </StatusEffect>
         <!-- crawler -->
         <StatusEffect type="OnUse" targettype="This" delay="40" IsOn="false" charge="30" setvalue="false" stackable="false" disabledeltatime="true">
           <SpawnCharacter speciesname="crawler" count="1" spread="8" />
           <sound file="Mods/Thalassophobia/Items/Jobgear/Scientist/Ding.ogg" range="600.0" loop="false" />
-          <RequiredItem items="thal_dnacrawler" type="Contained" />
+          <RequiredItem items="thal_dnacrawler" type="Contained" excludebroken="false" />
           <Conditional charge="lt 80" />
         </StatusEffect>
         <StatusEffect type="OnUse" target="This" IsOn="true" text="">
-          <RequiredItem items="thal_dnacrawler" type="Contained" />
+          <RequiredItem items="thal_dnacrawler" type="Contained" excludebroken="false" />
           <Conditional charge="lt 80" />
         </StatusEffect>
         <StatusEffect type="OnUse" target="This">
           <sound file="Mods/Thalassophobia/Items/Jobgear/Scientist/Deny.ogg" range="600.0" loop="false" />
-          <RequiredItem items="thal_dnacrawler" type="Contained" />
+          <RequiredItem items="thal_dnacrawler" type="Contained" excludebroken="false" />
           <Conditional charge="gt 75" />
         </StatusEffect>
         <!-- ramblin -->
         <StatusEffect type="OnUse" targettype="This" delay="40" IsOn="false" charge="10" setvalue="false" stackable="false" disabledeltatime="true">
           <SpawnCharacter speciesname="ramblin" count="1" spread="8" />
           <sound file="Mods/Thalassophobia/Items/Jobgear/Scientist/Ding.ogg" range="600.0" loop="false" />
-          <RequiredItem items="thal_dnaramblin" type="Contained" />
+          <RequiredItem items="thal_dnaramblin" type="Contained" excludebroken="false" />
           <Conditional charge="lt 100" />
         </StatusEffect>
         <StatusEffect type="OnUse" target="This" IsOn="true" text="">
-          <RequiredItem items="thal_dnaramblin" type="Contained" />
+          <RequiredItem items="thal_dnaramblin" type="Contained" excludebroken="false" />
           <Conditional charge="lt 100" />
         </StatusEffect>
         <StatusEffect type="OnUse" target="This">
           <sound file="Mods/Thalassophobia/Items/Jobgear/Scientist/Deny.ogg" range="600.0" loop="false" />
-          <RequiredItem items="thal_dnaramblin" type="Contained" />
+          <RequiredItem items="thal_dnaramblin" type="Contained" excludebroken="false" />
           <Conditional charge="gt 95" />
         </StatusEffect>
         <!-- maggot -->
         <StatusEffect type="OnUse" targettype="This" delay="40" IsOn="false" charge="10" setvalue="false" stackable="false" disabledeltatime="true">
           <SpawnCharacter speciesname="maggot" count="1" spread="8" />
           <sound file="Mods/Thalassophobia/Items/Jobgear/Scientist/Ding.ogg" range="600.0" loop="false" />
-          <RequiredItem items="thal_dnamaggot" type="Contained" />
+          <RequiredItem items="thal_dnamaggot" type="Contained" excludebroken="false" />
           <Conditional charge="lt 100" />
         </StatusEffect>
         <StatusEffect type="OnUse" target="This" IsOn="true" text="">
-          <RequiredItem items="thal_dnamaggot" type="Contained" />
+          <RequiredItem items="thal_dnamaggot" type="Contained" excludebroken="false" />
           <Conditional charge="lt 100" />
         </StatusEffect>
         <StatusEffect type="OnUse" target="This">
           <sound file="Mods/Thalassophobia/Items/Jobgear/Scientist/Deny.ogg" range="600.0" loop="false" />
-          <RequiredItem items="thal_dnamaggot" type="Contained" />
+          <RequiredItem items="thal_dnamaggot" type="Contained" excludebroken="false" />
           <Conditional charge="gt 95" />
         </StatusEffect>
         <!-- hammerhead spawn -->
         <StatusEffect type="OnUse" targettype="This" delay="40" IsOn="false" charge="10" setvalue="false" stackable="false" disabledeltatime="true">
           <SpawnCharacter speciesname="hammerheadspawn" count="1" spread="8" />
           <sound file="Mods/Thalassophobia/Items/Jobgear/Scientist/Ding.ogg" range="600.0" loop="false" />
-          <RequiredItem items="thal_dnahammer" type="Contained" />
+          <RequiredItem items="thal_dnahammer" type="Contained" excludebroken="false" />
           <Conditional charge="lt 100" />
         </StatusEffect>
         <StatusEffect type="OnUse" target="This" IsOn="true" text="">
-          <RequiredItem items="thal_dnahammer" type="Contained" />
+          <RequiredItem items="thal_dnahammer" type="Contained" excludebroken="false" />
           <Conditional charge="lt 100" />
         </StatusEffect>
         <StatusEffect type="OnUse" target="This">
           <sound file="Mods/Thalassophobia/Items/Jobgear/Scientist/Deny.ogg" range="600.0" loop="false" />
-          <RequiredItem items="thal_dnahammer" type="Contained" />
+          <RequiredItem items="thal_dnahammer" type="Contained" excludebroken="false" />
           <Conditional charge="gt 95" />
         </StatusEffect>
         <!-- tigerthresher -->
         <StatusEffect type="OnUse" targettype="This" delay="60" IsOn="false" charge="50" setvalue="false" stackable="false" disabledeltatime="true">
           <SpawnCharacter speciesname="tigerthresher" count="1" spread="8" />
           <sound file="Mods/Thalassophobia/Items/Jobgear/Scientist/Ding.ogg" range="600.0" loop="false" />
-          <RequiredItem items="thal_dnathresher" type="Contained" />
+          <RequiredItem items="thal_dnathresher" type="Contained" excludebroken="false" />
           <Conditional charge="lt 60" />
         </StatusEffect>
         <StatusEffect type="OnUse" target="This" IsOn="true" text="">
-          <RequiredItem items="thal_dnathresher" type="Contained" />
+          <RequiredItem items="thal_dnathresher" type="Contained" excludebroken="false" />
           <Conditional charge="lt 60" />
         </StatusEffect>
         <StatusEffect type="OnUse" target="This">
           <sound file="Mods/Thalassophobia/Items/Jobgear/Scientist/Deny.ogg" range="600.0" loop="false" />
-          <RequiredItem items="thal_dnathresher" type="Contained" />
+          <RequiredItem items="thal_dnathresher" type="Contained" excludebroken="false" />
           <Conditional charge="gt 55" />
         </StatusEffect>
       </Button>
