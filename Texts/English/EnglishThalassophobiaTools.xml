@@ -562,35 +562,81 @@ Credits</lootlabel.money>
   <thal_guidegen_introlabel>HELP/INTRO</thal_guidegen_introlabel>
   <entityname.thal_guidegen_intro>ඞHELP/INTRO
   
-		This book serves as an introduction to the genetics system of the Thalassophobia mod. It is navigated by typing the name of the page in the textbox that appears when the item is held, and then pressing enter. After pressing enter, the tooltip description of the item (what you're reading now) will update with information relevant to the page. 
-  
-	You can type "help" at any time to return to this page.
-  
-	Try it out now: Equip the item, and type "index" (no quotes) in the box to navigate to an index full of page names. </entityname.thal_guidegen_intro>
+		This book serves as an introduction to the genetics system of the Thalassophobia mod. It is navigated by equipping the book and clicking the name of the page you want to visit on the right hand side of the screen. Once you've done this, the description tooltip (the one you're reading now) will update. All guides work like this.
+		
+		It is recommended that you read the pages in order from top to bottom. INDEX contains a summary of what the pages contain.
+  </entityname.thal_guidegen_intro>
 	<thal_guidegen_indexlabel>INDEX</thal_guidegen_indexlabel>
   <entityname.thal_guidegen_index>ඞINDEX
   
-	Enter any of the following words (without the "-" at the beginning) into the nav bar to view their entries. 
+	Below is a table of contents giving a brief summary of each page:
   
-	If you are new to this, it is recommended you go in order.
-  
-	-scanner
-	-dna
-	-meatcleaver
-	-cloning
-	-grafting
-	-knowngrafts</entityname.thal_guidegen_index>
+	-SCANNER: How to obtain DNA via Scanner
+	-DNA: Proper DNA Handling, Corruption
+	-SPLICING: How to splice DNA to apply grafts
+	-KNOWN GRAFTS: Database of known grafts
+	-MUTATIONS: Rundown of Disorders/Alleles
+	-TRANSPLANT: Transplanting, Isolating Alleles
+	-CLONING: Biomass, Cloning for Fresh DNA</entityname.thal_guidegen_index>
 	<thal_guidegen_scannerlabel>SCANNING</thal_guidegen_scannerlabel>
 	<entityname.thal_guidegen_scanner>ඞSCANNING
   
-	Every geneticist starts with a scanner to obtain DNA by scanning creatures. DNA is the backbone of the entire geneticist role.
-	You can hold right mouse button to aim, and press E or Left-Mouse to attach your scanner to a wall. Attached, you can interact with the scanner to turn it on and off. The emitted beam is hazardous and will have slow but deadly effects on people around it left on for too long. It will also break down quickly while active, so use wisely. To detach the scanner, use a wrench. You can also wire the scanner with a screwdriver in order to operate with signals.
-	To obtain DNA, a *living* creature must stand under the beam of a scanner for ~30 seconds. The progress of the scan can be seen on the scanner in the form of a progress bar that gradually filcowpowhapls when a creature is being scanned. If a creature exits the beam, the bar will deplete quickly: maintain their position by any means necessary.
-	The Institute recommends that scientists use Paralyzant in order to keep the creature alive but motionless. However, more robust scientists have been known to use other tricks to avoid wasting Paralyzant. Remember that safety of the crew comes first!
-	Once the bar is full, a fresh fragment of DNA will drop out of the scanner. To read more about DNA and what it can do, enter "dna" into the nav bar.</entityname.thal_guidegen_scanner>
-	<thal_guidegen_scannerlabel>DNA HANDLING</thal_guidegen_scannerlabel>
+	Every geneticist starts with a scanner to obtain DNA by scanning creatures. DNA is the backbone of genetics.
+	You can hold right mouse button to aim, and press E or Left-Mouse to attach your scanner to a wall. Attached, you can interact with the scanner to turn it on and off. The emitted beam is hazardous and will have slow but deadly effects on people around it left on for too long. It will also break down quickly while active, so use sparingly. To detach the scanner, use a wrench. You can also wire the scanner in order to operate remotely with signals.
+	To obtain DNA, a *LIVING* creature must stand under the beam of a scanner for ~30 seconds. The progress of the scan can be seen on the scanner in the form of a progress bar that gradually fills during scanning. If a creature exits the beam, the bar will deplete quickly: maintain its position by any means necessary.
+	The Institute recommends that scientists use Paralyzant in order to keep the creature alive but motionless. Robust scientists, however, have been known to use other tricks to avoid wasting Paralyzant. Remember that safety of the crew comes first!
+	Once the bar is full, a fresh fragment of DNA will drop out of the scanner. Put it in your cooler ASAP.</entityname.thal_guidegen_scanner>
+	<thal_guidegen_dnalabel>DNA HANDLING</thal_guidegen_dnalabel>
 	<entityname.thal_guidegen_dna>ඞDNA HANDLING
   
-	DNA is a delicate, valuable resource. It is naturally scarce (unless it comes with your submarine), and is difficult to obtain as it requires a live creature to be scanned. Most importantly, DNA erodes when not submerged in water, or when not in special cold storage containers. Damage/Erosion is irreversable; The condition of DNA can only ever worsen. Given long enough, all DNA will ineviteably erode completely.
-	DNA that has eroded completely will become corrupted. Corrupted DNA behaves erratically, and involuntary usage on subjects is considered unethical malpractice. Despite this, experimenting on willing test subjects is encouraged as many of its side effects are potentially beneficial.</entityname.thal_guidegen_dna>
+	DNA is a delicate, valuable resource. It is naturally scarce (unless it comes with your submarine), and is difficult to obtain as it requires scanning. Most importantly, DNA erodes when not submerged in water, or when not in special cold storage containers, like your DNA Cooler. Damage/Erosion is irreversable; The condition of DNA can only ever worsen. Given long enough, all DNA will ineviteably erode completely, no matter how careful you are. But how quickly and cleanly you use it determines its longevity.
+	DNA that has eroded completely will become corrupted. Corrupted DNA behaves erratically, and involuntary usage on subjects is considered unethical malpractice. Despite this, experimenting on willing test subjects is encouraged as many of its side effects are potentially beneficial for human survival on Europa, and may aid your crew.</entityname.thal_guidegen_dna>
+	<thal_guidegen_splicelabel>SPLICING</thal_guidegen_splicelabel>
+	<entityname.thal_guidegen_splice>ඞSPLICING
+  
+	DNA can be spliced with the DNA of you or your crewmembers to gain new abilities.
+	DNA can be grafted to three types of target slots: The "Head", the "Torso", and the "Limbs". Each graft has a different effect dependent on the slot and the DNA used. Each slot can only have one mutation; Splicing to a slot will revert any existing preexisting grafts there.
+	Anything grafted to the head slot is an active ability, meaning you can press "Creature Attack" (middle mouse by default) to use it.
+	CRISPR-Cas9 is an intracellular solution that prepares the subject's DNA for grafts. It is consumed on one use, making it precious, and equivelant to one graft in worth.
+	To use CRISPR, equip it. The Health menu must be closed, or it won't equip. You will see three buttons onscreen. Click one depending on your desired slot. Inject it into whoever you want spliced. They will now enter "meltdown": they are ready for the graft.
+	Next, put your DNA in the DNA Grafter. Be quick in order to minimize DNA corruption. Inject the grafter into the person undergoing meltdown. They should collapse and get up shortly with a new ability. Congrats!
+	When humans with grafts die, their DNA collapses and they melt. Revival, organ harvesting, and other things dependent on corpses won't work.</entityname.thal_guidegen_splice>
+	<thal_guidegen_graftslabel>KNOWN GRAFTS</thal_guidegen_graftslabel>
+	<entityname.thal_guidegen_grafts>ඞKNOWN GRAFTS
+  
+	Below is a list of known grafts discovered by The Institute so far. You can see all 3 slot grafts of a DNA and what they do in the DNA sample's mouseover description. It's up to Europan geneticists to find the rest!
+	
+	MUDRAPTOR-LIMBS 
+	 Tail that increases swim speed.
+	CRAWLER-TORSO
+	 Gills that provide air in water.
+	MUSHROOM-TORSO
+	 Pores that regenerate health in spore clouds.
+	MAGGOT-HEAD
+	 Launches user at a structure/entity when used.
+	THRESHER-TORSO
+	 Shell immune to pressure up to 4000m.
+	HAMMERHEAD-HEAD
+	 Head ridge that sends other creatures flying.
+	 
+	Can YOU research all 21 mutations? Better get scanning!</entityname.thal_guidegen_grafts>
+	<thal_guidegen_mutationlabel>MUTATIONS</thal_guidegen_mutationlabel>
+	<entityname.thal_guidegen_mutation>ඞMUTATIONS
+  
+	MUTATIONS are a side effect of genetic malpractice. The Institute strongly discourages use of mutations on the general public, but encourages controlled research on test subjects to study and catalogue mutations. There are 30 mutations in all.
+	When CORRUPT DNA is grafted, a random number of mutations (anywhere from 1-7) may emerge in the patient alongside the usual graft. Mutations consist of two types: DISORDERS and ALLELES. DISORDERS are mostly harmful, while ALLELES are beneficial. Disorders are indicated by a FUSCHIA PINK icon where afflictions are normally shown, and Alleles are indicated by a YELLOW-GREEN. The specific mutations you get from corrupted DNA are essentially luck: Initially, you must "roll" for your desired mutations.
+	All mutations will be reverted if you graft human DNA. This is an effective way of curing all disorders in an emergency, or after accidentally using corrupted DNA.</entityname.thal_guidegen_mutation>
+	<thal_guidegen_transplantlabel>TRANSPLANTING</thal_guidegen_transplantlabel>
+	<entityname.thal_guidegen_transplant>ඞTRANSPLANTING
+  
+	To make things less random, an item exists to "hold" some mutations from the draw that you want to keep. 
+	The DNA Transplanter is an item that copies, edits, and transfers mutations. Injecting someone with an empty DNA Transplanter will store their mutations if they have any. A sound and a binary effect will happen if the storing is successful, and the stored afflictions will be listed in the mouseover description. After this point, injecting anyone with the same transplanter will give them all of the mutations stored. Depending on the severity of the mutations, the condition of the transplanter will decrease. More dangerous or more beneficial mutations (such as alleles) typically decrease condition faster. When the condition reaches zero, the transplanter and its contents are destroyed. This serves as a way to transfer mutations from one person to another, a limited amount of times.
+	The transfer can also remove certain traits. Equipping the transplanter and pressing "Cull Mutations" allows the contents of the transplanter to be viewed on mouseover, like a diving mask or a toolbelt. From here, you can drag out any mutations that you don't want in the transplanter to isolate them. Pressing "Cull Mutations" reduces the transplanter to one use, but you can plant your culled mutations onto a clean subject, and then use a fresh transplanter to scan from said subject.</entityname.thal_guidegen_transplant>
+	<thal_guidegen_clonelabel>CLONING</thal_guidegen_clonelabel>
+	<entityname.thal_guidegen_clone>ඞCLONING
+  
+	Should your DNA wear down and corrupt, there is a way to retrieve fresh DNA from the corrupted sample. Cloning lets you grow the original creature from the corrupt DNA, allowing you to scan uncorrupted DNA from that creature.
+	To clone, hold your Biomorphic Incubation Pod in your hands, aim with right mouse button, and press E or left mouse to attach it. Dropping it on the ground will not work. When properly attached, the Incubator will show a readout of how many kilograms of "biomass" it contains. Each creature requires a different amount of biomass, with humans for one being 60kg. 
+	Biomass (meaning organic material) can be obtained by placing any fleshy organs from creatures inside the incubator. Geneticists spawn with a Meat Cleaver that allows them to carve meat out of corpses to gain biomass. Repeatedly hit corpses until blood gushes everywhere and entrails come out.
+	Once the biomass is obtained, interact with the Incubator. You will see a single item slot, and an initiation button. Place your biomass within the item slot, and it should instantly grind and the counter should go up. Once there is enough, insert the DNA of the desired creature and initiate the cloning. You should then be able to scan the creature to gain uncorrupted DNA.</entityname.thal_guidegen_clone>
 </infotexts>

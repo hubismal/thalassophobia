@@ -282,7 +282,7 @@
   <Item name="" identifier="thal_dnahatcher" category="Machine" Tags="smallitem,provocative" cargocontaineridentifier="metalcrate" description="" impactsoundtag="impact_metal_light" hideinmenus="false" scale="0.65" hideconditionbar="true" canflipx="false" charge="100">
     <Sprite name="dna hatcher" texture="Mods/Thalassophobia/Items/Jobgear/Scientist/science.png" sourcerect="667,7,193,232" depth="0.8" origin="0.5,0.5" />
     <Body width="193" height="232" density="5"></Body>
-    <ItemLabel scrollable="true" padding="20,30,20,40" textcolor="1,1,1,1" text="Biomass: 0kg">
+    <ItemLabel scrollable="true" padding="20,30,20,40" textcolor="1,1,1,1" text="Biomass: 0kg"><!-- Hide/Show BioKG label -->
       <StatusEffect type="OnContained" target="This" textcolor="0,0,0,0" />
       <StatusEffect type="OnNotContained" target="This" textcolor="1,1,1,1" />
     </ItemLabel>
