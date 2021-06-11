@@ -23,6 +23,7 @@
         <!-- TODO: Add page turning sounds -->
         <Button text="thal_guidegen_introlabel">
           <StatusEffect type="OnUse" targettype="Contained">
+						<Sound file="Mods/Thalassophobia/Items/Misc/Pageturn.ogg" range="300" />
             <RemoveItem />
           </StatusEffect>
           <StatusEffect type="OnUse" delay="0.1" target="This">
@@ -32,6 +33,7 @@
         <Button text="thal_guidegen_indexlabel">
           <StatusEffect type="OnUse" targettype="Contained">
             <RemoveItem />
+						<Sound file="Mods/Thalassophobia/Items/Misc/Pageturn.ogg" range="300" />
           </StatusEffect>
           <StatusEffect type="OnUse" delay="0.1" target="This">
             <SpawnItem identifier="thal_guidegen_index" spawnposition="ThisInventory" />
@@ -40,6 +42,7 @@
         <Button text="thal_guidegen_scannerlabel">
           <StatusEffect type="OnUse" targettype="Contained">
             <RemoveItem />
+						<Sound file="Mods/Thalassophobia/Items/Misc/Pageturn.ogg" range="300" />
           </StatusEffect>
           <StatusEffect type="OnUse" delay="0.1" target="This">
             <SpawnItem identifier="thal_guidegen_scanner" spawnposition="ThisInventory" />
@@ -48,6 +51,7 @@
         <Button text="thal_guidegen_dnalabel">
           <StatusEffect type="OnUse" targettype="Contained">
             <RemoveItem />
+						<Sound file="Mods/Thalassophobia/Items/Misc/Pageturn.ogg" range="300" />
           </StatusEffect>
           <StatusEffect type="OnUse" delay="0.1" target="This">
             <SpawnItem identifier="thal_guidegen_dna" spawnposition="ThisInventory" />
@@ -56,6 +60,7 @@
         <Button text="thal_guidegen_splicelabel">
           <StatusEffect type="OnUse" targettype="Contained">
             <RemoveItem />
+						<Sound file="Mods/Thalassophobia/Items/Misc/Pageturn.ogg" range="300" />
           </StatusEffect>
           <StatusEffect type="OnUse" delay="0.1" target="This">
             <SpawnItem identifier="thal_guidegen_splice" spawnposition="ThisInventory" />
@@ -64,6 +69,7 @@
         <Button text="thal_guidegen_graftslabel">
           <StatusEffect type="OnUse" targettype="Contained">
             <RemoveItem />
+						<Sound file="Mods/Thalassophobia/Items/Misc/Pageturn.ogg" range="300" />
           </StatusEffect>
           <StatusEffect type="OnUse" delay="0.1" target="This">
             <SpawnItem identifier="thal_guidegen_grafts" spawnposition="ThisInventory" />
@@ -72,6 +78,7 @@
         <Button text="thal_guidegen_mutationlabel">
           <StatusEffect type="OnUse" targettype="Contained">
             <RemoveItem />
+						<Sound file="Mods/Thalassophobia/Items/Misc/Pageturn.ogg" range="300" />
           </StatusEffect>
           <StatusEffect type="OnUse" delay="0.1" target="This">
             <SpawnItem identifier="thal_guidegen_mutation" spawnposition="ThisInventory" />
@@ -80,6 +87,7 @@
         <Button text="thal_guidegen_transplantlabel">
           <StatusEffect type="OnUse" targettype="Contained">
             <RemoveItem />
+						<Sound file="Mods/Thalassophobia/Items/Misc/Pageturn.ogg" range="300" />
           </StatusEffect>
           <StatusEffect type="OnUse" delay="0.1" target="This">
             <SpawnItem identifier="thal_guidegen_transplant" spawnposition="ThisInventory" />
@@ -88,6 +96,7 @@
         <Button text="thal_guidegen_clonelabel">
           <StatusEffect type="OnUse" targettype="Contained">
             <RemoveItem />
+						<Sound file="Mods/Thalassophobia/Items/Misc/Pageturn.ogg" range="300" />
           </StatusEffect>
           <StatusEffect type="OnUse" delay="0.1" target="This">
             <SpawnItem identifier="thal_guidegen_clone" spawnposition="ThisInventory" />
