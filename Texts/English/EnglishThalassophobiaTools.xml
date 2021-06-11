@@ -613,13 +613,13 @@ Credits</lootlabel.money>
 	MUSHROOM-TORSO
 	 Pores that regenerate health in spore clouds.
 	MAGGOT-HEAD
-	 Launches user at a structure/entity when used.
+	 Launches user at a structure/entity on use.
 	THRESHER-TORSO
 	 Shell immune to pressure up to 4000m.
 	HAMMERHEAD-HEAD
 	 Head ridge that sends other creatures flying.
 	 
-	Can YOU research all 21 mutations? Better get scanning!</entityname.thal_guidegen_grafts>
+	Can YOU research all 21 grafts? Better get scanning!</entityname.thal_guidegen_grafts>
 	<thal_guidegen_mutationlabel>MUTATIONS</thal_guidegen_mutationlabel>
 	<entityname.thal_guidegen_mutation>ඞMUTATIONS
   
