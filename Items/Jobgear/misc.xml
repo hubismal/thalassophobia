@@ -9,6 +9,12 @@
       <!-- page statuses -->
       <!-- HELP/INTRO -->
     </Holdable>
+    <Deconstruct time="10">
+      <Item identifier="thal_geneticinit" />
+      <Item identifier="thal_geneticinit" />
+      <Item identifier="thal_disordersave" />
+      <Item identifier="thal_disordersave" />
+    </Deconstruct>
     <ItemContainer capacity="1" hideitems="true" itempos="16,-15" canbeselected="true" containedspritedepth="0.56" drawhudwhenequipped="true" uilabel="apcbat" spawnwithid="thal_guidegen_intro" drawinventory="false">
       <Containable items="guidepage" />
       <ContainedStateIndicator texture="Content/UI/ContainerIndicators.png" sourcerect="0,157,1,1" />
