@@ -4,7 +4,7 @@
     <sprite texture="Mods/Thalassophobia/Characters/Gummy/GeneLimbs/thalamus.png" sourcerect="10,300,214,235" origin="0.17,0.50" depth="0.0" color="255,255,255,255" deadcolor="255,255,255,255" deadcolortime="0" />
     <attack ranged="True" avoidfriendlyfire="True" requiredangle="10" structuresoundtype="StructureBlunt" context="Any" targettype="Any" targetlimbtype="None" hitdetectiontype="Distance" afterattack="FallBackUntilCanAttack" afterattackdelay="0.1" reverse="False" retreat="False" fullspeedafterattack="True" range="700" damagerange="700" duration="0.1" cooldown="1" secondarycooldown="0.3" cooldownrandomfactor="0" structuredamage="0" itemdamage="0" stun="0" onlyhumans="False" applyforceonlimbs="" force="0" rootforceworldstart="0,0" rootforceworldmiddle="0,0" rootforceworldend="0,0" roottransitioneasing="Linear" torque="0" applyforcesonlyonce="False" targetimpulse="0" targetimpulseworld="0,0" targetforce="0" targetforceworld="0,0" severlimbsprobability="0" priority="0">
       <StatusEffect type="OnFailure" target="UseTarget">
-        <SpawnItem identifier="thal_dnathalamusprojectile" spawnposition="This" count="1" aimspread="5" rotationtype="Limb" rotation="0" />
+        <SpawnItem identifier="thal_hammerprojectile" spawnposition="This" count="1" aimspread="2" rotationtype="Limb" rotation="0" />
       </StatusEffect>
       <StatusEffect type="OnFailure" target="This">
         <sound file="Content/Characters/Spineling/SPINELING_attackProjectile1.ogg" range="2000" volume="0.1" selectionmode="random" dontmuffle="true" />

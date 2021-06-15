@@ -1,5 +1,37 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Items>
+	<!-- NEW COLLAR (Part of Genetics III) -->
+	<Item name="" identifier="thal_slavecollar" category="Equipment" cargocontaineridentifier="explosivecrate" tags="smallitem,explosive" description="" scale="0.5"
+	originaloutpost="unarmed" canflipy="false"
+	><!-- use originaloutpost to keep track of unarmed/armed, canflipy for whether detonation is fulfilled -->
+    <Sprite name="Slavecollar Normal" texture="Mods/Thalassophobia/Items/Weapons/Explosives/bombcollar.png" depth="0.6" sourcerect="5,0,215,167" origin="0.5123859,0.53692484" scale="0.2" />
+    <Body width="40" radius="30" density="15" />
+    <Fabricate suitablefabricators="fabricator" requiredtime="120">
+      <RequiredSkill identifier="weapons" level="50" />
+      <RequiredItem identifier="nitroglycerin" />
+      <RequiredItem identifier="fpgacircuit" />
+      <RequiredItem identifier="handcuffs" />
+    </Fabricate>
+    <Deconstruct time="10">
+      <Item identifier="fpgacircuit" />
+      <Item identifier="handcuffs" />
+    </Deconstruct>
+    <Wearable limbtype="Head" slots="Any,Head" msg="ItemMsgPickUpSelect" autoequipwhenfull="false">
+      <sprite name="Bombcollar Wearable True" texture="Mods/Thalassophobia/Items/Jobgear/headgears.png" limb="Head" inheritlimbdepth="true" inherittexturescale="true" depth="0.6" sourcerect="119,322,78,84" origin="0.43003038,0.38882154">
+      <!-- DETONATIONS -->
+      <StatusEffect type="OnBroken" target="This" >
+				<Remove />
+      </StatusEffect>
+      <!-- ARMING -->
+      <!-- Arm when initially put on, Give character collar affliction -->
+      <StatusEffect type="OnWearing" target="This" originaloutpost="armed">
+				<Conditional originaloutpost="eq unarmed" />
+      </StatusEffect>
+      <!-- Beep while armed -->
+    </Wearable>
+  </Item>
+	
+	
   <!-- COLLAR SHIT BEGIN -->
   <Item name="" identifier="thal_bombcollar" category="Equipment" cargocontaineridentifier="metalcrate" tags="smallitem" description="" scale="0.5">
     <Sprite name="Bombcollar Normal" texture="Mods/Thalassophobia/Items/Weapons/Explosives/bombcollar.png" depth="0.6" sourcerect="5,0,215,167" origin="0.5123859,0.53692484" scale="0.2" />
@@ -108,8 +140,10 @@
     </Fabricate>
   </Item>
   <Item name="" identifier="thal_bombcollartimed" category="Equipment" cargocontaineridentifier="metalcrate" tags="smallitem" description="" scale="0.5">
+		<!--
     <PreferredContainer primary="armcab" minamount="1" maxamount="1" spawnprobability="0.5" />
     <PreferredContainer primary="wreckarmcab" minamount="1" maxamount="2" spawnprobability="0.1" />
+    -->
     <Sprite name="Bombcollar Normal" texture="Mods/Thalassophobia/Items/Weapons/Explosives/bombcollar.png" depth="0.6" sourcerect="5,0,215,167" origin="0.5123859,0.53692484" scale="0.5" />
     <Body width="40" radius="30" density="15" />
     <Fabricate suitablefabricators="fabricator" requiredtime="100">
