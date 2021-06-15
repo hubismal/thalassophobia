@@ -6,6 +6,9 @@
   <entityname.thal_headsetchannel>Multichannel Headset</entityname.thal_headsetchannel>
   <entitydescription.thal_headsetchannel>Channeled Headset. Enter a number to change the channel.</entitydescription.thal_headsetchannel>
   
+  <entityname.thal_slavecollar>Slave Collar</entityname.thal_slavecollar>
+  <entitydescription.thal_slavecollar>Write me Later</entitydescription.thal_slavecollar>
+  
   <entityname.thal_rainbowsprayer>TruColor Sprayer</entityname.thal_rainbowsprayer>
   <entitydescription.thal_rainbowsprayer>An modified sprayer engineered for painting with a more vibrant color set. Enter colors in the format Red,Green,Blue,Transparency (ranging from 0 to 255). Requires TruPaint, fabricated from other paints.</entitydescription.thal_rainbowsprayer>
   
