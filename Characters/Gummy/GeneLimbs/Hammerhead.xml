@@ -1,6 +1,15 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <huskappendage>
-  <limb id="13" name="mag1" type="None" height="70" width="90" notes="" spriteorientation="NaN" flip="True" mirrorvertically="False" mirrorhorizontally="False" hide="False" attackpriority="1" steerforce="5" radius="0" density="0.1" ignorecollisions="False" angulardamping="7" pullpos="0,0" stepoffset="0,0" refjoint="-1" mouthpos="0,0" healthindex="0" friction="0.3" restitution="0.05" constanttorque="0" constantangle="0" scale="0.4" attackforcemultiplier="1" minseverancedamage="1" severedfadeouttime="10" applytailangle="False" sinefrequencymultiplier="1" sineamplitudemultiplier="1" blinkfrequency="0" blinkdurationin="0.2" blinkdurationout="0.5" blinkholdtime="0" blinkrotationin="0" blinkrotationout="45" blinkforce="50" blinktransitionin="Linear" blinktransitionout="Linear">
+	<limb id="13" name="laser" type="None" height="70" width="90" notes="" spriteorientation="NaN" flip="True" mirrorvertically="False" mirrorhorizontally="False" hide="False" attackpriority="1" steerforce="5" radius="0" density="0.1" ignorecollisions="True" angulardamping="7" pullpos="0,0" stepoffset="0,0" refjoint="-1" mouthpos="0,0" healthindex="0" friction="0.3" restitution="0.05" constanttorque="0" constantangle="0" scale="0.4" attackforcemultiplier="1" minseverancedamage="1" severedfadeouttime="10" applytailangle="False" sinefrequencymultiplier="1" sineamplitudemultiplier="1" blinkfrequency="0" blinkdurationin="0.2" blinkdurationout="0.5" blinkholdtime="0" blinkrotationin="0" blinkrotationout="45" blinkforce="50" blinktransitionin="Linear" blinktransitionout="Linear">
+		<sprite texture="Mods/Thalassophobia/Characters/Gummy/GeneLimbs/Hammerhead.png" sourcerect="368,34,1,1" origin="0.26,0.60" depth="0" color="255,255,255,255" deadcolor="255,255,255,0" deadcolortime="0" />
+		<!-- melee
+     -->
+     <attack context="Any" requiredangle="10" cooldown="6" afterattack="Pursue" range="700" ranged="true" damagerange="100" duration="0.1" structuredamage="0.1" itemdamage="0.1" structuresoundtype="StructureSlash" targetforce="50" severlimbsprobability="0" torque="0" force="10" applyforceonlimbs="0" targettype="Any" hitdetectiontype="Distance" stun="4" onlyhumans="False" applyforcesonlyonce="True" targetimpulse="50" targetimpulseworld="0,0" targetforceworld="0,0" stickchance="0" priority="1" secondarycooldown="0" cooldownrandomfactor="0.5" reverse="False" targetlimbtype="None" afterattackdelay="0" retreat="False" rootforceworldstart="0,0" rootforceworldmiddle="0,0" rootforceworldend="0,0" roottransitioneasing="Linear" levelwalldamage="30">
+    <Affliction identifier="bitewounds" strength="3" probability="1" />
+    <!-- launching -->
+     </attack>
+  </limb>
+  <limb id="14" name="mag1" type="None" height="70" width="90" notes="" spriteorientation="NaN" flip="True" mirrorvertically="False" mirrorhorizontally="False" hide="False" attackpriority="1" steerforce="5" radius="0" density="0.1" ignorecollisions="False" angulardamping="7" pullpos="0,0" stepoffset="0,0" refjoint="-1" mouthpos="0,0" healthindex="0" friction="0.3" restitution="0.05" constanttorque="0" constantangle="0" scale="0.4" attackforcemultiplier="1" minseverancedamage="1" severedfadeouttime="10" applytailangle="False" sinefrequencymultiplier="1" sineamplitudemultiplier="1" blinkfrequency="0" blinkdurationin="0.2" blinkdurationout="0.5" blinkholdtime="0" blinkrotationin="0" blinkrotationout="45" blinkforce="50" blinktransitionin="Linear" blinktransitionout="Linear">
 		<!-- IMMA FIRIN MAH LASER (UPGRADE)
      -->
     <sprite texture="Mods/Thalassophobia/Characters/Gummy/GeneLimbs/Hammerhead.png" sourcerect="368,34,260,178" origin="0.26,0.60" depth="0" color="255,255,255,255" deadcolor="255,255,255,0" deadcolortime="0" />
@@ -27,14 +36,7 @@
 				<Conditional thal_disorderhammer="gt 0" />
       </StatusEffect>
   </limb>
-  <limb id="14" name="laser" type="None" height="70" width="90" notes="" spriteorientation="NaN" flip="True" mirrorvertically="False" mirrorhorizontally="False" hide="False" attackpriority="1" steerforce="5" radius="0" density="0.1" ignorecollisions="True" angulardamping="7" pullpos="0,0" stepoffset="0,0" refjoint="-1" mouthpos="0,0" healthindex="0" friction="0.3" restitution="0.05" constanttorque="0" constantangle="0" scale="0.4" attackforcemultiplier="1" minseverancedamage="1" severedfadeouttime="10" applytailangle="False" sinefrequencymultiplier="1" sineamplitudemultiplier="1" blinkfrequency="0" blinkdurationin="0.2" blinkdurationout="0.5" blinkholdtime="0" blinkrotationin="0" blinkrotationout="45" blinkforce="50" blinktransitionin="Linear" blinktransitionout="Linear">
-		<!-- melee
-     -->
-     <attack context="Any" requiredangle="10" cooldown="6" afterattack="Pursue" range="700" ranged="true" damagerange="100" duration="0.1" structuredamage="0.1" itemdamage="0.1" structuresoundtype="StructureSlash" targetforce="50" severlimbsprobability="0" torque="0" force="10" applyforceonlimbs="0" targettype="Any" hitdetectiontype="Distance" stun="4" onlyhumans="False" applyforcesonlyonce="True" targetimpulse="50" targetimpulseworld="0,0" targetforceworld="0,0" stickchance="0" priority="1" secondarycooldown="0" cooldownrandomfactor="0.5" reverse="False" targetlimbtype="None" afterattackdelay="0" retreat="False" rootforceworldstart="0,0" rootforceworldmiddle="0,0" rootforceworldend="0,0" roottransitioneasing="Linear" levelwalldamage="30">
-    <Affliction identifier="bitewounds" strength="3" probability="1" />
-    <!-- launching -->
-     </attack>
-  </limb>
+  
   <!-- Head to husk appendage -->
   <joint name="Head to Huskappendage" limb1="0" limb2="13" limb1anchor="2.8,-5" limb2anchor="-1.5,0" upperlimit="0" lowerlimit="-10" weldjoint="True" canbesevered="False" limitenabled="True" />
   <joint name="Head to Huskappendage" limb1="0" limb2="14" limb1anchor="2.8,-5" limb2anchor="-1.5,0" upperlimit="0" lowerlimit="-10" weldjoint="True" canbesevered="False" limitenabled="True" />
