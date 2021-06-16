@@ -17,7 +17,7 @@
       <Item identifier="handcuffs" />
     </Deconstruct>
     <Wearable limbtype="Head" slots="Any,Head" msg="ItemMsgPickUpSelect" autoequipwhenfull="false">
-      <sprite name="Bombcollar Wearable True" texture="Mods/Thalassophobia/Items/Jobgear/headgears.png" limb="Head" inheritlimbdepth="true" inherittexturescale="true" depth="0.6" sourcerect="119,322,78,84" origin="0.43003038,0.38882154">
+      <sprite name="Bombcollar Wearable True" texture="Mods/Thalassophobia/Items/Jobgear/headgears.png" limb="Head" inheritlimbdepth="true" inherittexturescale="true" depth="0.6" sourcerect="119,322,78,84" origin="0.43003038,0.38882154" />
       <!-- DETONATIONS -->
       <StatusEffect type="OnBroken" target="This" >
 				<Remove />

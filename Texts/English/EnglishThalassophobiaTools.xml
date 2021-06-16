@@ -369,6 +369,45 @@
   <entityname.thal_disdatmudraptor>Mudraptor Speed-Diver Allele</entityname.thal_disdatmudraptor>
   <entitydescription.thal_disdatfart>An icon representing DNA data for a mutation/syndrome stored on a transplanter. Drag it out of your inventory to delete it.</entitydescription.thal_disdatfart>
   
+  <afflictionname.thal_disordercurse>God-Forsaken Syndrome</afflictionname.thal_disordercurse>
+<afflictiondescription.thal_disordercurse>A genetic disorder. Your genetic meddling has distorted your natural humanity so horribly that you are an act against god. Just being alive gradually increases your crew's curse level. Can be cured by grafting uncorrupted human DNA.  </afflictiondescription.thal_disordercurse>
+
+<afflictionname.thal_disorderclown>Jugglernaut Allele</afflictionname.thal_disorderclown>
+<afflictiondescription.thal_disorderclown>A genetic allele that makes the patient gain resistances to stun while wearing a clown suit. When drunk on top of that, they gain regenerative abilities. Can be reverted by grafting uncorrupted human DNA.  </afflictiondescription.thal_disorderclown>
+
+<afflictionname.thal_disordercard>Card Collector Allele</afflictionname.thal_disordercard>
+<afflictiondescription.thal_disordercard>A genetic allele. Holding a card belonging to a job in your direct inventory gives you a buff related to that job.
+Assistant: All skills increase gradually
+Engineer: Burns heal over time.
+Mechanic: Speed increased.
+Clown: Being drunk gradually gives vigor.
+Medic: Immune to opiate withdrawl.
+Scientist: Any affliction considered "poison" reduced in strength or slowed.
+Security: Bleeding Reduced.
+Captain: Stun timer decreases more quickly.
+  </afflictiondescription.thal_disordercard>
+
+<afflictionname.thal_disordersmart>Hidden Talent Allele</afflictionname.thal_disordersmart>
+<afflictiondescription.thal_disordersmart>A genetic allele that boosts all the patient's skills, making grinding to level up skills much more achieveable. Can be reverted by grafting uncorrupted human DNA. </afflictiondescription.thal_disordersmart>
+
+<afflictionname.thal_disorderpoison>Peak Health Allele</afflictionname.thal_disorderpoison>
+<afflictiondescription.thal_disorderpoison>A genetic allele. When the patient is at full health, the progression of most poisons and infections are reverted and held in their early stages until the patient's health drops below full, or the ailment is cured.  Can be reverted by grafting uncorrupted human DNA.</afflictiondescription.thal_disorderpoison>
+
+<afflictionname.thal_disorderthresher>Thresher Abyssal Allele</afflictionname.thal_disorderthresher>
+<afflictiondescription.thal_disorderthresher>A genetic allele that increases the effectiveness of the Thresher Torso genetic splice to withstand pressure at 10k meters underwater instead of the normal 5k. Can be reverted by grafting uncorrupted human DNA.</afflictiondescription.thal_disorderthresher>
+
+<afflictionname.thal_disordercrawler>Crawler Dracu-Lecter Allele</afflictionname.thal_disordercrawler>
+<afflictiondescription.thal_disordercrawler>A genetic allele that allows patients with the Crawler Head Splice to drink blood from corpses until they're sucked dry, and to be resistant to food poisoning. Can be reverted by grafting uncorrupted human DNA.</afflictiondescription.thal_disordercrawler>
+
+<afflictionname.thal_disordermudraptor>Mudraptor Speed Diver Allele</afflictionname.thal_disordermudraptor>
+<afflictiondescription.thal_disordermudraptor>A genetic allele that allows patients with the Mudraptor Tail Splice to gain temporary pressure resistance in water, allowing for 30 seconds more time before being crushed. Can be reverted by grafting uncorrupted human DNA.</afflictiondescription.thal_disordermudraptor>
+
+<afflictionname.thal_disorderhammer>Freeze Ray Allele</afflictionname.thal_disorderhammer>
+<afflictiondescription.thal_disorderhammer>A genetic allele that allows patients with the Hammerhead Head Splice to gain the ability to shoot laserbeams when attacking. Can be reverted by grafting uncorrupted human DNA.</afflictiondescription.thal_disorderhammer>
+
+<afflictionname.thal_disorderbaptism>Holy Water Allele</afflictionname.thal_disorderbaptism>
+<afflictiondescription.thal_disorderbaptism>A genetic allele. Your genetic modification has effectively made you a new being; 'born again'. Submerging yourself in the holy water of Europa gradually washes away your crew's curse level. Can be reverted by grafting uncorrupted human DNA.</afflictiondescription.thal_disorderbaptism>
+  
   <entityname.thal_dnascanner>DNA Scanner</entityname.thal_dnascanner>
   <entitydescription.thal_dnascanner>A DNA scanner that collects DNA from the saliva molecules of living beings. Will not work on dead creatures. Attach to a wall and interact with it. Scans whatever is underneath it but breaks over time.</entitydescription.thal_dnascanner>
   
