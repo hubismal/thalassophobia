@@ -12,7 +12,6 @@
       <Skill identifier="medical" level="10,50" />
       <!--<Skill identifier="resolution" level="20,100"/>-->
       <Skill identifier="initiative" level="0,100" />
-      <Skill identifier="thal_clownskill" level="50,51" />
     </Skills>
     <ItemSet>
       <Item identifier="idcard" equip="true" showpreview="false" />
