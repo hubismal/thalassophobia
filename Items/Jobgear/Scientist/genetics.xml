@@ -1559,13 +1559,13 @@
       <StatusEffect type="OnContained" target="This" comparison="And" condition="-0.5">
         <Conditional flicker="eq 0.9" />
         <Conditional Condition="gt 0" />
-        <sound file="Mods/Thalassophobia/Items/Jobgear/Scientist/Dnacorrupt.ogg" range="270.0" loop="true" />
+        <sound file="Mods/Thalassophobia/Items/Jobgear/Scientist/Dnacorrupt.ogg" volume="0.3" range="270.0" loop="true" />
       </StatusEffect>
       <!-- for lying around -->
       <StatusEffect type="OnNotContained" target="This" comparison="And" condition="-0.5">
         <Conditional InWater="eq false" />
         <Conditional Condition="gt 0" />
-        <sound file="Mods/Thalassophobia/Items/Jobgear/Scientist/Dnacorrupt.ogg" range="270.0" loop="true" />
+        <sound file="Mods/Thalassophobia/Items/Jobgear/Scientist/Dnacorrupt.ogg" volume="0.3" range="270.0" loop="true" />
       </StatusEffect>
       <!-- add tag "thal_corruptdna(type)" when condition hits zero so grafters know how to behave -->
       <StatusEffect type="OnBroken" target="This" Tags="thal_corruptdna" IsOn="false">
@@ -1595,13 +1595,13 @@
       <StatusEffect type="OnContained" target="This" comparison="And" condition="-0.5">
         <Conditional flicker="eq 0.9" />
         <Conditional Condition="gt 0" />
-        <sound file="Mods/Thalassophobia/Items/Jobgear/Scientist/Dnacorrupt.ogg" range="270.0" loop="true" />
+        <sound file="Mods/Thalassophobia/Items/Jobgear/Scientist/Dnacorrupt.ogg" volume="0.3" range="270.0" loop="true" />
       </StatusEffect>
       <!-- for lying around -->
       <StatusEffect type="OnNotContained" target="This" comparison="And" condition="-0.5">
         <Conditional InWater="eq false" />
         <Conditional Condition="gt 0" />
-        <sound file="Mods/Thalassophobia/Items/Jobgear/Scientist/Dnacorrupt.ogg" range="270.0" loop="true" />
+        <sound file="Mods/Thalassophobia/Items/Jobgear/Scientist/Dnacorrupt.ogg" volume="0.3" range="270.0" loop="true" />
       </StatusEffect>
       <!-- add tag "thal_corruptdna(type)" when condition hits zero so grafters know how to behave -->
       <StatusEffect type="OnBroken" target="This" Tags="thal_corruptdna" IsOn="false">
@@ -1631,13 +1631,13 @@
       <StatusEffect type="OnContained" target="This" comparison="And" condition="-0.5">
         <Conditional flicker="eq 0.9" />
         <Conditional Condition="gt 0" />
-        <sound file="Mods/Thalassophobia/Items/Jobgear/Scientist/Dnacorrupt.ogg" range="270.0" loop="true" />
+        <sound file="Mods/Thalassophobia/Items/Jobgear/Scientist/Dnacorrupt.ogg" volume="0.3" range="270.0" loop="true" />
       </StatusEffect>
       <!-- for lying around -->
       <StatusEffect type="OnNotContained" target="This" comparison="And" condition="-0.5">
         <Conditional InWater="eq false" />
         <Conditional Condition="gt 0" />
-        <sound file="Mods/Thalassophobia/Items/Jobgear/Scientist/Dnacorrupt.ogg" range="270.0" loop="true" />
+        <sound file="Mods/Thalassophobia/Items/Jobgear/Scientist/Dnacorrupt.ogg" volume="0.3" range="270.0" loop="true" />
       </StatusEffect>
       <!-- add tag "thal_corruptdna(type)" when condition hits zero so grafters know how to behave -->
       <StatusEffect type="OnBroken" target="This" Tags="thal_corruptdna" IsOn="false">
@@ -1667,13 +1667,13 @@
       <StatusEffect type="OnContained" target="This" comparison="And" condition="-0.5">
         <Conditional flicker="eq 0.9" />
         <Conditional Condition="gt 0" />
-        <sound file="Mods/Thalassophobia/Items/Jobgear/Scientist/Dnacorrupt.ogg" range="270.0" loop="true" />
+        <sound file="Mods/Thalassophobia/Items/Jobgear/Scientist/Dnacorrupt.ogg" volume="0.3" range="270.0" loop="true" />
       </StatusEffect>
       <!-- for lying around -->
       <StatusEffect type="OnNotContained" target="This" comparison="And" condition="-0.5">
         <Conditional InWater="eq false" />
         <Conditional Condition="gt 0" />
-        <sound file="Mods/Thalassophobia/Items/Jobgear/Scientist/Dnacorrupt.ogg" range="270.0" loop="true" />
+        <sound file="Mods/Thalassophobia/Items/Jobgear/Scientist/Dnacorrupt.ogg" volume="0.3" range="270.0" loop="true" />
       </StatusEffect>
       <!-- add tag "thal_corruptdna(type)" when condition hits zero so grafters know how to behave -->
       <StatusEffect type="OnBroken" target="This" Tags="thal_corruptdna" IsOn="false">
@@ -1703,13 +1703,13 @@
       <StatusEffect type="OnContained" target="This" comparison="And" condition="-0.5">
         <Conditional flicker="eq 0.9" />
         <Conditional Condition="gt 0" />
-        <sound file="Mods/Thalassophobia/Items/Jobgear/Scientist/Dnacorrupt.ogg" range="270.0" loop="true" />
+        <sound file="Mods/Thalassophobia/Items/Jobgear/Scientist/Dnacorrupt.ogg" volume="0.3" range="270.0" loop="true" />
       </StatusEffect>
       <!-- for lying around -->
       <StatusEffect type="OnNotContained" target="This" comparison="And" condition="-0.5">
         <Conditional InWater="eq false" />
         <Conditional Condition="gt 0" />
-        <sound file="Mods/Thalassophobia/Items/Jobgear/Scientist/Dnacorrupt.ogg" range="270.0" loop="true" />
+        <sound file="Mods/Thalassophobia/Items/Jobgear/Scientist/Dnacorrupt.ogg" volume="0.3" range="270.0" loop="true" />
       </StatusEffect>
       <!-- add tag "thal_corruptdna(type)" when condition hits zero so grafters know how to behave -->
       <StatusEffect type="OnBroken" target="This" Tags="thal_corruptdna" IsOn="false">
@@ -1739,13 +1739,13 @@
       <StatusEffect type="OnContained" target="This" comparison="And" condition="-0.5">
         <Conditional flicker="eq 0.9" />
         <Conditional Condition="gt 0" />
-        <sound file="Mods/Thalassophobia/Items/Jobgear/Scientist/Dnacorrupt.ogg" range="270.0" loop="true" />
+        <sound file="Mods/Thalassophobia/Items/Jobgear/Scientist/Dnacorrupt.ogg" volume="0.3" range="270.0" loop="true" />
       </StatusEffect>
       <!-- for lying around -->
       <StatusEffect type="OnNotContained" target="This" comparison="And" condition="-0.5">
         <Conditional InWater="eq false" />
         <Conditional Condition="gt 0" />
-        <sound file="Mods/Thalassophobia/Items/Jobgear/Scientist/Dnacorrupt.ogg" range="270.0" loop="true" />
+        <sound file="Mods/Thalassophobia/Items/Jobgear/Scientist/Dnacorrupt.ogg" volume="0.3" range="270.0" loop="true" />
       </StatusEffect>
       <!-- add tag "thal_corruptdna(type)" when condition hits zero so grafters know how to behave -->
       <StatusEffect type="OnBroken" target="This" Tags="thal_corruptdna" IsOn="false">
@@ -1775,13 +1775,13 @@
       <StatusEffect type="OnContained" target="This" comparison="And" condition="-0.5">
         <Conditional flicker="eq 0.9" />
         <Conditional Condition="gt 0" />
-        <sound file="Mods/Thalassophobia/Items/Jobgear/Scientist/Dnacorrupt.ogg" range="270.0" loop="true" />
+        <sound file="Mods/Thalassophobia/Items/Jobgear/Scientist/Dnacorrupt.ogg" volume="0.3" range="270.0" loop="true" />
       </StatusEffect>
       <!-- for lying around -->
       <StatusEffect type="OnNotContained" target="This" comparison="And" condition="-0.5">
         <Conditional InWater="eq false" />
         <Conditional Condition="gt 0" />
-        <sound file="Mods/Thalassophobia/Items/Jobgear/Scientist/Dnacorrupt.ogg" range="270.0" loop="true" />
+        <sound file="Mods/Thalassophobia/Items/Jobgear/Scientist/Dnacorrupt.ogg" volume="0.3" range="270.0" loop="true" />
       </StatusEffect>
       <!-- add tag "thal_corruptdna(type)" when condition hits zero so grafters know how to behave -->
       <StatusEffect type="OnBroken" target="This" Tags="thal_corruptdna" IsOn="false">
