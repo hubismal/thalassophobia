@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<contentpackage name="Thalassophobia" path="Mods/Thalassophobia/filelist.xml" corepackage="false" gameversion="0.13.0.11" steamworkshopid="2003946282" installtime="1619111960">
+<contentpackage name="Thalassophobia" path="Mods/Thalassophobia/filelist.xml" corepackage="false" gameversion="0.14.6.0" steamworkshopid="2003946282" installtime="1623966347">
   <Text file="Mods/Thalassophobia/Texts/Russian/RussianThalassophobiaLocations.xml" />
   <Text file="Mods/Thalassophobia/Texts/Russian/RussianThalassophobiaTools.xml" />
   <Text file="Mods/Thalassophobia/Texts/English/EnglishThalassophobiaLocations.xml" />
@@ -62,6 +62,6 @@
   <Character file="Mods/Thalassophobia/Characters/Humanhive/Humanhive.xml" />
   <Character file="Mods/Thalassophobia/Characters/Gummy/Gummy.xml" />
   <Character file="Mods/Thalassophobia/Characters/Watcherpet/Watcherpet.xml" />
-  <Submarine file="Mods/Thalassophobia/Submarines/[Thal] Gnitterbuss.sub" />
-  <Submarine file="Mods/Thalassophobia/Submarines/[Thal] Gnitterbike.sub" />
+  <Submarine file="Mods/Thalassophobia/Submarines/Gnitterbuss.sub" />
+  <Submarine file="Mods/Thalassophobia/Submarines/Gnitterbike.sub" />
 </contentpackage>
