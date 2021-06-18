@@ -177,14 +177,16 @@
     <Effect minstrength="0" maxstrength="30" strengthchange="-30.0"></Effect>
     <icon texture="Mods/Thalassophobia/UI/MainIconsAtlas.png" sourcerect="896,640,128,128" color="139,60,42,255" origin="0,0" />
   </Affliction>
-  <Affliction name="Mushroomized" identifier="thal_mushroomized" description="A large fuschia mushroom sprouts from the patient's head, inversing their motor functions. When the affliction reaches its peak, it will turn into a Ramblin' Evil Mushroom to further spread the mushroomization." type="poison" causeofdeathdescription="Died of mushroomization." selfcauseofdeathdescription="You have died of mushroomization." limbspecific="false" indicatorlimb="Head" showiconthreshold="0" karmachangeonapplied="-6" maxstrength="100">
-    <Effect minstrength="0" maxstrength="99" strengthchange="1">
+  <Affliction name="Mushroomized" identifier="thal_mushroomized" description="A large fuschia mushroom sprouts from the patient's head, inversing their motor functions. When the affliction reaches its peak, it will turn into a Ramblin' Evil Mushroom to further spread the mushroomization." type="invertcontrols" causeofdeathdescription="Died of mushroomization." selfcauseofdeathdescription="You have died of mushroomization." limbspecific="false" indicatorlimb="Head" showiconthreshold="0" karmachangeonapplied="-6" maxstrength="100">
+    <Effect minstrength="0" maxstrength="99" minchromaticaberration="8.0" maxchromaticaberration="14.0" strengthchange="1">
       <StatusEffect target="Character" delay="1.0">
         <Affliction identifier="invertcontrols" amount="0.025" />
+        <Conditional IsLocalPlayer="True"/>
+        <sound file="Mods/Thalassophobia/Items/Gardening/m3rgyy.ogg" loop="true" dontmuffle="true" />
       </StatusEffect>
     </Effect>
-    <Effect minstrength="99" maxstrength="101" strengthchange="-90000">
-      <StatusEffect target="Character" stackable="false" delay="7.0">
+    <Effect minstrength="99" maxstrength="101" strengthchange="-90000" >
+      <StatusEffect target="Character" stackable="false" delay="2.0">
         <Conditional speciesname="eq human" />
         <SpawnCharacter speciesname="ramblin" />
         <SpawnItem identifier="thal_ramblinburst" />
@@ -196,6 +198,11 @@
           <sound file="Content/Characters/Leucocyte/CARRIER_cellDeath1.ogg" range="1000" volume="1" selectionmode="Random" />
           <sound file="Content/Characters/Leucocyte/CARRIER_cellDeath2.ogg" range="1000" volume="1" selectionmode="Random" />
         </Explosion>
+      </StatusEffect>
+      <StatusEffect target="Character" stackable="false" duration="2.0" >
+        <Conditional speciesname="eq human" />
+        <sound file="Mods/Thalassophobia/Map/Thalamus/eye.ogg" loop="true" />
+        <ReduceAffliction identifier="invertcontrols" amount="300" />
       </StatusEffect>
     </Effect>
     <icon texture="Mods/Thalassophobia/UI/MainIconsAtlas.png" sourcerect="384,640,128,128" color="170,194,147,255" origin="0,0" />
