@@ -8,7 +8,7 @@
 				<StatusEffect target="Character" stackable="false" disabledeltatime="true" >
 					<ParticleEmitter particle="thal_dna" particleamount="1" particlespersecond="1" scalemin="1" scalemax="1" velocitymin="0" velocitymax="0" anglemin="0" anglemax="360" />
 					<Sound file="Mods/Thalassophobia/Items/Jobgear/Scientist/Dnainject.ogg" volume="2.5" range="600" />
-					<Explosion range="1" force="0" stun="0" smoke="false" sparks="false" empstrength="100" flames="false" applyfireeffects="false" screencolor="150,200,255,170" screencolorrange="1" screencolorduration="1.2" >
+					<Explosion range="1" force="0" stun="0" smoke="false" sparks="false" empstrength="0" flames="false" applyfireeffects="false" screencolor="150,200,255,170" screencolorrange="1" screencolorduration="1.2" >
 					</Explosion>
 					<Conditional speciesname="human" />
 				</StatusEffect>
@@ -23,7 +23,7 @@
 					<Sound file="Mods/Thalassophobia/Items/Jobgear/Scientist/Corrupt1.ogg" volume="1.0" range="500" selectionmode="random" />
 					<Sound file="Mods/Thalassophobia/Items/Jobgear/Scientist/Corrupt2.ogg" volume="1.0" range="500" />
 					<Sound file="Mods/Thalassophobia/Items/Jobgear/Scientist/Corrupt3.ogg" volume="1.0" range="500" />
-					<Explosion range="2" force="0" stun="0" smoke="false" sparks="false" empstrength="100" flames="false" applyfireeffects="false" screencolor="255,180,90,170" screencolorrange="2" screencolorduration="2.0" >
+					<Explosion range="2" force="0" stun="0" smoke="false" sparks="false" empstrength="0" flames="false" applyfireeffects="false" screencolor="255,180,90,170" screencolorrange="2" screencolorduration="2.0" >
 					</Explosion>
 					<Conditional speciesname="human" />
 				</StatusEffect>
@@ -34,7 +34,7 @@
 				<StatusEffect target="Character" stackable="false" disabledeltatime="true" >
 					<ParticleEmitter particle="thal_binary" particleamount="1" particlespersecond="1" scalemin="1" scalemax="1" velocitymin="0" velocitymax="0" anglemin="0" anglemax="360" />
 					<Sound file="Mods/Thalassophobia/Items/Jobgear/Scientist/Savedisorder.ogg" volume="2.5" range="600" />
-					<Explosion range="1" force="0" stun="0" smoke="false" sparks="false" empstrength="100" flames="false" applyfireeffects="false" screencolor="150,200,255,170" screencolorrange="1" screencolorduration="1.2" >
+					<Explosion range="1" force="0" stun="0" smoke="false" sparks="false" empstrength="0" flames="false" applyfireeffects="false" screencolor="150,200,255,170" screencolorrange="1" screencolorduration="1.2" >
 					</Explosion>
 					<Conditional speciesname="human" />
 				</StatusEffect>
