@@ -26,7 +26,6 @@
         <TextBox text="Sign Contents" propertyname="text"></TextBox>
         <StatusEffect type="OnNotContained" target="This" setvalue="true" textcolor="0,0,0,1" />
         <StatusEffect type="OnContained" target="This" setvalue="true" textcolor="0,0,0,0" >
-					<ParticleEmitter particle="glowblood" copyentityangle="false" anglemin="0" anglemax="360" particlespersecond="3" velocitymin="40" velocitymax="90" scalemin="0.5" scalemax="0.5" />
 				</StatusEffect>
         <StatusEffect type="OnFire" target="This" setvalue="true" spritecolor="0,0,0,1" />
         <RequiredItem identifier="thal_pen" type="Equipped" />
