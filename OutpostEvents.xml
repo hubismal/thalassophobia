@@ -123,6 +123,8 @@
 		Choose your crews background as captain.
 		-->
     <ScriptedEvent identifier="thal_campaignstart">
+			<CheckReputationAction targettype="faction" identifier="coalition" condition="lte 40">
+        <Success>
       <CheckDataAction identifier="thal_pastchosen" condition="eq 1">
         <Failure>
           <TagAction criteria="player" tag="potentialplayer" />
@@ -231,6 +233,8 @@
           </CheckItemAction>
         </Failure>
       </CheckDataAction>
+      </Success>
+    </CheckReputationAction>
     </ScriptedEvent>
     <!--
     <ScriptedEvent identifier="thal_campaignstartsideline">
