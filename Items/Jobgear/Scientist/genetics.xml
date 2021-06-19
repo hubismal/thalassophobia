@@ -44,6 +44,23 @@
       <requireditem identifier="wrench" type="Equipped" />
     </Holdable>
   </Item>
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
   <Item name="" identifier="thal_dnascanner" category="Machine" Tags="mediumitem,provocative,thal_dnapreserve" cargocontaineridentifier="metalcrate" description="" impactsoundtag="impact_metal_light" requireaimtouse="true" hideinmenus="false" scale="0.5" characterusable="false" damagedbyexplosions="true" explosiondamagemultiplier="0.8" canflipx="false">
     <Sprite name="dna scanner" texture="Mods/Thalassophobia/Items/Jobgear/Scientist/science.png" sourcerect="5,263,261,113" depth="0.8" origin="0.5,0.5" />
     <BrokenSprite name="dna scanner" texture="Mods/Thalassophobia/Items/Jobgear/Scientist/science.png" sourcerect="5,382,261,113" depth="0.8" origin="0.5,0.5" maxcondition="40" fadein="true" />
@@ -73,28 +90,28 @@
       <StatusEffect type="Always" target="This" lightcolor="100,100,100,100" text="">
         <Conditional IsOn="eq false" />
       </StatusEffect>
-      <StatusEffect type="OnActive" target="This" lightcolor="120,120,120,110" text="Scanner Ready - Insert Conscious Specimen Into Beam" delay="1.0" checkconditionalalways="true">
+      <StatusEffect type="OnActive" target="This" lightcolor="120,120,120,110" text="Scanner Ready - Insert Conscious Specimen Into Beam" delay="1.0" stackable="false" checkconditionalalways="true">
         <Conditional charge="lt 1" targetitemcomponent="PowerContainer" />
       </StatusEffect>
-      <StatusEffect type="OnActive" target="This" lightcolor="245,50,180,100" text="Hammerhead DNA Detected" delay="1.0" checkconditionalalways="true">
+      <StatusEffect type="OnActive" target="This" lightcolor="245,50,180,100" text="Hammerhead DNA Detected" delay="1.0" stackable="false" checkconditionalalways="true">
         <RequiredItem items="thal_dnahammer" type="Contained" />
       </StatusEffect>
-      <StatusEffect type="OnActive" target="This" lightcolor="245,50,180,100" text="Thresher DNA Detected" delay="1.0" checkconditionalalways="true">
+      <StatusEffect type="OnActive" target="This" lightcolor="245,50,180,100" text="Thresher DNA Detected" delay="1.0" stackable="false" checkconditionalalways="true">
         <RequiredItem items="thal_dnathresher" type="Contained" />
       </StatusEffect>
-      <StatusEffect type="OnActive" target="This" lightcolor="245,50,180,100" text="Mushroom DNA Detected" delay="1.0" checkconditionalalways="true">
+      <StatusEffect type="OnActive" target="This" lightcolor="245,50,180,100" text="Mushroom DNA Detected" delay="1.0" stackable="false" checkconditionalalways="true">
         <RequiredItem items="thal_dnaramblin" type="Contained" />
       </StatusEffect>
-      <StatusEffect type="OnActive" target="This" lightcolor="180,140,80,100" text="Maggot DNA Detected" delay="1.0" checkconditionalalways="true">
+      <StatusEffect type="OnActive" target="This" lightcolor="180,140,80,100" text="Maggot DNA Detected" delay="1.0" stackable="false" checkconditionalalways="true">
         <RequiredItem items="thal_dnamaggot" type="Contained" />
       </StatusEffect>
-      <StatusEffect type="OnActive" target="This" lightcolor="255,230,140,100" text="Crawler DNA Detected" delay="1.0" checkconditionalalways="true">
+      <StatusEffect type="OnActive" target="This" lightcolor="255,230,140,100" text="Crawler DNA Detected" delay="1.0" stackable="false" checkconditionalalways="true">
         <RequiredItem items="thal_dnacrawler" type="Contained" />
       </StatusEffect>
-      <StatusEffect type="OnActive" target="This" lightcolor="100,100,255,100" text="Mudraptor DNA Detected" delay="1.0" checkconditionalalways="true">
+      <StatusEffect type="OnActive" target="This" lightcolor="100,100,255,100" text="Mudraptor DNA Detected" delay="1.0" stackable="false" checkconditionalalways="true">
         <RequiredItem items="thal_dnamudraptor" type="Contained" />
       </StatusEffect>
-      <StatusEffect type="OnActive" target="This" lightcolor="0,255,100,100" text="Human DNA Detected" delay="1.0" checkconditionalalways="true">
+      <StatusEffect type="OnActive" target="This" lightcolor="0,255,100,100" text="Human DNA Detected" delay="1.0" stackable="false" checkconditionalalways="true">
         <RequiredItem items="thal_dnahuman" type="Contained" />
       </StatusEffect>
       <StatusEffect type="OnActive" target="This" condition="-0.7" />
