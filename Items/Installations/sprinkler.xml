@@ -6,8 +6,12 @@
     </Body>
     <LightComponent lightcolor="0,255,100,255" range="10.0" castshadows="false" powerconsumption="5" allowingameediting="false" >
       <LightTexture texture="Content/Lights/pointlight_bounce.png" origin="0.5,0.5" />
-      <StatusEffect type="OnActive" target="This">
+      <StatusEffect type="OnActive" target="This" stackable="false" delay="1.0" >
         <UseItem />
+      </StatusEffect>
+      <StatusEffect type="OnActive" target="This" stackable="false" >
+        <ParticleEmitter particle="steamspray" velocitymin="500.0" velocitymax="650.0" anglemin="-90.0" anglemax="-90.0" particlespersecond="10" />
+      <sound file="Content/Items/Tools/Extinguisher.ogg" type="OnUse" range="500.0" loop="true" />
       </StatusEffect>
       <StatusEffect type="OnActive" target="This" condition="-0.3" />
     </LightComponent>
@@ -18,7 +22,7 @@
       <input name="toggle" displayname="connection.togglestate" />
       <input name="set_state" displayname="connection.setstate" />
     </ConnectionPanel>
-    <RepairTool extinguishamount="60.0" range="500" barrelpos="0,0" repairthroughholes="true" characterusable="false" requireaimtouse="false" usablein="air" wateramount="10" barrelrotation="270" powerconsumption="5" >
+    <RepairTool extinguishamount="600.0" range="500" barrelpos="0,0" repairthroughholes="true" characterusable="false" requireaimtouse="false" usablein="air" wateramount="200" barrelrotation="270" powerconsumption="5" >
       <ParticleEmitter particle="steamspray" velocitymin="500.0" velocitymax="650.0" particlespersecond="10" />
       <sound file="Content/Items/Tools/Extinguisher.ogg" type="OnUse" range="500.0" loop="true" />
       <StatusEffect type="OnNotContained" target="This" setvalue="true" requireaimtouse="false" >
