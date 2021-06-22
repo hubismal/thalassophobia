@@ -84,7 +84,7 @@
       </CustomInterface>
       <Sprite name="dna scanner text" texture="Mods/Thalassophobia/Items/Jobgear/Scientist/science.png" sourcerect="278,338,165,57" depth="0.8" origin="0.7332378,0.46395308" />
       <LightSprite name="dna scan backlight" texture="Mods/Thalassophobia/Items/Jobgear/Scientist/science.png" sourcerect="273,266,171,69" depth="0.8" origin="0.74371487,0.49465847" />
-      <StatusEffect type="OnActive" target="This">
+      <StatusEffect type="OnActive" target="This" delay="1.0" stackable="false" >
         <UseItem />
       </StatusEffect>
       <StatusEffect type="Always" target="This" lightcolor="100,100,100,100" text="">
@@ -145,13 +145,13 @@
       </StatusEffect>
       <!-- human scan logic -->
       <!-- charge/buzz if humdna inside -->
-      <StatusEffect target="NearbyCharacters, This" type="OnUse" checkconditionalalways="true" stackable="false" range="200" charge="25" originalOutpost="human">
+      <StatusEffect target="NearbyCharacters, This" type="OnUse" checkconditionalalways="true" stackable="false" range="200" duration="1.0" charge="7" originalOutpost="human">
         <Conditional HasStatusTag="thal_humanscanned" />
         <Sound file="Mods/Thalassophobia/Items/Jobgear/Scientist/scanactive.ogg" type="OnUse" range="500" loop="true" />
         <RequiredItem items="thal_dnahuman" type="Contained" />
       </StatusEffect>
       <!-- spawn humdna inside if detected -->
-      <StatusEffect target="NearbyCharacters, This" type="OnUse" checkconditionalalways="true" stackable="false" range="200" originalOutpost="human">
+      <StatusEffect target="NearbyCharacters, This" type="OnUse" checkconditionalalways="true" stackable="false" range="200"  originalOutpost="human">
         <Conditional HasStatusTag="thal_humanscanned" />
         <SpawnItem spawnposition="ThisInventory" identifier="thal_dnahuman" />
       </StatusEffect>
