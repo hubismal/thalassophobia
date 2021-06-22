@@ -44,7 +44,7 @@
 	<Affliction identifier="thal_scan" />
 	<Override>
   <Affliction name="Scanned" identifier="thal_scan" description="The patient is being scanned or analyzed by a nearby scanner." type="buff" causeofdeathdescription="fucking fell and died" selfcauseofdeathdescription="you have fallen down and died somehow" limbspecific="false" showiconthreshold="0" indicatorlimb="Torso" maxstrength="1" isbuff="true" iconcolors="0,230,255,255;0,230,255,255">
-    <Effect minstrength="0" maxstrength="30" strengthchange="-0.2">
+    <Effect minstrength="0" maxstrength="30" strengthchange="-0.7">
       <StatusEffect tags="thal_humanscanned" target="Character" HideFace="true" duration="0.1" stackable="false">
         <Conditional speciesname="human" />
         <Conditional speciesname="husk" />

@@ -87,6 +87,10 @@
       <StatusEffect type="OnActive" target="This" delay="1.0" stackable="false" >
         <UseItem />
       </StatusEffect>
+      <StatusEffect type="OnActive" target="This" duration="1.0" stackable="false" offset="50,-10" >
+        <ParticleEmitter particle="thal_grid" velocitymin="60.0" velocitymax="60.0" anglemin="-90" anglemax="-90" particlespersecond="3" colormultiplier="50,200,200,200" />
+				<sound file="Mods/Thalassophobia/Items/Jobgear/Scientist/scanner.ogg" type="OnActive" range="500.0" loop="true" />
+      </StatusEffect>
       <StatusEffect type="Always" target="This" lightcolor="100,100,100,100" text="">
         <Conditional IsOn="eq false" />
       </StatusEffect>
