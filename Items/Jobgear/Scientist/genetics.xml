@@ -220,7 +220,7 @@
         <SpawnItem spawnposition="ThisInventory" identifier="thal_dnathresher" />
       </StatusEffect>
       <!--end logic-->
-      <StatusEffect target="This" type="OnUse" checkconditionalalways="true" stackable="false" charge="-20"></StatusEffect>
+      <StatusEffect target="This" type="OnUse" checkconditionalalways="true" stackable="false" duration="1.0" charge="-3"></StatusEffect>
       <StatusEffect type="Always" targettype="Contained" targets="thal_dna" delay="1.0" stackable="false">
         <Conditional ChargePercentage="lt 1" targetcontainer="true" targetitemcomponent="PowerContainer" />
         <RemoveItem />
