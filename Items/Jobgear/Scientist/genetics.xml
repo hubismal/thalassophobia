@@ -622,6 +622,8 @@
         <RequiredItem items="thal_dnahuman" type="Contained" excludebroken="false" />
         <Sound file="Content/Items/Medical/Syringe.ogg" type="OnUse" range="500" />
         <ReduceAffliction identifier="thal_meltdownhead" amount="400" />
+        <ReduceAffliction identifier="thal_meltdowntorso" amount="400" />
+        <ReduceAffliction identifier="thal_meltdownlimbs" amount="400" />
         <ReduceAffliction identifier="thal_disorderfart" amount="400" />
         <ReduceAffliction identifier="thal_disorderseizure" amount="400" />
         <ReduceAffliction identifier="thal_disorderexplode" amount="400" />
