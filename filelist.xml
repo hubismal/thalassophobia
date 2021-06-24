@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<contentpackage name="Thalassophobia" path="Mods/Thalassophobia/filelist.xml" corepackage="false" gameversion="0.14.6.0" steamworkshopid="2003946282" installtime="1624052625">
+<contentpackage name="Thalassophobia" path="Mods/Thalassophobia/filelist.xml" corepackage="false" gameversion="0.14.6.0" steamworkshopid="2003946282" installtime="1624432856">
   <Text file="Mods/Thalassophobia/Texts/Russian/RussianThalassophobiaLocations.xml" />
   <Text file="Mods/Thalassophobia/Texts/Russian/RussianThalassophobiaTools.xml" />
   <Text file="Mods/Thalassophobia/Texts/English/EnglishThalassophobiaLocations.xml" />
@@ -9,6 +9,7 @@
   <Text file="Mods/Thalassophobia/Texts/English/EnglishThalassophobiaInstallations.xml" />
   <LocationTypes file="Mods/Thalassophobia/Map/locationtypes.xml" />
   <Item file="Mods/Thalassophobia/Map/Thalamus/thalamusitems.xml" />
+  <Item file="Mods/Thalassophobia/Items/Weapons/atpweapons.xml" />
   <Item file="Mods/Thalassophobia/Items/Weapons/Explosives/explosives.xml" />
   <Item file="Mods/Thalassophobia/Items/Electricity/poweritems.xml" />
   <Item file="Mods/Thalassophobia/Items/Electricity/Lights/lights.xml" />
