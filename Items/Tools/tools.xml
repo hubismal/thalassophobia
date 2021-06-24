@@ -25,7 +25,8 @@
         <GuiFrame relativesize="0.70,0.10" anchor="Center" absoluteoffset="20,20" style="ItemUI" />
         <TextBox text="Sign Contents" propertyname="text"></TextBox>
         <StatusEffect type="OnNotContained" target="This" setvalue="true" textcolor="0,0,0,1" />
-        <StatusEffect type="OnContained" target="This" setvalue="true" textcolor="0,0,0,0" />
+        <StatusEffect type="OnContained" target="This" setvalue="true" textcolor="0,0,0,0" >
+				</StatusEffect>
         <StatusEffect type="OnFire" target="This" setvalue="true" spritecolor="0,0,0,1" />
         <RequiredItem identifier="thal_pen" type="Equipped" />
       </CustomInterface>
@@ -103,7 +104,7 @@
       </Containable>
     </ItemContainer>
   </Item>
-  <Item name="" description="" identifier="thal_locator" category="Equipment" cargocontaineridentifier="metalcrate" tags="smallitem" impactsoundtag="impact_soft" scale="0.3" hideconditionbar="true" canflipx="false">
+  <Item name="" description="" identifier="thal_locator" hideinmenus="true" category="Equipment" cargocontaineridentifier="metalcrate" tags="smallitem" impactsoundtag="impact_soft" scale="0.3" hideconditionbar="true" canflipx="false">
     <Sprite name="radio" texture="Mods/Thalassophobia/Items/Electricity/poweritems.png" sourcerect="340,380,325,380" depth="0.6" origin="0.5,0.5" />
     <Body width="130" height="80" density="400" />
     <ItemLabel scrollable="true" padding="7,12,7,6" textcolor="1,1,1,1" text=""></ItemLabel>

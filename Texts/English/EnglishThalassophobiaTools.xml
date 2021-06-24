@@ -6,6 +6,9 @@
   <entityname.thal_headsetchannel>Multichannel Headset</entityname.thal_headsetchannel>
   <entitydescription.thal_headsetchannel>Channeled Headset. Enter a number to change the channel.</entitydescription.thal_headsetchannel>
   
+  <entityname.thal_slavecollar>Slave Collar</entityname.thal_slavecollar>
+  <entitydescription.thal_slavecollar>Write me Later</entitydescription.thal_slavecollar>
+  
   <entityname.thal_rainbowsprayer>TruColor Sprayer</entityname.thal_rainbowsprayer>
   <entitydescription.thal_rainbowsprayer>An modified sprayer engineered for painting with a more vibrant color set. Enter colors in the format Red,Green,Blue,Transparency (ranging from 0 to 255). Requires TruPaint, fabricated from other paints.</entitydescription.thal_rainbowsprayer>
   
@@ -331,47 +334,148 @@
   <entityname.thal_geneticgraft>DNA Grafter</entityname.thal_geneticgraft>
   <entitydescription.thal_geneticgraft>Syringe which DNA samples can be inserted into. When injected into someone undergoing a CRISPR-Cas9 induced meltdown, this attatches the DNA to the cut sections, resulting in en vivo gene splicing. Gene splicing can be used to cure genetic disorders, and even transform bodyparts. Requires a patient to be injected with a CRISPR-Cas9 solution first.</entitydescription.thal_geneticgraft>
   
+  <entityname.thal_disordersave>DNA Transplanter</entityname.thal_disordersave>
+  <entitydescription.thal_disordersave>Syringe capable of trasnfering genetic disorders or mutations (not actual creature splices). Inject a person who is inflicted with disorders/mutations to store them. Afterwards, any future injections with the same transplanter will grant the injectee whatever disorders are stored. Actual creature limb splices are not stored, only the mutations/disorders. Has limited uses.
+  
+  Currently Stored Disorders (Blank if None):</entitydescription.thal_disordersave>
+  <entityname.thal_disdatfart>Indigestion Syndrome</entityname.thal_disdatfart>
+  <entityname.thal_disdatexplode>Combustion Syndrome</entityname.thal_disdatexplode>
+  <entityname.thal_disdatseizure>Stumble Syndrome</entityname.thal_disdatseizure>
+  <entityname.thal_disdatfire>Thermal Syndrome</entityname.thal_disdatfire>
+  <entityname.thal_disdatairloss>Vacuum Syndrome</entityname.thal_disdatairloss>
+  <entityname.thal_disdatbreathe>Lung Failure Syndrome</entityname.thal_disdatbreathe>
+  <entityname.thal_disdatemp>EMP Syndrome</entityname.thal_disdatemp>
+  <entityname.thal_disdathypo>Hypothermia Syndrome</entityname.thal_disdathypo>
+  <entityname.thal_disdatbloodloss>Pressurized Blood Syndrome</entityname.thal_disdatbloodloss>
+  <entityname.thal_disdatacid>Acid Gas Syndrome</entityname.thal_disdatacid>
+  <entityname.thal_disdatstupid>Retardation Syndrome</entityname.thal_disdatstupid>
+  <entityname.thal_disdatweapon>PTSD Syndrome</entityname.thal_disdatweapon>
+  <entityname.thal_disdatid>Authority Arrest Syndrome</entityname.thal_disdatid>
+  <entityname.thal_disdatrad>Rad Sensitivity Syndrome</entityname.thal_disdatrad>
+  <entityname.thal_disdatmumble>Mumble Syndrome</entityname.thal_disdatmumble>
+  <entityname.thal_disdatbait>Bait Syndrome</entityname.thal_disdatbait>
+  <entityname.thal_disdatdeath>Sudden Death Syndrome</entityname.thal_disdatdeath>
+  <entityname.thal_disdatpressure>InstaCrush Syndrome</entityname.thal_disdatpressure>
+  <entityname.thal_disdatthal>Thalassophobia Syndrome</entityname.thal_disdatthal>
+  <entityname.thal_disdatbuff>High Metabolism Syndrome</entityname.thal_disdatbuff>
+  <entityname.thal_disdathusk>Topped-Off Husk Syndrome</entityname.thal_disdathusk>
+  <entityname.thal_disdatclown>Jugglernaut Allele</entityname.thal_disdatclown>
+  <entityname.thal_disdatcard>Card Collector Allele</entityname.thal_disdatcard>
+  <entityname.thal_disdatsmart>Hidden Talent Allele</entityname.thal_disdatsmart>
+  <entityname.thal_disdatpoison>Peak Health Allele</entityname.thal_disdatpoison>
+  <entityname.thal_disdatcrawler>Crawler Dracu-Lecter Allele</entityname.thal_disdatcrawler>
+  <entityname.thal_disdatthresher>Thresher Abyssal Allele</entityname.thal_disdatthresher>
+  <entityname.thal_disdathammer>Hammer Freeze-Ray Allele</entityname.thal_disdathammer>
+  <entityname.thal_disdatmudraptor>Mudraptor Speed-Diver Allele</entityname.thal_disdatmudraptor>
+  <entitydescription.thal_disdatfart>An icon representing DNA data for a mutation/syndrome stored on a transplanter. Drag it out of your inventory to delete it.</entitydescription.thal_disdatfart>
+  
+  <afflictionname.thal_disordercurse>God-Forsaken Syndrome</afflictionname.thal_disordercurse>
+<afflictiondescription.thal_disordercurse>A genetic disorder. Your genetic meddling has distorted your natural humanity so horribly that you are an act against god. Just being alive gradually increases your crew's curse level. Can be cured by grafting uncorrupted human DNA.  </afflictiondescription.thal_disordercurse>
+
+<afflictionname.thal_disorderclown>Jugglernaut Allele</afflictionname.thal_disorderclown>
+<afflictiondescription.thal_disorderclown>A genetic allele that makes the patient gain resistances to stun while wearing a clown suit. When drunk on top of that, they gain regenerative abilities. Can be reverted by grafting uncorrupted human DNA.  </afflictiondescription.thal_disorderclown>
+
+<afflictionname.thal_disordercard>Card Collector Allele</afflictionname.thal_disordercard>
+<afflictiondescription.thal_disordercard>A genetic allele. Holding a card belonging to a job in your direct inventory gives you a buff related to that job.
+Assistant: All skills increase gradually
+Engineer: Burns heal over time.
+Mechanic: Speed increased.
+Clown: Being drunk gradually gives vigor.
+Medic: Immune to opiate withdrawl.
+Scientist: Any affliction considered "poison" reduced in strength or slowed.
+Security: Bleeding Reduced.
+Captain: Stun timer decreases more quickly.
+  </afflictiondescription.thal_disordercard>
+
+<afflictionname.thal_disordersmart>Hidden Talent Allele</afflictionname.thal_disordersmart>
+<afflictiondescription.thal_disordersmart>A genetic allele that boosts all the patient's skills, making grinding to level up skills much more achieveable. Can be reverted by grafting uncorrupted human DNA. </afflictiondescription.thal_disordersmart>
+
+<afflictionname.thal_disorderpoison>Peak Health Allele</afflictionname.thal_disorderpoison>
+<afflictiondescription.thal_disorderpoison>A genetic allele. When the patient is at full health, the progression of most poisons and infections are reverted and held in their early stages until the patient's health drops below full, or the ailment is cured.  Can be reverted by grafting uncorrupted human DNA.</afflictiondescription.thal_disorderpoison>
+
+<afflictionname.thal_disorderthresher>Thresher Abyssal Allele</afflictionname.thal_disorderthresher>
+<afflictiondescription.thal_disorderthresher>A genetic allele that increases the effectiveness of the Thresher Torso genetic splice to withstand pressure at 10k meters underwater instead of the normal 5k. Can be reverted by grafting uncorrupted human DNA.</afflictiondescription.thal_disorderthresher>
+
+<afflictionname.thal_disordercrawler>Crawler Dracu-Lecter Allele</afflictionname.thal_disordercrawler>
+<afflictiondescription.thal_disordercrawler>A genetic allele that allows patients with the Crawler Head Splice to drink blood from corpses until they're sucked dry, and to be resistant to food poisoning. Can be reverted by grafting uncorrupted human DNA.</afflictiondescription.thal_disordercrawler>
+
+<afflictionname.thal_disordermudraptor>Mudraptor Speed Diver Allele</afflictionname.thal_disordermudraptor>
+<afflictiondescription.thal_disordermudraptor>A genetic allele that allows patients with the Mudraptor Tail Splice to gain temporary pressure resistance in water, allowing for 30 seconds more time before being crushed. Can be reverted by grafting uncorrupted human DNA.</afflictiondescription.thal_disordermudraptor>
+
+<afflictionname.thal_disorderhammer>Freeze Ray Allele</afflictionname.thal_disorderhammer>
+<afflictiondescription.thal_disorderhammer>A genetic allele that allows patients with the Hammerhead Head Splice to gain the ability to shoot laserbeams when attacking. Can be reverted by grafting uncorrupted human DNA.</afflictiondescription.thal_disorderhammer>
+
+<afflictionname.thal_disorderbaptism>Holy Water Allele</afflictionname.thal_disorderbaptism>
+<afflictiondescription.thal_disorderbaptism>A genetic allele. Your genetic modification has effectively made you a new being; 'born again'. Submerging yourself in the holy water of Europa gradually washes away your crew's curse level. Can be reverted by grafting uncorrupted human DNA.</afflictiondescription.thal_disorderbaptism>
+  
   <entityname.thal_dnascanner>DNA Scanner</entityname.thal_dnascanner>
   <entitydescription.thal_dnascanner>A DNA scanner that collects DNA from the saliva molecules of living beings. Will not work on dead creatures. Attach to a wall and interact with it. Scans whatever is underneath it but breaks over time.</entitydescription.thal_dnascanner>
+  
+  <entityname.thal_dnabox>DNA Cooler</entityname.thal_dnabox>
+  <entitydescription.thal_dnabox>A handheld cryogenic cooler designed to store and preserve DNA without degradation. In the event of the cooler being lost, DNA can also be preserved by submerging it in water.</entitydescription.thal_dnabox>
   
   <entityname.thal_dnahatcher>Biomorphic Incubation Pod</entityname.thal_dnahatcher>
   <entitydescription.thal_dnahatcher>Pod used for creating creatures from DNA and biomass. Insert meat until there is enough biomass for your desired creature, then insert its DNA and press engage to start forming and nurturing the embryo. </entitydescription.thal_dnahatcher>
   
   <entityname.thal_dnahuman>Human DNA</entityname.thal_dnahuman>
-  <entitydescription.thal_dnahuman>Complete genetic sequence of the standard Homo Sapien. Can be used to develop anti-Humanoid technologies, or in DNA grafts for reverting humans back to normal. Grafting this DNA will revert all changes to the bodypart(s) currently in meltdown, and also revert any genetic disorders. </entitydescription.thal_dnahuman>
+  <entitydescription.thal_dnahuman>Decays when not stored in water or a cryogenic container. Corrupts when fully broken.
+		
+		Complete genetic sequence of the standard Homo Sapien. Can be used to develop anti-Humanoid technologies, or in DNA grafts for reverting humans back to normal. 
+		
+		Grafting this DNA will revert all changes to the bodypart(s) currently in meltdown, and will also cure any genetic disorders.</entitydescription.thal_dnahuman>
   
   <entityname.thal_dnamudraptor>Mudraptor DNA</entityname.thal_dnamudraptor>
-  <entitydescription.thal_dnamudraptor>Complete genetic sequence of the standard Europan Mudraptor. Can be used to develop anti-Mudraptor technologies, or in DNA grafts for gene splicing. DNA Abilities by Grafts:
+  <entitydescription.thal_dnamudraptor>Decays when not stored in water or a cryogenic container. Corrupts when fully broken.
+  
+  Complete genetic sequence of the standard Europan Mudraptor. Can be used to develop anti-Mudraptor technologies, or in DNA grafts for gene splicing. DNA Abilities by Grafts:
   Head (Beak): Slowly break down doors using creature attack.
   Torso (Shell): Gain bulletproof mudraptor armor on spine.
   Limbs (Tail): Swim Speed increases massively.</entitydescription.thal_dnamudraptor>
   
   <entityname.thal_dnacrawler>Crawler DNA</entityname.thal_dnacrawler>
-  <entitydescription.thal_dnacrawler>Complete genetic sequence of the standard Europan Crawler. Can be used to develop anti-crawler technologies, or in DNA grafts for gene splicing. DNA Abilities by Grafts:
+  <entitydescription.thal_dnacrawler>Decays when not stored in water or a cryogenic container. Corrupts when fully broken.
+  
+  Complete genetic sequence of the standard Europan Crawler. Can be used to develop anti-crawler technologies, or in DNA grafts for gene splicing. DNA Abilities by Grafts:
   Head (Fangs): Lifesteal bite by pressing creature attack.
   Torso (Gills): Filter oxygen from water even when there is none in the atmosphere.
   Limbs (Tail): General movement speed increase.</entitydescription.thal_dnacrawler>
   
   <entityname.thal_dnathresher>Thresher DNA</entityname.thal_dnathresher>
-  <entitydescription.thal_dnathresher>Complete genetic sequence of the standard Europan Tigerthresher. Can be used to develop anti-crawler technologies, or in DNA grafts for gene splicing. DNA Abilities by Grafts:
-  Head (Bone Jaw): Break down walls and doors very slowly using creature attack.
+  <entitydescription.thal_dnathresher>Decays when not stored in water or a cryogenic container. Corrupts when fully broken.
+  
+  Complete genetic sequence of the standard Europan Tigerthresher and Bonethresher. Can be used to develop anti-thresher technologies, or in DNA grafts for gene splicing. DNA Abilities by Grafts:
+  Head (Bone Jaw): Break down walls using creature attack.
   Torso (Exoskeleton): Pressure resistance.
   Limbs (Bioluminesence): Emit light.</entitydescription.thal_dnathresher>
   
   <entityname.thal_dnahammer>Hammerhead DNA</entityname.thal_dnahammer>
-  <entitydescription.thal_dnahammer>Complete genetic sequence of the standard Europan Hammerhead. Can be used to develop anti-crawler technologies, or in DNA grafts for gene splicing. DNA Abilities by Grafts:
-  Head (Hammerhead): Break down walls by aiming and pressing creature attack.
+  <entitydescription.thal_dnahammer>Decays when not stored in water or a cryogenic container. Corrupts when fully broken.
+  
+  Complete genetic sequence of the standard Europan Hammerhead. Can be used to develop anti-hammerhead technologies, or in DNA grafts for gene splicing. DNA Abilities by Grafts:
+  Head (Hammer Ridge): Hit creatures for massive damage and knockback.
   Torso (Birthsac): Damaging explosion on death.
-  Limbs (Adrenaline): Speed and resistance increase as vitality goes down.</entitydescription.thal_dnahammer>
+  Limbs (Mucous Gland): Slow regeneration when in water.</entitydescription.thal_dnahammer>
   
   <entityname.thal_dnamaggot>Maggot DNA</entityname.thal_dnamaggot>
-  <entitydescription.thal_dnamaggot>Complete genetic sequence of the standard Hive Maggot. Can be used to develop anti-maggot technologies, or in DNA grafts for gene splicing. DNA Abilities by Grafts:
+  <entitydescription.thal_dnamaggot>Decays when not stored in water or a cryogenic container. Corrupts when fully broken.
+  
+  Complete genetic sequence of the standard Hive Maggot. Can be used to develop anti-maggot technologies, or in DNA grafts for gene splicing. DNA Abilities by Grafts:
   Head (Orfice): Aim at the floor and press creature attack to birth a maggot at the cost of health. Cooldown of 4s.
   Torso (Pupa Sac): Burst into maggots on death.
   Limbs (Regeneration): Massively increased healing of bleeding affliction.</entitydescription.thal_dnamaggot>
   
+  <entityname.thal_dnathalamus>Thalamus DNA</entityname.thal_dnathalamus>
+  <entitydescription.thal_dnathalamus>Decays when not stored in water or a cryogenic container. Corrupts when fully broken.
+  
+  Complete genetic sequence of the Europan Thalamus. Can be used to develop anti-thalamus technologies, or in DNA grafts for gene splicing. DNA Abilities by Grafts:
+  Head (Fleshgun): Shoots a grappling rope that can pull in enemies.
+  Torso (Seed pod): Infects sub with ballast flora on death.
+  Limbs (Toxin Organ): Completely resistant to most poisons.</entitydescription.thal_dnathalamus>
+  
   <entityname.thal_dnaramblin>Mushroom DNA</entityname.thal_dnaramblin>
-  <entitydescription.thal_dnaramblin>Complete genetic sequence of the Ramblin' Evil Mushroom. Can be used to develop anti-mushroom technologies, or in DNA grafts for gene splicing. DNA Abilities by Grafts:
+  <entitydescription.thal_dnaramblin>Decays when not stored in water or a cryogenic container. Corrupts when fully broken.
+  
+  Complete genetic sequence of the Ramblin' Evil Mushroom. Can be used to develop anti-mushroom technologies, or in DNA grafts for gene splicing. DNA Abilities by Grafts:
   Head (Cap): Aim at the floor and press creature attack to discharge invigorating gasses.
   Torso (Versicolor): The "Mushroomized" affliction greatly heals you.
   Limbs (Athlete's Foot): Running speed substantially increased, Swimming speed marginally decreased.</entitydescription.thal_dnaramblin>
@@ -492,4 +596,91 @@ Credits</lootlabel.money>
   <itemmsgplayselect>[[select]] Play</itemmsgplayselect>
   <entityname.piano>Grand Piano</entityname.piano>
   <entitydescription.piano>An expensive Grandwin and Sons Piano. The music is only as good as the pianist. Place away from reactors, vents, sides of the ship, and other noisemakers for best results!</entitydescription.piano>
+  
+  <!-- GUIDES -->
+  <entityname.thal_guidegen>Genetics Guidebook</entityname.thal_guidegen>
+  <entitydescription.thal_guidegen>Current Page:</entitydescription.thal_guidegen>
+  <guidebookinstruction>Enter page name (Read item tooltip)</guidebookinstruction>
+  <thal_guidegen_introlabel>HELP/INTRO</thal_guidegen_introlabel>
+  <entityname.thal_guidegen_intro>ඞHELP/INTRO
+  
+		This book serves as an introduction to the genetics system of the Thalassophobia mod. It is navigated by equipping the book and clicking the name of the page you want to visit on the right hand side of the screen. Once you've done this, the description tooltip (the one you're reading now) will update. All guides work like this.
+		
+		It is recommended that you read the pages in order from top to bottom. INDEX contains a summary of what the pages contain.
+  </entityname.thal_guidegen_intro>
+	<thal_guidegen_indexlabel>INDEX</thal_guidegen_indexlabel>
+  <entityname.thal_guidegen_index>ඞINDEX
+  
+	Below is a table of contents giving a brief summary of each page:
+  
+	-SCANNER: How to obtain DNA via Scanner
+	-DNA: Proper DNA Handling, Corruption
+	-SPLICING: How to splice DNA to apply grafts
+	-KNOWN GRAFTS: Database of known grafts
+	-MUTATIONS: Rundown of Disorders/Alleles
+	-TRANSPLANT: Transplanting, Isolating Alleles
+	-CLONING: Biomass, Cloning for Fresh DNA</entityname.thal_guidegen_index>
+	<thal_guidegen_scannerlabel>SCANNING</thal_guidegen_scannerlabel>
+	<entityname.thal_guidegen_scanner>ඞSCANNING
+  
+	Every geneticist starts with a scanner to obtain DNA by scanning creatures. DNA is the backbone of genetics.
+	You can hold right mouse button to aim, and press E or Left-Mouse to attach your scanner to a wall. Attached, you can interact with the scanner to turn it on and off. The emitted beam is hazardous and will have slow but deadly effects on people around it left on for too long. It will also break down quickly while active, so use sparingly. To detach the scanner, use a wrench. You can also wire the scanner in order to operate remotely with signals.
+	To obtain DNA, a *LIVING* creature must stand under the beam of a scanner for ~30 seconds. The progress of the scan can be seen on the scanner in the form of a progress bar that gradually fills during scanning. If a creature exits the beam, the bar will deplete quickly: maintain its position by any means necessary.
+	The Institute recommends that scientists use Paralyzant in order to keep the creature alive but motionless. Robust scientists, however, have been known to use other tricks to avoid wasting Paralyzant. Remember that safety of the crew comes first!
+	Once the bar is full, a fresh fragment of DNA will drop out of the scanner. Put it in your cooler ASAP.</entityname.thal_guidegen_scanner>
+	<thal_guidegen_dnalabel>DNA HANDLING</thal_guidegen_dnalabel>
+	<entityname.thal_guidegen_dna>ඞDNA HANDLING
+  
+	DNA is a delicate, valuable resource. It is naturally scarce (unless it comes with your submarine), and is difficult to obtain as it requires scanning. Most importantly, DNA erodes when not submerged in water, or when not in special cold storage containers, like your DNA Cooler. Damage/Erosion is irreversable; The condition of DNA can only ever worsen. Given long enough, all DNA will ineviteably erode completely, no matter how careful you are. But how quickly and cleanly you use it determines its longevity.
+	DNA that has eroded completely will become corrupted. Corrupted DNA behaves erratically, and involuntary usage on subjects is considered unethical malpractice. Despite this, experimenting on willing test subjects is encouraged as many of its side effects are potentially beneficial for human survival on Europa, and may aid your crew.</entityname.thal_guidegen_dna>
+	<thal_guidegen_splicelabel>SPLICING</thal_guidegen_splicelabel>
+	<entityname.thal_guidegen_splice>ඞSPLICING
+  
+	DNA can be spliced with the DNA of you or your crewmembers to gain new abilities.
+	DNA can be grafted to three types of target slots: The "Head", the "Torso", and the "Limbs". Each graft has a different effect dependent on the slot and the DNA used. Each slot can only have one mutation; Splicing to a slot will revert any existing preexisting grafts there.
+	Anything grafted to the head slot is an active ability, meaning you can press "Creature Attack" (middle mouse by default) to use it.
+	CRISPR-Cas9 is an intracellular solution that prepares the subject's DNA for grafts. It is consumed on one use, making it precious, and equivelant to one graft in worth.
+	To use CRISPR, equip it. The Health menu must be closed, or it won't equip. You will see three buttons onscreen. Click one depending on your desired slot. Inject it into whoever you want spliced. They will now enter "meltdown": they are ready for the graft.
+	Next, put your DNA in the DNA Grafter. Be quick in order to minimize DNA corruption. Inject the grafter into the person undergoing meltdown. They should collapse and get up shortly with a new ability. Congrats!
+	When humans with grafts die, their DNA collapses and they melt. Revival, organ harvesting, and other things dependent on corpses won't work.</entityname.thal_guidegen_splice>
+	<thal_guidegen_graftslabel>KNOWN GRAFTS</thal_guidegen_graftslabel>
+	<entityname.thal_guidegen_grafts>ඞKNOWN GRAFTS
+  
+	Below is a list of known grafts discovered by The Institute so far. You can see all 3 slot grafts of a DNA and what they do in the DNA sample's mouseover description. It's up to Europan geneticists to find the rest!
+	
+	MUDRAPTOR-LIMBS 
+	 Tail that increases swim speed.
+	CRAWLER-TORSO
+	 Gills that provide air in water.
+	MUSHROOM-TORSO
+	 Pores that regenerate health in spore clouds.
+	MAGGOT-HEAD
+	 Launches user at a structure/entity on use.
+	THRESHER-TORSO
+	 Shell immune to pressure up to 4000m.
+	HAMMERHEAD-HEAD
+	 Head ridge that sends other creatures flying.
+	 
+	Can YOU research all 21 grafts? Better get scanning!</entityname.thal_guidegen_grafts>
+	<thal_guidegen_mutationlabel>MUTATIONS</thal_guidegen_mutationlabel>
+	<entityname.thal_guidegen_mutation>ඞMUTATIONS
+  
+	MUTATIONS are a side effect of genetic malpractice. The Institute strongly discourages use of mutations on the general public, but encourages controlled research on test subjects to study and catalogue mutations. There are 30 mutations in all.
+	When CORRUPT DNA is grafted, a random number of mutations (anywhere from 1-7) may emerge in the patient alongside the usual graft. Mutations consist of two types: DISORDERS and ALLELES. DISORDERS are mostly harmful, while ALLELES are beneficial. Disorders are indicated by a FUSCHIA PINK icon where afflictions are normally shown, and Alleles are indicated by a YELLOW-GREEN. The specific mutations you get from corrupted DNA are essentially luck: Initially, you must "roll" for your desired mutations.
+	All mutations will be reverted if you graft human DNA. This is an effective way of curing all disorders in an emergency, or after accidentally using corrupted DNA.</entityname.thal_guidegen_mutation>
+	<thal_guidegen_transplantlabel>TRANSPLANTING</thal_guidegen_transplantlabel>
+	<entityname.thal_guidegen_transplant>ඞTRANSPLANTING
+  
+	To make things less random, an item exists to "hold" some mutations from the draw that you want to keep. 
+	The DNA Transplanter is an item that copies, edits, and transfers mutations. Injecting someone with an empty DNA Transplanter will store their mutations if they have any. A sound and a binary effect will happen if the storing is successful, and the stored afflictions will be listed in the mouseover description. After this point, injecting anyone with the same transplanter will give them all of the mutations stored. Depending on the severity of the mutations, the condition of the transplanter will decrease. More dangerous or more beneficial mutations (such as alleles) typically decrease condition faster. When the condition reaches zero, the transplanter and its contents are destroyed. This serves as a way to transfer mutations from one person to another, a limited amount of times.
+	The transfer can also remove certain traits. Equipping the transplanter and pressing "Cull Mutations" allows the contents of the transplanter to be viewed on mouseover, like a diving mask or a toolbelt. From here, you can drag out any mutations that you don't want in the transplanter to isolate them. Pressing "Cull Mutations" reduces the transplanter to one use, but you can plant your culled mutations onto a clean subject, and then use a fresh transplanter to scan from said subject.</entityname.thal_guidegen_transplant>
+	<thal_guidegen_clonelabel>CLONING</thal_guidegen_clonelabel>
+	<entityname.thal_guidegen_clone>ඞCLONING
+  
+	Should your DNA wear down and corrupt, there is a way to retrieve fresh DNA from the corrupted sample. Cloning lets you grow the original creature from the corrupt DNA, allowing you to scan uncorrupted DNA from that creature.
+	To clone, hold your Biomorphic Incubation Pod in your hands, aim with right mouse button, and press E or left mouse to attach it. Dropping it on the ground will not work. When properly attached, the Incubator will show a readout of how many kilograms of "biomass" it contains. Each creature requires a different amount of biomass, with humans for one being 60kg. 
+	Biomass (meaning organic material) can be obtained by placing any fleshy organs from creatures inside the incubator. Geneticists spawn with a Meat Cleaver that allows them to carve meat out of corpses to gain biomass. Repeatedly hit corpses until blood gushes everywhere and entrails come out.
+	Once the biomass is obtained, interact with the Incubator. You will see a single item slot, and an initiation button. Place your biomass within the item slot, and it should instantly grind and the counter should go up. Once there is enough, insert the DNA of the desired creature and initiate the cloning. You should then be able to scan the creature to gain uncorrupted DNA.
+	
+	Congrats on finishing the guide! If you're really a true genetics pro, you can deconstruct this book for a free set of genetics tools.</entityname.thal_guidegen_clone>
 </infotexts>

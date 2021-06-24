@@ -4,12 +4,18 @@
     <sprite sourcerect="162,7,97,78" origin="0.44556922,0.47328246" depth="0.09" color="255,255,255,255" deadcolor="255,255,255,255" deadcolortime="0" texture="Content/Characters/Crawler/crawler.png" />
     <attack context="Any" cooldown="2" afterattack="Pursue" range="50" damagerange="50" duration="0.2" structuredamage="0" itemdamage="0" structuresoundtype="StructureSlash" targetforce="0" severlimbsprobability="0.3" torque="100" force="30" applyforceonlimbs="1, 3" targettype="Any" hitdetectiontype="Distance" stun="0" onlyhumans="False" applyforcesonlyonce="True" targetimpulse="20" targetimpulseworld="0,0" targetforceworld="0,-5" stickchance="0" priority="1" secondarycooldown="0" cooldownrandomfactor="0.5" reverse="False" targetlimbtype="None" afterattackdelay="0" retreat="False" rootforceworldstart="0,0" rootforceworldmiddle="0,0" rootforceworldend="0,0" roottransitioneasing="Linear">
       <Affliction identifier="stun" strength="1" probability="1" />
-      <Affliction identifier="bitewounds" strength="3" probability="1" />
+      <Affliction identifier="bitewounds" strength="10" probability="1" />
       <Affliction identifier="bleeding" strength="2" probability="0.4" />
-      <StatusEffect type="OnUse" target="This">
+      <StatusEffect type="OnUse" target="This,UseTarget" Comparison="And" ><!-- vampire effect is target is alive -->
+				<Conditional IsDead="false" />
         <ReduceAffliction identifier="damage" strength="6" />
-        <ReduceAffliction identifier="bleeding" strength="5" />
-        <ReduceAffliction identifier="bloodloss" strength="5" />
+        <ReduceAffliction identifier="bleeding" strength="2" />
+      </StatusEffect><!-- Re-inflict healed damage on victim -->
+      <!-- TODO: STEM Merger/Cooking: make crawler function like a cleaver where meat can be torn off of dead bodies -->
+      <StatusEffect type="Always" target="This" Comparison="And" ><!-- UPGRADE: no food poisoning -->
+        <ReduceAffliction identifier="thal_foodpoisoning" strength="10" />
+        <Conditional thal_disordercrawler="gt 0" />
+        <Conditional thal_foodpoisoning="gt 0" />
       </StatusEffect>
     </attack>
     <!--

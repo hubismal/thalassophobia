@@ -1,0 +1,44 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<huskappendage>
+	<limb id="13" name="laser" type="None" height="70" width="90" notes="" spriteorientation="NaN" flip="True" mirrorvertically="False" mirrorhorizontally="False" hide="False" attackpriority="1" steerforce="5" radius="0" density="0.1" ignorecollisions="True" angulardamping="7" pullpos="0,0" stepoffset="0,0" refjoint="-1" mouthpos="0,0" healthindex="0" friction="0.3" restitution="0.05" constanttorque="0" constantangle="0" scale="0.4" attackforcemultiplier="1" minseverancedamage="1" severedfadeouttime="10" applytailangle="False" sinefrequencymultiplier="1" sineamplitudemultiplier="1" blinkfrequency="0" blinkdurationin="0.2" blinkdurationout="0.5" blinkholdtime="0" blinkrotationin="0" blinkrotationout="45" blinkforce="50" blinktransitionin="Linear" blinktransitionout="Linear">
+		<sprite texture="Mods/Thalassophobia/Characters/Gummy/GeneLimbs/Hammerhead.png" sourcerect="368,34,1,1" origin="0.26,0.60" depth="0" color="255,255,255,255" deadcolor="255,255,255,0" deadcolortime="0" />
+		<!-- melee
+     -->
+     <attack context="Any" requiredangle="10" cooldown="6" afterattack="Pursue" range="700" ranged="true" damagerange="100" duration="0.1" structuredamage="0.1" itemdamage="0.1" structuresoundtype="StructureSlash" targetforce="50" severlimbsprobability="0" torque="0" force="10" applyforceonlimbs="0" targettype="Any" hitdetectiontype="Distance" stun="4" onlyhumans="False" applyforcesonlyonce="True" targetimpulse="50" targetimpulseworld="0,0" targetforceworld="0,0" stickchance="0" priority="1" secondarycooldown="0" cooldownrandomfactor="0.5" reverse="False" targetlimbtype="None" afterattackdelay="0" retreat="False" rootforceworldstart="0,0" rootforceworldmiddle="0,0" rootforceworldend="0,0" roottransitioneasing="Linear" levelwalldamage="30">
+    <Affliction identifier="bitewounds" strength="3" probability="1" />
+    <!-- launching -->
+     </attack>
+  </limb>
+  <limb id="14" name="mag1" type="None" height="70" width="90" notes="" spriteorientation="NaN" flip="True" mirrorvertically="False" mirrorhorizontally="False" hide="False" attackpriority="1" steerforce="5" radius="0" density="0.1" ignorecollisions="False" angulardamping="7" pullpos="0,0" stepoffset="0,0" refjoint="-1" mouthpos="0,0" healthindex="0" friction="0.3" restitution="0.05" constanttorque="0" constantangle="0" scale="0.4" attackforcemultiplier="1" minseverancedamage="1" severedfadeouttime="10" applytailangle="False" sinefrequencymultiplier="1" sineamplitudemultiplier="1" blinkfrequency="0" blinkdurationin="0.2" blinkdurationout="0.5" blinkholdtime="0" blinkrotationin="0" blinkrotationout="45" blinkforce="50" blinktransitionin="Linear" blinktransitionout="Linear">
+		<!-- IMMA FIRIN MAH LASER (UPGRADE)
+     -->
+    <sprite texture="Mods/Thalassophobia/Characters/Gummy/GeneLimbs/Hammerhead.png" sourcerect="368,34,260,178" origin="0.26,0.60" depth="0" color="255,255,255,255" deadcolor="255,255,255,0" deadcolortime="0" />
+     <attack ranged="True" avoidfriendlyfire="True" requiredangle="10" structuresoundtype="StructureBlunt" context="Any" targettype="Any" targetlimbtype="None" hitdetectiontype="Distance" afterattack="FallBackUntilCanAttack" afterattackdelay="0.1" reverse="False" retreat="False" fullspeedafterattack="True" range="900" damagerange="900" duration="0.1" cooldown="7" secondarycooldown="0" cooldownrandomfactor="0" structuredamage="0" itemdamage="0" stun="0" onlyhumans="False" applyforceonlimbs="" force="0" rootforceworldstart="0,0" rootforceworldmiddle="0,0" rootforceworldend="0,0" roottransitioneasing="Linear" torque="0" applyforcesonlyonce="False" targetimpulse="0" targetimpulseworld="0,0" targetforce="0" targetforceworld="0,0" severlimbsprobability="0" priority="0">
+      <StatusEffect type="OnFailure" target="UseTarget">
+        <SpawnItem identifier="thal_hammerprojectile" spawnposition="This" count="1" aimspread="3" rotationtype="Limb" rotation="7" />
+        <Conditional thal_disorderhammer="gt 0" targetself="true" />
+      </StatusEffect>
+      <StatusEffect type="OnFailure" target="UseTarget">
+        <SpawnItem identifier="thal_hammerprojectile" spawnposition="This" count="1" aimspread="3" rotationtype="Limb" rotation="-3" />
+        <Conditional thal_disorderhammer="gt 0" targetself="true" />
+      </StatusEffect>
+      <StatusEffect type="OnFailure" target="UseTarget">
+        <SpawnItem identifier="thal_hammerprojectile" spawnposition="This" count="1" aimspread="3" rotationtype="Limb" rotation="-13" />
+        <Conditional thal_disorderhammer="gt 0" targetself="true" />
+      </StatusEffect>
+      <StatusEffect type="OnFailure" target="This">
+        <sound file="Mods/Thalassophobia/Items/Weapons/Blaster1.ogg" range="800" volume="1.0" selectionmode="random" dontmuffle="false" />
+        <Conditional thal_disorderhammer="gt 0" targetself="true" />
+      </StatusEffect>
+    </attack>
+    <StatusEffect target="Character" stackable="false" duration="1.0" disabledeltatime="false" targetlimb="Head" checkconditionalalways="true" >
+				<ParticleEmitter particle="thal_zap" copyentityangle="false" anglemin="0" anglemax="360" particleamount="1" particlespersecond="2" velocitymin="40" velocitymax="75" scalemin="0.1" scalemax="0.3" colormultiplier="150,150,255,100" />
+				<Conditional thal_disorderhammer="gt 0" />
+      </StatusEffect>
+  </limb>
+  
+  <!-- Head to husk appendage -->
+  <joint name="Head to Huskappendage" limb1="0" limb2="13" limb1anchor="2.8,-5" limb2anchor="-1.5,0" upperlimit="0" lowerlimit="-10" weldjoint="True" canbesevered="False" limitenabled="True" />
+  <joint name="Head to Huskappendage" limb1="0" limb2="14" limb1anchor="2.8,-5" limb2anchor="-1.5,0" upperlimit="0" lowerlimit="-10" weldjoint="True" canbesevered="False" limitenabled="True" />
+
+</huskappendage>
