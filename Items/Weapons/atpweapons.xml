@@ -1,0 +1,42 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Items>
+  <Item name="ATP::M60" identifier="thal_atpm60" category="Equipment" cargocontaineridentifier="metalcrate" tags="smallitem,weapon,gun" Scale="0.3" impactsoundtag="impact_metal_light" >
+    <InventoryIcon texture="Content/Items/InventoryIconAtlas.png" sourcerect="832,830,64,64" origin="0.5,0.5" />
+    <Sprite texture="Mods/Thalassophobia/Items/Weapons/weapons_new.png" sourcerect="7,293,496,118" depth="0.55" origin="0.5,0.5" />
+    <Body width="140" height="60" density="50" />
+    <Holdable slots="Any,RightHand+LeftHand" controlpose="true" holdpos="75,-10" aimpos="65,-4" handle1="-90,-13" handle2="10,-20" holdangle="-48" msg="ItemMsgPickUpSelect" >
+			
+		</Holdable>
+    <RangedWeapon reload="0.11" barrelpos="60,0" spread="3" unskilledspread="14" combatPriority="80" drawhudwhenequipped="true" crosshairscale="0.2" characterusable="false">
+      <Crosshair texture="Content/Items/Weapons/Crosshairs.png" sourcerect="0,256,256,256" />
+      <CrosshairPointer texture="Content/Items/Weapons/Crosshairs.png" sourcerect="256,256,256,256" />
+      <ParticleEmitter particle="muzzleflash" particleamount="1" velocitymin="0" velocitymax="0" />
+      <Sound file="Mods/Thalassophobia/Items/Weapons/m60.ogg" type="OnUse" range="2800" selectionmode="All" volume="1.0" />
+      <Sound file="Mods/Thalassophobia/Items/Weapons/gun_m60low.ogg" type="OnUse" range="800" selectionmode="All" volume="1.0" />
+      <StatusEffect type="OnUse">
+        <Explosion range="150.0" force="1" shockwave="false" smoke="false" flames="false" sparks="false" underwaterbubble="false" camerashake="12.0" />
+      </StatusEffect>
+      <!--
+      <StatusEffect type="OnFailure" target="Character" >
+				<Affliction identifier="stun" strength="10" />
+        <Affliction identifier="blunttrauma" strength="10" />
+      </StatusEffect>
+      
+      <StatusEffect type="OnFailure">
+        <Explosion range="150.0" force="6" stun="0" shockwave="false" smoke="false" flames="false" sparks="false" underwaterbubble="false" camerashake="12.0" />
+      </StatusEffect>
+      -->
+      <!--"Use" contained magazine to spawn projectiles.-->
+      <StatusEffect type="OnUse" target="Contained">
+        <Use />
+      </StatusEffect>
+      <RequiredItems items="smgmagazine" type="Contained" msg="ItemMsgAmmoRequired" />
+      <RequiredSkill identifier="thal_atp" level="50" />
+    </RangedWeapon>
+    <ItemContainer capacity="1" maxstacksize="1" hideitems="true" containedstateindicatorstyle="bullet">
+      <Containable items="smgammo" />
+    </ItemContainer>
+    <aitarget sightrange="2000" soundrange="4000" fadeouttime="5" />
+    <Upgrade gameversion="0.10.0.0" scale="0.5" />
+  </Item>
+</Items>
