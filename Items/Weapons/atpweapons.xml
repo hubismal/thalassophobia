@@ -7,15 +7,28 @@
     <Holdable slots="Any,RightHand+LeftHand" controlpose="true" holdpos="75,-10" aimpos="65,-4" handle1="-90,-13" handle2="10,-20" holdangle="-48" msg="ItemMsgPickUpSelect" >
 			
 		</Holdable>
-    <RangedWeapon reload="0.11" barrelpos="60,0" spread="3" unskilledspread="14" combatPriority="80" drawhudwhenequipped="true" crosshairscale="0.2" characterusable="false">
+    <RangedWeapon reload="0.11" barrelpos="65,14" spread="0" unskilledspread="60" combatPriority="80" drawhudwhenequipped="true" crosshairscale="0.2" characterusable="false" offsetonselected="40" >
       <Crosshair texture="Content/Items/Weapons/Crosshairs.png" sourcerect="0,256,256,256" />
       <CrosshairPointer texture="Content/Items/Weapons/Crosshairs.png" sourcerect="256,256,256,256" />
       <ParticleEmitter particle="muzzleflash" particleamount="1" velocitymin="0" velocitymax="0" />
       <Sound file="Mods/Thalassophobia/Items/Weapons/m60.ogg" type="OnUse" range="2800" selectionmode="All" volume="1.0" />
       <Sound file="Mods/Thalassophobia/Items/Weapons/gun_m60low.ogg" type="OnUse" range="800" selectionmode="All" volume="1.0" />
-      <StatusEffect type="OnUse">
-        <Explosion range="150.0" force="1" shockwave="false" smoke="false" flames="false" sparks="false" underwaterbubble="false" camerashake="12.0" />
+      <StatusEffect type="OnUse" >
+				
+      <ParticleEmitter highqualitycollisiondetection="False" particle="thal_cartm60" particleamount="1" velocitymin="300" velocitymax="400" anglemin="80" anglemax="130" />
+        <Explosion range="150.0" force="1" shockwave="false" smoke="false" flames="false" sparks="false" underwaterbubble="false" camerashake="5.0" />
       </StatusEffect>
+      <StatusEffect type="OnSecondaryUse" target="This" unskilledspread="-30" setvalue="false" stackable="false" >
+				<Conditional unskilledspread="gt 3" />
+      </StatusEffect>
+      <StatusEffect type="OnContained" target="This" unskilledspread="15" setvalue="false" stackable="false" >
+				<Conditional unskilledspread="lt 80" />
+      </StatusEffect>
+      <!--
+      <StatusEffect type="Always" target="This" unskilledspread="5" setvalue="false" stackable="false" >
+				<Conditional spread="lt 50" />
+      </StatusEffect>
+      -->
       <!--
       <StatusEffect type="OnFailure" target="Character" >
 				<Affliction identifier="stun" strength="10" />
@@ -37,6 +50,109 @@
       <Containable items="smgammo" />
     </ItemContainer>
     <aitarget sightrange="2000" soundrange="4000" fadeouttime="5" />
+    <Upgrade gameversion="0.10.0.0" scale="0.5" />
+  </Item>
+  
+  
+  <Item name="ATP::Fist" identifier="thal_atpfist" category="Equipment" Tags="smallitem,weapon" cargocontaineridentifier="metalcrate" scale="0.5" hideconditionbar="false" impactsoundtag="impact_metal_light" requireaimtouse="false" >
+    <PreferredContainer primary="armcab" minamount="0" maxamount="3" spawnprobability="1"/>
+    <PreferredContainer secondary="wreckarmcab" minamount="0" maxamount="2" spawnprobability="0.25"/>
+    <PreferredContainer secondary="abandonedarmcab,abandonedstoragecab" minamount="1" maxamount="1" spawnprobability="0.5"/>
+    <Price baseprice="30" >
+      <Price locationtype="outpost" multiplier="1.5" minavailable="6" />
+      <Price locationtype="city" multiplier="1.25" minavailable="8" />
+      <Price locationtype="research" multiplier="1.25" minavailable="2" />
+      <Price locationtype="military" multiplier="0.9" minavailable="15" />
+      <Price locationtype="mine" multiplier="1.25" minavailable="2" />
+    </Price>
+    <Deconstruct time="10">
+      <Item identifier="iron" />
+    </Deconstruct>
+    <Fabricate suitablefabricators="fabricator" requiredtime="10">
+      <RequiredSkill identifier="weapons" level="30" />
+      <RequiredItem identifier="iron" />
+    </Fabricate>
+    <InventoryIcon texture="Content/Items/InventoryIconAtlas.png" sourcerect="835,385,64,64" origin="0.5,0.5" />
+    <Sprite texture="weapons_new.png" sourcerect="183,203,66,16" depth="0.40" origin="0.5,0.5" />
+    <Body width="65" height="45" density="50" />
+    <MeleeWeapon slots="Any,RightHand,LeftHand" holdpos="-20,-23" aimpos="-25,-18" handle1="-5,-5" holdangle="30" reload="0.7" range="180" combatPriority="25" msg="ItemMsgPickUpSelect">
+			<!-- Chargeless attack (base) -->
+      <Attack force="20" targetimpulse="9" severlimbsprobability="0.1" itemdamage="10">
+        <Affliction identifier="blunttrauma" strength="4" />
+        <Affliction identifier="stun" strength="0.2" />
+      </Attack>
+      <!-- Windup Sound -->
+      <StatusEffect type="OnSecondaryUse" target="This" setvalue="false" >
+				<Sound file="Mods/Thalassophobia/Items/Weapons/windup.ogg" loop="true" range="500" />
+				<Conditional Condition="gt 10" />
+      </StatusEffect>
+      <!-- Wind up -->
+      <StatusEffect type="OnSecondaryUse" target="This" setvalue="false" condition="33" >
+      </StatusEffect>
+      <!-- Wind Down -->
+      <StatusEffect type="OnActive" target="This" setvalue="false" condition="-20" >
+				<Conditional condition="gt 5" />
+      </StatusEffect>
+      <!-- 25 Charge ATK: Light Knockback -->
+      <StatusEffect type="OnUse" target="This,Character" comparison="Or" offset="0,-20" >
+				<Conditional Condition="gt 25" />
+				<Explosion range="150.0" force="5" shockwave="true" smoke="false" flames="false" sparks="true" underwaterbubble="false" camerashake="5.0" />
+        <Affliction identifier="stun" strength="0.8" />
+        <Affliction identifier="blunttrauma" strength="2" />
+        <Affliction identifier="burn" strength="3" />
+        <Sound file="Mods/Thalassophobia/Items/Weapons/Electocute.ogg" type="OnUse" range="800" volume="1.0" />
+      </StatusEffect>
+      
+      <!-- 40 Charge ATK: Medium Knockback, High Damage -->
+      <StatusEffect type="OnUse" target="Character, This" comparison="Or" offset="0,-20" >
+				<Conditional Condition="gt 40" />
+				<Explosion range="150.0" force="10" shockwave="true" smoke="false" flames="false" sparks="true" underwaterbubble="false" camerashake="5.0" />
+        <Affliction identifier="stun" strength="2" />
+        <Affliction identifier="blunttrauma" strength="2.5" />
+        <Affliction identifier="burn" strength="2" />
+        <Sound file="Mods/Thalassophobia/Items/Weapons/Electocute.ogg" type="OnUse" range="2800" selectionmode="All" volume="1.0" />
+      </StatusEffect>
+      <!-- 75 Charge ATK: Heavy Knockback, Less than Two Hit KO, Minor Item Damage -->
+      <StatusEffect type="OnUse" target="Character, This" comparison="Or" offset="0,-20" >
+				<Conditional Condition="gt 75" />
+				<Explosion range="150.0" force="10" shockwave="true" smoke="false" flames="false" sparks="true" underwaterbubble="false" camerashake="5.0" />
+        <Affliction identifier="stun" strength="2" />
+        <Affliction identifier="blunttrauma" strength="2.5" />
+        <Affliction identifier="burn" strength="2" />
+        <Sound file="Mods/Thalassophobia/Items/Weapons/Blaster1.ogg" type="OnUse" range="2800" selectionmode="All" volume="1.0" />
+      </StatusEffect>
+      <!-- 93 Charge ATK: Heavy Knockback, Shred Target, Structural damage, Item Damage -->
+      <StatusEffect type="OnUse" target="Character, This" comparison="Or" offset="0,-20" >
+				<Conditional Condition="gt 93" />
+				<Explosion range="150.0" force="10" shockwave="true" smoke="false" flames="false" sparks="true" underwaterbubble="false" camerashake="5.0" />
+        <Affliction identifier="stun" strength="2" />
+        <Affliction identifier="blunttrauma" strength="2.5" />
+        <Affliction identifier="burn" strength="2" />
+        <Sound file="Mods/Thalassophobia/Items/Weapons/Blaster1.ogg" type="OnUse" range="2800" selectionmode="All" volume="1.0" />
+      </StatusEffect>
+      <!-- 100 Charge: Backfire -->
+      <StatusEffect type="OnSecondaryUse" target="This" comparison="Or" offset="0,-20" >
+				<Conditional Condition="gt 99" />
+				<Explosion range="150.0" force="30" stun="5" shockwave="true" smoke="false" flames="false" sparks="true" underwaterbubble="false" camerashake="5.0" >
+        <Affliction identifier="blunttrauma" strength="3" />
+        <Affliction identifier="burn" strength="2" />
+				</Explosion>
+        <Sound file="Mods/Thalassophobia/Items/Weapons/Blaster1.ogg" type="OnUse" range="2800" selectionmode="All" volume="1.0" />
+      </StatusEffect>
+      
+      <!-- Reset on Use -->
+      <StatusEffect type="OnUse" target="This" setvalue="true" condition="1" />
+    </MeleeWeapon>
+    <LightComponent range="150" lightcolor="255,255,150,200" IsOn="true" castshadows="false" powerconsumption="0" flicker="0.9" allowingameediting="false">
+			<StatusEffect type="OnContained" target="This" lightcolor="255,255,150,100" IsOn="false" Comparison="Or" >
+				<Conditional Condition="lt 25" />
+      </StatusEffect>
+      <StatusEffect type="OnContained" target="This" lightcolor="255,255,150,100" IsOn="true" Comparison="And" >
+				<Conditional Condition="gt 25" />
+				<Conditional Condition="lt 35" />
+      </StatusEffect>
+    </LightComponent>
+    <aitarget sightrange="500" soundrange="250" fadeouttime="1" />
     <Upgrade gameversion="0.10.0.0" scale="0.5" />
   </Item>
 </Items>
