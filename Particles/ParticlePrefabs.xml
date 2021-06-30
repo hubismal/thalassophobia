@@ -1082,4 +1082,44 @@
       sourcerect="257,257,50,19"
       origin="0.5,0.5" />
   </thal_cartm60>
+  <thal_madnesszap
+    lifetime="2"
+    startdelaymin="0"
+    startdelaymax="0.1"
+    angularvelocitymin="-50"
+    angularvelocitymax="50"
+    startrotationmin="0"
+    startrotationmax="360"
+    rotatetodirection="False"
+    drag="0"
+    waterdrag="0"
+    velocitychange="0,0"
+    velocitychangewater="0,0"
+    collisionradius="150"
+    usecollision="True"
+    deleteoncollision="False"
+    friction="0.5"
+    restitution="0"
+    startsizemin="0.6,0.6"
+    startsizemax="0.6,0.6"
+    sizechangemin="0.2,0.2"
+    sizechangemax="0.4,0.4"
+    growtime="0.4"
+    startcolor="100,255,255,255"
+    endcolor="0,255,200,1"
+    drawtarget="Both"
+    blendstate="Additive"
+    animduration="2.1"
+    loopanim="True"
+    drawontop="False"
+    lifetimemin="0"
+    middlecolor="255,255,255,255"
+    usemiddlecolor="True">
+    <animatedsprite
+      texture="Mods/Thalassophobia/Particles/Spritesheet.png"
+      sourcerect="1,1,2000,1200"
+      columns="10"
+      rows="6"
+      origin="0.5,0.5" />
+  </thal_madnesszap>
 </prefabs>

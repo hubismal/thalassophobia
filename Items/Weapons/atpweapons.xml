@@ -89,6 +89,8 @@
       <!-- Wind up -->
       <StatusEffect type="OnSecondaryUse" target="This" setvalue="false" condition="33" >
       </StatusEffect>
+      <StatusEffect type="OnSecondaryUse" target="Character" setvalue="true" SpeedMultiplier="0.4" >
+      </StatusEffect>
       <!-- Wind Down -->
       <StatusEffect type="OnActive" target="This" setvalue="false" condition="-20" >
 				<Conditional condition="gt 5" />
@@ -115,7 +117,7 @@
       <!-- 75 Charge ATK: Heavy Knockback, Less than Two Hit KO, Minor Item Damage -->
       <StatusEffect type="OnUse" target="Character, This" comparison="Or" offset="0,-20" >
 				<Conditional Condition="gt 75" />
-				<Explosion range="150.0" force="10" shockwave="true" smoke="false" flames="false" sparks="true" underwaterbubble="false" camerashake="5.0" />
+				<Explosion range="200.0" force="10" shockwave="true" smoke="false" flames="false" sparks="true" underwaterbubble="false" camerashake="10.0" />
         <Affliction identifier="stun" strength="2" />
         <Affliction identifier="blunttrauma" strength="2.5" />
         <Affliction identifier="burn" strength="2" />
@@ -124,7 +126,7 @@
       <!-- 93 Charge ATK: Heavy Knockback, Shred Target, Structural damage, Item Damage -->
       <StatusEffect type="OnUse" target="Character, This" comparison="Or" offset="0,-20" >
 				<Conditional Condition="gt 93" />
-				<Explosion range="150.0" force="10" shockwave="true" smoke="false" flames="false" sparks="true" underwaterbubble="false" camerashake="5.0" />
+				<Explosion range="250.0" force="10" shockwave="true" smoke="false" flames="false" sparks="true" underwaterbubble="false" camerashake="15.0" severlimbsprobability="1.0" />
         <Affliction identifier="stun" strength="2" />
         <Affliction identifier="blunttrauma" strength="2.5" />
         <Affliction identifier="burn" strength="2" />
@@ -139,6 +141,11 @@
 				</Explosion>
         <Sound file="Mods/Thalassophobia/Items/Weapons/Blaster1.ogg" type="OnUse" range="2800" selectionmode="All" volume="1.0" />
       </StatusEffect>
+      <!-- 20 Charge: Particles -->
+      <StatusEffect type="OnSecondaryUse" target="This"  >
+				<Conditional Condition="gt 20" />
+      <ParticleEmitter particle="thal_madnesszap" velocitymin="0" velocitymax="0" anglemin="0" anglemax="360" particlespersecond="3" particleburstamount="2" />
+      </StatusEffect>
       
       <!-- Reset on Use -->
       <StatusEffect type="OnUse" target="This" setvalue="true" condition="1" />
@@ -151,6 +158,7 @@
 				<Conditional Condition="gt 25" />
 				<Conditional Condition="lt 35" />
       </StatusEffect>
+      
     </LightComponent>
     <aitarget sightrange="500" soundrange="250" fadeouttime="1" />
     <Upgrade gameversion="0.10.0.0" scale="0.5" />
