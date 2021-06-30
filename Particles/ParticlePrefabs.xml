@@ -1122,4 +1122,44 @@
       rows="6"
       origin="0.5,0.5" />
   </thal_madnesszap>
+  <thal_madnessmuzzle
+    lifetime="0.1"
+    startdelaymin="0"
+    startdelaymax="0.1"
+    angularvelocitymin="0"
+    angularvelocitymax="0"
+    startrotationmin="0"
+    startrotationmax="0"
+    rotatetodirection="False"
+    drag="0"
+    waterdrag="0"
+    velocitychange="0,0"
+    velocitychangewater="0,0"
+    collisionradius="150"
+    usecollision="True"
+    deleteoncollision="False"
+    friction="0.5"
+    restitution="0"
+    startsizemin="0.6,0.6"
+    startsizemax="0.6,0.6"
+    sizechangemin="0,0"
+    sizechangemax="0,0"
+    growtime="0"
+    startcolor="255,255,255,255"
+    endcolor="255,255,255,255"
+    drawtarget="Both"
+    blendstate="Additive"
+    animduration="0.1"
+    loopanim="False"
+    drawontop="False"
+    lifetimemin="0"
+    middlecolor="255,255,255,255"
+    usemiddlecolor="False">
+    <animatedsprite
+      texture="Mods/Thalassophobia/Particles/MadnessMuzzle.png"
+      sourcerect="1,1,300,1680"
+      columns="1"
+      rows="7"
+      origin="0.5,0.5" />
+  </thal_madnessmuzzle>
 </prefabs>
