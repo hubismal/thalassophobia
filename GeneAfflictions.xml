@@ -253,4 +253,23 @@
     <Effect minstrength="80" maxstrength="100" />
     <icon name="genmelt" texture="Mods/Thalassophobia/UI/MainIconsAtlas.png" sourcerect="386,769,128,128" color="60,107,195,255" origin="0,0" />
   </AfflictionHusk>
+  <!-- ATP -->
+  <Affliction name="Advanced Training Program" identifier="thal_atp" description="You have been genetically augmented to be superior in certain aspects to the average crewmember. Depending on what ATP mask is worn, different aspects of the patient will be augmented." type="buff" limbspecific="false" indicatorlimb="Head" activationthreshold="0" showicontoothersthreshold="130" showinhealthscannerthreshold="130" showiconthreshold="0" maxstrength="1" iconcolors="60,140,195,255;60,107,195,255;60,0,195,255">
+    <Effect minstrength="0" maxstrength="1" strengthchange="1" />
+    <icon name="genmelt" texture="Mods/Thalassophobia/UI/MainIconsAtlas.png" sourcerect="386,769,128,128" color="60,107,195,255" origin="0,0" />
+  </Affliction>
+  <Affliction name="ATP::SOLDAT" identifier="thal_atpsoldat" description="The patient has been genetically augmented to be superior in certain aspects to the average crewmember. They have a higher weapons skill and improved durability, at the cost of having little to no intelligence and slower movement speed." type="buff" limbspecific="false" indicatorlimb="Head" activationthreshold="0" showicontoothersthreshold="0" showiconthreshold="130" maxstrength="1" iconcolors="60,140,195,255;60,107,195,255;60,0,195,255">
+    <Effect minstrength="0" maxstrength="1" strengthchange="1" >
+      <StatusEffect type="Always" setvalue="True" speedMultiplier="0.8" HealthMultiplier="1.5" />
+    <!-- TODO: reduce certain skills -->
+    </Effect>
+    <icon name="genmelt" texture="Mods/Thalassophobia/UI/MainIconsAtlas.png" sourcerect="386,769,128,128" color="60,107,195,255" origin="0,0" />
+  </Affliction>
+  <Affliction name="ATP::ENGINEER" identifier="thal_atpengi" description="The patient has been genetically augmented to be superior in certain aspects to the average crewmember. They have much higher intelligence and faster movement speed, at the cost of lower durability, poor weapons skill, and inability to use some specialized ATP weapons." type="buff" limbspecific="false" indicatorlimb="Head" activationthreshold="0" showicontoothersthreshold="0" showiconthreshold="130" maxstrength="1" iconcolors="60,140,195,255;60,107,195,255;60,0,195,255">
+    <Effect minstrength="0" maxstrength="1" strengthchange="1" >
+      <StatusEffect type="Always" setvalue="True" speedMultiplier="1.25" HealthMultiplier="0.75" />
+    <!-- TODO: increase specific skills -->
+    </Effect>
+    <icon name="genmelt" texture="Mods/Thalassophobia/UI/MainIconsAtlas.png" sourcerect="386,769,128,128" color="60,107,195,255" origin="0,0" />
+  </Affliction>
 </Afflictions>
