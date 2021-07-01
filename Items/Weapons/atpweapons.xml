@@ -1,5 +1,55 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Items>
+  <Item name="ATP::Engineer" identifier="thal_atpengimask" scale="0.35" category="Equipment" Tags="smallitem,atp" cargocontaineridentifier="metalcrate" description="If you have undergone Advanced Training, this will give you much higher intelligence and faster movement speed at the cost of lower durability, poor weapons skill, and lack of training in the use of most high-powered ATP weaponry." impactsoundtag="impact_metal_light">
+    <Deconstruct time="10">
+      <Item identifier="plastic" />
+      <Item identifier="rubber" />
+    </Deconstruct>
+    <Turret HudTint="255,191,43,50" drawhudwhenequipped="true" />
+    <InventoryIcon texture="Mods/Thalassophobia/Items/Jobgear/headgears.png" sourcerect="216,213,88,86" origin="0.5,0.5" />
+    <Sprite name="ATP Engineer Mask" texture="Mods/Thalassophobia/Items/Jobgear/headgears.png" sourcerect="216,213,88,86" depth="0.6" origin="0.5,0.5" />
+    <Body width="40" height="35" density="15" />
+    <Wearable limbtype="Head" slots="Any,Head" msg="ItemMsgPickUpSelect">
+      <sprite name="ATP Engineer Mask Wearable" texture="Mods/Thalassophobia/Items/Jobgear/headgears.png" limb="Head" inheritlimbdepth="true" inherittexturescale="true" hidewearablesoftype="moustache,beard" sourcerect="216,213,88,86" origin="0.575,0.55" />      
+      <StatusEffect type="OnWearing" target="Character" HideFace="true" setvalue="true" disabledeltatime="true" />
+      <StatusEffect type="OnWearing" target="Character" comparison="And">
+        <Conditional thal_atp="gt 20" />
+        <Conditional thal_atpsoldat="eq 0" />
+        <Affliction identifier="thal_atpengi" amount="50" />
+      </StatusEffect>
+      <StatusEffect type="OnWearing" target="Character" comparison="And">
+        <Conditional thal_atp="gt 20" />
+        <Conditional thal_atpsoldat="gt 0" />
+        <ReduceAffliction identifier="thal_atpsoldat" amount="1" />
+      </StatusEffect>
+    </Wearable>
+  </Item>
+  
+  <Item name="ATP::Soldat" identifier="thal_atpsoldatmask" scale="0.5" category="Equipment" Tags="smallitem,atp" cargocontaineridentifier="metalcrate" description="If you have undergone Advanced Training, this will give you much higher intelligence and faster movement speed at the cost of lower durability, poor weapons skill, and lack of training in the use of most high-powered ATP weaponry." impactsoundtag="impact_metal_light">
+    <Deconstruct time="10">
+      <Item identifier="plastic" />
+      <Item identifier="rubber" />
+    </Deconstruct>
+    <Turret HudTint="255,191,43,50" drawhudwhenequipped="true" />
+    <InventoryIcon texture="Mods/Thalassophobia/Items/Jobgear/headgears.png" sourcerect="101,364,109,34" origin="0.5,0.5" />
+    <Sprite name="ATP Soldat Mask" texture="Mods/Thalassophobia/Items/Jobgear/headgears.png" sourcerect="101,364,109,34" depth="0.6" origin="0.45,0.5" />
+    <Body width="70" height="24" density="30" />
+    <Wearable limbtype="Head" slots="Any,Head" msg="ItemMsgPickUpSelect">
+      <sprite name="ATP Soldat Mask Wearable" texture="Mods/Thalassophobia/Items/Jobgear/headgears.png" limb="Head" inheritlimbdepth="true" inherittexturescale="true" sourcerect="101,364,109,34" origin="0.575,0.55" />      
+      <StatusEffect type="OnWearing" target="Character" HideFace="true" setvalue="true" disabledeltatime="true" />
+      <StatusEffect type="OnWearing" target="Character" comparison="And">
+        <Conditional thal_atp="gt 20" />
+        <Conditional thal_atpengi="eq 0" />
+        <Affliction identifier="thal_atpsoldat" amount="50" />
+      </StatusEffect>
+      <StatusEffect type="OnWearing" target="Character" comparison="And">
+        <Conditional thal_atp="gt 20" />
+        <Conditional thal_atpengi="gt 0" />
+        <ReduceAffliction identifier="thal_atpengi" amount="1" />
+      </StatusEffect>
+    </Wearable>
+  </Item>
+  
   <Item name="ATP::M60" identifier="thal_atpm60" category="Equipment" cargocontaineridentifier="metalcrate" tags="smallitem,weapon,gun" Scale="0.3" impactsoundtag="impact_metal_light" >
     <InventoryIcon texture="Content/Items/InventoryIconAtlas.png" sourcerect="832,830,64,64" origin="0.5,0.5" />
     <Sprite texture="Mods/Thalassophobia/Items/Weapons/weapons_new.png" sourcerect="7,293,496,118" depth="0.55" origin="0.5,0.5" />
