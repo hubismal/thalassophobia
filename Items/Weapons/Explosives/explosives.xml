@@ -1,9 +1,8 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Items>
-	<!-- NEW COLLAR (Part of Genetics III) -->
-	<Item name="" identifier="thal_slavecollar" category="Equipment" cargocontaineridentifier="explosivecrate" tags="smallitem,explosive" description="" scale="0.5"
-	originaloutpost="unarmed" canflipy="false"
-	><!-- use originaloutpost to keep track of unarmed/armed, canflipy for whether detonation is fulfilled -->
+  <!-- NEW COLLAR (Part of Genetics III) -->
+  <Item name="" identifier="thal_slavecollar" category="Equipment" cargocontaineridentifier="explosivecrate" tags="smallitem,explosive" description="" scale="0.5" originaloutpost="unarmed" canflipy="false">
+    <!-- use originaloutpost to keep track of unarmed/armed, canflipy for whether detonation is fulfilled -->
     <Sprite name="Slavecollar Normal" texture="Mods/Thalassophobia/Items/Weapons/Explosives/bombcollar.png" depth="0.6" sourcerect="5,0,215,167" origin="0.5123859,0.53692484" scale="0.2" />
     <Body width="40" radius="30" density="15" />
     <Fabricate suitablefabricators="fabricator" requiredtime="120">
@@ -19,19 +18,17 @@
     <Wearable limbtype="Head" slots="Any,Head" msg="ItemMsgPickUpSelect" autoequipwhenfull="false">
       <sprite name="Bombcollar Wearable True" texture="Mods/Thalassophobia/Items/Jobgear/headgears.png" limb="Head" inheritlimbdepth="true" inherittexturescale="true" depth="0.6" sourcerect="119,322,78,84" origin="0.43003038,0.38882154" />
       <!-- DETONATIONS -->
-      <StatusEffect type="OnBroken" target="This" >
-				<Remove />
+      <StatusEffect type="OnBroken" target="This">
+        <Remove />
       </StatusEffect>
       <!-- ARMING -->
       <!-- Arm when initially put on, Give character collar affliction -->
       <StatusEffect type="OnWearing" target="This" originaloutpost="armed">
-				<Conditional originaloutpost="eq unarmed" />
+        <Conditional originaloutpost="eq unarmed" />
       </StatusEffect>
       <!-- Beep while armed -->
     </Wearable>
   </Item>
-	
-	
   <!-- COLLAR SHIT BEGIN -->
   <Item name="" identifier="thal_bombcollar" category="Equipment" cargocontaineridentifier="metalcrate" tags="smallitem" description="" scale="0.5">
     <Sprite name="Bombcollar Normal" texture="Mods/Thalassophobia/Items/Weapons/Explosives/bombcollar.png" depth="0.6" sourcerect="5,0,215,167" origin="0.5123859,0.53692484" scale="0.2" />
@@ -140,7 +137,7 @@
     </Fabricate>
   </Item>
   <Item name="" identifier="thal_bombcollartimed" category="Equipment" cargocontaineridentifier="metalcrate" tags="smallitem" description="" scale="0.5">
-		<!--
+    <!--
     <PreferredContainer primary="armcab" minamount="1" maxamount="1" spawnprobability="0.5" />
     <PreferredContainer primary="wreckarmcab" minamount="1" maxamount="2" spawnprobability="0.1" />
     -->
@@ -159,17 +156,17 @@
     <Wearable limbtype="Head" slots="Any,Head" msg="ItemMsgPickUpSelect" autoequipwhenfull="false">
       <sprite name="Bombcollar Wearable Timed" texture="Mods/Thalassophobia/Items/Jobgear/headgears.png" limb="Head" inheritlimbdepth="true" inherittexturescale="true" depth="0.6" sourcerect="119,322,78,84" origin="0.43003038,0.38882154">
         <LightComponent LightColor="1.0,0.0,0.0,1.0" range="200" powerconsumption="0" blinkfrequency="1" IsOn="true" canbeselected="false">
-					<!-- section for flashing -->
-					<StatusEffect type="Always" target="This, Contained" setvalue="true" blinkfrequency="2" >
-						<Conditional Condition="55" />
-					</StatusEffect>
-					<StatusEffect type="Always" target="This, Contained" setvalue="true" blinkfrequency="4" >
-						<Conditional Condition="25" />
-					</StatusEffect>
-					<StatusEffect type="Always" target="This, Contained" setvalue="true" blinkfrequency="0" >
-						<Conditional Condition="3" />
-					</StatusEffect>
-					<!-- end section for flashing -->
+          <!-- section for flashing -->
+          <StatusEffect type="Always" target="This, Contained" setvalue="true" blinkfrequency="2">
+            <Conditional Condition="55" />
+          </StatusEffect>
+          <StatusEffect type="Always" target="This, Contained" setvalue="true" blinkfrequency="4">
+            <Conditional Condition="25" />
+          </StatusEffect>
+          <StatusEffect type="Always" target="This, Contained" setvalue="true" blinkfrequency="0">
+            <Conditional Condition="3" />
+          </StatusEffect>
+          <!-- end section for flashing -->
           <StatusEffect type="OnWearing" target="Character" setvalue="true" tags="nocollar" duration="0.1" lifetime="0.1">
             <Affliction identifier="thal_bombcollar" amount="80" />
           </StatusEffect>
@@ -220,7 +217,7 @@
   </Item>
   <!-- COLLAR SHIT END -->
   <Item name="" identifier="thal_bombvest" spritecolor="255,0,0,255" category="Equipment" tags="smallitem" scale="0.35" cargocontaineridentifier="metalcrate" description="" impactsoundtag="impact_soft">
-		<PreferredContainer primary="wreckarmcab" minamount="1" maxamount="1" spawnprobability="0.1" />
+    <PreferredContainer primary="wreckarmcab" minamount="1" maxamount="1" spawnprobability="0.1" />
     <Deconstruct time="40">
       <Item identifier="healthscanner" />
       <Item identifier="ballisticfiber" />
@@ -268,11 +265,11 @@
     <Sprite texture="Content/Items/Jobgear/Security/SecurityVest.png" sourcerect="14,45,103,158" depth="0.6" />
     <Body radius="45" height="50" density="40" />
     <Wearable slots="Any,OuterClothes" msg="ItemMsgPickUpSelect">
-			<StatusEffect type="OnWearing" target="Character,This" stackable="false" delay="0" >
+      <StatusEffect type="OnWearing" target="Character,This" stackable="false" delay="0">
         <Conditional IsDead="true" />
-				<Sound file="Mods/Thalassophobia/Items/Jobgear/Scientist/SingularityCollapse.ogg" range="3000" />
+        <Sound file="Mods/Thalassophobia/Items/Jobgear/Scientist/SingularityCollapse.ogg" range="3000" />
       </StatusEffect>
-      <StatusEffect type="OnWearing" target="Character,This" stackable="false" delay="2.6" >
+      <StatusEffect type="OnWearing" target="Character,This" stackable="false" delay="2.6">
         <Conditional IsDead="true" />
         <!--
         <Explosion range="1000" structuredamage="0" force="1" camerashake="30" flashrange="100" flashduration="1" screencolor="255,255,255,255" screencolorrange="10" screencolorduration="1.0">

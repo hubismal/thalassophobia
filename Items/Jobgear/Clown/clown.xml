@@ -446,7 +446,7 @@
     <Body width="90" height="350" density="30" />
     <MeleeWeapon slots="Any,RightHand+LeftHand" aimpos="45,10" handle1="0,-30" handle2="0,-10" holdangle="0" reload="0.2" range="150" combatPriority="50" msg="ItemMsgPickUpSelect">
       <Attack context="Ground" cooldown="3" afterattack="Pursue" range="150" damagerange="150" duration="0.25" structuredamage="0" itemdamage="50" structuresoundtype="StructureSlash" targetforce="0" severlimbsprobability="1.0" torque="-250" force="20" applyforceonlimbs="0, 1, 2, 13" targettype="Any" hitdetectiontype="Distance" stun="0" onlyhumans="False" applyforcesonlyonce="True" targetimpulse="50" targetimpulseworld="0,0" targetforceworld="0,0" stickchance="0" priority="0" secondarycooldown="0" cooldownrandomfactor="0.5" reverse="False" targetlimbtype="None">
-				<Sound file="Content/Sounds/Damage/LimbSlash1.ogg" selectionmode="random" range="500" />
+        <Sound file="Content/Sounds/Damage/LimbSlash1.ogg" selectionmode="random" range="500" />
         <Sound file="Content/Sounds/Damage/LimbSlash2.ogg" range="500" />
         <Sound file="Content/Sounds/Damage/LimbSlash3.ogg" range="500" />
         <Sound file="Content/Sounds/Damage/LimbSlash4.ogg" range="500" />
@@ -456,8 +456,7 @@
       </Attack>
       <!-- Normal glowcrystal attack -->
       <StatusEffect type="OnActive" target="Character, Parent" SpeedMultiplier="1.2" setvalue="true" disabledeltatime="true" />
-      <StatusEffect type="OnUse" target="Character" disabledeltatime="false" setvalue="false" >
-				
+      <StatusEffect type="OnUse" target="Character" disabledeltatime="false" setvalue="false">
         <ParticleEmitter particle="bloodsplash" particleamount="9" velocitymin="0" velocitymax="300" anglemin="0" anglemax="360" scalemin="2.0" scalemax="3.0" colormultiplier="2555,0,0,255" />
       </StatusEffect>
     </MeleeWeapon>

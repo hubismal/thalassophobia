@@ -9,7 +9,7 @@
       <Item identifier="bikehorn" />
     </Deconstruct>
     <Wearable limbtype="Head" slots="Any,Head" msg="ItemMsgPickUpSelect">
-      <sprite name="Mime Beret Wearable" texture="Mods/Thalassophobia/Items/Jobgear/headgears.png" limb="Head" inheritlimbdepth="true" inherittexturescale="true" depth="0.6" sourcerect="307,326,88,98" origin="0.5127118,0.49999988" />
+      <sprite name="Mime Beret Wearable" texture="Mods/Thalassophobia/Items/Jobgear/headgears.png" limb="Head" inheritlimbdepth="true" inherittexturescale="true" depth="0.6" sourcerect="307,326,89,80" origin="0.5210405,0.5689846" />
       <StatusEffect type="Always" target="This, Parent, Character">
         <Affliction identifier="thal_mimeaffliction" strength="200" amount="200" />
         <RemoveItem />
@@ -23,7 +23,7 @@
       <Item identifier="bikehorn" />
     </Deconstruct>
     <Wearable limbtype="Head" slots="Any,Head" msg="ItemMsgPickUpSelect">
-      <sprite name="Mime Beret Wearable" texture="Mods/Thalassophobia/Items/Jobgear/headgears.png" limb="Head" inheritlimbdepth="true" inherittexturescale="true" depth="0.6" sourcerect="307,326,88,98" origin="0.5127118,0.49999988" />
+      <sprite name="Mime Beret Wearable" texture="Mods/Thalassophobia/Items/Jobgear/headgears.png" limb="Head" inheritlimbdepth="true" inherittexturescale="true" depth="0.6" sourcerect="307,326,87,82" origin="0.51106304,0.55510694" />
     </Wearable>
   </Item>
   <Item name="Mime Costume" description="A more subtle costume for a more fine entertainment. When worn by a mime, increases agility." identifier="thal_mimecostume" category="Equipment" cargocontaineridentifier="metalcrate" tags="smallitem" impactsoundtag="impact_soft" scale="0.5">

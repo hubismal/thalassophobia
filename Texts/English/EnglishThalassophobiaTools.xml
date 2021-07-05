@@ -1,6 +1,27 @@
 <?xml version="1.0" encoding="utf-8"?>
 <infotexts language="English" nowhitespace="false" translatedname="English">
-  <!-- Multitools -->
+  <!-- ATP Stuff -->
+  <entityname.thal_improbabilitydrive>ATP Improbability Drive</entityname.thal_improbabilitydrive>
+  <entitydescription.thal_improbabilitydrive>Enables ATP Training to take place. Can be attached to the wall by aiming and pressing E/LMB. Once attached, wire it to a source of power and turn it on. It cannot be turned off. Being unpowered while on causes it to take damage. When destroyed, normality is restored and ATP training is reverted.</entitydescription.thal_improbabilitydrive>
+  
+  <entityname.thal_atpengimask>ATP Engineer Mask</entityname.thal_atpengimask>
+  <entitydescription.thal_atpengimask>When worn by someone with ATP training, this mask significantly increases all skills and allows usage of some powerful ATP weapons.</entitydescription.thal_atpengimask>
+  
+  <entityname.thal_atpsoldatmask>ATP Soldat Mask</entityname.thal_atpsoldatmask>
+  <entitydescription.thal_atpsoldatmask>When worn by someone with ATP training, this mask prevents damage from impacts or falls, and enables the use of all the powerful ATP weapons.</entitydescription.thal_atpsoldatmask>
+  
+  <entityname.thal_atpm60>ATP M60</entityname.thal_atpm60>
+  <entitydescription.thal_atpm60>This weapon requires ATP training to be used!
+  An ATP modification of the standard machine gun to regenerate ammunition. The M60 is suited for *strategic*, long range use, and is unsuitable for short range or use in a pinch. Effective usage relies on the scenario:
+  -The M60 must be aimed for 6 seconds. Then, accuracy is pinpoint.
+  -Aiming the M60 requires holding still.
+  -After firing a shot, there are 15 seconds of unlimited fire, followed by a 30 second cooldown where the gun is unusable. Plan for a retreat or bring a secondary weapon.
+  -Enemies are not stunlocked when hit, only slowed, and can potentially escape or rush you. Bloodloss is minimal. Plan accordingly.
+  -Bullets from the M60 will shred doors to destroy cover. Walls take minimal damage.</entitydescription.thal_atpm60>
+  
+  <entityname.thal_atpfist>ATP Charge Fist</entityname.thal_atpfist>
+  <entitydescription.thal_atpfist>This weapon requires ATP training to be used!
+  An ATP melee weapon with ungodly power. Hold Right Mouse to charge, and unleash with left click. The longer you charge it, the more devestating the impact. Charge it for too long, and it will backfire.</entitydescription.thal_atpfist>
   
   <!-- removed: duplicate functionality of EK armory (even though i did it first!!) >:( -->
   <entityname.thal_headsetchannel>Multichannel Headset</entityname.thal_headsetchannel>

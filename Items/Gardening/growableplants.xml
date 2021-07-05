@@ -254,8 +254,7 @@
       </StatusEffect>
     </LightComponent>
   </Item>
-  
-  <Item name="" identifier="thal_wheatseed" category="Material" Tags="smallitem,seed,plantitem" cargocontaineridentifier="metalcrate" scale="0.5" impactsoundtag="impact_soft" hideinmenus="true" isshootable="true" requireaimtouse="false" >
+  <Item name="" identifier="thal_wheatseed" category="Material" Tags="smallitem,seed,plantitem" cargocontaineridentifier="metalcrate" scale="0.5" impactsoundtag="impact_soft" hideinmenus="true" isshootable="true" requireaimtouse="false">
     <Sprite texture="Content/Items/Gardening/GrowablePlants_Temp.png" depth="0.2" sourcerect="830,636,31,30" origin="0.5,0.5" />
     <!--<PreferredContainer primary="supplycab" minamount="0" maxamount="2" spawnprobability="0.25" />
     <PreferredContainer primary="wreckmedcab" minamount="0" maxamount="3" spawnprobability="0.5" />-->
@@ -290,12 +289,10 @@
       </VineSprites>
     </Growable>
     <Body radius="15" density="12" />
-    <Holdable canBeCombined="false" slots="Any,RightHand,LeftHand" handle1="0,0" msg="ItemMsgPickUpSelect" >
-		</Holdable>
+    <Holdable canBeCombined="false" slots="Any,RightHand,LeftHand" handle1="0,0" msg="ItemMsgPickUpSelect"></Holdable>
   </Item>
-  
-  <Item name="wheatstalk" identifier="thal_wheatstalk" category="Material" Tags="smallitem,seed,plantitem,thal_produce" cargocontaineridentifier="metalcrate" scale="0.47" impactsoundtag="impact_soft" hideinmenus="true" noninteractable="true" isshootable="true" >
-		<Body radius="15" density="12" bodytype="Kinematic" />
+  <Item name="wheatstalk" identifier="thal_wheatstalk" category="Material" Tags="smallitem,seed,plantitem,thal_produce" cargocontaineridentifier="metalcrate" scale="0.47" impactsoundtag="impact_soft" hideinmenus="true" noninteractable="true" isshootable="true">
+    <Body radius="15" density="12" bodytype="Kinematic" />
     <Sprite name="phase 1" texture="Mods/Thalassophobia/Items/Gardening/GrowableEarth.png" depth="0.8" sourcerect="0,0,120,160" origin="0.5,1.4" />
     <BrokenSprite name="phase 1.5" texture="Mods/Thalassophobia/Items/Gardening/GrowableEarth.png" depth="0.8" sourcerect="0,0,120,160" origin="0.5,1.4" mincondition="75" maxcondition="99" />
     <BrokenSprite name="phase 2" texture="Mods/Thalassophobia/Items/Gardening/GrowableEarth.png" sourcerect="120,0,120,160" origin="0.5,1.4" depth="0.8" mincondition="50" maxcondition="75" />
@@ -303,9 +300,7 @@
     <BrokenSprite name="phase 4" texture="Mods/Thalassophobia/Items/Gardening/GrowableEarth.png" sourcerect="360,0,120,160" origin="0.5,1.4" depth="0.8" mincondition="0" maxcondition="25" />
     <BrokenSprite name="phase 5" texture="Mods/Thalassophobia/Items/Gardening/GrowableEarth.png" sourcerect="480,0,120,160" origin="0.5,1.4" depth="0.8" maxcondition="0" />
     <ItemComponent>
-			<StatusEffect target="This" type="Always" condition="-10" >
-			
-			</StatusEffect>
+      <StatusEffect target="This" type="Always" condition="-10"></StatusEffect>
     </ItemComponent>
   </Item>
 </Items>
