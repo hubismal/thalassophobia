@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Items>
+  <Item name="Test Food" identifier="thal_foodbase" category="Materials" tags="thal_food,smallitem" cargocontaineridentifier="metalcrate" health="30" description="" scale="0.25" impactsoundtag="impact_wetsplat" >
+    <Sprite name="testfood" texture="Mods/Thalassophobia/Items/Food/Cooking/organs.png" sourcerect="3,98,128,94" depth="0.55" origin="0.5,0.5" />
+    <Body width="128" height="60" density="15" restitution="0.4" friction="0.1" />
+    <Holdable slots="Any,RightHand+LeftHand" aimable="false" aimpos="35,23" handle1="15,0" swingamount="20,20" swingspeed="2" swingwhenusing="true" msg="ItemMsgPickUpSelect" reload="1.0" >
+			<!-- Bite -->
+			<StatusEffect type="OnUse" target="This,Character" targetlimb="head" swingwhenusing="false" swingspeed="2" aimpos="35,23" disabledeltatime="true" characterusable="false" >
+				<Conditional thal_full="lt 99" />
+				<Affliction identifier="thal_foodmanager" amount="2"/>
+				<Affliction identifier="thal_nutrition" amount="5"/>
+				<Affliction identifier="thal_full" amount="10"/>
+				<sound file="Mods/Thalassophobia/Items/Food/Bites/fruitbite1.ogg" range="600" />
+        <particleemitter particle="thal_cylindergib" particleamount="5" velocitymin="100" velocitymax="200" anglemin="0" anglemax="360" scalemin="0.6" scalemax="0.8" colormultiplier="247,198,228,255" />
+			</StatusEffect>
+			<!-- Swallow -->
+			<StatusEffect type="OnUse" delay="3.0" stackable="false" target="This,Character" condition="-10" swingwhenusing="true" swingspeed="2" aimpos="35,23" disabledeltatime="true" characterusable="true" >
+				<Conditional thal_full="lt 99" />
+				<sound file="Mods/Thalassophobia/Items/Food/gulp.ogg" range="600" />
+			</StatusEffect>
+			<StatusEffect type="OnBroken" target="This">
+				<Remove />
+			</StatusEffect>
+    </Holdable>
+  </Item>
+  
+</Items>

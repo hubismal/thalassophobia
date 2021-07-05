@@ -1,5 +1,161 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Afflictions>
+	<!-- FOOD MANAGER FOR WHEN PEOPLE EAT THINGS 
+	ALL FOOD POISONS/REACTIONS ARE HANDLED HERE-->
+	<Affliction name="Food Manager" identifier="thal_foodmanager" description="You just lost the game." type="poison" causeofdeathdescription="Died of poor health choices" selfcauseofdeathdescription="You have died of eating." limbspecific="false" indicatorlimb="Torso" showiconthreshold="10" showicontoothersthreshold="1000"
+    showinhealthscannerthreshold="1000" maxstrength="2">
+    <Effect minstrength="0" maxstrength="4" minscreendistort="0.0" maxscreendistort="0.5" strengthchange="-10">
+			<!-- what a beautiful duwang (chew) -->
+			<StatusEffect target="Character" setvalue="false" duration="3.0">
+				<Conditional IsLocalPlayer="true"/>
+				<sound file="Mods/Thalassophobia/Items/Food/Chew.ogg" selectionmode="All" />
+      </StatusEffect>
+      <!-- Cough on laced/tampered (Male) -->
+      <StatusEffect target="Character" setvalue="false" delay="1.0" stackable="false" >
+				<Conditional ismale="true"/>
+        <RequiredItem items="thalfood_stun15,thalfood_stun30,thalfood_cyanide,thalfood_paralyze,thalfood_husk,thalfood_ramblin,thalfood_morbusine,thalfood_sufforin,thalfood_psychosis,thalfood_salmonella,thalfood_drunk,thalfood_opiate,thalfood_vigor,thalfood_haste" type="Equipped" />
+        <Explosion range="150.0" force="1" flash="false" shockwave="false" smoke="false" flames="false" sparks="false" underwaterbubble="false" camerashake="20.0" />
+      </StatusEffect>
+      <StatusEffect target="Character" setvalue="false" delay="1.0" duration="4.0" SpeechImpediment="100.0" >
+				<Conditional ismale="true"/>
+        <RequiredItem items="thalfood_stun15,thalfood_stun30,thalfood_cyanide,thalfood_paralyze,thalfood_husk,thalfood_ramblin,thalfood_morbusine,thalfood_sufforin,thalfood_psychosis,thalfood_salmonella,thalfood_drunk,thalfood_opiate,thalfood_vigor,thalfood_haste" type="Equipped" />
+        <sound file="Mods/Thalassophobia/Items/Food/CoughMale1.ogg" range="700" selectionmode="Random" />
+        <sound file="Mods/Thalassophobia/Items/Food/CoughMale2.ogg" range="700" />
+        <sound file="Mods/Thalassophobia/Items/Food/CoughMale3.ogg" range="700" />
+      </StatusEffect>
+      <!-- Cough on laced/tampered (Female) -->
+      <StatusEffect target="Character" setvalue="false" delay="1.0" stackable="false" >
+				<Conditional isfemale="true"/>
+        <RequiredItem items="thalfood_stun15,thalfood_stun30,thalfood_cyanide,thalfood_paralyze,thalfood_husk,thalfood_ramblin,thalfood_morbusine,thalfood_sufforin,thalfood_psychosis,thalfood_salmonella,thalfood_drunk,thalfood_opiate,thalfood_vigor,thalfood_haste" type="Equipped" />
+        <Explosion range="150.0" force="1" flash="false" shockwave="false" smoke="false" flames="false" sparks="false" underwaterbubble="false" camerashake="20.0" />
+      </StatusEffect>
+      <StatusEffect target="Character" setvalue="false" delay="1.0" duration="4.0" SpeechImpediment="100.0" >
+				<Conditional isfemale="true"/>
+        <RequiredItem items="thalfood_stun15,thalfood_stun30,thalfood_cyanide,thalfood_paralyze,thalfood_husk,thalfood_ramblin,thalfood_morbusine,thalfood_sufforin,thalfood_psychosis,thalfood_salmonella,thalfood_drunk,thalfood_opiate,thalfood_vigor,thalfood_haste" type="Equipped" />
+        <sound file="Mods/Thalassophobia/Items/Food/CoughFemale1.ogg" range="700" selectionmode="Random" />
+        <sound file="Mods/Thalassophobia/Items/Food/CoughFemale2.ogg" range="700" />
+        <sound file="Mods/Thalassophobia/Items/Food/CoughFemale3.ogg" range="700" />
+      </StatusEffect>
+			<!-- Sedative (15 seconds) -->
+      <StatusEffect target="Character" stackable="false" setvalue="false" delay="4.0" duration="5.0">
+        <RequiredItem items="thalfood_stun15" type="Equipped" />
+        <Affliction identifier="progressivestun" amount="1" />
+      </StatusEffect>
+      <!-- Sedative (30 seconds) -->
+      <StatusEffect target="Character" stackable="false" setvalue="false" delay="8.0" duration="10.0">
+        <RequiredItem items="thalfood_stun30" type="Equipped" />
+        <Affliction identifier="progressivestun" amount="1" />
+      </StatusEffect>
+			<!-- Cyanide Poisoning -->
+      <StatusEffect target="Character" stackable="false" setvalue="false">
+        <RequiredItem items="thalfood_cyanide" type="Equipped" />
+        <Affliction identifier="cyanidepoisoning" amount="1" />
+      </StatusEffect>
+      <!-- Paralyzant Poisoning -->
+      <StatusEffect target="Character" stackable="false" setvalue="false">
+        <RequiredItem items="thalfood_paralyze" type="Equipped" />
+        <Affliction identifier="paralysis" amount="1" />
+      </StatusEffect>
+      <!-- Husk Poisoning -->
+      <StatusEffect target="Character" stackable="false" setvalue="false" delay="4.0" >
+        <RequiredItem items="thalfood_husk" type="Equipped" />
+        <Affliction identifier="huskinfection" amount="1" />
+      </StatusEffect>
+      <!-- Ramblin Poisoning -->
+      <StatusEffect target="Character" stackable="false" setvalue="false" delay="4.0" >
+        <RequiredItem items="thalfood_ramblin" type="Equipped" />
+        <Affliction identifier="thal_mushroomized" amount="1" />
+      </StatusEffect>
+      <!-- Morbusine Poisoning -->
+      <StatusEffect target="Character" stackable="false" setvalue="false" >
+        <RequiredItem items="thalfood_morbusine" type="Equipped" />
+        <Affliction identifier="morbusinepoisoning" amount="1" />
+      </StatusEffect>
+      <!-- Sufforin Poisoning -->
+      <StatusEffect target="Character" stackable="false" setvalue="false" >
+        <RequiredItem items="thalfood_sufforin" type="Equipped" />
+        <Affliction identifier="sufforinpoisoning" amount="1" />
+      </StatusEffect>
+      <!-- Psychoactive (Alien Blood/Deliriumine) -->
+      <StatusEffect target="Character" stackable="false" setvalue="false" >
+        <RequiredItem items="thalfood_psychosis" type="Equipped" />
+        <Affliction identifier="psychosis" amount="10" />
+      </StatusEffect>
+      <!-- Salmonella Poisoning -->
+      <StatusEffect target="Character" stackable="false" setvalue="false">
+        <RequiredItem items="thalfood_salmonella" type="Equipped" />
+        <Affliction identifier="thal_foodpoisoning" amount="1" />
+      </StatusEffect>
+      <!-- Spiked/Drunk -->
+      <StatusEffect target="Character" stackable="false" setvalue="false" delay="7" duration="4.0">
+        <RequiredItem items="thalfood_drunk" type="Equipped" />
+        <Affliction identifier="drunk" amount="5" />
+      </StatusEffect>
+      <!-- "GOOD" Effects -->
+      <!-- Painkillers (Morph/Fet/Opium) -->
+      <StatusEffect target="Character" stackable="false" setvalue="false" disabledeltatime="false" delay="2.0" duration="4.0">
+        <RequiredItem items="thalfood_opiate" type="Equipped" />
+        <ReduceAffliction identifier="damage" amount="1" />
+        <Affliction identifier="opiateaddiction" amount="2" />
+      </StatusEffect>
+      <!-- Hyperactive (haste)-->
+      <StatusEffect target="Character" stackable="false" setvalue="false" duration="5.0">
+        <RequiredItem items="thalfood_haste" type="Equipped" />
+        <Affliction identifier="haste" amount="2" />
+      </StatusEffect>
+      <!-- Hyperactive (haste)-->
+      <StatusEffect target="Character" stackable="false" setvalue="false" duration="5.0">
+        <RequiredItem items="thalfood_vigor" type="Equipped" />
+        <Affliction identifier="strengthen" amount="2" />
+      </StatusEffect>
+    </Effect>
+    <icon texture="Mods/Thalassophobia/UI/MainIconsAtlas.png" sourcerect="0,512,128,128" color="139,60,42,255" origin="0,0" />
+  </Affliction>
+  <!-- FOOD MANAGER END -->
+  <Affliction name="Nutrition" identifier="thal_nutrition" description="The patient's body is benefitting from the nutrition of a previous meal. Natural regenerative processes of cells are sped up, the patient can think more clearly, and buffs circulate in the bloodstream for longer.  These effects become more pronounced the more nutrition there is. Healthy food has a better nutrition-to-fillingness ratio." type="resistance" isbuff="true" causeofdeathdescription="Ate themselves to death." selfcauseofdeathdescription="You have eaten yourself to death." limbspecific="false" indicatorlimb="Torso" showiconthreshold="0" maxstrength="100" iconcolors="200,255,148,255;0,240,166,240;0,255,130,255">
+    <Effect minstrength="0" maxstrength="30" strengthchange="-0.1" minbuffmultiplier="1.2" maxbuffmultiplier="1.3">
+      <StatusEffect target="Character" SpeedMultiplier="1.1" setvalue="true" >
+        <ReduceAffliction identifier="bleeding" amount="0.05" />
+        <ReduceAffliction identifier="burn" amount="0.05" />
+        <ReduceAffliction identifier="bloodloss" amount="0.1" />
+        <ReduceAffliction identifier="damage" strength="0.05" />
+      </StatusEffect>
+    </Effect>
+    <Effect minstrength="30" maxstrength="60" strengthchange="-0.1" minbuffmultiplier="1.3" maxbuffmultiplier="1.4" minskillmultiplier="1.0"
+      maxskillmultiplier="1.1">
+      <StatusEffect target="Character" SpeedMultiplier="1.15" setvalue="true">
+        <ReduceAffliction identifier="bleeding" amount="0.1" />
+        <ReduceAffliction identifier="burn" amount="0.1" />
+        <ReduceAffliction identifier="bloodloss" amount="0.2" />
+        <ReduceAffliction identifier="damage" strength="0.05" />
+      </StatusEffect>
+    </Effect>
+    <Effect minstrength="60" maxstrength="90" strengthchange="-0.1" minbuffmultiplier="1.4" maxbuffmultiplier="1.4" minskillmultiplier="1.1"
+      maxskillmultiplier="1.2">
+      <StatusEffect target="Character" SpeedMultiplier="1.15" setvalue="true">
+        <ReduceAffliction identifier="bleeding" amount="0.15" />
+        <ReduceAffliction identifier="burn" amount="0.15" />
+        <ReduceAffliction identifier="bloodloss" amount="0.2" />
+        <ReduceAffliction identifier="damage" strength="0.1" />
+      </StatusEffect>
+    </Effect>
+    <Effect minstrength="90" maxstrength="100" strengthchange="-0.1" minbuffmultiplier="1.4" maxbuffmultiplier="1.6" minskillmultiplier="1.2"
+      maxskillmultiplier="1.3">
+      <StatusEffect target="Character" SpeedMultiplier="1.2" setvalue="true">
+        <ReduceAffliction identifier="bleeding" amount="0.2" />
+        <ReduceAffliction identifier="burn" amount="0.2" />
+        <ReduceAffliction identifier="bloodloss" amount="0.2" />
+        <ReduceAffliction identifier="damage" strength="0.15" />
+      </StatusEffect>
+    </Effect>
+    <icon texture="Mods/Thalassophobia/UI/MainIconsAtlas.png" sourcerect="128,640,128,128" color="139,60,42,255" origin="0,0" />
+  </Affliction>
+  <Affliction name="Repletion" identifier="thal_full" description="The patient's stomach is busy digesting food; At maximum affliction, they are full. When repletion reaches 100, they will be unable to consume any food. Notably seperate from nutrition, which is beneficial." type="resistance" causeofdeathdescription="Ate themselves to death." selfcauseofdeathdescription="You have eaten yourself to death." limbspecific="false" indicatorlimb="Torso" showiconthreshold="0" maxstrength="100" iconcolors="201,181,115,255;150,42,14,255">
+    <Effect minstrength="0" maxstrength="97" strengthchange="-0.1"></Effect>
+    <Effect minstrength="97" maxstrength="100" strengthchange="-0.04"></Effect>
+    <icon texture="Mods/Thalassophobia/UI/MainIconsAtlas.png" sourcerect="0,640,128,128" color="139,60,42,255" origin="0,0" />
+  </Affliction>
+  <!-- FOOD META END -->
   <AfflictionHusk name="Apostle Infection" identifier="thal_apostleinfection" description="The patient is rapidly transforming into an apostle." type="huskinfection" targets="human" huskedspeciesname="[speciesname]apostle" causeofdeathdescription="Reborn as an apostle" selfcauseofdeathdescription="You have been reborn as an apostle." limbspecific="false" indicatorlimb="Torso" activationthreshold="0" showiconthreshold="30" maxstrength="100" iconcolors="60,140,195,255;60,107,195,255;60,0,195,255">
     <Effect minstrength="0" maxstrength="80" maxvitalitydecrease="0" strengthchange="90" />
     <Effect minstrength="80" maxstrength="100" minvitalitydecrease="-100" maxvitalitydecrease="-101" strengthchange="0.3" />
@@ -13,11 +169,7 @@
     </StatusEffect>
     <icon texture="Mods/Thalassophobia/UI/MainIconsAtlas.png" sourcerect="769,769,128,128" color="60,107,195,255" origin="0.4224684,0.32779613" />
   </AfflictionHusk>
-  <Affliction name="Repletion" identifier="thal_full" description="The patient's stomach is busy digesting food; At maximum affliction, they are full. When repletion reaches 100, they will be unable to consume any food. Notably seperate from nutrition, which is beneficial." type="resistance" causeofdeathdescription="Ate themselves to death." selfcauseofdeathdescription="You have eaten yourself to death." limbspecific="false" indicatorlimb="Torso" showiconthreshold="0" maxstrength="100">
-    <Effect minstrength="0" maxstrength="97" strengthchange="-0.1"></Effect>
-    <Effect minstrength="97" maxstrength="100" strengthchange="-0.04"></Effect>
-    <icon texture="Mods/Thalassophobia/UI/MainIconsAtlas.png" sourcerect="0,640,128,128" color="139,60,42,255" origin="0,0" />
-  </Affliction>
+  
   <Affliction name="Mimetated" identifier="thal_mimeaffliction" description="The patient is a mime and has taken a miming oath. They cannot speak" type="resistance" causeofdeathdescription="Died from being a mime." selfcauseofdeathdescription="You have died from being a mime(?)." limbspecific="false" indicatorlimb="Torso" showiconthreshold="10" maxstrength="5">
     <Effect minstrength="0" maxstrength="6">
       <StatusEffect target="Character" speechImpediment="100.0" tags="mimepowers" />
@@ -48,41 +200,7 @@
     </Effect>
     <icon texture="Mods/Thalassophobia/UI/MainIconsAtlas.png" sourcerect="256,640,128,128" color="139,60,42,255" origin="0,0" />
   </Affliction>
-  <Affliction name="Nutrition" identifier="thal_nutrition" description="The patient's body is benefitting from the nutrition of a previous meal. Natural regenerative processes of cells are sped up, and buffs circulate in the bloodstream for longer.  These effects become more pronounced the more nutrition there is. Healthy food has a better nutrition to fillingness ratio." type="resistance" isbuff="true" causeofdeathdescription="Ate themselves to death." selfcauseofdeathdescription="You have eaten yourself to death." limbspecific="false" indicatorlimb="Torso" showiconthreshold="0" maxstrength="100">
-    <Effect minstrength="0" maxstrength="30" strengthchange="-0.1" minbuffmultiplier="1.2" maxbuffmultiplier="1.3">
-      <StatusEffect target="Character" SpeedMultiplier="1.1" setvalue="true">
-        <ReduceAffliction identifier="bleeding" amount="0.05" />
-        <ReduceAffliction identifier="burn" amount="0.05" />
-        <ReduceAffliction identifier="bloodloss" amount="0.1" />
-        <ReduceAffliction identifier="damage" strength="0.05" />
-      </StatusEffect>
-    </Effect>
-    <Effect minstrength="30" maxstrength="60" strengthchange="-0.1" minbuffmultiplier="1.3" maxbuffmultiplier="1.4">
-      <StatusEffect target="Character" SpeedMultiplier="1.15" setvalue="true">
-        <ReduceAffliction identifier="bleeding" amount="0.1" />
-        <ReduceAffliction identifier="burn" amount="0.1" />
-        <ReduceAffliction identifier="bloodloss" amount="0.2" />
-        <ReduceAffliction identifier="damage" strength="0.05" />
-      </StatusEffect>
-    </Effect>
-    <Effect minstrength="60" maxstrength="90" strengthchange="-0.1" minbuffmultiplier="1.4" maxbuffmultiplier="1.4">
-      <StatusEffect target="Character" SpeedMultiplier="1.15" setvalue="true">
-        <ReduceAffliction identifier="bleeding" amount="0.15" />
-        <ReduceAffliction identifier="burn" amount="0.15" />
-        <ReduceAffliction identifier="bloodloss" amount="0.2" />
-        <ReduceAffliction identifier="damage" strength="0.1" />
-      </StatusEffect>
-    </Effect>
-    <Effect minstrength="90" maxstrength="100" strengthchange="-0.1" minbuffmultiplier="1.4" maxbuffmultiplier="1.6">
-      <StatusEffect target="Character" SpeedMultiplier="1.2" setvalue="true">
-        <ReduceAffliction identifier="bleeding" amount="0.2" />
-        <ReduceAffliction identifier="burn" amount="0.2" />
-        <ReduceAffliction identifier="bloodloss" amount="0.2" />
-        <ReduceAffliction identifier="damage" strength="0.15" />
-      </StatusEffect>
-    </Effect>
-    <icon texture="Mods/Thalassophobia/UI/MainIconsAtlas.png" sourcerect="128,640,128,128" color="139,60,42,255" origin="0,0" />
-  </Affliction>
+  
   <Affliction name="Food Poisoning" identifier="thal_foodpoisoning" description="The patient reports extreme discomfort in their abdomen, likely stemming from eating infected or unclean food. It is harder for them to walk, and nutrition from all food is wasted fighting the malignant bacteria in the stomach." type="poison" causeofdeathdescription="Died of food poisoning." selfcauseofdeathdescription="You have died of food poisoning." limbspecific="false" indicatorlimb="Torso" showiconthreshold="10" maxstrength="100">
     <Effect minstrength="5" maxstrength="30" minscreendistort="0.0" maxscreendistort="0.5" strengthchange="-0.1">
       <StatusEffect target="Character" SpeedMultiplier="0.8" setvalue="true">

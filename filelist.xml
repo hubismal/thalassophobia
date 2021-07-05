@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<contentpackage name="Thalassophobia" path="Mods/Thalassophobia/filelist.xml" corepackage="false" gameversion="0.14.6.0" steamworkshopid="2003946282" installtime="1624052625">
+<contentpackage name="Thalassophobia" path="Mods/Thalassophobia/filelist.xml" corepackage="false" gameversion="0.14.6.0" steamworkshopid="2003946282" installtime="1624429255">
   <Text file="Mods/Thalassophobia/Texts/Russian/RussianThalassophobiaLocations.xml" />
   <Text file="Mods/Thalassophobia/Texts/Russian/RussianThalassophobiaTools.xml" />
   <Text file="Mods/Thalassophobia/Texts/English/EnglishThalassophobiaLocations.xml" />
@@ -40,6 +40,7 @@
   <Item file="Mods/Thalassophobia/Items/Tools/notes.xml" />
   <Item file="Mods/Thalassophobia/Items/Tools/hacker.xml" />
   <Item file="Mods/Thalassophobia/Items/Food/Cooking/cookingitems.xml" />
+  <Item file="Mods/Thalassophobia/Items/Food/Cooking/ingredients.xml" />
   <Item file="Mods/Thalassophobia/Items/Food/Cooking/giblets.xml" />
   <Item file="Mods/Thalassophobia/Items/Installations/sprinkler.xml" />
   <OutpostConfig file="Mods/Thalassophobia/Map/Outposts/OutpostGenerationParameters.xml" />
