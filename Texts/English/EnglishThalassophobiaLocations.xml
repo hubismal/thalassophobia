@@ -2,79 +2,92 @@
 <infotexts language="English" nowhitespace="false" translatedname="English">
 
 	<tutorial.clowntraining>Clown Training</tutorial.clowntraining>
-
-	<thalcampaign_newbrieflong>You are new arrivals on Europa. You just got your Coalition Citizen ID a few minutes ago after waiting at a shuttle arrival checkpoint. The world of Barotrauma is new and mysterious, and you want to experience it through new eyes.
 	
-	You start with no perks, benefits, or reputation bonuses, but conversely you are on neutral standing with all of the factions. As the campaign progresses, you will be presented with the opportunity to join and leave factions as you please like any other background preset. 
+	<!-- PAST CHOOSING -->
 	
-	Choose this route to start with a clean slate, like in Vanilla Barotrauma.
-	</thalcampaign_newbrieflong>
+	<thalcampaign_start.1>Welcome to Thalasssophobia's Campaign. Before you begin, you will select your background with your crew, which will affect your starting reputation.</thalcampaign_start.1>
+	<thalcampaign_start.2>Decide with your crew on a background that seems fun or fitting for you.</thalcampaign_start.2>
 	
-	<thalcampaign_corporatebrieflong>Briefing Log 1A: Corporate Agents are black operations specialists working for the Coalition Anti Terrorist Police (CATPOL). Your job consists of hunting down seperatist insurgents and putting an end to the insurgency by any means necessary. It's a dirty job, and almost all CATPOL agents are "bad cops" in one way or another.
+	<thalcampaign_start.seeoptions>See the options.</thalcampaign_start.seeoptions>
+	<thalcampaign_start.confirm>Confirm.</thalcampaign_start.confirm>
+	<thalcampaign_start.back>Back to selection.</thalcampaign_start.back>
 	
-	You have special access to Black Sites that house secret government projects, as well as some of the newest high-grade gear on Europa. You are in many ways above the law, but don't get the wrong idea: You are not "free". If you stray too far from Coalition interests, the chain of command from on high will activate your implanted killswitch.
-	
-	Choose this route for an experience as a potentially corrupt powertripping law enforcer.
-	</thalcampaign_corporatebrieflong>
-	
-	<thalcampaign_circusbrieflong>As humanity extends their stay on Europa, more and more ships mysteriously become registered as "travelling circuses". These crews consist of Europans loyal to the ideas (or lack of ideas) of the Children of the Honkmother. Loyal to nobody except chaos itself, clown ships have been sighted going from outpost to outpost, harassing their denizens with annoying clown antics.
-	
-	Clown crews will have access to ridiculous dialogue options that may result in almost spontaneous results, with a large emphasis placed on randomness. Clown insurgents at outposts will supply clown crews with lots of goods to keep the chaos going.
-	
-	Choose this route for a wild ride of screwing around and watching the world burn.
-	</thalcampaign_circusbrieflong>
-	
-	<thalcampaign_huskbrieflong>Velonaceps Calyx is a tiny fungal parasite known to house itself in the lowermost region of the pharynx, where it burrows into the vocal chords, grows to obstruct speech, and subsequently hijacks the brainstem. The parasite has existed on Europa for ages as the "perfect organism": In order for humankind to truly coalesce with its new home, we must seek salvation from the eggs, evolving us into something more than human.
-	
-	Your assignment from the high priest is to convert the young minds of Europa. You may access special "hallowed grounds" scattered around Europa, where you will be showered with rewards for your penance.
-	
-	Choose this route for an unsettling ride of occultism and transhumanism.
-	</thalcampaign_huskbrieflong>
-	
-	<thalcampaign_bluecollarbrieflong>Life ain't easy on Europa. You could be trigger happy cop, a knife weilding cultist, a paint slinging terrorist, or a friggin circus clown. One day you're a psycho running around with a folding chair, next day you're crawler food. If you're an average joe trying to stay alive, chances are, you've got connections underground.
-	
-	As a street crew, you'll do whatever gets you the marks, no matter how dirty the job. Crawler swarm? No problem. Assassinations? Easy street. Drug smuggling? Piece of cake. You don't have a "home base", but you might feel more comfortable in one of the many slums.
-	
-	Choose this route to experience the criminal underworld and the low life of Europa.
-	</thalcampaign_bluecollarbrieflong>
-	
-	<thalcampaign_terroristbrieflong>For years, the people of Europa have suffered under the tyrannical rule of the all-encompassing Coalition. You've seen it all: The surveillance, the police brutality, the rampant corruption. Everywhere you look, beggars in outposts; The weak, the diseased, the war torn veterans... Thrown away like trash by the fat cats living it up in luxury stations.
-	
-	Blow things up as a terrorist. finish this description later (this mod is wip)
-	
-	Choose this route to smash the state and blow shit up.
-	</thalcampaign_terroristbrieflong>
-	
-	<thalcampaign_newbrief>You are new arrivals on Europa. You start with no perks, benefits, or reputation bonuses, but conversely you are on neutral standing with all of the factions. As the campaign progresses, you will be presented with the opportunity to join and leave factions as you please like any other background preset. 
+	<thalcampaign_start.newline>We are NEW ARRIVALS on Europa. Fate will forge a name for us.</thalcampaign_start.newline>
+	<thalcampaign_newbrief>You are new arrivals on Europa. The world of Barotrauma is new and interesting. You start with no perks. No faction hates you, but no faction is fond of you. As the campaign progresses, you will be presented with the opportunity to join and leave factions as you please like any other background preset. You are your own man/woman.
 	
 	Choose this route to start with a clean slate, like in Vanilla Barotrauma.
 	</thalcampaign_newbrief>
 	
-	<thalcampaign_corporatebrief>You work for CATPOL: Terrorist hunting law enforcement. You have special access to Black Sites that house secret government projects, as well as some of the newest high-grade gear on Europa. If you stray too far from Coalition interests, the chain of command from on high will activate your implanted killswitch.
+	<thalcampaign_start.corporateline>We are ELITE CORPORATE AGENTS. Our loyalty lies in COALITION INTERESTS.</thalcampaign_start.corporateline>
+	<thalcampaign_corporatebrief>You work for CATPOL, a Terrorist hunting law enforcement agency. You have special access to some of the newest high-grade gear on Europa. If you stray too far from Coalition interests though, prepare to face consequences.
 	
-	Choose this route for an experience as a potentially corrupt powertripping law enforcer.
+	Choose this route to play as the heavyhanded arm of the law.
 	</thalcampaign_corporatebrief>
 	
-	<thalcampaign_circusbrief>Clown ships go from outpost to outpost, harassing their denizens with annoying clown antics. Clown crews will have access to ridiculous dialogue options that may result in almost spontaneous results, with a large emphasis placed on randomness. 
+	<thalcampaign_start.circusline>We are A TRAVELLING CIRCUS. A carnival of chaos will swallow Europa whole.</thalcampaign_start.circusline>
+	<thalcampaign_circusbrief>Clown ships go from outpost to outpost, harassing their denizens with chaotic clown antics. Clown crews will have access to ridiculous dialogue options that may result in almost spontaneous outcomes, with a large emphasis placed on RNG. Nobody is safe!
 	
-	Choose this route for a wild ride of screwing around and watching the world burn.
+	This route just wants to watch the world burn.
 	</thalcampaign_circusbrief>
 	
-	<thalcampaign_huskbrief>You must seek salvation from the eggs, evolving us into something more than human. Your assignment from the high priest is to convert the young minds of Europa. You may access special "hallowed grounds" scattered around Europa, where you will be showered with rewards for your penance.
+	<thalcampaign_start.huskline>We are CALYX MISSIONARIES. The teachings of the husk will save humankind.</thalcampaign_start.huskline>
+	<thalcampaign_huskbrief>Humanity must seek salvation from the eggs, evolving us to adapt to life on Europa. Your assignment from the high priest is to spread influence of the husk. Along the way, clergymen will aid you from the shodows to make sure no human goes unchanged.
 	
-	Choose this route for an unsettling ride of occultism and transhumanism.
+	Choose this route to take part in a transhumanism conspiracy.
 	</thalcampaign_huskbrief>
+	<thalcampaign_start.bluecollarline>We are A FOR-HIRE LOWLIVES. Underworld connections find us illegal work.</thalcampaign_start.bluecollarline>
+	<thalcampaign_bluecollarbrief>On Europa, you're nobody until you're "in the game". As a street crew, you do it all for the marks, no questions asked. Hit job? Easy street. Narcotic smuggling? Piece of cake. You don't have a "home base"; The streets are where you were born and raised.
 	
-	<thalcampaign_bluecollarbrief>If you're an average joe trying to stay alive, chances are, you've got connections underground. As a street crew, you'll do whatever gets you the marks, no matter how dirty the job. Assassinations? Easy street. Drug smuggling? Piece of cake. You don't have a "home base", but you might feel more comfortable in one of the many slums.
-	
-	Choose this route to experience the criminal underworld and the low life of Europa.
+	Choose this route to experience the sprawling criminal underworld and the low life of Europa.
 	</thalcampaign_bluecollarbrief>
 	
-	<thalcampaign_terroristbrief>For years, the people of Europa have suffered under the tyrannical rule of the all-encompassing Coalition. You've seen it all: The surveillance, the police brutality, the rampant corruption. Everywhere you look, beggars in outposts; The weak, the diseased, the war torn veterans... Thrown away like trash by the fat cats living it up in luxury stations.
+	<thalcampaign_start.terroristline>We are RESISTANCE INSURGENTS. Smash the fascist state and free the moon.</thalcampaign_start.terroristline>
+	<thalcampaign_terroristbrief>For years, the people of Europa have suffered under the tyrannical rule of the all-encompassing Coalition. The surveillance, the police brutality, the rampant corruption; All while Coalition fat cats live it up in luxury stations. Enough is enough.
 	
-	Choose this route to smash the state and blow shit up.
+	Choose this route to smash the state and stick it to the man.
 	</thalcampaign_terroristbrief>
 
+  <!-- UES DONATION -->
+  
+  <thalcampaign_uesdonation.start>A doctor approaches you, holding some kind of box decorated with a mark sign. “Excuse me, I'm a fund raiser with the UES... Would it be too much to ask for just a moment of your time?“</thalcampaign_uesdonation.start>
+  <thalcampaign_uesdonation.clueless>“The U-E-What-now?“</thalcampaign_uesdonation.clueless>
+  <thalcampaign_uesdonation.lore>The fund raiser pauses and looks at you quizzically. “I'm surprised you've never heard of us. We're a charitable, nonprofit organization dedicated to improving the quality of life on Europa. You ever notice how everywhere you go in these outposts, you see maniac clowns, lowlives, mudraptors in vents... the like? The UES believes that Europa doesn't have to be like this; Our fundraising aims to increase the quality of life in outposts.“</thalcampaign_uesdonation.lore>
+  <thalcampaign_uesdonation.okay>“Okay...“</thalcampaign_uesdonation.okay>
+  <thalcampaign_uesdonation.fewmarks>They continue: “We mostly fight poverty by managing soup kitchens, clothing drives, or doing community service like cleaning up the outposts hit hard by the crash.“ They present the donation box: “Just a few marks can make a world of difference!“</thalcampaign_uesdonation.fewmarks>
+  <thalcampaign_uesdonation.goingaround>“And you're going around with that thing asking for donations?“</thalcampaign_uesdonation.goingaround>
+  <thalcampaign_uesdonation.donationoptions>They eagerly hold up the donation box. “Would you like to make a contribution?“</thalcampaign_uesdonation.donationoptions>
+  <thalcampaign_uesdonation.10mk>Donate 10 Marks</thalcampaign_uesdonation.10mk>
+  <thalcampaign_uesdonation.react10>You transfer 10 Marks to the UES. “Thanks, we greatly appreciate it.“</thalcampaign_uesdonation.react10>
+  <thalcampaign_uesdonation.100mk>Donate 100 Marks</thalcampaign_uesdonation.100mk>
+  <thalcampaign_uesdonation.react100>You transfer 100 Marks to the UES. “Wow, 100 marks! This will help greatly. Thank you sincerely.“</thalcampaign_uesdonation.react100>
+  <thalcampaign_uesdonation.1000mk>Donate 1000 Marks</thalcampaign_uesdonation.1000mk>
+  <thalcampaign_uesdonation.react1000>You transfer 1000 Marks to the UES. They look flabbergast. “You're serious? I can't thank you enough... this is incredible! Thank you so, so much. We won't forget this.“</thalcampaign_uesdonation.react1000>
+  <thalcampaign_uesdonation.nvm>“Actually, I change my mind, sorry.“</thalcampaign_uesdonation.nvm>
+  <thalcampaign_uesdonation.mug>[Armed] “How about you make a contribution to me instead?“</thalcampaign_uesdonation.mug>
+  <thalcampaign_uesdonation.mugsuccess>They back away, astonished. “Y-You know this is a one-way transfer device, right? ...You know what, forget it! Here: You can have 400 Marks, it's all I have in my personal account, I swear. Just don't hurt me!“ They give you the marks and back off. The UES will hear about this.</thalcampaign_uesdonation.mugsuccess>
+  <thalcampaign_uesdonation.mugfail>They back away, astonished. “Who the hell do you think you are, stealing from charity? You low-down piece of crawler shit!" Their hand dives into their jacket. Get ready to fight!</thalcampaign_uesdonation.mugfail>
+  <thalcampaign_uesdonation.later>“Sorry, maybe some other time.“</thalcampaign_uesdonation.later>
+  <thalcampaign_uesdonation.hippies>“Aren't you guys a bunch of hippies?“</thalcampaign_uesdonation.hippies>
+  <thalcampaign_uesdonation.irked>The UES member is clearly irked by your remark: “We oppose the conflict between the coalition and the seperatist forces, if that's what you mean. It's out belief the 'war on terrorism' has done nothing but make a lot of marks for weapon manufacturers, all at the cost of the common people. There was never a 'good war' or a 'bad peace'. Regardless, none of our fundraising is spent politically. We just want to ease suffering.“</thalcampaign_uesdonation.irked>
+  <thalcampaign_uesdonation.alright>“Alright then.“</thalcampaign_uesdonation.alright>
+  <thalcampaign_uesdonation.political>“So you're backed by the Coalition, or what?“</thalcampaign_uesdonation.political>
+  <thalcampaign_uesdonation.humanity>The UES member gives a sidelong look: “We're not really 'with' anyone. The UES is friends to humanity itself. Is it really so bad that we're not power-tripping oligarchs, murderous seperatists, parasite-worshipping cultists or psycho clowns? Some people say that unlike the other guys, our pacifist ideals aren't achievable on the hellscape that is Europa. I guess after this fundraising campaign, we'll see how many people are willing to believe.“</thalcampaign_uesdonation.humanity>
+  <thalcampaign_uesdonation.believe>“Believe?“</thalcampaign_uesdonation.believe>
+  <thalcampaign_uesdonation.join>“I'd like to join the UES.“</thalcampaign_uesdonation.join>
+  <thalcampaign_uesdonation.membership>The fund raiser smiles. “Well, I'm not really a recruiter. I've been penned in this middle-of-nowhere outpost on fundraising duty until... pretty much the end of time, so I don't have the paperwork on me. I'll forward your request to higher-ups though, and we'll see if someone can contact you further into your travels at a different outpost, okay?“</thalcampaign_uesdonation.membership>
+  <thalcampaign_uesdonation.iknow>“I know who you are. Are you looking for a donation?“</thalcampaign_uesdonation.iknow>
+  <thalcampaign_uesdonation.keepwalking>Keep on walking and avert your gaze.</thalcampaign_uesdonation.keepwalking>
+  <thalcampaign_uesdonation.busy>“I'm sorry, I'm really quite busy right now.“</thalcampaign_uesdonation.busy>
+  <thalcampaign_uesdonation.terrorinquiry>[CATPOL Agent] “Actually, I need a moment of *your* time. Have you been witness to any suspected conspiracy against the Coalition?“</thalcampaign_uesdonation.terrorinquiry>
+  <thalcampaign_uesdonation.catpol>[CATPOL Agent] “A UES flowerboy, huh? Give me all of today's funds raised, and I'll pretend I didn't catch you panhandling without a Coalition Permit.“</thalcampaign_uesdonation.catpol>
+  <thalcampaign_uesdonation.blackmail>The UES fund raiser is furious. “Shithead CATs like you are why we can't have nice things. I hope you and all your Coalition buddies get what's coming to you.“ They begrudgingly give you 300 Marks and walk away.</thalcampaign_uesdonation.blackmail>
+  
+  <!-- MIME PERFORMANCE -->
+  
+  <thalcampaign_mimeperformance.start>There's a street mime here. These professional entertainers engage in what many believe to be more sophisticated acts of tomfoolery. While clowns engage in crass, low brow humour, mimes are naturally drawn to better-bred antics, making them more accepted in many outposts, regardless of creed.</thalcampaign_mimeperformance.start>
+  <thalcampaign_mimeperformance.grin>The mime swivels around and sees you. They exagerratedly lean forward to peer at you, hand shielding their eyes from an imaginary sun. A moment later, their pale face breaks into a big, checkered grin. Your crew's reputation precedes you among many Europan entertainers, and this one seems to have heard good things about the whole lot.</thalcampaign_mimeperformance.grin>
+  <thalcampaign_mimeperformance.enjoy>Tastefully enjoy a delightful show of expressive gesture.</thalcampaign_mimeperformance.enjoy>
+  
   <!-- Locations -->
 
   <locationname.thal_mineRadioactive>Nuclear Extraction Mine</locationname.thal_mineRadioactive>

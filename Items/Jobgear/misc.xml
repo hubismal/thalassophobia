@@ -1,10 +1,145 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Items>
-	<!--
+  <!-- GUIDES -->
+  <Item name="" identifier="thal_guidegen" spritecolor="180,255,220,255" InventoryIconColor="180,255,220,255" category="Equipment" Tags="smallitem" canflipx="true" cargocontaineridentifier="metalcrate" description="" scale="0.5" impactsoundtag="impact_soft" showcontentsintooltip="true">
+    <!--<PreferredContainer primary="medcab" minamount="1" maxamount="1" spawnprobability="1" />-->
+    <Sprite texture="Mods/Thalassophobia/Items/Misc/instruments.png" sourcerect="16,372,96,102" depth="0.6" origin="0.5,0.5" />
+    <Body width="25" height="40" density="8" />
+    <Holdable slots="Any,RightHand+LeftHand" holdpos="57,15" holdangle="-20" aimable="false" handle1="-25,-5" handle2="-27,-5" msg="ItemMsgPickUpSelect">
+      <!-- page statuses -->
+      <!-- HELP/INTRO -->
+    </Holdable>
+    <!-- Removed due to crashing when contained guide left in deconstructor
+    <Deconstruct time="10">
+      <Item identifier="thal_geneticinit" />
+      <Item identifier="thal_geneticinit" />
+      <Item identifier="thal_disordersave" />
+      <Item identifier="thal_disordersave" />
+    </Deconstruct>
+    -->
+    <ItemContainer capacity="1" hideitems="true" itempos="16,-15" canbeselected="true" containedspritedepth="0.56" drawhudwhenequipped="true" uilabel="apcbat" spawnwithid="thal_guidegen_intro" drawinventory="false">
+      <Containable items="guidepage" />
+      <ContainedStateIndicator texture="Content/UI/ContainerIndicators.png" sourcerect="0,157,1,1" />
+      <CustomInterface canbeselected="false" drawhudwhenequipped="true">
+        <GuiFrame relativesize="0.20,0.7" anchor="TopRight" absoluteoffset="20,20" style="ItemUI" color="0,0,0,0" />
+        <!-- TODO: Add page turning sounds -->
+        <Button text="thal_guidegen_introlabel">
+          <StatusEffect type="OnUse" targettype="Contained">
+						<Sound file="Mods/Thalassophobia/Items/Misc/Pageturn.ogg" range="300" />
+            <RemoveItem />
+          </StatusEffect>
+          <StatusEffect type="OnUse" delay="0.1" target="This">
+            <SpawnItem identifier="thal_guidegen_intro" spawnposition="ThisInventory" />
+          </StatusEffect>
+        </Button>
+        <Button text="thal_guidegen_indexlabel">
+          <StatusEffect type="OnUse" targettype="Contained">
+            <RemoveItem />
+						<Sound file="Mods/Thalassophobia/Items/Misc/Pageturn.ogg" range="300" />
+          </StatusEffect>
+          <StatusEffect type="OnUse" delay="0.1" target="This">
+            <SpawnItem identifier="thal_guidegen_index" spawnposition="ThisInventory" />
+          </StatusEffect>
+        </Button>
+        <Button text="thal_guidegen_scannerlabel">
+          <StatusEffect type="OnUse" targettype="Contained">
+            <RemoveItem />
+						<Sound file="Mods/Thalassophobia/Items/Misc/Pageturn.ogg" range="300" />
+          </StatusEffect>
+          <StatusEffect type="OnUse" delay="0.1" target="This">
+            <SpawnItem identifier="thal_guidegen_scanner" spawnposition="ThisInventory" />
+          </StatusEffect>
+        </Button>
+        <Button text="thal_guidegen_dnalabel">
+          <StatusEffect type="OnUse" targettype="Contained">
+            <RemoveItem />
+						<Sound file="Mods/Thalassophobia/Items/Misc/Pageturn.ogg" range="300" />
+          </StatusEffect>
+          <StatusEffect type="OnUse" delay="0.1" target="This">
+            <SpawnItem identifier="thal_guidegen_dna" spawnposition="ThisInventory" />
+          </StatusEffect>
+        </Button>
+        <Button text="thal_guidegen_splicelabel">
+          <StatusEffect type="OnUse" targettype="Contained">
+            <RemoveItem />
+						<Sound file="Mods/Thalassophobia/Items/Misc/Pageturn.ogg" range="300" />
+          </StatusEffect>
+          <StatusEffect type="OnUse" delay="0.1" target="This">
+            <SpawnItem identifier="thal_guidegen_splice" spawnposition="ThisInventory" />
+          </StatusEffect>
+        </Button>
+        <Button text="thal_guidegen_graftslabel">
+          <StatusEffect type="OnUse" targettype="Contained">
+            <RemoveItem />
+						<Sound file="Mods/Thalassophobia/Items/Misc/Pageturn.ogg" range="300" />
+          </StatusEffect>
+          <StatusEffect type="OnUse" delay="0.1" target="This">
+            <SpawnItem identifier="thal_guidegen_grafts" spawnposition="ThisInventory" />
+          </StatusEffect>
+        </Button>
+        <Button text="thal_guidegen_mutationlabel">
+          <StatusEffect type="OnUse" targettype="Contained">
+            <RemoveItem />
+						<Sound file="Mods/Thalassophobia/Items/Misc/Pageturn.ogg" range="300" />
+          </StatusEffect>
+          <StatusEffect type="OnUse" delay="0.1" target="This">
+            <SpawnItem identifier="thal_guidegen_mutation" spawnposition="ThisInventory" />
+          </StatusEffect>
+        </Button>
+        <Button text="thal_guidegen_transplantlabel">
+          <StatusEffect type="OnUse" targettype="Contained">
+            <RemoveItem />
+						<Sound file="Mods/Thalassophobia/Items/Misc/Pageturn.ogg" range="300" />
+          </StatusEffect>
+          <StatusEffect type="OnUse" delay="0.1" target="This">
+            <SpawnItem identifier="thal_guidegen_transplant" spawnposition="ThisInventory" />
+          </StatusEffect>
+        </Button>
+        <Button text="thal_guidegen_clonelabel">
+          <StatusEffect type="OnUse" targettype="Contained">
+            <RemoveItem />
+						<Sound file="Mods/Thalassophobia/Items/Misc/Pageturn.ogg" range="300" />
+          </StatusEffect>
+          <StatusEffect type="OnUse" delay="0.1" target="This">
+            <SpawnItem identifier="thal_guidegen_clone" spawnposition="ThisInventory" />
+          </StatusEffect>
+        </Button>
+      </CustomInterface>
+    </ItemContainer>
+  </Item>
+  <!-- pages -->
+  <Item name="" identifier="thal_guidegen_intro" Tags="guidepage" hideinmenus="true">
+    <Sprite texture="Content/Items/Medical/Medicines.png" sourcerect="223,69,38,70" depth="0.6" origin="0.5,0.5" />
+  </Item>
+  <Item name="" identifier="thal_guidegen_index" Tags="guidepage" hideinmenus="true">
+    <Sprite texture="Content/Items/Medical/Medicines.png" sourcerect="223,69,38,70" depth="0.6" origin="0.5,0.5" />
+  </Item>
+  <Item name="" identifier="thal_guidegen_scanner" Tags="guidepage" hideinmenus="true">
+    <Sprite texture="Content/Items/Medical/Medicines.png" sourcerect="223,69,38,70" depth="0.6" origin="0.5,0.5" />
+  </Item>
+  <Item name="" identifier="thal_guidegen_dna" Tags="guidepage" hideinmenus="true">
+    <Sprite texture="Content/Items/Medical/Medicines.png" sourcerect="223,69,38,70" depth="0.6" origin="0.5,0.5" />
+  </Item>
+  <Item name="" identifier="thal_guidegen_splice" Tags="guidepage" hideinmenus="true">
+    <Sprite texture="Content/Items/Medical/Medicines.png" sourcerect="223,69,38,70" depth="0.6" origin="0.5,0.5" />
+  </Item>
+  <Item name="" identifier="thal_guidegen_grafts" Tags="guidepage" hideinmenus="true">
+    <Sprite texture="Content/Items/Medical/Medicines.png" sourcerect="223,69,38,70" depth="0.6" origin="0.5,0.5" />
+  </Item>
+  <Item name="" identifier="thal_guidegen_mutation" Tags="guidepage" hideinmenus="true">
+    <Sprite texture="Content/Items/Medical/Medicines.png" sourcerect="223,69,38,70" depth="0.6" origin="0.5,0.5" />
+  </Item>
+  <Item name="" identifier="thal_guidegen_transplant" Tags="guidepage" hideinmenus="true">
+    <Sprite texture="Content/Items/Medical/Medicines.png" sourcerect="223,69,38,70" depth="0.6" origin="0.5,0.5" />
+  </Item>
+  <Item name="" identifier="thal_guidegen_clone" Tags="guidepage" hideinmenus="true">
+    <Sprite texture="Content/Items/Medical/Medicines.png" sourcerect="223,69,38,70" depth="0.6" origin="0.5,0.5" />
+  </Item>
+  <!--
 	TODO:
 	Rework this into a vanilla headset override that gives channels depending on the clothes you wear/afflictions (ie husk, medics, team captains, clowns)
 	-->
-<Item name="" identifier="thal_headsetchannel" scale="0.5" category="Equipment" tags="smallitem" description="" cargocontaineridentifier="metalcrate" impactsoundtag="impact_metal_light">
+  <Item name="" identifier="thal_headsetchannel" scale="0.5" category="Equipment" tags="smallitem" description="" cargocontaineridentifier="metalcrate" impactsoundtag="impact_metal_light">
     <InventoryIcon texture="Content/Items/InventoryIconAtlas.png" sourcerect="256,0,64,64" origin="0.5,0.5" />
     <Sprite name="Multichannel Headset" texture="Content/Items/Jobgear/headgears.png" depth="0.6" sourcerect="28,321,49,62" origin="0.5,0.5" />
     <Body radius="15" height="10" density="30" />
@@ -15,8 +150,8 @@
     <WifiComponent range="35000.0" LinkToChat="true" MinChatMessageInterval="0.0" Channel="1">
       <RequiredItems items="mobilebattery" type="Contained" />
       <CustomInterface canbeselected="false" drawhudwhenequipped="true">
-      <GuiFrame relativesize="0.15,0.1" anchor="BottomLeft" absoluteoffset="0,0" style="ItemUI" />
-      <TextBox text="Active Channel" propertyname="Channel" />
+        <GuiFrame relativesize="0.15,0.1" anchor="BottomLeft" absoluteoffset="0,0" style="ItemUI" />
+        <TextBox text="Active Channel" propertyname="Channel" />
       </CustomInterface>
     </WifiComponent>
     <ItemContainer capacity="1" hideitems="true">
@@ -35,58 +170,54 @@
       </StatusEffect>
       <sprite name="Headset Wearable" texture="Content/Items/Jobgear/headgears.png" limb="Head" hidelimb="false" inheritlimbdepth="true" inherittexturescale="true" hideotherwearables="false" sourcerect="28,321,49,62" origin="0.5,0.6" />
     </Wearable>
-    
-  <!-- a whole item to make shitting noises......... -->
+    <!-- a whole item to make shitting noises......... -->
   </Item>
-  <Item name="emshitter" identifier="thal_emshitter" scale="0.5" >
+  <Item name="emshitter" identifier="thal_emshitter" scale="0.5">
     <Sprite name="shitter" texture="Content/Items/Jobgear/headgears.png" depth="0.6" sourcerect="1,1,1,1" origin="0.5,0.5" />
     <Body radius="15" height="10" density="30" bodytype="Kinematic" />
     <ItemContainer capacity="1" hideitems="true">
       <ContainedStateIndicator texture="Content/UI/ContainerIndicators.png" sourcerect="1,70,107,31" />
       <Containable items="mobilebattery" />
       <StatusEffect type="Always" target="This" lifetime="1.0">
-				<Sound file="Mods/Thalassophobia/Items/Jobgear/Clown/fart.ogg" range="900" />
+        <Sound file="Mods/Thalassophobia/Items/Jobgear/Clown/fart.ogg" range="900" />
       </StatusEffect>
       <StatusEffect type="Always" target="This" delay="2.0">
-				<RemoveItem />
+        <RemoveItem />
       </StatusEffect>
     </ItemContainer>
   </Item>
   <!-- autofill spawns in outposts and triggers an event that triggers other events in thalass -->
-  <Item name="eventstarter" identifier="thal_eventstarter" scale="0.5" tags="fuelrod" >
+  <Item name="eventstarter" identifier="thal_eventstarter" scale="0.5" tags="fuelrod">
     <Sprite name="rngflag" texture="Content/Items/Jobgear/headgears.png" depth="0.6" sourcerect="1,1,1,1" origin="0.5,0.5" />
     <PreferredContainer primary="outpostreactor" minamount="1" maxamount="1" spawnprobability="1.0" />
     <ItemContainer capacity="1" hideitems="true">
-      <StatusEffect type="Always" target="This" >
-				<TriggerEvent identifier="thal_eventmaster" />
-				<RemoveItem />
+      <StatusEffect type="Always" target="This">
+        <TriggerEvent identifier="thal_eventmaster" />
+        <RemoveItem />
       </StatusEffect>
     </ItemContainer>
   </Item>
-  
   <!--RNG THINGS
   to use properly, spawnitem rngseed, then wait for 1 second, then use nearbyitems to check nearby rng output's condition. use and comparison to apply effect to you and rngthing (rngthing is junk and will delete itself in a few secs) -->
-  
   <!-- triggers event, spawns rngthing, deletes self instantly (seems to be some problem with triggerevent and stacking) -->
-  <Item name="rngseed" identifier="thal_rngseed" scale="0.5" >
+  <Item name="rngseed" identifier="thal_rngseed" scale="0.5">
     <Sprite name="shitter" texture="Content/Items/Jobgear/headgears.png" depth="0.6" sourcerect="1,1,1,1" origin="0.5,0.5" />
     <Body radius="15" height="10" density="30" bodytype="Kinematic" />
     <ItemContainer capacity="1" hideitems="true">
-      <StatusEffect type="Always" target="This" >
-				<TriggerEvent identifier="thal_rngcall" />
-				<SpawnItem identifier="thal_rngoutput" />
-				<RemoveItem />
+      <StatusEffect type="Always" target="This">
+        <TriggerEvent identifier="thal_rngcall" />
+        <SpawnItem identifier="thal_rngoutput" />
+        <RemoveItem />
       </StatusEffect>
     </ItemContainer>
   </Item>
-  
   <!-- output target for the event, what items utilizing rng should scan for -->
-  <Item name="rngthing" identifier="thal_rngoutput" scale="0.5" tags="rngthing" >
+  <Item name="rngthing" identifier="thal_rngoutput" scale="0.5" tags="rngthing">
     <Sprite name="shitter" texture="Content/Items/Jobgear/headgears.png" depth="0.6" sourcerect="1,1,1,1" origin="0.5,0.5" />
     <Body radius="15" height="10" density="30" bodytype="Kinematic" />
     <ItemContainer capacity="1" hideitems="true">
-      <StatusEffect type="Always" target="This" stackable="false" delay="3.0" >
-				<RemoveItem />
+      <StatusEffect type="Always" target="This" stackable="false" delay="3.0">
+        <RemoveItem />
       </StatusEffect>
     </ItemContainer>
   </Item>

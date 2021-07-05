@@ -5,7 +5,7 @@
 			<spritedeformation type="bendjoint" resolution="3,3" multiplier="1.0" sync="-1" typename="bendjoint" blendmode="Add" usemovementsine="False" stopwhenhostisdead="False" sineoffset="0" maxrotation="30" strength="1" onlyinwater="False" />
 		</deformablesprite>
     <sound tag="footstep_mudraptor" />
-      <StatusEffect target="Character" type="Always" setvalue="true">
+      <StatusEffect target="Character" type="Always" setvalue="false">
 				<Conditional InWater="True" />
 				<ReduceAffliction identifier="damage" strength="0.5" />
 				<ReduceAffliction identifier="bloodloss" strength="1" />

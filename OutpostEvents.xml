@@ -5,152 +5,154 @@
     <Sprite identifier="thal_mime" name="mime art" texture="Mods/Thalassophobia/Map/Outposts/Art/Art1.png" sourcerect="249,0,278,263" origin="0.357064,0.69741046" />
     <Sprite identifier="thal_intercom" name="intercom art" texture="Mods/Thalassophobia/Map/Outposts/Art/Art1.png" sourcerect="523,2,266,242" origin="0.5,0.5" />
     <Sprite identifier="thal_nametag" name="nametag art" texture="Mods/Thalassophobia/Map/Outposts/Art/Art1.png" sourcerect="798,2,228,236" origin="0.37978083,0.6113169" />
-    <Sprite identifier="thal_catpolbrief" name="catpol art" texture="Mods/Thalassophobia/Map/Outposts/Art/Art1.png" sourcerect="11,248,357,270" origin="0.29426706,0.7080823" />
+    <Sprite identifier="thal_catpolbrief" name="catpol art" texture="Mods/Thalassophobia/Map/Outposts/Art/Art1.png" sourcerect="11,248,357,270" origin="0.17953315,0.8345021" />
+    <Sprite identifier="thal_terrorbrief" name="terror art" texture="Mods/Thalassophobia/Map/Outposts/Art/Art1.png" sourcerect="372,248,414,331" origin="0.13479336,0.866331" />
+    <Sprite identifier="thal_huskbrief" name="husk art" texture="Mods/Thalassophobia/Map/Outposts/Art/Art1.png" sourcerect="795,241,221,381" origin="0.29426706,0.7080823" />
+    <Sprite identifier="thal_clownbrief" name="clown art" texture="Mods/Thalassophobia/Map/Outposts/Art/Art1.png" sourcerect="472,636,495,339" origin="0.076211,0.9163159" />
+    <Sprite identifier="thal_thugbrief" name="thug art" texture="Mods/Thalassophobia/Map/Outposts/Art/Art1.png" sourcerect="27,530,415,374" origin="0.12685409,0.8401901" />
   </EventSprites>
   <EventPrefabs>
-		<!-- Test Radio Event -->
-		<ScriptedEvent identifier="thal_radiodropoff">
-			<SpawnAction itemidentifier="thal_lootcrateweapons" spawnlocation="wreck" spawnpointtype="cargo" targettag="dropoffcrate" ignorebyai="true" />
-			<TagAction criteria="player" tag="player" />
-			<WaitAction time="1.0" />
-			<RNGAction chance="0.5">
-				<Success>
-					<RNGAction chance="0.5">
-						<Success>
-							<ConversationAction text="transmission.weapons.1" targettag="player" endeventifinterrupted="true" dialogtype="Mission" />
-						</Success>
-						<Failure>
-							<ConversationAction text="transmission.weapons.2" targettag="player" endeventifinterrupted="true" dialogtype="Mission" />
-						</Failure>
-					</RNGAction>
-				</Success>
-				<Failure>
-					<RNGAction chance="0.5">
-						<Success>
-							<ConversationAction text="transmission.weapons.3" targettag="player" endeventifinterrupted="true" dialogtype="Mission" />
-						</Success>
-						<Failure>
-							<ConversationAction text="transmission.weapons.4" targettag="player" endeventifinterrupted="true" dialogtype="Mission" />
-						</Failure>
-					</RNGAction>
-				</Failure>
-			</RNGAction>
+    <!-- Test Radio Event -->
+    <ScriptedEvent identifier="thal_radiodropoff">
+      <SpawnAction itemidentifier="thal_lootcrateweapons" spawnlocation="wreck" spawnpointtype="Corpse" targettag="dropoffcrate" ignorebyai="true" />
+      <TagAction criteria="player" tag="player" />
+      <WaitAction time="1.0" />
+      <RNGAction chance="0.5">
+        <Success>
+          <RNGAction chance="0.5">
+            <Success>
+              <ConversationAction text="transmission.weapons.1" targettag="player" endeventifinterrupted="true" dialogtype="Mission" />
+            </Success>
+            <Failure>
+              <ConversationAction text="transmission.weapons.2" targettag="player" endeventifinterrupted="true" dialogtype="Mission" />
+            </Failure>
+          </RNGAction>
+        </Success>
+        <Failure>
+          <RNGAction chance="0.5">
+            <Success>
+              <ConversationAction text="transmission.weapons.3" targettag="player" endeventifinterrupted="true" dialogtype="Mission" />
+            </Success>
+            <Failure>
+              <ConversationAction text="transmission.weapons.4" targettag="player" endeventifinterrupted="true" dialogtype="Mission" />
+            </Failure>
+          </RNGAction>
+        </Failure>
+      </RNGAction>
     </ScriptedEvent>
-		<!--"RNGCALL"
+    <!--"RNGCALL"
 		used for random events in conjuction with thal_rngseed (in Items/Jobgear/misc.xml)
 		-->
-		<ScriptedEvent identifier="thal_rngcall">
-			<WaitAction time="0.5" />
-			<TagAction criteria="itemtag:rngthing" tag="targetmanifest" />
-			<SetDataAction identifier="thal_hitstaken" value="0" operation="set" />
-			<Label name="hitstart" />
-			<RNGAction chance="0.1">
-				<Success>
-					<StatusEffectAction targettag="leakyreactor">
-						<StatusEffect indestructible="false" condition="-5" setvalue="false" />
-					</StatusEffectAction>
-					<SetDataAction identifier="thal_hitstaken" value="1" operation="add" />
-				</Success>
-			</RNGAction>
-			<CheckDataAction identifier="thal_hitstaken" condition="lt 20" >
-				<Success>
-					<GoTo name="hitstart" />
-				</Success>
-			</CheckDataAction>
+    <ScriptedEvent identifier="thal_rngcall">
+      <WaitAction time="0.5" />
+      <TagAction criteria="itemtag:rngthing" tag="targetmanifest" />
+      <SetDataAction identifier="thal_hitstaken" value="0" operation="set" />
+      <Label name="hitstart" />
+      <RNGAction chance="0.1">
+        <Success>
+          <StatusEffectAction targettag="leakyreactor">
+            <StatusEffect indestructible="false" condition="-5" setvalue="false" />
+          </StatusEffectAction>
+          <SetDataAction identifier="thal_hitstaken" value="1" operation="add" />
+        </Success>
+      </RNGAction>
+      <CheckDataAction identifier="thal_hitstaken" condition="lt 20">
+        <Success>
+          <GoTo name="hitstart" />
+        </Success>
+      </CheckDataAction>
     </ScriptedEvent>
-		
-		<!-- "EVENT MASTER"
+    <!-- "EVENT MASTER"
 		initiates events on outposts by using an autofill item to nondestructively (in the override sense) guarantee this event triggers. used for existing locations like cities and so on that may have other mods with other event sets. xml for the item can be found in Thalassophobia/Items/Jobgear/misc.xml.
 		-->
-		<ScriptedEvent identifier="thal_eventmaster">
-			
-			<CheckDataAction identifier="campaign.location.type" condition="eq abandonedoutpost"> <!-- don't trigger these events at abaandoned outposts -->
-				<Failure>
-					
-					<!-- try to ensure only one of eventmaster is running because we don't want multiple eventmasters assigning loads and loads of events -->
-					<RNGAction chance="0.1">
-						<Success>
-							<WaitAction time="0.5" />
-						</Success>
-					</RNGAction>
-					<CheckDataAction identifier="thal_eventmasteractive" condition="eq 1">
-						<Failure>
-							<!-- trigger 1 random events -->
-							<SetDataAction identifier="thal_eventmasteractive" value="1" />
-							<SetDataAction identifier="thal_eventsassigned" value="0" />
-								<Label name="eventpick" />
-								
-									<RNGAction chance="0.5">
-										<Success>
-											<RNGAction chance="0.5">
-												<Success>
-													<TriggerEventAction identifier="thal_reactorleak" />
-												</Success>
-												<Failure>
-													<TriggerEventAction identifier="thal_mimeperformance" />
-												</Failure>
-											</RNGAction>
-										</Success>
-										<Failure>
-											<RNGAction chance="0.5">
-												<Success>
-													<TriggerEventAction identifier="thal_uesdonation" />
-												</Success>
-												<Failure>
-													<TriggerEventAction identifier="thal_reactorleak" />
-												</Failure>
-											</RNGAction>
-										</Failure>
-									</RNGAction>
-									<!-- basically "do while i<3; i++" -->
-									<SetDataAction identifier="thal_eventsassigned" operation="add" value="1" />
-									<CheckDataAction identifier="thal_eventsassigned" condition="lt 1" >
-										<Success>
-											<GoTo name="eventpick" />
-										</Success>
-									</CheckDataAction>
-									
-							<WaitAction time="5" />
-							<SetDataAction identifier="thal_eventmasteractive" value="0" />
-							<SetDataAction identifier="thal_eventsassigned" value="0" />
-							
-						</Failure>
-					</CheckDataAction>
-					
-				</Failure>
-			</CheckDataAction>
+    <ScriptedEvent identifier="thal_eventmaster">
+      <CheckDataAction identifier="campaign.location.type" condition="eq Abandoned" forcestring="true" >
+        <!-- don't trigger these events at abaandoned outposts -->
+        <Failure>
+          <!-- try to ensure only one of eventmaster is running because we don't want multiple eventmasters assigning loads and loads of events -->
+          <RNGAction chance="0.1">
+            <Success>
+              <WaitAction time="0.5" />
+            </Success>
+          </RNGAction>
+          <CheckDataAction identifier="thal_eventmasteractive" condition="eq 1">
+            <Failure>
+              <!-- trigger 1 random events -->
+              <SetDataAction identifier="thal_eventmasteractive" value="1" />
+              <SetDataAction identifier="thal_eventsassigned" value="0" />
+							<TriggerEventAction identifier="thal_campaignstart" />
+              <Label name="eventpick" />
+              <RNGAction chance="0.5">
+                <Success>
+                  <RNGAction chance="0.5">
+                    <Success>
+                      <TriggerEventAction identifier="thal_reactorleak" />
+                    </Success>
+                    <Failure>
+                      <TriggerEventAction identifier="thal_mimeperformance" />
+                    </Failure>
+                  </RNGAction>
+                </Success>
+                <Failure>
+                  <RNGAction chance="0.5">
+                    <Success>
+                      <TriggerEventAction identifier="thal_uesdonation" />
+                    </Success>
+                    <Failure>
+                      <TriggerEventAction identifier="thal_reactorleak" />
+                    </Failure>
+                  </RNGAction>
+                </Failure>
+              </RNGAction>
+              <!-- basically "do while i<3; i++" -->
+              <SetDataAction identifier="thal_eventsassigned" operation="add" value="1" />
+              <CheckDataAction identifier="thal_eventsassigned" condition="lt 1">
+                <Success>
+                  <GoTo name="eventpick" />
+                </Success>
+              </CheckDataAction>
+              <WaitAction time="5" />
+              <SetDataAction identifier="thal_eventmasteractive" value="0" />
+              <SetDataAction identifier="thal_eventsassigned" value="0" />
+            </Failure>
+          </CheckDataAction>
+        </Failure>
+      </CheckDataAction>
     </ScriptedEvent>
     <!-- CAMPAIGN INTRO
 		Choose your crews background as captain.
 		-->
     <ScriptedEvent identifier="thal_campaignstart">
+			<CheckReputationAction targettype="faction" identifier="coalition" condition="lte 40">
+        <Success>
       <CheckDataAction identifier="thal_pastchosen" condition="eq 1">
         <Failure>
-          <TagAction criteria="player" tag="player" />
-          <TagAction criteria="itemtag:job:Captain" tag="captainid" />
+          <TagAction criteria="player" tag="potentialplayer" />
+          <TagAction criteria="itemidentifier:idcard" tag="id" />
+					<TriggerAction target1tag="id" target2tag="potentialplayer" applytotarget1="dumbid" applytotarget2="player" radius="250" />
           <CheckItemAction targettag="player" itemtags="idcard">
             <Success>
-              <ConversationAction fadetoblack="true" eventsprite="thal_nametag" targettag="player" text="Welcome to Thalasssophobia's Campaign. Before you begin, you will select your background with your crew, which will affect your starting reputation.">
-                <Option text="See the options." />
+              <ConversationAction fadetoblack="true" eventsprite="thal_nametag" targettag="player" text="thalcampaign_start.1">
+                <Option text="thalcampaign_start.seeoptions" />
               </ConversationAction>
               <Label name="pastselect" />
-              <ConversationAction fadetoblack="true" eventsprite="thal_nametag" targettag="player" text="Decide with your crew on a background that seems fun or fitting for you.">
+              <ConversationAction fadetoblack="true" eventsprite="thal_nametag" targettag="player" text="thalcampaign_start.2">
                 <!-- NEW ARRIVALS -->
-                <Option text="We are NEW ARRIVALS ON EUROPA. Fate will forge a name for us with time." endconversation="true" >
+                <Option text="thalcampaign_start.newline" endconversation="true">
                   <ConversationAction fadetoblack="true" eventsprite="thal_reactorleak" targettag="player" text="thalcampaign_newbrief">
-                    <Option endconversation="true" text="Confirm.">
+                    <Option endconversation="true" text="thalcampaign_start.confirm">
                       <SetDataAction identifier="thal_crewbackground" value="none" />
                       <SetDataAction identifier="thal_pastchosen" value="1" />
                     </Option>
-                    <Option text="Back to Selection." endconversation="true">
+                    <Option text="thalcampaign_start.back" endconversation="true">
                       <GoTo name="pastselect" />
                     </Option>
                   </ConversationAction>
                 </Option>
                 <!-- ELITE CORPO -->
-                <Option text="We are ELITE CORPORATE AGENTS. Our loyalty lies in Coalition interests." endconversation="true" >
+                <Option text="thalcampaign_start.corporateline" endconversation="true">
                   <ConversationAction fadetoblack="true" eventsprite="thal_catpolbrief" targettag="player" text="thalcampaign_corporatebrief">
-                    <Option endconversation="true" text="Confirm.">
+                    <Option endconversation="true" text="thalcampaign_start.confirm">
                       <SetDataAction identifier="thal_crewbackground" value="corporate" />
                       <SetDataAction identifier="thal_pastchosen" value="1" />
                       <ReputationAction targettype="Faction" identifier="clowns" increase="-30" />
@@ -158,14 +160,15 @@
                       <ReputationAction targettype="Faction" identifier="separatists" increase="-40" />
                       <ReputationAction targettype="Faction" identifier="huskcult" increase="-30" />
                     </Option>
-                    <Option text="Back to Selection." endconversation="true">
+                    <Option text="thalcampaign_start.back" endconversation="true">
                       <GoTo name="pastselect" />
                     </Option>
                   </ConversationAction>
                 </Option>
-                <Option text="We are A TRAVELLING CIRCUS. A carnival of chaos will swallow Europa whole." endconversation="true" >
-                  <ConversationAction fadetoblack="true" eventsprite="thal_reactorleak" targettag="player" text="thalcampaign_circusbrief">
-                    <Option endconversation="true" text="Confirm.">
+                <!-- CLOWNS -->
+                <Option text="thalcampaign_start.circusline" endconversation="true">
+                  <ConversationAction fadetoblack="true" eventsprite="thal_clownbrief" targettag="player" text="thalcampaign_circusbrief">
+                    <Option endconversation="true" text="thalcampaign_start.confirm">
                       <SetDataAction identifier="thal_crewbackground" value="circus" />
                       <SetDataAction identifier="thal_pastchosen" value="1" />
                       <ReputationAction targettype="Faction" identifier="clowns" increase="40" />
@@ -173,14 +176,15 @@
                       <ReputationAction targettype="Faction" identifier="separatists" increase="-30" />
                       <ReputationAction targettype="Faction" identifier="huskcult" increase="-30" />
                     </Option>
-                    <Option text="Back to Selection." endconversation="true">
+                    <Option text="thalcampaign_start.back" endconversation="true">
                       <GoTo name="pastselect" />
                     </Option>
                   </ConversationAction>
                 </Option>
-                <Option text="We are CALYX MISSIONARIES. The teachings of the husk will save humankind." endconversation="true" >
-                  <ConversationAction fadetoblack="true" eventsprite="thal_reactorleak" targettag="player" text="thalcampaign_huskbrief">
-                    <Option endconversation="true" text="Confirm.">
+                <!-- HUSKS -->
+                <Option text="thalcampaign_start.huskline" endconversation="true">
+                  <ConversationAction fadetoblack="true" eventsprite="thal_huskbrief" targettag="player" text="thalcampaign_huskbrief">
+                    <Option endconversation="true" text="thalcampaign_start.confirm">
                       <SetDataAction identifier="thal_crewbackground" value="husk" />
                       <SetDataAction identifier="thal_pastchosen" value="1" />
                       <ReputationAction targettype="Faction" identifier="clowns" increase="-30" />
@@ -188,14 +192,14 @@
                       <ReputationAction targettype="Faction" identifier="separatists" increase="-30" />
                       <ReputationAction targettype="Faction" identifier="huskcult" increase="40" />
                     </Option>
-                    <Option text="Back to Selection." endconversation="true">
+                    <Option text="thalcampaign_start.back" endconversation="true">
                       <GoTo name="pastselect" />
                     </Option>
                   </ConversationAction>
                 </Option>
-                <Option text="We are A FOR-HIRE LOWLIVES. Underworld connections find us unusual work." endconversation="true" >
-                  <ConversationAction fadetoblack="true" eventsprite="thal_reactorleak" targettag="player" text="thalcampaign_bluecollarbrief">
-                    <Option endconversation="true" text="Confirm.">
+                <Option text="thalcampaign_start.bluecollarline" endconversation="true">
+                  <ConversationAction fadetoblack="true" eventsprite="thal_thugbrief" targettag="player" text="thalcampaign_bluecollarbrief">
+                    <Option endconversation="true" text="thalcampaign_start.confirm">
                       <SetDataAction identifier="thal_crewbackground" value="bluecollar" />
                       <SetDataAction identifier="thal_pastchosen" value="1" />
                       <ReputationAction targettype="Faction" identifier="clowns" increase="-10" />
@@ -204,14 +208,14 @@
                       <ReputationAction targettype="Faction" identifier="huskcult" increase="-20" />
                       <!-- TODO: Add rep for cthonian cartel -->
                     </Option>
-                    <Option text="Back to Selection." endconversation="true">
+                    <Option text="thalcampaign_start.back" endconversation="true">
                       <GoTo name="pastselect" />
                     </Option>
                   </ConversationAction>
                 </Option>
-                <Option text="We are RESISTANCE INSURGENTS. Smash the fascist state and free the moon." endconversation="true" >
-                  <ConversationAction fadetoblack="true" eventsprite="thal_reactorleak" targettag="player" text="thalcampaign_terroristbrief">
-                    <Option endconversation="true" text="Confirm.">
+                <Option text="thalcampaign_start.terroristline" endconversation="true">
+                  <ConversationAction fadetoblack="true" eventsprite="thal_terrorbrief" targettag="player" text="thalcampaign_terroristbrief">
+                    <Option endconversation="true" text="thalcampaign_start.confirm">
                       <SetDataAction identifier="thal_crewbackground" value="terrorist" />
                       <SetDataAction identifier="thal_pastchosen" value="1" />
                       <ReputationAction targettype="Faction" identifier="clowns" increase="-30" />
@@ -219,7 +223,7 @@
                       <ReputationAction targettype="Faction" identifier="separatists" increase="40" />
                       <ReputationAction targettype="Faction" identifier="huskcult" increase="-30" />
                     </Option>
-                    <Option text="Back to Selection." endconversation="true">
+                    <Option text="thalcampaign_start.back" endconversation="true">
                       <GoTo name="pastselect" />
                     </Option>
                   </ConversationAction>
@@ -229,6 +233,8 @@
           </CheckItemAction>
         </Failure>
       </CheckDataAction>
+      </Success>
+    </CheckReputationAction>
     </ScriptedEvent>
     <!--
     <ScriptedEvent identifier="thal_campaignstartsideline">
@@ -334,42 +340,42 @@
       <TagAction criteria="player" tag="player" />
       <TriggerAction target1tag="uesmember" target2tag="player" applytotarget2="triggerer_player" radius="100" />
       <NPCWaitAction npctag="uesmember" wait="true" />
-      <ConversationAction targettag="triggerer_player" text="What looks like a doctor approaches you, holding a boxy object sporting a mark sign on it. “Excuse me, I'm a fund raiser with the UES... Would it be too much to ask for just a moment of your time?“">
-        <Option text="“The U-E-What-now?“">
-          <ConversationAction targettag="triggerer_player" text="The fund raiser pauses and looks at you quizzically. “You know, The United Europa Society? I'll be blunt -- I'm surprised you've never heard of us. We're a charitable, nonprofit organization dedicated to improving the quality of life on Europa. You ever notice how everywhere you go in these outposts, you see psycho clowns, scammers, mudraptors in vents... all that? It's our belief that Europa doesn't have to be like this; Our fundraising aims to increase the quality of life in outposts.“">
-            <Option text="“Okay...“">
-              <ConversationAction targettag="triggerer_player" text="They continue: “We mostly fight poverty by managing soup kitchens, clothing drives, or doing community service like cleaning up the outposts hit hard by the crash.“  They present the donation box. “Just a few marks can make a world of difference!“">
-                <Option text="“So you're going around with that thing asking for donations?“">
+      <ConversationAction targettag="triggerer_player" text="thalcampaign_uesdonation.start">
+        <Option text="thalcampaign_uesdonation.clueless">
+          <ConversationAction targettag="triggerer_player" text="thalcampaign_uesdonation.lore">
+            <Option text="thalcampaign_uesdonation.okay">
+              <ConversationAction targettag="triggerer_player" text="thalcampaign_uesdonation.fewmarks">
+                <Option text="thalcampaign_uesdonation.goingaround">
                   <Label name="donationprompt" />
                   <CheckItemAction targettag="triggerer_player" itemtags="weapon">
                     <Success>
                       <!-- Has-Weapon version of dialogue -->
-                      <ConversationAction targettag="triggerer_player" text="They eagerly hold up the donation box. “Would you like to make a contribution?“">
-                        <Option text="Donate 10 Marks">
+                      <ConversationAction targettag="triggerer_player" text="thalcampaign_uesdonation.donationoptions">
+                        <Option text="thalcampaign_uesdonation.10mk">
                           <GoTo name="donateten" />
                         </Option>
-                        <Option text="Donate 100 Marks">
+                        <Option text="thalcampaign_uesdonation.100mk">
                           <GoTo name="donatehundred" />
                         </Option>
-                        <Option text="Donate 1000 Marks">
+                        <Option text="thalcampaign_uesdonation.1000mk">
                           <GoTo name="donatethousand" />
                         </Option>
-                        <Option text="“Actually, I change my mind, sorry.“" endconversation="true" >
+                        <Option text="thalcampaign_uesdonation.nvm" endconversation="true">
                           <ReputationAction targettype="Faction" identifier="thal_ues" increase="-1" />
                         </Option>
-                        <Option text="[Armed] “How about you make a contribution to me, instead?“">
-                          <ReputationAction targettype="Faction" identifier="thal_ues" increase="-50" />
+                        <Option text="thalcampaign_uesdonation.mug">
+                          <ReputationAction targettype="Faction" identifier="thal_ues" increase="-40" />
                           <RNGAction chance="0.7">
                             <Success>
                               <ReputationAction targettype="Faction" identifier="thal_ues" increase="-10" />
                               <MoneyAction amount="400" />
-                              <ConversationAction targettag="triggerer_player" text="They back away, astonished. “You... You know this is a one way transfer device, right? It doesn't contain any... a-actual currency... Forget it! Y-You can have 400 Marks, it's all I have in my personal account, I swear!“ They give you the marks and back off.">
-                                <Option text="Recieve 400 Marks." endconversation="true"  ></Option>
+                              <ConversationAction targettag="triggerer_player" text="thalcampaign_uesdonation.mugsuccess">
+                                <Option text="Recieve 400 Marks." endconversation="true"></Option>
                               </ConversationAction>
                             </Success>
                             <Failure>
-                              <ConversationAction targettag="triggerer_player" text="They back off, astonished. “You goddamn idiot, you know this is a one way currency transfer device, right? I don't have any physical currency, I'm not a panhandler. You just messed with the wrong one!“ You see them reach behind into their clothing for something. Get ready!">
-                                <Option text="Fight." endconversation="true" >
+                              <ConversationAction targettag="triggerer_player" text="thalcampaign_uesdonation.mugfail">
+                                <Option text="Fight." endconversation="true">
                                   <CombatAction combatmode="defensive" npctag="uesmember" enemytag="triggerer_player" />
                                 </Option>
                               </ConversationAction>
@@ -379,8 +385,8 @@
                       </ConversationAction>
                     </Success>
                     <Failure>
-                      <ConversationAction targettag="triggerer_player" text="They eagerly hold up the donation box. “Would you like to make a contribution?“">
-                        <Option text="Donate 10 Marks">
+                      <ConversationAction targettag="triggerer_player" text="thalcampaign_uesdonation.donationoptions">
+                        <Option text="thalcampaign_uesdonation.10mk">
                           <Label name="donateten" />
                           <MoneyAction amount="-10" />
                           <ReputationAction targettype="Faction" identifier="thal_ues" increase="3" />
@@ -392,9 +398,9 @@
                               <SetDataAction identifier="uesfund" value="1" operator="add" />
                             </Failure>
                           </CheckDataAction>
-                          <ConversationAction targettag="triggerer_player" text="You transfer 10 Marks to the UES. “Thanks, we greatly appreciate it.“" />
+                          <ConversationAction targettag="triggerer_player" text="thalcampaign_uesdonation.react10" />
                         </Option>
-                        <Option text="Donate 100 Marks">
+                        <Option text="thalcampaign_uesdonation.100mk">
                           <Label name="donatehundred" />
                           <MoneyAction amount="10" />
                           <ReputationAction targettype="Faction" identifier="thal_ues" increase="7" />
@@ -406,9 +412,9 @@
                               <SetDataAction identifier="uesfund" value="5" operator="add" />
                             </Failure>
                           </CheckDataAction>
-                          <ConversationAction targettag="triggerer_player" text="You transfer 100 Marks to the UES. “Wow, 100 marks! This will help greatly. Thank you sincerely.“" />
+                          <ConversationAction targettag="triggerer_player" text="thalcapmaign_uesdonation.react100" />
                         </Option>
-                        <Option text="Donate 1000 Marks">
+                        <Option text="thalcampaign_uesdonation.1000mk">
                           <Label name="donatethousand" />
                           <MoneyAction amount="-1000" />
                           <ReputationAction targettype="Faction" identifier="thal_ues" increase="15" />
@@ -420,37 +426,44 @@
                               <SetDataAction identifier="uesfund" value="50" operator="add" />
                             </Failure>
                           </CheckDataAction>
-                          <ConversationAction targettag="triggerer_player" text="You transfer 1000 Marks to the UES. They look flabbergast. “You're serious? I can't thank you enough... this is incredible! Thank you so, so much. We won't forget this.“" />
+                          <ConversationAction targettag="triggerer_player" text="thalcampaign_uesdonation.react1000" />
                         </Option>
-                        <Option text="“Actually, I change my mind, sorry.“" endconversation="true" >
+                        <Option text="thalcampaign_uesdonation.nvm" endconversation="true">
                           <ReputationAction targettype="Faction" identifier="thal_ues" increase="-1" />
                         </Option>
                       </ConversationAction>
                     </Failure>
                   </CheckItemAction>
                 </Option>
-                <Option text="“Sorry, maybe some other time.“" endconversation="true" >
-                  <ReputationAction targettype="Faction" identifier="thal_ues" increase="-1" />
-                </Option>
-                <Option text="“Aren't you guys a bunch of hippies?“">
-                  <ConversationAction targettag="triggerer_player" text="The UES member is clearly irked by your remark: “We oppose the conflict between the coalition and the seperatist forces, if that's what you mean. It's out belief the conflict has done nothing but make a lot of marks for arms manufacturers, all while impovrishing the average colonist. Our donations are purely charitable, though.“">
-                    <Option text="“I see.“">
+                <Option text="thalcampaign_uesdonation.political">
+                  <ConversationAction targettag="triggerer_player" text="thalcampaign_uesdonation.humanity">
+                    <Option text="thalcampaign_uesdonation.believe">
                       <Goto name="donationprompt" />
                     </Option>
                   </ConversationAction>
+                </Option>
+                <Option text="thalcampaign_uesdonation.hippies">
+                  <ConversationAction targettag="triggerer_player" text="thalcampaign_uesdonation.irked">
+                    <Option text="thalcampaign_uesdonation.alright">
+                      <Goto name="donationprompt" />
+                    </Option>
+                  </ConversationAction>
+                </Option>
+                <Option text="thalcampaign_uesdonation.later" endconversation="true">
+                  <ReputationAction targettype="Faction" identifier="thal_ues" increase="-1" />
                 </Option>
               </ConversationAction>
             </Option>
           </ConversationAction>
         </Option>
-        <Option text="“I know who you are. Are you looking for a donation?“">
+        <Option text="thalcampaign_uesdonation.iknow">
           <Goto name="donationprompt" />
         </Option>
-        <Option text="Keep on walking and avert your gaze." endconversation="true">
-          <ReputationAction targettype="Faction" identifier="thal_ues" increase="-10" />
+        <Option text="thalcampaign_uesdonation.keepwalking" endconversation="true">
+          <ReputationAction targettype="Faction" identifier="thal_ues" increase="-5" />
           <ReputationAction targettype="Faction" identifier="coalition" increase="2" />
         </Option>
-        <Option text="“I'm sorry, I'm really quite busy right now.“" endconversation="true">
+        <Option text="thalcampaign_uesdonation.busy" endconversation="true">
           <ReputationAction targettype="Faction" identifier="thal_ues" increase="-1" />
         </Option>
       </ConversationAction>
@@ -463,20 +476,64 @@
       <TagAction criteria="player" tag="player" />
       <TriggerAction target1tag="mime" target2tag="player" applytotarget2="triggerer_player" radius="100" />
       <NPCWaitAction npctag="mime" wait="true" />
-      <ConversationAction targettag="triggerer_player" text="There's a street mime here. These professional entertainers engage in what many believe to be more sophisticated acts of tomfoolery. While clowns engage in crass, low brow humour, mimes are naturally drawn to better-bred antics, making them more accepted in many outposts regardless of creed." eventsprite="thal_mime" />
+      <ConversationAction targettag="triggerer_player" text="thalcampaign_mimeperformance.start" eventsprite="thal_mime" />
       <CheckReputationAction targettype="faction" identifier="clowns" condition="gt 30">
-        <Success>
-          <!--reputation 30 to 100 -->
-          <ConversationAction targettag="triggerer_player" text="The mime swivels around and sees you. They exagerratedly lean forward to peer at you, and a moment later, their pale face breaks into a big, checkered grin. Your crew's reputation precedes you among many Europan entertainers, and this one seems to have heard good things about the whole lot.">
-            <Option text="Tastefully enjoy a delightful show of expressive gesture.">
-              <Goto name="show" />
-            </Option>
-            <Option text="Politely indicate you have places to be.">
-              <ConversationAction targettag="triggerer_player" text="They seem to understand. The mime waves goodbye and continues looking for other people to entertain.">
-                <Option text="Godspeed." endconversation="true" />
-              </ConversationAction>
-            </Option>
-          </ConversationAction>
+        <Success><!--reputation 30 to 100 -->
+					<CheckDataAction identifier="thal_crewbackground" condition="eq circus" forcestring="true">
+						<Success><!-- DIALOGUE FOR TRAVELLING CIRCUS -->
+							<ConversationAction targettag="triggerer_player" text="thalcampaign_mimeperformance.grin">
+								<Option text="thalcampaign_mimeperformance.enjoy">
+									<Goto name="show" />
+								</Option>
+								<Option text="[Travelling Circus] Whisper the secret phrase: “Aisepray the Onkmotherhay!“">
+									<ConversationAction targettag="triggerer_player" text="The mime's eyes widen and his head darts around to check for any eavesdroppers. When the coast is clear, he reaches into his suitcase and unveils a few missions he's jotted down on a sign. You can take your pick, without the interprative dance crap that non-clowns have to deal with.">
+										<Option text="Add explosive cargo to your task manager.">
+											<MissionAction missiontag="cargoexplosive" />
+											<Goto name="donation" />
+										</Option>
+										<Option text="Add praise the honkmother (clown cargo) to your task manager.">
+											<MissionAction missiontag="cargoclown" />
+											<Goto name="donation" />
+										</Option>
+										<Option text="Add biohazard (husk egg cargo) to your task manager.">
+											<MissionAction missiontag="cargohuskeggs" />
+											<Goto name="donation" />
+										</Option>
+										<Option text="Add salvaging an artifact to your task manager.">
+											<MissionAction missiontag="salvageartifact" />
+											<Goto name="donation" />
+										</Option>
+										<Option text="Add salvaging a wreck to your task manager.">
+											<MissionAction missiontag="salvagewreck" />
+											<Goto name="donation" />
+										</Option>
+										<Option text="Add killing a moloch to your task manager.">
+											<MissionAction missiontag="killmoloch" />
+											<Goto name="donation" />
+										</Option>
+									</ConversationAction>
+								</Option>
+								<Option text="Politely indicate you have places to be.">
+									<ConversationAction targettag="triggerer_player" text="They seem to understand. The mime waves goodbye and continues looking for other people to entertain.">
+										<Option text="Godspeed." endconversation="true" />
+									</ConversationAction>
+								</Option>
+							</ConversationAction>
+						</Success>
+						<Failure><!-- DIALOGUE FOR NOT TRAVELLING CIRCUS -->
+							<ConversationAction targettag="triggerer_player" text="thalcampaign_mimeperformance.grin">
+								<Option text="thalcampaign_mimeperformance.enjoy">
+									<Goto name="show" />
+								</Option>
+								<Option text="Politely indicate you have places to be.">
+									<ConversationAction targettag="triggerer_player" text="They seem to understand. The mime waves goodbye and continues looking for other people to entertain.">
+										<Option text="Godspeed." endconversation="true" />
+									</ConversationAction>
+								</Option>
+							</ConversationAction>
+						</Failure>
+					</CheckDataAction>
+					
         </Success>
         <Failure>
           <!--reputation -40 to 30 -->
@@ -551,7 +608,7 @@
                                 <Option text="Leave 10 Marks.">
                                   <ReputationAction targettype="Faction" identifier="clowns" increase="3" />
                                   <ConversationAction targettag="triggerer_player" text="The Mime nods at you gratefully.">
-                                    <Option text="Au revior." endconversation="true"  />
+                                    <Option text="Au revior." endconversation="true" />
                                   </ConversationAction>
                                 </Option>
                                 <Option text="Depart." />
@@ -574,12 +631,12 @@
             </Success>
             <Failure>
               <!--reputation -100 to -40-->
-              <ConversationAction targettag="triggerer_player" text="They're staring right at you and it's apparent they don't want to hang around. Your crew really pissed off the clowns of Europa somewhere along the line! The mime picks up their briefcase and walks away. They don't want to perform for someone with as stiff and upper-lip as you.">
-                <Option text="Oh well." endconversation="true"  >
+              <ConversationAction targettag="triggerer_player" text="They're staring right at you and it's apparent they don't want to hang around. Your crew really pissed off the clowns of Europa somewhere along the line! The mime picks up their briefcase and walks away. They don't want to perform for someone with as stiff an upper-lip as you.">
+                <Option text="Oh well." endconversation="true">
                   <ReputationAction targettype="Faction" identifier="clowns" increase="1" />
                 </Option>
                 <Option text="“That's right. Keep walking, you invisible wall humper.“">
-                  <ConversationAction targettag="triggerer_player" text="They ignore you, but your little comment didn't help your standing with the Children of the Honkmother." />
+                  <ConversationAction targettag="triggerer_player" text="They ignore you, but your little comment probably didn't help your standing with the Children of the Honkmother." />
                   <ReputationAction targettype="Faction" identifier="clowns" increase="-9" />
                 </Option>
               </ConversationAction>
@@ -590,47 +647,6 @@
     </ScriptedEvent>
   </EventPrefabs>
   <!-- Unique event set that only appears at the beginning of campaign -->
-  <EventSet identifier="thal_universalevents" leveltype="outpost" locationtype="outpost,city" allowatstart="true" minleveldifficulty="0" maxleveldifficulty="1" chooserandom="false" ignorecooldown="true">
-    <Commonness commonness="0">
-      <Override leveltype="outpostlevel" commonness="1000" />
-    </Commonness>
-    <EventSet identifier="campaignstart" allowatstart="true" chooserandom="false" ignorecooldown="true">
-      <!--Only regular events in outposts:-->
-      <ScriptedEvent identifier="thal_campaignstart" commonness="100" />
-    </EventSet>
-    <EventSet identifier="outpostevents.randomevents" allowatstart="true" chooserandom="true">
-      <!--Only regular events in outposts and cities:-->
-      <ScriptedEvent identifier="givingdirections" commonness="100" />
-      <ScriptedEvent identifier="soundinthevent" commonness="100" />
-      <ScriptedEvent identifier="clownrelations1" commonness="100" />
-      <ScriptedEvent identifier="clownrelations2" commonness="100" />
-      <ScriptedEvent identifier="goodsamaritan" commonness="100" />
-      <ScriptedEvent identifier="propaganda" commonness="100" />
-      <ScriptedEvent identifier="goblincooking1" commonness="50" />
-      <ScriptedEvent identifier="outbreak" commonness="100" />
-      <ScriptedEvent identifier="miketheidiot1" commonness="25" />
-      <ScriptedEvent identifier="miketheidiot2" commonness="25" />
-      <ScriptedEvent identifier="firefighting" commonness="100" />
-      <ScriptedEvent identifier="sleightofhand" commonness="100" />
-      <ScriptedEvent identifier="foreshadowing" commonness="50" />
-      <ScriptedEvent identifier="clownbrutality" commonness="100" />
-      <ScriptedEvent identifier="separatistrelations" commonness="100" />
-      <ScriptedEvent identifier="huskcultrelations" commonness="100" />
-      <ScriptedEvent identifier="Engineers_are_special" commonness="100" />
-      <ScriptedEvent identifier="mediator" commonness="100" />
-      <ScriptedEvent identifier="blackmarket" commonness="100" />
-      <ScriptedEvent identifier="huskcultist" commonness="100" />
-      <ScriptedEvent identifier="fanclub" commonness="100" />
-      <ScriptedEvent identifier="huskcultambush" commonness="50" />
-    </EventSet>
-    <EventSet identifier="outpostevents.randomevents" allowatstart="true" chooserandom="true" ignorecooldown="true" eventcount="3">
-      <ScriptedEvent identifier="missionevent_cargo1" commonness="125" />
-      <ScriptedEvent identifier="missionevent_cargo2" commonness="50" />
-      <ScriptedEvent identifier="missionevent_cargo3" commonness="100" />
-      <ScriptedEvent identifier="missionevent_killswarm" commonness="100" />
-      <ScriptedEvent identifier="missionevent_killmonstercommon" commonness="85" />
-    </EventSet>
-  </EventSet>
   <!--
   <EventSet identifier="thal_blacksiteevents" leveltype="outpost" locationtype="thal_blackSite" allowatstart="true" minleveldifficulty="0" maxleveldifficulty="100" chooserandom="false" ignorecooldown="true">
     <Commonness commonness="0">
