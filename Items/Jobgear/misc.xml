@@ -135,6 +135,98 @@
   <Item name="" identifier="thal_guidegen_clone" Tags="guidepage" hideinmenus="true">
     <Sprite texture="Content/Items/Medical/Medicines.png" sourcerect="223,69,38,70" depth="0.6" origin="0.5,0.5" />
   </Item>
+
+  <Item name="" identifier="thal_guidestem" spritecolor="180,255,220,255" InventoryIconColor="180,255,220,255" category="Equipment" Tags="smallitem" canflipx="true" cargocontaineridentifier="metalcrate" description="" scale="0.5" impactsoundtag="impact_soft" showcontentsintooltip="true">
+    <!--<PreferredContainer primary="medcab" minamount="1" maxamount="1" spawnprobability="1" />-->
+    <Sprite texture="Mods/Thalassophobia/Items/Misc/instruments.png" sourcerect="16,372,96,102" depth="0.6" origin="0.5,0.5" />
+    <Body width="25" height="40" density="8" />
+    <Holdable slots="Any,RightHand+LeftHand" holdpos="57,15" holdangle="-20" aimable="false" handle1="-25,-5" handle2="-27,-5" msg="ItemMsgPickUpSelect">
+      <!-- page statuses -->
+      <!-- HELP/INTRO -->
+    </Holdable>
+    <ItemContainer capacity="1" hideitems="true" itempos="16,-15" canbeselected="true" containedspritedepth="0.56" drawhudwhenequipped="true" uilabel="apcbat" spawnwithid="thal_guidestem_intro" drawinventory="false">
+      <Containable items="guidepage" />
+      <ContainedStateIndicator texture="Content/UI/ContainerIndicators.png" sourcerect="0,157,1,1" />
+      <CustomInterface canbeselected="false" drawhudwhenequipped="true">
+        <GuiFrame relativesize="0.20,0.7" anchor="TopRight" absoluteoffset="20,20" style="ItemUI" color="0,0,0,0" />
+        <Button text="thal_guides_reminder">
+        </Button>
+        <Button text="thal_guidestem_introlabel">
+          <StatusEffect type="OnUse" targettype="Contained">
+						<Sound file="Mods/Thalassophobia/Items/Misc/Pageturn.ogg" range="300" />
+            <RemoveItem />
+          </StatusEffect>
+          <StatusEffect type="OnUse" delay="0.1" target="This">
+            <SpawnItem identifier="thal_guidestem_intro" spawnposition="ThisInventory" />
+          </StatusEffect>
+        </Button>
+        <Button text="thal_guidestem_indexlabel">
+          <StatusEffect type="OnUse" targettype="Contained">
+            <RemoveItem />
+						<Sound file="Mods/Thalassophobia/Items/Misc/Pageturn.ogg" range="300" />
+          </StatusEffect>
+          <StatusEffect type="OnUse" delay="0.1" target="This">
+            <SpawnItem identifier="thal_guidestem_index" spawnposition="ThisInventory" />
+          </StatusEffect>
+        </Button>
+        <Button text="thal_guidestem_toolslabel">
+          <StatusEffect type="OnUse" targettype="Contained">
+            <RemoveItem />
+						<Sound file="Mods/Thalassophobia/Items/Misc/Pageturn.ogg" range="300" />
+          </StatusEffect>
+          <StatusEffect type="OnUse" delay="0.1" target="This">
+            <SpawnItem identifier="thal_guidestem_tools" spawnposition="ThisInventory" />
+          </StatusEffect>
+        </Button>
+        <Button text="thal_guidestem_organslabel">
+          <StatusEffect type="OnUse" targettype="Contained">
+            <RemoveItem />
+						<Sound file="Mods/Thalassophobia/Items/Misc/Pageturn.ogg" range="300" />
+          </StatusEffect>
+          <StatusEffect type="OnUse" delay="0.1" target="This">
+            <SpawnItem identifier="thal_guidestem_organs" spawnposition="ThisInventory" />
+          </StatusEffect>
+        </Button>
+        <Button text="thal_guidestem_procedureslabel">
+          <StatusEffect type="OnUse" targettype="Contained">
+            <RemoveItem />
+						<Sound file="Mods/Thalassophobia/Items/Misc/Pageturn.ogg" range="300" />
+          </StatusEffect>
+          <StatusEffect type="OnUse" delay="0.1" target="This">
+            <SpawnItem identifier="thal_guidestem_procedures" spawnposition="ThisInventory" />
+          </StatusEffect>
+        </Button>
+        <Button text="thal_guidestem_upkeeplabel">
+          <StatusEffect type="OnUse" targettype="Contained">
+            <RemoveItem />
+						<Sound file="Mods/Thalassophobia/Items/Misc/Pageturn.ogg" range="300" />
+          </StatusEffect>
+          <StatusEffect type="OnUse" delay="0.1" target="This">
+            <SpawnItem identifier="thal_guidestem_upkeep" spawnposition="ThisInventory" />
+          </StatusEffect>
+        </Button>
+      </CustomInterface>
+    </ItemContainer>
+  </Item>
+  <!-- pages -->
+  <Item name="" identifier="thal_guidestem_intro" Tags="guidepage" hideinmenus="true">
+    <Sprite texture="Content/Items/Medical/Medicines.png" sourcerect="223,69,38,70" depth="0.6" origin="0.5,0.5" />
+  </Item>
+  <Item name="" identifier="thal_guidestem_index" Tags="guidepage" hideinmenus="true">
+    <Sprite texture="Content/Items/Medical/Medicines.png" sourcerect="223,69,38,70" depth="0.6" origin="0.5,0.5" />
+  </Item>
+  <Item name="" identifier="thal_guidestem_tools" Tags="guidepage" hideinmenus="true">
+    <Sprite texture="Content/Items/Medical/Medicines.png" sourcerect="223,69,38,70" depth="0.6" origin="0.5,0.5" />
+  </Item>
+  <Item name="" identifier="thal_guidestem_organs" Tags="guidepage" hideinmenus="true">
+    <Sprite texture="Content/Items/Medical/Medicines.png" sourcerect="223,69,38,70" depth="0.6" origin="0.5,0.5" />
+  </Item>
+  <Item name="" identifier="thal_guidestem_procedures" Tags="guidepage" hideinmenus="true">
+    <Sprite texture="Content/Items/Medical/Medicines.png" sourcerect="223,69,38,70" depth="0.6" origin="0.5,0.5" />
+  </Item>
+  <Item name="" identifier="thal_guidestem_upkeep" Tags="guidepage" hideinmenus="true">
+    <Sprite texture="Content/Items/Medical/Medicines.png" sourcerect="223,69,38,70" depth="0.6" origin="0.5,0.5" />
+  </Item>
   <!--
 	TODO:
 	Rework this into a vanilla headset override that gives channels depending on the clothes you wear/afflictions (ie husk, medics, team captains, clowns)
