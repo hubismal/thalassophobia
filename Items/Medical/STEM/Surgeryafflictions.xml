@@ -3,138 +3,123 @@
 
   <Affliction
     name="Incision"
-    identifier="incision1"
+    identifier="thal_incision1"
     description="A small, surgical wound is present."
     type="resistance"
     isbuff="true"
     limbspecific="false"
     maxstrength="100"> 
     <Effect minstrength="0" maxstrength="100" strengthchange="-0.25" />
- <icon texture="Mods/STEM/Afflictions.png" sourcerect="0,115,115,115" color="139,60,42,255" origin="0,0"/>
+ <icon texture="Mods/Thalassophobia/Medical/STEM/Afflictions.png" sourcerect="0,115,115,115" color="139,60,42,255" origin="0,0"/>
   </Affliction>
 
   <Affliction
     name="Incision"
-    identifier="incision2"
+    identifier="thal_incision2"
     description="A small, surgical wound is present."
     type="resistance"
     isbuff="true"
     limbspecific="false"
     maxstrength="100"> 
     <Effect minstrength="0" maxstrength="100" strengthchange="-0.25" />
- <icon texture="Mods/STEM/Afflictions.png" sourcerect="0,115,115,115" color="139,60,42,255" origin="0,0"/>
+ <icon texture="Mods/Thalassophobia/Medical/STEM/Afflictions.png" sourcerect="0,115,115,115" color="139,60,42,255" origin="0,0"/>
   </Affliction>
 
   <Affliction
     name="Incision"
-    identifier="incision3"
+    identifier="thal_incision3"
     description="A small, surgical wound is present."
     type="resistance"
     isbuff="true"
     limbspecific="false"
     maxstrength="100"> 
     <Effect minstrength="0" maxstrength="100" strengthchange="-0.25" />
- <icon texture="Mods/STEM/Afflictions.png" sourcerect="0,115,115,115" color="139,60,42,255" origin="0,0"/>
+ <icon texture="Mods/Thalassophobia/Medical/STEM/Afflictions.png" sourcerect="0,115,115,115" color="139,60,42,255" origin="0,0"/>
   </Affliction>
 
   <Affliction
     name="Snipped"
-    identifier="snip1"
+    identifier="thal_snip1"
     description="A small, surgical wound is present."
     type="resistance"
     isbuff="true"
     limbspecific="false"
     maxstrength="100"> 
     <Effect minstrength="0" maxstrength="100" strengthchange="-0.25" />
-		<icon texture="Mods/STEM/Afflictions.png" sourcerect="230,115,115,115" color="195,136,60,255" origin="0,0"/>
+		<icon texture="Mods/Thalassophobia/Medical/STEM/Afflictions.png" sourcerect="230,115,115,115" color="195,136,60,255" origin="0,0"/>
   </Affliction>
 
   <Affliction
     name="Snipped"
-    identifier="snip2"
+    identifier="thal_snip2"
     description="A small, surgical wound is present."
     type="resistance"
     isbuff="true"
     limbspecific="false"
     maxstrength="100"> 
     <Effect minstrength="0" maxstrength="100" strengthchange="-0.25" />
-		<icon texture="Mods/STEM/Afflictions.png" sourcerect="230,115,115,115" color="195,136,60,255" origin="0,0"/>
+		<icon texture="Mods/Thalassophobia/Medical/STEM/Afflictions.png" sourcerect="230,115,115,115" color="195,136,60,255" origin="0,0"/>
   </Affliction>
 
   <Affliction
     name="Snipped"
-    identifier="snip3"
+    identifier="thal_snip3"
     description="A small, surgical wound is present."
     type="resistance"
     isbuff="true"
     limbspecific="false"
     maxstrength="100"> 
     <Effect minstrength="0" maxstrength="100" strengthchange="-0.25" />
-		<icon texture="Mods/STEM/Afflictions.png" sourcerect="230,115,115,115" color="195,136,60,255" origin="0,0"/>
+		<icon texture="Mods/Thalassophobia/Medical/STEM/Afflictions.png" sourcerect="230,115,115,115" color="195,136,60,255" origin="0,0"/>
   </Affliction>
 
   <Affliction
     name="Sawed"
-    identifier="saw1"
+    identifier="thal_saw1"
     description="The bones are surgically sliced open."
     type="resistance"
     isbuff="true"
     limbspecific="false"
     maxstrength="100"> 
     <Effect minstrength="0" maxstrength="100" strengthchange="-0.25" />
-		<icon texture="Mods/STEM/Afflictions.png" sourcerect="0,230,115,115" color="195,136,60,255" origin="0,0"/>
+		<icon texture="Mods/Thalassophobia/Medical/STEM/Afflictions.png" sourcerect="0,230,115,115" color="195,136,60,255" origin="0,0"/>
   </Affliction>
 
   <Affliction
     name="Sawed"
-    identifier="saw2"
+    identifier="thal_saw2"
     description="The bones are surgically sliced open."
     type="resistance"
     isbuff="true"
     limbspecific="false"
     maxstrength="100"> 
     <Effect minstrength="0" maxstrength="100" strengthchange="-0.25" />
-		<icon texture="Mods/STEM/Afflictions.png" sourcerect="0,230,115,115" color="195,136,60,255" origin="0,0"/>
+		<icon texture="Mods/Thalassophobia/Medical/STEM/Afflictions.png" sourcerect="0,230,115,115" color="195,136,60,255" origin="0,0"/>
   </Affliction>
 
   <Affliction
     name="Sawed"
-    identifier="saw3"
+    identifier="thal_saw3"
     description="The bones are surgically sliced open."
     type="resistance"
     isbuff="true"
     limbspecific="false"
     maxstrength="100"> 
     <Effect minstrength="0" maxstrength="100" strengthchange="-0.25" />
-		<icon texture="Mods/STEM/Afflictions.png" sourcerect="0,230,115,115" color="195,136,60,255" origin="0,0"/>
-  </Affliction>
-
-  <Affliction
-    name="Stitches"
-    identifier="stitches"
-    description="Surgical stitches are present."
-    type="resistance"
-    isbuff="true"
-    limbspecific="false"
-    maxstrength="100"> 
-    <Effect minstrength="0" maxstrength="100" strengthchange="-0.25" />
- <icon texture="Mods/STEM/Afflictions.png" sourcerect="115,230,115,115" color="139,60,42,255" origin="0,0"/>
+		<icon texture="Mods/Thalassophobia/Medical/STEM/Afflictions.png" sourcerect="0,230,115,115" color="195,136,60,255" origin="0,0"/>
   </Affliction>
 
   <Affliction
     name="Septic Wound"
     identifier="septic"
-    description="An untreated wound has gone septic. Becomes fatal without treatment."
-    type="stem_septic"
+    description="Due to lack of clean surgical equipment, a wound has gone septic. Severely reduces capacity to work if left untreated."
+    type="thal_septic"
     causeofdeathdescription="Died from poor medical hygiene."
     selfcauseofdeathdescription="You have died from poor medical hygiene."
     isbuff="False"
     limbspecific="False"
     maxstrength="100"> 
-    <Effect minstrength="0" maxstrength="15" strengthchange="-0.025"
-      minvitalitydecrease="0"
-      maxvitalitydecrease="0" />
-    <Effect minstrength="15" maxstrength="75" strengthchange="0.025"
+    <Effect minstrength="5" maxstrength="75" strengthchange="0.025"
       minvitalitydecrease="0"
       maxvitalitydecrease="0">
       <StatusEffect target="Character" delay="2.5" stackable="false" comparison="and">
@@ -143,143 +128,223 @@
     </Effect>
     <Effect minstrength="75" maxstrength="100" strengthchange="1"
       minvitalitydecrease="0"
-      maxvitalitydecrease="75"/>
-   <icon texture="Mods/STEM/Afflictions.png" sourcerect="115,0,115,115" color="193,162,122,255" origin="0,0"/>
+      maxvitalitydecrease="65"
+      minskillmultiplier="0.9"
+      maxskillmultiplier="0.3"
+      minchromaticaberration="0"
+      maxchromaticaberration="1" />
+   <icon texture="Mods/Thalassophobia/Medical/STEM/Afflictions.png" sourcerect="115,0,115,115" color="60,193,60,255" origin="0,0"/>
+  </Affliction>
+
+  <Affliction
+    name="Missing Organ: Brain"
+    identifier="thal_removebrain"
+    description="The brain has been completely removed from the cranium. The patient experiences poor memory and periodic loss of motor control."
+    type="thal_organharvested"
+    isbuff="False"
+    limbspecific="False"
+    indicatorlimb="Torso"
+    showiconthreshold="0"
+    maxstrength="100"> 
+    <Effect minstrength="0" maxstrength="100" strengthchange="10" minskillmultiplier="0.0" maxskillmultiplier="0.0" >
+    </Effect>
+    <PeriodicEffect mininterval="300" maxinterval="360">
+      <StatusEffect target="Character" onlyinside="true">
+        <Affliction identifier="stun" amount="5" />
+      </StatusEffect>
+    </PeriodicEffect>
+    <PeriodicEffect mininterval="115" maxinterval="123">
+      <StatusEffect target="Character" onlyinside="true">
+        <Affliction identifier="invertcontrols" amount="100" />
+      </StatusEffect>
+    </PeriodicEffect>
+    <PeriodicEffect mininterval="125" maxinterval="128">
+      <StatusEffect target="Character" onlyinside="true">
+        <ReduceAffliction identifier="invertcontrols" amount="1000" />
+      </StatusEffect>
+    </PeriodicEffect>
+ <icon texture="Mods/Thalassophobia/Medical/STEM/Afflictions.png" sourcerect="345,230,115,115" color="139,60,42,255" origin="0,0"/>
   </Affliction>
 
   <Affliction
     name="Missing Organ: Heart"
     identifier="thal_removeheart"
-    description="The heart has been completely removed from the chest cavity. Quickly fatal."
-    type="stem_organharvested"
+    description="The heart has been completely removed from the chest cavity. Causes periodic blood loss and oxygen deprivation."
+    type="thal_organharvested"
     isbuff="False"
     limbspecific="False"
     indicatorlimb="Torso"
-    showiconthreshold="5"
+    showiconthreshold="0"
     maxstrength="100"> 
-    <Effect minstrength="5" maxstrength="100" strengthchange="10" >
+    <Effect minstrength="0" maxstrength="100" strengthchange="10" >
     </Effect>
- <icon texture="Mods/STEM/Afflictions.png" sourcerect="345,230,115,115" color="139,60,42,255" origin="0,0"/>
+    <PeriodicEffect mininterval="30" maxinterval="45">
+      <StatusEffect target="Character" >
+        <Affliction identifier="bloodloss" amount="7" />
+      </StatusEffect>
+    </PeriodicEffect>
+    <PeriodicEffect mininterval="17" maxinterval="20">
+      <StatusEffect target="Character" >
+        <Affliction identifier="oxygenlow" amount="15" />
+      </StatusEffect>
+    </PeriodicEffect>
+ <icon texture="Mods/Thalassophobia/Medical/STEM/Afflictions.png" sourcerect="345,230,115,115" color="139,60,42,255" origin="0,0"/>
   </Affliction>
 
   <Affliction
     name="Missing Organ: Lungs"
     identifier="thal_removelungs"
-    description="The heart has been completely removed from the chest cavity. Quickly fatal."
-    type="stem_organharvested"
+    description="The lungs have been completely removed from the chest cavity. Causes periodic oxygen deprivation symptoms."
+    type="thal_organharvested"
     isbuff="False"
     limbspecific="False"
     indicatorlimb="Torso"
-    showiconthreshold="5"
+    showiconthreshold="0"
     maxstrength="100"> 
-    <Effect minstrength="5" maxstrength="100" strengthchange="10" >
+    <Effect minstrength="0" maxstrength="100" strengthchange="10" >
     </Effect>
- <icon texture="Mods/STEM/Afflictions.png" sourcerect="345,230,115,115" color="139,60,42,255" origin="0,0"/>
+    <PeriodicEffect mininterval="14" maxinterval="17">
+      <StatusEffect target="Character" >
+        <Affliction identifier="oxygenlow" amount="15" />
+      </StatusEffect>
+    </PeriodicEffect>
+ <icon texture="Mods/Thalassophobia/Medical/STEM/Afflictions.png" sourcerect="345,230,115,115" color="139,60,42,255" origin="0,0"/>
   </Affliction>
 
   <Affliction
     name="Missing Organ: Liver"
     identifier="thal_removeliver"
-    description="The heart has been completely removed from the chest cavity. Quickly fatal."
-    type="stem_organharvested"
+    description="The liver has been completely removed from the chest cavity. Effects of alcohol are increased."
+    type="thal_organharvested"
     isbuff="False"
     limbspecific="False"
     indicatorlimb="Torso"
-    showiconthreshold="5"
+    showiconthreshold="0"
     maxstrength="100"> 
-    <Effect minstrength="5" maxstrength="100" strengthchange="10" >
+    <Effect minstrength="0" maxstrength="100" strengthchange="10" >
+      <StatusEffect target="Character" comparison="And">
+        <Conditional drunk="gt 0" />
+        <Conditional drunk="lt 40" />
+        <Affliction identifier="drunk" amount="0.1" />
+      </StatusEffect>
+      <StatusEffect target="Character" comparison="And">
+        <Conditional drunk="gte 40" />
+        <Conditional drunk="lt 80" />
+        <Affliction identifier="drunk" amount="0.2" />
+      </StatusEffect>
     </Effect>
- <icon texture="Mods/STEM/Afflictions.png" sourcerect="345,230,115,115" color="139,60,42,255" origin="0,0"/>
+ <icon texture="Mods/Thalassophobia/Medical/STEM/Afflictions.png" sourcerect="345,230,115,115" color="139,60,42,255" origin="0,0"/>
   </Affliction>
 
   <Affliction
     name="Missing Organ: Pancreas"
     identifier="thal_removepancreas"
-    description="The heart has been completely removed from the chest cavity. Quickly fatal."
-    type="stem_organharvested"
+    description="The pancreas has been completely removed from the chest cavity. Reduces the nutrition gained from food."
+    type="thal_organharvested"
     isbuff="False"
     limbspecific="False"
     indicatorlimb="Torso"
-    showiconthreshold="5"
+    showiconthreshold="0"
     maxstrength="100"> 
-    <Effect minstrength="5" maxstrength="100" strengthchange="10" >
+    <Effect minstrength="0" maxstrength="100" strengthchange="10" >
+      <StatusEffect target="Character" comparison="And">
+				<ReduceAffliction identifier="thal_nutrition" amount="0.85"/>
+      </StatusEffect>
     </Effect>
- <icon texture="Mods/STEM/Afflictions.png" sourcerect="345,230,115,115" color="139,60,42,255" origin="0,0"/>
+ <icon texture="Mods/Thalassophobia/Medical/STEM/Afflictions.png" sourcerect="345,230,115,115" color="139,60,42,255" origin="0,0"/>
   </Affliction>
 
   <Affliction
     name="Missing Organ: Appendix"
     identifier="thal_removeappendix"
-    description="The heart has been completely removed from the chest cavity. Quickly fatal."
-    type="stem_organharvested"
+    description="The appendix has been completely removed from the chest cavity."
+    type="thal_organharvested"
     isbuff="False"
     limbspecific="False"
     indicatorlimb="Torso"
-    showiconthreshold="5"
+    showiconthreshold="0"
     maxstrength="100"> 
-    <Effect minstrength="5" maxstrength="100" strengthchange="10" >
+    <Effect minstrength="0" maxstrength="100" strengthchange="10" >
     </Effect>
- <icon texture="Mods/STEM/Afflictions.png" sourcerect="345,230,115,115" color="139,60,42,255" origin="0,0"/>
+ <icon texture="Mods/Thalassophobia/Medical/STEM/Afflictions.png" sourcerect="345,230,115,115" color="139,60,42,255" origin="0,0"/>
   </Affliction>
 
   <Affliction
     name="Missing Organ: Stomach"
     identifier="thal_removestomach"
-    description="The heart has been completely removed from the chest cavity. Quickly fatal."
-    type="stem_organharvested"
+    description="The stomach has been completely removed from the chest cavity. Food no longer affects the patient."
+    type="thal_organharvested"
     isbuff="False"
     limbspecific="False"
     indicatorlimb="Torso"
-    showiconthreshold="5"
+    showiconthreshold="0"
     maxstrength="100"> 
-    <Effect minstrength="5" maxstrength="100" strengthchange="10" >
+    <Effect minstrength="0" maxstrength="100" strengthchange="10" >
+    <!-- Reduces all food-based afflictions, including the one which handles poisoning. -->
+      <StatusEffect target="Character" comparison="And">
+				<ReduceAffliction identifier="thal_nutrition" amount="5"/>
+				<ReduceAffliction identifier="thal_full" amount="5"/>
+				<ReduceAffliction identifier="thal_foodpoisoning" amount="5" />
+				<ReduceAffliction identifier="thal_foodmanager" amount="7" />
+      </StatusEffect>
     </Effect>
- <icon texture="Mods/STEM/Afflictions.png" sourcerect="345,230,115,115" color="139,60,42,255" origin="0,0"/>
+ <icon texture="Mods/Thalassophobia/Medical/STEM/Afflictions.png" sourcerect="345,230,115,115" color="139,60,42,255" origin="0,0"/>
   </Affliction>
 
   <Affliction
     name="Missing Organ: Intestines"
     identifier="thal_removeintestines"
-    description="The heart has been completely removed from the chest cavity. Quickly fatal."
-    type="stem_organharvested"
+    description="The intestines have been completely removed from the chest cavity. Reduces the buffs gained from eating food."
+    type="thal_organharvested"
     isbuff="False"
     limbspecific="False"
     indicatorlimb="Torso"
-    showiconthreshold="5"
+    showiconthreshold="0"
     maxstrength="100"> 
-    <Effect minstrength="5" maxstrength="100" strengthchange="10" >
+    <Effect minstrength="0" maxstrength="100" strengthchange="10" >
+      <StatusEffect target="Character" comparison="And">
+        <ReduceAffliction identifier="thal_nutrition" amount="0.5" />
+      </StatusEffect>
     </Effect>
- <icon texture="Mods/STEM/Afflictions.png" sourcerect="345,230,115,115" color="139,60,42,255" origin="0,0"/>
+ <icon texture="Mods/Thalassophobia/Medical/STEM/Afflictions.png" sourcerect="345,230,115,115" color="139,60,42,255" origin="0,0"/>
   </Affliction>
 
   <Affliction
     name="Missing Organ: Spleen"
     identifier="thal_removespleen"
-    description="The heart has been completely removed from the chest cavity. Quickly fatal."
-    type="stem_organharvested"
+    description="The spleen has been completely removed from the chest cavity. Reduces the rate in which blood loss recovers on its own."
+    type="thal_organharvested"
     isbuff="False"
     limbspecific="False"
     indicatorlimb="Torso"
-    showiconthreshold="5"
+    showiconthreshold="0"
     maxstrength="100"> 
-    <Effect minstrength="5" maxstrength="100" strengthchange="10" >
+    <Effect minstrength="0" maxstrength="100" strengthchange="10" >
+      <StatusEffect target="Character" comparison="And">
+        <Conditional bloodloss="gt 0" />
+        <Affliction identifier="bloodloss" amount="0.07" />
+      </StatusEffect>
     </Effect>
- <icon texture="Mods/STEM/Afflictions.png" sourcerect="345,230,115,115" color="139,60,42,255" origin="0,0"/>
+ <icon texture="Mods/Thalassophobia/Medical/STEM/Afflictions.png" sourcerect="345,230,115,115" color="139,60,42,255" origin="0,0"/>
   </Affliction>
 
   <Affliction
     name="Missing Organ: Kidneys"
     identifier="thal_removekidneys"
-    description="The heart has been completely removed from the chest cavity. Quickly fatal."
-    type="stem_organharvested"
+    description="The kidneys have been completely removed from the chest cavity. Stuns last considerably longer."
+    type="thal_organharvested"
     isbuff="False"
     limbspecific="False"
     indicatorlimb="Torso"
-    showiconthreshold="5"
+    showiconthreshold="0"
     maxstrength="100"> 
-    <Effect minstrength="5" maxstrength="100" strengthchange="10" >
+    <Effect minstrength="0" maxstrength="100" strengthchange="10" >
+      <StatusEffect target="Character" comparison="And">
+        <Conditional stun="gt 0" />
+        <Affliction identifier="stun" amount="0.7" />
+      </StatusEffect>
     </Effect>
- <icon texture="Mods/STEM/Afflictions.png" sourcerect="345,230,115,115" color="139,60,42,255" origin="0,0"/>
+ <icon texture="Mods/Thalassophobia/Medical/STEM/Afflictions.png" sourcerect="345,230,115,115" color="139,60,42,255" origin="0,0"/>
   </Affliction>
 
 </Afflictions>
