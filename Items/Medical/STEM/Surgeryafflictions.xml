@@ -10,7 +10,7 @@
     limbspecific="false"
     maxstrength="100"> 
     <Effect minstrength="0" maxstrength="100" strengthchange="-0.25" />
- <icon texture="Mods/Thalassophobia/Medical/STEM/Afflictions.png" sourcerect="0,115,115,115" color="139,60,42,255" origin="0,0"/>
+ <icon texture="Mods/Thalassophobia/Items/Medical/STEM/Afflictions.png" sourcerect="0,115,115,115" color="139,60,42,255" origin="0,0"/>
   </Affliction>
 
   <Affliction
@@ -22,7 +22,7 @@
     limbspecific="false"
     maxstrength="100"> 
     <Effect minstrength="0" maxstrength="100" strengthchange="-0.25" />
- <icon texture="Mods/Thalassophobia/Medical/STEM/Afflictions.png" sourcerect="0,115,115,115" color="139,60,42,255" origin="0,0"/>
+ <icon texture="Mods/Thalassophobia/Items/Medical/STEM/Afflictions.png" sourcerect="0,115,115,115" color="139,60,42,255" origin="0,0"/>
   </Affliction>
 
   <Affliction
@@ -34,7 +34,7 @@
     limbspecific="false"
     maxstrength="100"> 
     <Effect minstrength="0" maxstrength="100" strengthchange="-0.25" />
- <icon texture="Mods/Thalassophobia/Medical/STEM/Afflictions.png" sourcerect="0,115,115,115" color="139,60,42,255" origin="0,0"/>
+ <icon texture="Mods/Thalassophobia/Items/Medical/STEM/Afflictions.png" sourcerect="0,115,115,115" color="139,60,42,255" origin="0,0"/>
   </Affliction>
 
   <Affliction
@@ -46,7 +46,7 @@
     limbspecific="false"
     maxstrength="100"> 
     <Effect minstrength="0" maxstrength="100" strengthchange="-0.25" />
-		<icon texture="Mods/Thalassophobia/Medical/STEM/Afflictions.png" sourcerect="230,115,115,115" color="195,136,60,255" origin="0,0"/>
+		<icon texture="Mods/Thalassophobia/Items/Medical/STEM/Afflictions.png" sourcerect="230,115,115,115" color="195,136,60,255" origin="0,0"/>
   </Affliction>
 
   <Affliction
@@ -58,7 +58,7 @@
     limbspecific="false"
     maxstrength="100"> 
     <Effect minstrength="0" maxstrength="100" strengthchange="-0.25" />
-		<icon texture="Mods/Thalassophobia/Medical/STEM/Afflictions.png" sourcerect="230,115,115,115" color="195,136,60,255" origin="0,0"/>
+		<icon texture="Mods/Thalassophobia/Items/Medical/STEM/Afflictions.png" sourcerect="230,115,115,115" color="195,136,60,255" origin="0,0"/>
   </Affliction>
 
   <Affliction
@@ -70,7 +70,7 @@
     limbspecific="false"
     maxstrength="100"> 
     <Effect minstrength="0" maxstrength="100" strengthchange="-0.25" />
-		<icon texture="Mods/Thalassophobia/Medical/STEM/Afflictions.png" sourcerect="230,115,115,115" color="195,136,60,255" origin="0,0"/>
+		<icon texture="Mods/Thalassophobia/Items/Medical/STEM/Afflictions.png" sourcerect="230,115,115,115" color="195,136,60,255" origin="0,0"/>
   </Affliction>
 
   <Affliction
@@ -82,7 +82,7 @@
     limbspecific="false"
     maxstrength="100"> 
     <Effect minstrength="0" maxstrength="100" strengthchange="-0.25" />
-		<icon texture="Mods/Thalassophobia/Medical/STEM/Afflictions.png" sourcerect="0,230,115,115" color="195,136,60,255" origin="0,0"/>
+		<icon texture="Mods/Thalassophobia/Items/Medical/STEM/Afflictions.png" sourcerect="0,230,115,115" color="195,136,60,255" origin="0,0"/>
   </Affliction>
 
   <Affliction
@@ -94,7 +94,7 @@
     limbspecific="false"
     maxstrength="100"> 
     <Effect minstrength="0" maxstrength="100" strengthchange="-0.25" />
-		<icon texture="Mods/Thalassophobia/Medical/STEM/Afflictions.png" sourcerect="0,230,115,115" color="195,136,60,255" origin="0,0"/>
+		<icon texture="Mods/Thalassophobia/Items/Medical/STEM/Afflictions.png" sourcerect="0,230,115,115" color="195,136,60,255" origin="0,0"/>
   </Affliction>
 
   <Affliction
@@ -106,7 +106,7 @@
     limbspecific="false"
     maxstrength="100"> 
     <Effect minstrength="0" maxstrength="100" strengthchange="-0.25" />
-		<icon texture="Mods/Thalassophobia/Medical/STEM/Afflictions.png" sourcerect="0,230,115,115" color="195,136,60,255" origin="0,0"/>
+		<icon texture="Mods/Thalassophobia/Items/Medical/STEM/Afflictions.png" sourcerect="0,230,115,115" color="195,136,60,255" origin="0,0"/>
   </Affliction>
 
   <Affliction
@@ -118,7 +118,7 @@
     limbspecific="false"
     maxstrength="100"> 
     <Effect minstrength="0" maxstrength="100" strengthchange="-0.25" />
-		<icon texture="Mods/Thalassophobia/Medical/STEM/Afflictions.png" sourcerect="0,230,115,115" color="195,136,60,255" origin="0,0"/>
+		<icon texture="Mods/Thalassophobia/Items/Medical/STEM/Afflictions.png" sourcerect="0,230,115,115" color="195,136,60,255" origin="0,0"/>
   </Affliction>
 
   <Affliction
@@ -130,7 +130,7 @@
     limbspecific="false"
     maxstrength="100"> 
     <Effect minstrength="0" maxstrength="100" strengthchange="-0.25" />
-		<icon texture="Mods/Thalassophobia/Medical/STEM/Afflictions.png" sourcerect="0,230,115,115" color="195,136,60,255" origin="0,0"/>
+		<icon texture="Mods/Thalassophobia/Items/Medical/STEM/Afflictions.png" sourcerect="0,230,115,115" color="195,136,60,255" origin="0,0"/>
   </Affliction>
 
   <Affliction
@@ -142,7 +142,7 @@
     limbspecific="false"
     maxstrength="100"> 
     <Effect minstrength="0" maxstrength="100" strengthchange="-0.25" />
-		<icon texture="Mods/Thalassophobia/Medical/STEM/Afflictions.png" sourcerect="0,230,115,115" color="195,136,60,255" origin="0,0"/>
+		<icon texture="Mods/Thalassophobia/Items/Medical/STEM/Afflictions.png" sourcerect="0,230,115,115" color="195,136,60,255" origin="0,0"/>
   </Affliction>
 
   <Affliction
@@ -176,7 +176,7 @@
         <ReduceAffliction identifier="thal_septic" strength="1.5" />
       </StatusEffect>
     </Effect>
-   <icon texture="Mods/Thalassophobia/Medical/STEM/Afflictions.png" sourcerect="115,0,115,115" color="60,193,60,255" origin="0,0"/>
+   <icon texture="Mods/Thalassophobia/Items/Medical/STEM/Afflictions.png" sourcerect="115,0,115,115" color="60,193,60,255" origin="0,0"/>
   </Affliction>
 
   <Affliction
@@ -193,7 +193,7 @@
     <Effect minstrength="0" maxstrength="25" strengthchange="-5" minchromaticaberration="0" maxchromaticaberration="100" minradialdistort="0" maxradialdistort="2" minscreendistort="1" maxscreendistort="1" minscreenblur="0" maxscreenblur="1" >
       <StatusEffect target="Character" lowpassmultiplier="0.7" setvalue="True" />
     </Effect>
- <icon texture="Mods/Thalassophobia/Medical/STEM/Afflictions.png" sourcerect="345,230,115,115" color="139,60,42,255" origin="0,0"/>
+ <icon texture="Mods/Thalassophobia/Items/Medical/STEM/Afflictions.png" sourcerect="345,230,115,115" color="139,60,42,255" origin="0,0"/>
   </Affliction>
 
   <Affliction
@@ -228,7 +228,7 @@
         <Affliction identifier="thal_brainblast" amount="1000" />
       </StatusEffect>
     </PeriodicEffect>
- <icon texture="Mods/Thalassophobia/Medical/STEM/Afflictions.png" sourcerect="345,230,115,115" color="139,60,42,255" origin="0,0"/>
+ <icon texture="Mods/Thalassophobia/Items/Medical/STEM/Afflictions.png" sourcerect="345,230,115,115" color="139,60,42,255" origin="0,0"/>
   </Affliction>
 
   <Affliction
@@ -253,7 +253,7 @@
         <Affliction identifier="oxygenlow" amount="15" />
       </StatusEffect>
     </PeriodicEffect>
- <icon texture="Mods/Thalassophobia/Medical/STEM/Afflictions.png" sourcerect="345,230,115,115" color="139,60,42,255" origin="0,0"/>
+ <icon texture="Mods/Thalassophobia/Items/Medical/STEM/Afflictions.png" sourcerect="345,230,115,115" color="139,60,42,255" origin="0,0"/>
   </Affliction>
 
   <Affliction
@@ -273,7 +273,7 @@
         <Affliction identifier="oxygenlow" amount="15" />
       </StatusEffect>
     </PeriodicEffect>
- <icon texture="Mods/Thalassophobia/Medical/STEM/Afflictions.png" sourcerect="345,230,115,115" color="139,60,42,255" origin="0,0"/>
+ <icon texture="Mods/Thalassophobia/Items/Medical/STEM/Afflictions.png" sourcerect="345,230,115,115" color="139,60,42,255" origin="0,0"/>
   </Affliction>
 
   <Affliction
@@ -298,7 +298,7 @@
         <Affliction identifier="drunk" amount="0.2" />
       </StatusEffect>
     </Effect>
- <icon texture="Mods/Thalassophobia/Medical/STEM/Afflictions.png" sourcerect="345,230,115,115" color="139,60,42,255" origin="0,0"/>
+ <icon texture="Mods/Thalassophobia/Items/Medical/STEM/Afflictions.png" sourcerect="345,230,115,115" color="139,60,42,255" origin="0,0"/>
   </Affliction>
 
   <Affliction
@@ -316,7 +316,7 @@
 				<ReduceAffliction identifier="thal_nutrition" amount="0.85"/>
       </StatusEffect>
     </Effect>
- <icon texture="Mods/Thalassophobia/Medical/STEM/Afflictions.png" sourcerect="345,230,115,115" color="139,60,42,255" origin="0,0"/>
+ <icon texture="Mods/Thalassophobia/Items/Medical/STEM/Afflictions.png" sourcerect="345,230,115,115" color="139,60,42,255" origin="0,0"/>
   </Affliction>
 
   <Affliction
@@ -331,7 +331,7 @@
     maxstrength="100"> 
     <Effect minstrength="0" maxstrength="100" strengthchange="10" >
     </Effect>
- <icon texture="Mods/Thalassophobia/Medical/STEM/Afflictions.png" sourcerect="345,230,115,115" color="139,60,42,255" origin="0,0"/>
+ <icon texture="Mods/Thalassophobia/Items/Medical/STEM/Afflictions.png" sourcerect="345,230,115,115" color="139,60,42,255" origin="0,0"/>
   </Affliction>
 
   <Affliction
@@ -353,7 +353,7 @@
 				<ReduceAffliction identifier="thal_foodmanager" amount="7" />
       </StatusEffect>
     </Effect>
- <icon texture="Mods/Thalassophobia/Medical/STEM/Afflictions.png" sourcerect="345,230,115,115" color="139,60,42,255" origin="0,0"/>
+ <icon texture="Mods/Thalassophobia/Items/Medical/STEM/Afflictions.png" sourcerect="345,230,115,115" color="139,60,42,255" origin="0,0"/>
   </Affliction>
 
   <Affliction
@@ -371,7 +371,7 @@
         <ReduceAffliction identifier="thal_nutrition" amount="0.5" />
       </StatusEffect>
     </Effect>
- <icon texture="Mods/Thalassophobia/Medical/STEM/Afflictions.png" sourcerect="345,230,115,115" color="139,60,42,255" origin="0,0"/>
+ <icon texture="Mods/Thalassophobia/Items/Medical/STEM/Afflictions.png" sourcerect="345,230,115,115" color="139,60,42,255" origin="0,0"/>
   </Affliction>
 
   <Affliction
@@ -390,7 +390,7 @@
         <Affliction identifier="bloodloss" amount="0.07" />
       </StatusEffect>
     </Effect>
- <icon texture="Mods/Thalassophobia/Medical/STEM/Afflictions.png" sourcerect="345,230,115,115" color="139,60,42,255" origin="0,0"/>
+ <icon texture="Mods/Thalassophobia/Items/Medical/STEM/Afflictions.png" sourcerect="345,230,115,115" color="139,60,42,255" origin="0,0"/>
   </Affliction>
 
   <Affliction
@@ -409,7 +409,7 @@
         <Affliction identifier="stun" amount="0.7" />
       </StatusEffect>
     </Effect>
- <icon texture="Mods/Thalassophobia/Medical/STEM/Afflictions.png" sourcerect="345,230,115,115" color="139,60,42,255" origin="0,0"/>
+ <icon texture="Mods/Thalassophobia/Items/Medical/STEM/Afflictions.png" sourcerect="345,230,115,115" color="139,60,42,255" origin="0,0"/>
   </Affliction>
 
   <Affliction
@@ -425,7 +425,7 @@
     <Effect minstrength="0" maxstrength="100" strengthchange="10" minchromaticaberration="0" maxchromaticaberration="10000" minscreendistort="0" maxscreendistort="25" minradialdistort="0" maxradialdistort="5" >
       <StatusEffect target="Character" setvalue="True" osbtructvision="True" />
     </Effect>
- <icon texture="Mods/Thalassophobia/Medical/STEM/Afflictions.png" sourcerect="345,230,115,115" color="139,60,42,255" origin="0,0"/>
+ <icon texture="Mods/Thalassophobia/Items/Medical/STEM/Afflictions.png" sourcerect="345,230,115,115" color="139,60,42,255" origin="0,0"/>
   </Affliction>
 
   <Affliction
@@ -441,7 +441,7 @@
     <Effect minstrength="0" maxstrength="100" strengthchange="10" >
       <StatusEffect target="Character" setvalue="True" SpeechImpediment="100" />
     </Effect>
- <icon texture="Mods/Thalassophobia/Medical/STEM/Afflictions.png" sourcerect="345,230,115,115" color="139,60,42,255" origin="0,0"/>
+ <icon texture="Mods/Thalassophobia/Items/Medical/STEM/Afflictions.png" sourcerect="345,230,115,115" color="139,60,42,255" origin="0,0"/>
   </Affliction>
 
   <Affliction
@@ -457,7 +457,7 @@
     <Effect minstrength="0" maxstrength="100" strengthchange="10" >
       <StatusEffect target="Character" comparison="And" lowpassmultiplier="100" />
     </Effect>
- <icon texture="Mods/Thalassophobia/Medical/STEM/Afflictions.png" sourcerect="345,230,115,115" color="139,60,42,255" origin="0,0"/>
+ <icon texture="Mods/Thalassophobia/Items/Medical/STEM/Afflictions.png" sourcerect="345,230,115,115" color="139,60,42,255" origin="0,0"/>
   </Affliction>
 
 </Afflictions>
