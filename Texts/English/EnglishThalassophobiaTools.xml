@@ -742,6 +742,9 @@ Credits</lootlabel.money>
 	-INTESTINES: A long organ residing within the abdomen of a patient. When absent, the nutrition gained from food is reduced significantly.
 	-STOMACH: An organ residing within the abdomen of a patient. When absent, food has no effect on the patient whatsoever.
 	-SPLEEN: An organ residing within the chest cavity of a patient. When absent, the rate in which blood loss recovers is greatly reduced.
+  -EYES: An organ residing within the skull of a patient. When absent, vision is rendered useless.
+  -TONGUE: An organ residing within the mouth of a patient. When absent, speech is rendered impossible.
+  -EARS: An organ residing within the skull. When removed, hearing most sounds becomes impossible.
   
   1: It is considered completely unethical medical malpractice to put someone's brain in someone else's head.
 
@@ -761,6 +764,9 @@ Credits</lootlabel.money>
 	-INTESTINES: Snip, Cut, Cut
 	-STOMACH: Snip, Cut, Snip
 	-SPLEEN: Cut, Snip, Cut
+  -EYES: Cut, Scoop, Snip
+  -TONGUE: Snip, Cut, Scoop
+  -EARS: Snip, Snip, Scoop
 
   To re-insert an organ, perform a procedure to the second-to-last step and use an enucleation spoon to insert the relevant organ.
   
