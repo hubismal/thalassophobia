@@ -685,7 +685,7 @@ Credits</lootlabel.money>
 	Congrats on finishing the guide! If you're really a true genetics pro, you can deconstruct this book for a free set of genetics tools.</entityname.thal_guidegen_clone>
 
   <entityname.thal_guidestem>S.T.E.M. Surgical Handbook</entityname.thal_guidestem>
-  <entitydescription.thal_guidestem>Current Page:</entitydescription.thal_guidestem>
+  <entitydescription.thal_guidestemn>Current Page:</entitydescription.thal_guidestem>
   <thal_guidestem_introlabel>HELP/INTRO</thal_guidestem_introlabel>
   <entityname.thal_guidestem_intro>ඞHELP/INTRO
   
@@ -712,10 +712,21 @@ Credits</lootlabel.money>
 	-SCALPEL: A small knife used to make incisions in a patient. Makes an entrypoint in the chest cavity.
 	-SURGICAL SCISSORS: A small pair of scissors used to precisely cut a patient. Makes an entrypoint in the abdomen.
 	-BONESAW: A large saw used to carefully (WE MEAN IT) saw the bones of a patient. Makes an entrypoint in the skull, or cuts bones.
+	-ENUCLEATION SPOON: A forked spoon used to carefully extract objects from the patient. Allows for eye removal, or reinsertion of organs.
 
   DO NOT SCREW UP. WE CANNOT AFFORD ANOTHER LAWSUIT.
   
   </entityname.thal_guidestem_tools>
+	<thal_guidestem_preplabel>PREP</thal_guidestem_preplabel>
+  <entityname.thal_guidestem_prep>ඞPREP
+  
+	Below is a list of steps you should take to prepare for surgery:
+  
+  -STEP 1: Obtain consent from the patient before you do any procedures.
+  -STEP 1: Ensure plenty of blood packs and bandages are present.
+  -STEP 2: Get the patient drunk. 25% or more is enough to do surgery on either yourself or someone else.
+  
+  </entityname.thal_guidestem_prep>
 	<thal_guidestem_organslabel>ORGANS</thal_guidestem_organslabel>
   <entityname.thal_guidestem_organs>ඞORGANS
   
@@ -731,6 +742,9 @@ Credits</lootlabel.money>
 	-INTESTINES: A long organ residing within the abdomen of a patient. When absent, the nutrition gained from food is reduced significantly.
 	-STOMACH: An organ residing within the abdomen of a patient. When absent, food has no effect on the patient whatsoever.
 	-SPLEEN: An organ residing within the chest cavity of a patient. When absent, the rate in which blood loss recovers is greatly reduced.
+  -EYES: An organ residing within the skull of a patient. When absent, vision is rendered useless.
+  -TONGUE: An organ residing within the mouth of a patient. When absent, speech is rendered impossible.
+  -EARS: An organ residing within the skull. When removed, hearing most sounds becomes impossible.
   
   1: It is considered completely unethical medical malpractice to put someone's brain in someone else's head.
 
@@ -750,6 +764,11 @@ Credits</lootlabel.money>
 	-INTESTINES: Snip, Cut, Cut
 	-STOMACH: Snip, Cut, Snip
 	-SPLEEN: Cut, Snip, Cut
+  -EYES: Cut, Scoop, Snip
+  -TONGUE: Snip, Cut, Scoop
+  -EARS: Snip, Snip, Scoop
+
+  To re-insert an organ, perform a procedure to the second-to-last step and use an enucleation spoon to insert the relevant organ.
   
   </entityname.thal_guidestem_procedures>
 	<thal_guidestem_upkeeplabel>UPKEEP</thal_guidestem_upkeeplabel>
@@ -762,7 +781,7 @@ Credits</lootlabel.money>
 
 	-SEPTIC WOUNDS: Doses of broad-spectrum antibiotics, or any other medicine which allows the patient to resist the Europan Velonaceps Calyx parasite, will assist in recovery. Failure to treat septic wounds can result in death if the patient is already injured.
 
-  This concludes the S.T.E.M. Surgical Handbook. Put this knowledge to good use and practice medicine. Consider teaming up with a cook.
+  This concludes the S.T.E.M. Surgical Handbook. Put this knowledge to good use and practice medicine. Consider teaming up with a cook. 
 
   DO NOT DO ANYTHING THAT WOULD RESULT IN A MALPRACTICE SUIT, THEY ALL FALL BACK ON US.
   

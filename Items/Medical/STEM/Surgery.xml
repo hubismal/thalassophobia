@@ -25,6 +25,7 @@
 			<Conditional thal_incision1="eq 0" />
 			<Conditional thal_snip1="eq 0" />
 			<Conditional thal_saw1="eq 0" />
+			<Conditional thal_scoop1="eq 0" />
 			<Affliction identifier="thal_incision1" strength="9999" />
 			<Affliction identifier="bleeding" strength="1" />
 		</StatusEffect>
@@ -79,6 +80,13 @@
 			<Conditional drunk="gte 25" />
 			<Conditional drunk="lt 75" />
 			<Conditional thal_saw1="gt 0" />
+			<Affliction identifier="thal_incision2" strength="9999" />
+			<Affliction identifier="bleeding" strength="1" />
+		</StatusEffect>
+		<StatusEffect type="OnUse" target="Character" comparison="And">
+			<Conditional drunk="gte 25" />
+			<Conditional drunk="lt 75" />
+			<Conditional thal_scoop1="gt 0" />
 			<Affliction identifier="thal_incision2" strength="9999" />
 			<Affliction identifier="bleeding" strength="1" />
 		</StatusEffect>
@@ -153,6 +161,7 @@
 			<Conditional thal_incision1="eq 0" />
 			<Conditional thal_snip1="eq 0" />
 			<Conditional thal_saw1="eq 0" />
+			<Conditional thal_scoop1="eq 0" />
 			<Affliction identifier="thal_snip1" strength="9999" />
 			<Affliction identifier="bleeding" strength="1" />
 		</StatusEffect>
@@ -174,6 +183,13 @@
 			<Conditional drunk="gte 25" />
 			<Conditional drunk="lt 75" />
 			<Conditional thal_saw1="gt 0" />
+			<Affliction identifier="thal_snip2" strength="9999" />
+			<Affliction identifier="bleeding" strength="1" />
+		</StatusEffect>
+		<StatusEffect type="OnUse" target="Character" comparison="And">
+			<Conditional drunk="gte 25" />
+			<Conditional drunk="lt 75" />
+			<Conditional thal_scoop1="gt 0" />
 			<Affliction identifier="thal_snip2" strength="9999" />
 			<Affliction identifier="bleeding" strength="1" />
 		</StatusEffect>
@@ -199,6 +215,14 @@
 			<Conditional thal_snip1="eq 0" />
 			<Conditional thal_saw1="gt 0" />
 			<Affliction identifier="thal_snip1" strength="9999" />
+			<Affliction identifier="bleeding" strength="5" />
+		</StatusEffect>
+		<StatusEffect type="OnUse" target="Character" comparison="And">
+			<Conditional drunk="gte 75" />
+			<Conditional thal_incision1="gt 0" />
+			<Conditional thal_scoop1="gt 0" />
+			<SpawnItem identifier="thal_eyes" spawnposition="This" />
+			<Affliction identifier="thal_removeeyes" strength="9999" />
 			<Affliction identifier="bleeding" strength="5" />
 		</StatusEffect>
 		<StatusEffect type="OnUse" target="Character" comparison="And">
@@ -283,6 +307,7 @@
 			<Conditional thal_incision1="eq 0" />
 			<Conditional thal_snip1="eq 0" />
 			<Conditional thal_saw1="eq 0" />
+			<Conditional thal_scoop1="eq 0" />
 			<Affliction identifier="thal_saw1" strength="9999" />
 		</StatusEffect>
 		<StatusEffect type="OnUse" target="Character" comparison="And">
@@ -301,6 +326,12 @@
 			<Conditional drunk="gte 25" />
 			<Conditional drunk="lt 75" />
 			<Conditional thal_saw1="gt 0" />
+			<Affliction identifier="thal_saw2" strength="9999" />
+		</StatusEffect>
+		<StatusEffect type="OnUse" target="Character" comparison="And">
+			<Conditional drunk="gte 25" />
+			<Conditional drunk="lt 75" />
+			<Conditional thal_scoop1="gt 0" />
 			<Affliction identifier="thal_saw2" strength="9999" />
 		</StatusEffect>
 		<StatusEffect type="OnUse" target="Character" comparison="And">
@@ -331,6 +362,208 @@
 			<Affliction identifier="thal_removeheart" strength="9999" />
 			<SpawnItem identifier="thal_heart" spawnposition="This" />
 			<Affliction identifier="bleeding" strength="15" />
+		</StatusEffect>
+	</MeleeWeapon>
+</Item>
+
+<Item name="Enucleation Spoon" identifier="thal_surgicalspoon" category="Equipment" cargocontaineridentifier="chemicalcrate" Tags="smallitem,medical,surgery" description="A tool used to scoop stuff out of (or into) the patient in very precise, surgical procedures. Place an organ into the spoon in order to place it back into the patient." useinhealthinterface="True" scale="0.25">
+        <InventoryIcon texture="Mods/Thalassophobia/Medical/STEM/tools.png" sourcerect="446,142,161,150" origin="0.5,0.5" />
+        <Sprite texture="Mods/Thalassophobia/Medical/STEM/tools.png" sourcerect="562,292,27,126" depth="0.55" origin="0.5,0.5" />
+    	<BrokenSprite texture="Mods/Thalassophobia/Medical/STEM/toolsbloody.png" sourcerect="562,292,27,126" depth="0.55" origin="0.5,0.5" maxcondition="35" fadein="true" />
+        <Body width="65" height="15" density="50" />
+    	<ItemContainer capacity="1" maxstacksize="1" canbeselected="false" hideitems="true" slotsperrow="5" drawinventory="true" />
+        <MeleeWeapon slots="Any,RightHand,LeftHand" aimpos="5,0" handle1="-5,0" holdangle="10" reload="1.0">
+		<StatusEffect type="OnUse" target="This" Condition="-15.0" disabledeltatime="true" >
+			<Conditional condition="gt 1" />
+		</StatusEffect>
+		<StatusEffect type="Always" target="This" setvalue="True" Condition="1" disabledeltatime="true" >
+			<Conditional condition="lt 1" />
+		</StatusEffect>
+		<StatusEffect type="InWater" target="This" Condition="1" />
+		<StatusEffect type="OnUse" target="Character" comparison="And">
+			<Conditional drunk="gte 25" />
+			<Conditional thal_incision1="eq 0" />
+			<Conditional thal_snip1="eq 0" />
+			<Conditional thal_saw1="eq 0" />
+			<Conditional thal_scoop1="eq 0" />
+			<Affliction identifier="thal_scoop1" strength="9999" />
+			<Affliction identifier="bleeding" strength="1" />
+		</StatusEffect>
+		<StatusEffect type="OnUse" target="Character" comparison="And">
+			<Conditional drunk="gte 25" />
+			<Conditional thal_incision1="gt 0" />
+			<Affliction identifier="thal_scoop2" strength="9999" />
+		</StatusEffect>
+		<StatusEffect type="OnUse" target="Character" comparison="And">
+			<Conditional drunk="gte 25" />
+			<Conditional thal_snip1="gt 0" />
+			<Affliction identifier="thal_scoop2" strength="9999" />
+		</StatusEffect>
+		<StatusEffect type="OnUse" target="Character" comparison="And">
+			<Conditional drunk="gte 25" />
+			<Conditional thal_saw1="gt 0" />
+			<Affliction identifier="thal_scoop2" strength="9999" />
+		</StatusEffect>
+		<StatusEffect type="OnUse" target="Character" comparison="And">
+			<Conditional drunk="gte 25" />
+			<Conditional thal_scoop1="gt 0" />
+			<Affliction identifier="thal_scoop2" strength="9999" />
+		</StatusEffect>
+		<StatusEffect type="OnUse" target="Character" comparison="And">
+			<Conditional drunk="gte 25" />
+			<Conditional condition="lt 2" targetself="true" />
+			<Affliction identifier="bleeding" strength="1" />
+			<Affliction identifier="thal_septicwound" strength="2" />
+		</StatusEffect>
+		<StatusEffect type="OnUse" target="Character" comparison="And">
+			<Conditional drunk="gte 75" />
+			<Conditional thal_snip1="gt 0" />
+			<Conditional thal_snip2="gt 0" />
+			<SpawnItem identifier="thal_ears" spawnposition="This" />
+			<Affliction identifier="thal_removeears" strength="9999" />
+			<Affliction identifier="bleeding" strength="5" />
+		</StatusEffect>
+		<StatusEffect type="OnUse" target="Character" comparison="And">
+			<Conditional drunk="gte 25" />
+			<Conditional thal_incision2="gt 0" />
+			<Conditional thal_snip1="gt 0" />
+			<Affliction identifier="thal_removetongue" strength="9999" />
+			<SpawnItem identifier="thal_tongue" spawnposition="This" />
+			<Affliction identifier="bleeding" strength="3" />
+		</StatusEffect> 
+		<!-- Organ Reinsertion -->
+		<StatusEffect type="OnUse" target="Character, Contained" comparison="And">
+			<Conditional drunk="gte 25" />
+			<Conditional drunk="lt 75" />
+			<Conditional thal_saw2="gt 0" />
+			<Conditional thal_incision1="gt 0" />
+			<Conditional thal_incision3="gt 0" />
+			<Conditional thal_removeheart="gt 0" />
+			<Affliction identifier="bleeding" strength="7" />
+			<ReduceAffliction identifier="thal_removeheart" strength="9999" />
+			<RequiredItem identifier="thal_heart" />
+            <RemoveItem />
+		</StatusEffect>
+		<StatusEffect type="OnUse" target="Character, Contained" comparison="And">
+			<Conditional drunk="gte 25" />
+			<Conditional drunk="lt 75" />
+			<Conditional thal_incision1="gt 0" />
+			<Conditional thal_incision2="gt 0" />
+			<Conditional thal_removekidneys="gt 0" />
+			<Affliction identifier="thal_removekidneys" strength="9999" />
+			<SpawnItem identifier="thal_kidneys" spawnposition="This" />
+			<Affliction identifier="bleeding" strength="2" />
+		</StatusEffect> 
+		<StatusEffect type="OnUse" target="Character, Contained" comparison="And">
+			<Conditional drunk="gte 75" />
+			<Conditional thal_incision3="gt 0" />
+			<Conditional thal_incision2="gt 0" />
+			<Conditional thal_incision1="gt 0" />
+			<Conditional thal_snip3="gt 0" />
+			<Conditional thal_snip2="gt 0" />
+			<Conditional thal_snip1="gt 0" />
+			<Conditional thal_saw3="gt 0" />
+			<Conditional thal_saw2="gt 0" />
+			<Conditional thal_saw1="gt 0" />
+			<Conditional thal_removebrain="gt 0" />
+			<ReduceAffliction identifier="thal_removebrain" strength="9999" />
+			<ReduceAffliction identifier="bleeding" strength="100" />
+			<ReduceAffliction identifier="bloodloss" strength="35" />
+			<RequiredItem identifier="thal_mediumbrain" />
+            <RemoveItem />
+		</StatusEffect> 
+		<StatusEffect type="OnUse" target="Character" comparison="And">
+			<Conditional drunk="gte 25" />
+			<Conditional drunk="lt 75" />
+			<Conditional thal_saw2="gt 0" />
+			<Conditional thal_snip1="gt 0" />
+			<Conditional thal_removelungs="gt 0" />
+			<Affliction identifier="bleeding" strength="2" />
+			<ReduceAffliction identifier="thal_removelungs" strength="9999" />
+			<RequiredItem identifier="thal_lungs" />
+            <RemoveItem />
+		</StatusEffect>
+		<StatusEffect type="OnUse" target="Character" comparison="And">
+			<Conditional drunk="gte 25" />
+			<Conditional drunk="lt 75" />
+			<Conditional thal_snip1="gt 0" />
+			<Conditional thal_snip2="gt 0" />
+			<Conditional thal_removeappendix="gt 0" />
+			<Affliction identifier="bleeding" strength="2" />
+			<ReduceAffliction identifier="thal_removeappendix" strength="9999" />
+			<RequiredItem identifier="thal_appendix" />
+            <RemoveItem />
+		</StatusEffect>
+		<StatusEffect type="OnUse" target="Character" comparison="And">
+			<Conditional drunk="gte 25" />
+			<Conditional drunk="lt 75" />
+			<Conditional thal_incision2="gt 0" />
+			<Conditional thal_snip1="gt 0" />
+			<Conditional thal_removestomach="gt 0" />
+			<Affliction identifier="bleeding" strength="2" />
+			<ReduceAffliction identifier="thal_removestomach" strength="9999" />
+			<RequiredItem identifier="thal_stomach" />
+            <RemoveItem />
+		</StatusEffect>  
+		<StatusEffect type="OnUse" target="Character" comparison="And">
+			<Conditional drunk="gte 25" />
+			<Conditional drunk="lt 75" />
+			<Conditional thal_incision1="gt 0" />
+			<Conditional thal_snip2="gt 0" />
+			<Conditional thal_removespleen="gt 0" />
+			<Affliction identifier="bleeding" strength="2" />
+			<ReduceAffliction identifier="thal_removespleen" strength="9999" />
+			<RequiredItem identifier="thal_spleen" />
+            <RemoveItem />
+		</StatusEffect>
+		<StatusEffect type="OnUse" target="Character" comparison="And">
+			<Conditional drunk="gte 25" />
+			<Conditional drunk="lt 75" />
+			<Conditional thal_snip1="gt 0" />
+			<Conditional thal_snip2="gt 0" />
+			<Conditional thal_removeliver="gt 0" />
+			<Affliction identifier="bleeding" strength="2" />
+			<ReduceAffliction identifier="thal_removeliver" strength="9999" />
+			<RequiredItem identifier="thal_liver" />
+            <RemoveItem />
+		</StatusEffect>
+		<StatusEffect type="OnUse" target="Character" comparison="And">
+			<Conditional drunk="gte 25" />
+			<Conditional drunk="lt 75" />
+			<Conditional thal_incision2="gt 0" />
+			<Conditional thal_snip1="gt 0" />
+			<Conditional thal_removeintestines="gt 0" />
+			<Affliction identifier="bleeding" strength="2" />
+			<ReduceAffliction identifier="thal_removeintestines" strength="9999" />
+			<RequiredItem identifier="thal_intestines" />
+            <RemoveItem />
+		</StatusEffect>
+		<StatusEffect type="OnUse" target="Character" comparison="And">
+			<Conditional drunk="gte 75" />
+			<Conditional thal_snip1="gt 0" />
+			<Conditional thal_snip2="gt 0" />
+			<ReduceAffliction identifier="thal_removeears" strength="9999" />
+			<Affliction identifier="bleeding" strength="3" />
+			<RequiredItem identifier="thal_ears" />
+            <RemoveItem />
+		</StatusEffect>
+		<StatusEffect type="OnUse" target="Character" comparison="And">
+			<Conditional drunk="gte 25" />
+			<Conditional thal_incision2="gt 0" />
+			<Conditional thal_snip1="gt 0" />
+			<ReduceAffliction identifier="thal_removetongue" strength="9999" />
+			<Affliction identifier="bleeding" strength="2" />
+			<RequiredItem identifier="thal_tongue" />
+            <RemoveItem />
+		</StatusEffect> 
+		<StatusEffect type="OnUse" target="Character" comparison="And">
+			<Conditional drunk="gte 75" />
+			<Conditional thal_incision1="gt 0" />
+			<Conditional thal_scoop1="gt 0" />
+			<ReduceAffliction identifier="thal_removeeyes" strength="9999" />
+			<Affliction identifier="bleeding" strength="3" />
+			<RequiredItem identifier="thal_eyes" />
+            <RemoveItem />
 		</StatusEffect>
 	</MeleeWeapon>
 </Item>
@@ -398,7 +631,28 @@
     <Holdable slots="Any,RightHand,LeftHand" msg="ItemMsgPickUpSelect" />
   </Item>
 
-<Item name="Stitching Kit" identifier="stitches" category="Equipment" cargocontaineridentifier="chemicalcrate" Tags="smallitem,medical,surgery" description="A set of tools used to stitch someone up after surgery." useinhealthinterface="True" scale="0.25">
+  <Item name="Human Eyes" identifier="thal_eyes" category="Equipment" Tags="organ" cargocontaineridentifier="metalcrate" hideinmenus="true" description="An actual human heart. God knows where this came from." scale="0.25" impactsoundtag="impact_metal_light">
+    <InventoryIcon texture="Mods/Thalassophobia/Medical/STEM/Humanheart.png" sourcerect="21,4,86,128" origin="0.5,0.5" />
+    <Sprite texture="Mods/Thalassophobia/Medical/STEM/Humanheart.png" depth="0.8" sourcerect="21,4,86,128" origin="0.5,0.5" />
+    <Body width="36" height="36" density="30" />
+    <Holdable slots="Any,RightHand,LeftHand" msg="ItemMsgPickUpSelect" />
+  </Item>
+
+  <Item name="Human Tongue" identifier="thal_tongue" category="Equipment" Tags="organ" cargocontaineridentifier="metalcrate" hideinmenus="true" description="An actual human heart. God knows where this came from." scale="0.25" impactsoundtag="impact_metal_light">
+    <InventoryIcon texture="Mods/Thalassophobia/Medical/STEM/Humanheart.png" sourcerect="21,4,86,128" origin="0.5,0.5" />
+    <Sprite texture="Mods/Thalassophobia/Medical/STEM/Humanheart.png" depth="0.8" sourcerect="21,4,86,128" origin="0.5,0.5" />
+    <Body width="36" height="36" density="30" />
+    <Holdable slots="Any,RightHand,LeftHand" msg="ItemMsgPickUpSelect" />
+  </Item>
+
+  <Item name="Human Ears" identifier="thal_ears" category="Equipment" Tags="organ" cargocontaineridentifier="metalcrate" hideinmenus="true" description="An actual human heart. God knows where this came from." scale="0.25" impactsoundtag="impact_metal_light">
+    <InventoryIcon texture="Mods/Thalassophobia/Medical/STEM/Humanheart.png" sourcerect="21,4,86,128" origin="0.5,0.5" />
+    <Sprite texture="Mods/Thalassophobia/Medical/STEM/Humanheart.png" depth="0.8" sourcerect="21,4,86,128" origin="0.5,0.5" />
+    <Body width="36" height="36" density="30" />
+    <Holdable slots="Any,RightHand,LeftHand" msg="ItemMsgPickUpSelect" />
+  </Item>
+
+<Item name="Sutures" identifier="thal_suture" category="Equipment" cargocontaineridentifier="chemicalcrate" Tags="smallitem,medical,surgery" description="A spool and needle used to suture someone up after surgery." useinhealthinterface="True" scale="0.25">
 	<InventoryIcon texture="Mods/Thalassophobia/Medical/STEM/tools.png" sourcerect="150,150,150,150" origin="0.5,0.5" />
 	<Sprite texture="Mods/Thalassophobia/Medical/STEM/sewingneedle.png" sourcerect="60,0,10,128" depth="0.55" origin="0.5,0.5" />
     <BrokenSprite texture="Mods/Thalassophobia/Medical/STEM/sewingneedlebloody.png" sourcerect="60,0,10,128" depth="0.55" origin="0.5,0.5" maxcondition="45" fadein="true" />
@@ -420,21 +674,27 @@
 			<Conditional thal_incision1="gt 0" />
 			<Conditional thal_snip1="gt 0" />
 			<Conditional thal_saw1="gt 0" />
+			<Conditional thal_scoop1="gt 0" />
 			<Conditional thal_incision2="gt 0" />
 			<Conditional thal_snip2="gt 0" />
 			<Conditional thal_saw2="gt 0" />
+			<Conditional thal_scoop2="gt 0" />
 			<Conditional thal_incision3="gt 0" />
 			<Conditional thal_snip3="gt 0" />
 			<Conditional thal_saw3="gt 0" />
+			<Conditional thal_scoop3="gt 0" />
 			<ReduceAffliction identifier="thal_incision1" amount="1000" />
 			<ReduceAffliction identifier="thal_snip1" amount="1000" />
 			<ReduceAffliction identifier="thal_saw1" amount="1000" />
+			<ReduceAffliction identifier="thal_scoop1" amount="1000" />
 			<ReduceAffliction identifier="thal_incision2" amount="1000" />
 			<ReduceAffliction identifier="thal_snip2" amount="1000" />
 			<ReduceAffliction identifier="thal_saw2" amount="1000" />
+			<ReduceAffliction identifier="thal_scoop2" amount="1000" />
 			<ReduceAffliction identifier="thal_incision3" amount="1000" />
 			<ReduceAffliction identifier="thal_snip3" amount="1000" />
 			<ReduceAffliction identifier="thal_saw3" amount="1000" />
+			<ReduceAffliction identifier="thal_scoop3" amount="1000" />
 			<ReduceAffliction identifier="bleeding" amount="25" />
 		</StatusEffect>
 	</MeleeWeapon>

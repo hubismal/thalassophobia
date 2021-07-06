@@ -110,8 +110,44 @@
   </Affliction>
 
   <Affliction
+    name="Scooped"
+    identifier="thal_scoop1"
+    description="An enucleation spoon has been put to use."
+    type="resistance"
+    isbuff="true"
+    limbspecific="false"
+    maxstrength="100"> 
+    <Effect minstrength="0" maxstrength="100" strengthchange="-0.25" />
+		<icon texture="Mods/Thalassophobia/Medical/STEM/Afflictions.png" sourcerect="0,230,115,115" color="195,136,60,255" origin="0,0"/>
+  </Affliction>
+
+  <Affliction
+    name="Scooped"
+    identifier="thal_scoop2"
+    description="An enucleation spoon has been put to use."
+    type="resistance"
+    isbuff="true"
+    limbspecific="false"
+    maxstrength="100"> 
+    <Effect minstrength="0" maxstrength="100" strengthchange="-0.25" />
+		<icon texture="Mods/Thalassophobia/Medical/STEM/Afflictions.png" sourcerect="0,230,115,115" color="195,136,60,255" origin="0,0"/>
+  </Affliction>
+
+  <Affliction
+    name="Scooped"
+    identifier="thal_scoop3"
+    description="An enucleation spoon has been put to use."
+    type="resistance"
+    isbuff="true"
+    limbspecific="false"
+    maxstrength="100"> 
+    <Effect minstrength="0" maxstrength="100" strengthchange="-0.25" />
+		<icon texture="Mods/Thalassophobia/Medical/STEM/Afflictions.png" sourcerect="0,230,115,115" color="195,136,60,255" origin="0,0"/>
+  </Affliction>
+
+  <Affliction
     name="Septic Wound"
-    identifier="septic"
+    identifier="thal_septic"
     description="Due to lack of clean surgical equipment, a wound has gone septic. Severely reduces capacity to work if left untreated."
     type="thal_septic"
     causeofdeathdescription="Died from poor medical hygiene."
@@ -122,18 +158,42 @@
     <Effect minstrength="5" maxstrength="75" strengthchange="0.025"
       minvitalitydecrease="0"
       maxvitalitydecrease="0">
-      <StatusEffect target="Character" delay="2.5" stackable="false" comparison="and">
-        <Affliction identifier="nausea" strength="1.5" />
+      <Affliction identifier="nausea" strength="1.5" probability="0.1" />
+      <StatusEffect target="Character" comparison="and">
+        <Conditional huskinfectionresistance="gt 0" />
+        <ReduceAffliction identifier="thal_septic" strength="0.2" />
       </StatusEffect>
     </Effect>
     <Effect minstrength="75" maxstrength="100" strengthchange="1"
       minvitalitydecrease="0"
       maxvitalitydecrease="65"
-      minskillmultiplier="0.9"
+      minskillmultiplier="1"
       maxskillmultiplier="0.3"
       minchromaticaberration="0"
-      maxchromaticaberration="1" />
+      maxchromaticaberration="1" >
+      <StatusEffect target="Character" comparison="and">
+        <Conditional huskinfectionresistance="gt 0" />
+        <ReduceAffliction identifier="thal_septic" strength="1.5" />
+      </StatusEffect>
+    </Effect>
    <icon texture="Mods/Thalassophobia/Medical/STEM/Afflictions.png" sourcerect="115,0,115,115" color="60,193,60,255" origin="0,0"/>
+  </Affliction>
+
+  <Affliction
+    name="Migraine"
+    identifier="thal_brainblast"
+    description="Severe head pain."
+    type="thal_brainblast"
+    isbuff="False"
+    limbspecific="False"
+    indicatorlimb="Torso"
+    showiconthreshold="1000"
+    showinhealthscannerthreshold="1000"
+    maxstrength="100"> 
+    <Effect minstrength="0" maxstrength="25" strengthchange="-5" minchromaticaberration="0" maxchromaticaberration="100" minradialdistort="0" maxradialdistort="2" minscreendistort="1" maxscreendistort="1" minscreenblur="0" maxscreenblur="1" >
+      <StatusEffect target="Character" lowpassmultiplier="0.7" setvalue="True" />
+    </Effect>
+ <icon texture="Mods/Thalassophobia/Medical/STEM/Afflictions.png" sourcerect="345,230,115,115" color="139,60,42,255" origin="0,0"/>
   </Affliction>
 
   <Affliction
@@ -161,6 +221,11 @@
     <PeriodicEffect mininterval="125" maxinterval="128">
       <StatusEffect target="Character" onlyinside="true">
         <ReduceAffliction identifier="invertcontrols" amount="1000" />
+      </StatusEffect>
+    </PeriodicEffect>
+    <PeriodicEffect mininterval="125" maxinterval="128">
+      <StatusEffect target="Character" onlyinside="true" duration="15" >
+        <Affliction identifier="thal_brainblast" amount="1000" />
       </StatusEffect>
     </PeriodicEffect>
  <icon texture="Mods/Thalassophobia/Medical/STEM/Afflictions.png" sourcerect="345,230,115,115" color="139,60,42,255" origin="0,0"/>
@@ -343,6 +408,54 @@
         <Conditional stun="gt 0" />
         <Affliction identifier="stun" amount="0.7" />
       </StatusEffect>
+    </Effect>
+ <icon texture="Mods/Thalassophobia/Medical/STEM/Afflictions.png" sourcerect="345,230,115,115" color="139,60,42,255" origin="0,0"/>
+  </Affliction>
+
+  <Affliction
+    name="Missing Organ: Eyes"
+    identifier="thal_removeeyes"
+    description="The eyes have been completely removed from the skull. The patient cannot see."
+    type="thal_organharvested"
+    isbuff="False"
+    limbspecific="False"
+    indicatorlimb="Torso"
+    showiconthreshold="0"
+    maxstrength="100"> 
+    <Effect minstrength="0" maxstrength="100" strengthchange="10" minchromaticaberration="0" maxchromaticaberration="10000" minscreendistort="0" maxscreendistort="25" minradialdistort="0" maxradialdistort="5" >
+      <StatusEffect target="Character" setvalue="True" osbtructvision="True" />
+    </Effect>
+ <icon texture="Mods/Thalassophobia/Medical/STEM/Afflictions.png" sourcerect="345,230,115,115" color="139,60,42,255" origin="0,0"/>
+  </Affliction>
+
+  <Affliction
+    name="Missing Organ: Tongue"
+    identifier="thal_removetongue"
+    description="The tongue has been completely removed from the patient's mouth. The patient cannot speak."
+    type="thal_organharvested"
+    isbuff="False"
+    limbspecific="False"
+    indicatorlimb="Torso"
+    showiconthreshold="0"
+    maxstrength="100"> 
+    <Effect minstrength="0" maxstrength="100" strengthchange="10" >
+      <StatusEffect target="Character" setvalue="True" SpeechImpediment="100" />
+    </Effect>
+ <icon texture="Mods/Thalassophobia/Medical/STEM/Afflictions.png" sourcerect="345,230,115,115" color="139,60,42,255" origin="0,0"/>
+  </Affliction>
+
+  <Affliction
+    name="Missing Organ: Ears"
+    identifier="thal_removeears"
+    description="The ears has been completely removed from the skull. The patient cannot hear properly."
+    type="thal_organharvested"
+    isbuff="False"
+    limbspecific="False"
+    indicatorlimb="Torso"
+    showiconthreshold="0"
+    maxstrength="100"> 
+    <Effect minstrength="0" maxstrength="100" strengthchange="10" >
+      <StatusEffect target="Character" comparison="And" lowpassmultiplier="100" />
     </Effect>
  <icon texture="Mods/Thalassophobia/Medical/STEM/Afflictions.png" sourcerect="345,230,115,115" color="139,60,42,255" origin="0,0"/>
   </Affliction>
