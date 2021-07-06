@@ -178,6 +178,15 @@
             <SpawnItem identifier="thal_guidestem_tools" spawnposition="ThisInventory" />
           </StatusEffect>
         </Button>
+        <Button text="thal_guidestem_preplabel">
+          <StatusEffect type="OnUse" targettype="Contained">
+            <RemoveItem />
+						<Sound file="Mods/Thalassophobia/Items/Misc/Pageturn.ogg" range="300" />
+          </StatusEffect>
+          <StatusEffect type="OnUse" delay="0.1" target="This">
+            <SpawnItem identifier="thal_guidestem_prep" spawnposition="ThisInventory" />
+          </StatusEffect>
+        </Button>
         <Button text="thal_guidestem_organslabel">
           <StatusEffect type="OnUse" targettype="Contained">
             <RemoveItem />
@@ -216,6 +225,9 @@
     <Sprite texture="Content/Items/Medical/Medicines.png" sourcerect="223,69,38,70" depth="0.6" origin="0.5,0.5" />
   </Item>
   <Item name="" identifier="thal_guidestem_tools" Tags="guidepage" hideinmenus="true">
+    <Sprite texture="Content/Items/Medical/Medicines.png" sourcerect="223,69,38,70" depth="0.6" origin="0.5,0.5" />
+  </Item>
+  <Item name="" identifier="thal_guidestem_prep" Tags="guidepage" hideinmenus="true">
     <Sprite texture="Content/Items/Medical/Medicines.png" sourcerect="223,69,38,70" depth="0.6" origin="0.5,0.5" />
   </Item>
   <Item name="" identifier="thal_guidestem_organs" Tags="guidepage" hideinmenus="true">
