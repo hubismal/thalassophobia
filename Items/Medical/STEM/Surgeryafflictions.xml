@@ -147,7 +147,7 @@
 
   <Affliction
     name="Septic Wound"
-    identifier="thal_septic"
+    identifier="thal_septicwound"
     description="Due to lack of clean surgical equipment, a wound has gone septic. Severely reduces capacity to work if left untreated."
     type="thal_septic"
     causeofdeathdescription="Died from poor medical hygiene."

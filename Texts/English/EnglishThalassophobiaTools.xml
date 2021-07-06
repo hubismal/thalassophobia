@@ -684,17 +684,21 @@ Credits</lootlabel.money>
 	
 	Congrats on finishing the guide! If you're really a true genetics pro, you can deconstruct this book for a free set of genetics tools.</entityname.thal_guidegen_clone>
 
-  <entityname.thal_guidestem>S.T.E.M. Surgical Handbook</entityname.thal_guidestem>
+  <entityname.thal_guidestem>S.T.E.M. Field Surgery Handbook</entityname.thal_guidestem>
   <entitydescription.thal_guidestem>Current Page:</entitydescription.thal_guidestem>
   <thal_guidestem_introlabel>HELP/INTRO</thal_guidestem_introlabel>
   <entityname.thal_guidestem_intro>ඞHELP/INTRO
   
-		This book serves as an introduction to the surgery system of the Thalassophobia mod. It is navigated by equipping the book and clicking the name of the page you want to visit on the right hand side of the screen. Once you've done this, the description tooltip (the one you're reading now) will update. All guides work like this.
+		This book serves as an introduction to the Surgical Tech and Enhancement Mechanics (STEM) from the Thalassophobia Mod. It is navigated by equipping the book and clicking the name of the page you want to visit on the right hand side of the screen. Once you've done this, the description tooltip (the one you're reading now) will update. All guides work like this.
 		
 		It is recommended that you read the pages in order from top to bottom. INDEX contains a summary of what the pages contain.
   </entityname.thal_guidestem_intro>
 	<thal_guidestem_indexlabel>INDEX</thal_guidestem_indexlabel>
   <entityname.thal_guidestem_index>ඞINDEX
+  
+  Contrary to the pharma-centric rhetoric of common Europan medical practice, this guidebook introduces the "STEM method", a form of medicine that wields surgery as a panacea to all ailments. Read on in amazement at the miracles of Old-Earth surgery!
+  
+  DISCLAIMER: Greytide and Sons Publishing has since been liquidated following a series of medical lawsuits. By acting on the information in this book, you acknowledge all risks and hazards to your person.
   
 	Below is a table of contents giving a brief summary of each page:
   
@@ -702,19 +706,21 @@ Credits</lootlabel.money>
 	-ORGANS: List of organs and the detrimental effects of removing them
 	-PROCEDURES: List of proper medical procedures
 	-UPKEEP: How to clean tools and treat septic wounds
-  
+	
+	The authors and publishers 
   </entityname.thal_guidestem_index>
 	<thal_guidestem_toolslabel>TOOLS</thal_guidestem_toolslabel>
   <entityname.thal_guidestem_tools>ඞTOOLS
   
 	Below is a list of tools and their uses:
   
-	-SCALPEL: A small knife used to make incisions in a patient. Makes an entrypoint in the chest cavity.
+	-SCALPEL: A small knife used to make incisions in a patients skin. Typically makes an entrypoint in the chest cavity.
 	-SURGICAL SCISSORS: A small pair of scissors used to precisely cut a patient. Makes an entrypoint in the abdomen.
-	-BONESAW: A large saw used to carefully (WE MEAN IT) saw the bones of a patient. Makes an entrypoint in the skull, or cuts bones.
+	-BONESAW: A large saw used to *carefully* saw the bones of a patient. Makes an entry point in the skull, or cuts bones.
 	-ENUCLEATION SPOON: A forked spoon used to carefully extract objects from the patient. Allows for eye removal, or reinsertion of organs.
+	-HEMOSTAT: A pair of flat-edged scissors mostly used to patch together injured tissue.
 
-  DO NOT SCREW UP. WE CANNOT AFFORD ANOTHER LAWSUIT.
+	Footnote: Household Appliances are by no means suitable substitutes. Specifically, stop mailing us inquiring if your diving knife meets specifications.
   
   </entityname.thal_guidestem_tools>
 	<thal_guidestem_preplabel>PREP</thal_guidestem_preplabel>
@@ -726,35 +732,32 @@ Credits</lootlabel.money>
   -STEP 1: Ensure plenty of blood packs and bandages are present.
   -STEP 2: Get the patient drunk. 25% or more is enough to do surgery on either yourself or someone else.
   
+  Always wash your hands. Scrub for 20 seconds or sing "Take Her Fast, Take Her Deep, Take Her Where the Fishies Sleep." in its entirety.
+  
   </entityname.thal_guidestem_prep>
 	<thal_guidestem_organslabel>ORGANS</thal_guidestem_organslabel>
   <entityname.thal_guidestem_organs>ඞORGANS
   
 	Below is a list of organs and the detrimental effects incurred by their absence:
   
-	-BRAIN¹: A non-vital organ residing within the skull. Despite popular belief, patients can and do live without it, albeit with severely reduced mental faculties.
-	-HEART: An arguably vital organ residing within the left side of the chest. Patients can still live without one, though they have severe difficulty doing so, owing to the periodic blood loss and oxygen loss.
-	-LUNGS: A set of organs residing in the chest cavity of a patient. Patients can live without them, but will constantly struggle to breathe, drowning much quicker than the average crewmember.
-	-KIDNEYS: A set of organs residing in the abdomen of a patient. When absent, stuns last considerably longer.
-	-PANCREAS: An organ residing in the chest cavity of a patient. When absent, nutrition gained from food has a much lessened effect on the patient.
-	-LIVER: An organ residing within the abdomen of a patient. Despite its name, the patient does not need it to live. Without a liver, the patient's blood alcohol level does not reduce on its own.
-	-APPENDIX: An organ residing within the abdomen of a patient. Entirely useless, some doctors opt to remove them from all personnel aboard the submarine and gift them to the chef.
-	-INTESTINES: A long organ residing within the abdomen of a patient. When absent, the nutrition gained from food is reduced significantly.
-	-STOMACH: An organ residing within the abdomen of a patient. When absent, food has no effect on the patient whatsoever.
-	-SPLEEN: An organ residing within the chest cavity of a patient. When absent, the rate in which blood loss recovers is greatly reduced.
-  -EYES: An organ residing within the skull of a patient. When absent, vision is rendered useless.
-  -TONGUE: An organ residing within the mouth of a patient. When absent, speech is rendered impossible.
-  -EARS: An organ residing within the skull. When removed, hearing most sounds becomes impossible.
-  
-  1: It is considered completely unethical medical malpractice to put someone's brain in someone else's head.
-
-  </entityname.thal_guidestem_organs>
+	-BRAIN: An organ residing within the skull. Contrary to popular belief, patients can live without it, albeit with reduced mental faculties.
+	-HEART: An organ in the left side of the chest. Patients can still live without one, albiet with periodic blood loss and oxygen loss.
+	-LUNGS: Organs in the chest cavity. Patients can live without them, but will constantly struggle to breathe.
+	-KIDNEYS: A set of organs residing in the abdomen. When absent, stuns last considerably longer.
+	-PANCREAS: An organ residing in the chest cavity. When absent, nutrition gained from food is reduced.
+	-LIVER: An organ in the abdomen. When absent, the patient's blood alcohol level does not decrease on its own.
+	-APPENDIX: An organ in the abdomen. Useless, some doctors opt to remove them for a quick buck or bite.
+	-INTESTINES: A long organ in the abdomen. When absent, the nutrition gained from food is reduced significantly.
+	-STOMACH: An organ in the abdomen. When absent, food cannot be eaten.
+	-SPLEEN: An organ in the chest cavity. When absent, the rate in which blood loss recovers is greatly reduced.
+  -EYES: An organ residing within the skull. When absent, vision is rendered useless.
+  -TONGUE: An organ residing within the mouth. When absent, speech is impossible.
+  -EARS: An organ residing within the skull. When removed, hearing most non-radio sounds becomes impossible.</entityname.thal_guidestem_organs>
 	<thal_guidestem_procedureslabel>PROCEDURES</thal_guidestem_procedureslabel>
   <entityname.thal_guidestem_procedures>ඞPROCEDURES
   
 	Below is a list of procedures required to extract organs:
   
-	-BRAIN: Saw, Snip, Saw, Snip, Cut, Snip, Cut, Saw, Cut, Snip. Act fast before the blood loss kills the patient.
 	-HEART: Cut, Saw, Cut, Saw
 	-LUNGS: Snip, Saw, Snip
 	-KIDNEYS: Cut, Cut, Snip
@@ -764,13 +767,14 @@ Credits</lootlabel.money>
 	-INTESTINES: Snip, Cut, Cut
 	-STOMACH: Snip, Cut, Snip
 	-SPLEEN: Cut, Snip, Cut
-  -EYES: Cut, Scoop, Snip
-  -TONGUE: Snip, Cut, Scoop
-  -EARS: Snip, Snip, Scoop
+	-EYES: Cut, Scoop, Snip
+	-TONGUE: Snip, Cut, Scoop
+	-EARS: Snip, Snip, Scoop
+	-BRAIN⁽¹⁾: Saw, Snip, Saw, Snip, Cut, Snip, Cut, Saw, Cut, Snip. Act fast!
 
-  To re-insert an organ, perform a procedure to the second-to-last step and use an enucleation spoon to insert the relevant organ.
+  To re-insert an organ, perform a procedure to the second-to-last step and use an enucleation spoon containing the relevant organ.
   
-  </entityname.thal_guidestem_procedures>
+  [1]: FACT: 5 in 7 professionals agree it is an act against God to put a patients brain in someone else's head.</entityname.thal_guidestem_procedures>
 	<thal_guidestem_upkeeplabel>UPKEEP</thal_guidestem_upkeeplabel>
   <entityname.thal_guidestem_upkeep>ඞUPKEEP
   
@@ -781,9 +785,9 @@ Credits</lootlabel.money>
 
 	-SEPTIC WOUNDS: Doses of broad-spectrum antibiotics, or any other medicine which allows the patient to resist the Europan Velonaceps Calyx parasite, will assist in recovery. Failure to treat septic wounds can result in death if the patient is already injured.
 
-  This concludes the S.T.E.M. Surgical Handbook. Put this knowledge to good use and practice medicine. Consider teaming up with a cook. 
+  This concludes the S.T.E.M. Surgical Handbook. Put this knowledge to good use and save lives! Alternatively, consider entering a partnership with a chef. 
 
-  DO NOT DO ANYTHING THAT WOULD RESULT IN A MALPRACTICE SUIT, THEY ALL FALL BACK ON US.
+  We are not liable for any resulting injuries, as our legal team is on permanent unpaid leave.
   
   </entityname.thal_guidestem_upkeep>
 </infotexts>

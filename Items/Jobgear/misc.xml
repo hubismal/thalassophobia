@@ -136,7 +136,7 @@
     <Sprite texture="Content/Items/Medical/Medicines.png" sourcerect="223,69,38,70" depth="0.6" origin="0.5,0.5" />
   </Item>
 
-  <Item name="" identifier="thal_guidestem" spritecolor="180,255,220,255" InventoryIconColor="180,255,220,255" category="Equipment" Tags="smallitem" canflipx="true" cargocontaineridentifier="metalcrate" description="" scale="0.5" impactsoundtag="impact_soft" showcontentsintooltip="true">
+  <Item name="" identifier="thal_guidestem" spritecolor="255,18,93,255" InventoryIconColor="255,18,93,255" category="Equipment" Tags="smallitem" canflipx="true" cargocontaineridentifier="metalcrate" description="" scale="0.5" impactsoundtag="impact_soft" showcontentsintooltip="true">
     <!--<PreferredContainer primary="medcab" minamount="1" maxamount="1" spawnprobability="1" />-->
     <Sprite texture="Mods/Thalassophobia/Items/Misc/instruments.png" sourcerect="16,372,96,102" depth="0.6" origin="0.5,0.5" />
     <Body width="25" height="40" density="8" />
