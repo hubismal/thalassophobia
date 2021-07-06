@@ -685,7 +685,7 @@ Credits</lootlabel.money>
 	Congrats on finishing the guide! If you're really a true genetics pro, you can deconstruct this book for a free set of genetics tools.</entityname.thal_guidegen_clone>
 
   <entityname.thal_guidestem>S.T.E.M. Surgical Handbook</entityname.thal_guidestem>
-  <entitydescription.thal_guidestem>Current Page:</entitydescription.thal_guidestem>
+  <entitydescription.thal_guidestemn>Current Page:</entitydescription.thal_guidestem>
   <thal_guidestem_introlabel>HELP/INTRO</thal_guidestem_introlabel>
   <entityname.thal_guidestem_intro>ඞHELP/INTRO
   
@@ -712,16 +712,27 @@ Credits</lootlabel.money>
 	-SCALPEL: A small knife used to make incisions in a patient. Makes an entrypoint in the chest cavity.
 	-SURGICAL SCISSORS: A small pair of scissors used to precisely cut a patient. Makes an entrypoint in the abdomen.
 	-BONESAW: A large saw used to carefully (WE MEAN IT) saw the bones of a patient. Makes an entrypoint in the skull, or cuts bones.
+	-ENUCLEATION SPOON: A forked spoon used to carefully extract objects from the patient. Allows for eye removal, or reinsertion of organs.
 
   DO NOT SCREW UP. WE CANNOT AFFORD ANOTHER LAWSUIT.
   
   </entityname.thal_guidestem_tools>
+	<thal_guidestem_preplabel>PREP</thal_guidestem_preplabel>
+  <entityname.thal_guidestem_prep>ඞPREP
+  
+	Below is a list of steps you should take to prepare for surgery:
+  
+  -STEP 1: Obtain consent from the patient before you do any procedures.
+  -STEP 1: Ensure plenty of blood packs and bandages are present.
+  -STEP 2: Get the patient drunk. 25% or more is enough to do surgery on either yourself or someone else.
+  
+  </entityname.thal_guidestem_prep>
 	<thal_guidestem_organslabel>ORGANS</thal_guidestem_organslabel>
   <entityname.thal_guidestem_organs>ඞORGANS
   
 	Below is a list of organs and the detrimental effects incurred by their absence:
   
-	-BRAIN¹: A non-vital organ residing within the skull. Despite popular belief, patients can and far too often do live without it, albeit with severely reduced mental faculties.
+	-BRAIN¹: A non-vital organ residing within the skull. Despite popular belief, patients can and do live without it, albeit with severely reduced mental faculties.
 	-HEART: An arguably vital organ residing within the left side of the chest. Patients can still live without one, though they have severe difficulty doing so, owing to the periodic blood loss and oxygen loss.
 	-LUNGS: A set of organs residing in the chest cavity of a patient. Patients can live without them, but will constantly struggle to breathe, drowning much quicker than the average crewmember.
 	-KIDNEYS: A set of organs residing in the abdomen of a patient. When absent, stuns last considerably longer.
@@ -737,13 +748,9 @@ Credits</lootlabel.money>
   </entityname.thal_guidestem_organs>
 	<thal_guidestem_procedureslabel>PROCEDURES</thal_guidestem_procedureslabel>
   <entityname.thal_guidestem_procedures>ඞPROCEDURES
-	 
+  
 	Below is a list of procedures required to extract organs:
-  	  In order to save ink and time, we have compressed the use of each tool into the following simple words.
-  	Scalpel: Cut
-	Scissors: Snip
-	Bonesaw: Saw
-	  
+  
 	-BRAIN: Saw, Snip, Saw, Snip, Cut, Snip, Cut, Saw, Cut, Snip. Act fast before the blood loss kills the patient.
 	-HEART: Cut, Saw, Cut, Saw
 	-LUNGS: Snip, Saw, Snip
@@ -754,6 +761,8 @@ Credits</lootlabel.money>
 	-INTESTINES: Snip, Cut, Cut
 	-STOMACH: Snip, Cut, Snip
 	-SPLEEN: Cut, Snip, Cut
+
+  To re-insert an organ, perform a procedure to the second-to-last step and use an enucleation spoon to insert the relevant organ.
   
   </entityname.thal_guidestem_procedures>
 	<thal_guidestem_upkeeplabel>UPKEEP</thal_guidestem_upkeeplabel>
@@ -766,7 +775,7 @@ Credits</lootlabel.money>
 
 	-SEPTIC WOUNDS: Doses of broad-spectrum antibiotics, or any other medicine which allows the patient to resist the Europan Velonaceps Calyx parasite, will assist in recovery. Failure to treat septic wounds can result in death if the patient is already injured.
 
-  This concludes the S.T.E.M. Surgical Handbook. Put this knowledge to good use and practice medicine. Consider teaming up with a cook.
+  This concludes the S.T.E.M. Surgical Handbook. Put this knowledge to good use and practice medicine. Consider teaming up with a cook. 
 
   DO NOT DO ANYTHING THAT WOULD RESULT IN A MALPRACTICE SUIT, THEY ALL FALL BACK ON US.
   
