@@ -596,6 +596,71 @@
 	</MeleeWeapon>
 </Item>
 
+<Item name="Hemostat Scissors" identifier="thal_hemostat" category="Equipment" cargocontaineridentifier="chemicalcrate" Tags="smallitem,medical,surgery" description="A tool used to repair tissue manually in precise, surgical procedures." useinhealthinterface="True" scale="0.25">
+        <InventoryIcon texture="Mods/Thalassophobia/Medical/STEM/tools.png" sourcerect="150,0,150,150" origin="0.5,0.5" />
+        <Sprite texture="Mods/Thalassophobia/Medical/STEM/tools.png" sourcerect="147,300,55,86" depth="0.55" origin="0.5,0.5" />
+    	<BrokenSprite texture="Mods/Thalassophobia/Medical/STEM/toolsbloody.png" sourcerect="147,300,55,86" depth="0.55" origin="0.5,0.5" maxcondition="35" fadein="true" />
+        <Body width="65" height="15" density="50" />
+        <MeleeWeapon slots="Any,RightHand,LeftHand" aimpos="5,0" handle1="-5,0" holdangle="10" reload="1.0">
+		<StatusEffect type="OnUse" target="This" Condition="-15.0" disabledeltatime="false" >
+			<Conditional condition="gt 1" />
+		</StatusEffect>
+		<StatusEffect type="Always" target="This" setvalue="True" Condition="1" disabledeltatime="true" >
+			<Conditional condition="lt 1" />
+		</StatusEffect>
+		<StatusEffect type="InWater" target="This" Condition="1" />
+		<StatusEffect type="OnUse" target="Character" comparison="And">
+			<Conditional drunk="gte 25" />
+			<Conditional condition="lt 2" targetself="true" />
+			<Affliction identifier="bleeding" strength="1" />
+			<Affliction identifier="thal_septicwound" strength="2" />
+		</StatusEffect>
+		<StatusEffect type="OnUse" target="Character" comparison="And">
+			<Conditional drunk="gte 25" />
+			<Conditional health="lt 15" />
+			<Conditional thal_incision1="gt 0" />
+			<Conditional thal_snip1="eq 0" />
+			<Conditional thal_saw1="eq 0" />
+			<Conditional thal_scoop1="eq 0" />
+			<ReduceAffliction identifier="damage" strength="35" />
+			<Affliction identifier="bleeding" strength="7" />
+		</StatusEffect>
+		<StatusEffect type="OnUse" target="Character" comparison="And">
+			<Conditional drunk="gte 25" />
+			<Conditional health="lt 35" />
+			<Conditional health="gte 15" />
+			<Conditional thal_incision1="gt 0" />
+			<Conditional thal_snip1="eq 0" />
+			<Conditional thal_saw1="eq 0" />
+			<Conditional thal_scoop1="eq 0" />
+			<ReduceAffliction identifier="damage" strength="20" />
+			<Affliction identifier="bleeding" strength="3" />
+		</StatusEffect>
+		<StatusEffect type="OnUse" target="Character" comparison="And">
+			<Conditional drunk="gte 25" />
+			<Conditional health="lt 65" />
+			<Conditional health="gte 35" />
+			<Conditional thal_incision1="gt 0" />
+			<Conditional thal_snip1="eq 0" />
+			<Conditional thal_saw1="eq 0" />
+			<Conditional thal_scoop1="eq 0" />
+			<ReduceAffliction identifier="damage" strength="15" />
+			<Affliction identifier="bleeding" strength="1" />
+		</StatusEffect>
+		<StatusEffect type="OnUse" target="Character" comparison="And">
+			<Conditional drunk="gte 25" />
+			<Conditional health="lt 85" />
+			<Conditional health="gte 65" />
+			<Conditional thal_incision1="gt 0" />
+			<Conditional thal_snip1="eq 0" />
+			<Conditional thal_saw1="eq 0" />
+			<Conditional thal_scoop1="eq 0" />
+			<ReduceAffliction identifier="damage" strength="5" />
+			<Affliction identifier="bleeding" strength="3" />
+		</StatusEffect>
+	</MeleeWeapon>
+</Item>
+
 
 <Item name="Sutures" identifier="thal_suture" category="Equipment" cargocontaineridentifier="chemicalcrate" Tags="smallitem,medical,surgery" description="A spool and needle used to suture someone up after surgery." useinhealthinterface="True" scale="0.25">
 	<InventoryIcon texture="Mods/Thalassophobia/Items/Medical/STEM/tools.png" sourcerect="150,150,150,150" origin="0.5,0.5" />
